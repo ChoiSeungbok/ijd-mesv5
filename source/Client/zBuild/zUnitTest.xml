@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<project name="MESplusEE_UnitTest" default="Build" basedir="../">
+
+    <!-- ===== Move and Copy Server Exe File ===== -->
+    <target name="Copy_Server">
+        <copy file="../bin/MESServer.exe" todir="${MESplusEXE_HOME}/bin" failonerror="false"/>
+        <chmod file="${MESplusEXE_HOME}/bin/MESServer.exe" perm="755" failonerror="false"/>
+
+        <copy file="../bin/MESStopProc.exe" todir="${MESplusEXE_HOME}/bin" failonerror="false"/>
+        <chmod file="${MESplusEXE_HOME}/bin/MESStopProc.exe" perm="755" failonerror="false"/>
+
+        <copy file="../bin/ADMServer.exe" todir="${MESplusEXE_HOME}/bin" failonerror="false"/>
+        <chmod file="${MESplusEXE_HOME}/bin/ADMServer.exe" perm="755" failonerror="false"/>
+
+        <copy file="../bin/MESArchive.exe" todir="${MESplusEXE_HOME}/bin" failonerror="false"/>
+        <chmod file="${MESplusEXE_HOME}/bin/MESArchive.exe" perm="755" failonerror="false"/>
+
+        <copy file="../bin/MESServer.exe" tofile="${MESplusEXE_HOME}/bin/RTDServer.exe" failonerror="false"/>
+        <chmod file="${MESplusEXE_HOME}/bin/RTDServer.exe" perm="755" failonerror="false"/>
+
+        <copy file="../bin/BATServer.exe" todir="${MESplusEXE_HOME}/bin" failonerror="false"/>
+        <chmod file="${MESplusEXE_HOME}/bin/BATServer.exe" perm="755" failonerror="false"/>
+    </target>
+
+    <!-- ===== Delete Include, Library, Source Files ===== -->
+    <target name="Delete_Files">
+        <delete dir="${MESplusEXE_HOME}/inc" failonerror="false"/>
+        <delete dir="${MESplusEXE_HOME}/lib" failonerror="false"/>
+        <delete dir="${MESplusEXE_HOME}/source" failonerror="false"/>
+    </target>
+
+    <!-- ===== Copy Include, Library, Source Files ===== -->
+    <target name="Copy_Files">
+        <copy todir="${MESplusEXE_HOME}/cmd" overwrite="true">
+            <fileset dir="../cmd" includes="**/Sample_*.ini" casesensitive="yes"/>
+        </copy>
+        <copy todir="${MESplusEXE_HOME}/inc">
+            <fileset dir="../inc"/>
+        </copy>
+        <copy todir="${MESplusEXE_HOME}/lib">
+            <fileset dir="../lib"/>
+        </copy>
+        <copy todir="${MESplusEXE_HOME}/source">
+            <fileset dir="../source"/>
+        </copy>
+        <copy todir="${MESplusEXE_HOME}/unit_test">
+            <fileset dir="../unit_test" includes="**/_CSS, **/*.sh"/>
+        </copy>
+    </target>
+
+
+    <!-- ===== Unit Test Section ===== -->
+    <target name="BuildUnitTestModule">
+        <exec executable="make" dir="./library/UT_ZCommon" failonerror="true">
+            <arg line="all"/>
+        </exec>
+        <exec executable="make" dir="./library/UT_ZCommon" failonerror="true">
+            <arg line="-f makefile.utest all"/>
+        </exec>
+    </target>
+
+    <target name="RunUnitTest">
+		<exec executable="dos2unix" dir="../unit_test/" failonerror="false">
+			<arg line="UnitTest.sh" />
+		</exec>
+		
+        <chmod file="../unit_test/UnitTest.sh" perm="755" failonerror="false"/>
+
+        <exec executable="UnitTest.sh" dir="../unit_test/" failonerror="true">
+        </exec>
+    </target>
+
+    <target name="CopyReport">
+		<copydir src="../unit_test/report" dest="${artifactsDir}"/>
+    </target>
+
+    <target name="Build" depends="Copy_Server, Delete_Files, Copy_Files, BuildUnitTestModule, RunUnitTest, CopyReport">
+        <tstamp>
+            <format property="bld.end.date" pattern="yyyy/MM/dd"/>
+            <format property="bld.end.time" pattern="HH:mm:ss"/>
+        </tstamp>
+
+        <echo message="=========================================================="/>
+        <echo message="Build finished at ${bld.end.date} ${bld.end.time}"/>
+        <echo message="=========================================================="/>
+    </target>
+
+</project>

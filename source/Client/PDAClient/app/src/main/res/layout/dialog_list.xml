@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="@dimen/list_dialog_width_normal"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffffffff">
+
+        <com.pda.mes.widget.FontTextView
+            android:visibility="gone"
+            android:id="@+id/emptyView"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="@drawable/text_selector_language"
+            android:textSize="13dp"
+            android:text="@string/alert_message_no_list"
+            app:custom_font="@string/FONT_NANUM_SQUARE_OTFB"/>
+
+        <ListView
+            android:id="@+id/dialogListView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:cacheColorHint="#00000000"
+            android:choiceMode="singleChoice"
+            android:clipToPadding="false"
+            android:divider="#e1e1e1"
+            android:dividerHeight="0.3dp"
+            android:fadingEdgeLength="0dp"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:listSelector="#00000000"
+            android:overScrollMode="always"
+            android:requiresFadingEdge="vertical"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="none"
+            android:smoothScrollbar="true"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_line_size"
+            android:background="#30777777"/>
+
+        <com.pda.mes.widget.FontTextView
+            android:id="@+id/closeButton"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@drawable/text_selector_language"
+            android:textSize="15dp"
+            android:text="@string/close"
+            app:custom_font="@string/FONT_NANUM_SQUARE_OTFR"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

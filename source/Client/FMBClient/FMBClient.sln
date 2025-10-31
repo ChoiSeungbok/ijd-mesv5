@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMBClient", "FMBClient.csproj", "{E329CAA9-4498-4AF7-822F-7B1C8D690600}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1BC92E3B-5995-43B4-8C29-9CF26E771952} = {1BC92E3B-5995-43B4-8C29-9CF26E771952}
+		{A8117940-6D67-4996-A3F8-9B32B1DD90F4} = {A8117940-6D67-4996-A3F8-9B32B1DD90F4}
+	EndProjectSection
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Miracom.FMBUI", "Miracom.FMBUI\Miracom.FMBUI.csproj", "{A8117940-6D67-4996-A3F8-9B32B1DD90F4}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FMBSetupKit", "FMBSetupKit\FMBSetupKit.vdproj", "{29008DF5-31A1-430D-A40B-063B6013F749}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Miracom.FMBCore", "Miracom.FMBCore\Miracom.FMBCore.csproj", "{1BC92E3B-5995-43B4-8C29-9CF26E771952}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A8117940-6D67-4996-A3F8-9B32B1DD90F4} = {A8117940-6D67-4996-A3F8-9B32B1DD90F4}
+	EndProjectSection
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FMBSetupKitForWin7", "FMBSetupKitForWin7\FMBSetupKitForWin7.vdproj", "{A1030107-9DA5-4C84-9DB1-F74D0C610D55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E329CAA9-4498-4AF7-822F-7B1C8D690600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E329CAA9-4498-4AF7-822F-7B1C8D690600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E329CAA9-4498-4AF7-822F-7B1C8D690600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E329CAA9-4498-4AF7-822F-7B1C8D690600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8117940-6D67-4996-A3F8-9B32B1DD90F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8117940-6D67-4996-A3F8-9B32B1DD90F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8117940-6D67-4996-A3F8-9B32B1DD90F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8117940-6D67-4996-A3F8-9B32B1DD90F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29008DF5-31A1-430D-A40B-063B6013F749}.Debug|Any CPU.ActiveCfg = Debug
+		{29008DF5-31A1-430D-A40B-063B6013F749}.Release|Any CPU.ActiveCfg = Release
+		{1BC92E3B-5995-43B4-8C29-9CF26E771952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BC92E3B-5995-43B4-8C29-9CF26E771952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BC92E3B-5995-43B4-8C29-9CF26E771952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BC92E3B-5995-43B4-8C29-9CF26E771952}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1030107-9DA5-4C84-9DB1-F74D0C610D55}.Debug|Any CPU.ActiveCfg = Debug
+		{A1030107-9DA5-4C84-9DB1-F74D0C610D55}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

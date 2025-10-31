@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{37390C51-78E1-4AF8-8227-2F6C1A2E7480}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CUS_QCM</RootNamespace>
+    <AssemblyName>CUS_QCM</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Excel, Version=10.40.20174.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GrapeCity\Spread Studio 10\Windows Forms\v10.40.20174.0\bin\FarPoint.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Localization, Version=10.40.20174.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win, Version=10.40.20174.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\GrapeCity\Spread Studio 10\Windows Forms\v10.40.20174.0\bin\FarPoint.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win.Chart, Version=10.40.20174.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\GrapeCity\Spread Studio 10\Windows Forms\v10.40.20174.0\bin\FarPoint.Win.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win.Spread, Version=10.40.20174.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\GrapeCity\Spread Studio 10\Windows Forms\v10.40.20174.0\bin\FarPoint.Win.Spread.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.PluginInputMan, Version=10.40.20174.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Shared.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Shared.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.Misc.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.Misc.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinEditors.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinSchedule.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinSchedule.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTabControl.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinTabControl.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Excel, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\Components\Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files\WindowsApps\Microsoft.Copilot_1.25074.146.0_x64__8wekyb3d8bbwe\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Miracom.BASCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.BASCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.CliFrx">
+      <HintPath>..\..\Components\Miracom.CliFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.DNMCore, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.DNMCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.MESCore">
+      <HintPath>..\..\Components\Miracom.MESCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.MsgHandler">
+      <HintPath>..\..\Components\Miracom.MsgHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.TRSCore">
+      <HintPath>..\..\Components\Miracom.TRSCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.UI">
+      <HintPath>..\..\Components\Miracom.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\office\15.0.0.0__71e9bce111e9429c\office.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="transceiverxnet, Version=7.0.0.0, Culture=neutral, PublicKeyToken=d1edfc8a280ba121, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\transceiverxnet.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Inquiry\frmViewOtrherCompanySpecView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewOtrherCompanySpecView.Designer.cs">
+      <DependentUpon>frmViewOtrherCompanySpecView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewCustomerVocView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewCustomerVocView.Designer.cs">
+      <DependentUpon>frmViewCustomerVocView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewSampleAnalyzeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewSampleAnalyzeView.Designer.cs">
+      <DependentUpon>frmViewSampleAnalyzeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionDataIcp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionDataIcp.Designer.cs">
+      <DependentUpon>frmViewInspectionDataIcp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionDataGritMp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionDataGritMp.Designer.cs">
+      <DependentUpon>frmViewInspectionDataGritMp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionDataHmPqc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionDataHmPqc.Designer.cs">
+      <DependentUpon>frmViewInspectionDataHmPqc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionDataPdcNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionDataPdcNew.Designer.cs">
+      <DependentUpon>frmViewInspectionDataPdcNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionDataPdc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionDataPdc.Designer.cs">
+      <DependentUpon>frmViewInspectionDataPdc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionDataGrit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionDataGrit.Designer.cs">
+      <DependentUpon>frmViewInspectionDataGrit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionDataLP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionDataLP.Designer.cs">
+      <DependentUpon>frmViewInspectionDataLP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionDataCut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionDataCut.Designer.cs">
+      <DependentUpon>frmViewInspectionDataCut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionDataRound.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionDataRound.Designer.cs">
+      <DependentUpon>frmViewInspectionDataRound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionLBadCtm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionLBadCtm.Designer.cs">
+      <DependentUpon>frmViewInspectionLBadCtm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionListMult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionListMult.Designer.cs">
+      <DependentUpon>frmViewInspectionListMult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInspectionList.Designer.cs">
+      <DependentUpon>frmViewInspectionList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewClamRegistrationView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewClamRegistrationView.Designer.cs">
+      <DependentUpon>frmViewClamRegistrationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewPackingOrderListByShipReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewPackingOrderListByShipReport.Designer.cs">
+      <DependentUpon>frmViewPackingOrderListByShipReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmPopCollectionSetOper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmPopCollectionSetOper.Designer.cs">
+      <DependentUpon>frmPopCollectionSetOper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmPopSampleRndInspectionLotList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmPopSampleRndInspectionLotList.Designer.cs">
+      <DependentUpon>frmPopSampleRndInspectionLotList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranOtrherCompainSpecRegistraion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranOtrherCompainSpecRegistraion.Designer.cs">
+      <DependentUpon>frmTranOtrherCompainSpecRegistraion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranCustomerVocRegistraion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranCustomerVocRegistraion.Designer.cs">
+      <DependentUpon>frmTranCustomerVocRegistraion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranInspectionDataCScanExcelUpload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranInspectionDataCScanExcelUpload.Designer.cs">
+      <DependentUpon>frmTranInspectionDataCScanExcelUpload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranSampleanalyzeRegistraion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranSampleanalyzeRegistraion.Designer.cs">
+      <DependentUpon>frmTranSampleanalyzeRegistraion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranClaimRegistraion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranClaimRegistraion.Designer.cs">
+      <DependentUpon>frmTranClaimRegistraion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranShipReportSign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranShipReportSign.Designer.cs">
+      <DependentUpon>frmTranShipReportSign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmPopSpecList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmPopSpecList.Designer.cs">
+      <DependentUpon>frmPopSpecList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmPopInspectionLotList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmPopInspectionLotList.Designer.cs">
+      <DependentUpon>frmPopInspectionLotList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmPopShipReportList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmPopShipReportList.Designer.cs">
+      <DependentUpon>frmPopShipReportList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmPopPackingOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmPopPackingOrderList.Designer.cs">
+      <DependentUpon>frmPopPackingOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setup\frmSetupBatchMigDataQcm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmSetupBatchMigDataQcm.Designer.cs">
+      <DependentUpon>frmSetupBatchMigDataQcm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmSetupBatchMigDataRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmSetupBatchMigDataRpt.Designer.cs">
+      <DependentUpon>frmSetupBatchMigDataRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmSetupRecipeRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmSetupRecipeRegistration.Designer.cs">
+      <DependentUpon>frmSetupRecipeRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranInspectionRegistrationGRIT_SMP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranInspectionRegistrationGRIT_SMP.Designer.cs">
+      <DependentUpon>frmTranInspectionRegistrationGRIT_SMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranInspectionRegistrationGRIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranInspectionRegistrationGRIT.Designer.cs">
+      <DependentUpon>frmTranInspectionRegistrationGRIT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranInspectionRegistrationDaewonTech.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranInspectionRegistrationDaewonTech.Designer.cs">
+      <DependentUpon>frmTranInspectionRegistrationDaewonTech.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranInspectionRegistrationPDC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranInspectionRegistrationPDC.Designer.cs">
+      <DependentUpon>frmTranInspectionRegistrationPDC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranInspectionRegistrationIQC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranInspectionRegistrationIQC.Designer.cs">
+      <DependentUpon>frmTranInspectionRegistrationIQC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranInspectionRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranInspectionRegistration.Designer.cs">
+      <DependentUpon>frmTranInspectionRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranShipReportRegistration_GRT_MP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranShipReportRegistration_GRT_MP.Designer.cs">
+      <DependentUpon>frmTranShipReportRegistration_GRT_MP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranShipReportRegistration_GRIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranShipReportRegistration_GRIT.Designer.cs">
+      <DependentUpon>frmTranShipReportRegistration_GRIT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranShipReportRegistration_HM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranShipReportRegistration_HM.Designer.cs">
+      <DependentUpon>frmTranShipReportRegistration_HM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranShipReportRegistration_CTM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranShipReportRegistration_CTM.Designer.cs">
+      <DependentUpon>frmTranShipReportRegistration_CTM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranOtherCompanySpec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranOtherCompanySpec.Designer.cs">
+      <DependentUpon>frmTranOtherCompanySpec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranShipReportSpecRegistraionByGrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranShipReportSpecRegistraionByGrade.Designer.cs">
+      <DependentUpon>frmTranShipReportSpecRegistraionByGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranShipReportSpecRegistrationByMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranShipReportSpecRegistrationByMat.Designer.cs">
+      <DependentUpon>frmTranShipReportSpecRegistrationByMat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranInspectionDataCutExcelUpload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranInspectionDataCutExcelUpload.Designer.cs">
+      <DependentUpon>frmTranInspectionDataCutExcelUpload.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CUS_COM\CUS_COM.csproj">
+      <Project>{3c73ea3b-cca6-4e6b-b0f3-f054bce8eb4b}</Project>
+      <Name>CUS_COM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Miracom.WIPCore\Miracom.WIPCore.csproj">
+      <Project>{D23333D5-F4B7-44DE-987F-1B5A73587C66}</Project>
+      <Name>Miracom.WIPCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Inquiry\frmViewOtrherCompanySpecView.resx">
+      <DependentUpon>frmViewOtrherCompanySpecView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewCustomerVocView.resx">
+      <DependentUpon>frmViewCustomerVocView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewSampleAnalyzeView.resx">
+      <DependentUpon>frmViewSampleAnalyzeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewInspectionDataIcp.resx">
+      <DependentUpon>frmViewInspectionDataIcp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewInspectionDataGritMp.resx">
+      <DependentUpon>frmViewInspectionDataGritMp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewInspectionDataHmPqc.resx">
+      <DependentUpon>frmViewInspectionDataHmPqc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewInspectionDataPdcNew.resx">
+      <DependentUpon>frmViewInspectionDataPdcNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewInspectionDataPdc.resx">
+      <DependentUpon>frmViewInspectionDataPdc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewInspectionDataGrit.resx">
+      <DependentUpon>frmViewInspectionDataGrit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewInspectionDataLP.resx">
+      <DependentUpon>frmViewInspectionDataLP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewInspectionDataCut.resx">
+      <DependentUpon>frmViewInspectionDataCut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewInspectionDataRound.resx">
+      <DependentUpon>frmViewInspectionDataRound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewInspectionLBadCtm.resx">
+      <DependentUpon>frmViewInspectionLBadCtm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewInspectionListMult.resx">
+      <DependentUpon>frmViewInspectionListMult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewInspectionList.resx">
+      <DependentUpon>frmViewInspectionList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewClamRegistrationView.resx">
+      <DependentUpon>frmViewClamRegistrationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewPackingOrderListByShipReport.resx">
+      <DependentUpon>frmViewPackingOrderListByShipReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmPopCollectionSetOper.resx">
+      <DependentUpon>frmPopCollectionSetOper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmPopSampleRndInspectionLotList.resx">
+      <DependentUpon>frmPopSampleRndInspectionLotList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranOtrherCompainSpecRegistraion.resx">
+      <DependentUpon>frmTranOtrherCompainSpecRegistraion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranCustomerVocRegistraion.resx">
+      <DependentUpon>frmTranCustomerVocRegistraion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranInspectionDataCScanExcelUpload.resx">
+      <DependentUpon>frmTranInspectionDataCScanExcelUpload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranSampleanalyzeRegistraion.resx">
+      <DependentUpon>frmTranSampleanalyzeRegistraion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranClaimRegistraion.resx">
+      <DependentUpon>frmTranClaimRegistraion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranShipReportSign.resx">
+      <DependentUpon>frmTranShipReportSign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmPopSpecList.resx">
+      <DependentUpon>frmPopSpecList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmPopInspectionLotList.resx">
+      <DependentUpon>frmPopInspectionLotList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmPopShipReportList.resx">
+      <DependentUpon>frmPopShipReportList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmPopPackingOrderList.resx">
+      <DependentUpon>frmPopPackingOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Setup\frmSetupBatchMigDataQcm.resx">
+      <DependentUpon>frmSetupBatchMigDataQcm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmSetupBatchMigDataRpt.resx">
+      <DependentUpon>frmSetupBatchMigDataRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmSetupRecipeRegistration.resx">
+      <DependentUpon>frmSetupRecipeRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranInspectionRegistrationGRIT_SMP.resx">
+      <DependentUpon>frmTranInspectionRegistrationGRIT_SMP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranInspectionRegistrationGRIT.resx">
+      <DependentUpon>frmTranInspectionRegistrationGRIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranInspectionRegistrationDaewonTech.resx">
+      <DependentUpon>frmTranInspectionRegistrationDaewonTech.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranInspectionRegistrationPDC.resx">
+      <DependentUpon>frmTranInspectionRegistrationPDC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranInspectionRegistrationIQC.resx">
+      <DependentUpon>frmTranInspectionRegistrationIQC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranInspectionRegistration.resx">
+      <DependentUpon>frmTranInspectionRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranShipReportRegistration_GRT_MP.resx">
+      <DependentUpon>frmTranShipReportRegistration_GRT_MP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranShipReportRegistration_GRIT.resx">
+      <DependentUpon>frmTranShipReportRegistration_GRIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranShipReportRegistration_HM.resx">
+      <DependentUpon>frmTranShipReportRegistration_HM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranShipReportRegistration_CTM.resx">
+      <DependentUpon>frmTranShipReportRegistration_CTM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranOtherCompanySpec.resx">
+      <DependentUpon>frmTranOtherCompanySpec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranShipReportSpecRegistraionByGrade.resx">
+      <DependentUpon>frmTranShipReportSpecRegistraionByGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranShipReportSpecRegistrationByMat.resx">
+      <DependentUpon>frmTranShipReportSpecRegistrationByMat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranInspectionDataCutExcelUpload.resx">
+      <DependentUpon>frmTranInspectionDataCutExcelUpload.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

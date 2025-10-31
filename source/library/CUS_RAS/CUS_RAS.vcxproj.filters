@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5ca7c1f0-93ea-473c-b524-9aaa1e0891e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{90a7dcd1-1d17-403c-81fe-cc46fe3c1b86}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CUS_RAS_AddService.c">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_RAS_tool_event.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_RAS_spare_management.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_RAS_resource_repairinfo_registraion.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_RAS_scrap_mold_request.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_RAS_update_tool.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_RAS_mold_store_registration.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_RAS_mold_tool_event.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_RAS_scrap_mold_confirm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_RAS_create_scrap_mold_request.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_RAS_view_resource_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_RAS_tacktime_registration.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_RAS_batch_oee.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_RAS_update_resource_efficiency_info.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_RAS_mold_break_registration.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_RAS_view_cus_ras_asset_data.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CUS_RAS_services.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CUS_RAS_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

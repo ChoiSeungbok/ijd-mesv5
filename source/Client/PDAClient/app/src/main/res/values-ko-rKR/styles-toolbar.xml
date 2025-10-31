@@ -1,0 +1,16 @@
+<resources>
+
+    <!-- Toolbar Title Label -->
+
+    <style name="Toolbar_Title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:textSize">16.5dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="custom_font">@string/FONT_NANUM_SQUARE_OTFB</item>
+    </style>
+</resources>

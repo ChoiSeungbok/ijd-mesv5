@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffffffff"
+        android:gravity="center"
+        android:minWidth="280dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp">
+
+            <com.pda.mes.widget.FontTextView
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:id="@+id/dialogMessageLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="80dp"
+                android:textColor="#ff4D4F5C"
+                android:textSize="16dp"
+                app:custom_font="@string/FONT_NANUM_SQUARE_OTFB"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_line_size"
+            android:background="#E1E1E1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <com.pda.mes.widget.FontTextView
+                android:id="@+id/doneButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/okay"
+                android:textColor="@drawable/text_selector_language"
+                android:textSize="15dp"
+                app:custom_font="@string/FONT_NANUM_SQUARE_OTFR"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

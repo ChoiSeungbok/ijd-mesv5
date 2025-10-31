@@ -1,0 +1,123 @@
+<resources>
+
+    <!-- 입력 박스 제목 스타일 -->
+    <style name="InputBox_Title">
+        <item name="android:layout_width">110dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:paddingLeft">@dimen/content_padding</item>
+        <item name="android:paddingRight">@dimen/content_padding</item>
+        <item name="custom_font">@string/FONT_NANUM_SQUARE_OTFB</item>
+    </style>
+
+    <style name="InputBox_Title_Split">
+        <item name="android:layout_width">65dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:paddingLeft">@dimen/content_padding</item>
+        <item name="android:paddingRight">@dimen/content_padding</item>
+        <item name="custom_font">@string/FONT_NANUM_SQUARE_OTFB</item>
+    </style>
+
+    <style name="InputBox_Title.Barcode">
+        <item name="android:background">@drawable/selector_barcode_title</item>
+    </style>
+
+    <style name="InputBox_Title.Small">
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="android:layout_width">70dp</item>
+        <item name="android:textSize">11dp</item>
+    </style>
+
+    <style name="InputBox_Content">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:paddingLeft">@dimen/content_padding</item>
+        <item name="android:paddingRight">@dimen/content_padding</item>
+        <item name="android:textColor">#555555</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="custom_font">@string/FONT_NANUM_SQUARE_OTFR</item>
+    </style>
+
+    <style name="InputBox_Content.Small">
+        <item name="android:textSize">11dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="InputBox_Content.NumberField">
+        <item name="android:selectAllOnFocus">true</item>
+        <item name="android:maxLength">12</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:background">@null</item>
+        <item name="android:inputType">phone</item>
+        <item name="android:imeOptions">actionDone</item>
+    </style>
+
+    <style name="InputBox_Content.NumberField.Small">
+        <item name="android:textSize">11dp</item>
+    </style>
+
+    <style name="InputBox_Content.Scan">
+    </style>
+
+    <style name="InputBox_Content.Dropdown.Split">
+        <item name="android:drawableRight">@drawable/baseline_arrow_drop_down_black_24</item>
+        <item name="android:layout_width">105dp</item>
+    </style>
+
+    <style name="InputBox_Content.Dropdown">
+        <item name="android:drawableRight">@drawable/baseline_arrow_drop_down_black_24</item>
+    </style>
+
+    <style name="InputBox_Content.Disable">
+        <item name="android:background">#BFBFBF</item>
+    </style>
+
+    <style name="InputBox_Content.Disable.Number">
+        <item name="android:background">#BFBFBF</item>
+        <item name="android:gravity">right|center_vertical</item>
+    </style>
+
+    <style name="InputBox_Content.Number">
+        <item name="android:background">#BFBFBF</item>
+        <item name="android:gravity">right|center_vertical</item>
+    </style>
+
+    <style name="InputBox_Content.Scan.Number">
+        <item name="android:gravity">right|center_vertical</item>
+    </style>
+
+    <style name="InputBox_Content.Number.Center">
+        <item name="android:background">#BFBFBF</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TotalCountView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/selector_barcode_title</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">15dp</item>
+        <item name="custom_font">@string/FONT_NANUM_SQUARE_OTFB</item>
+        <item name="android:text">0</item>
+    </style>
+
+    <style name="CheckAllView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/selector_barcode_title</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">15dp</item>
+        <item name="custom_font">@string/FONT_NANUM_SQUARE_OTFB</item>
+    </style>
+</resources>

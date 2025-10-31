@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CUS_WIP_adapt_lot.c" />
+    <ClCompile Include="CUS_WIP_AddService.c" />
+    <ClCompile Include="CUS_WIP_blending_order.c" />
+    <ClCompile Include="CUS_WIP_bonus_lot.c" />
+    <ClCompile Include="CUS_WIP_change_item.c" />
+    <ClCompile Include="CUS_WIP_change_test_prod_lot.c" />
+    <ClCompile Include="CUS_WIP_common.c" />
+    <ClCompile Include="CUS_WIP_create_erp_if_data.c" />
+    <ClCompile Include="CUS_WIP_create_lot.c" />
+    <ClCompile Include="CUS_WIP_create_stock_in_oper.c" />
+    <ClCompile Include="CUS_WIP_cup_cell_process_lot.c" />
+    <ClCompile Include="CUS_WIP_cv_lot.c" />
+    <ClCompile Include="CUS_WIP_delete_history.c" />
+    <ClCompile Include="CUS_WIP_delete_lot_history.c" />
+    <ClCompile Include="CUS_WIP_delete_p_lot.c" />
+    <ClCompile Include="CUS_WIP_end_lot.c" />
+    <ClCompile Include="CUS_WIP_etc_in_lot.c" />
+    <ClCompile Include="CUS_WIP_etc_out_lot.c" />
+    <ClCompile Include="CUS_WIP_generate_id.c" />
+    <ClCompile Include="CUS_WIP_grit_class_process.c" />
+    <ClCompile Include="CUS_WIP_hold_lot.c" />
+    <ClCompile Include="CUS_WIP_input_lot_data.c" />
+    <ClCompile Include="CUS_WIP_input_material_lot.c" />
+    <ClCompile Include="CUS_WIP_inventory_survey.c" />
+    <ClCompile Include="CUS_WIP_loss_lot.c" />
+    <ClCompile Include="CUS_WIP_lot_press_data.c" />
+    <ClCompile Include="CUS_WIP_merge_lot.c" />
+    <ClCompile Include="CUS_WIP_merge_wip_lot.c" />
+    <ClCompile Include="CUS_WIP_move_lot.c" />
+    <ClCompile Include="CUS_WIP_move_lot_force.c" />
+    <ClCompile Include="CUS_WIP_move_lot_order.c" />
+    <ClCompile Include="CUS_WIP_multi_process_lot.c" />
+    <ClCompile Include="CUS_WIP_non_operation.c" />
+    <ClCompile Include="CUS_WIP_outsourcing_process.c" />
+    <ClCompile Include="CUS_WIP_process_lot.c" />
+    <ClCompile Include="CUS_WIP_ras_yield_st.c" />
+    <ClCompile Include="CUS_WIP_regenerate_lot.c" />
+    <ClCompile Include="CUS_WIP_regenerate_p_lot.c" />
+    <ClCompile Include="CUS_WIP_release_lot.c" />
+    <ClCompile Include="CUS_WIP_send_resource_info.c" />
+    <ClCompile Include="CUS_WIP_ship_lot.c" />
+    <ClCompile Include="CUS_WIP_skip_lot.c" />
+    <ClCompile Include="CUS_WIP_split_lot.c" />
+    <ClCompile Include="CUS_WIP_split_wip_lot.c" />
+    <ClCompile Include="CUS_WIP_start_lot.c" />
+    <ClCompile Include="CUS_WIP_store_lot.c" />
+    <ClCompile Include="CUS_WIP_terminate_lot.c" />
+    <ClCompile Include="CUS_WIP_test_process.c" />
+    <ClCompile Include="CUS_WIP_unstore_lot.c" />
+    <ClCompile Include="CUS_WIP_update_classify_master_data_list.c" />
+    <ClCompile Include="CUS_WIP_update_loss_by_oper.c" />
+    <ClCompile Include="CUS_WIP_update_lot_comment.c" />
+    <ClCompile Include="CUS_WIP_update_lot_loss.c" />
+    <ClCompile Include="CUS_WIP_update_lot_res_worktime.c" />
+    <ClCompile Include="CUS_WIP_update_productivity_goal.C" />
+    <ClCompile Include="CUS_WIP_update_working_time.c" />
+    <ClCompile Include="CUS_WIP_validation_etc_out_lot.c" />
+    <ClCompile Include="CUS_WIP_view_label_list.c" />
+    <ClCompile Include="CUS_WIP_view_lot_history.c" />
+    <ClCompile Include="CUS_WIP_view_lot_info.c" />
+    <ClCompile Include="CUS_WIP_view_material_list.c" />
+    <ClCompile Include="CUS_WIP_view_oper_list.c" />
+    <ClCompile Include="CUS_WIP_view_oper_loss.c" />
+    <ClCompile Include="CUS_WIP_view_worker_list.c" />
+    <ClCompile Include="CUS_WIP_worker_management.c" />
+    <ClCompile Include="CUS_WIP_worker_registration.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CUS_WIP_common.h" />
+    <ClInclude Include="CUS_WIP_services.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DB6569F2-43DB-480D-86F1-EAA27EA1C7EE}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>CUS_WIP</RootNamespace>
+    <ProjectName>CUS_WIP</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_LIB;_USE_STATIC_LIB;_H101;_SPC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>4100;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\inc;$(ProjectDir)..\..\..\inc\dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy .\*.h ..\..\..\inc /d/r/y</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) ..\..\..\lib</Command>
+    </PostBuildEvent>
+    <PreLinkEvent>
+      <Command>xcopy .\*.h ..\..\..\inc /d/r/y</Command>
+    </PreLinkEvent>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CRT_SECURE_NO_WARNINGS;_LIB;_H101;_SPC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

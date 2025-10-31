@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.pda.mes.widget.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Manufacturing Execution System"
+                android:textColor="#ffffffff"
+                android:textSize="12dp"
+                app:custom_font="@string/FONT_NOTO_SANS_KR_REG"/>
+
+            <com.pda.mes.widget.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:text="@string/main_title"
+                android:textColor="#ffffffff"
+                android:textSize="15dp"
+                app:custom_font="@string/FONT_NOTO_SANS_KR_BOLD"/>
+
+            <ImageView
+                android:layout_width="43dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="7.5dp"
+                android:background="@drawable/page_login_main_image"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:paddingLeft="13.3dp">
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/userImage"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:src="@drawable/baseline_person_white_24"/>
+
+                <com.pda.mes.widget.FontTextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:paddingTop="1dp"
+                    android:textColor="#ffffffff"
+                    android:textSize="15dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    app:custom_font="@string/FONT_NANUM_SQUARE_OTFB"/>
+            </LinearLayout>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:onClick="onClickSettings"
+                android:paddingBottom="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="13.3dp"
+                android:paddingTop="15dp"
+                android:src="@drawable/baseline_settings_white_24"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/ef_shadow_map"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="13.3dp">
+
+        <com.pda.mes.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="80dp"
+            android:text="@string/setting_menu_name_04"
+            android:textColor="#ff000000"
+            android:textSize="15dp"
+            app:custom_font="@string/FONT_NANUM_SQUARE_OTFR"/>
+
+        <com.pda.mes.widget.FontTextView
+            android:id="@+id/languageLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="#ff000000"
+            android:textSize="16dp"
+            app:custom_font="@string/FONT_NANUM_SQUARE_OTFB"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="13.3dp">
+
+        <com.pda.mes.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="80dp"
+            android:text="@string/setting_menu_name_01"
+            android:textColor="#ff000000"
+            android:textSize="15dp"
+            app:custom_font="@string/FONT_NANUM_SQUARE_OTFR"/>
+
+        <com.pda.mes.widget.FontTextView
+            android:id="@+id/serverName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="#ff000000"
+            android:textSize="16dp"
+            app:custom_font="@string/FONT_NANUM_SQUARE_OTFB"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="13.3dp">
+
+        <com.pda.mes.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="80dp"
+            android:text="@string/version"
+            android:textColor="#ff000000"
+            android:textSize="15dp"
+            app:custom_font="@string/FONT_NANUM_SQUARE_OTFR"/>
+
+        <com.pda.mes.widget.FontTextView
+            android:id="@+id/versionName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="#ff000000"
+            android:textSize="16dp"
+            app:custom_font="@string/FONT_NANUM_SQUARE_OTFB"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/debugLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <com.pda.mes.widget.FontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_group"
+            android:textColor="#ff000000"
+            android:textSize="15dp"
+            app:custom_font="@string/FONT_NANUM_SQUARE_OTFR"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:onClick="onClickINV"
+            android:text="@string/inv_menu"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:onClick="onClickWIP"
+            android:text="@string/production_menu"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="visible"
+            android:onClick="onClickSHP"
+            android:text="@string/shp_menu"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="visible"
+            android:onClick="onClickBookMark"
+            android:text="@string/book_mark_menu"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_line_size"
+        android:background="#b2777777"/>
+
+    <com.pda.mes.widget.FontTextView
+        android:id="@+id/logoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_button"
+        android:background="@drawable/raised_selector_white_button"
+        android:clickable="true"
+        android:drawableRight="@drawable/baseline_exit_to_app_black_24"
+        android:gravity="center_vertical"
+        android:onClick="onClickLogout"
+        android:paddingLeft="17dp"
+        android:paddingRight="10dp"
+        android:text="@string/logout_btn_name"
+        android:textColor="#ff000000"
+        android:textSize="16dp"
+        app:custom_font="@string/FONT_NOTO_SANS_KR_REG"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_line_size"
+        android:background="#b2777777"/>
+</LinearLayout>

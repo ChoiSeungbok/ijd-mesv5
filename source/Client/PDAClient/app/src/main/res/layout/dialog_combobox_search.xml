@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="270dp"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:background="#ffffffff">
+
+        <com.pda.mes.widget.FontTextView
+            android:id="@+id/dialogTitleLabel"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="@drawable/text_selector_language"
+            android:textSize="17dp"
+            app:custom_font="@string/FONT_NANUM_SQUARE_OTFB"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_line_size"
+            android:background="#30777777"/>
+
+        <com.pda.mes.widget.FontTextView
+            android:visibility="gone"
+            android:id="@+id/emptyView"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="@drawable/text_selector_language"
+            android:textSize="13dp"
+            android:text="@string/alert_message_no_list"
+            app:custom_font="@string/FONT_NANUM_SQUARE_OTFB"/>
+
+        <ListView
+            android:id="@+id/dialogListView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:cacheColorHint="#00000000"
+            android:choiceMode="singleChoice"
+            android:clipToPadding="false"
+            android:divider="#e1e1e1"
+            android:dividerHeight="0.3dp"
+            android:fadingEdgeLength="0dp"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:listSelector="#00000000"
+            android:overScrollMode="always"
+            android:requiresFadingEdge="vertical"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="none"
+            android:smoothScrollbar="true"/>
+
+        <ListView
+            android:id="@+id/copyListView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:cacheColorHint="#00000000"
+            android:choiceMode="singleChoice"
+            android:clipToPadding="false"
+            android:divider="#e1e1e1"
+            android:visibility="gone"
+            android:dividerHeight="0.3dp"
+            android:fadingEdgeLength="0dp"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:listSelector="#00000000"
+            android:overScrollMode="always"
+            android:requiresFadingEdge="vertical"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="none"
+            android:smoothScrollbar="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_text_box_height"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/selector_barcode_btn"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.pda.mes.widget.FontEditTextView
+                    android:id="@+id/comboboxId"
+                    style="@style/InputBox_Content"
+                    android:imeOptions="actionDone"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_line_size"
+            android:background="#30777777"/>
+
+        <com.pda.mes.widget.FontTextView
+            android:id="@+id/closeButton"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@drawable/text_selector_language"
+            android:textSize="15dp"
+            android:text="@string/close"
+            app:custom_font="@string/FONT_NANUM_SQUARE_OTFR"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

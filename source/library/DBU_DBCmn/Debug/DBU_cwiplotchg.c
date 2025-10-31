@@ -1,0 +1,2595 @@
+
+/* Result Sets Interface */
+#ifndef SQL_CRSR
+#  define SQL_CRSR
+  struct sql_cursor
+  {
+    unsigned int curocn;
+    void *ptr1;
+    void *ptr2;
+    unsigned int magic;
+  };
+  typedef struct sql_cursor sql_cursor;
+  typedef struct sql_cursor SQL_CURSOR;
+#endif /* SQL_CRSR */
+
+/* Thread Safety */
+typedef void * sql_context;
+typedef void * SQL_CONTEXT;
+
+/* Object support */
+struct sqltvn
+{
+  unsigned char *tvnvsn; 
+  unsigned short tvnvsnl; 
+  unsigned char *tvnnm;
+  unsigned short tvnnml; 
+  unsigned char *tvnsnm;
+  unsigned short tvnsnml;
+};
+typedef struct sqltvn sqltvn;
+
+struct sqladts
+{
+  unsigned int adtvsn; 
+  unsigned short adtmode; 
+  unsigned short adtnum;  
+  sqltvn adttvn[1];       
+};
+typedef struct sqladts sqladts;
+
+static struct sqladts sqladt = {
+  1,1,0,
+};
+
+/* Binding to PL/SQL Records */
+struct sqltdss
+{
+  unsigned int tdsvsn; 
+  unsigned short tdsnum; 
+  unsigned char *tdsval[1]; 
+};
+typedef struct sqltdss sqltdss;
+static struct sqltdss sqltds =
+{
+  1,
+  0,
+};
+
+/* File name & Package Name */
+struct sqlcxp
+{
+  unsigned short fillen;
+           char  filnam[18];
+};
+static const struct sqlcxp sqlfpn =
+{
+    17,
+    "DBU_cwiplotchg.pc"
+};
+
+
+static unsigned int sqlctx = 9397555;
+
+
+static struct sqlexd {
+   unsigned int   sqlvsn;
+   unsigned int   arrsiz;
+   unsigned int   iters;
+   unsigned int   offset;
+   unsigned short selerr;
+   unsigned short sqlety;
+   unsigned int   occurs;
+      const short *cud;
+   unsigned char  *sqlest;
+      const char  *stmt;
+   sqladts *sqladtp;
+   sqltdss *sqltdsp;
+            void  **sqphsv;
+   unsigned int   *sqphsl;
+            int   *sqphss;
+            void  **sqpind;
+            int   *sqpins;
+   unsigned int   *sqparm;
+   unsigned int   **sqparc;
+   unsigned short  *sqpadto;
+   unsigned short  *sqptdso;
+   unsigned int   sqlcmax;
+   unsigned int   sqlcmin;
+   unsigned int   sqlcincr;
+   unsigned int   sqlctimeout;
+   unsigned int   sqlcnowait;
+              int   sqfoff;
+   unsigned int   sqcmod;
+   unsigned int   sqfmod;
+   unsigned int   sqlpfmem;
+            void  *sqhstv[31];
+   unsigned int   sqhstl[31];
+            int   sqhsts[31];
+            void  *sqindv[31];
+            int   sqinds[31];
+   unsigned int   sqharm[31];
+   unsigned int   *sqharc[31];
+   unsigned short  sqadto[31];
+   unsigned short  sqtdso[31];
+} sqlstm = {13,31};
+
+/* SQLLIB Prototypes */
+extern void sqlcxt (void **, unsigned int *,
+                    struct sqlexd *, const struct sqlcxp *);
+extern void sqlcx2t(void **, unsigned int *,
+                    struct sqlexd *, const struct sqlcxp *);
+extern void sqlbuft(void **, char *);
+extern void sqlgs2t(void **, char *);
+extern void sqlorat(void **, unsigned int *, void *);
+
+/* Forms Interface */
+static const int IAPSUCC = 0;
+static const int IAPFAIL = 1403;
+static const int IAPFTL  = 535;
+extern void sqliem(unsigned char *, signed int *);
+
+ static const char *sq0007 = 
+"select FACTORY ,LOT_ID ,HIST_SEQ ,ORDER_ID ,FLOW ,OPER ,ERP_OPER ,AREA_ID ,\
+SUB_AREA_ID ,FROM_MAT_ID ,FROM_MAT_VER ,TO_MAT_ID ,TO_MAT_VER ,QRY_1 ,CMF_1 ,\
+CMF_2 ,CMF_3 ,CMF_4 ,CMF_5 ,CMF_6 ,CMF_7 ,CMF_8 ,CMF_9 ,CMF_10 ,CREATE_USER_I\
+D ,CREATE_TIME ,UPDATE_USER_ID ,UPDATE_TIME  from CWIPLOTCHG  order by FACTOR\
+Y asc ,LOT_ID asc ,HIST_SEQ asc             ";
+
+typedef struct { unsigned short len; unsigned char arr[1]; } VARCHAR;
+typedef struct { unsigned short len; unsigned char arr[1]; } varchar;
+
+/* cud (compilation unit data) array */
+static const short sqlcud0[] =
+{13,4130,846,0,0,
+5,0,0,1,478,0,4,46,0,0,31,3,0,1,0,2,97,0,0,2,97,0,0,2,3,0,0,2,97,0,0,2,97,0,0,
+2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,3,0,0,2,97,0,0,2,3,0,0,2,4,0,0,
+2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,
+0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,1,97,0,0,1,97,0,0,1,3,0,0,
+144,0,0,2,490,0,4,144,0,0,31,3,0,1,0,2,97,0,0,2,97,0,0,2,3,0,0,2,97,0,0,2,97,0,
+0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,3,0,0,2,97,0,0,2,3,0,0,2,4,0,
+0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,
+0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,1,97,0,0,1,97,0,0,1,3,0,0,
+283,0,0,3,96,0,4,245,0,0,4,3,0,1,0,2,4,0,0,1,97,0,0,1,97,0,0,1,3,0,0,
+314,0,0,4,78,0,2,283,0,0,3,3,0,1,0,1,97,0,0,1,97,0,0,1,3,0,0,
+341,0,0,5,402,0,3,314,0,0,28,28,0,1,0,1,97,0,0,1,97,0,0,1,3,0,0,1,97,0,0,1,97,
+0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,3,0,0,1,97,0,0,1,3,0,0,1,4,
+0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,
+97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
+468,0,0,6,409,0,5,395,0,0,28,28,0,1,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,
+0,0,1,97,0,0,1,97,0,0,1,3,0,0,1,97,0,0,1,3,0,0,1,4,0,0,1,97,0,0,1,97,0,0,1,97,
+0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,
+97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,3,0,0,
+595,0,0,7,350,0,9,488,0,0,0,0,0,1,0,
+610,0,0,7,0,0,13,517,0,0,28,0,0,1,0,2,97,0,0,2,97,0,0,2,3,0,0,2,97,0,0,2,97,0,
+0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,3,0,0,2,97,0,0,2,3,0,0,2,4,0,
+0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,
+0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
+737,0,0,7,0,0,15,575,0,0,0,0,0,1,0,
+};
+
+
+/*********************************************************************
+**
+**    File Name   : DBU_cwiplotchg.pc
+**    DB Type     : Unix Oracle
+**    Description : Table Access Function Source File
+**    Create date : 2020-12-24 10:55:06
+**
+**    Generated by DB Common Generator
+**    Copyright (C) 1998-2020 MIRACOM,INC.
+**
+*********************************************************************/
+/* EXEC SQL BEGIN DECLARE SECTION; */ 
+
+/*     EXEC SQL INCLUDE DBU_COMMON_N;
+ */ 
+#ifndef _DBU_COMMON_N_LOADED
+#define _DBU_COMMON_N_LOADED
+
+#include <DBC_common_n.h>
+#include "dbu_q_cond_n.h"
+
+//Custom Function
+
+
+#include "DBU_cbascptdef_n.h"
+#include "DBU_crassprsts_n.h"
+#include "DBU_mwiplotstsx_n.h"
+#include "DBU_mwiplothisx_n.h"
+#include "DBU_mwipoprdef_n.h"
+#include "DBU_mwipmatdef_n.h"
+#include "DBU_mrasresdef_n.h"
+#include "DBU_mrasreshis_n.h"
+#include "DBU_mrasresmfo_n.h"
+#include "DBU_mrastoldef_n.h"
+#include "DBU_mwipflwdef_n.h"
+#include "DBU_mwipflwopr_n.h"
+#include "DBU_mwipmatflw_n.h"
+#include "DBU_crasrprsts_n.h"
+#include "DBU_crasrprspr_n.h"
+#include "DBU_crasrprwrk_n.h"
+#include "DBU_mwipordsts_n.h"
+#include "DBU_cwiperpopr_n.h"
+#include "DBU_cwipoprwrk_n.h"
+#include "DBU_cwipordbom_n.h"
+#include "DBU_cwipwrkdef_n.h"
+#include "DBU_cwipwrkgrp_n.h"
+#include "DBU_cwiplotlst_n.h"
+#include "DBU_minvdlvdtl_n.h"
+#include "DBU_minvdlvmst_n.h"
+#include "DBU_minvlothis_n.h"
+#include "DBU_minvlothld_n.h"
+#include "DBU_minvlotiss_n.h"
+#include "DBU_minvlotmvh_n.h"
+#include "DBU_minvlotsts_n.h"
+#include "DBU_minvlotswh_n.h"
+#include "DBU_minvmatiss_n.h"
+#include "DBU_minvreqdtl_n.h"
+#include "DBU_minvreqmst_n.h"
+#include "DBU_mgcmtbldat_n.h"
+#include "DBU_mgcmtbldef_n.h"
+#include "DBU_minvdlvlbl_n.h"
+#include "DBU_minvdlvlot_n.h"
+#include "DBU_mwipcoldef_n.h"
+#include "DBU_cwipinvlod_n.h"
+#include "DBU_cbasfildef_n.h"
+#include "DBU_cwiplotmvm_n.h"
+#include "DBU_cwiplotmvc_n.h"
+#include "DBU_cwiplotmvr_n.h"
+#include "DBU_minvreqlot_n.h"
+#include "DBU_cwipdwnsts_n.h"
+#include "DBU_cwipgrpsts_n.h"
+#include "DBU_cwipgrplot_n.h"
+#include "DBU_cpakordsts_n.h"
+#include "DBU_cpaklotsts_n.h"
+#include "DBU_cshpordmst_n.h"
+#include "DBU_cshporddtl_n.h"
+#include "DBU_cretordsts_n.h"
+#include "DBU_crasdspreq_n.h"
+#include "DBU_crasdsptol_n.h"
+#include "DBU_cbaschkdef_n.h"
+#include "DBU_medclotdat_n.h"
+#include "DBU_medccolver_n.h"
+#include "DBU_medccolchr_n.h"
+#include "DBU_medccoldef_n.h"
+#include "DBU_medcchrdef_n.h"
+#include "DBU_medcresdat_n.h"
+#include "DBU_cqcmispsts_n.h"
+#include "DBU_cqcmispcol_n.h"
+#include "DBU_cqcmispdat_n.h"
+#include "DBU_cqcmisplos_n.h"
+#include "DBU_cqcmispwrk_n.h"
+#include "DBU_if_po_rcv_header_n.h"
+#include "DBU_if_po_rcv_txns_n.h"
+#include "DBU_if_po_rcv_txn_lots_n.h"
+#include "DBU_if_inv_txns_n.h"
+#include "DBU_if_inv_txn_lots_n.h"
+#include "DBU_if_move_trx_n.h"
+#include "DBU_if_move_trx_save_n.h"
+#include "DBU_if_completion_trx_n.h"
+#include "DBU_if_completion_trx_save_n.h"
+#include "DBU_if_comp_issue_trx_n.h"
+#include "DBU_if_comp_issue_trx_save_n.h"
+#include "DBU_if_om_txns_n.h"
+#include "DBU_if_om_txn_lots_n.h"
+#include "DBU_if_om_ship_headers_n.h"
+#include "DBU_if_om_ship_lines_n.h"
+#include "DBU_if_om_ship_line_lots_n.h"
+#include "DBU_if_po_rma_headers_n.h"
+#include "DBU_if_po_rma_txns_n.h"
+#include "DBU_if_po_rma_txn_lots_n.h"
+#include "DBU_if_om_promise_date_n.h"
+#include "DBU_if_std_bom_def_n.h"
+#include "DBU_if_uom_conv_def_n.h"
+#include "DBU_if_mat_def_n.h"
+#include "DBU_if_vendor_def_n.h"
+#include "DBU_if_customer_def_n.h"
+#include "DBU_if_wh_def_n.h"
+#include "DBU_if_sub_area_def_n.h"
+#include "DBU_if_txn_type_def_n.h"
+#include "DBU_if_po_info_n.h"
+#include "DBU_if_wo_bom_info_n.h"
+#include "DBU_if_wo_info_n.h"
+#include "DBU_if_so_mst_n.h"
+#include "DBU_if_so_dtl_n.h"
+#include "DBU_if_ro_info_n.h"
+#include "DBU_if_po_consign_txns_n.h"
+#include "DBU_cwipgrtcss_n.h"
+#include "DBU_cwipgrtbld_n.h"
+#include "DBU_if_customer_def_his_n.h"
+#include "DBU_if_mat_def_his_n.h"
+#include "DBU_if_po_info_his_n.h"
+#include "DBU_if_ro_info_his_n.h"
+#include "DBU_if_so_dtl_his_n.h"
+#include "DBU_if_so_mst_his_n.h"
+#include "DBU_if_std_bom_def_his_n.h"
+#include "DBU_if_sub_area_def_his_n.h"
+#include "DBU_if_txn_type_def_his_n.h"
+#include "DBU_if_uom_conv_def_his_n.h"
+#include "DBU_if_vendor_def_his_n.h"
+#include "DBU_if_wh_def_his_n.h"
+#include "DBU_if_wo_bom_info_his_n.h"
+#include "DBU_if_wo_info_his_n.h"
+#include "DBU_if_pack_info_n.h"
+#include "DBU_if_pack_info_his_n.h"
+#include "DBU_if_p_wo_info_n.h"
+#include "DBU_if_p_wo_info_his_n.h"
+#include "DBU_if_po_requests_receipts_n.h"
+#include "DBU_cwiplotcum_n.h"
+#include "DBU_cwiplotdry_n.h"
+#include "DBU_csecusedat_n.h"
+#include "DBU_cwipgrtcls_n.h"
+#include "DBU_cbastxndef_n.h"
+#include "DBU_cqcmgrtsiv_n.h"
+#include "DBU_cqcmgrthlt_n.h"
+#include "DBU_cqcmgrtcot_n.h"
+#include "DBU_mwipcaldef_n.h"
+#include "DBU_cqcmgrtasp_n.h"
+#include "DBU_cwiplotprs_n.h"
+#include "DBU_cordprdpln_n.h"
+#include "DBU_cwiprcpdef_n.h"
+
+#include "DBU_cretlotsts_n.h"
+#include "DBU_cwiplotrim_n.h"
+#include "DBU_cwiplotrnd_n.h"
+#include "DBU_cwiplotimp_n.h"
+#include "DBU_cwiplotcup_n.h"
+#include "DBU_cwiplotlmk_n.h"
+
+#include "DBU_cwiplotcls_n.h"
+#include "DBU_cwiplottrc_n.h"
+#include "DBU_cwiplotbas_n.h"
+
+#include "DBU_cwipordrwk_n.h"
+#include "DBU_cbomstddef_n.h"
+ 
+#include "DBU_ct_sal110t_n.h" 
+#include "DBU_ct_packing_v_n.h"
+#include "DBU_csumlotdat_n.h"
+#include "DBU_mwiplotlos_n.h"
+#include "DBU_cbaslbldat_n.h"
+#include "DBU_cqcmrptctm_n.h"
+#include "DBU_cqcmrpthmm_n.h"
+#include "DBU_cbastaktim_n.h"
+#include "DBU_minvmovsts_n.h"
+#include "DBU_minvmovlot_n.h"
+
+#include "DBU_cqcmrptgnp_n.h"
+#include "DBU_cqcmrptgny_n.h"
+#include "DBU_cqcmrptgrn_n.h"
+#include "DBU_csumreswip_n.h"
+#include "DBU_cwipprsrun_n.h"
+#include "DBU_cwipuoplot_n.h"
+#include "DBU_ct_mtl510t_n.h"
+#include "DBU_mwipidghis_n.h"
+#include "DBU_cqcmrptgrm_n.h"
+#include "DBU_cqcmrptgmp_n.h"
+#include "DBU_cwipordopr_n.h"
+#include "DBU_cqcmcstspm_n.h"
+#include "DBU_cwipinvldm_n.h"
+#include "DBU_cqcmcstspg_n.h"
+
+#include "DBU_mgcmlagdat_n.h" 
+#include "DBU_cwipprdgol_n.h"
+#include "DBU_batch_job_n.h"
+#include "DBU_mrastevdef_n.h"
+#include "DBU_esecusrdef_n.h"
+#include "DBU_ct_mtl100t_n.h"
+#include "DBU_cwiplotrec_n.h"
+#include "DBU_ct_prd210t_n.h"
+#include "DBU_ct_prd200t_n.h"
+#include "DBU_ct_mold_v_n.h"
+#include "DBU_cinvuoplot_n.h"
+#include "DBU_cwipwrkinp_n.h"
+#include "DBU_minvetclot_n.h"
+#include "DBU_cwiplotchg_n.h"
+#include "DBU_cpaklothis_n.h"
+#include "DBU_ishplotiss_n.h"
+#include "DBU_ishplotrcv_n.h"
+#include "DBU_cwipbldavg_n.h"
+#include "DBU_crasbasdat_n.h"
+#include "DBU_cbasshpbom_n.h"
+#include "DBU_crastolbrk_n.h"
+#include "DBU_mrastolhis_n.h"
+#include "DBU_cwippryer_n.h"
+#include "DBU_ishpispiss_n.h"
+#include "DBU_ishpisprcv_n.h"
+#include "DBU_crashitfnc_n.h"
+#include "DBU_cerpaststs_n.h"
+
+#include "DBU_crasmdextd_n.h"
+#include "DBU_crasvcmfnc_n.h"
+#include "DBU_cras5thprs_n.h"
+#include "DBU_cras4hrprs_n.h"
+#include "DBU_craspntmix_n.h"
+#include "DBU_crasbalmil_n.h"
+#include "DBU_cwiplotrmk_n.h"
+#include "DBU_csecusrdef_n.h"
+#include "DBU_cqcmcplmst_n.h"
+#include "DBU_cqcmsplmst_n.h"
+#include "DBU_cqcmvocmst_n.h"
+#include "DBU_cqcmcusspe_n.h"
+
+#endif
+
+/* EXEC SQL END DECLARE SECTION; */ 
+
+
+/* SQL Common Header File */
+#include "DBU_common.h"
+
+
+/* SQL Error Handling */
+/* EXEC SQL WHENEVER SQLERROR DO DB_usr_error(); */ 
+
+/* EXEC SQL WHENEVER NOT FOUND DO DB_usr_error(); */ 
+
+
+
+/* Function Declaration */
+void DBU_add_null_cwiplotchg(struct CWIPLOTCHG_N_TAG *CWIPLOTCHG_N, struct CWIPLOTCHG_TAG *CWIPLOTCHG);
+void DBU_del_null_cwiplotchg(struct CWIPLOTCHG_N_TAG *CWIPLOTCHG_N, struct CWIPLOTCHG_TAG *CWIPLOTCHG);
+
+
+/* SQL SELECT Function */
+void DBU_select_cwiplotchg(int sel_type, struct CWIPLOTCHG_TAG *CWIPLOTCHG)
+{
+    /* EXEC SQL BEGIN DECLARE SECTION; */ 
+
+        struct CWIPLOTCHG_N_TAG CWIPLOTCHG_N;
+    /* EXEC SQL END DECLARE SECTION; */ 
+
+
+    DB_start_query_timer();
+
+    DBU_add_null_cwiplotchg(&CWIPLOTCHG_N, CWIPLOTCHG);
+    DB_error_code = 0;
+
+
+    switch(sel_type)
+    {
+        case 1:
+            /* EXEC SQL SELECT 
+                    FACTORY,
+                    LOT_ID,
+                    HIST_SEQ,
+                    ORDER_ID,
+                    FLOW,
+                    OPER,
+                    ERP_OPER,
+                    AREA_ID,
+                    SUB_AREA_ID,
+                    FROM_MAT_ID,
+                    FROM_MAT_VER,
+                    TO_MAT_ID,
+                    TO_MAT_VER,
+                    QRY_1,
+                    CMF_1,
+                    CMF_2,
+                    CMF_3,
+                    CMF_4,
+                    CMF_5,
+                    CMF_6,
+                    CMF_7,
+                    CMF_8,
+                    CMF_9,
+                    CMF_10,
+                    CREATE_USER_ID,
+                    CREATE_TIME,
+                    UPDATE_USER_ID,
+                    UPDATE_TIME
+                INTO 
+                    :CWIPLOTCHG_N.FACTORY,
+                    :CWIPLOTCHG_N.LOT_ID,
+                    :CWIPLOTCHG_N.HIST_SEQ,
+                    :CWIPLOTCHG_N.ORDER_ID,
+                    :CWIPLOTCHG_N.FLOW,
+                    :CWIPLOTCHG_N.OPER,
+                    :CWIPLOTCHG_N.ERP_OPER,
+                    :CWIPLOTCHG_N.AREA_ID,
+                    :CWIPLOTCHG_N.SUB_AREA_ID,
+                    :CWIPLOTCHG_N.FROM_MAT_ID,
+                    :CWIPLOTCHG_N.FROM_MAT_VER,
+                    :CWIPLOTCHG_N.TO_MAT_ID,
+                    :CWIPLOTCHG_N.TO_MAT_VER,
+                    :CWIPLOTCHG_N.QRY_1,
+                    :CWIPLOTCHG_N.CMF_1,
+                    :CWIPLOTCHG_N.CMF_2,
+                    :CWIPLOTCHG_N.CMF_3,
+                    :CWIPLOTCHG_N.CMF_4,
+                    :CWIPLOTCHG_N.CMF_5,
+                    :CWIPLOTCHG_N.CMF_6,
+                    :CWIPLOTCHG_N.CMF_7,
+                    :CWIPLOTCHG_N.CMF_8,
+                    :CWIPLOTCHG_N.CMF_9,
+                    :CWIPLOTCHG_N.CMF_10,
+                    :CWIPLOTCHG_N.CREATE_USER_ID,
+                    :CWIPLOTCHG_N.CREATE_TIME,
+                    :CWIPLOTCHG_N.UPDATE_USER_ID,
+                    :CWIPLOTCHG_N.UPDATE_TIME
+                FROM CWIPLOTCHG
+                WHERE FACTORY = :CWIPLOTCHG_N.FACTORY
+                    AND LOT_ID = :CWIPLOTCHG_N.LOT_ID
+                    AND HIST_SEQ = :CWIPLOTCHG_N.HIST_SEQ; */ 
+
+{
+            struct sqlexd sqlstm;
+            sqlstm.sqlvsn = 13;
+            sqlstm.arrsiz = 31;
+            sqlstm.sqladtp = &sqladt;
+            sqlstm.sqltdsp = &sqltds;
+            sqlstm.stmt = "select FACTORY ,LOT_ID ,HIST_SEQ ,ORDER_ID ,FLOW\
+ ,OPER ,ERP_OPER ,AREA_ID ,SUB_AREA_ID ,FROM_MAT_ID ,FROM_MAT_VER ,TO_MAT_ID \
+,TO_MAT_VER ,QRY_1 ,CMF_1 ,CMF_2 ,CMF_3 ,CMF_4 ,CMF_5 ,CMF_6 ,CMF_7 ,CMF_8 ,C\
+MF_9 ,CMF_10 ,CREATE_USER_ID ,CREATE_TIME ,UPDATE_USER_ID ,UPDATE_TIME into :\
+b0,:b1,:b2,:b3,:b4,:b5,:b6,:b7,:b8,:b9,:b10,:b11,:b12,:b13,:b14,:b15,:b16,:b1\
+7,:b18,:b19,:b20,:b21,:b22,:b23,:b24,:b25,:b26,:b27  from CWIPLOTCHG where ((\
+FACTORY=:b0 and LOT_ID=:b1) and HIST_SEQ=:b2)";
+            sqlstm.iters = (unsigned int  )1;
+            sqlstm.offset = (unsigned int  )5;
+            sqlstm.selerr = (unsigned short)1;
+            sqlstm.sqlpfmem = (unsigned int  )0;
+            sqlstm.cud = sqlcud0;
+            sqlstm.sqlest = (unsigned char  *)&sqlca;
+            sqlstm.sqlety = (unsigned short)4352;
+            sqlstm.occurs = (unsigned int  )0;
+            sqlstm.sqhstv[0] = (         void  *)(CWIPLOTCHG_N.FACTORY);
+            sqlstm.sqhstl[0] = (unsigned int  )11;
+            sqlstm.sqhsts[0] = (         int  )0;
+            sqlstm.sqindv[0] = (         void  *)0;
+            sqlstm.sqinds[0] = (         int  )0;
+            sqlstm.sqharm[0] = (unsigned int  )0;
+            sqlstm.sqadto[0] = (unsigned short )0;
+            sqlstm.sqtdso[0] = (unsigned short )0;
+            sqlstm.sqhstv[1] = (         void  *)(CWIPLOTCHG_N.LOT_ID);
+            sqlstm.sqhstl[1] = (unsigned int  )26;
+            sqlstm.sqhsts[1] = (         int  )0;
+            sqlstm.sqindv[1] = (         void  *)0;
+            sqlstm.sqinds[1] = (         int  )0;
+            sqlstm.sqharm[1] = (unsigned int  )0;
+            sqlstm.sqadto[1] = (unsigned short )0;
+            sqlstm.sqtdso[1] = (unsigned short )0;
+            sqlstm.sqhstv[2] = (         void  *)&(CWIPLOTCHG_N.HIST_SEQ);
+            sqlstm.sqhstl[2] = (unsigned int  )sizeof(int);
+            sqlstm.sqhsts[2] = (         int  )0;
+            sqlstm.sqindv[2] = (         void  *)0;
+            sqlstm.sqinds[2] = (         int  )0;
+            sqlstm.sqharm[2] = (unsigned int  )0;
+            sqlstm.sqadto[2] = (unsigned short )0;
+            sqlstm.sqtdso[2] = (unsigned short )0;
+            sqlstm.sqhstv[3] = (         void  *)(CWIPLOTCHG_N.ORDER_ID);
+            sqlstm.sqhstl[3] = (unsigned int  )26;
+            sqlstm.sqhsts[3] = (         int  )0;
+            sqlstm.sqindv[3] = (         void  *)0;
+            sqlstm.sqinds[3] = (         int  )0;
+            sqlstm.sqharm[3] = (unsigned int  )0;
+            sqlstm.sqadto[3] = (unsigned short )0;
+            sqlstm.sqtdso[3] = (unsigned short )0;
+            sqlstm.sqhstv[4] = (         void  *)(CWIPLOTCHG_N.FLOW);
+            sqlstm.sqhstl[4] = (unsigned int  )21;
+            sqlstm.sqhsts[4] = (         int  )0;
+            sqlstm.sqindv[4] = (         void  *)0;
+            sqlstm.sqinds[4] = (         int  )0;
+            sqlstm.sqharm[4] = (unsigned int  )0;
+            sqlstm.sqadto[4] = (unsigned short )0;
+            sqlstm.sqtdso[4] = (unsigned short )0;
+            sqlstm.sqhstv[5] = (         void  *)(CWIPLOTCHG_N.OPER);
+            sqlstm.sqhstl[5] = (unsigned int  )11;
+            sqlstm.sqhsts[5] = (         int  )0;
+            sqlstm.sqindv[5] = (         void  *)0;
+            sqlstm.sqinds[5] = (         int  )0;
+            sqlstm.sqharm[5] = (unsigned int  )0;
+            sqlstm.sqadto[5] = (unsigned short )0;
+            sqlstm.sqtdso[5] = (unsigned short )0;
+            sqlstm.sqhstv[6] = (         void  *)(CWIPLOTCHG_N.ERP_OPER);
+            sqlstm.sqhstl[6] = (unsigned int  )31;
+            sqlstm.sqhsts[6] = (         int  )0;
+            sqlstm.sqindv[6] = (         void  *)0;
+            sqlstm.sqinds[6] = (         int  )0;
+            sqlstm.sqharm[6] = (unsigned int  )0;
+            sqlstm.sqadto[6] = (unsigned short )0;
+            sqlstm.sqtdso[6] = (unsigned short )0;
+            sqlstm.sqhstv[7] = (         void  *)(CWIPLOTCHG_N.AREA_ID);
+            sqlstm.sqhstl[7] = (unsigned int  )21;
+            sqlstm.sqhsts[7] = (         int  )0;
+            sqlstm.sqindv[7] = (         void  *)0;
+            sqlstm.sqinds[7] = (         int  )0;
+            sqlstm.sqharm[7] = (unsigned int  )0;
+            sqlstm.sqadto[7] = (unsigned short )0;
+            sqlstm.sqtdso[7] = (unsigned short )0;
+            sqlstm.sqhstv[8] = (         void  *)(CWIPLOTCHG_N.SUB_AREA_ID);
+            sqlstm.sqhstl[8] = (unsigned int  )21;
+            sqlstm.sqhsts[8] = (         int  )0;
+            sqlstm.sqindv[8] = (         void  *)0;
+            sqlstm.sqinds[8] = (         int  )0;
+            sqlstm.sqharm[8] = (unsigned int  )0;
+            sqlstm.sqadto[8] = (unsigned short )0;
+            sqlstm.sqtdso[8] = (unsigned short )0;
+            sqlstm.sqhstv[9] = (         void  *)(CWIPLOTCHG_N.FROM_MAT_ID);
+            sqlstm.sqhstl[9] = (unsigned int  )31;
+            sqlstm.sqhsts[9] = (         int  )0;
+            sqlstm.sqindv[9] = (         void  *)0;
+            sqlstm.sqinds[9] = (         int  )0;
+            sqlstm.sqharm[9] = (unsigned int  )0;
+            sqlstm.sqadto[9] = (unsigned short )0;
+            sqlstm.sqtdso[9] = (unsigned short )0;
+            sqlstm.sqhstv[10] = (         void  *)&(CWIPLOTCHG_N.FROM_MAT_VER);
+            sqlstm.sqhstl[10] = (unsigned int  )sizeof(int);
+            sqlstm.sqhsts[10] = (         int  )0;
+            sqlstm.sqindv[10] = (         void  *)0;
+            sqlstm.sqinds[10] = (         int  )0;
+            sqlstm.sqharm[10] = (unsigned int  )0;
+            sqlstm.sqadto[10] = (unsigned short )0;
+            sqlstm.sqtdso[10] = (unsigned short )0;
+            sqlstm.sqhstv[11] = (         void  *)(CWIPLOTCHG_N.TO_MAT_ID);
+            sqlstm.sqhstl[11] = (unsigned int  )31;
+            sqlstm.sqhsts[11] = (         int  )0;
+            sqlstm.sqindv[11] = (         void  *)0;
+            sqlstm.sqinds[11] = (         int  )0;
+            sqlstm.sqharm[11] = (unsigned int  )0;
+            sqlstm.sqadto[11] = (unsigned short )0;
+            sqlstm.sqtdso[11] = (unsigned short )0;
+            sqlstm.sqhstv[12] = (         void  *)&(CWIPLOTCHG_N.TO_MAT_VER);
+            sqlstm.sqhstl[12] = (unsigned int  )sizeof(int);
+            sqlstm.sqhsts[12] = (         int  )0;
+            sqlstm.sqindv[12] = (         void  *)0;
+            sqlstm.sqinds[12] = (         int  )0;
+            sqlstm.sqharm[12] = (unsigned int  )0;
+            sqlstm.sqadto[12] = (unsigned short )0;
+            sqlstm.sqtdso[12] = (unsigned short )0;
+            sqlstm.sqhstv[13] = (         void  *)&(CWIPLOTCHG_N.QRY_1);
+            sqlstm.sqhstl[13] = (unsigned int  )sizeof(double);
+            sqlstm.sqhsts[13] = (         int  )0;
+            sqlstm.sqindv[13] = (         void  *)0;
+            sqlstm.sqinds[13] = (         int  )0;
+            sqlstm.sqharm[13] = (unsigned int  )0;
+            sqlstm.sqadto[13] = (unsigned short )0;
+            sqlstm.sqtdso[13] = (unsigned short )0;
+            sqlstm.sqhstv[14] = (         void  *)(CWIPLOTCHG_N.CMF_1);
+            sqlstm.sqhstl[14] = (unsigned int  )31;
+            sqlstm.sqhsts[14] = (         int  )0;
+            sqlstm.sqindv[14] = (         void  *)0;
+            sqlstm.sqinds[14] = (         int  )0;
+            sqlstm.sqharm[14] = (unsigned int  )0;
+            sqlstm.sqadto[14] = (unsigned short )0;
+            sqlstm.sqtdso[14] = (unsigned short )0;
+            sqlstm.sqhstv[15] = (         void  *)(CWIPLOTCHG_N.CMF_2);
+            sqlstm.sqhstl[15] = (unsigned int  )31;
+            sqlstm.sqhsts[15] = (         int  )0;
+            sqlstm.sqindv[15] = (         void  *)0;
+            sqlstm.sqinds[15] = (         int  )0;
+            sqlstm.sqharm[15] = (unsigned int  )0;
+            sqlstm.sqadto[15] = (unsigned short )0;
+            sqlstm.sqtdso[15] = (unsigned short )0;
+            sqlstm.sqhstv[16] = (         void  *)(CWIPLOTCHG_N.CMF_3);
+            sqlstm.sqhstl[16] = (unsigned int  )31;
+            sqlstm.sqhsts[16] = (         int  )0;
+            sqlstm.sqindv[16] = (         void  *)0;
+            sqlstm.sqinds[16] = (         int  )0;
+            sqlstm.sqharm[16] = (unsigned int  )0;
+            sqlstm.sqadto[16] = (unsigned short )0;
+            sqlstm.sqtdso[16] = (unsigned short )0;
+            sqlstm.sqhstv[17] = (         void  *)(CWIPLOTCHG_N.CMF_4);
+            sqlstm.sqhstl[17] = (unsigned int  )31;
+            sqlstm.sqhsts[17] = (         int  )0;
+            sqlstm.sqindv[17] = (         void  *)0;
+            sqlstm.sqinds[17] = (         int  )0;
+            sqlstm.sqharm[17] = (unsigned int  )0;
+            sqlstm.sqadto[17] = (unsigned short )0;
+            sqlstm.sqtdso[17] = (unsigned short )0;
+            sqlstm.sqhstv[18] = (         void  *)(CWIPLOTCHG_N.CMF_5);
+            sqlstm.sqhstl[18] = (unsigned int  )31;
+            sqlstm.sqhsts[18] = (         int  )0;
+            sqlstm.sqindv[18] = (         void  *)0;
+            sqlstm.sqinds[18] = (         int  )0;
+            sqlstm.sqharm[18] = (unsigned int  )0;
+            sqlstm.sqadto[18] = (unsigned short )0;
+            sqlstm.sqtdso[18] = (unsigned short )0;
+            sqlstm.sqhstv[19] = (         void  *)(CWIPLOTCHG_N.CMF_6);
+            sqlstm.sqhstl[19] = (unsigned int  )31;
+            sqlstm.sqhsts[19] = (         int  )0;
+            sqlstm.sqindv[19] = (         void  *)0;
+            sqlstm.sqinds[19] = (         int  )0;
+            sqlstm.sqharm[19] = (unsigned int  )0;
+            sqlstm.sqadto[19] = (unsigned short )0;
+            sqlstm.sqtdso[19] = (unsigned short )0;
+            sqlstm.sqhstv[20] = (         void  *)(CWIPLOTCHG_N.CMF_7);
+            sqlstm.sqhstl[20] = (unsigned int  )31;
+            sqlstm.sqhsts[20] = (         int  )0;
+            sqlstm.sqindv[20] = (         void  *)0;
+            sqlstm.sqinds[20] = (         int  )0;
+            sqlstm.sqharm[20] = (unsigned int  )0;
+            sqlstm.sqadto[20] = (unsigned short )0;
+            sqlstm.sqtdso[20] = (unsigned short )0;
+            sqlstm.sqhstv[21] = (         void  *)(CWIPLOTCHG_N.CMF_8);
+            sqlstm.sqhstl[21] = (unsigned int  )31;
+            sqlstm.sqhsts[21] = (         int  )0;
+            sqlstm.sqindv[21] = (         void  *)0;
+            sqlstm.sqinds[21] = (         int  )0;
+            sqlstm.sqharm[21] = (unsigned int  )0;
+            sqlstm.sqadto[21] = (unsigned short )0;
+            sqlstm.sqtdso[21] = (unsigned short )0;
+            sqlstm.sqhstv[22] = (         void  *)(CWIPLOTCHG_N.CMF_9);
+            sqlstm.sqhstl[22] = (unsigned int  )31;
+            sqlstm.sqhsts[22] = (         int  )0;
+            sqlstm.sqindv[22] = (         void  *)0;
+            sqlstm.sqinds[22] = (         int  )0;
+            sqlstm.sqharm[22] = (unsigned int  )0;
+            sqlstm.sqadto[22] = (unsigned short )0;
+            sqlstm.sqtdso[22] = (unsigned short )0;
+            sqlstm.sqhstv[23] = (         void  *)(CWIPLOTCHG_N.CMF_10);
+            sqlstm.sqhstl[23] = (unsigned int  )31;
+            sqlstm.sqhsts[23] = (         int  )0;
+            sqlstm.sqindv[23] = (         void  *)0;
+            sqlstm.sqinds[23] = (         int  )0;
+            sqlstm.sqharm[23] = (unsigned int  )0;
+            sqlstm.sqadto[23] = (unsigned short )0;
+            sqlstm.sqtdso[23] = (unsigned short )0;
+            sqlstm.sqhstv[24] = (         void  *)(CWIPLOTCHG_N.CREATE_USER_ID);
+            sqlstm.sqhstl[24] = (unsigned int  )21;
+            sqlstm.sqhsts[24] = (         int  )0;
+            sqlstm.sqindv[24] = (         void  *)0;
+            sqlstm.sqinds[24] = (         int  )0;
+            sqlstm.sqharm[24] = (unsigned int  )0;
+            sqlstm.sqadto[24] = (unsigned short )0;
+            sqlstm.sqtdso[24] = (unsigned short )0;
+            sqlstm.sqhstv[25] = (         void  *)(CWIPLOTCHG_N.CREATE_TIME);
+            sqlstm.sqhstl[25] = (unsigned int  )15;
+            sqlstm.sqhsts[25] = (         int  )0;
+            sqlstm.sqindv[25] = (         void  *)0;
+            sqlstm.sqinds[25] = (         int  )0;
+            sqlstm.sqharm[25] = (unsigned int  )0;
+            sqlstm.sqadto[25] = (unsigned short )0;
+            sqlstm.sqtdso[25] = (unsigned short )0;
+            sqlstm.sqhstv[26] = (         void  *)(CWIPLOTCHG_N.UPDATE_USER_ID);
+            sqlstm.sqhstl[26] = (unsigned int  )21;
+            sqlstm.sqhsts[26] = (         int  )0;
+            sqlstm.sqindv[26] = (         void  *)0;
+            sqlstm.sqinds[26] = (         int  )0;
+            sqlstm.sqharm[26] = (unsigned int  )0;
+            sqlstm.sqadto[26] = (unsigned short )0;
+            sqlstm.sqtdso[26] = (unsigned short )0;
+            sqlstm.sqhstv[27] = (         void  *)(CWIPLOTCHG_N.UPDATE_TIME);
+            sqlstm.sqhstl[27] = (unsigned int  )15;
+            sqlstm.sqhsts[27] = (         int  )0;
+            sqlstm.sqindv[27] = (         void  *)0;
+            sqlstm.sqinds[27] = (         int  )0;
+            sqlstm.sqharm[27] = (unsigned int  )0;
+            sqlstm.sqadto[27] = (unsigned short )0;
+            sqlstm.sqtdso[27] = (unsigned short )0;
+            sqlstm.sqhstv[28] = (         void  *)(CWIPLOTCHG_N.FACTORY);
+            sqlstm.sqhstl[28] = (unsigned int  )11;
+            sqlstm.sqhsts[28] = (         int  )0;
+            sqlstm.sqindv[28] = (         void  *)0;
+            sqlstm.sqinds[28] = (         int  )0;
+            sqlstm.sqharm[28] = (unsigned int  )0;
+            sqlstm.sqadto[28] = (unsigned short )0;
+            sqlstm.sqtdso[28] = (unsigned short )0;
+            sqlstm.sqhstv[29] = (         void  *)(CWIPLOTCHG_N.LOT_ID);
+            sqlstm.sqhstl[29] = (unsigned int  )26;
+            sqlstm.sqhsts[29] = (         int  )0;
+            sqlstm.sqindv[29] = (         void  *)0;
+            sqlstm.sqinds[29] = (         int  )0;
+            sqlstm.sqharm[29] = (unsigned int  )0;
+            sqlstm.sqadto[29] = (unsigned short )0;
+            sqlstm.sqtdso[29] = (unsigned short )0;
+            sqlstm.sqhstv[30] = (         void  *)&(CWIPLOTCHG_N.HIST_SEQ);
+            sqlstm.sqhstl[30] = (unsigned int  )sizeof(int);
+            sqlstm.sqhsts[30] = (         int  )0;
+            sqlstm.sqindv[30] = (         void  *)0;
+            sqlstm.sqinds[30] = (         int  )0;
+            sqlstm.sqharm[30] = (unsigned int  )0;
+            sqlstm.sqadto[30] = (unsigned short )0;
+            sqlstm.sqtdso[30] = (unsigned short )0;
+            sqlstm.sqphsv = sqlstm.sqhstv;
+            sqlstm.sqphsl = sqlstm.sqhstl;
+            sqlstm.sqphss = sqlstm.sqhsts;
+            sqlstm.sqpind = sqlstm.sqindv;
+            sqlstm.sqpins = sqlstm.sqinds;
+            sqlstm.sqparm = sqlstm.sqharm;
+            sqlstm.sqparc = sqlstm.sqharc;
+            sqlstm.sqpadto = sqlstm.sqadto;
+            sqlstm.sqptdso = sqlstm.sqtdso;
+            sqlcxt((void **)0, &sqlctx, &sqlstm, &sqlfpn);
+            if (sqlca.sqlcode == 1403) DB_usr_error();
+            if (sqlca.sqlcode < 0) DB_usr_error();
+}
+
+
+            break;
+
+
+        default:
+            DB_error_code = 9999;
+            memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+            memcpy(DB_error_msg, "Error : Invalid Argument(sel_type)", 34);
+            break;
+    }
+
+
+    if(DB_error_code == 0)
+    {
+        DBU_del_null_cwiplotchg(&CWIPLOTCHG_N, CWIPLOTCHG);
+    }
+
+    DB_stop_query_timer("DBU_select_cwiplotchg", sel_type);
+}
+
+
+/* SQL SELECT_FOR_UPDATE Function */
+void DBU_select_cwiplotchg_for_update(int sel_type, struct CWIPLOTCHG_TAG *CWIPLOTCHG)
+{
+    /* EXEC SQL BEGIN DECLARE SECTION; */ 
+
+        struct CWIPLOTCHG_N_TAG CWIPLOTCHG_N;
+    /* EXEC SQL END DECLARE SECTION; */ 
+
+
+    DB_start_query_timer();
+
+    DBU_add_null_cwiplotchg(&CWIPLOTCHG_N, CWIPLOTCHG);
+    DB_error_code = 0;
+
+
+    switch(sel_type)
+    {
+        case 1:
+            /* EXEC SQL SELECT 
+                    FACTORY,
+                    LOT_ID,
+                    HIST_SEQ,
+                    ORDER_ID,
+                    FLOW,
+                    OPER,
+                    ERP_OPER,
+                    AREA_ID,
+                    SUB_AREA_ID,
+                    FROM_MAT_ID,
+                    FROM_MAT_VER,
+                    TO_MAT_ID,
+                    TO_MAT_VER,
+                    QRY_1,
+                    CMF_1,
+                    CMF_2,
+                    CMF_3,
+                    CMF_4,
+                    CMF_5,
+                    CMF_6,
+                    CMF_7,
+                    CMF_8,
+                    CMF_9,
+                    CMF_10,
+                    CREATE_USER_ID,
+                    CREATE_TIME,
+                    UPDATE_USER_ID,
+                    UPDATE_TIME
+                INTO 
+                    :CWIPLOTCHG_N.FACTORY,
+                    :CWIPLOTCHG_N.LOT_ID,
+                    :CWIPLOTCHG_N.HIST_SEQ,
+                    :CWIPLOTCHG_N.ORDER_ID,
+                    :CWIPLOTCHG_N.FLOW,
+                    :CWIPLOTCHG_N.OPER,
+                    :CWIPLOTCHG_N.ERP_OPER,
+                    :CWIPLOTCHG_N.AREA_ID,
+                    :CWIPLOTCHG_N.SUB_AREA_ID,
+                    :CWIPLOTCHG_N.FROM_MAT_ID,
+                    :CWIPLOTCHG_N.FROM_MAT_VER,
+                    :CWIPLOTCHG_N.TO_MAT_ID,
+                    :CWIPLOTCHG_N.TO_MAT_VER,
+                    :CWIPLOTCHG_N.QRY_1,
+                    :CWIPLOTCHG_N.CMF_1,
+                    :CWIPLOTCHG_N.CMF_2,
+                    :CWIPLOTCHG_N.CMF_3,
+                    :CWIPLOTCHG_N.CMF_4,
+                    :CWIPLOTCHG_N.CMF_5,
+                    :CWIPLOTCHG_N.CMF_6,
+                    :CWIPLOTCHG_N.CMF_7,
+                    :CWIPLOTCHG_N.CMF_8,
+                    :CWIPLOTCHG_N.CMF_9,
+                    :CWIPLOTCHG_N.CMF_10,
+                    :CWIPLOTCHG_N.CREATE_USER_ID,
+                    :CWIPLOTCHG_N.CREATE_TIME,
+                    :CWIPLOTCHG_N.UPDATE_USER_ID,
+                    :CWIPLOTCHG_N.UPDATE_TIME
+                FROM CWIPLOTCHG
+                WHERE FACTORY = :CWIPLOTCHG_N.FACTORY
+                    AND LOT_ID = :CWIPLOTCHG_N.LOT_ID
+                    AND HIST_SEQ = :CWIPLOTCHG_N.HIST_SEQ
+                FOR UPDATE; */ 
+
+{
+            struct sqlexd sqlstm;
+            sqlstm.sqlvsn = 13;
+            sqlstm.arrsiz = 31;
+            sqlstm.sqladtp = &sqladt;
+            sqlstm.sqltdsp = &sqltds;
+            sqlstm.stmt = "select FACTORY ,LOT_ID ,HIST_SEQ ,ORDER_ID ,FLOW\
+ ,OPER ,ERP_OPER ,AREA_ID ,SUB_AREA_ID ,FROM_MAT_ID ,FROM_MAT_VER ,TO_MAT_ID \
+,TO_MAT_VER ,QRY_1 ,CMF_1 ,CMF_2 ,CMF_3 ,CMF_4 ,CMF_5 ,CMF_6 ,CMF_7 ,CMF_8 ,C\
+MF_9 ,CMF_10 ,CREATE_USER_ID ,CREATE_TIME ,UPDATE_USER_ID ,UPDATE_TIME into :\
+b0,:b1,:b2,:b3,:b4,:b5,:b6,:b7,:b8,:b9,:b10,:b11,:b12,:b13,:b14,:b15,:b16,:b1\
+7,:b18,:b19,:b20,:b21,:b22,:b23,:b24,:b25,:b26,:b27  from CWIPLOTCHG where ((\
+FACTORY=:b0 and LOT_ID=:b1) and HIST_SEQ=:b2) for update ";
+            sqlstm.iters = (unsigned int  )1;
+            sqlstm.offset = (unsigned int  )144;
+            sqlstm.selerr = (unsigned short)1;
+            sqlstm.sqlpfmem = (unsigned int  )0;
+            sqlstm.cud = sqlcud0;
+            sqlstm.sqlest = (unsigned char  *)&sqlca;
+            sqlstm.sqlety = (unsigned short)4352;
+            sqlstm.occurs = (unsigned int  )0;
+            sqlstm.sqhstv[0] = (         void  *)(CWIPLOTCHG_N.FACTORY);
+            sqlstm.sqhstl[0] = (unsigned int  )11;
+            sqlstm.sqhsts[0] = (         int  )0;
+            sqlstm.sqindv[0] = (         void  *)0;
+            sqlstm.sqinds[0] = (         int  )0;
+            sqlstm.sqharm[0] = (unsigned int  )0;
+            sqlstm.sqadto[0] = (unsigned short )0;
+            sqlstm.sqtdso[0] = (unsigned short )0;
+            sqlstm.sqhstv[1] = (         void  *)(CWIPLOTCHG_N.LOT_ID);
+            sqlstm.sqhstl[1] = (unsigned int  )26;
+            sqlstm.sqhsts[1] = (         int  )0;
+            sqlstm.sqindv[1] = (         void  *)0;
+            sqlstm.sqinds[1] = (         int  )0;
+            sqlstm.sqharm[1] = (unsigned int  )0;
+            sqlstm.sqadto[1] = (unsigned short )0;
+            sqlstm.sqtdso[1] = (unsigned short )0;
+            sqlstm.sqhstv[2] = (         void  *)&(CWIPLOTCHG_N.HIST_SEQ);
+            sqlstm.sqhstl[2] = (unsigned int  )sizeof(int);
+            sqlstm.sqhsts[2] = (         int  )0;
+            sqlstm.sqindv[2] = (         void  *)0;
+            sqlstm.sqinds[2] = (         int  )0;
+            sqlstm.sqharm[2] = (unsigned int  )0;
+            sqlstm.sqadto[2] = (unsigned short )0;
+            sqlstm.sqtdso[2] = (unsigned short )0;
+            sqlstm.sqhstv[3] = (         void  *)(CWIPLOTCHG_N.ORDER_ID);
+            sqlstm.sqhstl[3] = (unsigned int  )26;
+            sqlstm.sqhsts[3] = (         int  )0;
+            sqlstm.sqindv[3] = (         void  *)0;
+            sqlstm.sqinds[3] = (         int  )0;
+            sqlstm.sqharm[3] = (unsigned int  )0;
+            sqlstm.sqadto[3] = (unsigned short )0;
+            sqlstm.sqtdso[3] = (unsigned short )0;
+            sqlstm.sqhstv[4] = (         void  *)(CWIPLOTCHG_N.FLOW);
+            sqlstm.sqhstl[4] = (unsigned int  )21;
+            sqlstm.sqhsts[4] = (         int  )0;
+            sqlstm.sqindv[4] = (         void  *)0;
+            sqlstm.sqinds[4] = (         int  )0;
+            sqlstm.sqharm[4] = (unsigned int  )0;
+            sqlstm.sqadto[4] = (unsigned short )0;
+            sqlstm.sqtdso[4] = (unsigned short )0;
+            sqlstm.sqhstv[5] = (         void  *)(CWIPLOTCHG_N.OPER);
+            sqlstm.sqhstl[5] = (unsigned int  )11;
+            sqlstm.sqhsts[5] = (         int  )0;
+            sqlstm.sqindv[5] = (         void  *)0;
+            sqlstm.sqinds[5] = (         int  )0;
+            sqlstm.sqharm[5] = (unsigned int  )0;
+            sqlstm.sqadto[5] = (unsigned short )0;
+            sqlstm.sqtdso[5] = (unsigned short )0;
+            sqlstm.sqhstv[6] = (         void  *)(CWIPLOTCHG_N.ERP_OPER);
+            sqlstm.sqhstl[6] = (unsigned int  )31;
+            sqlstm.sqhsts[6] = (         int  )0;
+            sqlstm.sqindv[6] = (         void  *)0;
+            sqlstm.sqinds[6] = (         int  )0;
+            sqlstm.sqharm[6] = (unsigned int  )0;
+            sqlstm.sqadto[6] = (unsigned short )0;
+            sqlstm.sqtdso[6] = (unsigned short )0;
+            sqlstm.sqhstv[7] = (         void  *)(CWIPLOTCHG_N.AREA_ID);
+            sqlstm.sqhstl[7] = (unsigned int  )21;
+            sqlstm.sqhsts[7] = (         int  )0;
+            sqlstm.sqindv[7] = (         void  *)0;
+            sqlstm.sqinds[7] = (         int  )0;
+            sqlstm.sqharm[7] = (unsigned int  )0;
+            sqlstm.sqadto[7] = (unsigned short )0;
+            sqlstm.sqtdso[7] = (unsigned short )0;
+            sqlstm.sqhstv[8] = (         void  *)(CWIPLOTCHG_N.SUB_AREA_ID);
+            sqlstm.sqhstl[8] = (unsigned int  )21;
+            sqlstm.sqhsts[8] = (         int  )0;
+            sqlstm.sqindv[8] = (         void  *)0;
+            sqlstm.sqinds[8] = (         int  )0;
+            sqlstm.sqharm[8] = (unsigned int  )0;
+            sqlstm.sqadto[8] = (unsigned short )0;
+            sqlstm.sqtdso[8] = (unsigned short )0;
+            sqlstm.sqhstv[9] = (         void  *)(CWIPLOTCHG_N.FROM_MAT_ID);
+            sqlstm.sqhstl[9] = (unsigned int  )31;
+            sqlstm.sqhsts[9] = (         int  )0;
+            sqlstm.sqindv[9] = (         void  *)0;
+            sqlstm.sqinds[9] = (         int  )0;
+            sqlstm.sqharm[9] = (unsigned int  )0;
+            sqlstm.sqadto[9] = (unsigned short )0;
+            sqlstm.sqtdso[9] = (unsigned short )0;
+            sqlstm.sqhstv[10] = (         void  *)&(CWIPLOTCHG_N.FROM_MAT_VER);
+            sqlstm.sqhstl[10] = (unsigned int  )sizeof(int);
+            sqlstm.sqhsts[10] = (         int  )0;
+            sqlstm.sqindv[10] = (         void  *)0;
+            sqlstm.sqinds[10] = (         int  )0;
+            sqlstm.sqharm[10] = (unsigned int  )0;
+            sqlstm.sqadto[10] = (unsigned short )0;
+            sqlstm.sqtdso[10] = (unsigned short )0;
+            sqlstm.sqhstv[11] = (         void  *)(CWIPLOTCHG_N.TO_MAT_ID);
+            sqlstm.sqhstl[11] = (unsigned int  )31;
+            sqlstm.sqhsts[11] = (         int  )0;
+            sqlstm.sqindv[11] = (         void  *)0;
+            sqlstm.sqinds[11] = (         int  )0;
+            sqlstm.sqharm[11] = (unsigned int  )0;
+            sqlstm.sqadto[11] = (unsigned short )0;
+            sqlstm.sqtdso[11] = (unsigned short )0;
+            sqlstm.sqhstv[12] = (         void  *)&(CWIPLOTCHG_N.TO_MAT_VER);
+            sqlstm.sqhstl[12] = (unsigned int  )sizeof(int);
+            sqlstm.sqhsts[12] = (         int  )0;
+            sqlstm.sqindv[12] = (         void  *)0;
+            sqlstm.sqinds[12] = (         int  )0;
+            sqlstm.sqharm[12] = (unsigned int  )0;
+            sqlstm.sqadto[12] = (unsigned short )0;
+            sqlstm.sqtdso[12] = (unsigned short )0;
+            sqlstm.sqhstv[13] = (         void  *)&(CWIPLOTCHG_N.QRY_1);
+            sqlstm.sqhstl[13] = (unsigned int  )sizeof(double);
+            sqlstm.sqhsts[13] = (         int  )0;
+            sqlstm.sqindv[13] = (         void  *)0;
+            sqlstm.sqinds[13] = (         int  )0;
+            sqlstm.sqharm[13] = (unsigned int  )0;
+            sqlstm.sqadto[13] = (unsigned short )0;
+            sqlstm.sqtdso[13] = (unsigned short )0;
+            sqlstm.sqhstv[14] = (         void  *)(CWIPLOTCHG_N.CMF_1);
+            sqlstm.sqhstl[14] = (unsigned int  )31;
+            sqlstm.sqhsts[14] = (         int  )0;
+            sqlstm.sqindv[14] = (         void  *)0;
+            sqlstm.sqinds[14] = (         int  )0;
+            sqlstm.sqharm[14] = (unsigned int  )0;
+            sqlstm.sqadto[14] = (unsigned short )0;
+            sqlstm.sqtdso[14] = (unsigned short )0;
+            sqlstm.sqhstv[15] = (         void  *)(CWIPLOTCHG_N.CMF_2);
+            sqlstm.sqhstl[15] = (unsigned int  )31;
+            sqlstm.sqhsts[15] = (         int  )0;
+            sqlstm.sqindv[15] = (         void  *)0;
+            sqlstm.sqinds[15] = (         int  )0;
+            sqlstm.sqharm[15] = (unsigned int  )0;
+            sqlstm.sqadto[15] = (unsigned short )0;
+            sqlstm.sqtdso[15] = (unsigned short )0;
+            sqlstm.sqhstv[16] = (         void  *)(CWIPLOTCHG_N.CMF_3);
+            sqlstm.sqhstl[16] = (unsigned int  )31;
+            sqlstm.sqhsts[16] = (         int  )0;
+            sqlstm.sqindv[16] = (         void  *)0;
+            sqlstm.sqinds[16] = (         int  )0;
+            sqlstm.sqharm[16] = (unsigned int  )0;
+            sqlstm.sqadto[16] = (unsigned short )0;
+            sqlstm.sqtdso[16] = (unsigned short )0;
+            sqlstm.sqhstv[17] = (         void  *)(CWIPLOTCHG_N.CMF_4);
+            sqlstm.sqhstl[17] = (unsigned int  )31;
+            sqlstm.sqhsts[17] = (         int  )0;
+            sqlstm.sqindv[17] = (         void  *)0;
+            sqlstm.sqinds[17] = (         int  )0;
+            sqlstm.sqharm[17] = (unsigned int  )0;
+            sqlstm.sqadto[17] = (unsigned short )0;
+            sqlstm.sqtdso[17] = (unsigned short )0;
+            sqlstm.sqhstv[18] = (         void  *)(CWIPLOTCHG_N.CMF_5);
+            sqlstm.sqhstl[18] = (unsigned int  )31;
+            sqlstm.sqhsts[18] = (         int  )0;
+            sqlstm.sqindv[18] = (         void  *)0;
+            sqlstm.sqinds[18] = (         int  )0;
+            sqlstm.sqharm[18] = (unsigned int  )0;
+            sqlstm.sqadto[18] = (unsigned short )0;
+            sqlstm.sqtdso[18] = (unsigned short )0;
+            sqlstm.sqhstv[19] = (         void  *)(CWIPLOTCHG_N.CMF_6);
+            sqlstm.sqhstl[19] = (unsigned int  )31;
+            sqlstm.sqhsts[19] = (         int  )0;
+            sqlstm.sqindv[19] = (         void  *)0;
+            sqlstm.sqinds[19] = (         int  )0;
+            sqlstm.sqharm[19] = (unsigned int  )0;
+            sqlstm.sqadto[19] = (unsigned short )0;
+            sqlstm.sqtdso[19] = (unsigned short )0;
+            sqlstm.sqhstv[20] = (         void  *)(CWIPLOTCHG_N.CMF_7);
+            sqlstm.sqhstl[20] = (unsigned int  )31;
+            sqlstm.sqhsts[20] = (         int  )0;
+            sqlstm.sqindv[20] = (         void  *)0;
+            sqlstm.sqinds[20] = (         int  )0;
+            sqlstm.sqharm[20] = (unsigned int  )0;
+            sqlstm.sqadto[20] = (unsigned short )0;
+            sqlstm.sqtdso[20] = (unsigned short )0;
+            sqlstm.sqhstv[21] = (         void  *)(CWIPLOTCHG_N.CMF_8);
+            sqlstm.sqhstl[21] = (unsigned int  )31;
+            sqlstm.sqhsts[21] = (         int  )0;
+            sqlstm.sqindv[21] = (         void  *)0;
+            sqlstm.sqinds[21] = (         int  )0;
+            sqlstm.sqharm[21] = (unsigned int  )0;
+            sqlstm.sqadto[21] = (unsigned short )0;
+            sqlstm.sqtdso[21] = (unsigned short )0;
+            sqlstm.sqhstv[22] = (         void  *)(CWIPLOTCHG_N.CMF_9);
+            sqlstm.sqhstl[22] = (unsigned int  )31;
+            sqlstm.sqhsts[22] = (         int  )0;
+            sqlstm.sqindv[22] = (         void  *)0;
+            sqlstm.sqinds[22] = (         int  )0;
+            sqlstm.sqharm[22] = (unsigned int  )0;
+            sqlstm.sqadto[22] = (unsigned short )0;
+            sqlstm.sqtdso[22] = (unsigned short )0;
+            sqlstm.sqhstv[23] = (         void  *)(CWIPLOTCHG_N.CMF_10);
+            sqlstm.sqhstl[23] = (unsigned int  )31;
+            sqlstm.sqhsts[23] = (         int  )0;
+            sqlstm.sqindv[23] = (         void  *)0;
+            sqlstm.sqinds[23] = (         int  )0;
+            sqlstm.sqharm[23] = (unsigned int  )0;
+            sqlstm.sqadto[23] = (unsigned short )0;
+            sqlstm.sqtdso[23] = (unsigned short )0;
+            sqlstm.sqhstv[24] = (         void  *)(CWIPLOTCHG_N.CREATE_USER_ID);
+            sqlstm.sqhstl[24] = (unsigned int  )21;
+            sqlstm.sqhsts[24] = (         int  )0;
+            sqlstm.sqindv[24] = (         void  *)0;
+            sqlstm.sqinds[24] = (         int  )0;
+            sqlstm.sqharm[24] = (unsigned int  )0;
+            sqlstm.sqadto[24] = (unsigned short )0;
+            sqlstm.sqtdso[24] = (unsigned short )0;
+            sqlstm.sqhstv[25] = (         void  *)(CWIPLOTCHG_N.CREATE_TIME);
+            sqlstm.sqhstl[25] = (unsigned int  )15;
+            sqlstm.sqhsts[25] = (         int  )0;
+            sqlstm.sqindv[25] = (         void  *)0;
+            sqlstm.sqinds[25] = (         int  )0;
+            sqlstm.sqharm[25] = (unsigned int  )0;
+            sqlstm.sqadto[25] = (unsigned short )0;
+            sqlstm.sqtdso[25] = (unsigned short )0;
+            sqlstm.sqhstv[26] = (         void  *)(CWIPLOTCHG_N.UPDATE_USER_ID);
+            sqlstm.sqhstl[26] = (unsigned int  )21;
+            sqlstm.sqhsts[26] = (         int  )0;
+            sqlstm.sqindv[26] = (         void  *)0;
+            sqlstm.sqinds[26] = (         int  )0;
+            sqlstm.sqharm[26] = (unsigned int  )0;
+            sqlstm.sqadto[26] = (unsigned short )0;
+            sqlstm.sqtdso[26] = (unsigned short )0;
+            sqlstm.sqhstv[27] = (         void  *)(CWIPLOTCHG_N.UPDATE_TIME);
+            sqlstm.sqhstl[27] = (unsigned int  )15;
+            sqlstm.sqhsts[27] = (         int  )0;
+            sqlstm.sqindv[27] = (         void  *)0;
+            sqlstm.sqinds[27] = (         int  )0;
+            sqlstm.sqharm[27] = (unsigned int  )0;
+            sqlstm.sqadto[27] = (unsigned short )0;
+            sqlstm.sqtdso[27] = (unsigned short )0;
+            sqlstm.sqhstv[28] = (         void  *)(CWIPLOTCHG_N.FACTORY);
+            sqlstm.sqhstl[28] = (unsigned int  )11;
+            sqlstm.sqhsts[28] = (         int  )0;
+            sqlstm.sqindv[28] = (         void  *)0;
+            sqlstm.sqinds[28] = (         int  )0;
+            sqlstm.sqharm[28] = (unsigned int  )0;
+            sqlstm.sqadto[28] = (unsigned short )0;
+            sqlstm.sqtdso[28] = (unsigned short )0;
+            sqlstm.sqhstv[29] = (         void  *)(CWIPLOTCHG_N.LOT_ID);
+            sqlstm.sqhstl[29] = (unsigned int  )26;
+            sqlstm.sqhsts[29] = (         int  )0;
+            sqlstm.sqindv[29] = (         void  *)0;
+            sqlstm.sqinds[29] = (         int  )0;
+            sqlstm.sqharm[29] = (unsigned int  )0;
+            sqlstm.sqadto[29] = (unsigned short )0;
+            sqlstm.sqtdso[29] = (unsigned short )0;
+            sqlstm.sqhstv[30] = (         void  *)&(CWIPLOTCHG_N.HIST_SEQ);
+            sqlstm.sqhstl[30] = (unsigned int  )sizeof(int);
+            sqlstm.sqhsts[30] = (         int  )0;
+            sqlstm.sqindv[30] = (         void  *)0;
+            sqlstm.sqinds[30] = (         int  )0;
+            sqlstm.sqharm[30] = (unsigned int  )0;
+            sqlstm.sqadto[30] = (unsigned short )0;
+            sqlstm.sqtdso[30] = (unsigned short )0;
+            sqlstm.sqphsv = sqlstm.sqhstv;
+            sqlstm.sqphsl = sqlstm.sqhstl;
+            sqlstm.sqphss = sqlstm.sqhsts;
+            sqlstm.sqpind = sqlstm.sqindv;
+            sqlstm.sqpins = sqlstm.sqinds;
+            sqlstm.sqparm = sqlstm.sqharm;
+            sqlstm.sqparc = sqlstm.sqharc;
+            sqlstm.sqpadto = sqlstm.sqadto;
+            sqlstm.sqptdso = sqlstm.sqtdso;
+            sqlcxt((void **)0, &sqlctx, &sqlstm, &sqlfpn);
+            if (sqlca.sqlcode == 1403) DB_usr_error();
+            if (sqlca.sqlcode < 0) DB_usr_error();
+}
+
+
+            break;
+
+
+        default:
+            DB_error_code = 9999;
+            memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+            memcpy(DB_error_msg, "Error : Invalid Argument(sel_type)", 34);
+            break;
+    }
+
+
+    if(DB_error_code == 0)
+    {
+        DBU_del_null_cwiplotchg(&CWIPLOTCHG_N, CWIPLOTCHG);
+    }
+
+    DB_stop_query_timer("DBU_select_cwiplotchg_for_update", sel_type);
+}
+
+
+/* SQL SELECT_SCALAR Function */
+double DBU_select_cwiplotchg_scalar(int sel_type, struct CWIPLOTCHG_TAG *CWIPLOTCHG)
+{
+    /* EXEC SQL BEGIN DECLARE SECTION; */ 
+
+        struct CWIPLOTCHG_N_TAG CWIPLOTCHG_N;
+        double d_value;
+    /* EXEC SQL END DECLARE SECTION; */ 
+
+
+    DB_start_query_timer();
+
+    DBU_add_null_cwiplotchg(&CWIPLOTCHG_N, CWIPLOTCHG);
+    DB_error_code = 0;
+    d_value = 0;
+
+
+    switch(sel_type)
+    {
+        case 1:
+            /* EXEC SQL SELECT count(*) 
+                INTO :d_value
+                FROM CWIPLOTCHG
+                WHERE FACTORY = :CWIPLOTCHG_N.FACTORY
+                    AND LOT_ID = :CWIPLOTCHG_N.LOT_ID
+                    AND HIST_SEQ = :CWIPLOTCHG_N.HIST_SEQ; */ 
+
+{
+            struct sqlexd sqlstm;
+            sqlstm.sqlvsn = 13;
+            sqlstm.arrsiz = 31;
+            sqlstm.sqladtp = &sqladt;
+            sqlstm.sqltdsp = &sqltds;
+            sqlstm.stmt = "select count(*)  into :b0  from CWIPLOTCHG where\
+ ((FACTORY=:b1 and LOT_ID=:b2) and HIST_SEQ=:b3)";
+            sqlstm.iters = (unsigned int  )1;
+            sqlstm.offset = (unsigned int  )283;
+            sqlstm.selerr = (unsigned short)1;
+            sqlstm.sqlpfmem = (unsigned int  )0;
+            sqlstm.cud = sqlcud0;
+            sqlstm.sqlest = (unsigned char  *)&sqlca;
+            sqlstm.sqlety = (unsigned short)4352;
+            sqlstm.occurs = (unsigned int  )0;
+            sqlstm.sqhstv[0] = (         void  *)&d_value;
+            sqlstm.sqhstl[0] = (unsigned int  )sizeof(double);
+            sqlstm.sqhsts[0] = (         int  )0;
+            sqlstm.sqindv[0] = (         void  *)0;
+            sqlstm.sqinds[0] = (         int  )0;
+            sqlstm.sqharm[0] = (unsigned int  )0;
+            sqlstm.sqadto[0] = (unsigned short )0;
+            sqlstm.sqtdso[0] = (unsigned short )0;
+            sqlstm.sqhstv[1] = (         void  *)(CWIPLOTCHG_N.FACTORY);
+            sqlstm.sqhstl[1] = (unsigned int  )11;
+            sqlstm.sqhsts[1] = (         int  )0;
+            sqlstm.sqindv[1] = (         void  *)0;
+            sqlstm.sqinds[1] = (         int  )0;
+            sqlstm.sqharm[1] = (unsigned int  )0;
+            sqlstm.sqadto[1] = (unsigned short )0;
+            sqlstm.sqtdso[1] = (unsigned short )0;
+            sqlstm.sqhstv[2] = (         void  *)(CWIPLOTCHG_N.LOT_ID);
+            sqlstm.sqhstl[2] = (unsigned int  )26;
+            sqlstm.sqhsts[2] = (         int  )0;
+            sqlstm.sqindv[2] = (         void  *)0;
+            sqlstm.sqinds[2] = (         int  )0;
+            sqlstm.sqharm[2] = (unsigned int  )0;
+            sqlstm.sqadto[2] = (unsigned short )0;
+            sqlstm.sqtdso[2] = (unsigned short )0;
+            sqlstm.sqhstv[3] = (         void  *)&(CWIPLOTCHG_N.HIST_SEQ);
+            sqlstm.sqhstl[3] = (unsigned int  )sizeof(int);
+            sqlstm.sqhsts[3] = (         int  )0;
+            sqlstm.sqindv[3] = (         void  *)0;
+            sqlstm.sqinds[3] = (         int  )0;
+            sqlstm.sqharm[3] = (unsigned int  )0;
+            sqlstm.sqadto[3] = (unsigned short )0;
+            sqlstm.sqtdso[3] = (unsigned short )0;
+            sqlstm.sqphsv = sqlstm.sqhstv;
+            sqlstm.sqphsl = sqlstm.sqhstl;
+            sqlstm.sqphss = sqlstm.sqhsts;
+            sqlstm.sqpind = sqlstm.sqindv;
+            sqlstm.sqpins = sqlstm.sqinds;
+            sqlstm.sqparm = sqlstm.sqharm;
+            sqlstm.sqparc = sqlstm.sqharc;
+            sqlstm.sqpadto = sqlstm.sqadto;
+            sqlstm.sqptdso = sqlstm.sqtdso;
+            sqlcxt((void **)0, &sqlctx, &sqlstm, &sqlfpn);
+            if (sqlca.sqlcode == 1403) DB_usr_error();
+            if (sqlca.sqlcode < 0) DB_usr_error();
+}
+
+
+            break;
+
+
+        default:
+            DB_error_code = 9999;
+            memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+            memcpy(DB_error_msg, "Error : Invalid Argument(sel_type)", 34);
+            break;
+    }
+
+    DB_stop_query_timer("DBU_select_cwiplotchg_scalar", sel_type);
+
+    return d_value;
+}
+
+
+/* SQL DELETE Function */
+void DBU_delete_cwiplotchg(int sel_type, struct CWIPLOTCHG_TAG *CWIPLOTCHG)
+{
+    /* EXEC SQL BEGIN DECLARE SECTION; */ 
+
+        struct CWIPLOTCHG_N_TAG CWIPLOTCHG_N;
+    /* EXEC SQL END DECLARE SECTION; */ 
+
+
+    DB_start_query_timer();
+
+    DBU_add_null_cwiplotchg(&CWIPLOTCHG_N, CWIPLOTCHG);
+    DB_error_code = 0;
+
+
+    switch(sel_type)
+    {
+        case 1:
+            /* EXEC SQL DELETE FROM CWIPLOTCHG
+                WHERE FACTORY = :CWIPLOTCHG_N.FACTORY
+                    AND LOT_ID = :CWIPLOTCHG_N.LOT_ID
+                    AND HIST_SEQ = :CWIPLOTCHG_N.HIST_SEQ; */ 
+
+{
+            struct sqlexd sqlstm;
+            sqlstm.sqlvsn = 13;
+            sqlstm.arrsiz = 31;
+            sqlstm.sqladtp = &sqladt;
+            sqlstm.sqltdsp = &sqltds;
+            sqlstm.stmt = "delete  from CWIPLOTCHG  where ((FACTORY=:b0 and\
+ LOT_ID=:b1) and HIST_SEQ=:b2)";
+            sqlstm.iters = (unsigned int  )1;
+            sqlstm.offset = (unsigned int  )314;
+            sqlstm.cud = sqlcud0;
+            sqlstm.sqlest = (unsigned char  *)&sqlca;
+            sqlstm.sqlety = (unsigned short)4352;
+            sqlstm.occurs = (unsigned int  )0;
+            sqlstm.sqhstv[0] = (         void  *)(CWIPLOTCHG_N.FACTORY);
+            sqlstm.sqhstl[0] = (unsigned int  )11;
+            sqlstm.sqhsts[0] = (         int  )0;
+            sqlstm.sqindv[0] = (         void  *)0;
+            sqlstm.sqinds[0] = (         int  )0;
+            sqlstm.sqharm[0] = (unsigned int  )0;
+            sqlstm.sqadto[0] = (unsigned short )0;
+            sqlstm.sqtdso[0] = (unsigned short )0;
+            sqlstm.sqhstv[1] = (         void  *)(CWIPLOTCHG_N.LOT_ID);
+            sqlstm.sqhstl[1] = (unsigned int  )26;
+            sqlstm.sqhsts[1] = (         int  )0;
+            sqlstm.sqindv[1] = (         void  *)0;
+            sqlstm.sqinds[1] = (         int  )0;
+            sqlstm.sqharm[1] = (unsigned int  )0;
+            sqlstm.sqadto[1] = (unsigned short )0;
+            sqlstm.sqtdso[1] = (unsigned short )0;
+            sqlstm.sqhstv[2] = (         void  *)&(CWIPLOTCHG_N.HIST_SEQ);
+            sqlstm.sqhstl[2] = (unsigned int  )sizeof(int);
+            sqlstm.sqhsts[2] = (         int  )0;
+            sqlstm.sqindv[2] = (         void  *)0;
+            sqlstm.sqinds[2] = (         int  )0;
+            sqlstm.sqharm[2] = (unsigned int  )0;
+            sqlstm.sqadto[2] = (unsigned short )0;
+            sqlstm.sqtdso[2] = (unsigned short )0;
+            sqlstm.sqphsv = sqlstm.sqhstv;
+            sqlstm.sqphsl = sqlstm.sqhstl;
+            sqlstm.sqphss = sqlstm.sqhsts;
+            sqlstm.sqpind = sqlstm.sqindv;
+            sqlstm.sqpins = sqlstm.sqinds;
+            sqlstm.sqparm = sqlstm.sqharm;
+            sqlstm.sqparc = sqlstm.sqharc;
+            sqlstm.sqpadto = sqlstm.sqadto;
+            sqlstm.sqptdso = sqlstm.sqtdso;
+            sqlcxt((void **)0, &sqlctx, &sqlstm, &sqlfpn);
+            if (sqlca.sqlcode == 1403) DB_usr_error();
+            if (sqlca.sqlcode < 0) DB_usr_error();
+}
+
+
+            break;
+
+
+        default:
+            DB_error_code = 9999;
+            memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+            memcpy(DB_error_msg, "Error : Invalid Argument(sel_type)", 34);
+            break;
+    }
+
+    DB_stop_query_timer("DBU_delete_cwiplotchg", sel_type);
+}
+
+
+/* SQL INSERT Function */
+void DBU_insert_cwiplotchg(struct CWIPLOTCHG_TAG *CWIPLOTCHG)
+{
+    /* EXEC SQL BEGIN DECLARE SECTION; */ 
+
+        struct CWIPLOTCHG_N_TAG CWIPLOTCHG_N;
+    /* EXEC SQL END DECLARE SECTION; */ 
+
+
+    DB_start_query_timer();
+
+    DBU_add_null_cwiplotchg(&CWIPLOTCHG_N, CWIPLOTCHG);
+    DB_error_code = 0;
+
+
+    /* EXEC SQL INSERT INTO CWIPLOTCHG( 
+                    FACTORY, 
+                    LOT_ID, 
+                    HIST_SEQ, 
+                    ORDER_ID, 
+                    FLOW, 
+                    OPER, 
+                    ERP_OPER, 
+                    AREA_ID, 
+                    SUB_AREA_ID, 
+                    FROM_MAT_ID, 
+                    FROM_MAT_VER, 
+                    TO_MAT_ID, 
+                    TO_MAT_VER, 
+                    QRY_1, 
+                    CMF_1, 
+                    CMF_2, 
+                    CMF_3, 
+                    CMF_4, 
+                    CMF_5, 
+                    CMF_6, 
+                    CMF_7, 
+                    CMF_8, 
+                    CMF_9, 
+                    CMF_10, 
+                    CREATE_USER_ID, 
+                    CREATE_TIME, 
+                    UPDATE_USER_ID, 
+                    UPDATE_TIME
+         ) 
+        VALUES (
+                    :CWIPLOTCHG_N.FACTORY,
+                    :CWIPLOTCHG_N.LOT_ID,
+                    :CWIPLOTCHG_N.HIST_SEQ,
+                    :CWIPLOTCHG_N.ORDER_ID,
+                    :CWIPLOTCHG_N.FLOW,
+                    :CWIPLOTCHG_N.OPER,
+                    :CWIPLOTCHG_N.ERP_OPER,
+                    :CWIPLOTCHG_N.AREA_ID,
+                    :CWIPLOTCHG_N.SUB_AREA_ID,
+                    :CWIPLOTCHG_N.FROM_MAT_ID,
+                    :CWIPLOTCHG_N.FROM_MAT_VER,
+                    :CWIPLOTCHG_N.TO_MAT_ID,
+                    :CWIPLOTCHG_N.TO_MAT_VER,
+                    :CWIPLOTCHG_N.QRY_1,
+                    :CWIPLOTCHG_N.CMF_1,
+                    :CWIPLOTCHG_N.CMF_2,
+                    :CWIPLOTCHG_N.CMF_3,
+                    :CWIPLOTCHG_N.CMF_4,
+                    :CWIPLOTCHG_N.CMF_5,
+                    :CWIPLOTCHG_N.CMF_6,
+                    :CWIPLOTCHG_N.CMF_7,
+                    :CWIPLOTCHG_N.CMF_8,
+                    :CWIPLOTCHG_N.CMF_9,
+                    :CWIPLOTCHG_N.CMF_10,
+                    :CWIPLOTCHG_N.CREATE_USER_ID,
+                    :CWIPLOTCHG_N.CREATE_TIME,
+                    :CWIPLOTCHG_N.UPDATE_USER_ID,
+                    :CWIPLOTCHG_N.UPDATE_TIME
+         ); */ 
+
+{
+    struct sqlexd sqlstm;
+    sqlstm.sqlvsn = 13;
+    sqlstm.arrsiz = 31;
+    sqlstm.sqladtp = &sqladt;
+    sqlstm.sqltdsp = &sqltds;
+    sqlstm.stmt = "insert into CWIPLOTCHG (FACTORY,LOT_ID,HIST_SEQ,ORDER_ID\
+,FLOW,OPER,ERP_OPER,AREA_ID,SUB_AREA_ID,FROM_MAT_ID,FROM_MAT_VER,TO_MAT_ID,TO\
+_MAT_VER,QRY_1,CMF_1,CMF_2,CMF_3,CMF_4,CMF_5,CMF_6,CMF_7,CMF_8,CMF_9,CMF_10,C\
+REATE_USER_ID,CREATE_TIME,UPDATE_USER_ID,UPDATE_TIME) values (:b0,:b1,:b2,:b3\
+,:b4,:b5,:b6,:b7,:b8,:b9,:b10,:b11,:b12,:b13,:b14,:b15,:b16,:b17,:b18,:b19,:b\
+20,:b21,:b22,:b23,:b24,:b25,:b26,:b27)";
+    sqlstm.iters = (unsigned int  )1;
+    sqlstm.offset = (unsigned int  )341;
+    sqlstm.cud = sqlcud0;
+    sqlstm.sqlest = (unsigned char  *)&sqlca;
+    sqlstm.sqlety = (unsigned short)4352;
+    sqlstm.occurs = (unsigned int  )0;
+    sqlstm.sqhstv[0] = (         void  *)(CWIPLOTCHG_N.FACTORY);
+    sqlstm.sqhstl[0] = (unsigned int  )11;
+    sqlstm.sqhsts[0] = (         int  )0;
+    sqlstm.sqindv[0] = (         void  *)0;
+    sqlstm.sqinds[0] = (         int  )0;
+    sqlstm.sqharm[0] = (unsigned int  )0;
+    sqlstm.sqadto[0] = (unsigned short )0;
+    sqlstm.sqtdso[0] = (unsigned short )0;
+    sqlstm.sqhstv[1] = (         void  *)(CWIPLOTCHG_N.LOT_ID);
+    sqlstm.sqhstl[1] = (unsigned int  )26;
+    sqlstm.sqhsts[1] = (         int  )0;
+    sqlstm.sqindv[1] = (         void  *)0;
+    sqlstm.sqinds[1] = (         int  )0;
+    sqlstm.sqharm[1] = (unsigned int  )0;
+    sqlstm.sqadto[1] = (unsigned short )0;
+    sqlstm.sqtdso[1] = (unsigned short )0;
+    sqlstm.sqhstv[2] = (         void  *)&(CWIPLOTCHG_N.HIST_SEQ);
+    sqlstm.sqhstl[2] = (unsigned int  )sizeof(int);
+    sqlstm.sqhsts[2] = (         int  )0;
+    sqlstm.sqindv[2] = (         void  *)0;
+    sqlstm.sqinds[2] = (         int  )0;
+    sqlstm.sqharm[2] = (unsigned int  )0;
+    sqlstm.sqadto[2] = (unsigned short )0;
+    sqlstm.sqtdso[2] = (unsigned short )0;
+    sqlstm.sqhstv[3] = (         void  *)(CWIPLOTCHG_N.ORDER_ID);
+    sqlstm.sqhstl[3] = (unsigned int  )26;
+    sqlstm.sqhsts[3] = (         int  )0;
+    sqlstm.sqindv[3] = (         void  *)0;
+    sqlstm.sqinds[3] = (         int  )0;
+    sqlstm.sqharm[3] = (unsigned int  )0;
+    sqlstm.sqadto[3] = (unsigned short )0;
+    sqlstm.sqtdso[3] = (unsigned short )0;
+    sqlstm.sqhstv[4] = (         void  *)(CWIPLOTCHG_N.FLOW);
+    sqlstm.sqhstl[4] = (unsigned int  )21;
+    sqlstm.sqhsts[4] = (         int  )0;
+    sqlstm.sqindv[4] = (         void  *)0;
+    sqlstm.sqinds[4] = (         int  )0;
+    sqlstm.sqharm[4] = (unsigned int  )0;
+    sqlstm.sqadto[4] = (unsigned short )0;
+    sqlstm.sqtdso[4] = (unsigned short )0;
+    sqlstm.sqhstv[5] = (         void  *)(CWIPLOTCHG_N.OPER);
+    sqlstm.sqhstl[5] = (unsigned int  )11;
+    sqlstm.sqhsts[5] = (         int  )0;
+    sqlstm.sqindv[5] = (         void  *)0;
+    sqlstm.sqinds[5] = (         int  )0;
+    sqlstm.sqharm[5] = (unsigned int  )0;
+    sqlstm.sqadto[5] = (unsigned short )0;
+    sqlstm.sqtdso[5] = (unsigned short )0;
+    sqlstm.sqhstv[6] = (         void  *)(CWIPLOTCHG_N.ERP_OPER);
+    sqlstm.sqhstl[6] = (unsigned int  )31;
+    sqlstm.sqhsts[6] = (         int  )0;
+    sqlstm.sqindv[6] = (         void  *)0;
+    sqlstm.sqinds[6] = (         int  )0;
+    sqlstm.sqharm[6] = (unsigned int  )0;
+    sqlstm.sqadto[6] = (unsigned short )0;
+    sqlstm.sqtdso[6] = (unsigned short )0;
+    sqlstm.sqhstv[7] = (         void  *)(CWIPLOTCHG_N.AREA_ID);
+    sqlstm.sqhstl[7] = (unsigned int  )21;
+    sqlstm.sqhsts[7] = (         int  )0;
+    sqlstm.sqindv[7] = (         void  *)0;
+    sqlstm.sqinds[7] = (         int  )0;
+    sqlstm.sqharm[7] = (unsigned int  )0;
+    sqlstm.sqadto[7] = (unsigned short )0;
+    sqlstm.sqtdso[7] = (unsigned short )0;
+    sqlstm.sqhstv[8] = (         void  *)(CWIPLOTCHG_N.SUB_AREA_ID);
+    sqlstm.sqhstl[8] = (unsigned int  )21;
+    sqlstm.sqhsts[8] = (         int  )0;
+    sqlstm.sqindv[8] = (         void  *)0;
+    sqlstm.sqinds[8] = (         int  )0;
+    sqlstm.sqharm[8] = (unsigned int  )0;
+    sqlstm.sqadto[8] = (unsigned short )0;
+    sqlstm.sqtdso[8] = (unsigned short )0;
+    sqlstm.sqhstv[9] = (         void  *)(CWIPLOTCHG_N.FROM_MAT_ID);
+    sqlstm.sqhstl[9] = (unsigned int  )31;
+    sqlstm.sqhsts[9] = (         int  )0;
+    sqlstm.sqindv[9] = (         void  *)0;
+    sqlstm.sqinds[9] = (         int  )0;
+    sqlstm.sqharm[9] = (unsigned int  )0;
+    sqlstm.sqadto[9] = (unsigned short )0;
+    sqlstm.sqtdso[9] = (unsigned short )0;
+    sqlstm.sqhstv[10] = (         void  *)&(CWIPLOTCHG_N.FROM_MAT_VER);
+    sqlstm.sqhstl[10] = (unsigned int  )sizeof(int);
+    sqlstm.sqhsts[10] = (         int  )0;
+    sqlstm.sqindv[10] = (         void  *)0;
+    sqlstm.sqinds[10] = (         int  )0;
+    sqlstm.sqharm[10] = (unsigned int  )0;
+    sqlstm.sqadto[10] = (unsigned short )0;
+    sqlstm.sqtdso[10] = (unsigned short )0;
+    sqlstm.sqhstv[11] = (         void  *)(CWIPLOTCHG_N.TO_MAT_ID);
+    sqlstm.sqhstl[11] = (unsigned int  )31;
+    sqlstm.sqhsts[11] = (         int  )0;
+    sqlstm.sqindv[11] = (         void  *)0;
+    sqlstm.sqinds[11] = (         int  )0;
+    sqlstm.sqharm[11] = (unsigned int  )0;
+    sqlstm.sqadto[11] = (unsigned short )0;
+    sqlstm.sqtdso[11] = (unsigned short )0;
+    sqlstm.sqhstv[12] = (         void  *)&(CWIPLOTCHG_N.TO_MAT_VER);
+    sqlstm.sqhstl[12] = (unsigned int  )sizeof(int);
+    sqlstm.sqhsts[12] = (         int  )0;
+    sqlstm.sqindv[12] = (         void  *)0;
+    sqlstm.sqinds[12] = (         int  )0;
+    sqlstm.sqharm[12] = (unsigned int  )0;
+    sqlstm.sqadto[12] = (unsigned short )0;
+    sqlstm.sqtdso[12] = (unsigned short )0;
+    sqlstm.sqhstv[13] = (         void  *)&(CWIPLOTCHG_N.QRY_1);
+    sqlstm.sqhstl[13] = (unsigned int  )sizeof(double);
+    sqlstm.sqhsts[13] = (         int  )0;
+    sqlstm.sqindv[13] = (         void  *)0;
+    sqlstm.sqinds[13] = (         int  )0;
+    sqlstm.sqharm[13] = (unsigned int  )0;
+    sqlstm.sqadto[13] = (unsigned short )0;
+    sqlstm.sqtdso[13] = (unsigned short )0;
+    sqlstm.sqhstv[14] = (         void  *)(CWIPLOTCHG_N.CMF_1);
+    sqlstm.sqhstl[14] = (unsigned int  )31;
+    sqlstm.sqhsts[14] = (         int  )0;
+    sqlstm.sqindv[14] = (         void  *)0;
+    sqlstm.sqinds[14] = (         int  )0;
+    sqlstm.sqharm[14] = (unsigned int  )0;
+    sqlstm.sqadto[14] = (unsigned short )0;
+    sqlstm.sqtdso[14] = (unsigned short )0;
+    sqlstm.sqhstv[15] = (         void  *)(CWIPLOTCHG_N.CMF_2);
+    sqlstm.sqhstl[15] = (unsigned int  )31;
+    sqlstm.sqhsts[15] = (         int  )0;
+    sqlstm.sqindv[15] = (         void  *)0;
+    sqlstm.sqinds[15] = (         int  )0;
+    sqlstm.sqharm[15] = (unsigned int  )0;
+    sqlstm.sqadto[15] = (unsigned short )0;
+    sqlstm.sqtdso[15] = (unsigned short )0;
+    sqlstm.sqhstv[16] = (         void  *)(CWIPLOTCHG_N.CMF_3);
+    sqlstm.sqhstl[16] = (unsigned int  )31;
+    sqlstm.sqhsts[16] = (         int  )0;
+    sqlstm.sqindv[16] = (         void  *)0;
+    sqlstm.sqinds[16] = (         int  )0;
+    sqlstm.sqharm[16] = (unsigned int  )0;
+    sqlstm.sqadto[16] = (unsigned short )0;
+    sqlstm.sqtdso[16] = (unsigned short )0;
+    sqlstm.sqhstv[17] = (         void  *)(CWIPLOTCHG_N.CMF_4);
+    sqlstm.sqhstl[17] = (unsigned int  )31;
+    sqlstm.sqhsts[17] = (         int  )0;
+    sqlstm.sqindv[17] = (         void  *)0;
+    sqlstm.sqinds[17] = (         int  )0;
+    sqlstm.sqharm[17] = (unsigned int  )0;
+    sqlstm.sqadto[17] = (unsigned short )0;
+    sqlstm.sqtdso[17] = (unsigned short )0;
+    sqlstm.sqhstv[18] = (         void  *)(CWIPLOTCHG_N.CMF_5);
+    sqlstm.sqhstl[18] = (unsigned int  )31;
+    sqlstm.sqhsts[18] = (         int  )0;
+    sqlstm.sqindv[18] = (         void  *)0;
+    sqlstm.sqinds[18] = (         int  )0;
+    sqlstm.sqharm[18] = (unsigned int  )0;
+    sqlstm.sqadto[18] = (unsigned short )0;
+    sqlstm.sqtdso[18] = (unsigned short )0;
+    sqlstm.sqhstv[19] = (         void  *)(CWIPLOTCHG_N.CMF_6);
+    sqlstm.sqhstl[19] = (unsigned int  )31;
+    sqlstm.sqhsts[19] = (         int  )0;
+    sqlstm.sqindv[19] = (         void  *)0;
+    sqlstm.sqinds[19] = (         int  )0;
+    sqlstm.sqharm[19] = (unsigned int  )0;
+    sqlstm.sqadto[19] = (unsigned short )0;
+    sqlstm.sqtdso[19] = (unsigned short )0;
+    sqlstm.sqhstv[20] = (         void  *)(CWIPLOTCHG_N.CMF_7);
+    sqlstm.sqhstl[20] = (unsigned int  )31;
+    sqlstm.sqhsts[20] = (         int  )0;
+    sqlstm.sqindv[20] = (         void  *)0;
+    sqlstm.sqinds[20] = (         int  )0;
+    sqlstm.sqharm[20] = (unsigned int  )0;
+    sqlstm.sqadto[20] = (unsigned short )0;
+    sqlstm.sqtdso[20] = (unsigned short )0;
+    sqlstm.sqhstv[21] = (         void  *)(CWIPLOTCHG_N.CMF_8);
+    sqlstm.sqhstl[21] = (unsigned int  )31;
+    sqlstm.sqhsts[21] = (         int  )0;
+    sqlstm.sqindv[21] = (         void  *)0;
+    sqlstm.sqinds[21] = (         int  )0;
+    sqlstm.sqharm[21] = (unsigned int  )0;
+    sqlstm.sqadto[21] = (unsigned short )0;
+    sqlstm.sqtdso[21] = (unsigned short )0;
+    sqlstm.sqhstv[22] = (         void  *)(CWIPLOTCHG_N.CMF_9);
+    sqlstm.sqhstl[22] = (unsigned int  )31;
+    sqlstm.sqhsts[22] = (         int  )0;
+    sqlstm.sqindv[22] = (         void  *)0;
+    sqlstm.sqinds[22] = (         int  )0;
+    sqlstm.sqharm[22] = (unsigned int  )0;
+    sqlstm.sqadto[22] = (unsigned short )0;
+    sqlstm.sqtdso[22] = (unsigned short )0;
+    sqlstm.sqhstv[23] = (         void  *)(CWIPLOTCHG_N.CMF_10);
+    sqlstm.sqhstl[23] = (unsigned int  )31;
+    sqlstm.sqhsts[23] = (         int  )0;
+    sqlstm.sqindv[23] = (         void  *)0;
+    sqlstm.sqinds[23] = (         int  )0;
+    sqlstm.sqharm[23] = (unsigned int  )0;
+    sqlstm.sqadto[23] = (unsigned short )0;
+    sqlstm.sqtdso[23] = (unsigned short )0;
+    sqlstm.sqhstv[24] = (         void  *)(CWIPLOTCHG_N.CREATE_USER_ID);
+    sqlstm.sqhstl[24] = (unsigned int  )21;
+    sqlstm.sqhsts[24] = (         int  )0;
+    sqlstm.sqindv[24] = (         void  *)0;
+    sqlstm.sqinds[24] = (         int  )0;
+    sqlstm.sqharm[24] = (unsigned int  )0;
+    sqlstm.sqadto[24] = (unsigned short )0;
+    sqlstm.sqtdso[24] = (unsigned short )0;
+    sqlstm.sqhstv[25] = (         void  *)(CWIPLOTCHG_N.CREATE_TIME);
+    sqlstm.sqhstl[25] = (unsigned int  )15;
+    sqlstm.sqhsts[25] = (         int  )0;
+    sqlstm.sqindv[25] = (         void  *)0;
+    sqlstm.sqinds[25] = (         int  )0;
+    sqlstm.sqharm[25] = (unsigned int  )0;
+    sqlstm.sqadto[25] = (unsigned short )0;
+    sqlstm.sqtdso[25] = (unsigned short )0;
+    sqlstm.sqhstv[26] = (         void  *)(CWIPLOTCHG_N.UPDATE_USER_ID);
+    sqlstm.sqhstl[26] = (unsigned int  )21;
+    sqlstm.sqhsts[26] = (         int  )0;
+    sqlstm.sqindv[26] = (         void  *)0;
+    sqlstm.sqinds[26] = (         int  )0;
+    sqlstm.sqharm[26] = (unsigned int  )0;
+    sqlstm.sqadto[26] = (unsigned short )0;
+    sqlstm.sqtdso[26] = (unsigned short )0;
+    sqlstm.sqhstv[27] = (         void  *)(CWIPLOTCHG_N.UPDATE_TIME);
+    sqlstm.sqhstl[27] = (unsigned int  )15;
+    sqlstm.sqhsts[27] = (         int  )0;
+    sqlstm.sqindv[27] = (         void  *)0;
+    sqlstm.sqinds[27] = (         int  )0;
+    sqlstm.sqharm[27] = (unsigned int  )0;
+    sqlstm.sqadto[27] = (unsigned short )0;
+    sqlstm.sqtdso[27] = (unsigned short )0;
+    sqlstm.sqphsv = sqlstm.sqhstv;
+    sqlstm.sqphsl = sqlstm.sqhstl;
+    sqlstm.sqphss = sqlstm.sqhsts;
+    sqlstm.sqpind = sqlstm.sqindv;
+    sqlstm.sqpins = sqlstm.sqinds;
+    sqlstm.sqparm = sqlstm.sqharm;
+    sqlstm.sqparc = sqlstm.sqharc;
+    sqlstm.sqpadto = sqlstm.sqadto;
+    sqlstm.sqptdso = sqlstm.sqtdso;
+    sqlcxt((void **)0, &sqlctx, &sqlstm, &sqlfpn);
+    if (sqlca.sqlcode == 1403) DB_usr_error();
+    if (sqlca.sqlcode < 0) DB_usr_error();
+}
+
+
+
+    DB_stop_query_timer("DBU_insert_cwiplotchg", 0);
+}
+
+
+/* SQL UPDATE Function */
+void DBU_update_cwiplotchg(int sel_type, struct CWIPLOTCHG_TAG *CWIPLOTCHG)
+{
+    /* EXEC SQL BEGIN DECLARE SECTION; */ 
+
+        struct CWIPLOTCHG_N_TAG CWIPLOTCHG_N;
+    /* EXEC SQL END DECLARE SECTION; */ 
+
+
+    DB_start_query_timer();
+
+    DBU_add_null_cwiplotchg(&CWIPLOTCHG_N, CWIPLOTCHG);
+    DB_error_code = 0;
+
+
+    switch(sel_type)
+    {
+        case 1:
+            /* EXEC SQL UPDATE CWIPLOTCHG SET
+                    ORDER_ID = :CWIPLOTCHG_N.ORDER_ID,
+                    FLOW = :CWIPLOTCHG_N.FLOW,
+                    OPER = :CWIPLOTCHG_N.OPER,
+                    ERP_OPER = :CWIPLOTCHG_N.ERP_OPER,
+                    AREA_ID = :CWIPLOTCHG_N.AREA_ID,
+                    SUB_AREA_ID = :CWIPLOTCHG_N.SUB_AREA_ID,
+                    FROM_MAT_ID = :CWIPLOTCHG_N.FROM_MAT_ID,
+                    FROM_MAT_VER = :CWIPLOTCHG_N.FROM_MAT_VER,
+                    TO_MAT_ID = :CWIPLOTCHG_N.TO_MAT_ID,
+                    TO_MAT_VER = :CWIPLOTCHG_N.TO_MAT_VER,
+                    QRY_1 = :CWIPLOTCHG_N.QRY_1,
+                    CMF_1 = :CWIPLOTCHG_N.CMF_1,
+                    CMF_2 = :CWIPLOTCHG_N.CMF_2,
+                    CMF_3 = :CWIPLOTCHG_N.CMF_3,
+                    CMF_4 = :CWIPLOTCHG_N.CMF_4,
+                    CMF_5 = :CWIPLOTCHG_N.CMF_5,
+                    CMF_6 = :CWIPLOTCHG_N.CMF_6,
+                    CMF_7 = :CWIPLOTCHG_N.CMF_7,
+                    CMF_8 = :CWIPLOTCHG_N.CMF_8,
+                    CMF_9 = :CWIPLOTCHG_N.CMF_9,
+                    CMF_10 = :CWIPLOTCHG_N.CMF_10,
+                    CREATE_USER_ID = :CWIPLOTCHG_N.CREATE_USER_ID,
+                    CREATE_TIME = :CWIPLOTCHG_N.CREATE_TIME,
+                    UPDATE_USER_ID = :CWIPLOTCHG_N.UPDATE_USER_ID,
+                    UPDATE_TIME = :CWIPLOTCHG_N.UPDATE_TIME
+                WHERE FACTORY = :CWIPLOTCHG_N.FACTORY
+                    AND LOT_ID = :CWIPLOTCHG_N.LOT_ID
+                    AND HIST_SEQ = :CWIPLOTCHG_N.HIST_SEQ; */ 
+
+{
+            struct sqlexd sqlstm;
+            sqlstm.sqlvsn = 13;
+            sqlstm.arrsiz = 31;
+            sqlstm.sqladtp = &sqladt;
+            sqlstm.sqltdsp = &sqltds;
+            sqlstm.stmt = "update CWIPLOTCHG  set ORDER_ID=:b0,FLOW=:b1,OPE\
+R=:b2,ERP_OPER=:b3,AREA_ID=:b4,SUB_AREA_ID=:b5,FROM_MAT_ID=:b6,FROM_MAT_VER=:\
+b7,TO_MAT_ID=:b8,TO_MAT_VER=:b9,QRY_1=:b10,CMF_1=:b11,CMF_2=:b12,CMF_3=:b13,C\
+MF_4=:b14,CMF_5=:b15,CMF_6=:b16,CMF_7=:b17,CMF_8=:b18,CMF_9=:b19,CMF_10=:b20,\
+CREATE_USER_ID=:b21,CREATE_TIME=:b22,UPDATE_USER_ID=:b23,UPDATE_TIME=:b24 whe\
+re ((FACTORY=:b25 and LOT_ID=:b26) and HIST_SEQ=:b27)";
+            sqlstm.iters = (unsigned int  )1;
+            sqlstm.offset = (unsigned int  )468;
+            sqlstm.cud = sqlcud0;
+            sqlstm.sqlest = (unsigned char  *)&sqlca;
+            sqlstm.sqlety = (unsigned short)4352;
+            sqlstm.occurs = (unsigned int  )0;
+            sqlstm.sqhstv[0] = (         void  *)(CWIPLOTCHG_N.ORDER_ID);
+            sqlstm.sqhstl[0] = (unsigned int  )26;
+            sqlstm.sqhsts[0] = (         int  )0;
+            sqlstm.sqindv[0] = (         void  *)0;
+            sqlstm.sqinds[0] = (         int  )0;
+            sqlstm.sqharm[0] = (unsigned int  )0;
+            sqlstm.sqadto[0] = (unsigned short )0;
+            sqlstm.sqtdso[0] = (unsigned short )0;
+            sqlstm.sqhstv[1] = (         void  *)(CWIPLOTCHG_N.FLOW);
+            sqlstm.sqhstl[1] = (unsigned int  )21;
+            sqlstm.sqhsts[1] = (         int  )0;
+            sqlstm.sqindv[1] = (         void  *)0;
+            sqlstm.sqinds[1] = (         int  )0;
+            sqlstm.sqharm[1] = (unsigned int  )0;
+            sqlstm.sqadto[1] = (unsigned short )0;
+            sqlstm.sqtdso[1] = (unsigned short )0;
+            sqlstm.sqhstv[2] = (         void  *)(CWIPLOTCHG_N.OPER);
+            sqlstm.sqhstl[2] = (unsigned int  )11;
+            sqlstm.sqhsts[2] = (         int  )0;
+            sqlstm.sqindv[2] = (         void  *)0;
+            sqlstm.sqinds[2] = (         int  )0;
+            sqlstm.sqharm[2] = (unsigned int  )0;
+            sqlstm.sqadto[2] = (unsigned short )0;
+            sqlstm.sqtdso[2] = (unsigned short )0;
+            sqlstm.sqhstv[3] = (         void  *)(CWIPLOTCHG_N.ERP_OPER);
+            sqlstm.sqhstl[3] = (unsigned int  )31;
+            sqlstm.sqhsts[3] = (         int  )0;
+            sqlstm.sqindv[3] = (         void  *)0;
+            sqlstm.sqinds[3] = (         int  )0;
+            sqlstm.sqharm[3] = (unsigned int  )0;
+            sqlstm.sqadto[3] = (unsigned short )0;
+            sqlstm.sqtdso[3] = (unsigned short )0;
+            sqlstm.sqhstv[4] = (         void  *)(CWIPLOTCHG_N.AREA_ID);
+            sqlstm.sqhstl[4] = (unsigned int  )21;
+            sqlstm.sqhsts[4] = (         int  )0;
+            sqlstm.sqindv[4] = (         void  *)0;
+            sqlstm.sqinds[4] = (         int  )0;
+            sqlstm.sqharm[4] = (unsigned int  )0;
+            sqlstm.sqadto[4] = (unsigned short )0;
+            sqlstm.sqtdso[4] = (unsigned short )0;
+            sqlstm.sqhstv[5] = (         void  *)(CWIPLOTCHG_N.SUB_AREA_ID);
+            sqlstm.sqhstl[5] = (unsigned int  )21;
+            sqlstm.sqhsts[5] = (         int  )0;
+            sqlstm.sqindv[5] = (         void  *)0;
+            sqlstm.sqinds[5] = (         int  )0;
+            sqlstm.sqharm[5] = (unsigned int  )0;
+            sqlstm.sqadto[5] = (unsigned short )0;
+            sqlstm.sqtdso[5] = (unsigned short )0;
+            sqlstm.sqhstv[6] = (         void  *)(CWIPLOTCHG_N.FROM_MAT_ID);
+            sqlstm.sqhstl[6] = (unsigned int  )31;
+            sqlstm.sqhsts[6] = (         int  )0;
+            sqlstm.sqindv[6] = (         void  *)0;
+            sqlstm.sqinds[6] = (         int  )0;
+            sqlstm.sqharm[6] = (unsigned int  )0;
+            sqlstm.sqadto[6] = (unsigned short )0;
+            sqlstm.sqtdso[6] = (unsigned short )0;
+            sqlstm.sqhstv[7] = (         void  *)&(CWIPLOTCHG_N.FROM_MAT_VER);
+            sqlstm.sqhstl[7] = (unsigned int  )sizeof(int);
+            sqlstm.sqhsts[7] = (         int  )0;
+            sqlstm.sqindv[7] = (         void  *)0;
+            sqlstm.sqinds[7] = (         int  )0;
+            sqlstm.sqharm[7] = (unsigned int  )0;
+            sqlstm.sqadto[7] = (unsigned short )0;
+            sqlstm.sqtdso[7] = (unsigned short )0;
+            sqlstm.sqhstv[8] = (         void  *)(CWIPLOTCHG_N.TO_MAT_ID);
+            sqlstm.sqhstl[8] = (unsigned int  )31;
+            sqlstm.sqhsts[8] = (         int  )0;
+            sqlstm.sqindv[8] = (         void  *)0;
+            sqlstm.sqinds[8] = (         int  )0;
+            sqlstm.sqharm[8] = (unsigned int  )0;
+            sqlstm.sqadto[8] = (unsigned short )0;
+            sqlstm.sqtdso[8] = (unsigned short )0;
+            sqlstm.sqhstv[9] = (         void  *)&(CWIPLOTCHG_N.TO_MAT_VER);
+            sqlstm.sqhstl[9] = (unsigned int  )sizeof(int);
+            sqlstm.sqhsts[9] = (         int  )0;
+            sqlstm.sqindv[9] = (         void  *)0;
+            sqlstm.sqinds[9] = (         int  )0;
+            sqlstm.sqharm[9] = (unsigned int  )0;
+            sqlstm.sqadto[9] = (unsigned short )0;
+            sqlstm.sqtdso[9] = (unsigned short )0;
+            sqlstm.sqhstv[10] = (         void  *)&(CWIPLOTCHG_N.QRY_1);
+            sqlstm.sqhstl[10] = (unsigned int  )sizeof(double);
+            sqlstm.sqhsts[10] = (         int  )0;
+            sqlstm.sqindv[10] = (         void  *)0;
+            sqlstm.sqinds[10] = (         int  )0;
+            sqlstm.sqharm[10] = (unsigned int  )0;
+            sqlstm.sqadto[10] = (unsigned short )0;
+            sqlstm.sqtdso[10] = (unsigned short )0;
+            sqlstm.sqhstv[11] = (         void  *)(CWIPLOTCHG_N.CMF_1);
+            sqlstm.sqhstl[11] = (unsigned int  )31;
+            sqlstm.sqhsts[11] = (         int  )0;
+            sqlstm.sqindv[11] = (         void  *)0;
+            sqlstm.sqinds[11] = (         int  )0;
+            sqlstm.sqharm[11] = (unsigned int  )0;
+            sqlstm.sqadto[11] = (unsigned short )0;
+            sqlstm.sqtdso[11] = (unsigned short )0;
+            sqlstm.sqhstv[12] = (         void  *)(CWIPLOTCHG_N.CMF_2);
+            sqlstm.sqhstl[12] = (unsigned int  )31;
+            sqlstm.sqhsts[12] = (         int  )0;
+            sqlstm.sqindv[12] = (         void  *)0;
+            sqlstm.sqinds[12] = (         int  )0;
+            sqlstm.sqharm[12] = (unsigned int  )0;
+            sqlstm.sqadto[12] = (unsigned short )0;
+            sqlstm.sqtdso[12] = (unsigned short )0;
+            sqlstm.sqhstv[13] = (         void  *)(CWIPLOTCHG_N.CMF_3);
+            sqlstm.sqhstl[13] = (unsigned int  )31;
+            sqlstm.sqhsts[13] = (         int  )0;
+            sqlstm.sqindv[13] = (         void  *)0;
+            sqlstm.sqinds[13] = (         int  )0;
+            sqlstm.sqharm[13] = (unsigned int  )0;
+            sqlstm.sqadto[13] = (unsigned short )0;
+            sqlstm.sqtdso[13] = (unsigned short )0;
+            sqlstm.sqhstv[14] = (         void  *)(CWIPLOTCHG_N.CMF_4);
+            sqlstm.sqhstl[14] = (unsigned int  )31;
+            sqlstm.sqhsts[14] = (         int  )0;
+            sqlstm.sqindv[14] = (         void  *)0;
+            sqlstm.sqinds[14] = (         int  )0;
+            sqlstm.sqharm[14] = (unsigned int  )0;
+            sqlstm.sqadto[14] = (unsigned short )0;
+            sqlstm.sqtdso[14] = (unsigned short )0;
+            sqlstm.sqhstv[15] = (         void  *)(CWIPLOTCHG_N.CMF_5);
+            sqlstm.sqhstl[15] = (unsigned int  )31;
+            sqlstm.sqhsts[15] = (         int  )0;
+            sqlstm.sqindv[15] = (         void  *)0;
+            sqlstm.sqinds[15] = (         int  )0;
+            sqlstm.sqharm[15] = (unsigned int  )0;
+            sqlstm.sqadto[15] = (unsigned short )0;
+            sqlstm.sqtdso[15] = (unsigned short )0;
+            sqlstm.sqhstv[16] = (         void  *)(CWIPLOTCHG_N.CMF_6);
+            sqlstm.sqhstl[16] = (unsigned int  )31;
+            sqlstm.sqhsts[16] = (         int  )0;
+            sqlstm.sqindv[16] = (         void  *)0;
+            sqlstm.sqinds[16] = (         int  )0;
+            sqlstm.sqharm[16] = (unsigned int  )0;
+            sqlstm.sqadto[16] = (unsigned short )0;
+            sqlstm.sqtdso[16] = (unsigned short )0;
+            sqlstm.sqhstv[17] = (         void  *)(CWIPLOTCHG_N.CMF_7);
+            sqlstm.sqhstl[17] = (unsigned int  )31;
+            sqlstm.sqhsts[17] = (         int  )0;
+            sqlstm.sqindv[17] = (         void  *)0;
+            sqlstm.sqinds[17] = (         int  )0;
+            sqlstm.sqharm[17] = (unsigned int  )0;
+            sqlstm.sqadto[17] = (unsigned short )0;
+            sqlstm.sqtdso[17] = (unsigned short )0;
+            sqlstm.sqhstv[18] = (         void  *)(CWIPLOTCHG_N.CMF_8);
+            sqlstm.sqhstl[18] = (unsigned int  )31;
+            sqlstm.sqhsts[18] = (         int  )0;
+            sqlstm.sqindv[18] = (         void  *)0;
+            sqlstm.sqinds[18] = (         int  )0;
+            sqlstm.sqharm[18] = (unsigned int  )0;
+            sqlstm.sqadto[18] = (unsigned short )0;
+            sqlstm.sqtdso[18] = (unsigned short )0;
+            sqlstm.sqhstv[19] = (         void  *)(CWIPLOTCHG_N.CMF_9);
+            sqlstm.sqhstl[19] = (unsigned int  )31;
+            sqlstm.sqhsts[19] = (         int  )0;
+            sqlstm.sqindv[19] = (         void  *)0;
+            sqlstm.sqinds[19] = (         int  )0;
+            sqlstm.sqharm[19] = (unsigned int  )0;
+            sqlstm.sqadto[19] = (unsigned short )0;
+            sqlstm.sqtdso[19] = (unsigned short )0;
+            sqlstm.sqhstv[20] = (         void  *)(CWIPLOTCHG_N.CMF_10);
+            sqlstm.sqhstl[20] = (unsigned int  )31;
+            sqlstm.sqhsts[20] = (         int  )0;
+            sqlstm.sqindv[20] = (         void  *)0;
+            sqlstm.sqinds[20] = (         int  )0;
+            sqlstm.sqharm[20] = (unsigned int  )0;
+            sqlstm.sqadto[20] = (unsigned short )0;
+            sqlstm.sqtdso[20] = (unsigned short )0;
+            sqlstm.sqhstv[21] = (         void  *)(CWIPLOTCHG_N.CREATE_USER_ID);
+            sqlstm.sqhstl[21] = (unsigned int  )21;
+            sqlstm.sqhsts[21] = (         int  )0;
+            sqlstm.sqindv[21] = (         void  *)0;
+            sqlstm.sqinds[21] = (         int  )0;
+            sqlstm.sqharm[21] = (unsigned int  )0;
+            sqlstm.sqadto[21] = (unsigned short )0;
+            sqlstm.sqtdso[21] = (unsigned short )0;
+            sqlstm.sqhstv[22] = (         void  *)(CWIPLOTCHG_N.CREATE_TIME);
+            sqlstm.sqhstl[22] = (unsigned int  )15;
+            sqlstm.sqhsts[22] = (         int  )0;
+            sqlstm.sqindv[22] = (         void  *)0;
+            sqlstm.sqinds[22] = (         int  )0;
+            sqlstm.sqharm[22] = (unsigned int  )0;
+            sqlstm.sqadto[22] = (unsigned short )0;
+            sqlstm.sqtdso[22] = (unsigned short )0;
+            sqlstm.sqhstv[23] = (         void  *)(CWIPLOTCHG_N.UPDATE_USER_ID);
+            sqlstm.sqhstl[23] = (unsigned int  )21;
+            sqlstm.sqhsts[23] = (         int  )0;
+            sqlstm.sqindv[23] = (         void  *)0;
+            sqlstm.sqinds[23] = (         int  )0;
+            sqlstm.sqharm[23] = (unsigned int  )0;
+            sqlstm.sqadto[23] = (unsigned short )0;
+            sqlstm.sqtdso[23] = (unsigned short )0;
+            sqlstm.sqhstv[24] = (         void  *)(CWIPLOTCHG_N.UPDATE_TIME);
+            sqlstm.sqhstl[24] = (unsigned int  )15;
+            sqlstm.sqhsts[24] = (         int  )0;
+            sqlstm.sqindv[24] = (         void  *)0;
+            sqlstm.sqinds[24] = (         int  )0;
+            sqlstm.sqharm[24] = (unsigned int  )0;
+            sqlstm.sqadto[24] = (unsigned short )0;
+            sqlstm.sqtdso[24] = (unsigned short )0;
+            sqlstm.sqhstv[25] = (         void  *)(CWIPLOTCHG_N.FACTORY);
+            sqlstm.sqhstl[25] = (unsigned int  )11;
+            sqlstm.sqhsts[25] = (         int  )0;
+            sqlstm.sqindv[25] = (         void  *)0;
+            sqlstm.sqinds[25] = (         int  )0;
+            sqlstm.sqharm[25] = (unsigned int  )0;
+            sqlstm.sqadto[25] = (unsigned short )0;
+            sqlstm.sqtdso[25] = (unsigned short )0;
+            sqlstm.sqhstv[26] = (         void  *)(CWIPLOTCHG_N.LOT_ID);
+            sqlstm.sqhstl[26] = (unsigned int  )26;
+            sqlstm.sqhsts[26] = (         int  )0;
+            sqlstm.sqindv[26] = (         void  *)0;
+            sqlstm.sqinds[26] = (         int  )0;
+            sqlstm.sqharm[26] = (unsigned int  )0;
+            sqlstm.sqadto[26] = (unsigned short )0;
+            sqlstm.sqtdso[26] = (unsigned short )0;
+            sqlstm.sqhstv[27] = (         void  *)&(CWIPLOTCHG_N.HIST_SEQ);
+            sqlstm.sqhstl[27] = (unsigned int  )sizeof(int);
+            sqlstm.sqhsts[27] = (         int  )0;
+            sqlstm.sqindv[27] = (         void  *)0;
+            sqlstm.sqinds[27] = (         int  )0;
+            sqlstm.sqharm[27] = (unsigned int  )0;
+            sqlstm.sqadto[27] = (unsigned short )0;
+            sqlstm.sqtdso[27] = (unsigned short )0;
+            sqlstm.sqphsv = sqlstm.sqhstv;
+            sqlstm.sqphsl = sqlstm.sqhstl;
+            sqlstm.sqphss = sqlstm.sqhsts;
+            sqlstm.sqpind = sqlstm.sqindv;
+            sqlstm.sqpins = sqlstm.sqinds;
+            sqlstm.sqparm = sqlstm.sqharm;
+            sqlstm.sqparc = sqlstm.sqharc;
+            sqlstm.sqpadto = sqlstm.sqadto;
+            sqlstm.sqptdso = sqlstm.sqtdso;
+            sqlcxt((void **)0, &sqlctx, &sqlstm, &sqlfpn);
+            if (sqlca.sqlcode == 1403) DB_usr_error();
+            if (sqlca.sqlcode < 0) DB_usr_error();
+}
+
+
+            break;
+
+
+        default:
+            DB_error_code = 9999;
+            memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+            memcpy(DB_error_msg, "Error : Invalid Argument(sel_type)", 34);
+            break;
+    }
+
+    DB_stop_query_timer("DBU_update_cwiplotchg", sel_type);
+}
+
+
+/* SQL CURSOR DECLARE & OPEN Function */
+void DBU_open_cwiplotchg(int sel_type, struct CWIPLOTCHG_TAG *CWIPLOTCHG)
+{
+    /* EXEC SQL BEGIN DECLARE SECTION; */ 
+
+        struct CWIPLOTCHG_N_TAG CWIPLOTCHG_N;
+    /* EXEC SQL END DECLARE SECTION; */ 
+
+
+    DB_start_query_timer();
+
+    DBU_add_null_cwiplotchg(&CWIPLOTCHG_N, CWIPLOTCHG);
+    DB_error_code = 0;
+
+
+    switch(sel_type)
+    {
+        case 1:
+            /* EXEC SQL DECLARE DBU_CWIPLOTCHG_CUR_1 CURSOR FOR
+                SELECT 
+                    FACTORY,
+                    LOT_ID,
+                    HIST_SEQ,
+                    ORDER_ID,
+                    FLOW,
+                    OPER,
+                    ERP_OPER,
+                    AREA_ID,
+                    SUB_AREA_ID,
+                    FROM_MAT_ID,
+                    FROM_MAT_VER,
+                    TO_MAT_ID,
+                    TO_MAT_VER,
+                    QRY_1,
+                    CMF_1,
+                    CMF_2,
+                    CMF_3,
+                    CMF_4,
+                    CMF_5,
+                    CMF_6,
+                    CMF_7,
+                    CMF_8,
+                    CMF_9,
+                    CMF_10,
+                    CREATE_USER_ID,
+                    CREATE_TIME,
+                    UPDATE_USER_ID,
+                    UPDATE_TIME
+                FROM CWIPLOTCHG
+                ORDER BY FACTORY ASC,
+                    LOT_ID ASC,
+                    HIST_SEQ ASC; */ 
+
+            /* EXEC SQL OPEN DBU_CWIPLOTCHG_CUR_1; */ 
+
+{
+            struct sqlexd sqlstm;
+            sqlstm.sqlvsn = 13;
+            sqlstm.arrsiz = 31;
+            sqlstm.sqladtp = &sqladt;
+            sqlstm.sqltdsp = &sqltds;
+            sqlstm.stmt = sq0007;
+            sqlstm.iters = (unsigned int  )1;
+            sqlstm.offset = (unsigned int  )595;
+            sqlstm.selerr = (unsigned short)1;
+            sqlstm.sqlpfmem = (unsigned int  )0;
+            sqlstm.cud = sqlcud0;
+            sqlstm.sqlest = (unsigned char  *)&sqlca;
+            sqlstm.sqlety = (unsigned short)4352;
+            sqlstm.occurs = (unsigned int  )0;
+            sqlstm.sqcmod = (unsigned int )0;
+            sqlcxt((void **)0, &sqlctx, &sqlstm, &sqlfpn);
+            if (sqlca.sqlcode < 0) DB_usr_error();
+}
+
+
+            break;
+
+
+        default:
+            DB_error_code = 9999;
+            memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+            memcpy(DB_error_msg, "Error : Invalid Argument(sel_type)", 34);
+            break;
+    }
+
+    DB_stop_query_timer("DBU_open_cwiplotchg", sel_type);
+}
+
+
+/* SQL CURSOR FETCH Function */
+void DBU_fetch_cwiplotchg(int sel_type, struct CWIPLOTCHG_TAG *CWIPLOTCHG)
+{
+    /* EXEC SQL BEGIN DECLARE SECTION; */ 
+
+        struct CWIPLOTCHG_N_TAG CWIPLOTCHG_N;
+    /* EXEC SQL END DECLARE SECTION; */ 
+
+
+    DB_start_query_timer();
+    DB_error_code = 0;
+
+
+    switch(sel_type)
+    {
+        case 1:
+            /* EXEC SQL FETCH DBU_CWIPLOTCHG_CUR_1 INTO
+                :CWIPLOTCHG_N.FACTORY,
+                :CWIPLOTCHG_N.LOT_ID,
+                :CWIPLOTCHG_N.HIST_SEQ,
+                :CWIPLOTCHG_N.ORDER_ID,
+                :CWIPLOTCHG_N.FLOW,
+                :CWIPLOTCHG_N.OPER,
+                :CWIPLOTCHG_N.ERP_OPER,
+                :CWIPLOTCHG_N.AREA_ID,
+                :CWIPLOTCHG_N.SUB_AREA_ID,
+                :CWIPLOTCHG_N.FROM_MAT_ID,
+                :CWIPLOTCHG_N.FROM_MAT_VER,
+                :CWIPLOTCHG_N.TO_MAT_ID,
+                :CWIPLOTCHG_N.TO_MAT_VER,
+                :CWIPLOTCHG_N.QRY_1,
+                :CWIPLOTCHG_N.CMF_1,
+                :CWIPLOTCHG_N.CMF_2,
+                :CWIPLOTCHG_N.CMF_3,
+                :CWIPLOTCHG_N.CMF_4,
+                :CWIPLOTCHG_N.CMF_5,
+                :CWIPLOTCHG_N.CMF_6,
+                :CWIPLOTCHG_N.CMF_7,
+                :CWIPLOTCHG_N.CMF_8,
+                :CWIPLOTCHG_N.CMF_9,
+                :CWIPLOTCHG_N.CMF_10,
+                :CWIPLOTCHG_N.CREATE_USER_ID,
+                :CWIPLOTCHG_N.CREATE_TIME,
+                :CWIPLOTCHG_N.UPDATE_USER_ID,
+                :CWIPLOTCHG_N.UPDATE_TIME; */ 
+
+{
+            struct sqlexd sqlstm;
+            sqlstm.sqlvsn = 13;
+            sqlstm.arrsiz = 31;
+            sqlstm.sqladtp = &sqladt;
+            sqlstm.sqltdsp = &sqltds;
+            sqlstm.iters = (unsigned int  )1;
+            sqlstm.offset = (unsigned int  )610;
+            sqlstm.selerr = (unsigned short)1;
+            sqlstm.sqlpfmem = (unsigned int  )0;
+            sqlstm.cud = sqlcud0;
+            sqlstm.sqlest = (unsigned char  *)&sqlca;
+            sqlstm.sqlety = (unsigned short)4352;
+            sqlstm.occurs = (unsigned int  )0;
+            sqlstm.sqfoff = (           int )0;
+            sqlstm.sqfmod = (unsigned int )2;
+            sqlstm.sqhstv[0] = (         void  *)(CWIPLOTCHG_N.FACTORY);
+            sqlstm.sqhstl[0] = (unsigned int  )11;
+            sqlstm.sqhsts[0] = (         int  )0;
+            sqlstm.sqindv[0] = (         void  *)0;
+            sqlstm.sqinds[0] = (         int  )0;
+            sqlstm.sqharm[0] = (unsigned int  )0;
+            sqlstm.sqadto[0] = (unsigned short )0;
+            sqlstm.sqtdso[0] = (unsigned short )0;
+            sqlstm.sqhstv[1] = (         void  *)(CWIPLOTCHG_N.LOT_ID);
+            sqlstm.sqhstl[1] = (unsigned int  )26;
+            sqlstm.sqhsts[1] = (         int  )0;
+            sqlstm.sqindv[1] = (         void  *)0;
+            sqlstm.sqinds[1] = (         int  )0;
+            sqlstm.sqharm[1] = (unsigned int  )0;
+            sqlstm.sqadto[1] = (unsigned short )0;
+            sqlstm.sqtdso[1] = (unsigned short )0;
+            sqlstm.sqhstv[2] = (         void  *)&(CWIPLOTCHG_N.HIST_SEQ);
+            sqlstm.sqhstl[2] = (unsigned int  )sizeof(int);
+            sqlstm.sqhsts[2] = (         int  )0;
+            sqlstm.sqindv[2] = (         void  *)0;
+            sqlstm.sqinds[2] = (         int  )0;
+            sqlstm.sqharm[2] = (unsigned int  )0;
+            sqlstm.sqadto[2] = (unsigned short )0;
+            sqlstm.sqtdso[2] = (unsigned short )0;
+            sqlstm.sqhstv[3] = (         void  *)(CWIPLOTCHG_N.ORDER_ID);
+            sqlstm.sqhstl[3] = (unsigned int  )26;
+            sqlstm.sqhsts[3] = (         int  )0;
+            sqlstm.sqindv[3] = (         void  *)0;
+            sqlstm.sqinds[3] = (         int  )0;
+            sqlstm.sqharm[3] = (unsigned int  )0;
+            sqlstm.sqadto[3] = (unsigned short )0;
+            sqlstm.sqtdso[3] = (unsigned short )0;
+            sqlstm.sqhstv[4] = (         void  *)(CWIPLOTCHG_N.FLOW);
+            sqlstm.sqhstl[4] = (unsigned int  )21;
+            sqlstm.sqhsts[4] = (         int  )0;
+            sqlstm.sqindv[4] = (         void  *)0;
+            sqlstm.sqinds[4] = (         int  )0;
+            sqlstm.sqharm[4] = (unsigned int  )0;
+            sqlstm.sqadto[4] = (unsigned short )0;
+            sqlstm.sqtdso[4] = (unsigned short )0;
+            sqlstm.sqhstv[5] = (         void  *)(CWIPLOTCHG_N.OPER);
+            sqlstm.sqhstl[5] = (unsigned int  )11;
+            sqlstm.sqhsts[5] = (         int  )0;
+            sqlstm.sqindv[5] = (         void  *)0;
+            sqlstm.sqinds[5] = (         int  )0;
+            sqlstm.sqharm[5] = (unsigned int  )0;
+            sqlstm.sqadto[5] = (unsigned short )0;
+            sqlstm.sqtdso[5] = (unsigned short )0;
+            sqlstm.sqhstv[6] = (         void  *)(CWIPLOTCHG_N.ERP_OPER);
+            sqlstm.sqhstl[6] = (unsigned int  )31;
+            sqlstm.sqhsts[6] = (         int  )0;
+            sqlstm.sqindv[6] = (         void  *)0;
+            sqlstm.sqinds[6] = (         int  )0;
+            sqlstm.sqharm[6] = (unsigned int  )0;
+            sqlstm.sqadto[6] = (unsigned short )0;
+            sqlstm.sqtdso[6] = (unsigned short )0;
+            sqlstm.sqhstv[7] = (         void  *)(CWIPLOTCHG_N.AREA_ID);
+            sqlstm.sqhstl[7] = (unsigned int  )21;
+            sqlstm.sqhsts[7] = (         int  )0;
+            sqlstm.sqindv[7] = (         void  *)0;
+            sqlstm.sqinds[7] = (         int  )0;
+            sqlstm.sqharm[7] = (unsigned int  )0;
+            sqlstm.sqadto[7] = (unsigned short )0;
+            sqlstm.sqtdso[7] = (unsigned short )0;
+            sqlstm.sqhstv[8] = (         void  *)(CWIPLOTCHG_N.SUB_AREA_ID);
+            sqlstm.sqhstl[8] = (unsigned int  )21;
+            sqlstm.sqhsts[8] = (         int  )0;
+            sqlstm.sqindv[8] = (         void  *)0;
+            sqlstm.sqinds[8] = (         int  )0;
+            sqlstm.sqharm[8] = (unsigned int  )0;
+            sqlstm.sqadto[8] = (unsigned short )0;
+            sqlstm.sqtdso[8] = (unsigned short )0;
+            sqlstm.sqhstv[9] = (         void  *)(CWIPLOTCHG_N.FROM_MAT_ID);
+            sqlstm.sqhstl[9] = (unsigned int  )31;
+            sqlstm.sqhsts[9] = (         int  )0;
+            sqlstm.sqindv[9] = (         void  *)0;
+            sqlstm.sqinds[9] = (         int  )0;
+            sqlstm.sqharm[9] = (unsigned int  )0;
+            sqlstm.sqadto[9] = (unsigned short )0;
+            sqlstm.sqtdso[9] = (unsigned short )0;
+            sqlstm.sqhstv[10] = (         void  *)&(CWIPLOTCHG_N.FROM_MAT_VER);
+            sqlstm.sqhstl[10] = (unsigned int  )sizeof(int);
+            sqlstm.sqhsts[10] = (         int  )0;
+            sqlstm.sqindv[10] = (         void  *)0;
+            sqlstm.sqinds[10] = (         int  )0;
+            sqlstm.sqharm[10] = (unsigned int  )0;
+            sqlstm.sqadto[10] = (unsigned short )0;
+            sqlstm.sqtdso[10] = (unsigned short )0;
+            sqlstm.sqhstv[11] = (         void  *)(CWIPLOTCHG_N.TO_MAT_ID);
+            sqlstm.sqhstl[11] = (unsigned int  )31;
+            sqlstm.sqhsts[11] = (         int  )0;
+            sqlstm.sqindv[11] = (         void  *)0;
+            sqlstm.sqinds[11] = (         int  )0;
+            sqlstm.sqharm[11] = (unsigned int  )0;
+            sqlstm.sqadto[11] = (unsigned short )0;
+            sqlstm.sqtdso[11] = (unsigned short )0;
+            sqlstm.sqhstv[12] = (         void  *)&(CWIPLOTCHG_N.TO_MAT_VER);
+            sqlstm.sqhstl[12] = (unsigned int  )sizeof(int);
+            sqlstm.sqhsts[12] = (         int  )0;
+            sqlstm.sqindv[12] = (         void  *)0;
+            sqlstm.sqinds[12] = (         int  )0;
+            sqlstm.sqharm[12] = (unsigned int  )0;
+            sqlstm.sqadto[12] = (unsigned short )0;
+            sqlstm.sqtdso[12] = (unsigned short )0;
+            sqlstm.sqhstv[13] = (         void  *)&(CWIPLOTCHG_N.QRY_1);
+            sqlstm.sqhstl[13] = (unsigned int  )sizeof(double);
+            sqlstm.sqhsts[13] = (         int  )0;
+            sqlstm.sqindv[13] = (         void  *)0;
+            sqlstm.sqinds[13] = (         int  )0;
+            sqlstm.sqharm[13] = (unsigned int  )0;
+            sqlstm.sqadto[13] = (unsigned short )0;
+            sqlstm.sqtdso[13] = (unsigned short )0;
+            sqlstm.sqhstv[14] = (         void  *)(CWIPLOTCHG_N.CMF_1);
+            sqlstm.sqhstl[14] = (unsigned int  )31;
+            sqlstm.sqhsts[14] = (         int  )0;
+            sqlstm.sqindv[14] = (         void  *)0;
+            sqlstm.sqinds[14] = (         int  )0;
+            sqlstm.sqharm[14] = (unsigned int  )0;
+            sqlstm.sqadto[14] = (unsigned short )0;
+            sqlstm.sqtdso[14] = (unsigned short )0;
+            sqlstm.sqhstv[15] = (         void  *)(CWIPLOTCHG_N.CMF_2);
+            sqlstm.sqhstl[15] = (unsigned int  )31;
+            sqlstm.sqhsts[15] = (         int  )0;
+            sqlstm.sqindv[15] = (         void  *)0;
+            sqlstm.sqinds[15] = (         int  )0;
+            sqlstm.sqharm[15] = (unsigned int  )0;
+            sqlstm.sqadto[15] = (unsigned short )0;
+            sqlstm.sqtdso[15] = (unsigned short )0;
+            sqlstm.sqhstv[16] = (         void  *)(CWIPLOTCHG_N.CMF_3);
+            sqlstm.sqhstl[16] = (unsigned int  )31;
+            sqlstm.sqhsts[16] = (         int  )0;
+            sqlstm.sqindv[16] = (         void  *)0;
+            sqlstm.sqinds[16] = (         int  )0;
+            sqlstm.sqharm[16] = (unsigned int  )0;
+            sqlstm.sqadto[16] = (unsigned short )0;
+            sqlstm.sqtdso[16] = (unsigned short )0;
+            sqlstm.sqhstv[17] = (         void  *)(CWIPLOTCHG_N.CMF_4);
+            sqlstm.sqhstl[17] = (unsigned int  )31;
+            sqlstm.sqhsts[17] = (         int  )0;
+            sqlstm.sqindv[17] = (         void  *)0;
+            sqlstm.sqinds[17] = (         int  )0;
+            sqlstm.sqharm[17] = (unsigned int  )0;
+            sqlstm.sqadto[17] = (unsigned short )0;
+            sqlstm.sqtdso[17] = (unsigned short )0;
+            sqlstm.sqhstv[18] = (         void  *)(CWIPLOTCHG_N.CMF_5);
+            sqlstm.sqhstl[18] = (unsigned int  )31;
+            sqlstm.sqhsts[18] = (         int  )0;
+            sqlstm.sqindv[18] = (         void  *)0;
+            sqlstm.sqinds[18] = (         int  )0;
+            sqlstm.sqharm[18] = (unsigned int  )0;
+            sqlstm.sqadto[18] = (unsigned short )0;
+            sqlstm.sqtdso[18] = (unsigned short )0;
+            sqlstm.sqhstv[19] = (         void  *)(CWIPLOTCHG_N.CMF_6);
+            sqlstm.sqhstl[19] = (unsigned int  )31;
+            sqlstm.sqhsts[19] = (         int  )0;
+            sqlstm.sqindv[19] = (         void  *)0;
+            sqlstm.sqinds[19] = (         int  )0;
+            sqlstm.sqharm[19] = (unsigned int  )0;
+            sqlstm.sqadto[19] = (unsigned short )0;
+            sqlstm.sqtdso[19] = (unsigned short )0;
+            sqlstm.sqhstv[20] = (         void  *)(CWIPLOTCHG_N.CMF_7);
+            sqlstm.sqhstl[20] = (unsigned int  )31;
+            sqlstm.sqhsts[20] = (         int  )0;
+            sqlstm.sqindv[20] = (         void  *)0;
+            sqlstm.sqinds[20] = (         int  )0;
+            sqlstm.sqharm[20] = (unsigned int  )0;
+            sqlstm.sqadto[20] = (unsigned short )0;
+            sqlstm.sqtdso[20] = (unsigned short )0;
+            sqlstm.sqhstv[21] = (         void  *)(CWIPLOTCHG_N.CMF_8);
+            sqlstm.sqhstl[21] = (unsigned int  )31;
+            sqlstm.sqhsts[21] = (         int  )0;
+            sqlstm.sqindv[21] = (         void  *)0;
+            sqlstm.sqinds[21] = (         int  )0;
+            sqlstm.sqharm[21] = (unsigned int  )0;
+            sqlstm.sqadto[21] = (unsigned short )0;
+            sqlstm.sqtdso[21] = (unsigned short )0;
+            sqlstm.sqhstv[22] = (         void  *)(CWIPLOTCHG_N.CMF_9);
+            sqlstm.sqhstl[22] = (unsigned int  )31;
+            sqlstm.sqhsts[22] = (         int  )0;
+            sqlstm.sqindv[22] = (         void  *)0;
+            sqlstm.sqinds[22] = (         int  )0;
+            sqlstm.sqharm[22] = (unsigned int  )0;
+            sqlstm.sqadto[22] = (unsigned short )0;
+            sqlstm.sqtdso[22] = (unsigned short )0;
+            sqlstm.sqhstv[23] = (         void  *)(CWIPLOTCHG_N.CMF_10);
+            sqlstm.sqhstl[23] = (unsigned int  )31;
+            sqlstm.sqhsts[23] = (         int  )0;
+            sqlstm.sqindv[23] = (         void  *)0;
+            sqlstm.sqinds[23] = (         int  )0;
+            sqlstm.sqharm[23] = (unsigned int  )0;
+            sqlstm.sqadto[23] = (unsigned short )0;
+            sqlstm.sqtdso[23] = (unsigned short )0;
+            sqlstm.sqhstv[24] = (         void  *)(CWIPLOTCHG_N.CREATE_USER_ID);
+            sqlstm.sqhstl[24] = (unsigned int  )21;
+            sqlstm.sqhsts[24] = (         int  )0;
+            sqlstm.sqindv[24] = (         void  *)0;
+            sqlstm.sqinds[24] = (         int  )0;
+            sqlstm.sqharm[24] = (unsigned int  )0;
+            sqlstm.sqadto[24] = (unsigned short )0;
+            sqlstm.sqtdso[24] = (unsigned short )0;
+            sqlstm.sqhstv[25] = (         void  *)(CWIPLOTCHG_N.CREATE_TIME);
+            sqlstm.sqhstl[25] = (unsigned int  )15;
+            sqlstm.sqhsts[25] = (         int  )0;
+            sqlstm.sqindv[25] = (         void  *)0;
+            sqlstm.sqinds[25] = (         int  )0;
+            sqlstm.sqharm[25] = (unsigned int  )0;
+            sqlstm.sqadto[25] = (unsigned short )0;
+            sqlstm.sqtdso[25] = (unsigned short )0;
+            sqlstm.sqhstv[26] = (         void  *)(CWIPLOTCHG_N.UPDATE_USER_ID);
+            sqlstm.sqhstl[26] = (unsigned int  )21;
+            sqlstm.sqhsts[26] = (         int  )0;
+            sqlstm.sqindv[26] = (         void  *)0;
+            sqlstm.sqinds[26] = (         int  )0;
+            sqlstm.sqharm[26] = (unsigned int  )0;
+            sqlstm.sqadto[26] = (unsigned short )0;
+            sqlstm.sqtdso[26] = (unsigned short )0;
+            sqlstm.sqhstv[27] = (         void  *)(CWIPLOTCHG_N.UPDATE_TIME);
+            sqlstm.sqhstl[27] = (unsigned int  )15;
+            sqlstm.sqhsts[27] = (         int  )0;
+            sqlstm.sqindv[27] = (         void  *)0;
+            sqlstm.sqinds[27] = (         int  )0;
+            sqlstm.sqharm[27] = (unsigned int  )0;
+            sqlstm.sqadto[27] = (unsigned short )0;
+            sqlstm.sqtdso[27] = (unsigned short )0;
+            sqlstm.sqphsv = sqlstm.sqhstv;
+            sqlstm.sqphsl = sqlstm.sqhstl;
+            sqlstm.sqphss = sqlstm.sqhsts;
+            sqlstm.sqpind = sqlstm.sqindv;
+            sqlstm.sqpins = sqlstm.sqinds;
+            sqlstm.sqparm = sqlstm.sqharm;
+            sqlstm.sqparc = sqlstm.sqharc;
+            sqlstm.sqpadto = sqlstm.sqadto;
+            sqlstm.sqptdso = sqlstm.sqtdso;
+            sqlcxt((void **)0, &sqlctx, &sqlstm, &sqlfpn);
+            if (sqlca.sqlcode == 1403) DB_usr_error();
+            if (sqlca.sqlcode < 0) DB_usr_error();
+}
+
+
+            break;
+
+
+        default:
+            DB_error_code = 9999;
+            memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+            memcpy(DB_error_msg, "Error : Invalid Argument(sel_type)", 34);
+            break;
+    }
+
+
+    if(DB_error_code == 0)
+    {
+        DBU_del_null_cwiplotchg(&CWIPLOTCHG_N, CWIPLOTCHG);
+    }
+
+    DB_stop_query_timer("DBU_fetch_cwiplotchg", sel_type);
+}
+
+
+/* SQL CURSOR CLOSE Function */
+void DBU_close_cwiplotchg(int sel_type)
+{
+    DB_start_query_timer();
+    DB_error_code = 0;
+
+    switch(sel_type)
+    {
+        case 1:
+            /* EXEC SQL CLOSE DBU_CWIPLOTCHG_CUR_1; */ 
+
+{
+            struct sqlexd sqlstm;
+            sqlstm.sqlvsn = 13;
+            sqlstm.arrsiz = 31;
+            sqlstm.sqladtp = &sqladt;
+            sqlstm.sqltdsp = &sqltds;
+            sqlstm.iters = (unsigned int  )1;
+            sqlstm.offset = (unsigned int  )737;
+            sqlstm.cud = sqlcud0;
+            sqlstm.sqlest = (unsigned char  *)&sqlca;
+            sqlstm.sqlety = (unsigned short)4352;
+            sqlstm.occurs = (unsigned int  )0;
+            sqlcxt((void **)0, &sqlctx, &sqlstm, &sqlfpn);
+            if (sqlca.sqlcode < 0) DB_usr_error();
+}
+
+
+            break;
+
+
+        default:
+            DB_error_code = 9999;
+            memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+            memcpy(DB_error_msg, "Error : Invalid Argument(sel_type)", 32);
+            break;
+    }
+
+    DB_stop_query_timer("DBU_close_cwiplotchg", sel_type);
+}
+
+
+/* Initialize Function */
+void DBU_init_cwiplotchg(struct CWIPLOTCHG_TAG *CWIPLOTCHG)
+{
+    /* memset by Space */
+    memset(CWIPLOTCHG, ' ', sizeof(struct CWIPLOTCHG_TAG));
+    
+    CWIPLOTCHG->HIST_SEQ = 0;
+    CWIPLOTCHG->FROM_MAT_VER = 0;
+    CWIPLOTCHG->TO_MAT_VER = 0;
+    CWIPLOTCHG->QRY_1 = 0;
+}
+
+
+/* Add Null Function */
+void DBU_add_null_cwiplotchg(struct CWIPLOTCHG_N_TAG *CWIPLOTCHG_N, struct CWIPLOTCHG_TAG *CWIPLOTCHG)
+{
+    /* memset by NULL */
+    memset(CWIPLOTCHG_N, '\0', sizeof(struct CWIPLOTCHG_N_TAG));
+    
+    MEMCPY_AN(CWIPLOTCHG_N->FACTORY, CWIPLOTCHG->FACTORY, sizeof(CWIPLOTCHG->FACTORY));
+    MEMCPY_AN(CWIPLOTCHG_N->LOT_ID, CWIPLOTCHG->LOT_ID, sizeof(CWIPLOTCHG->LOT_ID));
+    CWIPLOTCHG_N->HIST_SEQ = CWIPLOTCHG->HIST_SEQ;
+    MEMCPY_AN(CWIPLOTCHG_N->ORDER_ID, CWIPLOTCHG->ORDER_ID, sizeof(CWIPLOTCHG->ORDER_ID));
+    MEMCPY_AN(CWIPLOTCHG_N->FLOW, CWIPLOTCHG->FLOW, sizeof(CWIPLOTCHG->FLOW));
+    MEMCPY_AN(CWIPLOTCHG_N->OPER, CWIPLOTCHG->OPER, sizeof(CWIPLOTCHG->OPER));
+    MEMCPY_AN(CWIPLOTCHG_N->ERP_OPER, CWIPLOTCHG->ERP_OPER, sizeof(CWIPLOTCHG->ERP_OPER));
+    MEMCPY_AN(CWIPLOTCHG_N->AREA_ID, CWIPLOTCHG->AREA_ID, sizeof(CWIPLOTCHG->AREA_ID));
+    MEMCPY_AN(CWIPLOTCHG_N->SUB_AREA_ID, CWIPLOTCHG->SUB_AREA_ID, sizeof(CWIPLOTCHG->SUB_AREA_ID));
+    MEMCPY_AN(CWIPLOTCHG_N->FROM_MAT_ID, CWIPLOTCHG->FROM_MAT_ID, sizeof(CWIPLOTCHG->FROM_MAT_ID));
+    CWIPLOTCHG_N->FROM_MAT_VER = CWIPLOTCHG->FROM_MAT_VER;
+    MEMCPY_AN(CWIPLOTCHG_N->TO_MAT_ID, CWIPLOTCHG->TO_MAT_ID, sizeof(CWIPLOTCHG->TO_MAT_ID));
+    CWIPLOTCHG_N->TO_MAT_VER = CWIPLOTCHG->TO_MAT_VER;
+    CWIPLOTCHG_N->QRY_1 = CWIPLOTCHG->QRY_1;
+    MEMCPY_AN(CWIPLOTCHG_N->CMF_1, CWIPLOTCHG->CMF_1, sizeof(CWIPLOTCHG->CMF_1));
+    MEMCPY_AN(CWIPLOTCHG_N->CMF_2, CWIPLOTCHG->CMF_2, sizeof(CWIPLOTCHG->CMF_2));
+    MEMCPY_AN(CWIPLOTCHG_N->CMF_3, CWIPLOTCHG->CMF_3, sizeof(CWIPLOTCHG->CMF_3));
+    MEMCPY_AN(CWIPLOTCHG_N->CMF_4, CWIPLOTCHG->CMF_4, sizeof(CWIPLOTCHG->CMF_4));
+    MEMCPY_AN(CWIPLOTCHG_N->CMF_5, CWIPLOTCHG->CMF_5, sizeof(CWIPLOTCHG->CMF_5));
+    MEMCPY_AN(CWIPLOTCHG_N->CMF_6, CWIPLOTCHG->CMF_6, sizeof(CWIPLOTCHG->CMF_6));
+    MEMCPY_AN(CWIPLOTCHG_N->CMF_7, CWIPLOTCHG->CMF_7, sizeof(CWIPLOTCHG->CMF_7));
+    MEMCPY_AN(CWIPLOTCHG_N->CMF_8, CWIPLOTCHG->CMF_8, sizeof(CWIPLOTCHG->CMF_8));
+    MEMCPY_AN(CWIPLOTCHG_N->CMF_9, CWIPLOTCHG->CMF_9, sizeof(CWIPLOTCHG->CMF_9));
+    MEMCPY_AN(CWIPLOTCHG_N->CMF_10, CWIPLOTCHG->CMF_10, sizeof(CWIPLOTCHG->CMF_10));
+    MEMCPY_AN(CWIPLOTCHG_N->CREATE_USER_ID, CWIPLOTCHG->CREATE_USER_ID, sizeof(CWIPLOTCHG->CREATE_USER_ID));
+    MEMCPY_AN(CWIPLOTCHG_N->CREATE_TIME, CWIPLOTCHG->CREATE_TIME, sizeof(CWIPLOTCHG->CREATE_TIME));
+    MEMCPY_AN(CWIPLOTCHG_N->UPDATE_USER_ID, CWIPLOTCHG->UPDATE_USER_ID, sizeof(CWIPLOTCHG->UPDATE_USER_ID));
+    MEMCPY_AN(CWIPLOTCHG_N->UPDATE_TIME, CWIPLOTCHG->UPDATE_TIME, sizeof(CWIPLOTCHG->UPDATE_TIME));
+}
+
+
+/* Del Null Function */
+void DBU_del_null_cwiplotchg(struct CWIPLOTCHG_N_TAG *CWIPLOTCHG_N, struct CWIPLOTCHG_TAG *CWIPLOTCHG)
+{
+    MEMCPY_DN(CWIPLOTCHG->FACTORY, CWIPLOTCHG_N->FACTORY, sizeof(CWIPLOTCHG->FACTORY));
+    MEMCPY_DN(CWIPLOTCHG->LOT_ID, CWIPLOTCHG_N->LOT_ID, sizeof(CWIPLOTCHG->LOT_ID));
+    CWIPLOTCHG->HIST_SEQ = CWIPLOTCHG_N->HIST_SEQ;
+    MEMCPY_DN(CWIPLOTCHG->ORDER_ID, CWIPLOTCHG_N->ORDER_ID, sizeof(CWIPLOTCHG->ORDER_ID));
+    MEMCPY_DN(CWIPLOTCHG->FLOW, CWIPLOTCHG_N->FLOW, sizeof(CWIPLOTCHG->FLOW));
+    MEMCPY_DN(CWIPLOTCHG->OPER, CWIPLOTCHG_N->OPER, sizeof(CWIPLOTCHG->OPER));
+    MEMCPY_DN(CWIPLOTCHG->ERP_OPER, CWIPLOTCHG_N->ERP_OPER, sizeof(CWIPLOTCHG->ERP_OPER));
+    MEMCPY_DN(CWIPLOTCHG->AREA_ID, CWIPLOTCHG_N->AREA_ID, sizeof(CWIPLOTCHG->AREA_ID));
+    MEMCPY_DN(CWIPLOTCHG->SUB_AREA_ID, CWIPLOTCHG_N->SUB_AREA_ID, sizeof(CWIPLOTCHG->SUB_AREA_ID));
+    MEMCPY_DN(CWIPLOTCHG->FROM_MAT_ID, CWIPLOTCHG_N->FROM_MAT_ID, sizeof(CWIPLOTCHG->FROM_MAT_ID));
+    CWIPLOTCHG->FROM_MAT_VER = CWIPLOTCHG_N->FROM_MAT_VER;
+    MEMCPY_DN(CWIPLOTCHG->TO_MAT_ID, CWIPLOTCHG_N->TO_MAT_ID, sizeof(CWIPLOTCHG->TO_MAT_ID));
+    CWIPLOTCHG->TO_MAT_VER = CWIPLOTCHG_N->TO_MAT_VER;
+    CWIPLOTCHG->QRY_1 = CWIPLOTCHG_N->QRY_1;
+    MEMCPY_DN(CWIPLOTCHG->CMF_1, CWIPLOTCHG_N->CMF_1, sizeof(CWIPLOTCHG->CMF_1));
+    MEMCPY_DN(CWIPLOTCHG->CMF_2, CWIPLOTCHG_N->CMF_2, sizeof(CWIPLOTCHG->CMF_2));
+    MEMCPY_DN(CWIPLOTCHG->CMF_3, CWIPLOTCHG_N->CMF_3, sizeof(CWIPLOTCHG->CMF_3));
+    MEMCPY_DN(CWIPLOTCHG->CMF_4, CWIPLOTCHG_N->CMF_4, sizeof(CWIPLOTCHG->CMF_4));
+    MEMCPY_DN(CWIPLOTCHG->CMF_5, CWIPLOTCHG_N->CMF_5, sizeof(CWIPLOTCHG->CMF_5));
+    MEMCPY_DN(CWIPLOTCHG->CMF_6, CWIPLOTCHG_N->CMF_6, sizeof(CWIPLOTCHG->CMF_6));
+    MEMCPY_DN(CWIPLOTCHG->CMF_7, CWIPLOTCHG_N->CMF_7, sizeof(CWIPLOTCHG->CMF_7));
+    MEMCPY_DN(CWIPLOTCHG->CMF_8, CWIPLOTCHG_N->CMF_8, sizeof(CWIPLOTCHG->CMF_8));
+    MEMCPY_DN(CWIPLOTCHG->CMF_9, CWIPLOTCHG_N->CMF_9, sizeof(CWIPLOTCHG->CMF_9));
+    MEMCPY_DN(CWIPLOTCHG->CMF_10, CWIPLOTCHG_N->CMF_10, sizeof(CWIPLOTCHG->CMF_10));
+    MEMCPY_DN(CWIPLOTCHG->CREATE_USER_ID, CWIPLOTCHG_N->CREATE_USER_ID, sizeof(CWIPLOTCHG->CREATE_USER_ID));
+    MEMCPY_DN(CWIPLOTCHG->CREATE_TIME, CWIPLOTCHG_N->CREATE_TIME, sizeof(CWIPLOTCHG->CREATE_TIME));
+    MEMCPY_DN(CWIPLOTCHG->UPDATE_USER_ID, CWIPLOTCHG_N->UPDATE_USER_ID, sizeof(CWIPLOTCHG->UPDATE_USER_ID));
+    MEMCPY_DN(CWIPLOTCHG->UPDATE_TIME, CWIPLOTCHG_N->UPDATE_TIME, sizeof(CWIPLOTCHG->UPDATE_TIME));
+}
+
+

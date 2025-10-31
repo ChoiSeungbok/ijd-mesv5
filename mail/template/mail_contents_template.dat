@@ -1,0 +1,26 @@
+        %%ALARM_DESC%% [ %%ALARM_ID%% ]
+============================================
+| Factory         | %%FACTORY%%
+| Alarm ID        | %%ALARM_ID%%
+| Alarm Type      | %%ALARM_TYPE%%
+| Alarm Level     | %%ALARM_LEVEL_FLAG%%
+| Tran Time       | %%TRAN_TIME%%
+| Alarm Subject   | %%ALARM_SUBJECT%%
+| Alarm Message   | %%ALARM_MSG%%
+| Alarm Comment 1 | %%ALARM_COMMENT_1%%
+| Alarm Comment 2 | %%ALARM_COMMENT_2%%
+| Alarm Comment 3 | %%ALARM_COMMENT_3%%
+| Alarm Comment 4 | %%ALARM_COMMENT_4%%
+| Alarm Comment 5 | %%ALARM_COMMENT_5%%
+| Lot ID          | %%LOT_ID%%
+| Lot Qty         | %%LOT_QTY%%
+| Res ID          | %%RES_ID%%
+| Up/Down Flag    | %%RES_UP_DOWN_FLAG%%
+| Primary Status  | %%RES_PRI_STS%%
+| Source ID 1     | %%SOURCE_ID_1%%
+| Source Desc 1   | %%SOURCE_DESC_1%%
+| Source ID 2     | %%SOURCE_ID_2%%
+| Source Desc 2   | %%SOURCE_DESC_2%%
+| Source ID 3     | %%SOURCE_ID_3%%
+| Source Desc 3   | %%SOURCE_DESC_3%%
+============================================

@@ -1,0 +1,26 @@
+/*
+**
+**  File Name    : MESplusV5-Table-Migration.sql
+**  Description  : MESplus V5 Release Script
+**
+**  DB Type      : Oracle
+**  DB Version   : Oracle 10g
+**
+**  Period       : 2009.08.17 ~ ****
+**  Release Date : ****
+**
+**  Copyright(C) MIRACOM,INC. All rights reserved.
+**
+*/
+DROP TABLE MQCMITMHIS CASCADE CONSTRAINT PURGE;
+
+DROP TABLE MQCMBATISP_OLD CASCADE CONSTRAINT PURGE;
+
+DROP TABLE MQCMITMISP_OLD CASCADE CONSTRAINT PURGE;
+
+DROP TABLE MQCMBATDFT_OLD CASCADE CONSTRAINT PURGE;
+
+DROP TABLE MQCMITMDFT_OLD CASCADE CONSTRAINT PURGE;
+
+DROP TABLE MSPCCHTDEF_OLD CASCADE CONSTRAINT PURGE;
+

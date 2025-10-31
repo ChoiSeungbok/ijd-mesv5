@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#003B62</color>
+    <color name="colorPrimaryDark">#0E569B</color>
+    <!--<color name="colorAccent">#FF6565</color>-->
+    <color name="colorAccent">#D56078</color>
+    <color name="colorAccentClick">#F49D97</color>
+    <color name="LineColorPrimary">#FFFFFF</color>
+    <color name="whiteClickBg">#cc007C7D</color>
+    <color name="bg_white">#ffffff</color>
+    <color name="base_bg">#FFFCED</color>
+</resources>

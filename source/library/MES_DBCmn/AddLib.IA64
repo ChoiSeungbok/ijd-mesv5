@@ -1,0 +1,19 @@
+echo "==============================================================================================="
+echo PROC Compile $1.pc
+proc PARSE=FULL $1.pc include="/oracle/app/11g/rac/rdbms/public" define="_ALM" define="_BOM" define="_EDC" define="_EIS" define="_FMB" define="_INV" define="_ORD" define="_POP" define="_QCM" define="_RAS" define="_RCP" define="_RMS" define="_RTD" define="_SPC" define="_TST" define="_WIP" define="_CRR" define="_TOOL"
+
+echo CC Compile
+cc -c -w +DD64 $1.c -I/oracle/app/11g/rac/precomp/public -I/oracle/app/11g/rac/rdbms/public -I/home/mesplus/V520/source/library/MES_DBCmn -D_ALM -D_BOM -D_EDC -D_EIS -D_FMB -D_INV -D_ORD -D_POP -D_QCM -D_RAS -D_RCP -D_RMS -D_RTD -D_SPC -D_TST -D_WIP -D_CRR -D_TOOL
+
+echo Insert to library            
+ar r libMES_DBCmn.a $1.o 
+
+echo Copy Head file
+cp $1.h ../../../inc/dbinc
+#cp DBC_common.h ../../../inc/dbinc
+
+echo Copy Library
+cp libMES_DBCmn.a ../../../lib
+rm -f $1.o $1.c $1.lis
+
+echo ""

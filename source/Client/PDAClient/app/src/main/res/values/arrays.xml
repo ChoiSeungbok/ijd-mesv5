@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="login_factory">
+        <item>IJDK1</item>
+    </string-array>
+
+    <string-array name="server">
+        <item>IJ</item>
+        <item>IJ TEST</item>
+        <item>TEST</item>
+    </string-array>
+
+    <string-array name="debug_server">
+        <item>IJ</item>
+        <item>IJ TEST</item>
+        <item>TEST</item>
+    </string-array>
+
+    <string-array name="main_menu_array">
+        <item>REGISTER PROCESS RESULT(START)</item>
+        <item>REGISTER PROCESS RESULT(END)</item>
+        <item>REGISTER LOSS</item>
+        <item>REGISTER NONE OPERATION</item>
+        <item>CONFIRM MOVE ORDER</item>
+        <item>BETWEEN STOCK MOVE MATERIAL</item>
+        <item>MERGE MATERIAL</item>
+        <item>HOLD MATERIAL</item>
+        <item>RELEASE MATERIAL</item>
+        <item>REGISTER MATERIAL ISSUE</item>
+        <item>MATERIAL RECEIVE</item>
+        <item>MATERIAL INV MANAGEMANT</item>
+        <item>ETC OUT INV</item>
+        <item>CONFIRM SHIP</item>
+        <!-- 조회성 -->
+        <item>VIEW LOT HISTORY</item>
+        <item>VIEW PO LIST</item>
+        <item>VIEW INV LIST BY OPER</item>
+        <item>VIEW INV LOT HISTORY</item>
+        <item>VIEW SHIP ORDER</item>
+        <!-- 추가등록 -->
+        <item>REGISTER SHIP</item>s
+        <item>REGISTER PROCESS RESULT(START)-CTM(Processing)</item>
+        <item>REGISTER PROCESS RESULT(END)-CTM(Processing)</item>
+        <item>WIP-SHP LOT RELATION CHECK</item>
+        <item>ETC OUT</item>
+        <item>REGIST MOVE ORDER</item>
+        <item>CONFIRM MOVE ORDER</item>
+    </string-array>
+
+    <string-array name="main_menu_array_en">
+        <item>REGISTER PROCESS RESULT(START)</item>
+        <item>REGISTER PROCESS RESULT(END)</item>
+        <item>REGISTER LOSS</item>
+        <item>REGISTER NONE OPERATION</item>
+        <item>CONFIRM MOVE ORDER</item>
+        <item>BETWEEN STOCK MOVE MATERIAL</item>
+        <item>MERGE MATERIAL</item>
+        <item>HOLD MATERIAL</item>
+        <item>RELEASE MATERIAL</item>
+        <item>REGISTER MATERIAL ISSUE</item>
+        <item>MATERIAL RECEIVE</item>
+        <item>MATERIAL INV MANAGEMANT</item>
+        <item>ETC OUT INV</item>
+        <item>CONFIRM SHIP</item>
+        <!-- 조회성 -->
+        <item>VIEW LOT HISTORY</item>
+        <item>VIEW PO LIST</item>
+        <item>VIEW INV LIST BY OPER</item>
+        <item>VIEW INV LOT HISTORY</item>
+        <item>VIEW SHIP ORDER</item>
+        <!-- 추가등록 -->
+        <item>REGISTER SHIP</item>
+        <item>REGISTER PROCESS RESULT(START)-CTM(Processing)</item>
+        <item>REGISTER PROCESS RESULT(END)-CTM(Processing)</item>
+        <item>WIP-SHP LOT RELATION CHECK</item>
+        <item>ETC OUT</item>
+        <item>REGIST MOVE ORDER</item>
+        <item>CONFIRM MOVE ORDER</item>
+    </string-array>
+
+    <string-array name="main_menu_id_array">
+        <item>CPDA2001</item> <!-- 0 공정실적등록(착공) : REGISTER PROCESS RESULT(START) -->
+        <item>CPDA2002</item> <!-- 1 공정실적등록(완공) : REGISTER PROCESS RESULT(END) -->
+        <item>CPDA2003</item> <!-- 2 불량등록 : REGISTER LOSS -->
+        <item>CPDA2004</item> <!-- 3 비가동등록 : REGISTER NONE OPERATION -->
+        <item>CPDA2005</item> <!-- 4 이동지시확정 : CONFIRM MOVE ORDER -->
+        <item>CPDA2006</item> <!-- 5 창고간자재이동 : BETWEEN STOCK MOVE MATERIAL -->
+        <item>CPDA2007</item> <!-- 6 자재병합 MERGE MATERIAL -->
+        <item>CPDA2008</item> <!-- 7 자재잠금 HOLD MATERIAL -->
+        <item>CPDA2009</item> <!-- 8 자재잠금해제 RELEASE MATERIAL -->
+        <item>CPDA2010</item> <!-- 9 자재불출등록 : REGISTER MATERIAL KITTING -->
+        <item>CPDA2011</item> <!-- 10 자재인수 : MATERIAL RECEIVE -->
+        <item>CPDA2012</item> <!-- 11 자재입고관리 : MATERIAL INV MANAGEMANT -->
+        <item>CPDA2013</item> <!-- 12 기타출고 : ETC OUT INV -->
+        <item>CPDA2014</item> <!-- 13 출하확정 : CONFIRM SHIP -->
+        <!-- 조회성 -->
+        <item>CPDA3001</item> <!-- 14 LOT 정보 조회 : VIEW LOT HISTORY -->
+        <item>CPDA3002</item> <!-- 15 구매 지시 조회 : VIEW PO LIST -->
+        <item>CPDA3003</item> <!-- 16 창고 별 자재 현황 : VIEW INV LIST BY OPER -->
+        <item>CPDA3004</item> <!-- 17 자재 LOT 조회 : VIEW INV LOT HISTORY -->
+        <item>CPDA3005</item> <!-- 18 출하 지시 조회 : VIEW SHIP ORDER -->
+        <!-- 추가등록 -->
+        <item>CPDA2015</item> <!-- 19 출하등록 : REGISTER SHIP -->
+        <item>CPDA2016</item> <!-- 20 공정실적등록(착공) : REGISTER PROCESS RESULT(START)-CTM(Processing) -->
+        <item>CPDA2017</item> <!-- 21 공정실적등록(완공) : REGISTER PROCESS RESULT(END)-CTM(Processing) -->
+        <item>CPDA3006</item> <!-- 22 공정-출하 LOT별 관게체크 : WIP-SHP LOT RELATION CHECK -->
+        <item>CPDA2018</item> <!-- 23 기타출고 : ETC OUT WIP -->
+        <item>CPDA2019</item> <!-- 24 자재 이동 등록 : REGIST MOVE ORDER -->
+        <item>CPDA2020</item> <!-- 24 자재 이동 확정 : CONFIRM MOVE ORDER -->
+    </string-array>
+
+    <string-array name="main_menu_group_array">
+    </string-array>
+
+    <string-array name="main_menu_in_management_menu_array">
+    </string-array>
+
+    <string-array name="main_menu_in_management_menu_id_array">
+    </string-array>
+
+    <string-array name="main_menu_move_management_menu_array">
+        <item>REGISTER PROCESS RESULT(START)</item>
+        <item>REGISTER PROCESS RESULT(END)</item>
+        <item>REGISTER LOSS</item>
+        <item>REGISTER NONE OPERATION</item>
+        <item>CONFIRM MOVE ORDER</item>
+        <item>BETWEEN STOCK MOVE MATERIAL</item>
+        <item>MERGE MATERIAL</item>
+        <item>HOLD MATERIAL</item>
+        <item>RELEASE MATERIAL</item>
+        <item>REGISTER MATERIAL ISSUE</item>
+        <item>MATERIAL RECEIVE</item>
+        <item>MATERIAL INV MANAGEMANT</item>
+        <item>ETC OUT INV</item>
+        <item>CONFIRM SHIP</item>
+        <!-- 조회성 -->
+        <item>VIEW LOT HISTORY</item>
+        <item>VIEW PO LIST</item>
+        <item>VIEW INV LIST BY OPER</item>
+        <item>VIEW INV LOT HISTORY</item>
+        <item>VIEW SHIP ORDER</item>
+        <!-- 추가등록 -->
+        <item>VIEW SHIP ORDER</item>
+        <item>REGISTER PROCESS RESULT(START)-CTM(Processing)</item>
+        <item>REGISTER PROCESS RESULT(END)-CTM(Processing)</item>
+        <item>WIP-SHP LOT RELATION CHECK</item>
+        <item>ETC OUT</item>
+        <item>REGIST MOVE ORDER</item>
+        <item>CONFIRM MOVE ORDER</item>
+    </string-array>
+
+    <string-array name="main_menu_move_management_menu_id_array">
+        <item>CPDA2006</item><!-- 창고간자재이동 : BETWEEN STOCK MOVE MATERIAL -->
+        <item>CPDA2010</item><!-- 자재 불출 등록 : REGISTER MATERIAL ISSUE -->
+        <item>CPDA2011</item><!-- 자재인수 : MATERIAL RECEIVE -->
+        <item>CPDA2012</item><!-- 자재입고관리 : MATERIAL INV MANAGEMANT -->
+    </string-array>
+
+    <string-array name="main_menu_out_management_menu_array">
+    </string-array>
+
+    <string-array name="main_menu_out_management_menu_id_array">
+    </string-array>
+
+    <string-array name="main_menu_inventory_management_menu_array">
+    </string-array>
+
+    <string-array name="main_menu_inventory_management_menu_id_array">
+    </string-array>
+
+    <string-array name="main_menu_inquire_menu_array">
+    </string-array>
+
+    <string-array name="main_menu_inquire_menu_id_array">
+    </string-array>
+
+    <string-array name="main_menu_lamination_menu_array">
+    </string-array>
+
+    <string-array name="main_menu_lamination_menu_id_array">
+    </string-array>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="main_menu_array">
+        <item>공정실적등록(착공)</item>
+        <item>공정실적등록(완공)</item>
+        <item>불량 등록</item>
+        <item>비가동 등록</item>
+        <item>이동지시확정</item>
+        <item>창고간자재이동</item>
+        <item>자재병합</item>
+        <item>자재잠금</item>
+        <item>자재잠금해제</item>
+        <item>자재불출등록</item>
+        <item>자재인수</item>
+        <item>자재입고관리</item>
+        <item>기타출고</item>
+        <item>출하확정</item>
+        <!-- 조회성 화면 -->
+        <item>LOT 정보 조회</item>
+        <item>구매 지시 조회</item>
+        <item>창고 별 자재 현황</item>
+        <item>자재 LOT 조회</item>
+        <item>출하 지시 조회</item>
+        <!-- 추가등록 화면 -->
+        <item>출하등록</item>
+        <item>공정실적등록(착공)-CTM(가공)</item>
+        <item>공정실적등록(완공)-CTM(가공)</item>
+        <item>공정-출하 LOT별 관계체크</item>
+        <item>기타출고</item>
+        <item>이동지시등록</item>
+        <item>이동지시확정</item>
+    </string-array>
+</resources>

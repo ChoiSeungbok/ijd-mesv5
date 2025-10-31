@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3C73EA3B-CCA6-4E6B-B0F3-F054BCE8EB4B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CUS_COM</RootNamespace>
+    <AssemblyName>CUS_COM</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.AcroPDFLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\AxInterop.AcroPDFLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v20.1.Core">
+      <HintPath>..\..\Components\DevExpress.Charts.v20.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v20.1">
+      <HintPath>..\..\Components\DevExpress.CodeParser.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v20.1">
+      <HintPath>..\..\Components\DevExpress.Data.Desktop.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v20.1">
+      <HintPath>..\..\Components\DevExpress.Data.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v20.1">
+      <HintPath>..\..\Components\DevExpress.DataAccess.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v20.1.Core">
+      <HintPath>..\..\Components\DevExpress.Office.v20.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v20.1.Core">
+      <HintPath>..\..\Components\DevExpress.Pdf.v20.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v20.1.Drawing">
+      <HintPath>..\..\Components\DevExpress.Pdf.v20.1.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v20.1.Core">
+      <HintPath>..\..\Components\DevExpress.PivotGrid.v20.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v11.2.Core">
+      <HintPath>..\..\Components\DevExpress.Printing.v11.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v20.1.Core">
+      <HintPath>..\..\Components\DevExpress.Printing.v20.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v20.1.Core">
+      <HintPath>..\..\Components\DevExpress.RichEdit.v20.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v20.1.Core">
+      <HintPath>..\..\Components\DevExpress.Sparkline.v20.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v20.1">
+      <HintPath>..\..\Components\DevExpress.Utils.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v20.1">
+      <HintPath>..\..\Components\DevExpress.Xpo.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v20.1">
+      <HintPath>..\..\Components\DevExpress.XtraBars.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v20.1">
+      <HintPath>..\..\Components\DevExpress.XtraCharts.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v20.1">
+      <HintPath>..\..\Components\DevExpress.XtraEditors.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v20.1.Core">
+      <HintPath>..\..\Components\DevExpress.XtraGauges.v20.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v20.1">
+      <HintPath>..\..\Components\DevExpress.XtraLayout.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v20.1">
+      <HintPath>..\..\Components\DevExpress.XtraPrinting.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v20.1">
+      <HintPath>..\..\Components\DevExpress.XtraReports.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v20.1">
+      <HintPath>..\..\Components\DevExpress.XtraTreeList.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Excel, Version=10.40.20174.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Localization, Version=10.40.20174.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.PDF, Version=10.40.20174.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win, Version=10.40.20174.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GrapeCity\Spread Studio 10\Windows Forms\v10.40.20174.0\bin\FarPoint.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win.Spread, Version=10.40.20174.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\GrapeCity\Spread Studio 10\Windows Forms\v10.40.20174.0\bin\FarPoint.Win.Spread.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.PluginInputMan, Version=10.40.20174.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Shared.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.Misc.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinSchedule.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinTabControl.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files\WindowsApps\Microsoft.Copilot_1.25074.146.0_x64__8wekyb3d8bbwe\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.BASCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.BASCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.CliFrx">
+      <HintPath>..\..\Components\Miracom.CliFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.DNMCore">
+      <HintPath>..\..\Components\Miracom.DNMCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.MESCore">
+      <HintPath>..\..\Components\Miracom.MESCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.MsgHandler, Version=5.3.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.MsgHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.POPCore">
+      <HintPath>..\..\Components\Miracom.POPCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.RASCore">
+      <HintPath>..\..\Components\Miracom.RASCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.TRSCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Components\Miracom.TRSCore.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Miracom.UI">
+      <HintPath>..\..\Components\Miracom.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="RawInput, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\RawInput.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForm\frmTranForm07.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmTranForm07.Designer.cs">
+      <DependentUpon>frmTranForm07.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmTranForm02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmTranForm02.Designer.cs">
+      <DependentUpon>frmTranForm02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmTranForm03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmTranForm03.Designer.cs">
+      <DependentUpon>frmTranForm03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmTranForm04.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmTranForm04.Designer.cs">
+      <DependentUpon>frmTranForm04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmTranForm05.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmTranForm05.Designer.cs">
+      <DependentUpon>frmTranForm05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmTranForm06.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmTranForm06.Designer.cs">
+      <DependentUpon>frmTranForm06.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmViewForm02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmViewForm02.Designer.cs">
+      <DependentUpon>frmViewForm02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmViewForm03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmViewForm03.Designer.cs">
+      <DependentUpon>frmViewForm03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clsServerConection.cs" />
+    <Compile Include="clsCusCodeWord.cs" />
+    <Compile Include="clsCusExportFile.cs" />
+    <Compile Include="clsViewWeb.cs" />
+    <Compile Include="Controls\udcScanTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\udcScanTextBox.Designer.cs">
+      <DependentUpon>udcScanTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\udcFactoryChange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\udcFactoryChange.Designer.cs">
+      <DependentUpon>udcFactoryChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\udcTextPackLotID.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\udcTextPackLotID.Designer.cs">
+      <DependentUpon>udcTextPackLotID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\udcTextLotID.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\udcTextLotID.Designer.cs">
+      <DependentUpon>udcTextLotID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmPopDeliveryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmPopDeliveryList.Designer.cs">
+      <DependentUpon>frmPopDeliveryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmPopMesVersionUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmPopMesVersionUp.Designer.cs">
+      <DependentUpon>frmPopMesVersionUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmPopGcmData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmPopGcmData.Designer.cs">
+      <DependentUpon>frmPopGcmData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmPopFtpUpDown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmPopFtpUpDown.Designer.cs">
+      <DependentUpon>frmPopFtpUpDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmPopNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmPopNotice.Designer.cs">
+      <DependentUpon>frmPopNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmPopPackLotList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmPopPackLotList.Designer.cs">
+      <DependentUpon>frmPopPackLotList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmPopLotList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmPopLotList.Designer.cs">
+      <DependentUpon>frmPopLotList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmPopMaterialList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmPopMaterialList.Designer.cs">
+      <DependentUpon>frmPopMaterialList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmPopCustomerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmPopCustomerList.Designer.cs">
+      <DependentUpon>frmPopCustomerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmPopVendorList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmPopVendorList.Designer.cs">
+      <DependentUpon>frmPopVendorList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmPopWorkOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmPopWorkOrderList.Designer.cs">
+      <DependentUpon>frmPopWorkOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmViewPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmViewPDF.Designer.cs">
+      <DependentUpon>frmViewPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BaseForm\frmControlSamples.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmControlSamples.Designer.cs">
+      <DependentUpon>frmControlSamples.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmKeyPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmKeyPad.Designer.cs">
+      <DependentUpon>frmKeyPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmTranForm01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmTranForm01.Designer.cs">
+      <DependentUpon>frmTranForm01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmViewForm01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmViewForm01.designer.cs">
+      <DependentUpon>frmViewForm01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clsCOMListRoutines.cs" />
+    <Compile Include="clsCUSCmnFunction.cs" />
+    <Compile Include="clsCUSGlobalConstant.cs" />
+    <Compile Include="clsCUSGlobalVariable.cs" />
+    <Compile Include="Controls\udcCodeReg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\udcCodeReg.Designer.cs">
+      <DependentUpon>udcCodeReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\udcTextBoxReg.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\udcTextBoxReg.Designer.cs">
+      <DependentUpon>udcTextBoxReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DevReport.cs" />
+    <Compile Include="Sample\frmViewSqlSample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\frmViewSqlSample.Designer.cs">
+      <DependentUpon>frmViewSqlSample.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Inquiry\" />
+    <Folder Include="Transaction\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseForm\frmControlSamples.resx">
+      <DependentUpon>frmControlSamples.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmKeyPad.resx">
+      <DependentUpon>frmKeyPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmTranForm07.resx">
+      <DependentUpon>frmTranForm07.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmTranForm01.resx">
+      <DependentUpon>frmTranForm01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmTranForm02.resx">
+      <DependentUpon>frmTranForm02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmTranForm03.resx">
+      <DependentUpon>frmTranForm03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmTranForm04.resx">
+      <DependentUpon>frmTranForm04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmTranForm05.resx">
+      <DependentUpon>frmTranForm05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmTranForm06.resx">
+      <DependentUpon>frmTranForm06.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmViewForm01.resx">
+      <DependentUpon>frmViewForm01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmViewForm02.resx">
+      <DependentUpon>frmViewForm02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmViewForm03.resx">
+      <DependentUpon>frmViewForm03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\udcCodeReg.resx">
+      <DependentUpon>udcCodeReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\udcScanTextBox.resx">
+      <DependentUpon>udcScanTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\udcTextBoxReg.resx">
+      <DependentUpon>udcTextBoxReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\udcFactoryChange.resx">
+      <DependentUpon>udcFactoryChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\udcTextPackLotID.resx">
+      <DependentUpon>udcTextPackLotID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\udcTextLotID.resx">
+      <DependentUpon>udcTextLotID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmPopDeliveryList.resx">
+      <DependentUpon>frmPopDeliveryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmPopMesVersionUp.resx">
+      <DependentUpon>frmPopMesVersionUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmPopGcmData.resx">
+      <DependentUpon>frmPopGcmData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmPopFtpUpDown.resx">
+      <DependentUpon>frmPopFtpUpDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmPopNotice.resx">
+      <DependentUpon>frmPopNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmPopPackLotList.resx">
+      <DependentUpon>frmPopPackLotList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmPopLotList.resx">
+      <DependentUpon>frmPopLotList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmPopMaterialList.resx">
+      <DependentUpon>frmPopMaterialList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmPopCustomerList.resx">
+      <DependentUpon>frmPopCustomerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmPopVendorList.resx">
+      <DependentUpon>frmPopVendorList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmPopWorkOrderList.resx">
+      <DependentUpon>frmPopWorkOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmViewPDF.resx">
+      <DependentUpon>frmViewPDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Sample\frmViewSqlSample.resx">
+      <DependentUpon>frmViewSqlSample.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reports\840sample.repx" />
+    <None Include="Reports\kittingLabel.repx" />
+    <None Include="Reports\mdprd860phmap.repx" />
+    <None Include="Reports\mdprd860phmbp.repx" />
+    <None Include="Reports\mip130p.repx" />
+    <None Include="Reports\move_order.repx" />
+    <None Include="Reports\move_order_1.repx" />
+    <None Include="Reports\move_order_multi.repx" />
+    <None Include="Reports\move_sub.repx" />
+    <None Include="Reports\mtl100p.repx" />
+    <None Include="Reports\mtl100pa.repx" />
+    <None Include="Reports\mtl215p_8.repx" />
+    <None Include="Reports\mtl900hm3p.repx" />
+    <None Include="Reports\mtl900hm3_1p.repx" />
+    <None Include="Reports\mtl900hm5p.repx" />
+    <None Include="Reports\mtl900hm6p.repx" />
+    <None Include="Reports\mtl900hm9p.repx" />
+    <None Include="Reports\pip501p.repx" />
+    <None Include="Reports\pip502p.repx" />
+    <None Include="Reports\pip503p.repx" />
+    <None Include="Reports\pip504p.repx" />
+    <None Include="Reports\pip505p.repx" />
+    <None Include="Reports\pip506p.repx" />
+    <None Include="Reports\pip508p.repx" />
+    <None Include="Reports\pip509p.repx" />
+    <None Include="Reports\pip510p.repx" />
+    <None Include="Reports\pip511p.repx" />
+    <None Include="Reports\pip512p.repx" />
+    <None Include="Reports\pip513p.repx" />
+    <None Include="Reports\pip520pa.repx" />
+    <None Include="Reports\pip525p.repx" />
+    <None Include="Reports\pip525p_2.repx" />
+    <None Include="Reports\pip525p_4.repx" />
+    <None Include="Reports\pip525p_5.repx" />
+    <None Include="Reports\pip525p_8.repx" />
+    <None Include="Reports\pip525p_9.repx" />
+    <None Include="Reports\pip550p_1.repx" />
+    <None Include="Reports\pip550p_2.repx" />
+    <None Include="Reports\prd106p.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\prd106vp.repx" />
+    <None Include="Reports\prd106vpitem.repx" />
+    <None Include="Reports\prd205p.repx" />
+    <None Include="Reports\prd205ppdc.repx" />
+    <None Include="Reports\prd702q.repx" />
+    <None Include="Reports\prd702q_1.repx" />
+    <None Include="Reports\prd840grtp2_DM.repx" />
+    <None Include="Reports\prd840grtp3.repx" />
+    <None Include="Reports\prd840grtp5.repx" />
+    <None Include="Reports\prd996t.repx" />
+    <None Include="Reports\sal450q.repx" />
+    <None Include="Reports\t_card.repx" />
+    <None Include="Reports\t_card_b.repx" />
+    <None Include="Reports\t_card_multi.repx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

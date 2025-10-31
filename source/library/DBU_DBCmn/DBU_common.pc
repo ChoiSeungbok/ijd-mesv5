@@ -1,0 +1,336 @@
+/*******************************************************************************
+
+    System      : MESplus
+    Module      : DBCore
+    File Name   : DBC_common.pc
+    Description : DB Common Functions related module
+	 
+    MES Version : 4.0.0
+
+
+    Detail Description
+        - 
+
+    History
+    Seq   Date        Developer      Description                        
+    ---------------------------------------------------------------------------
+    1     2004/11/20  R&D            Create
+
+    Copyright(C) 1998-2004 Miracom,Inc.
+    All rights reserved.
+
+*******************************************************************************/
+/* SQL Common Header File */
+#include "DBU_common.h"
+
+EXEC SQL BEGIN DECLARE SECTION;
+    EXEC SQL INCLUDE DBU_Q_COND_N;
+EXEC SQL END DECLARE SECTION;
+
+EXEC SQL BEGIN DECLARE SECTION;
+
+    struct DBU_Q_COND_TAG DBU_Q_COND;
+    struct DBU_Q_COND_N_TAG DBU_Q_COND_N;
+
+EXEC SQL END DECLARE SECTION;
+
+/* SQL Error Handling */
+EXEC SQL WHENEVER SQLERROR DO DB_usr_error();
+EXEC SQL WHENEVER NOT FOUND DO DB_usr_error();
+
+ 
+void DBU_get_date(int iValue, char *sDate)
+{
+    EXEC SQL BEGIN DECLARE SECTION;
+        char s_date[9];
+        int iDate;
+    EXEC SQL END DECLARE SECTION;
+
+    iDate = iValue;
+
+    EXEC SQL SELECT TO_CHAR(SYSDATE + :iDate, 'YYYYMMDD') INTO :s_date FROM DUAL;
+
+    memcpy(sDate, s_date, 8);
+}
+
+
+
+/*******************************************************************************
+    DB_exec_procedure()
+        - Execute DB Procedure
+    Return Value
+        - int : 1 (blank)/ 0 (not blank)
+    Arguments
+        - 
+*******************************************************************************/
+void DB_exec_procedure(int sel_type, double group_no, char *erp_status, char *s_msg)
+{
+    EXEC SQL BEGIN DECLARE SECTION;
+        char i_ret;
+		int i_sel_type = 0;
+		double d_group_no = 0;
+		char c_erp_status[31];
+		char c_s_msg[2001];
+    EXEC SQL END DECLARE SECTION;
+
+    
+    memset(c_erp_status, 0x00, sizeof(c_erp_status));
+    memset(c_s_msg, 0x00, sizeof(c_s_msg));
+
+    DB_error_code = 0;
+	i_sel_type = sel_type;
+	d_group_no = group_no;
+	
+	/* Oracle API Function Call */
+    switch(sel_type)
+    {	
+		/* PO Inventory In I/F API */
+        case 1:			
+			break;		
+
+		default:
+        DB_error_code = 9999;
+        memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+        memcpy(DB_error_msg, "Error : Invalid Argument(sel_type)", 34);
+        break;
+    }
+    
+    
+    memset(erp_status, 0x00, sizeof(c_erp_status));
+	memcpy(erp_status, c_erp_status, sizeof(c_erp_status));
+
+	memset(s_msg, 0x00, sizeof(s_msg));
+	memcpy(s_msg, c_s_msg, sizeof(c_s_msg));
+
+}
+/*******************************************************************************
+    DB_exec_procedure_dllh()
+        - Execute DB Procedure DLLH 
+    Return Value
+        - int : 1 (blank)/ 0 (not blank)
+    Arguments
+        - 
+*******************************************************************************/
+void DB_exec_procedure_dllh(int sel_type, double if_seq_no, char *erp_status, char *s_msg)
+{
+    EXEC SQL BEGIN DECLARE SECTION;
+        char i_ret;
+		int i_sel_type = 0;
+		double d_if_seq_no = 0;
+		char c_erp_status[31];
+		char c_s_msg[2001];
+    EXEC SQL END DECLARE SECTION;
+
+    
+    memset(c_erp_status, 0x00, sizeof(c_erp_status));
+    memset(c_s_msg, 0x00, sizeof(c_s_msg));
+
+    DB_error_code = 0;
+	i_sel_type = sel_type;
+	d_if_seq_no = if_seq_no;
+	
+	/* Oracle API Function Call */
+    switch(sel_type)
+    {	
+		/* WIP_END DLLH In I/F API */
+        case 1:			
+			break;
+		
+
+		default:
+        DB_error_code = 9999;
+        memset(DB_error_msg, ' ', sizeof(DB_error_msg));
+        memcpy(DB_error_msg, "Error : Invalid Argument(sel_type)", 34);
+        break;
+    }
+    
+    
+    memset(erp_status, 0x00, sizeof(c_erp_status));
+	memcpy(erp_status, c_erp_status, sizeof(c_erp_status));
+
+	memset(s_msg, 0x00, sizeof(s_msg));
+	memcpy(s_msg, c_s_msg, sizeof(c_s_msg));
+
+}
+
+/*******************************************************************************
+    DBU_init_condition()
+        - Initialize Condition Struct Function
+    Return Value
+        - void
+    Arguments
+        - struct DBU_Q_COND_TAG *DBU_Q_COND
+*******************************************************************************/
+void DBU_init_condition(struct DBU_Q_COND_TAG *DBU_Q_COND)
+{
+    /* memset by Space */
+    memset(DBU_Q_COND, ' ', sizeof(struct DBU_Q_COND_TAG));
+    DBU_Q_COND->FROM_SEQ = 0;
+    DBU_Q_COND->TO_SEQ = 0;
+    DBU_Q_COND->PRIO_LEVEL = 0;
+
+    DBU_Q_COND->NUM_1 = 0;
+    DBU_Q_COND->NUM_2 = 0;
+    DBU_Q_COND->NUM_3 = 0;
+    DBU_Q_COND->NUM_4 = 0;
+    DBU_Q_COND->NUM_5 = 0;
+    DBU_Q_COND->NUM_6 = 0;
+    DBU_Q_COND->NUM_7 = 0;
+    DBU_Q_COND->NUM_8 = 0;
+    DBU_Q_COND->NUM_9 = 0;
+    DBU_Q_COND->NUM_10 = 0;
+    DBU_Q_COND->NUM_11 = 0;
+    DBU_Q_COND->NUM_12 = 0;
+    DBU_Q_COND->NUM_13 = 0;
+    DBU_Q_COND->NUM_14 = 0;
+    DBU_Q_COND->NUM_15 = 0;
+}
+
+/*******************************************************************************
+    DBU_add_null_condition()
+        - Add Null Condition Struct Function
+    Return Value
+        - void
+    Arguments
+        - struct DBU_Q_COND_N_TAG *DBU_Q_COND_N
+*******************************************************************************/
+void DBU_add_null_condition(struct DBU_Q_COND_TAG *DBU_Q_COND, struct DBU_Q_COND_N_TAG *DBU_Q_COND_N)
+{
+    /* memset by Space */
+    memset(DBU_Q_COND_N, '\0', sizeof(struct DBU_Q_COND_N_TAG));
+
+    MEMCPY_AN(DBU_Q_COND_N->FROM_DATE, DBU_Q_COND->FROM_DATE, sizeof(DBU_Q_COND->FROM_DATE));
+    MEMCPY_AN(DBU_Q_COND_N->TO_DATE, DBU_Q_COND->TO_DATE, sizeof(DBU_Q_COND->TO_DATE));
+    MEMCPY_AN(DBU_Q_COND_N->FROM_TIME, DBU_Q_COND->FROM_TIME, sizeof(DBU_Q_COND->FROM_TIME));
+    MEMCPY_AN(DBU_Q_COND_N->TO_TIME, DBU_Q_COND->TO_TIME, sizeof(DBU_Q_COND->TO_TIME));
+    MEMCPY_AN(DBU_Q_COND_N->MAT_TYPE, DBU_Q_COND->MAT_TYPE, sizeof(DBU_Q_COND->MAT_TYPE));
+    MEMCPY_AN(DBU_Q_COND_N->MAT_GRP, DBU_Q_COND->MAT_GRP, sizeof(DBU_Q_COND->MAT_GRP));
+    MEMCPY_AN(DBU_Q_COND_N->RES_ID, DBU_Q_COND->RES_ID, sizeof(DBU_Q_COND->RES_ID));
+    MEMCPY_AN(DBU_Q_COND_N->OPER, DBU_Q_COND->OPER, sizeof(DBU_Q_COND->OPER));
+    MEMCPY_AN(DBU_Q_COND_N->SPC_SUMMARY_KEY, DBU_Q_COND->SPC_SUMMARY_KEY, sizeof(DBU_Q_COND->SPC_SUMMARY_KEY));
+    DBU_Q_COND_N->FROM_SEQ = DBU_Q_COND->FROM_SEQ;
+    DBU_Q_COND_N->TO_SEQ = DBU_Q_COND->TO_SEQ;
+    DBU_Q_COND_N->PRIO_LEVEL = DBU_Q_COND->PRIO_LEVEL;
+    MEMCPY_AN(DBU_Q_COND_N->PRIO_KEY, DBU_Q_COND->PRIO_KEY, sizeof(DBU_Q_COND->PRIO_KEY));
+    MEMCPY_AN(DBU_Q_COND_N->ERR_MSG, DBU_Q_COND->ERR_MSG, sizeof(DBU_Q_COND->ERR_MSG));
+
+    MEMCPY_AN(DBU_Q_COND_N->KEY_1, DBU_Q_COND->KEY_1, sizeof(DBU_Q_COND->KEY_1));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_2, DBU_Q_COND->KEY_2, sizeof(DBU_Q_COND->KEY_2));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_3, DBU_Q_COND->KEY_3, sizeof(DBU_Q_COND->KEY_3));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_4, DBU_Q_COND->KEY_4, sizeof(DBU_Q_COND->KEY_4));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_5, DBU_Q_COND->KEY_5, sizeof(DBU_Q_COND->KEY_5));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_6, DBU_Q_COND->KEY_6, sizeof(DBU_Q_COND->KEY_6));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_7, DBU_Q_COND->KEY_7, sizeof(DBU_Q_COND->KEY_7));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_8, DBU_Q_COND->KEY_8, sizeof(DBU_Q_COND->KEY_8));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_9, DBU_Q_COND->KEY_9, sizeof(DBU_Q_COND->KEY_9));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_10, DBU_Q_COND->KEY_10, sizeof(DBU_Q_COND->KEY_10));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_11, DBU_Q_COND->KEY_11, sizeof(DBU_Q_COND->KEY_11));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_12, DBU_Q_COND->KEY_12, sizeof(DBU_Q_COND->KEY_12));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_13, DBU_Q_COND->KEY_13, sizeof(DBU_Q_COND->KEY_13));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_14, DBU_Q_COND->KEY_14, sizeof(DBU_Q_COND->KEY_14));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_15, DBU_Q_COND->KEY_15, sizeof(DBU_Q_COND->KEY_15));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_16, DBU_Q_COND->KEY_16, sizeof(DBU_Q_COND->KEY_16));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_17, DBU_Q_COND->KEY_17, sizeof(DBU_Q_COND->KEY_17));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_18, DBU_Q_COND->KEY_18, sizeof(DBU_Q_COND->KEY_18));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_19, DBU_Q_COND->KEY_19, sizeof(DBU_Q_COND->KEY_19));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_20, DBU_Q_COND->KEY_20, sizeof(DBU_Q_COND->KEY_20));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_21, DBU_Q_COND->KEY_21, sizeof(DBU_Q_COND->KEY_21));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_22, DBU_Q_COND->KEY_22, sizeof(DBU_Q_COND->KEY_22));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_23, DBU_Q_COND->KEY_23, sizeof(DBU_Q_COND->KEY_23));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_24, DBU_Q_COND->KEY_24, sizeof(DBU_Q_COND->KEY_24));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_25, DBU_Q_COND->KEY_25, sizeof(DBU_Q_COND->KEY_25));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_26, DBU_Q_COND->KEY_26, sizeof(DBU_Q_COND->KEY_26));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_27, DBU_Q_COND->KEY_27, sizeof(DBU_Q_COND->KEY_27));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_28, DBU_Q_COND->KEY_28, sizeof(DBU_Q_COND->KEY_28));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_29, DBU_Q_COND->KEY_29, sizeof(DBU_Q_COND->KEY_29));
+    MEMCPY_AN(DBU_Q_COND_N->KEY_30, DBU_Q_COND->KEY_30, sizeof(DBU_Q_COND->KEY_30));
+
+    DBU_Q_COND_N->NUM_1 = DBU_Q_COND->NUM_1;
+    DBU_Q_COND_N->NUM_2 = DBU_Q_COND->NUM_2;
+    DBU_Q_COND_N->NUM_3 = DBU_Q_COND->NUM_3;
+    DBU_Q_COND_N->NUM_4 = DBU_Q_COND->NUM_4;
+    DBU_Q_COND_N->NUM_5 = DBU_Q_COND->NUM_5;
+    DBU_Q_COND_N->NUM_6 = DBU_Q_COND->NUM_6;
+    DBU_Q_COND_N->NUM_7 = DBU_Q_COND->NUM_7;
+    DBU_Q_COND_N->NUM_8 = DBU_Q_COND->NUM_8;
+    DBU_Q_COND_N->NUM_9 = DBU_Q_COND->NUM_9;
+    DBU_Q_COND_N->NUM_10 = DBU_Q_COND->NUM_10;
+    DBU_Q_COND_N->NUM_11 = DBU_Q_COND->NUM_11;
+    DBU_Q_COND_N->NUM_12 = DBU_Q_COND->NUM_12;
+    DBU_Q_COND_N->NUM_13 = DBU_Q_COND->NUM_13;
+    DBU_Q_COND_N->NUM_14 = DBU_Q_COND->NUM_14;
+    DBU_Q_COND_N->NUM_15 = DBU_Q_COND->NUM_15;
+}
+
+/*******************************************************************************
+    DBU_del_null_condition()
+        - Delete Null Condition Struct Function
+    Return Value
+        - void
+    Arguments
+        - struct DBU_Q_COND_N_TAG *DBU_Q_COND_N
+*******************************************************************************/
+void DBU_del_null_condition(struct DBU_Q_COND_TAG *DBU_Q_COND, struct DBU_Q_COND_N_TAG *DBU_Q_COND_N)
+{
+    MEMCPY_DN(DBU_Q_COND->FROM_DATE, DBU_Q_COND_N->FROM_DATE, sizeof(DBU_Q_COND->FROM_DATE));
+    MEMCPY_DN(DBU_Q_COND->TO_DATE, DBU_Q_COND_N->TO_DATE, sizeof(DBU_Q_COND->TO_DATE));
+    MEMCPY_DN(DBU_Q_COND->FROM_TIME, DBU_Q_COND_N->FROM_TIME, sizeof(DBU_Q_COND->FROM_TIME));
+    MEMCPY_DN(DBU_Q_COND->TO_TIME, DBU_Q_COND_N->TO_TIME, sizeof(DBU_Q_COND->TO_TIME));
+    MEMCPY_DN(DBU_Q_COND->MAT_TYPE, DBU_Q_COND_N->MAT_TYPE, sizeof(DBU_Q_COND->MAT_TYPE));
+    MEMCPY_DN(DBU_Q_COND->MAT_GRP, DBU_Q_COND_N->MAT_GRP, sizeof(DBU_Q_COND->MAT_GRP));
+    MEMCPY_DN(DBU_Q_COND->RES_ID, DBU_Q_COND_N->RES_ID, sizeof(DBU_Q_COND->RES_ID));
+    MEMCPY_DN(DBU_Q_COND->OPER, DBU_Q_COND_N->OPER, sizeof(DBU_Q_COND->OPER));
+    MEMCPY_DN(DBU_Q_COND->SPC_SUMMARY_KEY, DBU_Q_COND_N->SPC_SUMMARY_KEY, sizeof(DBU_Q_COND->SPC_SUMMARY_KEY));
+    DBU_Q_COND->FROM_SEQ = DBU_Q_COND_N->FROM_SEQ;
+    DBU_Q_COND->TO_SEQ = DBU_Q_COND_N->TO_SEQ;
+    DBU_Q_COND->PRIO_LEVEL = DBU_Q_COND_N->PRIO_LEVEL;
+    MEMCPY_DN(DBU_Q_COND->PRIO_KEY, DBU_Q_COND_N->PRIO_KEY, sizeof(DBU_Q_COND->PRIO_KEY));
+    MEMCPY_DN(DBU_Q_COND->ERR_MSG, DBU_Q_COND_N->ERR_MSG, sizeof(DBU_Q_COND->ERR_MSG));
+
+    MEMCPY_DN(DBU_Q_COND->KEY_1, DBU_Q_COND_N->KEY_1, sizeof(DBU_Q_COND->KEY_1));
+    MEMCPY_DN(DBU_Q_COND->KEY_2, DBU_Q_COND_N->KEY_2, sizeof(DBU_Q_COND->KEY_2));
+    MEMCPY_DN(DBU_Q_COND->KEY_3, DBU_Q_COND_N->KEY_3, sizeof(DBU_Q_COND->KEY_3));
+    MEMCPY_DN(DBU_Q_COND->KEY_4, DBU_Q_COND_N->KEY_4, sizeof(DBU_Q_COND->KEY_4));
+    MEMCPY_DN(DBU_Q_COND->KEY_5, DBU_Q_COND_N->KEY_5, sizeof(DBU_Q_COND->KEY_5));
+    MEMCPY_DN(DBU_Q_COND->KEY_6, DBU_Q_COND_N->KEY_6, sizeof(DBU_Q_COND->KEY_6));
+    MEMCPY_DN(DBU_Q_COND->KEY_7, DBU_Q_COND_N->KEY_7, sizeof(DBU_Q_COND->KEY_7));
+    MEMCPY_DN(DBU_Q_COND->KEY_8, DBU_Q_COND_N->KEY_8, sizeof(DBU_Q_COND->KEY_8));
+    MEMCPY_DN(DBU_Q_COND->KEY_9, DBU_Q_COND_N->KEY_9, sizeof(DBU_Q_COND->KEY_9));
+    MEMCPY_DN(DBU_Q_COND->KEY_10, DBU_Q_COND_N->KEY_10, sizeof(DBU_Q_COND->KEY_10));
+    MEMCPY_DN(DBU_Q_COND->KEY_11, DBU_Q_COND_N->KEY_11, sizeof(DBU_Q_COND->KEY_11));
+    MEMCPY_DN(DBU_Q_COND->KEY_12, DBU_Q_COND_N->KEY_12, sizeof(DBU_Q_COND->KEY_12));
+    MEMCPY_DN(DBU_Q_COND->KEY_13, DBU_Q_COND_N->KEY_13, sizeof(DBU_Q_COND->KEY_13));
+    MEMCPY_DN(DBU_Q_COND->KEY_14, DBU_Q_COND_N->KEY_14, sizeof(DBU_Q_COND->KEY_14));
+    MEMCPY_DN(DBU_Q_COND->KEY_15, DBU_Q_COND_N->KEY_15, sizeof(DBU_Q_COND->KEY_15));
+    MEMCPY_DN(DBU_Q_COND->KEY_16, DBU_Q_COND_N->KEY_16, sizeof(DBU_Q_COND->KEY_16));
+    MEMCPY_DN(DBU_Q_COND->KEY_17, DBU_Q_COND_N->KEY_17, sizeof(DBU_Q_COND->KEY_17));
+    MEMCPY_DN(DBU_Q_COND->KEY_18, DBU_Q_COND_N->KEY_18, sizeof(DBU_Q_COND->KEY_18));
+    MEMCPY_DN(DBU_Q_COND->KEY_19, DBU_Q_COND_N->KEY_19, sizeof(DBU_Q_COND->KEY_19));
+    MEMCPY_DN(DBU_Q_COND->KEY_20, DBU_Q_COND_N->KEY_20, sizeof(DBU_Q_COND->KEY_20));
+    MEMCPY_DN(DBU_Q_COND->KEY_21, DBU_Q_COND_N->KEY_11, sizeof(DBU_Q_COND->KEY_21));
+    MEMCPY_DN(DBU_Q_COND->KEY_22, DBU_Q_COND_N->KEY_22, sizeof(DBU_Q_COND->KEY_22));
+    MEMCPY_DN(DBU_Q_COND->KEY_23, DBU_Q_COND_N->KEY_23, sizeof(DBU_Q_COND->KEY_23));
+    MEMCPY_DN(DBU_Q_COND->KEY_24, DBU_Q_COND_N->KEY_24, sizeof(DBU_Q_COND->KEY_24));
+    MEMCPY_DN(DBU_Q_COND->KEY_25, DBU_Q_COND_N->KEY_25, sizeof(DBU_Q_COND->KEY_25));
+    MEMCPY_DN(DBU_Q_COND->KEY_26, DBU_Q_COND_N->KEY_26, sizeof(DBU_Q_COND->KEY_26));
+    MEMCPY_DN(DBU_Q_COND->KEY_27, DBU_Q_COND_N->KEY_27, sizeof(DBU_Q_COND->KEY_27));
+    MEMCPY_DN(DBU_Q_COND->KEY_28, DBU_Q_COND_N->KEY_28, sizeof(DBU_Q_COND->KEY_28));
+    MEMCPY_DN(DBU_Q_COND->KEY_29, DBU_Q_COND_N->KEY_29, sizeof(DBU_Q_COND->KEY_29));
+    MEMCPY_DN(DBU_Q_COND->KEY_30, DBU_Q_COND_N->KEY_30, sizeof(DBU_Q_COND->KEY_30));
+
+    DBU_Q_COND->NUM_1 = DBU_Q_COND_N->NUM_1;
+    DBU_Q_COND->NUM_2 = DBU_Q_COND_N->NUM_2;
+    DBU_Q_COND->NUM_3 = DBU_Q_COND_N->NUM_3;
+    DBU_Q_COND->NUM_4 = DBU_Q_COND_N->NUM_4;
+    DBU_Q_COND->NUM_5 = DBU_Q_COND_N->NUM_5;
+    DBU_Q_COND->NUM_6 = DBU_Q_COND_N->NUM_6;
+    DBU_Q_COND->NUM_7 = DBU_Q_COND_N->NUM_7;
+    DBU_Q_COND->NUM_8 = DBU_Q_COND_N->NUM_8;
+    DBU_Q_COND->NUM_9 = DBU_Q_COND_N->NUM_9;
+    DBU_Q_COND->NUM_10 = DBU_Q_COND_N->NUM_10;
+    DBU_Q_COND->NUM_11 = DBU_Q_COND_N->NUM_11;
+    DBU_Q_COND->NUM_12 = DBU_Q_COND_N->NUM_12;
+    DBU_Q_COND->NUM_13 = DBU_Q_COND_N->NUM_13;
+    DBU_Q_COND->NUM_14 = DBU_Q_COND_N->NUM_14;
+    DBU_Q_COND->NUM_15 = DBU_Q_COND_N->NUM_15;
+}

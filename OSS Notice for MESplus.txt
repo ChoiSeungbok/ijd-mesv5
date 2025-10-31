@@ -1,0 +1,204 @@
+dkspqThis application is Copyright © 2015, Miracom Inc Corporation. All Rights Reserved.
+
+This application use Open Source Software (OSS). You can find the source code of these open source projects, along with applicable license information, below. We are deeply grateful to these developers for their work and contributions.
+
+Any questions about our use of licensed work can visit to http://miracomglobal.com/ or http://miracom.co.kr/
+
+
+##### MES Server #####
+
+    Expat XML Parser
+    http://expat.sourceforge.net//
+    Copyright (c) 1998, 1999, 2000 Thai Open Source Software Center Ltd.
+    Expat is freely available with source under a very liberal license (the MIT license).
+
+    --- begin of LICENSE ---
+
+    Copyright (c) 1998, 1999, 2000 Thai Open Source Software Center Ltd
+                                   and Clark Cooper
+    Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006 Expat maintainers.
+
+    Permission is hereby granted, free of charge, to any person obtaining
+    a copy of this software and associated documentation files (the
+    "Software"), to deal in the Software without restriction, including
+    without limitation the rights to use, copy, modify, merge, publish,
+    distribute, sublicense, and/or sell copies of the Software, and to
+    permit persons to whom the Software is furnished to do so, subject to
+    the following conditions:
+
+    The above copyright notice and this permission notice shall be included
+    in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+    CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+    SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+    --- end of LICENSE ---
+
+
+
+
+    Base64 encoding/decoding (RFC1341) of hostapd
+    http://w1.fi/wpa_supplicant/
+    Copyright (c) 2005, Jouni Malinen <j@w1.fi>
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License version 2 as
+    published by the Free Software Foundation.
+
+    Alternatively, this software may be distributed under the terms of BSD
+    license.
+
+    --- begin of LICENSE ---
+
+    License
+    -------
+
+    This software may be distributed, used, and modified under the terms of
+    BSD license:
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are
+    met:
+
+    1. Redistributions of source code must retain the above copyright
+       notice, this list of conditions and the following disclaimer.
+
+    2. Redistributions in binary form must reproduce the above copyright
+       notice, this list of conditions and the following disclaimer in the
+       documentation and/or other materials provided with the distribution.
+
+    3. Neither the name(s) of the above-listed copyright holder(s) nor the
+       names of its contributors may be used to endorse or promote products
+       derived from this software without specific prior written permission.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+    "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+    LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+    A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+    OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+    SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+    LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+    DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+    THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+    --- end of LICENSE ---
+
+
+
+
+    MessageBoxTimeout API
+    http://www.codeproject.com/Articles/7914/MessageBoxTimeout-API
+    This article, along with any associated source code and files, is licensed under The Code Project Open License (CPOL)
+
+    --- begin of LICENSE ---
+    Preamble
+    This License governs Your use of the Work. This License is intended to allow developers to use the Source Code and Executable Files provided as part of the Work in any application in any form.
+
+    The main points subject to the terms of the License are:
+
+    Source Code and Executable Files can be used in commercial applications;
+    Source Code and Executable Files can be redistributed; and
+    Source Code can be modified to create derivative works.
+    No claim of suitability, guarantee, or any warranty whatsoever is provided. The software is provided "as-is".
+    The Article(s) accompanying the Work may not be distributed or republished without the Author's consent
+    This License is entered between You, the individual or other entity reading or otherwise making use of the Work licensed pursuant to this License and the individual or other entity which offers the Work under the terms of this License ("Author").
+
+
+    THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CODE PROJECT OPEN LICENSE ("LICENSE"). THE WORK IS PROTECTED BY COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS AUTHORIZED UNDER THIS LICENSE OR COPYRIGHT LAW IS PROHIBITED.
+
+    BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HEREIN, YOU ACCEPT AND AGREE TO BE BOUND BY THE TERMS OF THIS LICENSE. THE AUTHOR GRANTS YOU THE RIGHTS CONTAINED HEREIN IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND CONDITIONS. IF YOU DO NOT AGREE TO ACCEPT AND BE BOUND BY THE TERMS OF THIS LICENSE, YOU CANNOT MAKE ANY USE OF THE WORK.
+
+    --- end of LICENSE ---
+
+
+
+##### MES Client #####
+
+    SharpZipLib
+    https://icsharpcode.github.io/SharpZipLib/
+    #ziplib is a Zip, GZip, Tar and BZip2 library written entirely in C# for the .NET platform.
+
+    --- begin of LICENSE ---
+
+    License
+    The library is released under the GPL with the following exception:
+    Linking this library statically or dynamically with other modules is making a combined work based on this library. Thus, the terms and conditions of the GNU General Public License cover the whole combination.
+    As a special exception, the copyright holders of this library give you permission to link this library with independent modules to produce an executable, regardless of the license terms of these independent modules, and to copy and distribute the resulting executable under terms of your choice, provided that you also meet, for each linked independent module, the terms and conditions of the license of that module. An independent module is a module which is not derived from or based on this library. If you modify this library, you may extend this exception to your version of the library, but you are not obligated to do so. If you do not wish to do so, delete this exception statement from your version.
+    Note The exception is changed to reflect the latest GNU Classpath exception. Older versions of #ziplib did have another exception, but the new one is clearer and it doesn't break compatibility with the old one.
+    Bottom line In plain English this means you can use this library in commercial closed-source applications.
+
+    --- end of LICENSE ---
+
+
+
+    Simple FTP demo application using C#.Net 2.0
+    http://www.codeproject.com/Articles/17202/Simple-FTP-demo-application-using-C-Net
+    This article has no explicit license attached to it but may contain usage terms in the article text or the download files themselves. If in doubt please contact the author via the discussion board below.
+
+    A list of licenses authors might use can be found here(http://www.codeproject.com/info/Licenses.aspx)
+
+    --- begin of LICENSE ---
+    Preamble
+    This License governs Your use of the Work. This License is intended to allow developers to use the Source Code and Executable Files provided as part of the Work in any application in any form.
+
+    The main points subject to the terms of the License are:
+
+    Source Code and Executable Files can be used in commercial applications;
+    Source Code and Executable Files can be redistributed; and
+    Source Code can be modified to create derivative works.
+    No claim of suitability, guarantee, or any warranty whatsoever is provided. The software is provided "as-is".
+    The Article(s) accompanying the Work may not be distributed or republished without the Author's consent
+    This License is entered between You, the individual or other entity reading or otherwise making use of the Work licensed pursuant to this License and the individual or other entity which offers the Work under the terms of this License ("Author").
+
+
+    THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CODE PROJECT OPEN LICENSE ("LICENSE"). THE WORK IS PROTECTED BY COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS AUTHORIZED UNDER THIS LICENSE OR COPYRIGHT LAW IS PROHIBITED.
+    BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HEREIN, YOU ACCEPT AND AGREE TO BE BOUND BY THE TERMS OF THIS LICENSE. THE AUTHOR GRANTS YOU THE RIGHTS CONTAINED HEREIN IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND CONDITIONS. IF YOU DO NOT AGREE TO ACCEPT AND BE BOUND BY THE TERMS OF THIS LICENSE, YOU CANNOT MAKE ANY USE OF THE WORK.
+
+    --- end of LICENSE ---
+
+
+    RawPrinterHelper
+    https://support.microsoft.com/en-us/kb/322091
+    Provided by Microsoft
+    Microsoft Limited Public License (Ms-LPL)
+
+    class Rs232 of Simple Caller Id (http://sourceforge.net/projects/simplecallerid/)
+
+    // This class provides all the necessary support for communicating
+    // with the Comm Port (otherwise known as the Serial Port, or 
+    // RS232 port).
+    // (Provided by Microsoft in VB.NET; converted to C# by Ben Marty)
+    public class Rs232
+
+
+    Microsoft Limited Public License (Ms-LPL)
+
+    --- begin of LICENSE ---
+
+    Microsoft Limited Public License (Ms-LPL)
+
+    This license governs use of the accompanying software. If you use the software, you accept this license. If you do not accept the license, do not use the software.
+
+    1. Definitions
+    The terms "reproduce," "reproduction," "derivative works," and "distribution" have the same meaning here as under U.S. copyright law. A "contribution" is the original software, or any additions or changes to the software. A "contributor" is any person that distributes its contribution under this license. "Licensed patents" are a contributor's patent claims that read directly on its contribution.
+
+    2. Grant of Rights
+    (A) Copyright Grant- Subject to the terms of this license, including the license conditions and limitations in section 3, each contributor grants you a non-exclusive, worldwide, royalty-free copyright license to reproduce its contribution, prepare derivative works of its contribution, and distribute its contribution or any derivative works that you create.
+    (B) Patent Grant- Subject to the terms of this license, including the license conditions and limitations in section 3, each contributor grants you a non-exclusive, worldwide, royalty-free license under its licensed patents to make, have made, use, sell, offer for sale, import, and/or otherwise dispose of its contribution in the software or derivative works of the contribution in the software.
+
+    3. Conditions and Limitations
+    (A) No Trademark License- This license does not grant you rights to use any contributors' name, logo, or trademarks.
+    (B) If you bring a patent claim against any contributor over patents that you claim are infringed by the software, your patent license from such contributor to the software ends automatically.
+    (C) If you distribute any portion of the software, you must retain all copyright, patent, trademark, and attribution notices that are present in the software.
+    (D) If you distribute any portion of the software in source code form, you may do so only under this license by including a complete copy of this license with your distribution. If you distribute any portion of the software in compiled or object code form, you may only do so under a license that complies with this license.
+    (E) The software is licensed "as-is." You bear the risk of using it. The contributors give no express warranties, guarantees, or conditions. You may have additional consumer rights under your local laws which this license cannot change. To the extent permitted under your local laws, the contributors exclude the implied warranties of merchantability, fitness for a particular purpose and non-infringement.
+    (F) Platform Limitation- The licenses granted in sections 2(A) & 2(B) extend only to the software or derivative works that you create that run on a Microsoft Windows operating system product.
+
+    --- end of LICENSE ---

@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{66A4132A-2ACE-4A05-ADF5-AF7BAAD6A7D8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CUS_WIP</RootNamespace>
+    <AssemblyName>CUS_WIP</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FarPoint.Localization, Version=10.40.20174.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win, Version=10.40.20174.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.Spread, Version=10.40.20174.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.PluginInputMan, Version=10.40.20174.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Shared.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Shared.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.Misc.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.Misc.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinEditors.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinSchedule.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinSchedule.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTabControl.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinTabControl.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.CliFrx">
+      <HintPath>..\..\Components\Miracom.CliFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.DNMCore">
+      <HintPath>..\..\Components\Miracom.DNMCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.MESCore">
+      <HintPath>..\..\Components\Miracom.MESCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.MsgHandler">
+      <HintPath>..\..\Components\Miracom.MsgHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.TRSCore">
+      <HintPath>..\..\Components\Miracom.TRSCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.UI">
+      <HintPath>..\..\Components\Miracom.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="transceiverxnet, Version=7.0.0.0, Culture=neutral, PublicKeyToken=d1edfc8a280ba121, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\transceiverxnet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\udcAddLotControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\udcAddLotControl.Designer.cs">
+      <DependentUpon>udcAddLotControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranInventorySurvey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranInventorySurvey.Designer.cs">
+      <DependentUpon>frmTranInventorySurvey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setup\frmSetupWorkerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmSetupWorkerManagement.Designer.cs">
+      <DependentUpon>frmSetupWorkerManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranCupCellMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranCupCellMapping.Designer.cs">
+      <DependentUpon>frmTranCupCellMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranGritBlendingOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranGritBlendingOrder.Designer.cs">
+      <DependentUpon>frmTranGritBlendingOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranGritClassificationProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranGritClassificationProcess.Designer.cs">
+      <DependentUpon>frmTranGritClassificationProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranInputLotData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranInputLotData.Designer.cs">
+      <DependentUpon>frmTranInputLotData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranMoveOrderConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranMoveOrderConfirm.Designer.cs">
+      <DependentUpon>frmTranMoveOrderConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranMoveOrderRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranMoveOrderRegistration.Designer.cs">
+      <DependentUpon>frmTranMoveOrderRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranMultiLossLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranMultiLossLot.Designer.cs">
+      <DependentUpon>frmTranMultiLossLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranMultiProcessLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranMultiProcessLot.Designer.cs">
+      <DependentUpon>frmTranMultiProcessLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranNonOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranNonOperation.Designer.cs">
+      <DependentUpon>frmTranNonOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranOutsourcingInProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranOutsourcingInProcess.Designer.cs">
+      <DependentUpon>frmTranOutsourcingInProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranOutsourcingInputMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranOutsourcingInputMaterials.Designer.cs">
+      <DependentUpon>frmTranOutsourcingInputMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranOutsourcingOutProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranOutsourcingOutProcess.Designer.cs">
+      <DependentUpon>frmTranOutsourcingOutProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranWorkerRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranWorkerRegistration.Designer.cs">
+      <DependentUpon>frmTranWorkerRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranInputMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranInputMaterials.Designer.cs">
+      <DependentUpon>frmTranInputMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranLossLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranLossLot.Designer.cs">
+      <DependentUpon>frmTranLossLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranProcessLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranProcessLot.Designer.cs">
+      <DependentUpon>frmTranProcessLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TranTest\frmTranCreateStartEndTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TranTest\frmTranCreateStartEndTest.Designer.cs">
+      <DependentUpon>frmTranCreateStartEndTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TranTest\frmTranCreateTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TranTest\frmTranCreateTest.Designer.cs">
+      <DependentUpon>frmTranCreateTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TranTest\frmTranTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TranTest\frmTranTestForm.Designer.cs">
+      <DependentUpon>frmTranTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TranTest\frmTranTestSongK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TranTest\frmTranTestSongK.Designer.cs">
+      <DependentUpon>frmTranTestSongK.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Inquiry\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\udcAddLotControl.resx">
+      <DependentUpon>udcAddLotControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Setup\frmSetupWorkerManagement.resx">
+      <DependentUpon>frmSetupWorkerManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranCupCellMapping.resx">
+      <DependentUpon>frmTranCupCellMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranGritBlendingOrder.resx">
+      <DependentUpon>frmTranGritBlendingOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranGritClassificationProcess.resx">
+      <DependentUpon>frmTranGritClassificationProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranInputLotData.resx">
+      <DependentUpon>frmTranInputLotData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranInventorySurvey.resx">
+      <DependentUpon>frmTranInventorySurvey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranMoveOrderConfirm.resx">
+      <DependentUpon>frmTranMoveOrderConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranMoveOrderRegistration.resx">
+      <DependentUpon>frmTranMoveOrderRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranMultiLossLot.resx">
+      <DependentUpon>frmTranMultiLossLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranMultiProcessLot.resx">
+      <DependentUpon>frmTranMultiProcessLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranNonOperation.resx">
+      <DependentUpon>frmTranNonOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranOutsourcingInProcess.resx">
+      <DependentUpon>frmTranOutsourcingInProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranOutsourcingInputMaterials.resx">
+      <DependentUpon>frmTranOutsourcingInputMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranOutsourcingOutProcess.resx">
+      <DependentUpon>frmTranOutsourcingOutProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranWorkerRegistration.resx">
+      <DependentUpon>frmTranWorkerRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranInputMaterials.resx">
+      <DependentUpon>frmTranInputMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranLossLot.resx">
+      <DependentUpon>frmTranLossLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranProcessLot.resx">
+      <DependentUpon>frmTranProcessLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TranTest\frmTranCreateStartEndTest.resx">
+      <DependentUpon>frmTranCreateStartEndTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TranTest\frmTranCreateTest.resx">
+      <DependentUpon>frmTranCreateTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TranTest\frmTranTestForm.resx">
+      <DependentUpon>frmTranTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TranTest\frmTranTestSongK.resx">
+      <DependentUpon>frmTranTestSongK.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CUS_BAS\CUS_BAS.csproj">
+      <Project>{9d8c0236-b106-44ae-8987-67bafa27486c}</Project>
+      <Name>CUS_BAS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CUS_COM\CUS_COM.csproj">
+      <Project>{3c73ea3b-cca6-4e6b-b0f3-f054bce8eb4b}</Project>
+      <Name>CUS_COM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

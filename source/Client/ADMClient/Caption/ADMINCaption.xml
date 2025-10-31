@@ -1,0 +1,1299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Captions>
+    <Other>
+        <!-- Window Menu -->
+
+        <!-- Form Title Caption -->
+        <Text Key="Message Setup">
+            <L>Message Setup</L>
+            <L>메시지 셋업</L>
+            <L>Message Setup</L>
+        </Text>
+
+        <Text Key="User Setup">
+            <L>User Setup</L>
+            <L>사용자 셋업</L>
+            <L>User Setup</L>
+        </Text>
+        <Text Key="Security Group Setup">
+            <L>Security Group Setup</L>
+            <L>보안 그룹 셋업</L>
+            <L>Security Group Setup</L>
+        </Text>
+        <Text Key="Function Setup">
+            <L>Function Setup</L>
+            <L>기능 셋업</L>
+            <L>Function Setup</L>
+        </Text>
+        <Text Key="Security Group Function Setup">
+            <L>Security Group Function Setup</L>
+            <L>보안 그룹에 기능 셋업</L>
+            <L>Security Group Function Setup</L>
+        </Text>
+        <Text Key="User Menu Setup">
+            <L>User Menu Setup</L>
+            <L>사용자 메뉴 셋업</L>
+            <L>User Menu Setup</L>
+        </Text>
+        <Text Key="Privilege Setup">
+            <L>Privilege Setup</L>
+            <L>권한 셋업</L>
+            <L>Privilege Setup</L>
+        </Text>
+        <Text Key="Privilege Group Setup">
+            <L>Privilege Group Setup</L>
+            <L>권한 그룹 셋업</L>
+            <L>Privilege Group Setup</L>
+        </Text>
+        <Text Key="Privilege Group - User Relation Setup">
+            <L>Privilege Group - User Relation Setup</L>
+            <L>권한 그룹 사용자 셋업</L>
+            <L>Privilege Group - User Relation Setup</L>
+        </Text>
+
+        <Text Key="General Code Table Setup">
+            <L>General Code Table Setup</L>
+            <L>General Code Table 셋업</L>
+            <L>General Code Table Setup</L>
+        </Text>
+        <Text Key="General Code Data Setup">
+            <L>General Code Data Setup</L>
+            <L>General Code Data 셋업</L>
+            <L>General Code Data Setup</L>
+        </Text>
+
+        <Text Key="Archive Table Key Setup">
+            <L>Archive Table Key Setup</L>
+            <L>아카이브 테이블 기본키 셋업</L>
+            <L>Archive Table Key Setup</L>
+        </Text>
+        <Text Key="Detail Condition">
+            <L>Detail Condition</L>
+            <L>상세 조건</L>
+            <L>Detail Condition</L>
+        </Text>
+        <Text Key="Archive Option Setup">
+            <L>Archive Option Setup</L>
+            <L>아카이브 옵션 셋업</L>
+            <L>Archive Option Setup</L>
+        </Text>
+        <Text Key="Run Archive &amp; View Archive Option List">
+            <L>Run Archive &amp; View Archive Option List</L>
+            <L>아카이브 실행 &amp; 아카이브 옵션 리스트 조회</L>
+            <L>Run Archive &amp; View Archive Option List</L>
+        </Text>
+        <Text Key="Run Archive &amp;&amp; View Archive Option List">
+            <L>Run Archive &amp;&amp; View Archive Option List</L>
+            <L>아카이브 실행 &amp;&amp; 아카이브 옵션 리스트 조회</L>
+            <L>Run Archive &amp;&amp; View Archive Option List</L>
+        </Text>
+        <Text Key="View Archive Log">
+            <L>View Archive Log</L>
+            <L>아카이브 로그 조회</L>
+            <L>View Archive Log</L>
+        </Text>
+
+        <Text Key="Task Manager">
+            <L>Task Manager</L>
+            <L>작업 관리자</L>
+            <L>Task Manager</L>
+        </Text>
+
+        <!-- Option -->
+        <Text Key="Language">
+            <L>Language</L>
+            <L>언어</L>
+            <L>Language</L>
+        </Text>
+
+        <!-- Message Setup -->
+        <Text Key="Message Group">
+            <L>Message Group</L>
+            <L>메시지 그룹</L>
+            <L>Message Group</L>
+        </Text>
+        <Text Key="Message ID">
+            <L>Message ID</L>
+            <L>메시지 ID</L>
+            <L>Message ID</L>
+        </Text>
+        <Text Key="Message">
+            <L>Message</L>
+            <L>메시지</L>
+            <L>Message</L>
+        </Text>
+        <Text Key="Message Data">
+            <L>Message Data</L>
+            <L>메시지 데이터</L>
+            <L>Message Data</L>
+        </Text>
+        <Text Key="Message 1">
+            <L>Message 1</L>
+            <L>메시지 1</L>
+            <L>Message 1</L>
+        </Text>
+        <Text Key="Message 2">
+            <L>Message 2</L>
+            <L>메시지 2</L>
+            <L>Message 2</L>
+        </Text>
+        <Text Key="Message 3">
+            <L>Message 3</L>
+            <L>메시지 3</L>
+            <L>Message 3</L>
+        </Text>
+        <Text Key="Create User/Time">
+            <L>Create User/Time</L>
+            <L>생성 사용자/시간</L>
+            <L>Create User/Time</L>
+        </Text>
+        <Text Key="Update User/Time">
+            <L>Update User/Time</L>
+            <L>수정 사용자/시간</L>
+            <L>Update User/Time</L>
+        </Text>
+
+        <!-- User Setup -->
+        <Text Key="User ID">
+            <L>User ID</L>
+            <L>사용자</L>
+            <L>User ID</L>
+        </Text>
+        <Text Key="Description">
+            <L>Description</L>
+            <L>설명</L>
+            <L>Description</L>
+        </Text>
+        <Text Key="General">
+            <L>General</L>
+            <L>일반</L>
+            <L>General</L>
+        </Text>
+        <Text Key="Group Setup">
+            <L>Group Setup</L>
+            <L>그룹 셋업</L>
+            <L>Group Setup</L>
+        </Text>
+        <Text Key="CMF Setup">
+            <L>CMF Setup</L>
+            <L>사용자 정의 셋업</L>
+            <L>CMF Setup</L>
+        </Text>
+        <Text Key="Password">
+            <L>Password</L>
+            <L>암호</L>
+            <L>Password</L>
+        </Text>
+        <Text Key="Change Password Flag">
+            <L>Change Password Flag</L>
+            <L>암호 변경 가능</L>
+            <L>Change Password Flag</L>
+        </Text>
+        <Text Key="Security Group">
+            <L>Security Group</L>
+            <L>보안 그룹</L>
+            <L>Security Group</L>
+        </Text>
+        <Text Key="Sex">
+            <L>Sex</L>
+            <L>성별</L>
+            <L>Sex</L>
+        </Text>
+        <Text Key="Male">
+            <L>Male</L>
+            <L>남성</L>
+            <L>Male</L>
+        </Text>
+        <Text Key="Female">
+            <L>Female</L>
+            <L>여성</L>
+            <L>Female</L>
+        </Text>
+        <Text Key="Email">
+            <L>Email</L>
+            <L>이메일</L>
+            <L>Email</L>
+        </Text>
+        <Text Key="Phone Office">
+            <L>Phone Office</L>
+            <L>회사 전화</L>
+            <L>Phone Office</L>
+        </Text>
+        <Text Key="Phone Mobile">
+            <L>Phone Mobile</L>
+            <L>이동 전화</L>
+            <L>Phone Mobile</L>
+        </Text>
+        <Text Key="Phone Home">
+            <L>Phone Home</L>
+            <L>집 전화</L>
+            <L>Phone Home</L>
+        </Text>
+        <Text Key="Phone Other">
+            <L>Phone Other</L>
+            <L>그외 전화</L>
+            <L>Phone Other</L>
+        </Text>
+        <Text Key="Birthday">
+            <L>Birthday</L>
+            <L>생년월일</L>
+            <L>Birthday</L>
+        </Text>
+        <Text Key="Enter Date">
+            <L>Enter Date</L>
+            <L>입사일</L>
+            <L>Enter Date</L>
+        </Text>
+        <Text Key="Retire Date">
+            <L>Retire Date</L>
+            <L>퇴사일</L>
+            <L>Retire Date</L>
+        </Text>
+        <Text Key="User Group (1~10)">
+            <L>User Group (1~10)</L>
+            <L>사용자 그룹 (1~10)</L>
+            <L>User Group (1~10)</L>
+        </Text>
+        <Text Key="Customized Field (1~10)">
+            <L>Customized Field (1~10)</L>
+            <L>사용자 정의 필드 (1~10)</L>
+            <L>Customized Field (1~10)</L>
+        </Text>
+        <Text Key="User Group">
+            <L>User Group</L>
+            <L>사용자 그룹</L>
+            <L>User Group</L>
+        </Text>
+
+        <!-- Security Group Setup -->
+        <Text Key="Copy Security Group">
+            <L>Copy Security Group</L>
+            <L>보안 그룹 복사</L>
+            <L>Copy Security Group</L>
+        </Text>
+        <Text Key="To Security Group">
+            <L>To Security Group</L>
+            <L>To 보안 그룹</L>
+            <L>To Security Group</L>
+        </Text>
+
+        <!-- Function Setup -->
+        <Text Key="Function">
+            <L>Function</L>
+            <L>기능</L>
+            <L>Function</L>
+        </Text>
+        <Text Key="Function Name">
+            <L>Function Name</L>
+            <L>기능 이름</L>
+            <L>Function Name</L>
+        </Text>
+        <Text Key="Function Type">
+            <L>Function Type</L>
+            <L>기능 타입</L>
+            <L>Function Type</L>
+        </Text>
+        <Text Key="Field Enable Mask Use Flag">
+            <L>Field Enable Mask Use Flag</L>
+            <L>필드 마스크 사용 가능</L>
+            <L>Field Enable Mask Use Flag</L>
+        </Text>
+        <Text Key="Help Url">
+            <L>Help URL</L>
+            <L>도움말 주소</L>
+            <L>Help URL</L>
+        </Text>
+        <Text Key="Control Name">
+            <L>Control Name</L>
+            <L>콘트롤 이름</L>
+            <L>Control Name</L>
+        </Text>
+        <Text Key="Tab Page Name">
+            <L>Tab Page Name</L>
+            <L>탭 페이지 이름</L>
+            <L>Tab Page Name</L>
+        </Text>
+        <Text Key="Option Name">
+            <L>Option Name</L>
+            <L>옵션 이름</L>
+            <L>Option Name</L>
+        </Text>
+
+        <!-- Security Group Function Setup -->
+        <Text Key="Attach Function">
+            <L>Attach Function</L>
+            <L>기능 부여</L>
+            <L>Attach Function</L>
+        </Text>
+        <Text Key="Attached Function">
+            <L>Attached Function</L>
+            <L>부여된 기능</L>
+            <L>Attached Function</L>
+        </Text>
+        <Text Key="Available Function">
+            <L>Available Function</L>
+            <L>사용 가능한 기능</L>
+            <L>Available Function</L>
+        </Text>
+        <Text Key="Controls">
+            <L>Controls</L>
+            <L>콘트롤</L>
+            <L>Controls</L>
+        </Text>
+        <Text Key="Control Name 1">
+            <L>Control Name 1</L>
+            <L>콘트롤 1</L>
+            <L>Control Name 1</L>
+        </Text>
+        <Text Key="Control Name 2">
+            <L>Control Name 2</L>
+            <L>콘트롤 2</L>
+            <L>Control Name 2</L>
+        </Text>
+        <Text Key="Control Name 3">
+            <L>Control Name 3</L>
+            <L>콘트롤 3</L>
+            <L>Control Name 3</L>
+        </Text>
+        <Text Key="Control Name 4">
+            <L>Control Name 4</L>
+            <L>콘트롤 4</L>
+            <L>Control Name 4</L>
+        </Text>
+        <Text Key="Control Name 5">
+            <L>Control Name 5</L>
+            <L>콘트롤 5</L>
+            <L>Control Name 5</L>
+        </Text>
+        <Text Key="Control Name 6">
+            <L>Control Name 6</L>
+            <L>콘트롤 6</L>
+            <L>Control Name 6</L>
+        </Text>
+        <Text Key="Control Name 7">
+            <L>Control Name 7</L>
+            <L>콘트롤 7</L>
+            <L>Control Name 7</L>
+        </Text>
+        <Text Key="Control Name 8">
+            <L>Control Name 8</L>
+            <L>콘트롤 8</L>
+            <L>Control Name 8</L>
+        </Text>
+        <Text Key="Control Name 9">
+            <L>Control Name 9</L>
+            <L>콘트롤 9</L>
+            <L>Control Name 9</L>
+        </Text>
+        <Text Key="Control Name 10">
+            <L>Control Name 10</L>
+            <L>콘트롤 10</L>
+            <L>Control Name 10</L>
+        </Text>
+        <Text Key="Enable">
+            <L>Enable</L>
+            <L>사용가능</L>
+            <L>Enable</L>
+        </Text>
+        <Text Key="Tab Pages">
+            <L>Tab Pages</L>
+            <L>탭 페이지</L>
+            <L>Tab Pages</L>
+        </Text>
+        <Text Key="Tabpage Name 1">
+            <L>Tabpage Name 1</L>
+            <L>탭 페이지 1</L>
+            <L>Tabpage Name 1</L>
+        </Text>
+        <Text Key="Tabpage Name 2">
+            <L>Tabpage Name 2</L>
+            <L>탭 페이지 2</L>
+            <L>Tabpage Name 2</L>
+        </Text>
+        <Text Key="Tabpage Name 3">
+            <L>Tabpage Name 3</L>
+            <L>탭 페이지 3</L>
+            <L>Tabpage Name 3</L>
+        </Text>
+        <Text Key="Tabpage Name 4">
+            <L>Tabpage Name 4</L>
+            <L>탭 페이지 4</L>
+            <L>Tabpage Name 4</L>
+        </Text>
+        <Text Key="Tabpage Name 5">
+            <L>Tabpage Name 5</L>
+            <L>탭 페이지 5</L>
+            <L>Tabpage Name 5</L>
+        </Text>
+        <Text Key="Tabpage Name 6">
+            <L>Tabpage Name 6</L>
+            <L>탭 페이지 6</L>
+            <L>Tabpage Name 6</L>
+        </Text>
+        <Text Key="Tabpage Name 7">
+            <L>Tabpage Name 7</L>
+            <L>탭 페이지 7</L>
+            <L>Tabpage Name 7</L>
+        </Text>
+        <Text Key="Tabpage Name 8">
+            <L>Tabpage Name 8</L>
+            <L>탭 페이지 8</L>
+            <L>Tabpage Name 8</L>
+        </Text>
+        <Text Key="Tabpage Name 9">
+            <L>Tabpage Name 9</L>
+            <L>탭 페이지 9</L>
+            <L>Tabpage Name 9</L>
+        </Text>
+        <Text Key="Tabpage Name 10">
+            <L>Tabpage Name 10</L>
+            <L>탭 페이지 10</L>
+            <L>Tabpage Name 10</L>
+        </Text>
+        <Text Key="Disable">
+            <L>Disable</L>
+            <L>사용안함</L>
+            <L>Disable</L>
+        </Text>
+        <Text Key="Options">
+            <L>Options</L>
+            <L>옵션</L>
+            <L>Options</L>
+        </Text>
+        <Text Key="Option Name 1">
+            <L>Option Name 1</L>
+            <L>옵션 이름 1</L>
+            <L>Option Name 1</L>
+        </Text>
+        <Text Key="Option Name 2">
+            <L>Option Name 2</L>
+            <L>옵션 이름 2</L>
+            <L>Option Name 2</L>
+        </Text>
+        <Text Key="Option Name 3">
+            <L>Option Name 3</L>
+            <L>옵션 이름 3</L>
+            <L>Option Name 3</L>
+        </Text>
+        <Text Key="Option Name 4">
+            <L>Option Name 4</L>
+            <L>옵션 이름 4</L>
+            <L>Option Name 4</L>
+        </Text>
+        <Text Key="Option Name 5">
+            <L>Option Name 5</L>
+            <L>옵션 이름 5</L>
+            <L>Option Name 5</L>
+        </Text>
+        <Text Key="Option Name 6">
+            <L>Option Name 6</L>
+            <L>옵션 이름 6</L>
+            <L>Option Name 6</L>
+        </Text>
+        <Text Key="Option Name 7">
+            <L>Option Name 7</L>
+            <L>옵션 이름 7</L>
+            <L>Option Name 7</L>
+        </Text>
+        <Text Key="Option Name 8">
+            <L>Option Name 8</L>
+            <L>옵션 이름 8</L>
+            <L>Option Name 8</L>
+        </Text>
+        <Text Key="Option Name 9">
+            <L>Option Name 9</L>
+            <L>옵션 이름 9</L>
+            <L>Option Name 9</L>
+        </Text>
+        <Text Key="Option Name 10">
+            <L>Option Name 10</L>
+            <L>옵션 이름 10</L>
+            <L>Option Name 10</L>
+        </Text>
+        <Text Key="Value">
+            <L>Value</L>
+            <L>값</L>
+            <L>Value</L>
+        </Text>
+        <Text Key="Fields">
+            <L>Fields</L>
+            <L>필드</L>
+            <L>Fields</L>
+        </Text>
+        <Text Key="Field Enable All">
+            <L>Field Enable All</L>
+            <L>모든 필드 가능</L>
+            <L>Field Enable All</L>
+        </Text>
+        <Text Key="Field Enable Mask">
+            <L>Field Enable Mask</L>
+            <L>가능 필드 마스크</L>
+            <L>Field Enable Mask</L>
+        </Text>
+
+        <!-- Privilege Group Setup -->
+        <Text Key="Privilege Group">
+            <L>Privilege Group</L>
+            <L>권한 그룹</L>
+            <L>Privilege Group</L>
+        </Text>
+        <Text Key="Copy Privilege Group">
+            <L>Copy Privilege Group</L>
+            <L>권한 그룹 복사</L>
+            <L>Copy Privilege Group</L>
+        </Text>
+        <Text Key="To Privilege Group">
+            <L>To Privilege Group</L>
+            <L>To 권한 그룹</L>
+            <L>To Privilege Group</L>
+        </Text>
+        <Text Key="User">
+            <L>User</L>
+            <L>사용자</L>
+            <L>User</L>
+        </Text>
+        <Text Key="Privilege Group - User Relation">
+            <L>Privilege Group - User Relation</L>
+            <L>권한 그룹 - 사용자 관계</L>
+            <L>Privilege Group - User Relation</L>
+        </Text>
+        <Text Key="All User List">
+            <L>All User List</L>
+            <L>모든 사용자 목록</L>
+            <L>All User List</L>
+        </Text>
+        <Text Key="All Privilege Group List">
+            <L>All Privilege Group List</L>
+            <L>모든 권한 그룹 목록</L>
+            <L>All Privilege Group List</L>
+        </Text>
+
+        <!-- Privilege Setup -->
+        <Text Key="Privilege">
+            <L>Privilege</L>
+            <L>권한</L>
+            <L>Privilege</L>
+        </Text>
+        <Text Key="Privilege Type">
+            <L>Privilege Type</L>
+            <L>권한 유형</L>
+            <L>Privilege Type</L>
+        </Text>
+        <Text Key="Privilege Item1">
+            <L>Privilege Item1</L>
+            <L>권한 대상1</L>
+            <L>Privilege Item1</L>
+        </Text>
+        <Text Key="Privilege Item2">
+            <L>Privilege Item2</L>
+            <L>권한 대상2</L>
+            <L>Privilege Item2</L>
+        </Text>
+        <Text Key="Privilege Item3">
+            <L>Privilege Item3</L>
+            <L>권한 대상3</L>
+            <L>Privilege Item3</L>
+        </Text>
+        <Text Key="Operation">
+            <L>Operation</L>
+            <L>공정</L>
+            <L>Operation</L>
+        </Text>
+
+        <!-- GCM Table Setup -->
+        <Text Key="Table Name">
+            <L>Table Name</L>
+            <L>테이블 이름</L>
+            <L>Table Name</L>
+        </Text>
+        <Text Key="Table Type">
+            <L>Table Type</L>
+            <L>테이블 타입</L>
+            <L>Table Type</L>
+        </Text>
+        <Text Key="System Table Flag">
+            <L>System Table Flag</L>
+            <L>시스템 테이블</L>
+            <L>System Table Flag</L>
+        </Text>
+        <Text Key="Central Flag">
+            <L>Central Flag</L>
+            <L>기준 공장 정보</L>
+            <L>Central Flag</L>
+        </Text>
+        <Text Key="Prompt">
+            <L>Prompt</L>
+            <L>문자열</L>
+            <L>Prompt</L>
+        </Text>
+        <Text Key="Format">
+            <L>Format</L>
+            <L>형식</L>
+            <L>Format</L>
+        </Text>
+        <Text Key="Size">
+            <L>Size</L>
+            <L>크기</L>
+            <L>Size</L>
+        </Text>
+        <Text Key="Copy Table">
+            <L>Copy Table</L>
+            <L>테이블 복사</L>
+            <L>Copy Table</L>
+        </Text>
+        <Text Key="From Factory">
+            <L>From Factory</L>
+            <L>어느 공장</L>
+            <L>From Factory</L>
+        </Text>
+        <Text Key="From Table">
+            <L>From Table</L>
+            <L>어느 테이블</L>
+            <L>From Table</L>
+        </Text>
+        <Text Key="To Table">
+            <L>To Table</L>
+            <L>To 테이블</L>
+            <L>To Table</L>
+        </Text>
+
+        <!-- Archive Table Key Setup -->
+        <Text Key="Module">
+            <L>Module</L>
+            <L>모듈</L>
+            <L>Module</L>
+        </Text>
+        <Text Key="Column Name">
+            <L>Column Name</L>
+            <L>컬럼 이름</L>
+            <L>Column Name</L>
+        </Text>
+        <Text Key="Data Type">
+            <L>Data Type</L>
+            <L>데이터 형식</L>
+            <L>Data Type</L>
+        </Text>
+        <Text Key="Index">
+            <L>Index</L>
+            <L>인덱스</L>
+            <L>Index</L>
+        </Text>
+        <Text Key="Precision">
+            <L>Precision</L>
+            <L>정밀도</L>
+            <L>Precision</L>
+        </Text>
+        <Text Key="Key Field1">
+            <L>Key Field1</L>
+            <L>키 필드1</L>
+            <L>Key Field1</L>
+        </Text>
+        <Text Key="Key Field2">
+            <L>Key Field2</L>
+            <L>키 필드2</L>
+            <L>Key Field2</L>
+        </Text>
+        <Text Key="Key Field3">
+            <L>Key Field3</L>
+            <L>키 필드3</L>
+            <L>Key Field3</L>
+        </Text>
+        <Text Key="Term Field">
+            <L>Term Field</L>
+            <L>만료 필드</L>
+            <L>Term Field</L>
+        </Text>
+        <Text Key="Detail Condition">
+            <L>Detail Condition</L>
+            <L>상세 조건</L>
+            <L>Detail Condition</L>
+        </Text>
+        <Text Key="Dependent on Master">
+            <L>Dependent on Master</L>
+            <L>마스터 테이블에 종속</L>
+            <L>Dependent on Master</L>
+        </Text>
+        <Text Key="Master Table">
+            <L>Master Table</L>
+            <L>마스터 테이블</L>
+            <L>Master Table</L>
+        </Text>
+        <Text Key="Slave Table">
+            <L>Slave Table</L>
+            <L>종속 테이블</L>
+            <L>Slave Table</L>
+        </Text>
+
+        <!-- Archive Option Setup -->
+        <Text Key="Factory">
+            <L>Factory</L>
+            <L>공장</L>
+            <L>Factory</L>
+        </Text>
+        <Text Key="Archive Speed">
+            <L>Archive Speed</L>
+            <L>아카이브 실행 속도</L>
+            <L>Archive Speed</L>
+        </Text>
+        <Text Key="Archive Target Period">
+            <L>Archive Target Period</L>
+            <L>아카이브 실행 범위</L>
+            <L>Archive Target Period</L>
+        </Text>
+        <Text Key="Rollback Segment Usage">
+            <L>Rollback Segment Usage</L>
+            <L>롤백세그먼트 사용여부</L>
+            <L>Rollback Segment Usage</L>
+        </Text>
+        <Text Key="Archive Data Deletion">
+            <L>Archive Data Deletion</L>
+            <L>아카이브 데이타 삭제여부</L>
+            <L>Archive Data Deletion</L>
+        </Text>
+        <Text Key="Archive Backup Type">
+            <L>Archive Backup Type</L>
+            <L>아카이브 백업 타입</L>
+            <L>Archive Backup Type</L>
+        </Text>
+        <Text Key="Master Table Deletion">
+            <L>Master Table Deletion</L>
+            <L>마스터 테이블 삭제여부</L>
+            <L>Master Table Deletion</L>
+        </Text>
+
+        <Text Key="Min">
+            <L>Min</L>
+            <L>분</L>
+            <L>Min</L>
+        </Text>
+        <Text Key="Sec">
+            <L>Sec</L>
+            <L>초</L>
+            <L>Sec</L>
+        </Text>
+        <Text Key="MiliSec">
+            <L>MiliSec</L>
+            <L>밀리초</L>
+            <L>MiliSec</L>
+        </Text>
+        <Text Key="Ex) 30 / 365 => Archive Data which 30 days passed among 1 year passed.">
+            <L>Ex) 30 / 365 => Archive Data which 30 days passed among 1 year passed.</L>
+            <L>예) 30 / 365 => 1년 전 자료 중 30일 간의 자료를 아카이브 한다.</L>
+            <L>Ex) 30 / 365 => Archive Data which 30 days passed among 1 year passed.</L>
+        </Text>
+        <Text Key="Use Rollback Segment">
+            <L>Use Rollback Segment</L>
+            <L>롤백세그먼트 사용</L>
+            <L>Use Rollback Segment</L>
+        </Text>
+        <Text Key="Not Use Rollback Segment">
+            <L>Not Use Rollback Segment</L>
+            <L>롤백세그먼트 사용 안함</L>
+            <L>Not Use Rollback Segment</L>
+        </Text>
+        <Text Key="Delete Archive Data">
+            <L>Delete Archive Data</L>
+            <L>아카이브 데이타 삭제</L>
+            <L>Delete Archive Data</L>
+        </Text>
+        <Text Key="Keep Archive Data">
+            <L>Keep Archive Data</L>
+            <L>아카이브 데이타 삭제 안함</L>
+            <L>Keep Archive Data</L>
+        </Text>
+        <Text Key="Database Backup">
+            <L>Database Backup</L>
+            <L>Database로 백업</L>
+            <L>Database Backup</L>
+        </Text>
+        <Text Key="File Backup">
+            <L>File Backup</L>
+            <L>파일로 백업</L>
+            <L>File Backup</L>
+        </Text>
+        <Text Key="Database + File Backup">
+            <L>Database + File Backup</L>
+            <L>Database와 파일로 백업</L>
+            <L>Database + File Backup</L>
+        </Text>
+        <Text Key="None Backup">
+            <L>None Backup</L>
+            <L>백업하지 않음</L>
+            <L>None Backup</L>
+        </Text>
+        <Text Key="Delete Master Table">
+            <L>Delete Master Table</L>
+            <L>마스터 테이블 삭제</L>
+            <L>Delete Master Table</L>
+        </Text>
+        <Text Key="Keep Master Table">
+            <L>Keep Master Table</L>
+            <L>마스터 테이블 삭제 안함</L>
+            <L>Keep Master Table</L>
+        </Text>
+
+        <!-- Run Archive & View Archive Option List -->
+        <Text Key="Select">
+            <L>Select</L>
+            <L>선택</L>
+            <L>Select</L>
+        </Text>
+        <Text Key="Term">
+            <L>Term</L>
+            <L>만료 일수</L>
+            <L>Term</L>
+        </Text>
+        <Text Key="Days">
+            <L>Days</L>
+            <L>대상 일수</L>
+            <L>Days</L>
+        </Text>
+        <Text Key="Archive Speed">
+            <L>Archive Speed</L>
+            <L>실행 속도</L>
+            <L>Archive Speed</L>
+        </Text>
+        <Text Key="Archive Deletion">
+            <L>Archive Deletion</L>
+            <L>아카이브 삭제여부</L>
+            <L>Archive Deletion</L>
+        </Text>
+        <Text Key="Backup Type">
+            <L>Backup Type</L>
+            <L>아카이브 백업타입</L>
+            <L>Backup Type</L>
+        </Text>
+        <Text Key="Rollback Segment">
+            <L>Rollback Segment</L>
+            <L>롤백세그먼트</L>
+            <L>Rollback Segment</L>
+        </Text>
+        <Text Key="Select All">
+            <L>Select All</L>
+            <L>전체선택</L>
+            <L>Select All</L>
+        </Text>
+
+        <!-- View Archive Log -->
+        <Text Key="Period">
+            <L>Period</L>
+            <L>조회 기간</L>
+            <L>Period</L>
+        </Text>
+        <Text Key="Log ID">
+            <L>Log ID</L>
+            <L>로그 ID</L>
+            <L>Log ID</L>
+        </Text>
+        <Text Key="Status Flag">
+            <L>Status Flag</L>
+            <L>상태 Flag</L>
+            <L>Status Flag</L>
+        </Text>
+        <Text Key="Create Time">
+            <L>Create Time</L>
+            <L>생성 시간</L>
+            <L>Create Time</L>
+        </Text>
+        <Text Key="End Time">
+            <L>End Time</L>
+            <L>종료 시간</L>
+            <L>End Time</L>
+        </Text>
+        <Text Key="Seq">
+            <L>Seq</L>
+            <L>순서</L>
+            <L>Seq</L>
+        </Text>
+        <Text Key="Content">
+            <L>Content</L>
+            <L>내용</L>
+            <L>Content</L>
+        </Text>
+
+        <!-- Task Manager -->
+        <Text Key="Server Name">
+            <L>Server Name</L>
+            <L>서버 이름</L>
+            <L>Server Name</L>
+        </Text>
+        <Text Key="Total Count">
+            <L>Total Count</L>
+            <L>전체 프로세스 개수</L>
+            <L>Total Count</L>
+        </Text>
+        <Text Key="Running Count">
+            <L>Running Count</L>
+            <L>실행중인 프로세스 개수</L>
+            <L>Running Count</L>
+        </Text>
+        <Text Key="Disk">
+            <L>Disk</L>
+            <L>디스크</L>
+            <L>Disk</L>
+        </Text>
+        <Text Key="Total Space">
+            <L>Total Space</L>
+            <L>용량</L>
+            <L>Total Space</L>
+        </Text>
+        <Text Key="Used Space">
+            <L>Used Space</L>
+            <L>사용 중인 공간</L>
+            <L>Used Space</L>
+        </Text>
+        <Text Key="Unused Space">
+            <L>Unused Space</L>
+            <L>사용 가능한 공간</L>
+            <L>Unused Space</L>
+        </Text>
+        <Text Key="Used Rate">
+            <L>Used Rate</L>
+            <L>사용률</L>
+            <L>Used Rate</L>
+        </Text>
+        <Text Key="Table Space">
+            <L>Table Space</L>
+            <L>테이블 스페이스</L>
+            <L>Table Space</L>
+        </Text>
+        <Text Key="File Name">
+            <L>File Name</L>
+            <L>파일 이름</L>
+            <L>File Name</L>
+        </Text>
+        <Text Key="Status">
+            <L>Status</L>
+            <L>상태</L>
+            <L>Status</L>
+        </Text>
+        <Text Key="Auto Extensible">
+            <L>Auto Extensible</L>
+            <L>자동확장</L>
+            <L>Auto Extensible</L>
+        </Text>
+        <Text Key="Increment by">
+            <L>Increment by</L>
+            <L>확장단위</L>
+            <L>Increment by</L>
+        </Text>
+        <Text Key="DB Connection Status">
+            <L>DB Connection Status</L>
+            <L>DB 연결 상태</L>
+            <L>DB Connection Status</L>
+        </Text>
+        <Text Key="Auto Refresh">
+            <L>Auto Refresh</L>
+            <L>자동 갱신</L>
+            <L>Auto Refresh</L>
+        </Text>
+
+    </Other>
+
+    <Button>
+        <Text Key="Copy">
+            <L>Copy</L>
+            <L>복사</L>
+            <L>Copy</L>
+        </Text>
+        <Text Key="Close">
+            <L>Close</L>
+            <L>닫기</L>
+            <L>Close</L>
+        </Text>
+        <Text Key="Clear">
+            <L>Clear</L>
+            <L>초기화</L>
+            <L>Clear</L>
+        </Text>
+        <Text Key="Create">
+            <L>Create</L>
+            <L>생성</L>
+            <L>Create</L>
+        </Text>
+        <Text Key="Update">
+            <L>Update</L>
+            <L>수정</L>
+            <L>Update</L>
+        </Text>
+        <Text Key="Delete">
+            <L>Delete</L>
+            <L>삭제</L>
+            <L>Delete</L>
+        </Text>
+        <Text Key="Insert">
+            <L>Insert</L>
+            <L>삽입</L>
+            <L>Insert</L>
+        </Text>
+        <Text Key="OK">
+            <L>OK</L>
+            <L>확인</L>
+            <L>OK</L>
+        </Text>
+        <Text Key="Process">
+            <L>Process</L>
+            <L>실행</L>
+            <L>Process</L>
+        </Text>
+        <Text Key="Add">
+            <L>Add</L>
+            <L>추가</L>
+            <L>Add</L>
+        </Text>
+        <Text Key="Cancel">
+            <L>Cancel</L>
+            <L>취소</L>
+            <L>Cancel</L>
+        </Text>
+        <Text Key="View">
+            <L>View</L>
+            <L>조회</L>
+            <L>View</L>
+        </Text>
+        <Text Key="Open">
+            <L>Open</L>
+            <L>반송 처리</L>
+            <L>Open</L>
+        </Text>
+        <Text Key="Send">
+            <L>Send</L>
+            <L>보내기</L>
+            <L>Send</L>
+        </Text>
+        <Text Key="Start">
+            <L>Start</L>
+            <L>LOT 작업 시작</L>
+            <L>Start</L>
+        </Text>
+        <Text Key="End">
+            <L>End</L>
+            <L>LOT 작업 종료</L>
+            <L>End</L>
+        </Text>
+        <Text Key="Move">
+            <L>Move</L>
+            <L>LOT 이동</L>
+            <L>Move</L>
+        </Text>
+        <Text Key="Skip">
+            <L>Skip</L>
+            <L>LOT 이동</L>
+            <L>Skip</L>
+        </Text>
+        <Text Key="Scrap">
+            <L>Scrap</L>
+            <L>폐기</L>
+            <L>Scrap</L>
+        </Text>
+        <Text Key="Return">
+            <L>Return</L>
+            <L>반품</L>
+            <L>Return</L>
+        </Text>
+        <Text Key="Acknowledge">
+            <L>Acknowledge</L>
+            <L>수신 확인</L>
+            <L>Acknowledge</L>
+        </Text>
+        <Text Key="Set Module">
+            <L>Set Module</L>
+            <L>모듈 지정</L>
+            <L>Set Module</L>
+        </Text>
+        <Text Key="Run Archive">
+            <L>Run Archive</L>
+            <L>아카이브 실행</L>
+            <L>Run Archive</L>
+        </Text>
+        <Text Key="Detail Condition">
+            <L>Detail Condition</L>
+            <L>상세 조건</L>
+            <L>Detail Condition</L>
+        </Text>
+        <Text Key="ReConnect">
+            <L>ReConnect</L>
+            <L>재연결</L>
+            <L>ReConnect</L>
+        </Text>
+    </Button>
+
+    <Menu>
+        <Text Key="System">
+            <L>System</L>
+            <L>시스템</L>
+            <L>System</L>
+        </Text>
+        <Text Key="Setup">
+            <L>Setup</L>
+            <L>셋업</L>
+            <L>Setup</L>
+        </Text>
+        <Text Key="Transaction">
+            <L>Transaction</L>
+            <L>트랜젝션</L>
+            <L>Transaction</L>
+        </Text>
+        <Text Key="Inquiry">
+            <L>Inquiry</L>
+            <L>조회</L>
+            <L>Inquiry</L>
+        </Text>
+        <Text Key="Admin">
+            <L>Admin</L>
+            <L>관리자</L>
+            <L>Admin</L>
+        </Text>
+        <Text Key="Order">
+            <L>Order</L>
+            <L>생산지시</L>
+            <L>Order</L>
+        </Text>
+        <Text Key="Label">
+            <L>Label</L>
+            <L>라벨</L>
+            <L>Label</L>
+        </Text>
+        <Text Key="Favorites">
+            <L>Favorites</L>
+            <L>즐겨찾기</L>
+            <L>Favorites</L>
+        </Text>
+        <Text Key="Utilities">
+            <L>Utilities</L>
+            <L>도구</L>
+            <L>Utilities</L>
+        </Text>
+        <Text Key="Windows">
+            <L>Windows</L>
+            <L>윈도우</L>
+            <L>Windows</L>
+        </Text>
+        <Text Key="Help">
+            <L>Help</L>
+            <L>도움말</L>
+            <L>Help</L>
+        </Text>
+
+        <Text Key="[MSG]Message">
+            <L>[MSG]Message</L>
+            <L>[MSG]Message</L>
+            <L>[MSG]Message</L>
+        </Text>
+        <Text Key="Message Setup">
+            <L>Message Setup</L>
+            <L>메시지 셋업</L>
+            <L>Message Setup</L>
+        </Text>
+        <Text Key="[SEC]Security">
+            <L>[SEC]Security</L>
+            <L>[SEC]Security</L>
+            <L>[SEC]Security</L>
+        </Text>
+        <Text Key="User Setup">
+            <L>User Setup</L>
+            <L>사용자 셋업</L>
+            <L>User Setup</L>
+        </Text>
+        <Text Key="Security Group Setup">
+            <L>Security Group Setup</L>
+            <L>보안 그룹 셋업</L>
+            <L>Security Group Setup</L>
+        </Text>
+        <Text Key="Function Setup">
+            <L>Function Setup</L>
+            <L>기능 셋업</L>
+            <L>Function Setup</L>
+        </Text>
+        <Text Key="Security Group Function Setup">
+            <L>Security Group Function Setup</L>
+            <L>보안 그룹에 기능 셋업</L>
+            <L>Security Group Function Setup</L>
+        </Text>
+        <Text Key="User Menu Setup">
+            <L>User Menu Setup</L>
+            <L>사용자 메뉴 셋업</L>
+            <L>User Menu Setup</L>
+        </Text>
+        <Text Key="Privilege Setup">
+            <L>Privilege Setup</L>
+            <L>권한 셋업</L>
+            <L>Privilege Setup</L>
+        </Text>
+        <Text Key="Privilege Group Setup">
+            <L>Privilege Group Setup</L>
+            <L>권한 그룹 셋업</L>
+            <L>Privilege Group Setup</L>
+        </Text>
+        <Text Key="Privilege Group - User Relation Setup">
+            <L>Privilege Group - User Relation Setup</L>
+            <L>권한 그룹 사용자 셋업</L>
+            <L>Privilege Group - User Relation Setup</L>
+        </Text>
+        <Text Key="[GCM]General Code Management">
+            <L>[GCM]General Code Management</L>
+            <L>[GCM]General Code Management</L>
+            <L>[GCM]General Code Management</L>
+        </Text>
+        <Text Key="General Code Table Setup">
+            <L>General Code Table Setup</L>
+            <L>General Code Table 셋업</L>
+            <L>General Code Table Setup</L>
+        </Text>
+        <Text Key="General Code Data Setup">
+            <L>General Code Data Setup</L>
+            <L>General Code Data 셋업</L>
+            <L>General Code Data Setup</L>
+        </Text>
+
+        <Text Key="Archive Table Key Setup">
+            <L>Archive Table Key Setup</L>
+            <L>아카이브 테이블 기본키 셋업</L>
+            <L>Archive Table Key Setup</L>
+        </Text>
+        <Text Key="Detail Condition">
+            <L>Detail Condition</L>
+            <L>상세 조건</L>
+            <L>Detail Condition</L>
+        </Text>
+        <Text Key="Archive Option Setup">
+            <L>Archive Option Setup</L>
+            <L>아카이브 옵션 셋업</L>
+            <L>Archive Option Setup</L>
+        </Text>
+        <Text Key="Run Archive &amp;&amp; View Archive Option List">
+            <L>Run Archive &amp;&amp; View Archive Option List</L>
+            <L>아카이브 실행 &amp;&amp; 아카이브 옵션 리스트 조회</L>
+            <L>Run Archive &amp;&amp; View Archive Option List</L>
+        </Text>
+        <Text Key="View Archive Log">
+            <L>View Archive Log</L>
+            <L>아카이브 로그 조회</L>
+            <L>View Archive Log</L>
+        </Text>
+
+        <Text Key="Task Manager">
+            <L>Task Manager</L>
+            <L>작업 관리자</L>
+            <L>Task Manager</L>
+        </Text>
+
+        <Text Key="Cascade">
+            <L>Cascade</L>
+            <L>계단 정렬</L>
+            <L>Cascade</L>
+        </Text>
+        <Text Key="Close All Windows">
+            <L>Close All Windows</L>
+            <L>모든 창 닫기</L>
+            <L>Close All Windows</L>
+        </Text>
+        <Text Key="Minimize All Windows">
+            <L>Minimize All Windows</L>
+            <L>모든 창 최소화</L>
+            <L>Minimize All Windows</L>
+        </Text>
+
+    </Menu>
+</Captions>
+

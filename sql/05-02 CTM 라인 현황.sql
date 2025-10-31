@@ -1,0 +1,56 @@
+/*LINE 현황 (CTM)*/
+
+--전체 설비 현황
+SELECT  RES_TOT_CNT, --총수량
+        STOP_CNT,    --정지
+        WAIT_CNT,    --대기
+        RUN_CNT,     --가동
+       (CASE WHEN RES_TOT_CNT>0 THEN ROUND(RUN_CNT / RES_TOT_CNT *100,1) END)AS RUN_RATE  --가동율
+FROM (
+    SELECT  COUNT(RES_ID) AS RES_TOT_CNT,
+            SUM(CASE WHEN RES_PRI_STS='D' THEN 1 ELSE 0 END) AS STOP_CNT ,   --정지
+            SUM(CASE WHEN RES_PRI_STS IN ('I','WAIT') THEN 1 ELSE 0 END) AS WAIT_CNT ,   --대기
+            SUM(CASE WHEN RES_PRI_STS='R' THEN 1 ELSE 0 END) AS RUN_CNT     --가동
+    FROM MRASRESDEF RES,
+         MGCMTBLDAT GRP       
+    WHERE RES.FACTORY=GRP.FACTORY
+         AND TABLE_NAME='RES_GRP_3' 
+         AND RES.RES_GRP_3=GRP.KEY_1
+         AND RES.FACTORY='IJDK1'
+         AND RES.AREA_ID='CTM'      --AREA:GRT,CTM
+)
+;
+
+--그룹별 설비 가동 현황 리스트
+SELECT RES.RES_GRP_3, GRP.DATA_1 AS RES_GRP_3_DESC, RES_ID, RES_DESC, DECODE(RES_PRI_STS,'WAIT','I',RES_PRI_STS) AS RES_PRI_STS
+FROM MRASRESDEF RES,
+     MGCMTBLDAT GRP       
+WHERE RES.FACTORY=GRP.FACTORY
+     AND TABLE_NAME='RES_GRP_3' 
+     AND RES.RES_GRP_3=GRP.KEY_1 
+     AND RES.FACTORY='IJDK1'
+     AND RES.AREA_ID='CTM'      --AREA:GRT,CTM     
+     --AND RES.RES_GRP_3 ='G002'  --그룹 : Ball Miill 
+ORDER BY RES_GRP_3, RES_DESC 
+  
+  
+/*
+G002	Ball Miill
+G015    열처리로
+		
+G006	L Press(5000T)		
+G001	B Press(6000T)
+
+G007	Lapping(1000pi)
+G008	Lapping(600pi)
+G005	G Press(15000T)
+
+G010	Polishing
+
+G014	로터리 연삭기
+G019	평면 연삭기
+
+G004	EDM 절단기
+G009	Laser 절단기
+*/
+

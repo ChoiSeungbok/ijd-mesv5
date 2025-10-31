@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:onClick="onclickWindow"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/content_padding"
+        android:paddingRight="@dimen/content_padding"
+        android:paddingTop="@dimen/content_padding">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_text_box_height"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:onClick="onClickShipNo"
+            android:background="@drawable/selector_barcode_btn"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.pda.mes.widget.FontTextView
+                    style="@style/InputBox_Title.Barcode"
+                    android:text="@string/common_word_ship_no" />
+
+                <com.pda.mes.widget.FontTextView
+                    android:id="@+id/shipNo"
+                    style="@style/InputBox_Content.Dropdown"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/emptyView"
+            layout="@layout/view_empty_list"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:visibility="gone"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/default_text_box_height"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+                    <!--REQUEST_NO-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.RequsetNo"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_ship_no"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <!--SEQ-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.RowCount"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_Seq"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <!--QTY-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.ShipPlanQuantity"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_quantity"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <!--REG_QTY-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.RegQuantity"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_reg_quantity"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+
+                    <!--ITEM DESC-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.ItemName"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_item_desc"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <!--UNIT-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.Unit"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_unit"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+
+
+                    <!--PACK ORDER ID-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.RequsetNo"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_pack_order_id"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <!--PACK LINE NO-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.RowCount"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_pack_line_no"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <!--STOCK-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.StockName"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_warehouse"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/default_line_size" />
+
+                <ListView
+                    android:id="@+id/listTopView"
+                    style="@style/Main_ListView"
+                    android:paddingBottom="5dp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:id="@+id/cpda2011LayoutBarcode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_text_box_height"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/selector_barcode_btn"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.pda.mes.widget.FontTextView
+                    style="@style/InputBox_Title.Barcode"
+                    android:id="@+id/lotAllTitle"
+                    android:text="@string/common_word_lot_box_final_box" />
+
+                <com.pda.mes.widget.FontEditTextView
+                    android:id="@+id/lotAll"
+                    android:layout_weight="1"
+                    style="@style/InputBox_Content" />
+
+                <View
+                    android:layout_width="@dimen/portrait_line_size"
+                    android:layout_height="match_parent" />
+
+                <com.pda.mes.widget.FontTextView
+                    android:id="@+id/totalCount"
+                    android:layout_width="50dp"
+                    style="@style/TotalCountView"/>
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/select_all"
+                    android:layout_width="wrap_content"
+                    android:onClick="onAllChkClicked"
+                    android:layout_marginLeft="5dp"
+                    android:textAlignment="center"
+                    style="@style/CheckAllView"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/default_text_box_height"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <!--PROCESS LOT ID-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.RowCount"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="No"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+                    <!--ROW NO-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.Normal"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_process_lot_id"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+                    <!--SHIP LOT ID-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.Normal"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_ship_lot_id"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <!--ITEM DESC-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.ItemName"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_item_desc"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <!--LABEL NAME-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.ItemName"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_label"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <!--QTY-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.Quantity"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_quantity"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <!--UNIT-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.Unit"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_unit"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <!--SHIP ORDER ID-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.RequsetNo"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_ship_order_id"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <!--MIDDLE BOX ID-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.Normal"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_middle_box_id"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <!--FINAL BOX ID-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.Normal"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_final_box_id"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/default_line_size" />
+
+                <ListView
+                    android:id="@+id/listBottomView"
+                    style="@style/Main_ListView"
+                    android:paddingBottom="5dp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            style="@style/Bottom_Button"
+            android:layout_weight="1"
+            android:onClick="onClickRegist">
+
+            <com.pda.mes.widget.FontTextView
+                style="@style/Bottom_Button_Text"
+                android:text="@string/common_word_regist" />
+        </LinearLayout>
+
+        <View style="@style/Bottom_Button_Line" />
+
+        <LinearLayout
+            style="@style/Bottom_Button"
+            android:layout_weight="1"
+            android:onClick="onClickCancel">
+
+            <com.pda.mes.widget.FontTextView
+                style="@style/Bottom_Button_Text"
+                android:text="@string/common_word_cancel" />
+        </LinearLayout>
+
+        <View style="@style/Bottom_Button_Line" />
+
+        <LinearLayout
+            style="@style/Bottom_Button_White"
+            android:layout_weight="1"
+            android:onClick="onClickClose">
+
+            <com.pda.mes.widget.FontTextView
+                style="@style/Bottom_Button_Text_Blue"
+                android:text="@string/common_word_close" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

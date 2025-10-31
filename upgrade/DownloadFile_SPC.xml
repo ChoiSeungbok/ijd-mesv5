@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<Download_list>
+ <ExeFile>SPCClient.exe</ExeFile>
+ <DownFile>
+  <DownFileDesc>SPCClient Upgrade</DownFileDesc> 
+  <DownFileName>SPCClient.zip</DownFileName> 
+  <DownFileVersion>4.2.0.0</DownFileVersion>
+  <DownFilePath>.</DownFilePath> 
+  <ActionFlag>ZIP</ActionFlag> 
+ </DownFile>
+</Download_list>

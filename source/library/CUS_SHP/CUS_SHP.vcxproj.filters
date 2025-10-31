@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5ca7c1f0-93ea-473c-b524-9aaa1e0891e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{90a7dcd1-1d17-403c-81fe-cc46fe3c1b86}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CUS_SHP_AddService.c">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_SHP_create_pack_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_SHP_delete_pack_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_SHP_confirm_pack_order.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_SHP_create_pack_box.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_SHP_delete_pack_box.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_SHP_delete_pack_final_box.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_SHP_create_pack_final_box.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_SHP_ship_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_SHP_return_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_SHP_view_order_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_SHP_view_return_lot_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_SHP_view_ship_lot_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_SHP_validation_ship_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_SHP_check_ship_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_SHP_erp_ship_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_SHP_update_pack_order.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CUS_SHP_services.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CUS_SHP_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

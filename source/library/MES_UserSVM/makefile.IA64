@@ -1,0 +1,43 @@
+#### Name of created component ####
+LIB_NAME = libMES_UserSVM
+TARGET   = ${LIB_NAME}.a
+
+#### Get options depending on OS and platform ####
+include ../../makefile.cmm 
+
+##### Libraries #####
+LIB     = ${MES_SLC_LIB}
+
+##### Include files #####
+INCLUDE = -I${MES_INC} -I${MES_DBINC} -I${ORACLE_INC}
+
+##### Compile options #####
+CFLAGS  = ${_DEB} ${_ARC} ${_OPT} ${_OPTDB} ${INCLUDE} ${MES_DEFINES}
+
+
+##### Object files #####
+OBJS = USVMAddService.o \
+	USVM_update_service.o \
+	USVM_view_service.o
+
+
+###### Build Rules ######
+default : ${TARGET}
+
+build : clean ${TARGET}
+
+
+###### Compile all source files ######
+.c.o :
+	${CC} ${CFLAGS} $?
+
+###### Make a library ######
+${TARGET} : ${OBJS}
+	ar -r  $@ ${OBJS}
+	mv -f ${TARGET} ${MES_HOME}/lib/.
+	cp -f *.h ${MES_INC}/.
+
+###### Remove all object files ######
+clean :
+	rm -f ${OBJS}
+

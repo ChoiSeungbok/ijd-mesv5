@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5ca7c1f0-93ea-473c-b524-9aaa1e0891e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{90a7dcd1-1d17-403c-81fe-cc46fe3c1b86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Test Source">
+      <UniqueIdentifier>{df1f4732-de20-4b76-a202-9050d353acd0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CUS_WIP_AddService.c">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_start_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_end_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_adapt_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_create_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_split_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_loss_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_skip_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_terminate_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_cv_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_hold_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_release_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_bonus_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_move_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_generate_id.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_test_process.c">
+      <Filter>Test Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_view_oper_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_view_lot_info.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_update_lot_loss.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_input_material_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_worker_management.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_process_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_worker_registration.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_store_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_unstore_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_move_lot_order.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_merge_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_regenerate_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_common.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_cup_cell_process_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_ship_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_non_operation.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_multi_process_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_input_lot_data.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_outsourcing_process.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_blending_order.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_view_material_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_view_oper_loss.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_view_label_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_view_worker_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_grit_class_process.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_inventory_survey.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_lot_press_data.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_update_loss_by_oper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_etc_in_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_etc_out_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_regenerate_p_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_send_resource_info.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_change_item.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_create_stock_in_oper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_validation_etc_out_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_delete_history.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_delete_lot_history.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_view_lot_history.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_update_productivity_goal.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_split_wip_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_move_lot_force.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_merge_wip_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_update_working_time.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_delete_p_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_create_erp_if_data.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_update_classify_master_data_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_change_test_prod_lot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_ras_yield_st.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_update_lot_res_worktime.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_WIP_update_lot_comment.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CUS_WIP_services.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CUS_WIP_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

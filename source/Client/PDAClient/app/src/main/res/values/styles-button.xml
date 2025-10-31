@@ -1,0 +1,51 @@
+<resources>
+
+    <!-- 하단 버튼 스타일 -->
+
+    <style name="Bottom_Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/bottom_button</item>
+        <item name="android:background">@drawable/raised_selector_login_btn</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Bottom_Button_White">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/bottom_button</item>
+        <item name="android:background">@drawable/border_login_btn_blue</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Bottom_Button_White_Up">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/bottom_button_up</item>
+        <item name="android:background">@drawable/border_login_btn_blue</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Bottom_Button_Text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">18dp</item>
+        <item name="custom_font">@string/FONT_NANUM_SQUARE_OTFB</item>
+    </style>
+
+    <style name="Bottom_Button_Text_Blue">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#0E569B</item>
+        <item name="android:textSize">18dp</item>
+        <item name="custom_font">@string/FONT_NANUM_SQUARE_OTFB</item>
+    </style>
+
+    <style name="Bottom_Button_Line">
+        <item name="android:layout_width">@dimen/default_line_size</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/LineColorPrimary</item>
+    </style>
+
+</resources>

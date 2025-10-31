@@ -1,0 +1,539 @@
+/*
+**
+**  File Name    : MESplusV5-Table-Migration_Table.sql
+**  Description  : MESplus V5 Release for Table Migration
+**
+**  DB Type      : Oracle
+**  DB Version   : Oracle 10g / 11g
+**
+**  Period       : 2013.02.18 ~ ****
+**  Release Date : ****
+**
+**  Copyright(C) MIRACOM,INC. All rights reserved.
+**
+**  1. 2013.02.18   Aiden   Create
+*/
+
+/* MWIPBINFML : BIN Grade Formula Definition Table */
+CREATE TABLE MWIPBINFML
+(
+    CREATE_USER_ID              VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    CREATE_TIME                 VARCHAR2(14)     DEFAULT(' ')    NOT NULL,
+    UPDATE_USER_ID              VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    UPDATE_TIME                 VARCHAR2(14)     DEFAULT(' ')    NOT NULL,
+    FACTORY                     VARCHAR2(10)     DEFAULT(' ')    NOT NULL,
+    BIN_ID                      VARCHAR2(30)     DEFAULT(' ')    NOT NULL,
+    BIN_VERSION                 NUMBER(5)        DEFAULT(0)      NOT NULL,
+    BIN_UNIT                    VARCHAR2(10)     DEFAULT(' ')    NOT NULL,
+    BIN_SEQ                     NUMBER(3)        DEFAULT(0)      NOT NULL,
+    /* Formula Type: 'G' - BIN Sequence Formula, 'T' - Sublot BIN Sequence Total Formula */
+    FML_TYPE                    CHAR(1)          DEFAULT(' ')    NOT NULL,
+    SEQ_NO                      NUMBER(6)        DEFAULT(0)      NOT NULL,
+    AND_OR                      VARCHAR2(3)      DEFAULT(' ')    NOT NULL,
+    L_BRACKET                   VARCHAR2(10)     DEFAULT(' ')    NOT NULL,
+    FORMULA                     VARCHAR2(4000)   DEFAULT(' ')    NOT NULL,
+    OPERATOR                    VARCHAR2(10)     DEFAULT(' ')    NOT NULL,
+    TARGET_VALUE                VARCHAR2(30)     DEFAULT(' ')    NOT NULL,
+    R_BRACKET                   VARCHAR2(10)     DEFAULT(' ')    NOT NULL
+) TABLESPACE MESPLUS_DATA_TS;
+
+ALTER TABLE MWIPBINFML
+ADD CONSTRAINT MWIPBINFML_PK PRIMARY KEY
+(
+    FACTORY,
+    BIN_ID,
+    BIN_VERSION,
+    BIN_UNIT,
+    BIN_SEQ,
+    FML_TYPE,
+    SEQ_NO
+) USING INDEX TABLESPACE MESPLUS_IDX_TS;
+
+
+INSERT INTO MWIPBINFML (CREATE_TIME,CREATE_USER_ID,FACTORY,BIN_ID,BIN_VERSION,BIN_UNIT,BIN_SEQ,FML_TYPE,SEQ_NO,FORMULA,OPERATOR,TARGET_VALUE)
+SELECT CREATE_TIME,CREATE_USER_ID,FACTORY,BIN_ID,BIN_VERSION,BIN_UNIT,BIN_SEQ,'G',1,FORMULA,OPERATOR,TARGET_VALUE
+FROM MWIPBINGRD
+WHERE FORMULA <> ' ';
+
+INSERT INTO MWIPBINFML (CREATE_TIME,CREATE_USER_ID,FACTORY,BIN_ID,BIN_VERSION,BIN_UNIT,BIN_SEQ,FML_TYPE,SEQ_NO,FORMULA,OPERATOR,TARGET_VALUE)
+SELECT CREATE_TIME,CREATE_USER_ID,FACTORY,BIN_ID,BIN_VERSION,BIN_UNIT,BIN_SEQ,'T',1,TG_FORMULA,TG_OPERATOR,TG_TARGET_VALUE
+FROM MWIPBINGRD
+WHERE TG_FORMULA <> ' ';
+
+
+ALTER TABLE MWIPBINGRD DROP COLUMN FORMULA;
+ALTER TABLE MWIPBINGRD DROP COLUMN OPERATOR;
+ALTER TABLE MWIPBINGRD DROP COLUMN TARGET_VALUE;
+ALTER TABLE MWIPBINGRD DROP COLUMN TG_FORMULA;
+ALTER TABLE MWIPBINGRD DROP COLUMN TG_OPERATOR;
+ALTER TABLE MWIPBINGRD DROP COLUMN TG_TARGET_VALUE;
+
+ALTER TABLE MWIPBINSHS RENAME COLUMN ACT_VALUE TO CHECK_RESULT;
+ALTER TABLE MWIPBINSHS MODIFY CHECK_RESULT VARCHAR2(4000)   DEFAULT (' ');
+ALTER TABLE MWIPBINSHS DROP COLUMN OPERATOR;
+ALTER TABLE MWIPBINSHS DROP COLUMN TARGET_VALUE;
+
+ALTER TABLE MWIPBINSSH RENAME COLUMN ACT_VALUE TO CHECK_RESULT;
+ALTER TABLE MWIPBINSSH MODIFY CHECK_RESULT VARCHAR2(4000)   DEFAULT (' ');
+ALTER TABLE MWIPBINSSH DROP COLUMN OPERATOR;
+ALTER TABLE MWIPBINSSH DROP COLUMN TARGET_VALUE;
+
+ALTER TABLE MWIPBINHIS ADD TRAN_USER_ID VARCHAR2(20) DEFAULT(' ') NOT NULL;
+
+
+DROP TABLE MBASCHKQRY CASCADE CONSTRAINT PURGE;
+CREATE TABLE MBASCHKQRY
+(
+    /* Create/Update Info. */
+    CREATE_USER_ID              VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    CREATE_TIME                 VARCHAR2(14)     DEFAULT(' ')    NOT NULL,
+    UPDATE_USER_ID              VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    UPDATE_TIME                 VARCHAR2(14)     DEFAULT(' ')    NOT NULL,
+    FACTORY                     VARCHAR2(10)     DEFAULT(' ')    NOT NULL,
+    QUERY_ID                    VARCHAR2(30)     DEFAULT(' ')    NOT NULL,
+    QUERY_TYPE                  VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    QUERY                       VARCHAR2(1000)   DEFAULT(' ')    NOT NULL,
+    ANSWER_FMT                  VARCHAR2(1)      DEFAULT(' ')    NOT NULL,
+    ANSWER_SIZE                 NUMBER(4)        DEFAULT(0)      NOT NULL,
+    VALID_TBL_TYPE              VARCHAR2(1)      DEFAULT(' ')    NOT NULL,
+    VALID_TBL_NAME              VARCHAR2(20)     DEFAULT(' ')    NOT NULL
+) TABLESPACE MESPLUS_DATA_TS;
+
+ALTER TABLE MBASCHKQRY
+ADD CONSTRAINT MBASCHKQRY_PK PRIMARY KEY
+(
+    FACTORY,
+    QUERY_ID
+) USING INDEX TABLESPACE HISTORY_IDX_TS;
+
+COMMENT ON TABLE MBASCHKQRY IS 'Query Definition';
+COMMENT ON COLUMN MBASCHKQRY.CREATE_TIME IS 'Create time';
+COMMENT ON COLUMN MBASCHKQRY.CREATE_USER_ID IS 'Create User';
+COMMENT ON COLUMN MBASCHKQRY.UPDATE_TIME IS 'Update Time';
+COMMENT ON COLUMN MBASCHKQRY.UPDATE_USER_ID IS 'Update User';   
+COMMENT ON COLUMN MBASCHKQRY.FACTORY IS 'Factory';
+COMMENT ON COLUMN MBASCHKQRY.QUERY_ID IS 'Query ID';
+COMMENT ON COLUMN MBASCHKQRY.QUERY_TYPE IS 'Query Type.';
+COMMENT ON COLUMN MBASCHKQRY.QUERY IS 'Query';  
+COMMENT ON COLUMN MBASCHKQRY.ANSWER_FMT IS 'Answer Format. ¡®A¡¯ : Ascii, ¡®N¡¯ : Number, ¡®F¡¯ : Float, ¡®D¡¯ : DateTime, ¡®E¡¯ : Date, ¡®T¡¯ : Time';
+COMMENT ON COLUMN MBASCHKQRY.ANSWER_SIZE IS 'Answer Size';
+COMMENT ON COLUMN MBASCHKQRY.VALID_TBL_TYPE IS 'Valid Table Type. ¡®A¡¯ : Allowed, ¡®N¡¯ : Not Allowed';
+
+
+
+DROP TABLE MBASCHKLST CASCADE CONSTRAINT PURGE;
+CREATE TABLE MBASCHKLST
+(
+    /* Create/Update Info. */                   
+    CREATE_USER_ID              VARCHAR2(20)    DEFAULT(' ')    NOT NULL,
+    CREATE_TIME                 VARCHAR2(14)    DEFAULT(' ')    NOT NULL,
+    UPDATE_USER_ID              VARCHAR2(20)    DEFAULT(' ')    NOT NULL,
+    UPDATE_TIME                 VARCHAR2(14)    DEFAULT(' ')    NOT NULL,
+    FACTORY                     VARCHAR2(10)    DEFAULT(' ')    NOT NULL,
+    CHKLIST_ID                  VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    CHKLIST_DESC                VARCHAR2(200)   DEFAULT(' ')    NOT NULL,
+    CHKLIST_TYPE                VARCHAR2(20)    DEFAULT(' ')    NOT NULL,
+    LOT_OR_RES_FLAG             VARCHAR2(1)     DEFAULT(' ')    NOT NULL,
+    CHKLIST_GRP_1               VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    CHKLIST_GRP_2               VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    CHKLIST_GRP_3               VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    CHKLIST_GRP_4               VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    CHKLIST_GRP_5               VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    CHKLIST_GRP_6               VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    CHKLIST_GRP_7               VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    CHKLIST_GRP_8               VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    CHKLIST_GRP_9               VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    CHKLIST_GRP_10              VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    CHKLIST_CMF_1               VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    CHKLIST_CMF_2               VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    CHKLIST_CMF_3               VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    CHKLIST_CMF_4               VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    CHKLIST_CMF_5               VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    CHKLIST_CMF_6               VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    CHKLIST_CMF_7               VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    CHKLIST_CMF_8               VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    CHKLIST_CMF_9               VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    CHKLIST_CMF_10              VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    KEY_1_PMT                   VARCHAR2(50)    DEFAULT(' ')    NOT NULL,
+    KEY_2_PMT                   VARCHAR2(50)    DEFAULT(' ')    NOT NULL,
+    KEY_3_PMT                   VARCHAR2(50)    DEFAULT(' ')    NOT NULL,
+    KEY_4_PMT                   VARCHAR2(50)    DEFAULT(' ')    NOT NULL,
+    KEY_5_PMT                   VARCHAR2(50)    DEFAULT(' ')    NOT NULL,
+    KEY_6_PMT                   VARCHAR2(50)    DEFAULT(' ')    NOT NULL,
+    KEY_7_PMT                   VARCHAR2(50)    DEFAULT(' ')    NOT NULL,
+    KEY_8_PMT                   VARCHAR2(50)    DEFAULT(' ')    NOT NULL,
+    KEY_9_PMT                   VARCHAR2(50)    DEFAULT(' ')    NOT NULL,
+    KEY_10_PMT                  VARCHAR2(50)    DEFAULT(' ')    NOT NULL,
+    KEY_1_REQ                   VARCHAR2(1)     DEFAULT(' ')    NOT NULL,
+    KEY_2_REQ                   VARCHAR2(1)     DEFAULT(' ')    NOT NULL,
+    KEY_3_REQ                   VARCHAR2(1)     DEFAULT(' ')    NOT NULL,
+    KEY_4_REQ                   VARCHAR2(1)     DEFAULT(' ')    NOT NULL,
+    KEY_5_REQ                   VARCHAR2(1)     DEFAULT(' ')    NOT NULL,
+    KEY_6_REQ                   VARCHAR2(1)     DEFAULT(' ')    NOT NULL,
+    KEY_7_REQ                   VARCHAR2(1)     DEFAULT(' ')    NOT NULL,
+    KEY_8_REQ                   VARCHAR2(1)     DEFAULT(' ')    NOT NULL,
+    KEY_9_REQ                   VARCHAR2(1)     DEFAULT(' ')    NOT NULL,
+    KEY_10_REQ                  VARCHAR2(1)     DEFAULT(' ')    NOT NULL,
+    KEY_1_FMT                   VARCHAR2(1)     DEFAULT(' ')    NOT NULL,
+    KEY_2_FMT                   VARCHAR2(1)     DEFAULT(' ')    NOT NULL,
+    KEY_3_FMT                   VARCHAR2(1)     DEFAULT(' ')    NOT NULL,
+    KEY_4_FMT                   VARCHAR2(1)     DEFAULT(' ')    NOT NULL,
+    KEY_5_FMT                   VARCHAR2(1)     DEFAULT(' ')    NOT NULL,
+    KEY_6_FMT                   VARCHAR2(1)     DEFAULT(' ')    NOT NULL,
+    KEY_7_FMT                   VARCHAR2(1)     DEFAULT(' ')    NOT NULL,
+    KEY_8_FMT                   VARCHAR2(1)     DEFAULT(' ')    NOT NULL,
+    KEY_9_FMT                   VARCHAR2(1)     DEFAULT(' ')    NOT NULL,
+    KEY_10_FMT                  VARCHAR2(1)     DEFAULT(' ')    NOT NULL,
+    KEY_1_TBL                   VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    KEY_2_TBL                   VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    KEY_3_TBL                   VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    KEY_4_TBL                   VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    KEY_5_TBL                   VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    KEY_6_TBL                   VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    KEY_7_TBL                   VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    KEY_8_TBL                   VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    KEY_9_TBL                   VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    KEY_10_TBL                  VARCHAR2(30)    DEFAULT(' ')    NOT NULL,
+    KEY_1_ITEM                   VARCHAR2(100)    DEFAULT(' ')    NOT NULL,
+    KEY_2_ITEM                   VARCHAR2(100)    DEFAULT(' ')    NOT NULL,
+    KEY_3_ITEM                   VARCHAR2(100)    DEFAULT(' ')    NOT NULL,
+    KEY_4_ITEM                   VARCHAR2(100)    DEFAULT(' ')    NOT NULL,
+    KEY_5_ITEM                   VARCHAR2(100)    DEFAULT(' ')    NOT NULL,
+    KEY_6_ITEM                   VARCHAR2(100)    DEFAULT(' ')    NOT NULL,
+    KEY_7_ITEM                   VARCHAR2(100)    DEFAULT(' ')    NOT NULL,
+    KEY_8_ITEM                   VARCHAR2(100)    DEFAULT(' ')    NOT NULL,
+    KEY_9_ITEM                   VARCHAR2(100)    DEFAULT(' ')    NOT NULL,
+    KEY_10_ITEM                  VARCHAR2(100)    DEFAULT(' ')    NOT NULL
+) TABLESPACE MESPLUS_DATA_TS;
+
+ALTER TABLE MBASCHKLST
+ADD CONSTRAINT MBASCHKLST_PK PRIMARY KEY
+(
+    FACTORY,
+    CHKLIST_ID
+) USING INDEX TABLESPACE MESPLUS_IDX_TS;
+
+COMMENT ON TABLE MBASCHKLST IS 'Check List Definition';
+COMMENT ON COLUMN MBASCHKLST.CREATE_TIME IS 'Create time';
+COMMENT ON COLUMN MBASCHKLST.CREATE_USER_ID IS 'Create User';
+COMMENT ON COLUMN MBASCHKLST.UPDATE_TIME IS 'Update Time';
+COMMENT ON COLUMN MBASCHKLST.UPDATE_USER_ID IS 'Update User';   
+COMMENT ON COLUMN MBASCHKLST.FACTORY IS 'Factory';
+COMMENT ON COLUMN MBASCHKLST.CHKLIST_ID IS 'Check list ID';
+COMMENT ON COLUMN MBASCHKLST.CHKLIST_DESC IS 'Check list Desc';
+COMMENT ON COLUMN MBASCHKLST.CHKLIST_TYPE IS 'Check List Type';  
+COMMENT ON COLUMN MBASCHKLST.LOT_OR_RES_FLAG IS 'Select Lot or Resource';
+COMMENT ON COLUMN MBASCHKLST.CHKLIST_GRP_1 IS 'Check List Group 1';
+COMMENT ON COLUMN MBASCHKLST.CHKLIST_GRP_2 IS 'Check List Group 2';
+COMMENT ON COLUMN MBASCHKLST.CHKLIST_GRP_3 IS 'Check List Group 3';
+COMMENT ON COLUMN MBASCHKLST.CHKLIST_GRP_4 IS 'Check List Group 4';
+COMMENT ON COLUMN MBASCHKLST.CHKLIST_GRP_5 IS 'Check List Group 5';
+COMMENT ON COLUMN MBASCHKLST.CHKLIST_GRP_6 IS 'Check List Group 6';
+COMMENT ON COLUMN MBASCHKLST.CHKLIST_GRP_7 IS 'Check List Group 7';
+COMMENT ON COLUMN MBASCHKLST.CHKLIST_GRP_8 IS 'Check List Group 8';
+COMMENT ON COLUMN MBASCHKLST.CHKLIST_GRP_9 IS 'Check List Group 9';
+COMMENT ON COLUMN MBASCHKLST.CHKLIST_GRP_10 IS 'Check List Group 10';
+COMMENT ON COLUMN MBASCHKLST.CHKLIST_CMF_1 IS 'Check List Customized Field 1';
+COMMENT ON COLUMN MBASCHKLST.CHKLIST_CMF_2 IS 'Check List Customized Field 2';
+COMMENT ON COLUMN MBASCHKLST.CHKLIST_CMF_3 IS 'Check List Customized Field 3';
+COMMENT ON COLUMN MBASCHKLST.CHKLIST_CMF_4 IS 'Check List Customized Field 4';
+COMMENT ON COLUMN MBASCHKLST.CHKLIST_CMF_5 IS 'Check List Customized Field 5';
+COMMENT ON COLUMN MBASCHKLST.CHKLIST_CMF_6 IS 'Check List Customized Field 6';
+COMMENT ON COLUMN MBASCHKLST.CHKLIST_CMF_7 IS 'Check List Customized Field 7';
+COMMENT ON COLUMN MBASCHKLST.CHKLIST_CMF_8 IS 'Check List Customized Field 8';
+COMMENT ON COLUMN MBASCHKLST.CHKLIST_CMF_9 IS 'Check List Customized Field 9';
+COMMENT ON COLUMN MBASCHKLST.CHKLIST_CMF_10 IS 'Check List Customized Field 10';
+COMMENT ON COLUMN MBASCHKLST.KEY_1_PMT IS 'Key value Prompt';
+COMMENT ON COLUMN MBASCHKLST.KEY_2_PMT IS 'Key value Prompt';
+COMMENT ON COLUMN MBASCHKLST.KEY_3_PMT IS 'Key value Prompt';
+COMMENT ON COLUMN MBASCHKLST.KEY_4_PMT IS 'Key value Prompt';
+COMMENT ON COLUMN MBASCHKLST.KEY_5_PMT IS 'Key value Prompt';
+COMMENT ON COLUMN MBASCHKLST.KEY_6_PMT IS 'Key value Prompt';
+COMMENT ON COLUMN MBASCHKLST.KEY_7_PMT IS 'Key value Prompt';
+COMMENT ON COLUMN MBASCHKLST.KEY_8_PMT IS 'Key value Prompt';
+COMMENT ON COLUMN MBASCHKLST.KEY_9_PMT IS 'Key value Prompt';
+COMMENT ON COLUMN MBASCHKLST.KEY_10_PMT IS 'Key value Prompt';
+COMMENT ON COLUMN MBASCHKLST.KEY_1_REQ IS 'Key value required or not, - ¡®Y¡¯ : Required';
+COMMENT ON COLUMN MBASCHKLST.KEY_2_REQ IS 'Key value required or not, - ¡®Y¡¯ : Required';
+COMMENT ON COLUMN MBASCHKLST.KEY_3_REQ IS 'Key value required or not, - ¡®Y¡¯ : Required';
+COMMENT ON COLUMN MBASCHKLST.KEY_4_REQ IS 'Key value required or not, - ¡®Y¡¯ : Required';
+COMMENT ON COLUMN MBASCHKLST.KEY_5_REQ IS 'Key value required or not, - ¡®Y¡¯ : Required';
+COMMENT ON COLUMN MBASCHKLST.KEY_6_REQ IS 'Key value required or not, - ¡®Y¡¯ : Required';
+COMMENT ON COLUMN MBASCHKLST.KEY_7_REQ IS 'Key value required or not, - ¡®Y¡¯ : Required';
+COMMENT ON COLUMN MBASCHKLST.KEY_8_REQ IS 'Key value required or not, - ¡®Y¡¯ : Required';
+COMMENT ON COLUMN MBASCHKLST.KEY_9_REQ IS 'Key value required or not, - ¡®Y¡¯ : Required';
+COMMENT ON COLUMN MBASCHKLST.KEY_10_REQ IS 'Key value required or not, - ¡®Y¡¯ : Required';
+COMMENT ON COLUMN MBASCHKLST.KEY_1_FMT IS 'Key value Format, -  ¡®A¡¯ : Ascii, ¡®N¡¯ : Number, ¡®F¡¯ : Float, ¡®D¡¯ : DateTime, ¡®E¡¯ : Date, ¡®T¡¯ : Time';
+COMMENT ON COLUMN MBASCHKLST.KEY_2_FMT IS 'Key value Format, -  ¡®A¡¯ : Ascii, ¡®N¡¯ : Number, ¡®F¡¯ : Float, ¡®D¡¯ : DateTime, ¡®E¡¯ : Date, ¡®T¡¯ : Time';
+COMMENT ON COLUMN MBASCHKLST.KEY_3_FMT IS 'Key value Format, -  ¡®A¡¯ : Ascii, ¡®N¡¯ : Number, ¡®F¡¯ : Float, ¡®D¡¯ : DateTime, ¡®E¡¯ : Date, ¡®T¡¯ : Time';
+COMMENT ON COLUMN MBASCHKLST.KEY_4_FMT IS 'Key value Format, -  ¡®A¡¯ : Ascii, ¡®N¡¯ : Number, ¡®F¡¯ : Float, ¡®D¡¯ : DateTime, ¡®E¡¯ : Date, ¡®T¡¯ : Time';
+COMMENT ON COLUMN MBASCHKLST.KEY_5_FMT IS 'Key value Format, -  ¡®A¡¯ : Ascii, ¡®N¡¯ : Number, ¡®F¡¯ : Float, ¡®D¡¯ : DateTime, ¡®E¡¯ : Date, ¡®T¡¯ : Time';
+COMMENT ON COLUMN MBASCHKLST.KEY_6_FMT IS 'Key value Format, -  ¡®A¡¯ : Ascii, ¡®N¡¯ : Number, ¡®F¡¯ : Float, ¡®D¡¯ : DateTime, ¡®E¡¯ : Date, ¡®T¡¯ : Time';
+COMMENT ON COLUMN MBASCHKLST.KEY_7_FMT IS 'Key value Format, -  ¡®A¡¯ : Ascii, ¡®N¡¯ : Number, ¡®F¡¯ : Float, ¡®D¡¯ : DateTime, ¡®E¡¯ : Date, ¡®T¡¯ : Time';
+COMMENT ON COLUMN MBASCHKLST.KEY_8_FMT IS 'Key value Format, -  ¡®A¡¯ : Ascii, ¡®N¡¯ : Number, ¡®F¡¯ : Float, ¡®D¡¯ : DateTime, ¡®E¡¯ : Date, ¡®T¡¯ : Time';
+COMMENT ON COLUMN MBASCHKLST.KEY_9_FMT IS 'Key value Format, -  ¡®A¡¯ : Ascii, ¡®N¡¯ : Number, ¡®F¡¯ : Float, ¡®D¡¯ : DateTime, ¡®E¡¯ : Date, ¡®T¡¯ : Time';
+COMMENT ON COLUMN MBASCHKLST.KEY_10_FMT IS 'Key value Format, -  ¡®A¡¯ : Ascii, ¡®N¡¯ : Number, ¡®F¡¯ : Float, ¡®D¡¯ : DateTime, ¡®E¡¯ : Date, ¡®T¡¯ : Time';
+COMMENT ON COLUMN MBASCHKLST.KEY_1_TBL IS 'Key value validation table';
+COMMENT ON COLUMN MBASCHKLST.KEY_2_TBL IS 'Key value validation table';
+COMMENT ON COLUMN MBASCHKLST.KEY_3_TBL IS 'Key value validation table';
+COMMENT ON COLUMN MBASCHKLST.KEY_4_TBL IS 'Key value validation table';
+COMMENT ON COLUMN MBASCHKLST.KEY_5_TBL IS 'Key value validation table';
+COMMENT ON COLUMN MBASCHKLST.KEY_6_TBL IS 'Key value validation table';
+COMMENT ON COLUMN MBASCHKLST.KEY_7_TBL IS 'Key value validation table';
+COMMENT ON COLUMN MBASCHKLST.KEY_8_TBL IS 'Key value validation table';
+COMMENT ON COLUMN MBASCHKLST.KEY_9_TBL IS 'Key value validation table';
+COMMENT ON COLUMN MBASCHKLST.KEY_10_TBL IS 'Key value validation table';
+COMMENT ON COLUMN MBASCHKLST.KEY_1_ITEM IS 'Key value validation Item';
+COMMENT ON COLUMN MBASCHKLST.KEY_2_ITEM IS 'Key value validation Item';
+COMMENT ON COLUMN MBASCHKLST.KEY_3_ITEM IS 'Key value validation Item';
+COMMENT ON COLUMN MBASCHKLST.KEY_4_ITEM IS 'Key value validation Item';
+COMMENT ON COLUMN MBASCHKLST.KEY_5_ITEM IS 'Key value validation Item';
+COMMENT ON COLUMN MBASCHKLST.KEY_6_ITEM IS 'Key value validation Item';
+COMMENT ON COLUMN MBASCHKLST.KEY_7_ITEM IS 'Key value validation Item';
+COMMENT ON COLUMN MBASCHKLST.KEY_8_ITEM IS 'Key value validation Item';
+COMMENT ON COLUMN MBASCHKLST.KEY_9_ITEM IS 'Key value validation Item';
+COMMENT ON COLUMN MBASCHKLST.KEY_10_ITEM IS 'Key value validation Item';
+
+
+DROP TABLE MBASCHKLSQ CASCADE CONSTRAINT PURGE;
+CREATE TABLE MBASCHKLSQ
+(
+    /* Create/Update Info. */
+    CREATE_USER_ID              VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    CREATE_TIME                 VARCHAR2(14)     DEFAULT(' ')    NOT NULL,
+    UPDATE_USER_ID              VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    UPDATE_TIME                 VARCHAR2(14)     DEFAULT(' ')    NOT NULL,
+    FACTORY                     VARCHAR2(10)     DEFAULT(' ')    NOT NULL,
+    CHKLIST_ID                  VARCHAR2(30)     DEFAULT(' ')    NOT NULL,
+    QUERY_ID                    VARCHAR2(30)     DEFAULT(' ')    NOT NULL,
+    DISP_SEQ                    NUMBER(3)        DEFAULT(0)      NOT NULL,
+    REQUIRE_FLAG                VARCHAR2(1)      DEFAULT(' ')    NOT NULL
+) TABLESPACE MESPLUS_DATA_TS;
+
+ALTER TABLE MBASCHKLSQ
+ADD CONSTRAINT MBASCHKLSQ_PK PRIMARY KEY
+(
+    FACTORY,
+    CHKLIST_ID,
+    QUERY_ID
+) USING INDEX TABLESPACE MESPLUS_IDX_TS;
+
+COMMENT ON TABLE MBASCHKLSQ IS 'Check List ID - Query ID Definition';
+COMMENT ON COLUMN MBASCHKLSQ.CREATE_TIME IS 'Create time';
+COMMENT ON COLUMN MBASCHKLSQ.CREATE_USER_ID IS 'Create User';
+COMMENT ON COLUMN MBASCHKLSQ.UPDATE_TIME IS 'Update Time';
+COMMENT ON COLUMN MBASCHKLSQ.UPDATE_USER_ID IS 'Update User';   
+COMMENT ON COLUMN MBASCHKLSQ.FACTORY IS 'Factory';
+COMMENT ON COLUMN MBASCHKLSQ.CHKLIST_ID IS 'Check list ID';
+COMMENT ON COLUMN MBASCHKLSQ.QUERY_ID IS 'Query ID';
+COMMENT ON COLUMN MBASCHKLSQ.DISP_SEQ IS 'Query display Sequence';  
+COMMENT ON COLUMN MBASCHKLSQ.REQUIRE_FLAG IS 'Y : Require Answer';
+
+
+DROP TABLE MBASCHKLSR CASCADE CONSTRAINT PURGE;
+CREATE TABLE MBASCHKLSR
+(
+    /* Create/Update Info. */
+    CREATE_USER_ID              VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    CREATE_TIME                 VARCHAR2(14)     DEFAULT(' ')    NOT NULL,
+    UPDATE_USER_ID              VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    UPDATE_TIME                 VARCHAR2(14)     DEFAULT(' ')    NOT NULL,
+    FACTORY                     VARCHAR2(10)     DEFAULT(' ')    NOT NULL,
+    REL_LEVEL                   VARCHAR2(1)      DEFAULT(' ')    NOT NULL,
+    MAT_ID                      VARCHAR2(30)     DEFAULT(' ')    NOT NULL,
+    MAT_VER                     NUMBER(6)        DEFAULT(0)      NOT NULL,
+    FLOW                        VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    OPER                        VARCHAR2(10)     DEFAULT(' ')    NOT NULL,
+    BA_POINT                    VARCHAR2(1)      DEFAULT(' ')    NOT NULL,
+    LOT_ID                      VARCHAR2(25)     DEFAULT(' ')    NOT NULL,
+    TRAN_CODE                   VARCHAR2(12)     DEFAULT(' ')    NOT NULL,
+    RESG_ID                     VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    RES_TYPE                    VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    RES_ID                      VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    EVENT_ID                    VARCHAR2(12)     DEFAULT(' ')    NOT NULL,
+    CHKLIST_ID                  VARCHAR2(30)     DEFAULT(' ')    NOT NULL,
+    REL_KEY                     VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    APPLY_FROM_TIME             VARCHAR2(14)     DEFAULT(' ')    NOT NULL,
+    APPLY_TO_TIME               VARCHAR2(14)     DEFAULT(' ')    NOT NULL,
+    REQ_COMPLETE_FLAG           VARCHAR2(1)      DEFAULT(' ')    NOT NULL,
+    COMPLETE_USER_ID            VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    INHERIT_CHILD_FLAG          VARCHAR2(1)      DEFAULT(' ')    NOT NULL,
+    KEY_1_REQ                   VARCHAR2(1)      DEFAULT(' ')    NOT NULL,
+    KEY_2_REQ                   VARCHAR2(1)      DEFAULT(' ')    NOT NULL,
+    KEY_3_REQ                   VARCHAR2(1)      DEFAULT(' ')    NOT NULL,
+    KEY_4_REQ                   VARCHAR2(1)      DEFAULT(' ')    NOT NULL,
+    KEY_5_REQ                   VARCHAR2(1)      DEFAULT(' ')    NOT NULL,
+    KEY_6_REQ                   VARCHAR2(1)      DEFAULT(' ')    NOT NULL,
+    KEY_7_REQ                   VARCHAR2(1)      DEFAULT(' ')    NOT NULL,
+    KEY_8_REQ                   VARCHAR2(1)      DEFAULT(' ')    NOT NULL,
+    KEY_9_REQ                   VARCHAR2(1)      DEFAULT(' ')    NOT NULL,
+    KEY_10_REQ                  VARCHAR2(1)      DEFAULT(' ')    NOT NULL
+) TABLESPACE MESPLUS_DATA_TS;
+
+ALTER TABLE MBASCHKLSR
+ADD CONSTRAINT MBASCHKLSR_PK PRIMARY KEY
+(
+    FACTORY,          
+    REL_LEVEL,        
+    MAT_ID,            
+    MAT_VER,        
+    FLOW,            
+    OPER,  
+    BA_POINT,          
+    LOT_ID,           
+    TRAN_CODE,        
+    RESG_ID,          
+    RES_TYPE,         
+    RES_ID,           
+    EVENT_ID,    
+    CHKLIST_ID    
+) USING INDEX TABLESPACE MESPLUS_IDX_TS;
+
+COMMENT ON TABLE MBASCHKLSR IS 'Checklist and MFO Relation';
+COMMENT ON COLUMN MBASCHKLSR.CREATE_TIME IS 'Create time';
+COMMENT ON COLUMN MBASCHKLSR.CREATE_USER_ID IS 'Create User';
+COMMENT ON COLUMN MBASCHKLSR.UPDATE_TIME IS 'Update Time';
+COMMENT ON COLUMN MBASCHKLSR.UPDATE_USER_ID IS 'Update User';   
+COMMENT ON COLUMN MBASCHKLSR.FACTORY IS 'Factory';
+COMMENT ON COLUMN MBASCHKLSR.REL_LEVEL IS 'Relation Level';        
+COMMENT ON COLUMN MBASCHKLSR.MAT_ID IS 'Material ID';
+COMMENT ON COLUMN MBASCHKLSR.MAT_VER IS 'Material Version';
+COMMENT ON COLUMN MBASCHKLSR.FLOW IS 'Flow';
+COMMENT ON COLUMN MBASCHKLSR.OPER IS 'Oper';
+COMMENT ON COLUMN MBASCHKLSR.BA_POINT IS 'The action point of Tran or Event. B : Before, A : After';
+COMMENT ON COLUMN MBASCHKLSR.LOT_ID IS 'Lot ID';
+COMMENT ON COLUMN MBASCHKLSR.TRAN_CODE IS 'Transaction Code';
+COMMENT ON COLUMN MBASCHKLSR.RESG_ID IS 'Resource Group';
+COMMENT ON COLUMN MBASCHKLSR.RES_TYPE IS 'Resource Type';
+COMMENT ON COLUMN MBASCHKLSR.RES_ID IS 'Resource ID';
+COMMENT ON COLUMN MBASCHKLSR.EVENT_ID IS 'Event ID';
+COMMENT ON COLUMN MBASCHKLSR.CHKLIST_ID IS 'Check List ID';
+COMMENT ON COLUMN MBASCHKLSR.REL_KEY IS 'Relation Key';
+COMMENT ON COLUMN MBASCHKLSR.APPLY_FROM_TIME IS 'Apply From Time';
+COMMENT ON COLUMN MBASCHKLSR.APPLY_TO_TIME IS 'Apply To Time';
+COMMENT ON COLUMN MBASCHKLSR.REQ_COMPLETE_FLAG IS 'Require Complete Flag';
+COMMENT ON COLUMN MBASCHKLSR.COMPLETE_USER_ID IS 'Complete User';
+COMMENT ON COLUMN MBASCHKLSR.INHERIT_CHILD_FLAG IS 'Inherit Child Flag';
+COMMENT ON COLUMN MBASCHKLSR.KEY_1_REQ IS 'Key 1 Value Required or not. - "Y" : Required';
+COMMENT ON COLUMN MBASCHKLSR.KEY_2_REQ IS 'Key 2 Value Required or not. - "Y" : Required';
+COMMENT ON COLUMN MBASCHKLSR.KEY_3_REQ IS 'Key 3 Value Required or not. - "Y" : Required';
+COMMENT ON COLUMN MBASCHKLSR.KEY_4_REQ IS 'Key 4 Value Required or not. - "Y" : Required';
+COMMENT ON COLUMN MBASCHKLSR.KEY_5_REQ IS 'Key 5 Value Required or not. - "Y" : Required';
+COMMENT ON COLUMN MBASCHKLSR.KEY_6_REQ IS 'Key 6 Value Required or not. - "Y" : Required';
+COMMENT ON COLUMN MBASCHKLSR.KEY_7_REQ IS 'Key 7 Value Required or not. - "Y" : Required';
+COMMENT ON COLUMN MBASCHKLSR.KEY_8_REQ IS 'Key 8 Value Required or not. - "Y" : Required';
+COMMENT ON COLUMN MBASCHKLSR.KEY_9_REQ IS 'Key 9 Value Required or not. - "Y" : Required';
+COMMENT ON COLUMN MBASCHKLSR.KEY_10_REQ IS 'Key 10 Value Required or not. - "Y" : Required';
+
+
+CREATE TABLE MBASCHKLSH
+(
+    /* Create/Update Info. */
+    CREATE_USER_ID              VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    CREATE_TIME                 VARCHAR2(14)     DEFAULT(' ')    NOT NULL,
+    UPDATE_USER_ID              VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    UPDATE_TIME                 VARCHAR2(14)     DEFAULT(' ')    NOT NULL,
+    FACTORY                     VARCHAR2(10)     DEFAULT(' ')    NOT NULL,
+    CHKLIST_ID                  VARCHAR2(30)     DEFAULT(' ')    NOT NULL,
+    REL_KEY                     VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    HIST_SEQ                    NUMBER(6)        DEFAULT(0)      NOT NULL,
+    TRAN_TIME                   VARCHAR2(14)     DEFAULT(' ')    NOT NULL,
+    TRAN_USER_ID                VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    COMPLETE_FLAG               VARCHAR2(1)      DEFAULT(' ')    NOT NULL,
+    COMPLETE_TIME               VARCHAR2(14)     DEFAULT(' ')    NOT NULL,
+    COMPLETE_USER_ID            VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    DELETE_FLAG                 VARCHAR2(1)      DEFAULT(' ')    NOT NULL,
+    DELETE_TIME                 VARCHAR2(14)     DEFAULT(' ')    NOT NULL,
+    DELETE_USER_ID              VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    BASE_OBJ_ID                 VARCHAR2(30)     DEFAULT(' ')    NOT NULL,
+    BASE_OBJ_HIST_SEQ           NUMBER(6)        DEFAULT(0)      NOT NULL,
+    KEY_1_VALUE                 VARCHAR2(100)    DEFAULT(' ')    NOT NULL,
+    KEY_2_VALUE                 VARCHAR2(100)    DEFAULT(' ')    NOT NULL,
+    KEY_3_VALUE                 VARCHAR2(100)    DEFAULT(' ')    NOT NULL,
+    KEY_4_VALUE                 VARCHAR2(100)    DEFAULT(' ')    NOT NULL,
+    KEY_5_VALUE                 VARCHAR2(100)    DEFAULT(' ')    NOT NULL,
+    KEY_6_VALUE                 VARCHAR2(100)    DEFAULT(' ')    NOT NULL,
+    KEY_7_VALUE                 VARCHAR2(100)    DEFAULT(' ')    NOT NULL,
+    KEY_8_VALUE                 VARCHAR2(100)    DEFAULT(' ')    NOT NULL,
+    KEY_9_VALUE                 VARCHAR2(100)    DEFAULT(' ')    NOT NULL,
+    KEY_10_VALUE                VARCHAR2(100)    DEFAULT(' ')    NOT NULL
+) TABLESPACE MESPLUS_DATA_TS;
+
+ALTER TABLE MBASCHKLSH
+ADD CONSTRAINT MBASCHKLSH_PK PRIMARY KEY
+(
+    FACTORY,
+    CHKLIST_ID,
+    HIST_SEQ
+) USING INDEX TABLESPACE MESPLUS_IDX_TS;
+
+COMMENT ON TABLE MBASCHKLSH IS 'Checklist History';
+COMMENT ON COLUMN MBASCHKLSH.CREATE_TIME IS 'Create time';
+COMMENT ON COLUMN MBASCHKLSH.CREATE_USER_ID IS 'Create User';
+COMMENT ON COLUMN MBASCHKLSH.UPDATE_TIME IS 'Update Time';
+COMMENT ON COLUMN MBASCHKLSH.UPDATE_USER_ID IS 'Update User';   
+COMMENT ON COLUMN MBASCHKLSH.FACTORY IS 'Factory';
+COMMENT ON COLUMN MBASCHKLSH.CHKLIST_ID IS 'Check List ID';
+COMMENT ON COLUMN MBASCHKLSH.REL_KEY IS 'Check List Relation Key';
+COMMENT ON COLUMN MBASCHKLSH.HIST_SEQ IS 'Check List Relation History Sequence';
+COMMENT ON COLUMN MBASCHKLSH.TRAN_TIME IS 'First Answer Time';
+COMMENT ON COLUMN MBASCHKLSH.TRAN_USER_ID IS 'First Answer User';
+COMMENT ON COLUMN MBASCHKLSH.COMPLETE_FLAG IS 'Complete Flag';
+COMMENT ON COLUMN MBASCHKLSH.COMPLETE_TIME IS 'Complete Time';
+COMMENT ON COLUMN MBASCHKLSH.COMPLETE_USER_ID IS 'Complete User';
+COMMENT ON COLUMN MBASCHKLSH.DELETE_FLAG IS 'Delete Flag';
+COMMENT ON COLUMN MBASCHKLSH.DELETE_TIME IS 'Delete Time';
+COMMENT ON COLUMN MBASCHKLSH.DELETE_USER_ID IS 'Delete User';
+COMMENT ON COLUMN MBASCHKLSH.BASE_OBJ_ID IS 'Lot or Resource ID';
+COMMENT ON COLUMN MBASCHKLSH.BASE_OBJ_HIST_SEQ IS 'Lot or Resource History Sequence';
+COMMENT ON COLUMN MBASCHKLSH.KEY_1_VALUE IS 'Key 1 Value';
+COMMENT ON COLUMN MBASCHKLSH.KEY_2_VALUE IS 'Key 2 Value';
+COMMENT ON COLUMN MBASCHKLSH.KEY_3_VALUE IS 'Key 3 Value';
+COMMENT ON COLUMN MBASCHKLSH.KEY_4_VALUE IS 'Key 4 Value';
+COMMENT ON COLUMN MBASCHKLSH.KEY_5_VALUE IS 'Key 5 Value';
+COMMENT ON COLUMN MBASCHKLSH.KEY_6_VALUE IS 'Key 6 Value';
+COMMENT ON COLUMN MBASCHKLSH.KEY_7_VALUE IS 'Key 7 Value';
+COMMENT ON COLUMN MBASCHKLSH.KEY_8_VALUE IS 'Key 8 Value';
+COMMENT ON COLUMN MBASCHKLSH.KEY_9_VALUE IS 'Key 9 Value';
+COMMENT ON COLUMN MBASCHKLSH.KEY_10_VALUE IS 'Key 10 Value';
+
+
+CREATE TABLE MBASCHKLSA
+(
+    /* Create/Update Info. */
+    CREATE_USER_ID              VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    CREATE_TIME                 VARCHAR2(14)     DEFAULT(' ')    NOT NULL,
+    UPDATE_USER_ID              VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    UPDATE_TIME                 VARCHAR2(14)     DEFAULT(' ')    NOT NULL,
+    FACTORY                     VARCHAR2(10)     DEFAULT(' ')    NOT NULL,
+    CHKLIST_ID                  VARCHAR2(30)     DEFAULT(' ')    NOT NULL,
+    REL_KEY                     VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    HIST_SEQ                    NUMBER(6)        DEFAULT(0)      NOT NULL,
+    QUERY_ID                    VARCHAR2(30)     DEFAULT(' ')    NOT NULL,
+    TRAN_TIME                   VARCHAR2(14)     DEFAULT(' ')    NOT NULL,
+    TRAN_USER_ID                VARCHAR2(20)     DEFAULT(' ')    NOT NULL,
+    ANSWER                      VARCHAR2(4000)   DEFAULT(' ')    NOT NULL
+) TABLESPACE MESPLUS_DATA_TS;
+
+ALTER TABLE MBASCHKLSA
+ADD CONSTRAINT MBASCHKLSA_PK PRIMARY KEY
+(
+    FACTORY,
+    CHKLIST_ID,
+    HIST_SEQ,
+    QUERY_ID
+) USING INDEX TABLESPACE MESPLUS_IDX_TS;
+
+COMMENT ON TABLE MBASCHKLSA IS 'Answer Checklist History';
+COMMENT ON COLUMN MBASCHKLSA.CREATE_TIME IS 'Create time';
+COMMENT ON COLUMN MBASCHKLSA.CREATE_USER_ID IS 'Create User';
+COMMENT ON COLUMN MBASCHKLSA.UPDATE_TIME IS 'Update Time';
+COMMENT ON COLUMN MBASCHKLSA.UPDATE_USER_ID IS 'Update User';   
+COMMENT ON COLUMN MBASCHKLSA.FACTORY IS 'Factory';
+COMMENT ON COLUMN MBASCHKLSA.CHKLIST_ID IS 'Check List ID';
+COMMENT ON COLUMN MBASCHKLSA.REL_KEY IS 'Check List Relation Key';
+COMMENT ON COLUMN MBASCHKLSA.HIST_SEQ IS 'Check List Relation History Sequence';
+COMMENT ON COLUMN MBASCHKLSA.QUERY_ID IS 'Query ID';
+COMMENT ON COLUMN MBASCHKLSA.TRAN_TIME IS 'First Answer Time';
+COMMENT ON COLUMN MBASCHKLSA.TRAN_USER_ID IS 'First Answer User';
+COMMENT ON COLUMN MBASCHKLSA.ANSWER IS 'Query Anser';

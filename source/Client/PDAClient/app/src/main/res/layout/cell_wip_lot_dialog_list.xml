@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_text_box_height"
+        android:background="@drawable/selector_white_btn"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/default_line_size"
+                android:layout_height="match_parent"
+                android:background="#e1e1e1"/>
+
+            <com.pda.mes.widget.FontTextView
+                android:id="@+id/cellLotId"
+                style="@style/ListView_Title.Barcode"
+                android:gravity="center"
+                android:textColor="@drawable/text_selector_button"
+                android:textSize="11dp"
+                app:custom_font="@string/FONT_NANUM_SQUARE_OTFR"/>
+
+            <View
+                android:layout_width="@dimen/default_line_size"
+                android:layout_height="match_parent"
+                android:background="#e1e1e1"/>
+
+            <com.pda.mes.widget.FontTextView
+                style="@style/ListView_Title.Normal"
+                android:id="@+id/cellLotItemCode"
+                android:gravity="center"
+                android:textColor="@drawable/text_selector_button"
+                android:textSize="11dp"
+                app:custom_font="@string/FONT_NANUM_SQUARE_OTFR"/>
+
+            <View
+                android:layout_width="@dimen/default_line_size"
+                android:layout_height="match_parent"
+                android:background="#e1e1e1"/>
+
+            <com.pda.mes.widget.FontTextView
+                style="@style/ListView_Title.ItemName"
+                android:id="@+id/cellLotItemDesc"
+                android:textColor="@drawable/text_selector_button"
+                android:textSize="11dp"
+                app:custom_font="@string/FONT_NANUM_SQUARE_OTFR"/>
+
+            <!--<View
+                android:layout_width="@dimen/default_line_size"
+                android:layout_height="match_parent"
+                android:background="#e1e1e1"/>
+
+            <com.pda.mes.widget.FontTextView
+                style="@style/ListView_Title.RowCount"
+                android:id="@+id/cellLotMatVer"
+                android:gravity="center"
+                android:textColor="@drawable/text_selector_button"
+                android:textSize="11dp"
+                app:custom_font="@string/FONT_NANUM_SQUARE_OTFR"/>-->
+
+            <View
+                android:layout_width="@dimen/default_line_size"
+                android:layout_height="match_parent"
+                android:background="#e1e1e1"/>
+
+            <com.pda.mes.widget.FontTextView
+                style="@style/ListView_Title.Quantity"
+                android:id="@+id/cellLotQty"
+                android:gravity="right|center_vertical"
+                android:textColor="@drawable/text_selector_button"
+                android:textSize="11dp"
+                app:custom_font="@string/FONT_NANUM_SQUARE_OTFR"/>
+
+            <View
+                android:layout_width="@dimen/default_line_size"
+                android:layout_height="match_parent"
+                android:background="#e1e1e1"/>
+
+            <com.pda.mes.widget.FontTextView
+                style="@style/ListView_Title.Quantity"
+                android:id="@+id/cellOrdQty"
+                android:gravity="right|center_vertical"
+                android:textColor="@drawable/text_selector_button"
+                android:textSize="11dp"
+                app:custom_font="@string/FONT_NANUM_SQUARE_OTFR"/>
+
+            <View
+                android:layout_width="@dimen/default_line_size"
+                android:layout_height="match_parent"
+                android:background="#e1e1e1"/>
+
+            <com.pda.mes.widget.FontTextView
+                style="@style/ListView_Title.Normal"
+                android:id="@+id/cellOrderId"
+                android:gravity="center"
+                android:textColor="@drawable/text_selector_button"
+                android:textSize="11dp"
+                app:custom_font="@string/FONT_NANUM_SQUARE_OTFR"/>
+
+            <View
+                android:layout_width="@dimen/default_line_size"
+                android:layout_height="match_parent"
+                android:background="#e1e1e1"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_line_size"
+            android:background="#e1e1e1"/>
+    </LinearLayout>
+</LinearLayout>

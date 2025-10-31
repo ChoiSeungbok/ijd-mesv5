@@ -1,0 +1,2 @@
+D:\01_Source\00_MIR_MES\source\server\MESServer\x64\Debug\MESServer.exe
+D:\일진다이아\Source\MESV5\source\server\MESServer\x64\Debug\MESServer.exe

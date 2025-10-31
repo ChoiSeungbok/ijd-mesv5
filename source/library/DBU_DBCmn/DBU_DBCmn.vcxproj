@@ -1,0 +1,799 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C7D1D449-638D-40C4-B4BB-00E9CD972209}</ProjectGuid>
+    <RootNamespace>Iljin_DBCmn</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>DBU_DBCmn</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="..\MES_DBCmn\PC_File_Compile.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    </TargetExt>
+    <ExtensionsToDeleteOnClean Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">*.obj;*.c;*.lib;*.pdb;*.tlog</ExtensionsToDeleteOnClean>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>%ORA_HOME%\precomp\public;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\..\..\lib\h101 \x64;$(ProjectDir)..\..\..\lib;%ORA_HOME%\precomp\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="DBU_batch_job.h" />
+    <ClInclude Include="DBU_batch_job_n.h" />
+    <ClInclude Include="DBU_cbascptdef.h" />
+    <ClInclude Include="DBU_cbascptdef_n.h" />
+    <ClInclude Include="DBU_cbastxndef.h" />
+    <ClInclude Include="DBU_cbastxndef_n.h" />
+    <ClInclude Include="DBU_cbomstddef.h" />
+    <ClInclude Include="DBU_cbomstddef_n.h" />
+    <ClInclude Include="DBU_cinvuoplot.h" />
+    <ClInclude Include="DBU_cinvuoplot_n.h" />
+    <ClInclude Include="DBU_common.pc" />
+    <ClInclude Include="DBU_cqcmcplmst.h" />
+    <ClInclude Include="DBU_cqcmcplmst_n.h" />
+    <ClInclude Include="DBU_cqcmcusspe.h" />
+    <ClInclude Include="DBU_cqcmcusspe_n.h" />
+    <ClInclude Include="DBU_cqcmgrtasp.h" />
+    <ClInclude Include="DBU_cqcmgrtasp_n.h" />
+    <ClInclude Include="DBU_cqcmgrtcot.h" />
+    <ClInclude Include="DBU_cqcmgrtcot_n.h" />
+    <ClInclude Include="DBU_cqcmgrthlt.h" />
+    <ClInclude Include="DBU_cqcmgrthlt_n.h" />
+    <ClInclude Include="DBU_cqcmgrtsiv.h" />
+    <ClInclude Include="DBU_cqcmgrtsiv_n.h" />
+    <ClInclude Include="DBU_cqcmispcol.h" />
+    <ClInclude Include="DBU_cqcmispcol_n.h" />
+    <ClInclude Include="DBU_cqcmispdat.h" />
+    <ClInclude Include="DBU_cqcmispdat_n.h" />
+    <ClInclude Include="DBU_cqcmisplos.h" />
+    <ClInclude Include="DBU_cqcmisplos_n.h" />
+    <ClInclude Include="DBU_cqcmispsts.h" />
+    <ClInclude Include="DBU_cqcmispsts_n.h" />
+    <ClInclude Include="DBU_cqcmispwrk.h" />
+    <ClInclude Include="DBU_cqcmispwrk_n.h" />
+    <ClInclude Include="DBU_cqcmrptctm.h" />
+    <ClInclude Include="DBU_cqcmrptctm_n.h" />
+    <ClInclude Include="DBU_cqcmrptgmp.h" />
+    <ClInclude Include="DBU_cqcmrptgmp_n.h" />
+    <ClInclude Include="DBU_cqcmrptgnp.h" />
+    <ClInclude Include="DBU_cqcmrptgnp_n.h" />
+    <ClInclude Include="DBU_cqcmrptgny.h" />
+    <ClInclude Include="DBU_cqcmrptgny_n.h" />
+    <ClInclude Include="DBU_cqcmrptgrm.h" />
+    <ClInclude Include="DBU_cqcmrptgrm_n.h" />
+    <ClInclude Include="DBU_cqcmrptgrn.h" />
+    <ClInclude Include="DBU_cqcmrptgrn_n.h" />
+    <ClInclude Include="DBU_cqcmrpthmm.h" />
+    <ClInclude Include="DBU_cqcmrpthmm_n.h" />
+    <ClInclude Include="DBU_cqcmsplmst.h" />
+    <ClInclude Include="DBU_cqcmsplmst_n.h" />
+    <ClInclude Include="DBU_cqcmvocmst.h" />
+    <ClInclude Include="DBU_cqcmvocmst_n.h" />
+    <ClInclude Include="DBU_csecusrdef.h" />
+    <ClInclude Include="DBU_csecusrdef_n.h" />
+    <ClInclude Include="DBU_cwiplotcum.h" />
+    <ClInclude Include="DBU_cwiplotcum_n.h" />
+    <ClInclude Include="DBU_cwiplotrmk.h" />
+    <ClInclude Include="DBU_cwiplotrmk_n.h" />
+    <ClInclude Include="DBU_cwipordrwk.h" />
+    <ClInclude Include="DBU_cwipordrwk_n.h" />
+    <ClInclude Include="DBU_cwiprcpdef.h" />
+    <ClInclude Include="DBU_cwiprcpdef_n.h" />
+    <ClInclude Include="DBU_if_completion_trx_save.h" />
+    <ClInclude Include="DBU_if_completion_trx_save_n.h" />
+    <ClInclude Include="DBU_if_comp_issue_trx_save.h" />
+    <ClInclude Include="DBU_if_comp_issue_trx_save_n.h" />
+    <ClInclude Include="DBU_if_move_trx_save.h" />
+    <ClInclude Include="DBU_if_move_trx_save_n.h" />
+    <ClInclude Include="DBU_if_pack_info.h" />
+    <ClInclude Include="DBU_if_pack_info_his.h" />
+    <ClInclude Include="DBU_if_pack_info_his_n.h" />
+    <ClInclude Include="DBU_if_pack_info_n.h" />
+    <ClInclude Include="DBU_if_po_requests_receipts.h" />
+    <ClInclude Include="DBU_if_po_requests_receipts_n.h" />
+    <ClInclude Include="DBU_if_p_wo_info.h" />
+    <ClInclude Include="DBU_if_p_wo_info_his.h" />
+    <ClInclude Include="DBU_if_p_wo_info_his_n.h" />
+    <ClInclude Include="DBU_if_p_wo_info_n.h" />
+    <ClInclude Include="DBU_mgcmlagdat.h" />
+    <ClInclude Include="DBU_mgcmlagdat_n.h" />
+    <ClInclude Include="DBU_mwipcoldef.h" />
+    <ClInclude Include="DBU_mwipcoldef_n.h" />
+    <ClInclude Include="DBU_mwiplothisx.h" />
+    <ClInclude Include="DBU_mwiplothisx_n.h" />
+    <ClInclude Include="DBU_mwiplotstsx.h" />
+    <ClInclude Include="DBU_mwiplotstsx_n.h" />
+    <ClInclude Include="dbu_q_cond_n.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DBU_common.h" />
+    <ClInclude Include="DBU_common_n.h" />
+    <ClInclude Include="DBU_crassprsts.h" />
+    <ClInclude Include="DBU_crassprsts_n.h" />
+    <ClInclude Include="DBU_mwipoprdef.h" />
+    <ClInclude Include="DBU_mwipoprdef_n.h" />
+    <ClInclude Include="DBU_mwipmatdef.h" />
+    <ClInclude Include="DBU_mwipmatdef_n.h" />
+    <ClInclude Include="DBU_mrasresdef.h" />
+    <ClInclude Include="DBU_mrasresdef_n.h" />
+    <ClInclude Include="DBU_mrasreshis.h" />
+    <ClInclude Include="DBU_mrasreshis_n.h" />
+    <ClInclude Include="DBU_mrasresmfo.h" />
+    <ClInclude Include="DBU_mrasresmfo_n.h" />
+    <ClInclude Include="DBU_mrastoldef.h" />
+    <ClInclude Include="DBU_mrastoldef_n.h" />
+    <ClInclude Include="DBU_mwipflwdef.h" />
+    <ClInclude Include="DBU_mwipflwdef_n.h" />
+    <ClInclude Include="DBU_mwipflwopr.h" />
+    <ClInclude Include="DBU_mwipflwopr_n.h" />
+    <ClInclude Include="DBU_mwipmatflw.h" />
+    <ClInclude Include="DBU_mwipmatflw_n.h" />
+    <ClInclude Include="DBU_crasrprsts.h" />
+    <ClInclude Include="DBU_crasrprsts_n.h" />
+    <ClInclude Include="DBU_crasrprspr.h" />
+    <ClInclude Include="DBU_crasrprspr_n.h" />
+    <ClInclude Include="DBU_crasrprwrk.h" />
+    <ClInclude Include="DBU_crasrprwrk_n.h" />
+    <ClInclude Include="DBU_mwipordsts.h" />
+    <ClInclude Include="DBU_mwipordsts_n.h" />
+    <ClInclude Include="DBU_cwiperpopr.h" />
+    <ClInclude Include="DBU_cwiperpopr_n.h" />
+    <ClInclude Include="DBU_cwipoprwrk.h" />
+    <ClInclude Include="DBU_cwipoprwrk_n.h" />
+    <ClInclude Include="DBU_cwipordbom.h" />
+    <ClInclude Include="DBU_cwipordbom_n.h" />
+    <ClInclude Include="DBU_cwipwrkdef.h" />
+    <ClInclude Include="DBU_cwipwrkdef_n.h" />
+    <ClInclude Include="DBU_cwipwrkgrp.h" />
+    <ClInclude Include="DBU_cwipwrkgrp_n.h" />
+    <ClInclude Include="DBU_cwiplotlst.h" />
+    <ClInclude Include="DBU_cwiplotlst_n.h" />
+    <ClInclude Include="DBU_minvdlvdtl.h" />
+    <ClInclude Include="DBU_minvdlvdtl_n.h" />
+    <ClInclude Include="DBU_minvdlvmst.h" />
+    <ClInclude Include="DBU_minvdlvmst_n.h" />
+    <ClInclude Include="DBU_minvlothis.h" />
+    <ClInclude Include="DBU_minvlothis_n.h" />
+    <ClInclude Include="DBU_minvlothld.h" />
+    <ClInclude Include="DBU_minvlothld_n.h" />
+    <ClInclude Include="DBU_minvlotiss.h" />
+    <ClInclude Include="DBU_minvlotiss_n.h" />
+    <ClInclude Include="DBU_minvlotmvh.h" />
+    <ClInclude Include="DBU_minvlotmvh_n.h" />
+    <ClInclude Include="DBU_minvlotsts.h" />
+    <ClInclude Include="DBU_minvlotsts_n.h" />
+    <ClInclude Include="DBU_minvlotswh.h" />
+    <ClInclude Include="DBU_minvlotswh_n.h" />
+    <ClInclude Include="DBU_minvmatiss.h" />
+    <ClInclude Include="DBU_minvmatiss_n.h" />
+    <ClInclude Include="DBU_minvreqdtl.h" />
+    <ClInclude Include="DBU_minvreqdtl_n.h" />
+    <ClInclude Include="DBU_minvreqmst.h" />
+    <ClInclude Include="DBU_minvreqmst_n.h" />
+    <ClInclude Include="DBU_mgcmtbldat.h" />
+    <ClInclude Include="DBU_mgcmtbldat_n.h" />
+    <ClInclude Include="DBU_mgcmtbldef.h" />
+    <ClInclude Include="DBU_mgcmtbldef_n.h" />
+    <ClInclude Include="DBU_minvdlvlbl.h" />
+    <ClInclude Include="DBU_minvdlvlbl_n.h" />
+    <ClInclude Include="DBU_minvdlvlot.h" />
+    <ClInclude Include="DBU_minvdlvlot_n.h" />
+    <ClInclude Include="DBU_cwipinvlod.h" />
+    <ClInclude Include="DBU_cwipinvlod_n.h" />
+    <ClInclude Include="DBU_cbasfildef.h" />
+    <ClInclude Include="DBU_cbasfildef_n.h" />
+    <ClInclude Include="DBU_cwiplotmvm.h" />
+    <ClInclude Include="DBU_cwiplotmvm_n.h" />
+    <ClInclude Include="DBU_cwiplotmvc.h" />
+    <ClInclude Include="DBU_cwiplotmvc_n.h" />
+    <ClInclude Include="DBU_cwiplotmvr.h" />
+    <ClInclude Include="DBU_cwiplotmvr_n.h" />
+    <ClInclude Include="DBU_minvreqlot.h" />
+    <ClInclude Include="DBU_minvreqlot_n.h" />
+    <ClInclude Include="DBU_cwipdwnsts.h" />
+    <ClInclude Include="DBU_cwipdwnsts_n.h" />
+    <ClInclude Include="DBU_cwipgrpsts.h" />
+    <ClInclude Include="DBU_cwipgrpsts_n.h" />
+    <ClInclude Include="DBU_cwipgrplot.h" />
+    <ClInclude Include="DBU_cwipgrplot_n.h" />
+    <ClInclude Include="DBU_cpakordsts.h" />
+    <ClInclude Include="DBU_cpakordsts_n.h" />
+    <ClInclude Include="DBU_cpaklotsts.h" />
+    <ClInclude Include="DBU_cpaklotsts_n.h" />
+    <ClInclude Include="DBU_cshpordmst.h" />
+    <ClInclude Include="DBU_cshpordmst_n.h" />
+    <ClInclude Include="DBU_cshporddtl.h" />
+    <ClInclude Include="DBU_cshporddtl_n.h" />
+    <ClInclude Include="DBU_cretordsts.h" />
+    <ClInclude Include="DBU_cretordsts_n.h" />
+    <ClInclude Include="DBU_crasdspreq.h" />
+    <ClInclude Include="DBU_crasdspreq_n.h" />
+    <ClInclude Include="DBU_crasdsptol.h" />
+    <ClInclude Include="DBU_crasdsptol_n.h" />
+    <ClInclude Include="DBU_cbaschkdef.h" />
+    <ClInclude Include="DBU_cbaschkdef_n.h" />
+    <ClInclude Include="DBU_medclotdat.h" />
+    <ClInclude Include="DBU_medclotdat_n.h" />
+    <ClInclude Include="DBU_medccolver.h" />
+    <ClInclude Include="DBU_medccolver_n.h" />
+    <ClInclude Include="DBU_medccolchr.h" />
+    <ClInclude Include="DBU_medccolchr_n.h" />
+    <ClInclude Include="DBU_medccoldef.h" />
+    <ClInclude Include="DBU_medccoldef_n.h" />
+    <ClInclude Include="DBU_medcchrdef.h" />
+    <ClInclude Include="DBU_medcchrdef_n.h" />
+    <ClInclude Include="DBU_medcresdat.h" />
+    <ClInclude Include="DBU_medcresdat_n.h" />
+    <ClInclude Include="DBU_if_po_rcv_header.h" />
+    <ClInclude Include="DBU_if_po_rcv_header_n.h" />
+    <ClInclude Include="DBU_if_po_rcv_txns.h" />
+    <ClInclude Include="DBU_if_po_rcv_txns_n.h" />
+    <ClInclude Include="DBU_if_po_rcv_txn_lots.h" />
+    <ClInclude Include="DBU_if_po_rcv_txn_lots_n.h" />
+    <ClInclude Include="DBU_if_inv_txns.h" />
+    <ClInclude Include="DBU_if_inv_txns_n.h" />
+    <ClInclude Include="DBU_if_inv_txn_lots.h" />
+    <ClInclude Include="DBU_if_inv_txn_lots_n.h" />
+    <ClInclude Include="DBU_if_move_trx.h" />
+    <ClInclude Include="DBU_if_move_trx_n.h" />
+    <ClInclude Include="DBU_if_completion_trx.h" />
+    <ClInclude Include="DBU_if_completion_trx_n.h" />
+    <ClInclude Include="DBU_if_comp_issue_trx.h" />
+    <ClInclude Include="DBU_if_comp_issue_trx_n.h" />
+    <ClInclude Include="DBU_if_om_txns.h" />
+    <ClInclude Include="DBU_if_om_txns_n.h" />
+    <ClInclude Include="DBU_if_om_txn_lots.h" />
+    <ClInclude Include="DBU_if_om_txn_lots_n.h" />
+    <ClInclude Include="DBU_if_om_ship_headers.h" />
+    <ClInclude Include="DBU_if_om_ship_headers_n.h" />
+    <ClInclude Include="DBU_if_om_ship_lines.h" />
+    <ClInclude Include="DBU_if_om_ship_lines_n.h" />
+    <ClInclude Include="DBU_if_om_ship_line_lots.h" />
+    <ClInclude Include="DBU_if_om_ship_line_lots_n.h" />
+    <ClInclude Include="DBU_if_po_rma_headers.h" />
+    <ClInclude Include="DBU_if_po_rma_headers_n.h" />
+    <ClInclude Include="DBU_if_po_rma_txns.h" />
+    <ClInclude Include="DBU_if_po_rma_txns_n.h" />
+    <ClInclude Include="DBU_if_po_rma_txn_lots.h" />
+    <ClInclude Include="DBU_if_po_rma_txn_lots_n.h" />
+    <ClInclude Include="DBU_if_om_promise_date.h" />
+    <ClInclude Include="DBU_if_om_promise_date_n.h" />
+    <ClInclude Include="DBU_if_std_bom_def.h" />
+    <ClInclude Include="DBU_if_std_bom_def_n.h" />
+    <ClInclude Include="DBU_if_uom_conv_def.h" />
+    <ClInclude Include="DBU_if_uom_conv_def_n.h" />
+    <ClInclude Include="DBU_if_mat_def.h" />
+    <ClInclude Include="DBU_if_mat_def_n.h" />
+    <ClInclude Include="DBU_if_vendor_def.h" />
+    <ClInclude Include="DBU_if_vendor_def_n.h" />
+    <ClInclude Include="DBU_if_customer_def.h" />
+    <ClInclude Include="DBU_if_customer_def_n.h" />
+    <ClInclude Include="DBU_if_wh_def.h" />
+    <ClInclude Include="DBU_if_wh_def_n.h" />
+    <ClInclude Include="DBU_if_sub_area_def.h" />
+    <ClInclude Include="DBU_if_sub_area_def_n.h" />
+    <ClInclude Include="DBU_if_txn_type_def.h" />
+    <ClInclude Include="DBU_if_txn_type_def_n.h" />
+    <ClInclude Include="DBU_if_po_info.h" />
+    <ClInclude Include="DBU_if_po_info_n.h" />
+    <ClInclude Include="DBU_if_wo_bom_info.h" />
+    <ClInclude Include="DBU_if_wo_bom_info_n.h" />
+    <ClInclude Include="DBU_if_wo_info.h" />
+    <ClInclude Include="DBU_if_wo_info_n.h" />
+    <ClInclude Include="DBU_if_so_mst.h" />
+    <ClInclude Include="DBU_if_so_mst_n.h" />
+    <ClInclude Include="DBU_if_so_dtl.h" />
+    <ClInclude Include="DBU_if_so_dtl_n.h" />
+    <ClInclude Include="DBU_if_ro_info.h" />
+    <ClInclude Include="DBU_if_ro_info_n.h" />
+    <ClInclude Include="DBU_if_po_consign_txns.h" />
+    <ClInclude Include="DBU_if_po_consign_txns_n.h" />
+    <ClInclude Include="DBU_cwipgrtcss.h" />
+    <ClInclude Include="DBU_cwipgrtcss_n.h" />
+    <ClInclude Include="DBU_cwipgrtbld.h" />
+    <ClInclude Include="DBU_cwipgrtbld_n.h" />
+    <ClInclude Include="DBU_if_customer_def_his.h" />
+    <ClInclude Include="DBU_if_customer_def_his_n.h" />
+    <ClInclude Include="DBU_if_mat_def_his.h" />
+    <ClInclude Include="DBU_if_mat_def_his_n.h" />
+    <ClInclude Include="DBU_if_po_info_his.h" />
+    <ClInclude Include="DBU_if_po_info_his_n.h" />
+    <ClInclude Include="DBU_if_ro_info_his.h" />
+    <ClInclude Include="DBU_if_ro_info_his_n.h" />
+    <ClInclude Include="DBU_if_so_dtl_his.h" />
+    <ClInclude Include="DBU_if_so_dtl_his_n.h" />
+    <ClInclude Include="DBU_if_so_mst_his.h" />
+    <ClInclude Include="DBU_if_so_mst_his_n.h" />
+    <ClInclude Include="DBU_if_std_bom_def_his.h" />
+    <ClInclude Include="DBU_if_std_bom_def_his_n.h" />
+    <ClInclude Include="DBU_if_sub_area_def_his.h" />
+    <ClInclude Include="DBU_if_sub_area_def_his_n.h" />
+    <ClInclude Include="DBU_if_txn_type_def_his.h" />
+    <ClInclude Include="DBU_if_txn_type_def_his_n.h" />
+    <ClInclude Include="DBU_if_uom_conv_def_his.h" />
+    <ClInclude Include="DBU_if_uom_conv_def_his_n.h" />
+    <ClInclude Include="DBU_if_vendor_def_his.h" />
+    <ClInclude Include="DBU_if_vendor_def_his_n.h" />
+    <ClInclude Include="DBU_if_wh_def_his.h" />
+    <ClInclude Include="DBU_if_wh_def_his_n.h" />
+    <ClInclude Include="DBU_if_wo_bom_info_his.h" />
+    <ClInclude Include="DBU_if_wo_bom_info_his_n.h" />
+    <ClInclude Include="DBU_if_wo_info_his.h" />
+    <ClInclude Include="DBU_if_wo_info_his_n.h" />
+    <ClInclude Include="DBU_cwiplotdry.h" />
+    <ClInclude Include="DBU_cwiplotdry_n.h" />
+    <ClInclude Include="DBU_csecusedat.h" />
+    <ClInclude Include="DBU_csecusedat_n.h" />
+    <ClInclude Include="DBU_cwipgrtcls.h" />
+    <ClInclude Include="DBU_cwipgrtcls_n.h" />
+    <ClInclude Include="DBU_mwipcaldef.h" />
+    <ClInclude Include="DBU_mwipcaldef_n.h" />
+    <ClInclude Include="DBU_cwiplotprs.h" />
+    <ClInclude Include="DBU_cwiplotprs_n.h" />
+    <ClInclude Include="DBU_cretlotsts.h" />
+    <ClInclude Include="DBU_cretlotsts_n.h" />
+    <ClInclude Include="DBU_cordprdpln.h" />
+    <ClInclude Include="DBU_cordprdpln_n.h" />
+    <ClInclude Include="DBU_cwiplotrnd.h" />
+    <ClInclude Include="DBU_cwiplotrnd_n.h" />
+    <ClInclude Include="DBU_cwiplotrim.h" />
+    <ClInclude Include="DBU_cwiplotrim_n.h" />
+    <ClInclude Include="DBU_cwiplotcup.h" />
+    <ClInclude Include="DBU_cwiplotcup_n.h" />
+    <ClInclude Include="DBU_cwiplotlmk.h" />
+    <ClInclude Include="DBU_cwiplotlmk_n.h" />
+    <ClInclude Include="DBU_cwiplotimp.h" />
+    <ClInclude Include="DBU_cwiplotimp_n.h" />
+    <ClInclude Include="DBU_cwiplotcls.h" />
+    <ClInclude Include="DBU_cwiplotcls_n.h" />
+    <ClInclude Include="DBU_cwiplottrc.h" />
+    <ClInclude Include="DBU_cwiplottrc_n.h" />
+    <ClInclude Include="DBU_cwiplotbas.h" />
+    <ClInclude Include="DBU_cwiplotbas_n.h" />
+    <ClInclude Include="DBU_ct_sal110t.h" />
+    <ClInclude Include="DBU_ct_sal110t_n.h" />
+    <ClInclude Include="DBU_ct_packing_v.h" />
+    <ClInclude Include="DBU_ct_packing_v_n.h" />
+    <ClInclude Include="DBU_csumlotdat.h" />
+    <ClInclude Include="DBU_csumlotdat_n.h" />
+    <ClInclude Include="DBU_mwiplotlos.h" />
+    <ClInclude Include="DBU_mwiplotlos_n.h" />
+    <ClInclude Include="DBU_cbaslbldat.h" />
+    <ClInclude Include="DBU_cbaslbldat_n.h" />
+    <ClInclude Include="DBU_cbastaktim.h" />
+    <ClInclude Include="DBU_cbastaktim_n.h" />
+    <ClInclude Include="DBU_minvmovsts.h" />
+    <ClInclude Include="DBU_minvmovsts_n.h" />
+    <ClInclude Include="DBU_minvmovlot.h" />
+    <ClInclude Include="DBU_minvmovlot_n.h" />
+    <ClInclude Include="DBU_csumreswip.h" />
+    <ClInclude Include="DBU_csumreswip_n.h" />
+    <ClInclude Include="DBU_cwipprsrun.h" />
+    <ClInclude Include="DBU_cwipprsrun_n.h" />
+    <ClInclude Include="DBU_cwipuoplot.h" />
+    <ClInclude Include="DBU_cwipuoplot_n.h" />
+    <ClInclude Include="DBU_ct_mtl510t.h" />
+    <ClInclude Include="DBU_ct_mtl510t_n.h" />
+    <ClInclude Include="DBU_mwipidghis.h" />
+    <ClInclude Include="DBU_mwipidghis_n.h" />
+    <ClInclude Include="DBU_cwipordopr.h" />
+    <ClInclude Include="DBU_cwipordopr_n.h" />
+    <ClInclude Include="DBU_cqcmcstspm.h" />
+    <ClInclude Include="DBU_cqcmcstspm_n.h" />
+    <ClInclude Include="DBU_cwipinvldm.h" />
+    <ClInclude Include="DBU_cwipinvldm_n.h" />
+    <ClInclude Include="DBU_cqcmcstspg.h" />
+    <ClInclude Include="DBU_cqcmcstspg_n.h" />
+    <ClInclude Include="DBU_cwipprdgol.h" />
+    <ClInclude Include="DBU_cwipprdgol_n.h" />
+    <ClInclude Include="DBU_mrastevdef.h" />
+    <ClInclude Include="DBU_mrastevdef_n.h" />
+    <ClInclude Include="DBU_esecusrdef.h" />
+    <ClInclude Include="DBU_esecusrdef_n.h" />
+    <ClInclude Include="DBU_ct_mtl100t.h" />
+    <ClInclude Include="DBU_ct_mtl100t_n.h" />
+    <ClInclude Include="DBU_cwiplotrec.h" />
+    <ClInclude Include="DBU_cwiplotrec_n.h" />
+    <ClInclude Include="DBU_ct_prd210t.h" />
+    <ClInclude Include="DBU_ct_prd210t_n.h" />
+    <ClInclude Include="DBU_ct_prd200t.h" />
+    <ClInclude Include="DBU_ct_prd200t_n.h" />
+    <ClInclude Include="DBU_ct_mold_v.h" />
+    <ClInclude Include="DBU_ct_mold_v_n.h" />
+    <ClInclude Include="DBU_cwipwrkinp.h" />
+    <ClInclude Include="DBU_cwipwrkinp_n.h" />
+    <ClInclude Include="DBU_minvetclot.h" />
+    <ClInclude Include="DBU_minvetclot_n.h" />
+    <ClInclude Include="DBU_cwiplotchg.h" />
+    <ClInclude Include="DBU_cwiplotchg_n.h" />
+    <ClInclude Include="DBU_cpaklothis.h" />
+    <ClInclude Include="DBU_cpaklothis_n.h" />
+    <ClInclude Include="DBU_ishplotiss.h" />
+    <ClInclude Include="DBU_ishplotiss_n.h" />
+    <ClInclude Include="DBU_ishplotrcv.h" />
+    <ClInclude Include="DBU_ishplotrcv_n.h" />
+    <ClInclude Include="DBU_cwipbldavg.h" />
+    <ClInclude Include="DBU_cwipbldavg_n.h" />
+    <ClInclude Include="DBU_crasbasdat.h" />
+    <ClInclude Include="DBU_crasbasdat_n.h" />
+    <ClInclude Include="DBU_cbasshpbom.h" />
+    <ClInclude Include="DBU_cbasshpbom_n.h" />
+    <ClInclude Include="DBU_crastolbrk.h" />
+    <ClInclude Include="DBU_crastolbrk_n.h" />
+    <ClInclude Include="DBU_mrastolhis.h" />
+    <ClInclude Include="DBU_mrastolhis_n.h" />
+    <ClInclude Include="DBU_cwippryer.h" />
+    <ClInclude Include="DBU_cwippryer_n.h" />
+    <ClInclude Include="DBU_ishpispiss.h" />
+    <ClInclude Include="DBU_ishpispiss_n.h" />
+    <ClInclude Include="DBU_ishpisprcv.h" />
+    <ClInclude Include="DBU_ishpisprcv_n.h" />
+    <ClInclude Include="DBU_crashitfnc.h" />
+    <ClInclude Include="DBU_crashitfnc_n.h" />
+    <ClInclude Include="DBU_cerpaststs.h" />
+    <ClInclude Include="DBU_cerpaststs_n.h" />
+    <ClInclude Include="DBU_crasmdextd.h" />
+    <ClInclude Include="DBU_crasmdextd_n.h" />
+    <ClInclude Include="DBU_crasvcmfnc.h" />
+    <ClInclude Include="DBU_crasvcmfnc_n.h" />
+    <ClInclude Include="DBU_cras5thprs.h" />
+    <ClInclude Include="DBU_cras5thprs_n.h" />
+    <ClInclude Include="DBU_cras4hrprs.h" />
+    <ClInclude Include="DBU_cras4hrprs_n.h" />
+    <ClInclude Include="DBU_craspntmix.h" />
+    <ClInclude Include="DBU_craspntmix_n.h" />
+    <ClInclude Include="DBU_crasbalmil.h" />
+    <ClInclude Include="DBU_crasbalmil_n.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AddLib.bat" />
+    <None Include="AddLib_Sample.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <PC_File_Compile Include="DBU_batch_job.pc" />
+    <PC_File_Compile Include="DBU_cbascptdef.pc" />
+    <PC_File_Compile Include="DBU_cbomstddef.pc" />
+    <PC_File_Compile Include="DBU_cinvuoplot.pc" />
+    <PC_File_Compile Include="DBU_cqcmcplmst.pc" />
+    <PC_File_Compile Include="DBU_cqcmcusspe.pc" />
+    <PC_File_Compile Include="DBU_cqcmgrtasp.pc" />
+    <PC_File_Compile Include="DBU_cqcmgrtcot.pc" />
+    <PC_File_Compile Include="DBU_cqcmgrthlt.pc" />
+    <PC_File_Compile Include="DBU_cqcmgrtsiv.pc" />
+    <PC_File_Compile Include="DBU_cbastxndef.pc" />
+    <PC_File_Compile Include="DBU_cqcmispcol.pc" />
+    <PC_File_Compile Include="DBU_cqcmispdat.pc" />
+    <PC_File_Compile Include="DBU_cqcmisplos.pc" />
+    <PC_File_Compile Include="DBU_cqcmispsts.pc" />
+    <PC_File_Compile Include="DBU_cqcmispwrk.pc" />
+    <PC_File_Compile Include="DBU_cqcmrptctm.pc" />
+    <PC_File_Compile Include="DBU_cqcmrptgmp.pc" />
+    <PC_File_Compile Include="DBU_cqcmrptgnp.pc" />
+    <PC_File_Compile Include="DBU_cqcmrptgny.pc" />
+    <PC_File_Compile Include="DBU_cqcmrptgrm.pc" />
+    <PC_File_Compile Include="DBU_cqcmrptgrn.pc" />
+    <PC_File_Compile Include="DBU_cqcmrpthmm.pc" />
+    <PC_File_Compile Include="DBU_cqcmsplmst.pc" />
+    <PC_File_Compile Include="DBU_cqcmvocmst.pc" />
+    <PC_File_Compile Include="DBU_crassprsts.pc" />
+    <PC_File_Compile Include="DBU_csecusrdef.pc" />
+    <PC_File_Compile Include="DBU_cwiplotcum.pc" />
+    <PC_File_Compile Include="DBU_cwiplotrmk.pc" />
+    <PC_File_Compile Include="DBU_cwipordrwk.pc" />
+    <PC_File_Compile Include="DBU_cwiprcpdef.pc" />
+    <PC_File_Compile Include="DBU_if_completion_trx_save.pc" />
+    <PC_File_Compile Include="DBU_if_comp_issue_trx_save.pc" />
+    <PC_File_Compile Include="DBU_if_move_trx_save.pc" />
+    <PC_File_Compile Include="DBU_if_pack_info.pc" />
+    <PC_File_Compile Include="DBU_if_pack_info_his.pc" />
+    <PC_File_Compile Include="DBU_if_po_requests_receipts.pc" />
+    <PC_File_Compile Include="DBU_if_p_wo_info.pc" />
+    <PC_File_Compile Include="DBU_if_p_wo_info_his.pc" />
+    <PC_File_Compile Include="DBU_mgcmlagdat.pc" />
+    <PC_File_Compile Include="DBU_minvdlvlot.pc" />
+    <PC_File_Compile Include="DBU_mwipcoldef.pc" />
+    <PC_File_Compile Include="DBU_mwiplothisx.pc" />
+    <PC_File_Compile Include="DBU_mwiplotstsx.pc" />
+    <PC_File_Compile Include="DBU_mwipoprdef.pc" />
+    <PC_File_Compile Include="DBU_mwipmatdef.pc" />
+    <PC_File_Compile Include="DBU_mrasresdef.pc" />
+    <PC_File_Compile Include="DBU_mrasreshis.pc" />
+    <PC_File_Compile Include="DBU_mrasresmfo.pc" />
+    <PC_File_Compile Include="DBU_mrastoldef.pc" />
+    <PC_File_Compile Include="DBU_mwipflwdef.pc" />
+    <PC_File_Compile Include="DBU_mwipflwopr.pc" />
+    <PC_File_Compile Include="DBU_mwipmatflw.pc" />
+    <PC_File_Compile Include="DBU_crasrprsts.pc" />
+    <PC_File_Compile Include="DBU_crasrprspr.pc" />
+    <PC_File_Compile Include="DBU_crasrprwrk.pc" />
+    <PC_File_Compile Include="DBU_mwipordsts.pc" />
+    <PC_File_Compile Include="DBU_cwiperpopr.pc" />
+    <PC_File_Compile Include="DBU_cwipoprwrk.pc" />
+    <PC_File_Compile Include="DBU_cwipordbom.pc" />
+    <PC_File_Compile Include="DBU_cwipwrkdef.pc" />
+    <PC_File_Compile Include="DBU_cwipwrkgrp.pc" />
+    <PC_File_Compile Include="DBU_cwiplotlst.pc" />
+    <PC_File_Compile Include="DBU_minvdlvdtl.pc" />
+    <PC_File_Compile Include="DBU_minvdlvmst.pc" />
+    <PC_File_Compile Include="DBU_minvlothis.pc" />
+    <PC_File_Compile Include="DBU_minvlothld.pc" />
+    <PC_File_Compile Include="DBU_minvlotiss.pc" />
+    <PC_File_Compile Include="DBU_minvlotmvh.pc" />
+    <PC_File_Compile Include="DBU_minvlotsts.pc" />
+    <PC_File_Compile Include="DBU_minvlotswh.pc" />
+    <PC_File_Compile Include="DBU_minvmatiss.pc" />
+    <PC_File_Compile Include="DBU_minvreqdtl.pc" />
+    <PC_File_Compile Include="DBU_minvreqmst.pc" />
+    <PC_File_Compile Include="DBU_mgcmtbldat.pc" />
+    <PC_File_Compile Include="DBU_mgcmtbldef.pc" />
+    <PC_File_Compile Include="DBU_minvdlvlbl.pc" />
+    <PC_File_Compile Include="DBU_cwipinvlod.pc" />
+    <PC_File_Compile Include="DBU_cbasfildef.pc" />
+    <PC_File_Compile Include="DBU_cwiplotmvm.pc" />
+    <PC_File_Compile Include="DBU_cwiplotmvc.pc" />
+    <PC_File_Compile Include="DBU_cwiplotmvr.pc" />
+    <PC_File_Compile Include="DBU_minvreqlot.pc" />
+    <PC_File_Compile Include="DBU_cwipdwnsts.pc" />
+    <PC_File_Compile Include="DBU_cwipgrpsts.pc" />
+    <PC_File_Compile Include="DBU_cwipgrplot.pc" />
+    <PC_File_Compile Include="DBU_cpakordsts.pc" />
+    <PC_File_Compile Include="DBU_cpaklotsts.pc" />
+    <PC_File_Compile Include="DBU_cshpordmst.pc" />
+    <PC_File_Compile Include="DBU_cshporddtl.pc" />
+    <PC_File_Compile Include="DBU_cretordsts.pc" />
+    <PC_File_Compile Include="DBU_crasdspreq.pc" />
+    <PC_File_Compile Include="DBU_crasdsptol.pc" />
+    <PC_File_Compile Include="DBU_cbaschkdef.pc" />
+    <PC_File_Compile Include="DBU_medclotdat.pc" />
+    <PC_File_Compile Include="DBU_medccolver.pc" />
+    <PC_File_Compile Include="DBU_medccolchr.pc" />
+    <PC_File_Compile Include="DBU_medccoldef.pc" />
+    <PC_File_Compile Include="DBU_medcchrdef.pc" />
+    <PC_File_Compile Include="DBU_medcresdat.pc" />
+    <PC_File_Compile Include="DBU_if_po_rcv_header.pc" />
+    <PC_File_Compile Include="DBU_if_po_rcv_txns.pc" />
+    <PC_File_Compile Include="DBU_if_po_rcv_txn_lots.pc" />
+    <PC_File_Compile Include="DBU_if_inv_txns.pc" />
+    <PC_File_Compile Include="DBU_if_inv_txn_lots.pc" />
+    <PC_File_Compile Include="DBU_if_move_trx.pc" />
+    <PC_File_Compile Include="DBU_if_completion_trx.pc" />
+    <PC_File_Compile Include="DBU_if_comp_issue_trx.pc" />
+    <PC_File_Compile Include="DBU_if_om_txns.pc" />
+    <PC_File_Compile Include="DBU_if_om_txn_lots.pc" />
+    <PC_File_Compile Include="DBU_if_om_ship_headers.pc" />
+    <PC_File_Compile Include="DBU_if_om_ship_lines.pc" />
+    <PC_File_Compile Include="DBU_if_om_ship_line_lots.pc" />
+    <PC_File_Compile Include="DBU_if_po_rma_headers.pc" />
+    <PC_File_Compile Include="DBU_if_po_rma_txns.pc" />
+    <PC_File_Compile Include="DBU_if_po_rma_txn_lots.pc" />
+    <PC_File_Compile Include="DBU_if_om_promise_date.pc" />
+    <PC_File_Compile Include="DBU_if_std_bom_def.pc" />
+    <PC_File_Compile Include="DBU_if_uom_conv_def.pc" />
+    <PC_File_Compile Include="DBU_if_mat_def.pc" />
+    <PC_File_Compile Include="DBU_if_vendor_def.pc" />
+    <PC_File_Compile Include="DBU_if_customer_def.pc" />
+    <PC_File_Compile Include="DBU_if_wh_def.pc" />
+    <PC_File_Compile Include="DBU_if_sub_area_def.pc" />
+    <PC_File_Compile Include="DBU_if_txn_type_def.pc" />
+    <PC_File_Compile Include="DBU_if_po_info.pc" />
+    <PC_File_Compile Include="DBU_if_wo_bom_info.pc" />
+    <PC_File_Compile Include="DBU_if_wo_info.pc" />
+    <PC_File_Compile Include="DBU_if_so_mst.pc" />
+    <PC_File_Compile Include="DBU_if_so_dtl.pc" />
+    <PC_File_Compile Include="DBU_if_ro_info.pc" />
+    <PC_File_Compile Include="DBU_if_po_consign_txns.pc" />
+    <PC_File_Compile Include="DBU_cwipgrtcss.pc" />
+    <PC_File_Compile Include="DBU_cwipgrtbld.pc" />
+    <PC_File_Compile Include="DBU_if_customer_def_his.pc" />
+    <PC_File_Compile Include="DBU_if_mat_def_his.pc" />
+    <PC_File_Compile Include="DBU_if_po_info_his.pc" />
+    <PC_File_Compile Include="DBU_if_ro_info_his.pc" />
+    <PC_File_Compile Include="DBU_if_so_dtl_his.pc" />
+    <PC_File_Compile Include="DBU_if_so_mst_his.pc" />
+    <PC_File_Compile Include="DBU_if_std_bom_def_his.pc" />
+    <PC_File_Compile Include="DBU_if_sub_area_def_his.pc" />
+    <PC_File_Compile Include="DBU_if_txn_type_def_his.pc" />
+    <PC_File_Compile Include="DBU_if_uom_conv_def_his.pc" />
+    <PC_File_Compile Include="DBU_if_vendor_def_his.pc" />
+    <PC_File_Compile Include="DBU_if_wh_def_his.pc" />
+    <PC_File_Compile Include="DBU_if_wo_bom_info_his.pc" />
+    <PC_File_Compile Include="DBU_if_wo_info_his.pc" />
+    <PC_File_Compile Include="DBU_cwiplotdry.pc" />
+    <PC_File_Compile Include="DBU_csecusedat.pc" />
+    <PC_File_Compile Include="DBU_cwipgrtcls.pc" />
+    <PC_File_Compile Include="DBU_mwipcaldef.pc" />
+    <PC_File_Compile Include="DBU_cwiplotprs.pc" />
+    <PC_File_Compile Include="DBU_cretlotsts.pc" />
+    <PC_File_Compile Include="DBU_cordprdpln.pc" />
+    <PC_File_Compile Include="DBU_cwiplotrnd.pc" />
+    <PC_File_Compile Include="DBU_cwiplotrim.pc" />
+    <PC_File_Compile Include="DBU_cwiplotcup.pc" />
+    <PC_File_Compile Include="DBU_cwiplotlmk.pc" />
+    <PC_File_Compile Include="DBU_cwiplotimp.pc" />
+    <PC_File_Compile Include="DBU_cwiplotcls.pc" />
+    <PC_File_Compile Include="DBU_cwiplottrc.pc" />
+    <PC_File_Compile Include="DBU_cwiplotbas.pc" />
+    <PC_File_Compile Include="DBU_ct_sal110t.pc" />
+    <PC_File_Compile Include="DBU_ct_packing_v.pc" />
+    <PC_File_Compile Include="DBU_csumlotdat.pc" />
+    <PC_File_Compile Include="DBU_mwiplotlos.pc" />
+    <PC_File_Compile Include="DBU_cbaslbldat.pc" />
+    <PC_File_Compile Include="DBU_cbastaktim.pc" />
+    <PC_File_Compile Include="DBU_minvmovsts.pc" />
+    <PC_File_Compile Include="DBU_minvmovlot.pc" />
+    <PC_File_Compile Include="DBU_csumreswip.pc" />
+    <PC_File_Compile Include="DBU_cwipprsrun.pc" />
+    <PC_File_Compile Include="DBU_cwipuoplot.pc" />
+    <PC_File_Compile Include="DBU_ct_mtl510t.pc" />
+    <PC_File_Compile Include="DBU_mwipidghis.pc" />
+    <PC_File_Compile Include="DBU_cwipordopr.pc" />
+    <PC_File_Compile Include="DBU_cqcmcstspm.pc" />
+    <PC_File_Compile Include="DBU_cwipinvldm.pc" />
+    <PC_File_Compile Include="DBU_cqcmcstspg.pc" />
+    <PC_File_Compile Include="DBU_cwipprdgol.pc" />
+    <PC_File_Compile Include="DBU_mrastevdef.pc" />
+    <PC_File_Compile Include="DBU_esecusrdef.pc" />
+    <PC_File_Compile Include="DBU_ct_mtl100t.pc" />
+    <PC_File_Compile Include="DBU_cwiplotrec.pc" />
+    <PC_File_Compile Include="DBU_ct_prd210t.pc" />
+    <PC_File_Compile Include="DBU_ct_prd200t.pc" />
+    <PC_File_Compile Include="DBU_ct_mold_v.pc" />
+    <PC_File_Compile Include="DBU_cwipwrkinp.pc" />
+    <PC_File_Compile Include="DBU_minvetclot.pc" />
+    <PC_File_Compile Include="DBU_cwiplotchg.pc" />
+    <PC_File_Compile Include="DBU_cpaklothis.pc" />
+    <PC_File_Compile Include="DBU_ishplotiss.pc" />
+    <PC_File_Compile Include="DBU_ishplotrcv.pc" />
+    <PC_File_Compile Include="DBU_cwipbldavg.pc" />
+    <PC_File_Compile Include="DBU_crasbasdat.pc" />
+    <PC_File_Compile Include="DBU_cbasshpbom.pc" />
+    <PC_File_Compile Include="DBU_crastolbrk.pc" />
+    <PC_File_Compile Include="DBU_mrastolhis.pc" />
+    <PC_File_Compile Include="DBU_cwippryer.pc" />
+    <PC_File_Compile Include="DBU_ishpispiss.pc" />
+    <PC_File_Compile Include="DBU_ishpisprcv.pc" />
+    <PC_File_Compile Include="DBU_crashitfnc.pc" />
+    <PC_File_Compile Include="DBU_cerpaststs.pc" />
+    <PC_File_Compile Include="DBU_crasmdextd.pc" />
+    <PC_File_Compile Include="DBU_crasvcmfnc.pc" />
+    <PC_File_Compile Include="DBU_cras5thprs.pc" />
+    <PC_File_Compile Include="DBU_cras4hrprs.pc" />
+    <PC_File_Compile Include="DBU_craspntmix.pc" />
+    <PC_File_Compile Include="DBU_crasbalmil.pc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\MES_DBCmn\PC_File_Compile.targets" />
+  </ImportGroup>
+</Project>

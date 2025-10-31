@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- 공통 뷰 속성 -->
+
+    <style name="Main_ListView">
+        <item name="android:layout_marginTop">0.5dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:cacheColorHint">#00000000</item>
+        <item name="android:editable">true</item>
+        <item name="android:choiceMode">singleChoice</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:divider">#00000000</item>
+        <item name="android:dividerHeight">0.3dp</item>
+        <item name="android:fadingEdgeLength">0dp</item>
+        <item name="android:fastScrollEnabled">false</item>
+        <item name="android:footerDividersEnabled">false</item>
+        <item name="android:headerDividersEnabled">false</item>
+        <item name="android:listSelector">#00000000</item>
+        <item name="android:overScrollMode">always</item>
+        <item name="android:requiresFadingEdge">vertical</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:smoothScrollbar">true</item>
+    </style>
+</resources>

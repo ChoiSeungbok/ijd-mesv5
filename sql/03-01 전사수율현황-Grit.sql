@@ -1,0 +1,346 @@
+--월간수율
+WITH PROD_LIST AS (
+        SELECT WORK_MONTH, WORK_WEEK, WORK_DATE,  
+                NVL(SUM(CASE WHEN OPER IN ('BARE') THEN PROD_QTY END),0) BARE_OUT_QTY,
+                NVL(SUM(CASE WHEN OPER IN ('BARE') THEN PROD_IN_QTY1+PROD_IN_QTY2+PROD_IN_QTY3 END),0) BARE_IN_QTY,
+                NVL(SUM(CASE WHEN OPER IN ('TIC') THEN PROD_QTY END),0) TI_COAT_OUT_QTY,
+                NVL(SUM(CASE WHEN OPER IN ('TIC') THEN PROD_IN_QTY1+PROD_IN_QTY2+PROD_IN_QTY3 END),0) TI_COAT_IN_QTY,
+                NVL(SUM(CASE WHEN OPER IN ('NIC') THEN PROD_QTY END),0) NI_COAT_OUT_QTY,                  
+                NVL(SUM(CASE WHEN OPER IN ('NIC') THEN PROD_IN_QTY1+PROD_IN_QTY2+PROD_IN_QTY3 END),0) NI_COAT_IN_QTY
+            FROM (
+                SELECT SUBSTR(F_GET_WORK_DATE(A.INSP_JUDGE_TIME),1,6) AS WORK_MONTH,    
+                        SYS_YEAR || LPAD(PLAN_WEEK,2,'0') || 'W' AS WORK_WEEK,
+                        F_GET_WORK_DATE(A.INSP_JUDGE_TIME) AS WORK_DATE,                                       
+                    (CASE  WHEN A.INSP_OPER IN ('OG09010', 'OG09040', 'OG06450') THEN 'BARE'
+                         WHEN A.INSP_OPER IN ('OG09030') THEN 'TIC'
+                         WHEN A.INSP_OPER IN ('OG09020') THEN 'NIC'
+                    END) OPER,
+                    NVL(CASE  
+                         /*BARE : 제품검사 + 제품검사-cBN + MP-제품검사 양품수량 */
+                         WHEN A.INSP_JUDGE_FLAG='P' AND A.INSP_OPER IN ('OG09010', 'OG09040', 'OG06450') THEN A.QTY
+                         /*Ti코팅 : 제품검사-Coat 양품수량*/
+                         WHEN A.INSP_JUDGE_FLAG='P' AND A.INSP_OPER IN ('OG09030') THEN A.QTY
+                         /*Ni코팅 : CP-제품검사 양품수량*/
+                         WHEN A.INSP_JUDGE_FLAG='P' AND A.INSP_OPER IN ('OG09020') THEN A.QTY
+                        END,0) PROD_QTY,
+                    NVL((SELECT SUM(IN_QTY)
+                            FROM CSUMLOTDAT B
+                            WHERE LOT_ID=A.LOT_ID
+                            AND OPER IN ('OG06130', 'OG06210', 'OG06010', 'OG06340', 'OG06430')
+                        ),0) PROD_IN_QTY1,
+                    NVL((SELECT SUM(IN_QTY)
+                            FROM CSUMLOTDAT B
+                            WHERE LOT_ID=A.LOT_ID
+                            AND OPER IN ('OG07110', 'OG07210', 'OG07310', 'OG07410')
+                        ),0) PROD_IN_QTY2,
+                    NVL((SELECT SUM(IN_QTY)
+                            FROM CSUMLOTDAT B
+                            WHERE LOT_ID=A.LOT_ID
+                            AND OPER IN ('OG07050')
+                        ),0) PROD_IN_QTY3
+                FROM CQCMISPSTS A,  MWIPCALDEF B
+                WHERE  A.AREA_ID='GRT'
+                    AND A.INSP_STATUS = 'S'    
+                    AND A.INSP_JUDGE_FLAG NOT IN ('S','C')        
+                    AND A.INSP_OPER IN ('OG09010', 'OG09040', 'OG06450', 'OG09030', 'OG09020')
+                    AND A.INSP_JUDGE_TIME BETWEEN F_GET_FIRST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) ||'080000' AND TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')                                       
+                    AND A.FACTORY = B.CALENDAR_ID
+                    AND F_GET_WORK_DATE(A.INSP_JUDGE_TIME) = B.SYS_DATE
+     )
+     GROUP BY WORK_MONTH, WORK_WEEK, WORK_DATE 
+)
+,MONTH_YIELD AS (
+    SELECT ROUND((CASE WHEN NVL(BARE_IN_QTY,0)>0 THEN (BARE_OUT_QTY / BARE_IN_QTY)
+            ELSE  0 END) * 
+                (CASE WHEN NVL(TI_COAT_IN_QTY,0) +  NVL(NI_COAT_IN_QTY,0)>0 THEN
+                    ((NVL(TI_COAT_OUT_QTY,0) + NVL(NI_COAT_OUT_QTY,0)) / (NVL(TI_COAT_IN_QTY,0) +  NVL(NI_COAT_IN_QTY,0)))
+                ELSE 0 END) * 100, 1) YIELD
+    FROM (
+        SELECT NVL(SUM(BARE_IN_QTY),0) AS BARE_IN_QTY,
+            NVL(SUM(BARE_OUT_QTY),0) AS BARE_OUT_QTY,
+            NVL(SUM(TI_COAT_IN_QTY),0) AS TI_COAT_IN_QTY,
+            NVL(SUM(TI_COAT_OUT_QTY),0) AS TI_COAT_OUT_QTY,
+            NVL(SUM(NI_COAT_IN_QTY),0) AS NI_COAT_IN_QTY,
+            NVL(SUM(NI_COAT_OUT_QTY),0) AS NI_COAT_OUT_QTY
+        FROM PROD_LIST
+        GROUP BY WORK_MONTH    
+    )
+)
+,WEEK_YIELD AS (
+    SELECT ROUND((CASE WHEN NVL(BARE_IN_QTY,0)>0 THEN (BARE_OUT_QTY / BARE_IN_QTY)
+            ELSE  0 END) * 
+                (CASE WHEN NVL(TI_COAT_IN_QTY,0) +  NVL(NI_COAT_IN_QTY,0)>0 THEN
+                    ((NVL(TI_COAT_OUT_QTY,0) + NVL(NI_COAT_OUT_QTY,0)) / (NVL(TI_COAT_IN_QTY,0) +  NVL(NI_COAT_IN_QTY,0)))
+                ELSE 0 END) * 100, 1) YIELD
+    FROM (
+        SELECT NVL(SUM(BARE_IN_QTY),0) AS BARE_IN_QTY,
+            NVL(SUM(BARE_OUT_QTY),0) AS BARE_OUT_QTY,
+            NVL(SUM(TI_COAT_IN_QTY),0) AS TI_COAT_IN_QTY,
+            NVL(SUM(TI_COAT_OUT_QTY),0) AS TI_COAT_OUT_QTY,
+            NVL(SUM(NI_COAT_IN_QTY),0) AS NI_COAT_IN_QTY,
+            NVL(SUM(NI_COAT_OUT_QTY),0) AS NI_COAT_OUT_QTY
+        FROM PROD_LIST A, MWIPCALDEF B
+        WHERE B.CALENDAR_ID='IJDK1'
+            AND A.WORK_WEEK = (SELECT  SYS_YEAR || LPAD(PLAN_WEEK,2,'0') || 'W'
+                      FROM MWIPCALDEF
+                     WHERE CALENDAR_ID = 'IJDK1'
+                            AND SYS_DATE = F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')))                                                          
+        GROUP BY WORK_WEEK    
+    )
+)
+,TODAY_YIELD AS (
+    SELECT ROUND((CASE WHEN NVL(BARE_IN_QTY,0)>0 THEN (BARE_OUT_QTY / BARE_IN_QTY)
+            ELSE  0 END) * 
+                (CASE WHEN NVL(TI_COAT_IN_QTY,0) +  NVL(NI_COAT_IN_QTY,0)>0 THEN
+                    ((NVL(TI_COAT_OUT_QTY,0) + NVL(NI_COAT_OUT_QTY,0)) / (NVL(TI_COAT_IN_QTY,0) +  NVL(NI_COAT_IN_QTY,0)))
+                ELSE 0 END) * 100, 1) YIELD
+    FROM (
+        SELECT NVL(SUM(BARE_IN_QTY),0) AS BARE_IN_QTY,
+            NVL(SUM(BARE_OUT_QTY),0) AS BARE_OUT_QTY,
+            NVL(SUM(TI_COAT_IN_QTY),0) AS TI_COAT_IN_QTY,
+            NVL(SUM(TI_COAT_OUT_QTY),0) AS TI_COAT_OUT_QTY,
+            NVL(SUM(NI_COAT_IN_QTY),0) AS NI_COAT_IN_QTY,
+            NVL(SUM(NI_COAT_OUT_QTY),0) AS NI_COAT_OUT_QTY
+        FROM PROD_LIST A
+        WHERE WORK_DATE = F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+        GROUP BY WORK_DATE    
+    )
+)
+,GOAL_YIELD AS (
+    SELECT WORK_MONTH, GOAL_YIELD
+          FROM CWIPPRDGOL
+         WHERE FACTORY = 'IJDK1'
+           AND KIND = 'Y'
+           AND CLASS='MONTH'
+           AND WEEK_OF_MONTH = 1
+           AND AREA_ID = 'GRT'
+           AND WORK_MONTH = SUBSTR(F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')), 1, 6)
+)
+SELECT NVL(A.YIELD,0) AS YIELD,                                     --월 실적 
+       NVL(D.GOAL_YIELD,0) GOAL_YIELD,                              --월 계획
+       NVL(B.YIELD,0) AS YIELD_W,                                   --주간 실적
+       NVL(C.YIELD,0) AS YIED_RATE,                                --당일 실적       
+       ROUND(NVL(C.YIELD/D.GOAL_YIELD,0)*100,1) AS M_YIELD_RATE     --월 달성율
+FROM MONTH_YIELD A, WEEK_YIELD B, TODAY_YIELD C, GOAL_YIELD D
+
+;
+
+-- 일간 수율
+WITH PROD_LIST AS (
+        SELECT WORK_MONTH, WORK_WEEK, WORK_DATE,  
+                NVL(SUM(CASE WHEN OPER IN ('BARE') THEN PROD_QTY END),0) BARE_OUT_QTY,
+                NVL(SUM(CASE WHEN OPER IN ('BARE') THEN PROD_IN_QTY1+PROD_IN_QTY2+PROD_IN_QTY3 END),0) BARE_IN_QTY,
+                NVL(SUM(CASE WHEN OPER IN ('TIC') THEN PROD_QTY END),0) TI_COAT_OUT_QTY,
+                NVL(SUM(CASE WHEN OPER IN ('TIC') THEN PROD_IN_QTY1+PROD_IN_QTY2+PROD_IN_QTY3 END),0) TI_COAT_IN_QTY,
+                NVL(SUM(CASE WHEN OPER IN ('NIC') THEN PROD_QTY END),0) NI_COAT_OUT_QTY,                  
+                NVL(SUM(CASE WHEN OPER IN ('NIC') THEN PROD_IN_QTY1+PROD_IN_QTY2+PROD_IN_QTY3 END),0) NI_COAT_IN_QTY
+            FROM (
+                SELECT SUBSTR(F_GET_WORK_DATE(A.INSP_JUDGE_TIME),1,6) AS WORK_MONTH,    
+                        SYS_YEAR || LPAD(PLAN_WEEK,2,'0') || 'W' AS WORK_WEEK,
+                        F_GET_WORK_DATE(A.INSP_JUDGE_TIME) AS WORK_DATE,                                       
+                    (CASE  WHEN A.INSP_OPER IN ('OG09010', 'OG09040', 'OG06450') THEN 'BARE'
+                         WHEN A.INSP_OPER IN ('OG09030') THEN 'TIC'
+                         WHEN A.INSP_OPER IN ('OG09020') THEN 'NIC'
+                    END) OPER,
+                    NVL(CASE  
+                         /*BARE : 제품검사 + 제품검사-cBN + MP-제품검사 양품수량 */
+                         WHEN A.INSP_JUDGE_FLAG='P' AND A.INSP_OPER IN ('OG09010', 'OG09040', 'OG06450') THEN A.QTY
+                         /*Ti코팅 : 제품검사-Coat 양품수량*/
+                         WHEN A.INSP_JUDGE_FLAG='P' AND A.INSP_OPER IN ('OG09030') THEN A.QTY
+                         /*Ni코팅 : CP-제품검사 양품수량*/
+                         WHEN A.INSP_JUDGE_FLAG='P' AND A.INSP_OPER IN ('OG09020') THEN A.QTY
+                        END,0) PROD_QTY,
+                    NVL((SELECT SUM(IN_QTY)
+                            FROM CSUMLOTDAT B
+                            WHERE LOT_ID=A.LOT_ID
+                            AND OPER IN ('OG06130', 'OG06210', 'OG06010', 'OG06340', 'OG06430')
+                        ),0) PROD_IN_QTY1,
+                    NVL((SELECT SUM(IN_QTY)
+                            FROM CSUMLOTDAT B
+                            WHERE LOT_ID=A.LOT_ID
+                            AND OPER IN ('OG07110', 'OG07210', 'OG07310', 'OG07410')
+                        ),0) PROD_IN_QTY2,
+                    NVL((SELECT SUM(IN_QTY)
+                            FROM CSUMLOTDAT B
+                            WHERE LOT_ID=A.LOT_ID
+                            AND OPER IN ('OG07050')
+                        ),0) PROD_IN_QTY3
+                FROM CQCMISPSTS A,  MWIPCALDEF B
+                WHERE  A.AREA_ID='GRT'
+                    AND A.INSP_STATUS = 'S'    
+                    AND A.INSP_JUDGE_FLAG NOT IN ('S','C')        
+                    AND A.INSP_OPER IN ('OG09010', 'OG09040', 'OG06450', 'OG09030', 'OG09020')
+                    AND A.INSP_JUDGE_TIME BETWEEN TO_CHAR(TO_DATE(F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')), 'YYYYMMDD') - 8, 'YYYYMMDD') ||'080000' AND TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')                                       
+                    AND A.FACTORY = B.CALENDAR_ID
+                    AND F_GET_WORK_DATE(A.INSP_JUDGE_TIME) = B.SYS_DATE
+     )
+     GROUP BY WORK_MONTH, WORK_WEEK, WORK_DATE 
+)
+, CAL AS (
+    SELECT /*+ INDEX_DESC(A MWIPCALDEF_PK) */ SYS_DATE WORK_DATE
+          FROM MWIPCALDEF A
+         WHERE CALENDAR_ID = 'IJDK1'         
+           AND SYS_DATE <= F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+        FETCH FIRST 9 ROW ONLY
+ )
+,DAY_YIELD AS (
+    SELECT WORK_DATE,
+            ROUND((CASE WHEN NVL(BARE_IN_QTY,0)>0 THEN (BARE_OUT_QTY / BARE_IN_QTY)
+            ELSE  0 END) * 
+                (CASE WHEN NVL(TI_COAT_IN_QTY,0) +  NVL(NI_COAT_IN_QTY,0)>0 THEN
+                    ((NVL(TI_COAT_OUT_QTY,0) + NVL(NI_COAT_OUT_QTY,0)) / (NVL(TI_COAT_IN_QTY,0) +  NVL(NI_COAT_IN_QTY,0)))
+                ELSE 0 END) * 100, 1) YIELD
+    FROM (
+        SELECT A.WORK_DATE,
+            NVL(SUM(BARE_IN_QTY),0) AS BARE_IN_QTY,
+            NVL(SUM(BARE_OUT_QTY),0) AS BARE_OUT_QTY,
+            NVL(SUM(TI_COAT_IN_QTY),0) AS TI_COAT_IN_QTY,
+            NVL(SUM(TI_COAT_OUT_QTY),0) AS TI_COAT_OUT_QTY,
+            NVL(SUM(NI_COAT_IN_QTY),0) AS NI_COAT_IN_QTY,
+            NVL(SUM(NI_COAT_OUT_QTY),0) AS NI_COAT_OUT_QTY
+        FROM CAL A, PROD_LIST B
+        WHERE A.WORK_DATE = B.WORK_DATE(+)
+        GROUP BY A.WORK_DATE    
+    )
+)
+,GOAL_YIELD AS (
+    SELECT WORK_MONTH, GOAL_YIELD
+          FROM CWIPPRDGOL
+         WHERE FACTORY = 'IJDK1'
+           AND KIND = 'Y'
+           AND CLASS='MONTH'
+           AND WEEK_OF_MONTH = 1
+           AND AREA_ID = 'GRT'
+           AND WORK_MONTH = SUBSTR(F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')), 1, 6)
+)
+SELECT TO_CHAR(TO_DATE(WORK_DATE,'YYYYMMDD'),'MM-DD') AS WORK_DATE, NVL(YIELD,0) T_YIELD , B.GOAL_YIELD AS IND_VAL
+    , WORK_DATE AS SEQ
+FROM DAY_YIELD A, GOAL_YIELD B
+ORDER BY 4 
+;
+
+-- 월간 Worst Loss
+SELECT A.AREA_ID, B.LOSS_CODE, B.LOSS_DESC, B.LOSS_QTY, A.PROD_QTY,
+        TO_CHAR(ROUND(B.LOSS_QTY / A.PROD_QTY * 100, 2), 'FM990.00')  LOSS_RATE,        
+        '%' AS PFIX
+  FROM (
+        -- 월간 작업량
+        SELECT A.AREA_ID,
+                SUBSTR(A.WORK_DATE,0,6) AS WORK_MONTH,
+                SUM(A.PROD_QTY + A.LOSS_QTY) PROD_QTY
+          FROM CSUMWIPOPR A
+         WHERE A.FACTORY = 'IJDK1'
+           AND A.OPER IN ('OC04120','OH24110','OG09010','OG09030','OP08120','OP90040')
+           AND A.WORK_DATE BETWEEN F_GET_FIRST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) AND F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+         GROUP BY SUBSTR(A.WORK_DATE,0,6),A.AREA_ID
+       ) A,
+       (
+        SELECT A.AREA_ID, SUBSTR(A.WORK_DATE,0,6) AS WORK_MONTH, 
+                A.LOSS_CODE, B.DATA_1 LOSS_DESC, B.DATA_2 SEQ, 
+                SUM(A.LOSS_QTY) LOSS_QTY
+          FROM CSUMWIPLOS A, MGCMTBLDAT B
+         WHERE A.FACTORY = 'IJDK1'
+           AND A.WORK_DATE BETWEEN F_GET_FIRST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) AND F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+           AND A.FACTORY = B.FACTORY
+           AND A.AREA_ID = B.KEY_1
+           AND A.LOSS_CODE = B.KEY_2
+           AND B.TABLE_NAME = 'C_WORST_LOSS'
+           AND A.OPER IN ('OC04120','OH24110','OG09010','OG09030','OP08120','OP90040')
+         GROUP BY A.AREA_ID, SUBSTR(A.WORK_DATE,0,6), A.LOSS_CODE, B.DATA_1, B.DATA_2
+         ORDER BY A.AREA_ID, B.DATA_2
+       ) B
+  WHERE A.AREA_ID=B.AREA_ID
+       AND A.WORK_MONTH=B.WORK_MONTH
+ORDER BY A.AREA_ID,SEQ
+
+
+;
+-- 월간 Worst Loss 1 --아님
+SELECT B.LOSS_CODE, B.LOSS_DESC, LOSS_QTY, ROUND(B.LOSS_QTY / A.PROD_QTY * 100, 1) LOSS_RATE
+  FROM (
+        -- 월간 작업량
+        SELECT SUM(A.PROD_QTY + A.LOSS_QTY) PROD_QTY
+          FROM CSUMWIPOPR A
+         WHERE A.FACTORY = 'IJDK1'
+           AND A.WORK_DATE BETWEEN F_GET_FIRST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) AND F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+           AND A.AREA_ID = 'GRT'		  
+       ) A,
+       (
+        SELECT A.LOSS_CODE, B.DATA_1 LOSS_DESC, SUM(A.LOSS_QTY) LOSS_QTY
+          FROM CSUMWIPLOS A, MGCMTBLDAT B
+         WHERE A.FACTORY = 'IJDK1'
+           AND A.AREA_ID = 'GRT'
+           AND A.WORK_DATE BETWEEN F_GET_FIRST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) AND F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+           AND A.FACTORY = B.FACTORY
+           AND A.LOSS_CODE = B.KEY_1
+           AND B.TABLE_NAME = 'LOSS_CODE'
+         GROUP BY A.LOSS_CODE, B.DATA_1
+         ORDER BY SUM(A.LOSS_QTY) DESC
+         FETCH FIRST 3 ROW ONLY
+       ) B
+;
+
+-- 9일간 Worst 불량 내역
+WITH CAL AS (
+        SELECT /*+ INDEX_DESC(A MWIPCALDEF_PK) */ SYS_DATE WORK_DATE
+          FROM MWIPCALDEF A
+         WHERE CALENDAR_ID = 'IJDK1'
+           AND SYS_YEAR = TO_NUMBER(SUBSTR(F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')), 1, 4))
+           AND HOLIDAY_FLAG = ' '
+           AND SYS_DATE <= F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+        FETCH FIRST 9 ROW ONLY
+)
+SELECT AREA_ID, 
+        ST_WORK_DATE,
+       SUM(CASE WHEN LOSS_SEQ = 1 THEN LOSS_QTY ELSE 0 END) AS W1_LOSS_QTY,
+       SUM(CASE WHEN LOSS_SEQ = 2 THEN LOSS_QTY ELSE 0 END) AS W2_LOSS_QTY,
+       SUM(CASE WHEN LOSS_SEQ = 3 THEN LOSS_QTY ELSE 0 END) AS W3_LOSS_QTY      
+  FROM (
+        SELECT B.KEY_1 AS AREA_ID
+             , TO_CHAR(TO_DATE(C.WORK_DATE),'MM-DD') AS ST_WORK_DATE
+             , NVL(B.KEY_2, 'TOT') LOSS_CODE
+             , B.DATA_1 LOSS_DESC
+             , NVL(SUM(A.LOSS_QTY),0) LOSS_QTY
+             , DATA_2 LOSS_SEQ
+          FROM CSUMWIPLOS A, MGCMTBLDAT B, CAL C
+        WHERE C.WORK_DATE = A.WORK_DATE(+)
+               AND B.FACTORY = 'IJDK1'
+              -- AND B.KEY_1 = 'CTM'
+               AND A.FACTORY(+) = B.FACTORY
+               AND A.AREA_ID(+) = B.KEY_1
+               AND A.LOSS_CODE(+) = B.KEY_2
+               AND B.TABLE_NAME = 'C_WORST_LOSS'
+         GROUP BY ROLLUP(B.KEY_1, C.WORK_DATE, B.KEY_2, B.DATA_1, B.DATA_2)
+         HAVING GROUPING_ID(C.WORK_DATE, B.KEY_1, B.KEY_2, B.DATA_1, B.DATA_2) IN (0, 7)
+ ) A
+ WHERE LOSS_CODE <> 'TOT'
+ GROUP BY AREA_ID, ST_WORK_DATE
+ ORDER BY AREA_ID, ST_WORK_DATE
+
+
+ -- 9일간 Worst 불량 내역 2 --아님
+ WITH CAL AS (
+        SELECT /*+ INDEX_DESC(A MWIPCALDEF_PK) */ SYS_DATE WORK_DATE
+          FROM MWIPCALDEF A
+         WHERE CALENDAR_ID = 'IJDK1'
+           AND SYS_YEAR = TO_NUMBER(SUBSTR(F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')), 1, 4))
+           AND HOLIDAY_FLAG = ' '
+           AND SYS_DATE <= F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+        FETCH FIRST 9 ROW ONLY
+)
+SELECT A.WORK_DATE,LOSS_CODE, LOSS_DESC, LOSS_QTY
+FROM (
+     SELECT A.WORK_DATE, A.LOSS_CODE, B.DATA_1 LOSS_DESC, SUM(A.LOSS_QTY) LOSS_QTY
+            ,RANK() OVER(PARTITION BY A.WORK_DATE ORDER BY SUM(A.LOSS_QTY)) AS LOSS_RANK
+      FROM CSUMWIPLOS A, MGCMTBLDAT B
+     WHERE A.FACTORY = 'IJDK1'
+       AND A.AREA_ID = 'GRT'
+       AND A.WORK_DATE BETWEEN F_GET_FIRST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) AND F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+       AND A.FACTORY = B.FACTORY
+       AND A.LOSS_CODE = B.KEY_1
+       AND B.TABLE_NAME = 'LOSS_CODE' 
+     GROUP BY A.WORK_DATE, A.LOSS_CODE, B.DATA_1
+    ) A, CAL C 
+WHERE LOSS_RANK<4
+AND C.WORK_DATE=A.WORK_DATE(+)
+ORDER BY A.WORK_DATE, LOSS_RANK DESC

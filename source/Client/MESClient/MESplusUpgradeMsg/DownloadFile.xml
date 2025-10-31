@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!--   Usage
+    <ExeFile>MESClient.exe</ExeFile> : Execution file name after download files
+    <DownFile>
+        <DownFileDesc>MESClient</DownFileDesc> : Description of file
+        <DownFileName>MESClient.exe</DownFileName> : File name
+        <DownFileVersion>4.0.0.0</DownFileVersion> : File version
+        <DownFilePath>.</DownFilePath> : If Zip file, extracting path of zip file. other case download path
+        <ActionFlag>EXE</ActionFlag>
+    </DownFile>   
+
+  --> 
+<Download_list>
+ <ExeFile>MESClient.exe</ExeFile>
+ <DownFile>
+  <DownFileDesc>MESClient Upgrade</DownFileDesc> 
+  <DownFileName>MESClient.zip</DownFileName> 
+  <DownFileVersion>4.2.0.0</DownFileVersion>
+  <DownFilePath>.</DownFilePath> 
+  <ActionFlag>ZIP</ActionFlag> 
+ </DownFile>
+</Download_list>

@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:onClick="onclickWindow"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/content_padding"
+        android:paddingRight="@dimen/content_padding"
+        android:paddingTop="@dimen/content_padding">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_text_box_height"
+            android:background="@drawable/selector_barcode_btn"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.pda.mes.widget.FontTextView
+                    style="@style/InputBox_Title.Barcode"
+                    android:text="@string/common_word_inv_lot_id"/>
+
+                <com.pda.mes.widget.FontEditTextView
+                    android:id="@+id/invLotId"
+                    style="@style/InputBox_Content.Scan"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_text_box_height"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.pda.mes.widget.FontTextView
+                    style="@style/InputBox_Title"
+                    android:text="@string/common_word_item_code"/>
+
+                <com.pda.mes.widget.FontTextView
+                    android:id="@+id/invLotMatId"
+                    style="@style/InputBox_Content.Disable"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_text_box_height"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.pda.mes.widget.FontTextView
+                    style="@style/InputBox_Title"
+                    android:text="@string/common_word_item_desc"/>
+
+                <com.pda.mes.widget.FontTextView
+                    android:id="@+id/invLotMatDesc"
+                    style="@style/InputBox_Content.Disable"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_text_box_height"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.pda.mes.widget.FontTextView
+                    style="@style/InputBox_Title"
+                    android:text="@string/common_word_warehouse"/>
+
+                <com.pda.mes.widget.FontTextView
+                    android:id="@+id/invLotOper"
+                    style="@style/InputBox_Content.Disable"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_text_box_height"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.pda.mes.widget.FontTextView
+                    style="@style/InputBox_Title"
+                    android:text="@string/common_word_warehouse_desc"/>
+
+                <com.pda.mes.widget.FontTextView
+                    android:id="@+id/invLotOperDesc"
+                    style="@style/InputBox_Content.Disable"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_text_box_height"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.pda.mes.widget.FontTextView
+                    style="@style/InputBox_Title"
+                    android:text="@string/common_word_quantity"/>
+
+                <com.pda.mes.widget.FontTextView
+                    android:id="@+id/invLotQty"
+                    style="@style/InputBox_Content.Disable.Number"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_text_box_height"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.pda.mes.widget.FontTextView
+                    style="@style/InputBox_Title"
+                    android:text="@string/common_word_unit"/>
+
+                <com.pda.mes.widget.FontTextView
+                    android:id="@+id/invLotUnit"
+                    style="@style/InputBox_Content.Disable"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_text_box_height"
+            android:background="@drawable/selector_barcode_btn"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.pda.mes.widget.FontTextView
+                    style="@style/InputBox_Title.Barcode"
+                    android:text="@string/common_word_etc_out_quantity"/>
+
+                <com.pda.mes.widget.FontEditTextView
+                    android:id="@+id/OutQty"
+                    android:inputType="numberDecimal"
+                    style="@style/InputBox_Content.Scan.Number"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/outTypeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_text_box_height"
+            android:background="@drawable/selector_white_btn"
+            android:clickable="true"
+            android:onClick="onClickOutType"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.pda.mes.widget.FontTextView
+                    style="@style/InputBox_Title"
+                    android:text="@string/common_word_out_type" />
+
+                <com.pda.mes.widget.FontTextView
+                    android:id="@+id/invLotOutType"
+                    style="@style/InputBox_Content.Dropdown"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/outDateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_text_box_height"
+            android:background="@drawable/selector_white_btn"
+            android:clickable="true"
+            android:onClick="onClickOutDate"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.pda.mes.widget.FontTextView
+                    style="@style/InputBox_Title"
+                    android:text="@string/common_word_out_date" />
+
+                <com.pda.mes.widget.FontTextView
+                    style="@style/InputBox_Content.Dropdown"
+                    android:id="@+id/invLotOutDate"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/InvLotIdLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_text_box_height"
+            android:background="@drawable/selector_barcode_btn"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.pda.mes.widget.FontTextView
+                    style="@style/InputBox_Title.Barcode"
+                    android:text="@string/common_word_remark"/>
+
+                <com.pda.mes.widget.FontEditTextView
+                    android:id="@+id/invLotRemark"
+                    style="@style/InputBox_Content.Scan"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            layout="@layout/view_empty_list"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            style="@style/Bottom_Button"
+            android:layout_weight="1"
+            android:onClick="onClickRun">
+
+            <com.pda.mes.widget.FontTextView
+                style="@style/Bottom_Button_Text"
+                android:text="@string/common_word_run" />
+        </LinearLayout>
+
+        <View style="@style/Bottom_Button_Line" />
+
+        <LinearLayout
+            style="@style/Bottom_Button_White"
+            android:layout_weight="1"
+            android:onClick="onClickClose">
+
+            <com.pda.mes.widget.FontTextView
+                style="@style/Bottom_Button_Text_Blue"
+                android:text="@string/common_word_close" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

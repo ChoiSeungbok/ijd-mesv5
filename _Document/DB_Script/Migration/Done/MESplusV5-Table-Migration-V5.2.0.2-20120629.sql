@@ -1,0 +1,35 @@
+/*
+**
+**  File Name    : MESplusV5-Table-Migration_Table.sql
+**  Description  : MESplus V5 Release for Table Migration
+**
+**  DB Type      : Oracle
+**  DB Version   : Oracle 10g / 11g
+**
+**  Period       : 2011.02.27 ~ ****
+**  Release Date : ****
+**
+**  Copyright(C) MIRACOM,INC. All rights reserved.
+**
+*/
+
+
+CREATE INDEX MRASRESLTH_IDX_1 ON MRASRESLTH
+(
+    LOT_ID,
+    LOT_HIST_SEQ,
+    LOT_HIST_DEL_FLAG
+) TABLESPACE HISTORY_IDX_TS; 
+
+/* Added By YJJUNG 2012.05.23 */
+ALTER TABLE MSPCCHTDEF ADD(WB_SIGMA_FLAG     CHAR(1)        DEFAULT (' ')  NOT NULL);
+ALTER TABLE MSPCCHTDEF ADD(MIN_TRIAL_NUMBER  VARCHAR2(25)   DEFAULT (' ')  NOT NULL);
+
+ALTER TABLE MSPCSPEHIS ADD(WB_SIGMA_FLAG     CHAR(1)        DEFAULT (' ')  NOT NULL);
+
+ALTER TABLE MRASQRYDEF MODIFY (DATA_CODE VARCHAR2(30));
+ALTER TABLE MRASSHTDAT MODIFY (DATA_CODE VARCHAR2(30));
+ALTER TABLE MRASSHTRST MODIFY (DATA_CODE VARCHAR2(30));
+
+ALTER TABLE MRASSHTRST ADD (COMPLETE_FLAG     CHAR(1)        DEFAULT (' ')  NOT NULL);
+/* End */

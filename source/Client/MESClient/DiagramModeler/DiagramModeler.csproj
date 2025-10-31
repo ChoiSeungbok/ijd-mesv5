@@ -1,0 +1,113 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CF12D49A-F1F9-4FCF-B73B-542FB56B13B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Miracom.Common.DiagramModeler</RootNamespace>
+    <AssemblyName>Miracom.Common.DiagramModeler</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Miracom.Common.DiagramModeler.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DefaultClass\DefaultHolder.cs">
+    </Compile>
+    <Compile Include="BaseClass\BaseElement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseClass\BaseElement.Designer.cs">
+      <DependentUpon>BaseElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseClass\BaseDiagramPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseClass\BaseDiagramPanel.Designer.cs">
+      <DependentUpon>BaseDiagramPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedClass\TreeDiagramPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedClass\TreeHolder.cs" />
+    <Compile Include="ExtendedClass\TreeShape.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Foundations\ConnectionArrowDrawings.cs" />
+    <Compile Include="BaseClass\BaseConnection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Foundations\ConnectionRule.cs" />
+    <Compile Include="Foundations\DiagramGrid.cs" />
+    <Compile Include="BaseClass\BaseShape.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Foundations\DiagramImage.cs" />
+    <Compile Include="DiagramModeler.cs" />
+    <Compile Include="Foundations\ConnectionProperty.cs" />
+    <Compile Include="Foundations\ShapeDrawings.cs" />
+    <Compile Include="Foundations\Entity.cs" />
+    <Compile Include="Foundations\Enumerations.cs" />
+    <Compile Include="Inerface\IDiagramElement.cs" />
+    <Compile Include="Inerface\IDiagramVisualizer.cs" />
+    <Compile Include="DefaultClass\PreviewConnection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Foundations\DiagramSettings.cs" />
+    <Compile Include="BaseClass\BaseHolder.cs" />
+    <Compile Include="DefaultClass\DefaultConnection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Foundations\ShapeLabel.cs" />
+    <Compile Include="ExtendedClass\TreeConnection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetPath)" "$(SolutionDir)..\Components\" /d/r/y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

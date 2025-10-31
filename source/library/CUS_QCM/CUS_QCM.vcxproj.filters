@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5ca7c1f0-93ea-473c-b524-9aaa1e0891e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{90a7dcd1-1d17-403c-81fe-cc46fe3c1b86}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CUS_QCM_AddService.c">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_QCM_Collect_Inspection_Data.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_QCM_Create_Inspection_Request.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_QCM_Inspection_Judge.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_QCM_view_lot_info.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_QCM_Update_Inspection_Status.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_QCM_Collect_Inspection_Data_Grit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_QCM_Update_Inspection_Worker.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_QCM_view_lot_inspection_data.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_QCM_Generate_Report.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_QCM_Save_Report.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_QCM_File_Attach.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_QCM_ship_report_spec_registration_by_mat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_QCM_ship_report_spec_registration_by_grade.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_QCM_batch_mig_data_prt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_QCM_batch_mig_data_qcm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_QCM_Collect_Cut_Inspection_Upload.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_QCM_Recipe_Management.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_QCM_collect_spc_data.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_QCM_update_cus_qcm_customer_claim.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_QCM_update_cus_qcm_sample_analysis.c" />
+    <ClCompile Include="CUS_QCM_update_cus_qcm_customer_voc.c" />
+    <ClCompile Include="CUS_QCM_update_cus_qcm_other_company_spec.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CUS_QCM_services.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CUS_QCM_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

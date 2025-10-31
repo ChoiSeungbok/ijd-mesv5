@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<project name="MESplusV5" default="Build" basedir="../">
+	<target name="RPT_DBCmn">
+        <exec executable="make" dir="./library/RPT_DBCmn" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+	
+    <target name="COMCore">
+        <exec executable="make" dir="./library/Miracom_COMCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="LOGCore">
+        <exec executable="make" dir="./library/Miracom_LOGCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="TRSCore">
+        <exec executable="make" dir="./library/Miracom_TRSCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="XMLCore">
+        <exec executable="make" dir="./library/Miracom_XMLCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+
+    <target name="COPY_HEADER">
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_COMCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_LOGCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc">
+            <fileset dir="library/Miracom_TRSCore" includes="*.h"/>
+        </copy>
+        <copy todir="../inc/xmlparser">
+            <fileset dir="library/Miracom_XMLCore" includes="*.h"/>
+        </copy>
+		<copy todir="../inc">
+            <fileset dir="library/Miracom_MESCore" includes="*.h"/>
+        </copy>
+		<copy todir="../inc">
+            <fileset dir="library/Miracom_SLPCore" includes="*.h"/>
+        </copy>
+		<copy todir="../inc/dbinc">
+            <fileset dir="library/MES_DBCmn" includes="*.h"/>
+        </copy>
+    </target>
+
+	<!-- *** Start Make Common Library *** -->
+	<target name="BUILD_COMMON_LIBS" depends="COPY_HEADER, RPT_DBCmn, COMCore, LOGCore, XMLCore, TRSCore" />
+	<!-- *** End Make Common Library *** -->
+	
+    <!-- *** Start Port Loader *** -->
+    <target name="PortLoader.exe">
+        <exec executable="make" dir="./loader/PortLoader" failonerror="true">
+            <arg line="-f makefile all"/>
+        </exec>
+    </target>
+
+    <target name="COPY_HEADER_PORTLOADER">
+        <copy todir="../inc">
+            <fileset dir="loader/PortLoader" includes="*.h"/>
+        </copy>
+    </target>
+    <!-- *** End Port Loader *** -->
+
+	<!-- *** Start WIP Loader *** -->
+	<target name="WIPLoaderCore">
+        <exec executable="make" dir="./loader/WIPLoader/WIPLoaderCore" failonerror="true">
+            <arg value="default"/>
+        </exec>
+    </target>
+	
+    <target name="WIPLoader.exe" depends="WIPLoaderCore">
+        <exec executable="make" dir="./loader/WIPLoader" failonerror="true">
+            <arg line="-f makefile all"/>
+        </exec>
+    </target>
+
+    <target name="COPY_HEADER_WIPLOADER">
+        <copy todir="../inc">
+            <fileset dir="loader/WIPLoader" includes="*.h"/>
+			<fileset dir="loader/WIPLoader/WIPLoaderCore" includes="*.h"/>
+        </copy>
+    </target>
+    <!-- *** End WIP Loader *** -->
+	
+	<!-- *** Start RAS Loader *** -->
+    <target name="RASLoader.exe">
+        <exec executable="make" dir="./loader/RASLoader" failonerror="true">
+            <arg line="-f makefile all"/>
+        </exec>
+    </target>
+
+    <target name="COPY_HEADER_RASLOADER">
+        <copy todir="../inc">
+            <fileset dir="loader/RASLoader" includes="*.h"/>
+        </copy>
+    </target>
+    <!-- *** End RAS Loader *** -->
+	
+	<!-- *** Start Carrier Loader *** -->
+    <target name="CRRLoader.exe">
+        <exec executable="make" dir="./loader/CRRLoader" failonerror="true">
+            <arg line="-f makefile all"/>
+        </exec>
+    </target>
+
+    <target name="COPY_HEADER_CRRLOADER">
+        <copy todir="../inc">
+            <fileset dir="loader/CRRLoader" includes="*.h"/>
+        </copy>
+    </target>
+    <!-- *** End Carrier Loader *** -->
+	
+	<!-- *** Start Attribute Loader *** -->
+    <target name="ATRLoader.exe">
+        <exec executable="make" dir="./loader/ATRLoader" failonerror="true">
+            <arg line="-f makefile all"/>
+        </exec>
+    </target>
+
+    <target name="COPY_HEADER_ATRLOADER">
+        <copy todir="../inc">
+            <fileset dir="loader/ATRLoader" includes="*.h"/>
+        </copy>
+    </target>
+    <!-- *** End Attribute Loader *** -->
+	
+    <target name="Build" depends="COPY_HEADER, BUILD_COMMON_LIBS, COPY_HEADER_PORTLOADER, PortLoader.exe, COPY_HEADER_WIPLOADER, WIPLoader.exe, COPY_HEADER_RASLOADER, RASLoader.exe, COPY_HEADER_CRRLOADER, CRRLoader.exe, COPY_HEADER_ATRLOADER, ATRLoader.exe">
+        <tstamp>
+            <format property="bld.end.date" pattern="yyyy/MM/dd"/>
+            <format property="bld.end.time" pattern="HH:mm:ss"/>
+        </tstamp>
+        <zip destfile="${artifactsDir}/${buildVersion}-NOCODE.zip">
+            <zipfileset dir="../bin" prefix="MESplusV5/bin" filemode="755"/>
+            <zipfileset dir="../lib" prefix="MESplusV5/lib" excludes="**/*.so, **/*.a"/>
+			<zipfileset dir="../cmd" prefix="MESplusV5/cmd" excludes="**/Sample*.ini"/>
+            <zipfileset dir="../inc" prefix="MESplusV5/inc"/>
+            <zipfileset dir="../log" prefix="MESplusV5/log"/>
+        </zip>
+
+        <zip destfile="${artifactsDir}/${buildVersion}-WITHCODE.zip">    
+			<zipfileset dir="../bin" prefix="MESplusV5/bin" filemode="755"/>
+            <zipfileset dir="../lib" prefix="MESplusV5/lib" excludes="**/*.so, **/*.a"/>
+			<zipfileset dir="../cmd" prefix="MESplusV5/cmd" excludes="**/Sample*.ini"/>
+            <zipfileset dir="../inc" prefix="MESplusV5/inc"/>
+			<zipfileset dir="../log" prefix="MESplusV5/log"/>
+
+            <zipfileset dir="../source/library/RPT_DBCmn" prefix="MESplusV5/source/library/RPT_DBCmn" excludes="*.o"/>
+            <zipfileset dir="../source/loader/PortLoader" prefix="MESplusV5/source/loader/PortLoader" excludes="*.o"/>
+            <zipfileset dir="../source/loader/WIPLoader" prefix="MESplusV5/source/loader/WIPLoader" excludes="*.o"/>
+            <zipfileset dir="../source/loader/RASLoader" prefix="MESplusV5/source/loader/RASLoader" excludes="*.o"/>
+			<zipfileset dir="../source/loader/CRRLoader" prefix="MESplusV5/source/loader/CRRLoader" excludes="*.o"/>
+			<zipfileset dir="../source/loader/ATRLoader" prefix="MESplusV5/source/loader/ATRLoader" excludes="*.o"/>
+		</zip>
+		
+        <echo message="=========================================================="/>
+        <echo message="Build finished at ${bld.end.date} ${bld.end.time}"/>
+        <echo message="=========================================================="/>
+    </target>
+
+</project>

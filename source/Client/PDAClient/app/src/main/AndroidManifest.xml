@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.pda.mes">
+
+    <uses-permission
+        android:name="android.permission.INSTALL_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- PM85 바코드 권한 -->
+    <uses-permission android:name="device.sdk.sample.scanner.permission.SCANNER_RESULT_RECEIVER" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:configChanges="locale"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.intro.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.intro.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.setting.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.setting.VersionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GroupMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.menu.CPDA2001_PDA_Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.menu.CPDA2002_PDA_Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.menu.CPDA2003_PDA_Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.menu.CPDA2004_PDA_Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.menu.CPDA2005_PDA_Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.menu.CPDA2006_PDA_Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.menu.CPDA2007_PDA_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.menu.CPDA2008_PDA_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.menu.CPDA2009_PDA_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.menu.CPDA2010_PDA_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.menu.CPDA2011_PDA_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.menu.CPDA2012_PDA_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.menu.CPDA2013_PDA_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.menu.CPDA2014_PDA_Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.menu.CPDA2015_PDA_Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.menu.CPDA2016_PDA_Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.menu.CPDA2017_PDA_Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.menu.CPDA3001_PDA_Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.menu.CPDA3002_PDA_Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.menu.CPDA3003_PDA_Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.menu.CPDA3004_PDA_Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.menu.CPDA3005_PDA_Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.menu.CPDA3006_PDA_Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.menu.CPDA2018_PDA_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.menu.CPDA2019_PDA_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.menu.CPDA2020_PDA_Activity"
+            android:screenOrientation="portrait" />
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.pda.mes.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <!--<uses-library android:name="device.sdk" android:required="true" />-->
+    </application>
+</manifest>

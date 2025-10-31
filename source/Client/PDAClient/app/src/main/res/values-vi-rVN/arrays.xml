@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="main_menu_array">
+        <item>REGISTER PROCESS RESULT(START)</item>
+        <item>REGISTER PROCESS RESULT(END)</item>
+        <item>REGISTER LOSS</item>
+        <item>REGISTER NONE OPERATION</item>
+        <item>CONFIRM MOVE ORDER</item>
+        <item>BETWEEN STOCK MOVE MATERIAL</item>
+        <item>MERGE MATERIAL</item>
+        <item>HOLD MATERIAL</item>
+        <item>RELEASE MATERIAL</item>
+        <item>REGISTER MATERIAL ISSUE</item>
+        <item>MATERIAL RECEIVE</item>
+        <item>MATERIAL INV MANAGEMANT</item>
+        <item>ETC OUT INV</item>
+        <item>CONFIRM SHIP</item>
+        <!-- 조회성 -->
+        <item>VIEW LOT HISTORY</item>
+        <item>VIEW PO LIST</item>
+        <item>VIEW INV LIST BY OPER</item>
+        <item>VIEW INV LOT HISTORY</item>
+        <item>VIEW SHIP ORDER</item>
+        <!-- 추가등록 -->
+        <item>REGISTER SHIP</item>
+        <item>REGISTER PROCESS RESULT(START)-CTM(Processing)</item>
+        <item>REGISTER PROCESS RESULT(END)-CTM(Processing)</item>
+        <item>WIP-SHP LOT RELATION CHECK</item>
+        <item>ETC OUT</item>
+        <item>REGIST MOVE ORDER</item>
+        <item>CONFIRM MOVE ORDER</item>
+    </string-array>
+</resources>

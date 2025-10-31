@@ -1,0 +1,246 @@
+-- 통합현황
+-- GRIT 생산 현황
+SELECT CEIL(NVL(B.TO_PLAN_QTY,0)/1000) TO_PLAN_QTY,                                            -- 계획량
+       CEIL(NVL(A.MONTH_PROD_QTY,0)/1000) MONTH_PROD_QTY,                                        -- 생산량
+       NVL(ROUND(A.MONTH_PROD_QTY / B.MONTH_PLAN_QTY * 100, 1),0) MONTH_RATE,        -- 당월 달성률
+       NVL(ROUND(A.PRE_PROD_QTY / B.PRE_PLAN_QTY * 100),0) PRE_RATE,                -- 전일 달성률
+       NVL(ROUND(A.TOD_PROD_QTY / B.TOD_PLAN_QTY * 100),0) TOD_RATE,                -- 금일 달성률
+       NVL(ROUND(C.YIELD,1),0) YIELD,                                                        -- 수율 실적
+       NVL(ROUND(D.GOAL_YIELD,1),0) GOAL_YIELD,                                                -- 수율 계획
+       NVL(ROUND(C.YIELD*100 / D.GOAL_YIELD, 1),0) YIED_RATE                            -- 수율 달성율
+  FROM 
+       (
+        -- 생산실적
+        SELECT SUBSTR(WORK_DATE,1,6) AS WORK_MONTH,
+               SUM(PROD_QTY) MONTH_PROD_QTY,
+               SUM(TO_NUMBER(DECODE(WORK_DATE , F_GET_PRE_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')), TO_CHAR(PROD_QTY), '0'))) PRE_PROD_QTY,
+               SUM(TO_NUMBER(DECODE(WORK_DATE , F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')), TO_CHAR(PROD_QTY), '0'))) TOD_PROD_QTY
+          FROM CSUMWIPOPR
+         WHERE FACTORY = 'IJDK1'
+           AND WORK_DATE BETWEEN F_GET_FIRST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) AND F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+           AND AREA_ID = 'GRT'         
+           AND OPER IN ('OG09010', 'OG09020', 'OG09030') -- 제품검사, CP-제품검사, 제품검사-Coat
+         GROUP BY SUBSTR(WORK_DATE,1,6)
+       ) A,
+       (
+        -- 생산계획
+        SELECT SUBSTR(PLAN_DATE,1,6) AS WORK_MONTH,
+               SUM(QTY) MONTH_PLAN_QTY,     
+               SUM(CASE WHEN PLAN_DATE <= F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) THEN QTY END) TO_PLAN_QTY, -- 현재까지의 계획량
+               SUM(TO_NUMBER(DECODE(PLAN_DATE , F_GET_PRE_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')), TO_CHAR(QTY)))) PRE_PLAN_QTY,
+               SUM(TO_NUMBER(DECODE(PLAN_DATE , F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')), TO_CHAR(QTY)))) TOD_PLAN_QTY
+          FROM CORDPRDPLN
+         WHERE FACTORY = 'IJDK1'
+           AND AREA_ID = 'GRT'
+           AND OPER IN ('OG09010', 'OG09020', 'OG09030') 
+           AND PLAN_DATE BETWEEN F_GET_FIRST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) AND F_GET_LAST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+         GROUP BY SUBSTR(PLAN_DATE,1,6)
+       ) B,
+       (
+		  SELECT WORK_MONTH,
+				   ROUND((CASE WHEN NVL(BARE_IN_QTY,0)>0 THEN (BARE_OUT_QTY / BARE_IN_QTY)
+						ELSE  0 END) * 
+							(CASE WHEN NVL(TI_COAT_IN_QTY,0) +  NVL(NI_COAT_IN_QTY,0)>0 THEN
+								((NVL(TI_COAT_OUT_QTY,0) + NVL(NI_COAT_OUT_QTY,0)) / (NVL(TI_COAT_IN_QTY,0) +  NVL(NI_COAT_IN_QTY,0)))
+							ELSE 0 END) * 100, 2) YIELD
+			FROM (
+					SELECT  WORK_MONTH,   
+						NVL(SUM(CASE WHEN OPER IN ('BARE') THEN PROD_QTY END),0) BARE_OUT_QTY,
+						NVL(SUM(CASE WHEN OPER IN ('BARE') THEN PROD_IN_QTY1+PROD_IN_QTY2+PROD_IN_QTY3 END),0) BARE_IN_QTY,
+						NVL(SUM(CASE WHEN OPER IN ('TIC') THEN PROD_QTY END),0) TI_COAT_OUT_QTY,
+						NVL(SUM(CASE WHEN OPER IN ('TIC') THEN PROD_IN_QTY1+PROD_IN_QTY2+PROD_IN_QTY3 END),0) TI_COAT_IN_QTY,
+						NVL(SUM(CASE WHEN OPER IN ('NIC') THEN PROD_QTY END),0) NI_COAT_OUT_QTY,                  
+						NVL(SUM(CASE WHEN OPER IN ('NIC') THEN PROD_IN_QTY1+PROD_IN_QTY2+PROD_IN_QTY3 END),0) NI_COAT_IN_QTY
+					FROM (
+						SELECT SUBSTR(F_GET_WORK_DATE(A.INSP_JUDGE_TIME),1,6) AS WORK_MONTH,                                           
+							(CASE  WHEN A.INSP_OPER IN ('OG09010', 'OG09040', 'OG06450') THEN 'BARE'
+								 WHEN A.INSP_OPER IN ('OG09030') THEN 'TIC'
+								 WHEN A.INSP_OPER IN ('OG09020') THEN 'NIC'
+							END) OPER,
+							NVL(CASE  
+								 /*BARE : 제품검사 + 제품검사-cBN + MP-제품검사 양품수량 */
+								 WHEN A.INSP_JUDGE_FLAG='P' AND A.INSP_OPER IN ('OG09010', 'OG09040', 'OG06450') THEN A.QTY
+								 /*Ti코팅 : 제품검사-Coat 양품수량*/
+								 WHEN A.INSP_JUDGE_FLAG='P' AND A.INSP_OPER IN ('OG09030') THEN A.QTY
+								 /*Ni코팅 : CP-제품검사 양품수량*/
+								 WHEN A.INSP_JUDGE_FLAG='P' AND A.INSP_OPER IN ('OG09020') THEN A.QTY
+								END,0) PROD_QTY,
+							NVL((SELECT SUM(IN_QTY)
+									FROM CSUMLOTDAT B
+									WHERE LOT_ID=A.LOT_ID
+									AND OPER IN ('OG06130', 'OG06210', 'OG06010', 'OG06340', 'OG06430')
+								),0) PROD_IN_QTY1,
+							NVL((SELECT SUM(IN_QTY)
+									FROM CSUMLOTDAT B
+									WHERE LOT_ID=A.LOT_ID
+									AND OPER IN ('OG07110', 'OG07210', 'OG07310', 'OG07410')
+								),0) PROD_IN_QTY2,
+							NVL((SELECT SUM(IN_QTY)
+									FROM CSUMLOTDAT B
+									WHERE LOT_ID=A.LOT_ID
+									AND OPER IN ('OG07050')
+								),0) PROD_IN_QTY3
+						FROM CQCMISPSTS A  
+						WHERE  A.AREA_ID='GRT'
+							AND A.INSP_STATUS = 'S'    
+							AND A.INSP_JUDGE_FLAG NOT IN ('S','C')        
+							AND A.INSP_OPER IN ('OG09010', 'OG09040', 'OG06450', 'OG09030', 'OG09020')
+							AND A.INSP_JUDGE_TIME BETWEEN F_GET_FIRST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) ||'080000' AND TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')                                       
+				) 
+				GROUP BY WORK_MONTH
+			)
+
+       ) C,
+       (
+        -- 수율 계획
+        SELECT WORK_MONTH, GOAL_YIELD
+          FROM CWIPPRDGOL
+         WHERE FACTORY = 'IJDK1'
+           AND KIND = 'Y'
+           AND CLASS='MONTH'
+           AND AREA_ID = 'GRT'
+           AND WORK_MONTH = SUBSTR(F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')), 1, 6)
+           AND WEEK_OF_MONTH = 1 
+       ) D
+WHERE A.WORK_MONTH=B.WORK_MONTH(+)
+    AND A.WORK_MONTH=C.WORK_MONTH(+)
+    AND A.WORK_MONTH=D.WORK_MONTH(+)
+;
+
+-- 분류/준비 시간당 생산성 실적
+SELECT NVL(GOAL_PRODUCTVITY,0) GOAL_PRODUCTVITY,                                                -- 계획
+       NVL(ROUND(A.PROD_QTY / 1000 / B.TOTAL_WORK_TIME, 2),0) ACTUAL_RESULT,                           -- 실적
+       NVL(ROUND(A.PROD_QTY / 1000 / B.TOTAL_WORK_TIME, 2) / GOAL_PRODUCTVITY, 0) AS ACTUAL_RESULT_RATE -- 달성률
+  FROM (
+        /*분류/준비 생산 실적
+        (SAW-Blending + IMD-Blending + T-Blending + cBN-Blending
+         + SAW-사이즈 + T-사이즈 분류 + K-사이즈 분류 +
+         + SAW-손체질 + IMD-손체질 + T-손체질 + cBN-손체질 + IMD-사이즈 분류(RECYCLE)) Move량*/
+        SELECT SUBSTR(WORK_DATE,1,6) AS WORK_MONTH,
+                 SUM(PROD_QTY) PROD_QTY
+          FROM CSUMWIPOPR
+         WHERE FACTORY = 'IJDK1'
+           AND WORK_DATE BETWEEN F_GET_FIRST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) AND F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+           AND AREA_ID = 'GRT'
+           AND OPER IN ('OG06130', 'OG06210', 'OG06010', 'OG06140', 'OG06310', 'OG05020', 'OG05220', 'OG06170', 'OG06230', 'OG06070', 'OG06340','OG05410')        
+         GROUP BY SUBSTR(WORK_DATE,1,6)
+       ) A,
+       (
+        -- 분류/실적 투입 공수
+        SELECT SUBSTR(WORK_DATE,1,6) AS WORK_MONTH,
+                SUM(TOTAL_WORK_TIME) TOTAL_WORK_TIME
+          FROM CWIPWRKINP
+         WHERE FACTORY = 'IJDK1'
+           AND AREA_ID = 'GRT'
+           AND OPER = 'GP004'  -- 분류/준비
+           AND WORK_DATE BETWEEN F_GET_FIRST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) AND F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+        GROUP BY SUBSTR(WORK_DATE,1,6)
+       ) B,
+       (
+        -- 목표 생산성
+        SELECT WORK_MONTH,GOAL_PRODUCTVITY
+          FROM CWIPPRDGOL
+         WHERE FACTORY = 'IJDK1'
+           AND AREA_ID = 'GRT'
+           AND SHOP = 'GL004'      -- 분류/준비
+           AND OPER_GRP = 'GP004'  -- 분류/준비
+           AND WORK_MONTH = SUBSTR(F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')), 1, 6)
+           AND KIND = 'P'
+           AND CLASS='MONTH'
+           AND WEEK_OF_MONTH = 1
+
+       ) C
+WHERE A.WORK_MONTH=B.WORK_MONTH(+)
+    AND A.WORK_MONTH=C.WORK_MONTH(+)
+    
+;
+
+-- Ti Coating 시간당 생산성 실적
+SELECT NVL(GOAL_PRODUCTVITY,0) GOAL_PRODUCTVITY,                                                -- 계획
+       NVL(ROUND(A.PROD_QTY / 1000 / B.TOTAL_WORK_TIME, 2),0) ACTUAL_RESULT,                           -- 실적
+       NVL(ROUND(A.PROD_QTY / 1000 / B.TOTAL_WORK_TIME, 2) / GOAL_PRODUCTVITY,0) AS ACTUAL_RESULT_RATE -- 달성률
+  FROM (
+        -- Ti Coating 생산 실적
+        -- Sputter-코팅 Move량 + MVD-코팅 Move량 + CVD-코팅 Move량
+        SELECT SUBSTR(WORK_DATE,1,6) AS WORK_MONTH,
+            SUM(PROD_QTY) PROD_QTY
+          FROM CSUMWIPOPR
+         WHERE FACTORY = 'IJDK1'
+           AND WORK_DATE BETWEEN F_GET_FIRST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) AND F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+           AND AREA_ID = 'GRT'           
+           AND OPER IN ('OG07120', 'OG07220', 'OG07320')
+        GROUP BY SUBSTR(WORK_DATE,1,6)
+       ) A,
+       (
+        -- Ti Coating 투입 공수
+        SELECT SUBSTR(WORK_DATE,1,6) AS WORK_MONTH,
+            SUM(TOTAL_WORK_TIME) TOTAL_WORK_TIME
+          FROM CWIPWRKINP
+         WHERE FACTORY = 'IJDK1'
+           AND AREA_ID = 'GRT'
+           AND OPER = 'GP006'  -- MP-Ti/Ti Coating
+           AND WORK_DATE BETWEEN F_GET_FIRST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) AND F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+         GROUP BY SUBSTR(WORK_DATE,1,6)
+       ) B,
+       (
+        -- 목표 생산성
+        SELECT WORK_MONTH,GOAL_PRODUCTVITY
+          FROM CWIPPRDGOL
+         WHERE FACTORY = 'IJDK1'
+           AND AREA_ID = 'GRT'
+           AND SHOP = 'GL006'      -- Ti Coating
+           AND OPER_GRP = 'GP006'  -- Ti Coating
+           AND WORK_MONTH = SUBSTR(F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')), 1, 6)
+           AND KIND = 'P'
+           AND CLASS='MONTH'
+           AND WEEK_OF_MONTH = 1
+
+       ) C
+WHERE A.WORK_MONTH=B.WORK_MONTH(+)
+    AND A.WORK_MONTH=C.WORK_MONTH(+)
+
+;
+
+-- CP 시간당 생산성 실적
+SELECT NVL(GOAL_PRODUCTVITY,0) GOAL_PRODUCTVITY,                                                -- 계획
+       NVL(ROUND(A.PROD_QTY / 1000 / B.TOTAL_WORK_TIME, 2),0) ACTUAL_RESULT,                           -- 실적
+       NVL(ROUND(A.PROD_QTY / 1000 / B.TOTAL_WORK_TIME, 2) / GOAL_PRODUCTVITY,0) AS ACTUAL_RESULT_RATE -- 달성률
+  FROM (
+        --  생산 실적
+        -- 도금
+        SELECT SUBSTR(WORK_DATE,1,6) AS WORK_MONTH,
+            SUM(PROD_QTY) PROD_QTY
+          FROM CSUMWIPOPR
+         WHERE FACTORY = 'IJDK1'
+           AND WORK_DATE BETWEEN F_GET_FIRST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) AND F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+           AND AREA_ID = 'GRT'           
+           AND OPER IN ('OG07020')
+          GROUP BY SUBSTR(WORK_DATE,1,6)
+       ) A,
+       (
+        -- 투입 공수
+        SELECT SUBSTR(WORK_DATE,1,6) AS WORK_MONTH,
+                SUM(TOTAL_WORK_TIME) TOTAL_WORK_TIME
+          FROM CWIPWRKINP
+         WHERE FACTORY = 'IJDK1'
+           AND AREA_ID = 'GRT'
+           AND OPER = 'GP007'  -- CP (Ni Coating)
+           AND WORK_DATE BETWEEN F_GET_FIRST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) AND F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+         GROUP BY SUBSTR(WORK_DATE,1,6)
+       ) B,
+       (
+        -- 목표 생산성
+        SELECT WORK_MONTH, GOAL_PRODUCTVITY
+          FROM CWIPPRDGOL
+         WHERE FACTORY = 'IJDK1'
+           AND AREA_ID = 'GRT'
+           AND SHOP = 'GL007'   
+           AND OPER_GRP = 'GP007'  
+           AND WORK_MONTH = SUBSTR(F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')), 1, 6)
+           AND KIND = 'P'
+           AND CLASS='MONTH'
+           AND WEEK_OF_MONTH = 1
+       ) C
+  WHERE A.WORK_MONTH=B.WORK_MONTH(+)
+    AND A.WORK_MONTH=C.WORK_MONTH(+)
+;

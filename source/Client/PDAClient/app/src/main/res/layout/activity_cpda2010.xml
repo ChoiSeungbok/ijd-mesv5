@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:onClick="onclickWindow"
+    android:background="@color/base_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/content_padding"
+        android:paddingRight="@dimen/content_padding"
+        android:paddingTop="@dimen/content_padding">
+
+        <RelativeLayout
+            android:id="@+id/cpda2010LayoutInvReqNo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_text_box_height"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/selector_barcode_btn"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.pda.mes.widget.FontTextView
+                    android:id="@+id/cpda2010TextViewReqDocNoTitle"
+                    style="@style/InputBox_Title.Barcode"
+                    android:text="@string/common_word_move_id" />
+
+                <com.pda.mes.widget.FontEditTextView
+                    android:id="@+id/moveId"
+                    style="@style/InputBox_Content"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/emptyView"
+            layout="@layout/view_empty_list"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:visibility="gone"/>
+
+        <HorizontalScrollView
+            android:id="@+id/cpda2010LayoutListTopView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/default_text_box_height"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+                    <!--REQUEST_NO-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.RequsetNo"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_request_no"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+                    <!--ITEM CD-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.Normal"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_item_code"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <!--ITEM DESC-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.ItemName"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_item_desc"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <!--MAT VER-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.RowCount"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_mat_ver"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <!--REQ QTY-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.Quantity"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_request_quantity"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+                    <!--REGIST QTY-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.Quantity"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_regist_quantity"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <!--UNIT-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.Unit"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_unit"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <!--STOCK-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.StockName"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_warehouse"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/default_line_size" />
+
+                <ListView
+                    android:id="@+id/listTopView"
+                    style="@style/Main_ListView"
+                    android:paddingBottom="5dp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:id="@+id/cpda2010LayoutBarcode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_text_box_height"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/selector_barcode_btn"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.pda.mes.widget.FontTextView
+                    android:id="@+id/cpda2010TextViewInvLotTitle"
+                    style="@style/InputBox_Title.Barcode"
+                    android:text="@string/common_word_inv_lot_id" />
+
+                <com.pda.mes.widget.FontEditTextView
+                    android:id="@+id/invLotId"
+                    android:layout_weight="1"
+                    style="@style/InputBox_Content" />
+
+                <View
+                    android:layout_width="@dimen/portrait_line_size"
+                    android:layout_height="match_parent" />
+
+                <com.pda.mes.widget.FontTextView
+                    android:id="@+id/totalCount"
+                    android:layout_weight="1.5"
+                    style="@style/TotalCountView"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/cpda2010LayoutListBottomView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/default_text_box_height"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <!--LOT NO-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.Barcode"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_lot_id"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+                    <!--ITEM CD-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.Normal"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_item_code"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <!--ITEM DESC-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.ItemName"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_item_desc"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <!--MAT VER-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.RowCount"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_mat_ver"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <!--QTY-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.Quantity"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_quantity"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+                    <!--UNIT-->
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.Unit"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_unit"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <!--STATUS-->
+
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent"
+                        android:background="@color/LineColorPrimary" />
+
+                    <com.pda.mes.widget.FontTextView
+                        style="@style/ListView_Title.Status"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/common_word_status"
+                        android:textColor="#ffffffff"
+                        app:custom_font="@string/FONT_NANUM_SQUARE_OTFB" />
+
+                    <View
+                        android:layout_width="@dimen/default_line_size"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/default_line_size" />
+
+                <ListView
+                    android:id="@+id/listBottomView"
+                    style="@style/Main_ListView"
+                    android:paddingBottom="5dp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            style="@style/Bottom_Button"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:onClick="onClickConfirm">
+
+            <com.pda.mes.widget.FontTextView
+                style="@style/Bottom_Button_Text"
+                android:text="@string/common_word_confirm" />
+        </LinearLayout>
+
+        <View style="@style/Bottom_Button_Line" />
+
+        <LinearLayout
+            style="@style/Bottom_Button"
+            android:layout_weight="1"
+            android:onClick="onClickSave">
+
+            <com.pda.mes.widget.FontTextView
+                style="@style/Bottom_Button_Text"
+                android:text="@string/common_word_save" />
+        </LinearLayout>
+
+        <View style="@style/Bottom_Button_Line" />
+
+        <LinearLayout
+            style="@style/Bottom_Button"
+            android:layout_weight="1"
+            android:onClick="onClickDelete">
+
+            <com.pda.mes.widget.FontTextView
+                style="@style/Bottom_Button_Text"
+                android:text="@string/common_word_delete" />
+        </LinearLayout>
+
+        <View style="@style/Bottom_Button_Line" />
+
+        <LinearLayout
+            style="@style/Bottom_Button_White"
+            android:layout_weight="1"
+            android:onClick="onClickClear">
+
+            <com.pda.mes.widget.FontTextView
+                style="@style/Bottom_Button_Text_Blue"
+                android:text="@string/common_word_initioalization" />
+        </LinearLayout>
+
+        <View style="@style/Bottom_Button_Line" />
+
+        <LinearLayout
+            style="@style/Bottom_Button_White"
+            android:layout_weight="1"
+            android:onClick="onClickClose">
+
+            <com.pda.mes.widget.FontTextView
+                style="@style/Bottom_Button_Text_Blue"
+                android:text="@string/common_word_close" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

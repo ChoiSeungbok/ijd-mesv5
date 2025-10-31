@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5ca7c1f0-93ea-473c-b524-9aaa1e0891e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{90a7dcd1-1d17-403c-81fe-cc46fe3c1b86}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CUS_BAT_AddService.c">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_BAT_erp_mes_customer_def.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_BAT_setup_calendar_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_BAT_erp_mes_vendor_def.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_BAT_erp_mes_sub_area_def.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_BAT_erp_mes_po_info.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_BAT_erp_mes_transaction_type_def.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_BAT_erp_mes_material_def.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_BAT_common.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_BAT_erp_mes_wo_info.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_BAT_erp_mes_uom_conv_def.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_BAT_erp_mes_wh_def.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_BAT_erp_mes_ship_order_info.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_BAT_erp_mes_return_order_info.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_BAT_erp_mes_wo_bom_info.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_BAT_erp_mes_p_wo_info.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_BAT_erp_mes_pack_info.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_BAT_erp_mes_std_bom_def.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_BAT_erp_alarm_raise.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUS_BAT_alarm_raise_half_hour.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CUS_BAT_services.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CUS_BAT_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

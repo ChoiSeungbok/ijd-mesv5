@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<project name="MESplusV5" default="Copy" basedir="../">
+
+    <!-- ===== Move and Copy Server Exe File ===== -->
+    <target name="Copy_Exe">
+        <copy file="../bin/PortLoader.exe" todir="${MESplus_HOME}/bin" failonerror="false"/>
+		<copy file="../bin/WIPLoader.exe" todir="${MESplus_HOME}/bin" failonerror="false"/>
+		<copy file="../bin/RASLoader.exe" todir="${MESplus_HOME}/bin" failonerror="false"/>
+		<copy file="../bin/CRRLoader.exe" todir="${MESplus_HOME}/bin" failonerror="false"/>
+		<copy file="../bin/ATRLoader.exe" todir="${MESplus_HOME}/bin" failonerror="false"/>
+        <chmod file="${MESplus_HOME}/bin/PortLoader.exe" perm="755" failonerror="false"/>
+		<chmod file="${MESplus_HOME}/bin/WIPLoader.exe" perm="755" failonerror="false"/>
+		<chmod file="${MESplus_HOME}/bin/RASLoader.exe" perm="755" failonerror="false"/>
+		<chmod file="${MESplus_HOME}/bin/CRRLoader.exe" perm="755" failonerror="false"/>
+		<chmod file="${MESplus_HOME}/bin/ATRLoader.exe" perm="755" failonerror="false"/>
+    </target>
+
+    <!-- ===== Delete Include, Library, Source Files ===== -->
+    <target name="Delete_Files">
+        <delete dir="${MESplus_HOME}/inc" failonerror="false"/>
+        <!-- For shared library <delete dir="${MESplus_HOME}/lib"/> -->
+        <delete dir="${MESplus_HOME}/source" failonerror="false"/>
+    </target>
+
+    <!-- ===== Copy Include, Library, Source Files ===== -->
+    <target name="Copy_Files">
+        <copy todir="${MESplus_HOME}/cmd" overwrite="true">
+            <fileset dir="../cmd" includes="**/Sample_*.ini" casesensitive="yes"/>
+        </copy>
+        <copy todir="${MESplus_HOME}/inc">
+            <fileset dir="../inc"/>
+        </copy>
+        <copy todir="${MESplus_HOME}/lib">
+            <fileset dir="../lib" excludes="**/*.so"/>
+        </copy>
+    </target>
+
+    <!-- ===== Symbolic Linking ===== -->
+    <target name="Symbolic_Links">
+      <exec executable="dos2unix" dir="../source/zBuild" failonerror="false">
+        <arg line="symbolic_link.bat" />
+      </exec>
+	    <chmod file="../source/zBuild/symbolic_link.bat" perm="755" failonerror="false"/>
+	    <exec executable="symbolic_link.bat" dir="../source/zBuild" failonerror="false"/>
+    </target>
+
+    <target name="Copy" depends="Copy_Exe, Delete_Files, Copy_Files, Symbolic_Links">
+        <tstamp>
+            <format property="bld.end.date" pattern="yyyy/MM/dd"/>
+            <format property="bld.end.time" pattern="HH:mm:ss"/>
+        </tstamp>
+        <echo message="=========================================================="/>
+        <echo message="Copy source and execution files finished at ${bld.end.date} ${bld.end.time}"/>
+        <echo message="=========================================================="/>
+    </target>
+
+</project>
+

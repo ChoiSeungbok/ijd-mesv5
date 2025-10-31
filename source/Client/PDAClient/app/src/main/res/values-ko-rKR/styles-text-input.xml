@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- 입력 박스 제목 스타일 -->
+    <style name="InputBox_Title.Small">
+        <item name="android:layout_width">68dp</item>
+        <item name="android:textSize">13dp</item>
+    </style>
+
+    <style name="InputBox_Content.Small">
+        <item name="android:textSize">13dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="InputBox_Content.NumberField.Small">
+        <item name="android:textSize">13dp</item>
+    </style>
+
+</resources>

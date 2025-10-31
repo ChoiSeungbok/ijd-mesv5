@@ -1,0 +1,184 @@
+-- 통합현황
+-- PDC 생산 현황
+SELECT NVL(B.TO_PLAN_QTY,0) TO_PLAN_QTY,        -- 계획량
+       NVL(A.MONTH_PROD_QTY,0) MONTH_PROD_QTY,     -- 생산량
+       NVL(ROUND(A.MONTH_PROD_QTY / B.MONTH_PLAN_QTY * 100, 1),0) MONTH_RATE, -- 당월 달성률
+       NVL(ROUND(A.PRE_PROD_QTY / B.PRE_PLAN_QTY * 100),0) PRE_RATE,          -- 전일 달성률
+       NVL(ROUND(A.TOD_PROD_QTY / B.TOD_PLAN_QTY * 100),0) TOD_RATE,          -- 금일 달성률
+       NVL(ROUND(A.MONTH_PROD_QTY / A.PROD_IN_QTY * 100, 1),0) PDC_YIELD,     -- 수율 실적
+       NVL(GOAL_YIELD,0) GOAL_YIELD,                                                     -- 수율 계획
+       NVL(ROUND(ROUND(A.MONTH_PROD_QTY / A.PROD_IN_QTY * 100, 1) / C.GOAL_YIELD, 1),0) YIELD_RATE -- 수율 달성율
+  FROM (
+        -- 생산량 : 완제품 검사 실적량 + 리칭검사 실적량
+        SELECT SUBSTR(WORK_DATE,0,6) AS WORK_MONTH,
+               SUM(PROD_QTY) MONTH_PROD_QTY,
+               SUM(PROD_IN_QTY) PROD_IN_QTY,
+               SUM(TO_NUMBER(DECODE(WORK_DATE , F_GET_PRE_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')), TO_CHAR(PROD_QTY), '0'))) PRE_PROD_QTY,
+               SUM(TO_NUMBER(DECODE(WORK_DATE , F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')), TO_CHAR(PROD_QTY), '0'))) TOD_PROD_QTY
+          FROM CSUMWIPOPR
+         WHERE FACTORY = 'IJDK1'
+           AND WORK_DATE BETWEEN F_GET_FIRST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) AND F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+           AND AREA_ID = 'PDC'
+           AND OPER IN ('OP08120','OP90040')
+         GROUP BY SUBSTR(WORK_DATE,0,6)
+       ) A,
+       (
+        -- 계획량
+        SELECT SUBSTR(PLAN_DATE,0,6) AS WORK_MONTH,
+               SUM(QTY) MONTH_PLAN_QTY,        -- 당월 계획량
+               SUM(CASE WHEN PLAN_DATE <= F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) THEN QTY END) TO_PLAN_QTY, -- 현재까지의 계획량
+               SUM(TO_NUMBER(DECODE(PLAN_DATE , F_GET_PRE_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')), TO_CHAR(QTY)))) PRE_PLAN_QTY,
+               SUM(TO_NUMBER(DECODE(PLAN_DATE , F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')), TO_CHAR(QTY)))) TOD_PLAN_QTY
+          FROM CORDPRDPLN
+         WHERE FACTORY = 'IJDK1'
+           AND AREA_ID = 'PDC'
+		   AND OPER IN ('OP08120','OP90040')
+           AND PLAN_DATE BETWEEN F_GET_FIRST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) AND F_GET_LAST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+         GROUP BY SUBSTR(PLAN_DATE,0,6)
+       ) B,
+       (
+        -- 수율 계획
+        SELECT WORK_MONTH, GOAL_YIELD
+          FROM CWIPPRDGOL
+         WHERE FACTORY = 'IJDK1'
+           AND KIND = 'Y'
+           AND CLASS='MONTH'
+           AND WEEK_OF_MONTH = 1
+           AND AREA_ID = 'PDC'
+           AND WORK_MONTH = SUBSTR(F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')), 1, 6)
+       ) C
+WHERE A.WORK_MONTH=B.WORK_MONTH(+)
+    AND A.WORK_MONTH=C.WORK_MONTH(+)
+;
+
+-- 전처리 시간당 생산성 실적
+SELECT NVL(GOAL_PRODUCTVITY,0) GOAL_PRODUCTVITY,                                                -- 계획
+       NVL(ROUND(A.PROD_QTY / B.TOTAL_WORK_TIME, 2),0) ACTUAL_RESULT,                           -- 실적
+       NVL(ROUND(A.PROD_QTY / B.TOTAL_WORK_TIME, 2) / GOAL_PRODUCTVITY,0) AS ACTUAL_RESULT_RATE -- 달성률
+  FROM (
+        -- 전처리 생산 실적
+        -- (컵 완조립 Move량 + 셀 완조립 Move량)
+        SELECT SUBSTR(WORK_DATE,0,6) AS WORK_MONTH,
+            SUM(PROD_QTY) PROD_QTY
+          FROM CSUMWIPOPR
+         WHERE FACTORY = 'IJDK1'
+           AND WORK_DATE BETWEEN F_GET_FIRST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) AND F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+           AND AREA_ID = 'PDC'
+           AND OPER IN ('OP03020', 'OP05020')
+         GROUP BY SUBSTR(WORK_DATE,0,6)
+       ) A,
+       (
+        -- 전처리 투입 공수
+        SELECT SUBSTR(WORK_DATE,0,6) AS WORK_MONTH,
+            SUM(TOTAL_WORK_TIME) TOTAL_WORK_TIME
+          FROM CWIPWRKINP
+         WHERE FACTORY = 'IJDK1'
+           AND AREA_ID = 'PDC'
+           AND OPER IN ('PP002', 'PP003')  -- 컵조립, 셀조립
+           AND WORK_DATE BETWEEN F_GET_FIRST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) AND F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+        GROUP BY SUBSTR(WORK_DATE,0,6)
+       ) B,      
+       (
+        -- 전처리 목표 생산성
+        SELECT WORK_MONTH, GOAL_PRODUCTVITY
+          FROM CWIPPRDGOL
+         WHERE FACTORY = 'IJDK1'
+           AND KIND = 'P'
+           AND CLASS='MONTH'
+           AND WEEK_OF_MONTH = 1
+           AND AREA_ID = 'PDC'
+           AND SHOP = 'PL001'      -- 전처리
+           AND OPER_GRP IN ('PP002', 'PP003')  -- 컵조립, 셀조립
+           AND WORK_MONTH = SUBSTR(F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')), 1, 6)    
+       ) C
+  WHERE A.WORK_MONTH=B.WORK_MONTH(+)
+    AND A.WORK_MONTH=C.WORK_MONTH(+)
+;
+
+
+-- 소결 시간당 생산성 실적
+SELECT NVL(GOAL_PRODUCTVITY,0) GOAL_PRODUCTVITY,                                                -- 계획
+       NVL(ROUND(A.PROD_QTY / B.TOTAL_WORK_TIME, 2),0) ACTUAL_RESULT,                           -- 실적
+       NVL(ROUND(A.PROD_QTY / B.TOTAL_WORK_TIME, 2) / GOAL_PRODUCTVITY,0) AS ACTUAL_RESULT_RATE -- 달성률
+  FROM (
+        -- 소결 생산 실적
+        -- 소결 Move량
+        SELECT SUBSTR(WORK_DATE,0,6) AS WORK_MONTH,
+                SUM(PROD_QTY) PROD_QTY
+          FROM CSUMWIPOPR
+         WHERE FACTORY = 'IJDK1'
+           AND WORK_DATE BETWEEN F_GET_FIRST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) AND F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+           AND AREA_ID = 'PDC'
+           AND OPER IN ('OP06010')
+         GROUP BY SUBSTR(WORK_DATE,0,6)
+       ) A,
+       (
+        -- 소결 투입 공수
+        SELECT SUBSTR(WORK_DATE,0,6) AS WORK_MONTH,
+            SUM(TOTAL_WORK_TIME) TOTAL_WORK_TIME
+          FROM CWIPWRKINP
+         WHERE FACTORY = 'IJDK1'
+           AND AREA_ID = 'PDC'
+           AND OPER = 'PP005'  -- 소결
+           AND WORK_DATE BETWEEN F_GET_FIRST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) AND F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+        GROUP BY SUBSTR(WORK_DATE,0,6)
+       ) B,
+       (
+        -- 목표 생산성
+        SELECT WORK_MONTH, GOAL_PRODUCTVITY
+          FROM CWIPPRDGOL
+         WHERE FACTORY = 'IJDK1'
+           AND KIND = 'P'
+           AND AREA_ID = 'PDC'
+           AND SHOP = 'PL002'      -- 소결
+           AND OPER_GRP = 'PP005'  -- 소결
+           AND WORK_MONTH = SUBSTR(F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')), 1, 6)
+           AND WEEK_OF_MONTH = 1
+           AND CLASS='MONTH'   
+       ) C
+   WHERE A.WORK_MONTH=B.WORK_MONTH(+)
+    AND A.WORK_MONTH=C.WORK_MONTH(+)
+;
+
+-- Lapping 시간당 생산성 실적
+SELECT NVL(GOAL_PRODUCTVITY,0) GOAL_PRODUCTVITY,                                                -- 계획
+       NVL(ROUND(A.PROD_QTY / B.TOTAL_WORK_TIME, 2),0) ACTUAL_RESULT,                           -- 실적
+       NVL(ROUND(A.PROD_QTY / B.TOTAL_WORK_TIME, 2) / GOAL_PRODUCTVITY,0) AS ACTUAL_RESULT_RATE -- 달성률
+  FROM (
+        -- L/P검사 생산 실적
+        -- 래핑 Move량
+        SELECT SUBSTR(WORK_DATE,0,6) AS WORK_MONTH,
+                SUM(PROD_QTY) PROD_QTY
+          FROM CSUMWIPOPR
+         WHERE FACTORY = 'IJDK1'
+           AND WORK_DATE BETWEEN F_GET_FIRST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) AND F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+           AND AREA_ID = 'PDC'
+           AND OPER IN ('OP07020')
+          GROUP BY SUBSTR(WORK_DATE,0,6) 
+       ) A,
+       (
+        -- Lapping 투입 공수 시간
+        SELECT SUBSTR(WORK_DATE,0,6) AS WORK_MONTH,
+                SUM(TOTAL_WORK_TIME) TOTAL_WORK_TIME
+          FROM CWIPWRKINP
+         WHERE FACTORY = 'IJDK1'
+           AND AREA_ID = 'PDC'
+           AND OPER IN ('PP007')
+           AND WORK_DATE BETWEEN F_GET_FIRST_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')) AND F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS'))
+         GROUP BY SUBSTR(WORK_DATE,0,6) 
+       ) B, (
+        -- Lapping  목표 생산성
+        SELECT WORK_MONTH, GOAL_PRODUCTVITY
+          FROM CWIPPRDGOL
+         WHERE FACTORY = 'IJDK1'
+           AND KIND = 'P'
+           AND AREA_ID = 'PDC'
+           AND SHOP = 'PL003'        -- 가공
+           AND OPER_GRP IN ('PP007') -- Lapping
+           AND WORK_MONTH = SUBSTR(F_GET_WORK_DATE(TO_CHAR(SYSDATE, 'YYYYMMDDHH24MISS')), 1, 6)
+           AND WEEK_OF_MONTH = 1
+           AND CLASS='MONTH'
+       ) C
+   WHERE A.WORK_MONTH=B.WORK_MONTH(+)
+    AND A.WORK_MONTH=C.WORK_MONTH(+)
+;

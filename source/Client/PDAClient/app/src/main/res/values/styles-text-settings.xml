@@ -1,0 +1,51 @@
+<resources>
+
+    <!-- 셋팅 텍스트 박스 스타일 -->
+
+    <style name="Settings_Text">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">#ff2f2f2f</item>
+    </style>
+
+    <style name="Settings_Text.Title">
+        <item name="android:layout_width">140dp</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="android:paddingLeft">17.3dp</item>
+        <item name="android:paddingRight">13.3dp</item>
+        <item name="android:textSize">16dp</item>
+        <item name="custom_font">@string/FONT_NANUM_SQUARE_OTFB</item>
+    </style>
+
+    <style name="Settings_Text.SubTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="android:paddingLeft">7.5dp</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">#555555</item>
+        <item name="custom_font">@string/FONT_NANUM_SQUARE_OTFR</item>
+    </style>
+
+    <style name="Settings_Text.Content">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">13dp</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="android:paddingRight">13.3dp</item>
+        <item name="android:textSize">15dp</item>
+        <item name="custom_font">@string/FONT_NANUM_SQUARE_OTFR</item>
+    </style>
+
+    <style name="Settings_Text.Content.DropDown">
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:drawableRight">@drawable/baseline_expand_more_black_24</item>
+    </style>
+
+    <style name="Settings_Line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#ffebebeb</item>
+    </style>
+</resources>

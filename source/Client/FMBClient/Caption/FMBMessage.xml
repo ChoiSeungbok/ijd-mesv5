@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Message>
+    <Text Key="1">
+        <L>You must restart this program to apply this option. Do you want to restart this program?</L>
+        <L>이 옵션을 적용하기 위해서는 프로그램을 새로 시작하여야 합니다. 새로 시작하시겠습니까?</L>
+        <L>You must restart this program to apply this option. Do you want to restart this program?</L>
+    </Text>
+    <Text Key="2">
+        <L>Do you want to exit the program?</L>
+        <L>프로그램을 종료하시겠습니까?</L>
+        <L>Do you want to exit the program?</L>
+    </Text>
+    <Text Key="3">
+        <L>Do you want to restart the program?</L>
+        <L>프로그램을 다시 시작하시겠습니까?</L>
+        <L>Do you want to restart the program?</L>
+    </Text>
+    <Text Key="4">
+        <L>Successfully completed.</L>
+        <L>작업을 성공적으로 수행하였습니다.</L>
+        <L>Successfully completed.</L>
+    </Text>
+    <Text Key="5">
+        <L>This Command will DELETE Related Data From Database!  Are You Sure?</L>
+        <L>이 명령을 수행하면 이와 관련된 여러 데이타가 데이타베이스에서 삭제됩니다. 그래도 지우시겠습니까?</L>
+        <L>This Command will DELETE Related Data From Database!  Are You Sure?</L>
+    </Text>
+    <Text Key="6">
+        <L>The client currently uses old version system. Version check now will upgrade to new version</L>
+        <L>이 버전은 현재 서버와 맞지 않습니다. 최신 버전을 받겠습니다.</L>
+        <L>The client currently uses old version system. Version check now will upgrade to new version</L>
+    </Text>
+    <Text Key="7">
+        <L>Auto logout time has passed. Program will now exit.</L>
+        <L>Auto logout 시간이 초과되었습니다. 프로그램이 자동 종료됩니다.</L>
+        <L>Die maximale Auto-Logout-Time ist verstrichen. Das Programm muss beendet werden...</L>
+    </Text>
+    <Text Key="8">
+        <L>Please enter value which is smaller than </L>
+        <L>보다 작은 값을 입력해 주십시요.</L>
+        <L>Please enter value which is smaller than </L>
+    </Text>
+    <Text Key="9">
+        <L>The client currently uses old version system. Do you wish to upgrade to new version?</L>
+        <L>이 버전은 현재 서버와 맞지 않습니다. 최신 버전을 받으시겠습니까?.</L>
+        <L>The client currently uses old version system. Do you wish to upgrade to new version?</L>
+    </Text>
+    <Text Key="10">
+        <L>Please enter value which is larger than '0'</L>
+        <L>'0'보다 큰 값을 입력해 주십시요.</L>
+        <L>Please enter value which is larger than 0</L>
+    </Text>
+    <Text Key="11">
+        <L>There are controls out of the UDR Group. Do you want to move controls by force?</L>
+        <L>UDR 그룹 밖으로 콘트롤이 존재합니다. 강제로 이동하시겠습니까?</L>
+        <L>There are controls out of the UDR Group. Do you want to move controls by force?</L>
+    </Text>
+    <Text Key="12">
+        <L>Save changes to design?</L>
+        <L>변경된 디자인을 저장하시겠습니까?</L>
+        <L>Save changes to design?</L>
+    </Text>
+    <Text Key="13">
+        <L>Continue reload changes to design?</L>
+        <L>변경된 디자인을 새로 로딩하시겠습니까?</L>
+        <L>Continue reload changes to design?</L>
+    </Text>
+    <Text Key="14">
+        <L>Data format is not correct. Please enter again.</L>
+        <L>DATA 형식이 올바르지 않습니다. 다시 입력해 주세요.</L>
+        <L>Data format is not correct. Please enter again.</L>
+    </Text>
+    <Text Key="15">
+        <L>No data was entered. Please enter record data desired.</L>
+        <L>데이타가 입력되지 않았습니다. 필요한 데이타를 입력해 주십시요.</L>
+        <L>No data was entered. Please enter record data desired.</L>
+    </Text>
+    <Text Key="16">
+        <L>The number of selected item exceed the maximum limit.</L>
+        <L>선택된 아이템의 개수가 최대 개수를 초과했습니다.</L>
+        <L>The number of selected item exceed the maximum limit.</L>
+    </Text>
+    <Text Key="17">
+        <L>Numeric data is required in this field. Please enter numeric data.</L>
+        <L>이 필드는 숫자를 입력해야 하는 필드입니다.</L>
+        <L>Numeric data is required in this field. Please enter numeric data.</L>
+    </Text>
+    <Text Key="18">
+        <L>Fail to initialize message bus. Please check if message bus is installed correctly!</L>
+        <L>메시지 버스를 초기화에 실패 하였습니다. 메시지 버스가 제대로 설치 되었는지 확인하십시요!</L>
+        <L>Fail to initialize message bus. Please check if message bus is installed correctly!</L>
+    </Text>
+    <Text Key="19">
+        <L>Please select a item.</L>
+        <L>아이템을 선택해 주십시요.</L>
+        <L>Please select a item.</L>
+    </Text>
+    <Text Key="20">
+        <L>The resource's xcoordinate has gone out of layout. Do you want to move into layout?</L>
+        <L>장비의 X 좌표가 레이아웃 영역을 벗어났습니다. 레이아웃 안으로 이동하시겠습니까?</L>
+        <L>The resource's xcoordinate has gone out of layout. Do you want to move into layout?</L>
+    </Text>
+    <Text Key="21">
+        <L>The resource's ycoordinate has gone out of layout. Do you want to move into layout?</L>
+        <L>장비의 Y 좌표가 레이아웃 영역을 벗어났습니다. 레이아웃 안으로 이동하시겠습니까?</L>
+        <L>The resource's ycoordinate has gone out of layout. Do you want to move into layout?</L>
+    </Text>
+    <Text Key="22">
+        <L>You've got a message.</L>
+        <L>메세지가 도착하였습니다.</L>
+        <L>You've got a message.</L>
+    </Text>
+    <Text Key="23">
+        <L>This client is old version. Do you want to update new version?</L>
+        <L>이 버전은 현재 서버와 맞지 않습니다. 최신 버전을 받으시겠습니까?</L>
+        <L>This client is old version. Do you want to update new version?</L>
+    </Text>
+    <Text Key="24">
+        <L>This client is old version. It will update new version...</L>
+        <L>이 버전은 현재 서버와 맞지 않습니다. 최신 버전을 받겠습니다.</L>
+        <L>This client is old version. It will update new version...</L>
+    </Text>
+    <Text Key="25">
+        <L>Do you want to update new version?</L>
+        <L>최신 버전을 받으시겠습니까?</L>
+        <L>Do you want to update new version?</L>
+    </Text>
+    <Text Key="26">
+        <L>Auto logout time passed. Program will exit.</L>
+        <L>Auto logout 시간이 초과되었습니다. 프로그램이 자동 종료됩니다.</L>
+        <L>Auto logout time passed. Program will exit.</L>
+    </Text>
+    <Text Key="27">
+        <L>Required field. Please enter a value.</L>
+        <L>이 필드는 입력이 필요한 필드입니다. 데이타를 입력해 주십시요.</L>
+        <L>Required field. Please enter a value.</L>
+    </Text>
+    <Text Key="28">
+        <L>No item was selected. Please select item.</L>
+        <L>Item이 선택되지 않았습니다. Item을 선택해 주십시요.</L>
+        <L>No item was selected. Please select item.</L>
+    </Text>
+    <Text Key="29">
+        <L>Invalid data format. Please input valid data format.</L>
+        <L>DATA 형식이 올바르지 않습니다. 다시 입력해 주세요.</L>
+        <L>Invalid data format. Please input valid data format.</L>
+    </Text>
+    <Text Key="30">
+        <L>Please enter value in required fields or leave a blank because the character synchronized with SPC.</L>
+        <L>이 캐릭터는 SPC와 연동되어 있기 때문에 데이터를 모두 입력하거나 모두 공백이여야 합니다. 확인해주세요.</L>
+        <L>Please enter value in required fields or leave a blank because the character synchronized with SPC.</L>
+    </Text>
+    <Text Key="31">
+        <L>already exists. Do you want to replace it?</L>
+        <L>이미 존재합니다. 바꾸시겠습니까?</L>
+        <L>already exists. Do you want to replace it?</L>
+    </Text>
+    <Text Key="32">
+        <L>Do you want to set this layout to the default layout?</L>
+        <L>이 레이아웃을 기본 레이아웃으로 설정하시겠습니까?</L>
+        <L>Do you want to set this layout to the default layout?</L>
+    </Text>
+    <Text Key="33">
+        <L>Do you want to clear default layout?</L>
+        <L>기본 레이아웃을 초기화하시겠습니까?</L>
+        <L>Do you want to clear default layout?</L>
+    </Text>
+    <Text Key="34">
+        <L>The layout duplicates.</L>
+        <L>레이아웃이 중복됩니다.</L>
+        <L>The layout duplicates.</L>
+    </Text>
+    <Text Key="35">
+        <L>Do you want to log off?</L>
+        <L>로그오프 하시겠습니까?</L>
+        <L>Do you want to log off?</L>
+    </Text>
+    <Text Key="36">
+        <L>This field is required field. Please enter value.</L>
+        <L>이 필드는 입력이 필요한 필드입니다. 데이타를 입력해 주십시요.</L>
+        <L>This field is required field. Please enter value.</L>
+    </Text>
+    <Text Key="37">
+        <L>There are controls out of the LayOut. Do you want to move controls by force?</L>
+        <L>레이아웃 밖으로 콘트롤이 존재합니다. 강제로 이동하시겠습니까?</L>
+        <L>There are controls out of the LayOut. Do you want to move controls by force?</L>
+    </Text>
+    <Text Key="38">
+        <L>Please enter value which is larger than </L>
+        <L>보다 큰 값을 입력해 주십시요.</L>
+        <L>Please enter value which is larger than </L>
+    </Text>
+    <Text Key="52">
+        <L>Successfully completed.</L>
+        <L>작업을 성공적으로 수행하였습니다.</L>
+        <L>Successfully completed.</L>
+    </Text>
+    <Text Key="104">
+        <L>Failed to initialize message bus. Please check if message bus is installed correctly.</L>
+        <L>메시지 버스를 초기화에 실패 하였습니다. 메시지 버스가 제대로 설치 되었는지 확인하십시요!</L>
+        <L>Failed to initialize message bus. Please check if message bus is installed correctly</L>
+    </Text>
+    <Text Key="108">
+        <L>Required field. Please enter a value.</L>
+        <L>이 필드는 입력이 필요한 필드입니다. 데이타를 입력해 주십시요.</L>
+        <L>Required field. Please enter a value.</L>
+    </Text>
+    <Text Key="216">
+        <L>You've got a message.</L>
+        <L>메세지가 도착하였습니다.</L>
+        <L>You've got a message.</L>
+    </Text>
+</Message>

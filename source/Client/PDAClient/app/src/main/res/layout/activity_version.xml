@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/content_padding">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43.3dp"
+        android:src="@mipmap/icon"/>
+
+    <com.pda.mes.widget.FontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9.7dp"
+        android:letterSpacing="-0.04"
+        android:text="@string/app_name"
+        android:textColor="#2f2f2f"
+        android:textSize="15dp"
+        app:font="@string/FONT_NANUM_SQUARE_OTFB"/>
+
+    <com.pda.mes.widget.FontTextView
+        android:id="@+id/appVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="현재버전"
+        android:textColor="#b32f2f2f"
+        android:textSize="12dp"
+        app:font="@string/FONT_NOTO_SANS_KR_REG"/>
+
+    <com.pda.mes.widget.FontTextView
+        android:id="@+id/newVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="최신버전"
+        android:textColor="#b32f2f2f"
+        android:textSize="12dp"
+        app:font="@string/FONT_NOTO_SANS_KR_REG"/>
+
+    <com.pda.mes.widget.FontTextView
+        android:layout_marginBottom="20dp"
+        android:id="@+id/executeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/selector_login_btn"
+        android:onClick="onClickDownload"
+        android:letterSpacing="-0.04"
+        android:paddingBottom="7dp"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"
+        android:paddingTop="7dp"
+        android:text="최신버전 확인 중입니다"
+        android:textColor="#ffffffff"
+        android:textSize="13dp"
+        app:font="@string/FONT_NANUM_SQUARE_OTFB"/>
+
+    <ProgressBar
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:id="@+id/progressBar"
+        android:progressDrawable="@drawable/custom_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.pda.mes.widget.FontTextView
+        android:id="@+id/descLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textColor="#555555"
+        android:textSize="12dp"
+        app:font="@string/FONT_NANUM_SQUARE_OTFR"/>
+</LinearLayout>

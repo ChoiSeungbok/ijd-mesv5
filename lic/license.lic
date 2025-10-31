@@ -1,0 +1,25 @@
+328c16514c8f263e87e4edcd612682796cf7d99ee6c19efc70260e727c3e8405c63a08e3a1be43e8fac2e1f6749d945c664b09090e36247038fcff929951d49772f813c634f49e2b0b1ddd5de35d8b95cec3dd362744afa71f4dea0210e347bd13e47ff1bd9d47e2d902c11450a7a7b752372e6d0aaa83147927fe4d48f12fd5267f7a2fe58b6312a3f75d344139fdf8146e81f013e3468137a84516169e94aec45f9b9f9de1e495e5b232b324cde3388b90b6b112c6d94f8b6b5144f12b8ac474ad8570a243975ee82c9c032891766a86d3e9215474026769f67c648ad9556653d4aab21352f608201beddf75b780c5714751ad172da8ff889efda67a804f685c25d35c0d2d1cf6c6436b92d3785713ea6831837632bb11cbf46c3e5e2840707c8385090bcb519537c73b10250b3aa4c5c81e03b9d87a52051af3ca6cafa816611f3b711ae3047dc5c8991a0f4d3212e9683f134a7f14f795202218686a53ce493a7be3456c19ce97da84fc91ce6e48
+
+******************************************************************************
+
+Miracom Inc
+
+Nexplant MESplus License Information
+Copyright Miracom Inc Corporation, 2024-12-19
+
+Contents
+--------
+product.name=Nexplant MESplus
+product.version=x.x
+license.type=DEVELOPMENT
+customer=일진씨앤에스(주)
+expired.date=2025-10-31
+hardware.address=
+monitor.count=286
+monitor.warning.rate=
+monitor.limit.ratet=
+product.boundary=ALM,BAS,BOM,EDC,FMB,INV,ORD,POP,QCM,RAS,RCP,RTD,SEC,SPC,SPM,SVM,WEM,WIP
+description='25 개발 라이선스 발급
+issued.date=2024-12-19
+
+*******************************End of file***********************************

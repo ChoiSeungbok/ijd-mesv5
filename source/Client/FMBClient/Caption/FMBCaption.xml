@@ -1,0 +1,1671 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Captions>
+    <Other>
+        <!-- Window Menu -->
+        <Text Key="Menu">
+            <L>Menu</L>
+            <L>메뉴</L>
+            <L>Menu</L>
+        </Text>
+        <Text Key="Favorites">
+            <L>Favorites</L>
+            <L>즐겨찾기</L>
+            <L>Favorites</L>
+        </Text>
+        <Text Key="Operation">
+            <L>Operation</L>
+            <L>공정</L>
+            <L>Operation</L>
+        </Text>
+        <Text Key="Resource">
+            <L>Resource</L>
+            <L>자원</L>
+            <L>Resource</L>
+        </Text>
+
+        <!-- Form Title Caption -->
+
+        <Text Key="Event">
+            <L>Event</L>
+            <L>이벤트</L>
+            <L>Event</L>
+        </Text>
+        <Text Key="View Resource Status">
+            <L>View Resource Status</L>
+            <L>자원 상태 조회</L>
+            <L>View Resource Status</L>
+        </Text>
+        <Text Key="View Resource History">
+            <L>View Resource History</L>
+            <L>자원 이력 조회</L>
+            <L>View Resource History</L>
+        </Text>
+        <Text Key="View Resource List Detail">
+            <L>View Resource List Detail</L>
+            <L>자원 목록 상세 조회</L>
+            <L>View Resource List Detail</L>
+        </Text>
+        <Text Key="View Lot List Detail">
+            <L>View Lot List Detail</L>
+            <L>LOT 목록 상세 조회</L>
+            <L>View Lot List Detail</L>
+        </Text>
+        <Text Key="View Lot List by Resource">
+            <L>View Lot List by Resource</L>
+            <L>자원별 Lot 목록 조회</L>
+            <L>View Lot List by Resource</L>
+        </Text>
+        <Text Key="Send Message">
+            <L>Send Message</L>
+            <L>메시지 보내기</L>
+            <L>Send Message</L>
+        </Text>
+        <Text Key="Create UDR Group">
+            <L>Create UDR Group</L>
+            <L>사용자 정의 그룹 셋업</L>
+            <L>Create UDR Group</L>
+        </Text>
+        <Text Key="Create LayOut">
+            <L>Create LayOut</L>
+            <L>레이아웃 셋업</L>
+            <L>Create LayOut</L>
+        </Text>
+        <Text Key="Create Resource by User Define Group">
+            <L>Create Resource by User Define Group</L>
+            <L>사용자 정의 그룹 자원 생성</L>
+            <L>Create Resource by User Define Group</L>
+        </Text>
+        <Text Key="Update Resource by User Define Group">
+            <L>Update Resource by User Define Group</L>
+            <L>사용자 정의 그룹 자원 수정</L>
+            <L>Update Resource by User Define Group</L>
+        </Text>
+        <Text Key="Delete Resource by User Define Group">
+            <L>Delete Resource by User Define Group</L>
+            <L>사용자 정의 그룹 자원 삭제</L>
+            <L>Delete Resource by User Define Group</L>
+        </Text>
+        <Text Key="View Resource by User Define Group">
+            <L>View Resource by User Define Group</L>
+            <L>사용자 정의 그룹 자원 조회</L>
+            <L>View Resource by User Define Group</L>
+        </Text>
+        <Text Key="Create Tag by User Define Group">
+            <L>Create Tag by User Define Group</L>
+            <L>사용자 정의 그룹 태그 생성</L>
+            <L>Create Tag by User Define Group</L>
+        </Text>
+        <Text Key="Update Tag by User Define Group">
+            <L>Update Tag by User Define Group</L>
+            <L>사용자 정의 그룹 태그 수정</L>
+            <L>Update Tag by User Define Group</L>
+        </Text>
+        <Text Key="Delete Tag by User Define Group">
+            <L>Delete Tag by User Define Group</L>
+            <L>사용자 정의 그룹 태그 삭제</L>
+            <L>Delete Tag by User Define Group</L>
+        </Text>
+        <Text Key="View Tag by User Define Group">
+            <L>View Tag by User Define Group</L>
+            <L>사용자 정의 그룹 태그 조회</L>
+            <L>View Tag by User Define Group</L>
+        </Text>
+        <Text Key="Create Resource">
+            <L>Create Resource</L>
+            <L>자원 생성</L>
+            <L>Create Resource</L>
+        </Text>
+        <Text Key="Update Resource">
+            <L>Update Resource</L>
+            <L>자원 수정</L>
+            <L>Update Resource</L>
+        </Text>
+        <Text Key="Delete Resource">
+            <L>Delete Resource</L>
+            <L>자원 삭제</L>
+            <L>Delete Resource</L>
+        </Text>
+        <Text Key="View Resource">
+            <L>View Resource</L>
+            <L>자원 조회</L>
+            <L>View Resource</L>
+        </Text>
+        <Text Key="Create Tag">
+            <L>Create Tag</L>
+            <L>태그 생성</L>
+            <L>Create Tag</L>
+        </Text>
+        <Text Key="Update Tag">
+            <L>Update Tag</L>
+            <L>태그 수정</L>
+            <L>Update Tag</L>
+        </Text>
+        <Text Key="Delete Tag">
+            <L>Delete Tag</L>
+            <L>태그 삭제</L>
+            <L>Delete Tag</L>
+        </Text>
+        <Text Key="View Tag">
+            <L>View Tag</L>
+            <L>태그 조회</L>
+            <L>View Tag</L>
+        </Text>
+        <Text Key="Global Option Setup">
+            <L>Global Option Setup</L>
+            <L>환경 설정</L>
+            <L>Global Option Setup</L>
+        </Text>
+        <Text Key="Resource Image Setup">
+            <L>Resource Image Setup</L>
+            <L>장비 이미지 셋업</L>
+            <L>Resource Image Setup</L>
+        </Text>
+        <Text Key="Add Multi Resources">
+            <L>Add Multi Resources</L>
+            <L>여러 장비 추가</L>
+            <L>Add Multi Resources</L>
+        </Text>
+        <Text Key="Default Layout Setup">
+            <L>Default Layout Setup</L>
+            <L>기본 레이아웃 설정</L>
+            <L>Default Layout Setup</L>
+        </Text>
+        <Text Key="Arrange Layouts">
+            <L>Arrange Layouts</L>
+            <L>레이아웃 배치</L>
+            <L>Arrange Layouts</L>
+        </Text>
+        <Text Key="Save Layout Configuration">
+            <L>Save Layout Configuration</L>
+            <L>레이아웃 구성 저장</L>
+            <L>Save Layout Configuration</L>
+        </Text>
+
+        <!-- View Resource Status -->
+
+        <Text Key="Factory">
+            <L>Factory</L>
+            <L>공장</L>
+            <L>Factory</L>
+        </Text>
+        <Text Key="Resource ID">
+            <L>Resource ID</L>
+            <L>자원</L>
+            <L>Resource ID</L>
+        </Text>
+        <Text Key="Description">
+            <L>Description</L>
+            <L>설명</L>
+            <L>Description</L>
+        </Text>
+        <Text Key="Include deleted resource">
+            <L>Include deleted resource</L>
+            <L>삭제 자원 포함</L>
+            <L>Include deleted resource</L>
+        </Text>
+        <Text Key="General">
+            <L>General</L>
+            <L>일반</L>
+            <L>General</L>
+        </Text>
+        <Text Key="Lot List">
+            <L>Lot List</L>
+            <L>Lot 목록</L>
+            <L>Lot List</L>
+        </Text>
+        <Text Key="Resource Status">
+            <L>Resource Status</L>
+            <L>자원 상태</L>
+            <L>Resource Status</L>
+        </Text>
+        <Text Key="Resource Group">
+            <L>Resource Group</L>
+            <L>자원 그룹</L>
+            <L>Resource Group</L>
+        </Text>
+        <Text Key="Customized Field">
+            <L>Customized Field</L>
+            <L>사용자 정의 필드</L>
+            <L>Customized Field</L>
+        </Text>
+        <Text Key="Location Info">
+            <L>Location Info</L>
+            <L>위치 정보</L>
+            <L>Location Info</L>
+        </Text>
+        <Text Key="Last Event Time">
+            <L>Last Event Time</L>
+            <L>최근이벤트시간</L>
+            <L>Last Event Time</L>
+        </Text>
+        <Text Key="Last Event">
+            <L>Last Event</L>
+            <L>최근 이벤트</L>
+            <L>Last Event</L>
+        </Text>
+        <Text Key="Last End Time">
+            <L>Last End Time</L>
+            <L>최근 완료 시간</L>
+            <L>Last End Time</L>
+        </Text>
+        <Text Key="Last Start Time">
+            <L>Last Start Time</L>
+            <L>최근 시작 시간</L>
+            <L>Last Start Time</L>
+        </Text>
+        <Text Key="Last Down Time">
+            <L>Last Down Time</L>
+            <L>최근 다운 시간</L>
+            <L>Last Down Time</L>
+        </Text>
+        <Text Key="Proc Count">
+            <L>Proc Count</L>
+            <L>작업진행 개수</L>
+            <L>Proc Count</L>
+        </Text>
+        <Text Key="Up Down Flag">
+            <L>Up Down Flag</L>
+            <L>Up Down Flag</L>
+            <L>Up Down Flag</L>
+        </Text>
+        <Text Key="Res Delete Time">
+            <L>Res Delete Time</L>
+            <L>자원 삭제 시간</L>
+            <L>Res Delete Time</L>
+        </Text>
+        <Text Key="Res Delete User">
+            <L>Res Delete User</L>
+            <L>자원 삭제 사용자</L>
+            <L>Res Delete User</L>
+        </Text>
+        <Text Key="Resource Delete Flag">
+            <L>Resource Delete Flag</L>
+            <L>자원 삭제 여부</L>
+            <L>Resource Delete Flag</L>
+        </Text>
+        <Text Key="Customized Field (1~10)">
+            <L>Customized Field (1~10)</L>
+            <L>사용자 정의 필드 (1~10)</L>
+            <L>Customized Field (1~10)</L>
+        </Text>
+        <Text Key="Location">
+            <L>Customized Field (1~10)</L>
+            <L>사용자 정의 필드 (1~10)</L>
+            <L>Customized Field (1~10)</L>
+        </Text>
+        <Text Key="Resource Type">
+            <L>Resource Type</L>
+            <L>자원 타입</L>
+            <L>Resource Type</L>
+        </Text>
+        <Text Key="Area ID">
+            <L>Area ID</L>
+            <L>에어리어</L>
+            <L>Area ID</L>
+        </Text>
+        <Text Key="Sub Area ID">
+            <L>Sub Area ID</L>
+            <L>서브 에어리어</L>
+            <L>Sub Area ID</L>
+        </Text>
+        <Text Key="Max Proc Count">
+            <L>Max Proc Count</L>
+            <L>최대 진행 LOT수</L>
+            <L>Max Proc Count</L>
+        </Text>
+        <Text Key="Process Rule">
+            <L>Process Rule</L>
+            <L>진행 규칙</L>
+            <L>Process Rule</L>
+        </Text>
+        <Text Key="Dispatcher ID">
+            <L>Dispatcher ID</L>
+            <L>디스페쳐 ID</L>
+            <L>Dispatcher ID</L>
+        </Text>
+        <Text Key="Location">
+            <L>Location</L>
+            <L>위치</L>
+            <L>Location</L>
+        </Text>
+        <Text Key="Proc Mode">
+            <L>Proc Mode</L>
+            <L>진행 모드</L>
+            <L>Proc Mode</L>
+        </Text>
+        <Text Key="Control Mode">
+            <L>Control Mode</L>
+            <L>콘트롤 모드</L>
+            <L>Control Mode</L>
+        </Text>
+        <Text Key="PM Schedule Enable Flag">
+            <L>PM Schedule Enable Flag</L>
+            <L>NO WIP Event 발생 여부</L>
+            <L>PM Schedule Enable Flag</L>
+        </Text>
+        <Text Key="Unit Base Standard Flag">
+            <L>Unit Base Standard Flag</L>
+            <L>Unit당 Standard Time 측정</L>
+            <L>Unit Base Standard Flag</L>
+        </Text>
+        <Text Key="Security Check Flag">
+            <L>Security Check Flag</L>
+            <L>보안 확인 여부</L>
+            <L>Security Check Flag</L>
+        </Text>
+        <Text Key="Status Prompt">
+            <L>Status Prompt</L>
+            <L>상태 문자열</L>
+            <L>Status Prompt</L>
+        </Text>
+        <Text Key="Use Factory Prompt Flag">
+            <L>Use Factory Prompt Flag</L>
+            <L>공장에 동일한 문자열 사용</L>
+            <L>Use Factory Prompt Flag</L>
+        </Text>
+        <Text Key="Last Hist Seq">
+            <L>Last Hist Seq</L>
+            <L>마지막 이력 Seq</L>
+            <L>Last Hist Seq</L>
+        </Text>
+        <Text Key="Last Act Hist Seq">
+            <L>Last Act Hist Seq</L>
+            <L>최근 이력 Seq</L>
+            <L>Last Active Hist Seq</L>
+        </Text>
+        <Text Key="Last Active Hist Seq">
+            <L>Last Active Hist Seq</L>
+            <L>최근 이력 Seq</L>
+            <L>Last Act Hist Seq</L>
+        </Text>
+        <Text Key="Create User">
+            <L>Create User</L>
+            <L>생성 사용자</L>
+            <L>Create User</L>
+        </Text>
+        <Text Key="Create User ID">
+            <L>Create User ID</L>
+            <L>생성 사용자</L>
+            <L>Create User ID</L>
+        </Text>
+        <Text Key="Create Time">
+            <L>Create Time</L>
+            <L>생성 시간</L>
+            <L>Create Time</L>
+        </Text>
+        <Text Key="Update User ID">
+            <L>Update User ID</L>
+            <L>수정 사용자</L>
+            <L>Update User ID</L>
+        </Text>
+        <Text Key="Update User">
+            <L>Update User</L>
+            <L>수정 사용자</L>
+            <L>Update User</L>
+        </Text>
+        <Text Key="Update Time">
+            <L>Update Time</L>
+            <L>수정 시간</L>
+            <L>Update Time</L>
+        </Text>
+        <Text Key="Lot Status">
+            <L>Lot Status</L>
+            <L>Lot 상태</L>
+            <L>Lot Status</L>
+        </Text>
+        <Text Key="Material ID">
+            <L>Material ID</L>
+            <L>제품</L>
+            <L>Material ID</L>
+        </Text>
+        <Text Key="Flow">
+            <L>Flow</L>
+            <L>플로우</L>
+            <L>Flow</L>
+        </Text>
+        <Text Key="Operation">
+            <L>Operation</L>
+            <L>공정</L>
+            <L>Operation</L>
+        </Text>
+        <Text Key="Qty1">
+            <L>Qty1</L>
+            <L>수량 1</L>
+            <L>Qty1</L>
+        </Text>
+        <Text Key="Qty2">
+            <L>Qty2</L>
+            <L>수량 2</L>
+            <L>Qty2</L>
+        </Text>
+        <Text Key="Qty3">
+            <L>Qty3</L>
+            <L>수량 3</L>
+            <L>Qty3</L>
+        </Text>
+        <Text Key="Create Code">
+            <L>Create Code</L>
+            <L>생성 코드</L>
+            <L>Create Code</L>
+        </Text>
+        <Text Key="Owner Code">
+            <L>Owner Code</L>
+            <L>소유자 코드</L>
+            <L>Owner Code</L>
+        </Text>
+        <Text Key="Lot Type">
+            <L>Lot Type</L>
+            <L>Lot 타입</L>
+            <L>Lot Type</L>
+        </Text>
+        <Text Key="Lot Priority">
+            <L>Lot Priority</L>
+            <L>우선순위</L>
+            <L>Lot Priority</L>
+        </Text>
+        <Text Key="Hold Code">
+            <L>Hold Code</L>
+            <L>보류 코드</L>
+            <L>Hold Code</L>
+        </Text>
+        <Text Key="Use Factory Prompt Flag">
+            <L>Use Factory Prompt Flag</L>
+            <L>공장에 동일한 문자열 사용</L>
+            <L>Use Factory Prompt Flag</L>
+        </Text>
+        <Text Key="LayOut ID">
+            <L>LayOut ID</L>
+            <L>레이아웃</L>
+            <L>LayOut ID</L>
+        </Text>
+        <Text Key="Type">
+            <L>Type</L>
+            <L>종류</L>
+            <L>Type</L>
+        </Text>
+        <Text Key="Text">
+            <L>Text</L>
+            <L>제목</L>
+            <L>Text</L>
+        </Text>
+        <Text Key="Text Font Size">
+            <L>Text Font Size</L>
+            <L>글자 크기</L>
+            <L>Text Font Size</L>
+        </Text>
+        <Text Key="Text Style">
+            <L>Text Style</L>
+            <L>글꼴 스타일</L>
+            <L>Text Style</L>
+        </Text>
+        <Text Key="Text Color">
+            <L>Text Color</L>
+            <L>글꼴 색</L>
+            <L>Text Color</L>
+        </Text>
+        <Text Key="Back Color">
+            <L>Back Color</L>
+            <L>배경 색</L>
+            <L>Back Color</L>
+        </Text>
+        <Text Key="Location X">
+            <L>Location X</L>
+            <L>X 좌표</L>
+            <L>Location X</L>
+        </Text>
+        <Text Key="Location Y">
+            <L>Location Y</L>
+            <L>Y 좌표</L>
+            <L>Location Y</L>
+        </Text>
+        <Text Key="Width">
+            <L>Width</L>
+            <L>너비</L>
+            <L>Width</L>
+        </Text>
+        <Text Key="Height">
+            <L>Height</L>
+            <L>높이</L>
+            <L>Height</L>
+        </Text>
+        <Text Key="Loc Create User ID">
+            <L>Loc Create User ID</L>
+            <L>생성 사용자</L>
+            <L>Loc Create User ID</L>
+        </Text>
+        <Text Key="Loc Create Time">
+            <L>Loc Create Time</L>
+            <L>생성 시간</L>
+            <L>Loc Create Time</L>
+        </Text>
+        <Text Key="Loc Update User ID">
+            <L>Loc Update User ID</L>
+            <L>수정 사용자</L>
+            <L>Loc Update User ID</L>
+        </Text>
+        <Text Key="Loc Update Time">
+            <L>Loc Update Time</L>
+            <L>수정 시간</L>
+            <L>Loc Update Time</L>
+        </Text>
+
+        <!-- View Resource History -->
+        <Text Key="Tran Time">
+            <L>Tran Time</L>
+            <L>트랜젝션 시간</L>
+            <L>Tran Time</L>
+        </Text>
+        <Text Key="Primary Status">
+            <L>Primary Status</L>
+            <L>최상위 상태</L>
+            <L>Primary Status</L>
+        </Text>
+        <Text Key="Comment">
+            <L>Comment</L>
+            <L>주석</L>
+            <L>Comment</L>
+        </Text>
+        <Text Key="User Name">
+            <L>User Name</L>
+            <L>사용자</L>
+            <L>User Name</L>
+        </Text>
+        <Text Key="Hist Delete Flag">
+            <L>Hist Delete Flag</L>
+            <L>이력 삭제 여부</L>
+            <L>Hist Delete Flag</L>
+        </Text>
+        <Text Key="Hist Delete Time">
+            <L>Hist Delete Time</L>
+            <L>이력 삭제 시간</L>
+            <L>Hist Delete Time</L>
+        </Text>
+        <Text Key="Hist Delete User Name">
+            <L>Hist Delete User Name</L>
+            <L>이력 삭제 사용자</L>
+            <L>Hist Delete User Name</L>
+        </Text>
+        <Text Key="Hist Delete User">
+            <L>Hist Delete User</L>
+            <L>이력 삭제 사용자</L>
+            <L>Hist Delete User</L>
+        </Text>
+        <Text Key="Hist Delete Comment">
+            <L>Hist Delete Comment</L>
+            <L>이력 삭제 주석</L>
+            <L>Hist Delete Comment</L>
+        </Text>
+        <Text Key="New Status 1">
+            <L>New Status 1</L>
+            <L>새 상태 1</L>
+            <L>New Status 1</L>
+        </Text>
+        <Text Key="New Status 2">
+            <L>New Status 2</L>
+            <L>새 상태 2</L>
+            <L>New Status 2</L>
+        </Text>
+        <Text Key="New Status 3">
+            <L>New Status 3</L>
+            <L>새 상태 3</L>
+            <L>New Status 3</L>
+        </Text>
+        <Text Key="New Status 4">
+            <L>New Status 4</L>
+            <L>새 상태 4</L>
+            <L>New Status 4</L>
+        </Text>
+        <Text Key="New Status 5">
+            <L>New Status 5</L>
+            <L>새 상태 5</L>
+            <L>New Status 5</L>
+        </Text>
+        <Text Key="New Status 6">
+            <L>New Status 6</L>
+            <L>새 상태 6</L>
+            <L>New Status 6</L>
+        </Text>
+        <Text Key="New Status 7">
+            <L>New Status 7</L>
+            <L>새 상태 7</L>
+            <L>New Status 7</L>
+        </Text>
+        <Text Key="New Status 8">
+            <L>New Status 8</L>
+            <L>새 상태 8</L>
+            <L>New Status 8</L>
+        </Text>
+        <Text Key="New Status 9">
+            <L>New Status 9</L>
+            <L>새 상태 9</L>
+            <L>New Status 9</L>
+        </Text>
+        <Text Key="New Status 10">
+            <L>New Status 10</L>
+            <L>새 상태 10</L>
+            <L>New Status 10</L>
+        </Text>
+        <Text Key="Include deleted history">
+            <L>Include deleted history</L>
+            <L>삭제 이력까지 포함</L>
+            <L>Include deleted history</L>
+        </Text>
+        <Text Key="Period">
+            <L>Period</L>
+            <L>기간</L>
+            <L>Period</L>
+        </Text>
+        <Text Key="Event ID">
+            <L>Event ID</L>
+            <L>이벤트</L>
+            <L>Event ID</L>
+        </Text>
+
+        <!-- View Resource List Detail -->
+        <Text Key="Res Type">
+            <L>Res Type</L>
+            <L>자원 타입</L>
+            <L>Res Type</L>
+        </Text>
+        <Text Key="Res Desc">
+            <L>Res Desc</L>
+            <L>자원 설명</L>
+            <L>Res Desc</L>
+        </Text>
+        <Text Key="Desc">
+            <L>Desc</L>
+            <L>설명</L>
+            <L>Desc</L>
+        </Text>
+        <Text Key="Use Fac Prt Flag">
+            <L>Use Fac Prt Flag</L>
+            <L>공장에 동일한 문자열 사용</L>
+            <L>Use Fac Prt Flag</L>
+        </Text>
+        <Text Key="Proc Lot Count">
+            <L>Proc Lot Count</L>
+            <L>진행 Lot 개수</L>
+            <L>Proc Lot Count</L>
+        </Text>
+        <Text Key="Res Tag Type">
+            <L>Res Tag Type</L>
+            <L>자원 종류</L>
+            <L>Res Tag Type</L>
+        </Text>
+        <Text Key="Loc X">
+            <L>Loc X</L>
+            <L>X 좌표</L>
+            <L>Loc X</L>
+        </Text>
+        <Text Key="Loc Y">
+            <L>Loc Y</L>
+            <L>Y 좌표</L>
+            <L>Loc Y</L>
+        </Text>
+        <Text Key="Text Size">
+            <L>Text Size</L>
+            <L>글자 크기</L>
+            <L>Text Size</L>
+        </Text>
+        <Text Key="View Signal">
+            <L>View Signal</L>
+            <L>신호등 보기</L>
+            <L>View Signal</L>
+        </Text>
+
+        <!-- View Lot List Detail -->
+        <Text Key="Material">
+            <L>Material</L>
+            <L>제품</L>
+            <L>Material</L>
+        </Text>
+        <Text Key="Zero Quantity Lot">
+            <L>Zero Quantity Lot</L>
+            <L>0장 Lot만</L>
+            <L>Zero Quantity Lot</L>
+        </Text>
+        <Text Key="Include Terminated Lot">
+            <L>Include Terminated Lot</L>
+            <L>죽은 Lot까지 포함</L>
+            <L>Include Terminated Lot</L>
+        </Text>
+        <Text Key="Hold Flag">
+            <L>Hold Flag</L>
+            <L>보류 여부</L>
+            <L>Hold Flag</L>
+        </Text>
+        <Text Key="Create Qty1">
+            <L>Create Qty1</L>
+            <L>생성 수량 1</L>
+            <L>Create Qty1</L>
+        </Text>
+        <Text Key="Create Qty2">
+            <L>Create Qty2</L>
+            <L>생성 수량 2</L>
+            <L>Create Qty2</L>
+        </Text>
+        <Text Key="Create Qty3">
+            <L>Create Qty3</L>
+            <L>생성 수량 3</L>
+            <L>Create Qty3</L>
+        </Text>
+        <Text Key="Oper In Qty1">
+            <L>Oper In Qty1</L>
+            <L>공정 인 수량 1</L>
+            <L>Oper In Qty1</L>
+        </Text>
+        <Text Key="Oper In Qty2">
+            <L>Oper In Qty2</L>
+            <L>공정 인 수량 2</L>
+            <L>Oper In Qty2</L>
+        </Text>
+        <Text Key="Oper In Qty3">
+            <L>Oper In Qty3</L>
+            <L>공정 인 수량 3</L>
+            <L>Oper In Qty3</L>
+        </Text>
+        <Text Key="Inventory Flag">
+            <L>Inventory Flag</L>
+            <L>저장 여부</L>
+            <L>Inventory Flag</L>
+        </Text>
+        <Text Key="Transit Flag">
+            <L>Transit Flag</L>
+            <L>대기 여부</L>
+            <L>Transit Flag</L>
+        </Text>
+        <Text Key="Unit Exist Flag">
+            <L>Unit Exist Flag</L>
+            <L>단위 존재 여부</L>
+            <L>Unit Exist Flag</L>
+        </Text>
+        <Text Key="Inv Unit">
+            <L>Inv Unit</L>
+            <L>자재 단위</L>
+            <L>Inv Unit</L>
+        </Text>
+        <Text Key="Rework Flag">
+            <L>Rework Flag</L>
+            <L>재작업 여부</L>
+            <L>Rework Flag</L>
+        </Text>
+        <Text Key="Rework Code">
+            <L>Rework Code</L>
+            <L>재작업 코드</L>
+            <L>Rework Code</L>
+        </Text>
+        <Text Key="Rework Count">
+            <L>Rework Count</L>
+            <L>재작업 횟수</L>
+            <L>Rework Count</L>
+        </Text>
+        <Text Key="Rework Return Clear Flag">
+            <L>Rework Return Clear Flag</L>
+            <L>반환시 재작업 취소</L>
+            <L>Rework Return Clear Flag</L>
+        </Text>
+        <Text Key="Rework Return Flow">
+            <L>Rework Return Flow</L>
+            <L>재작업 반환 플로우</L>
+            <L>Rework Return Flow</L>
+        </Text>
+        <Text Key="Rework Return Oper">
+            <L>Rework Return Oper</L>
+            <L>재작업 반환 공정</L>
+            <L>Rework Return   Oper</L>
+        </Text>
+        <Text Key="Rework End Flow">
+            <L>Rework End Flow</L>
+            <L>재작업 마지막 플로우</L>
+            <L>Rework End Flow</L>
+        </Text>
+        <Text Key="Rework End Oper">
+            <L>Rework End Oper</L>
+            <L>재작업 마지막 공정</L>
+            <L>Rework End Oper</L>
+        </Text>
+        <Text Key="NSTD Flag">
+            <L>NSTD Flag</L>
+            <L>비정규 이동 여부</L>
+            <L>NSTD Flag</L>
+        </Text>
+        <Text Key="NSTD Return Flow">
+            <L>NSTD Return Flow</L>
+            <L>비정규 이동 반환 플로우</L>
+            <L>NSTD Return Flow</L>
+        </Text>
+        <Text Key="NSTD Return Oper">
+            <L>NSTD Return Oper</L>
+            <L>비정규 이동 반환 공정</L>
+            <L>NSTD Return Oper</L>
+        </Text>
+        <Text Key="NSTD Time">
+            <L>NSTD Time</L>
+            <L>비정규 이동 시간</L>
+            <L>NSTD Time</L>
+        </Text>
+        <Text Key="Start Flag">
+            <L>Start Flag</L>
+            <L>작업시작 여부</L>
+            <L>Start Flag</L>
+        </Text>
+        <Text Key="End Flag">
+            <L>End Flag</L>
+            <L>작업종료 여부</L>
+            <L>End Flag</L>
+        </Text>
+        <Text Key="Start Resource ID">
+            <L>Start Resource ID</L>
+            <L>작업 시작 자원</L>
+            <L>Start Resource ID</L>
+        </Text>
+        <Text Key="End Resource ID">
+            <L>End Resource ID</L>
+            <L>작업 종료 자원</L>
+            <L>End Resource ID</L>
+        </Text>
+        <Text Key="Reserve Resource ID">
+            <L>Reserve Resource ID</L>
+            <L>예약 자원</L>
+            <L>Reserve Resource ID</L>
+        </Text>
+        <Text Key="Start Time">
+            <L>Start Time</L>
+            <L>작업 시작 시간</L>
+            <L>Start Time</L>
+        </Text>
+        <Text Key="End Time">
+            <L>End Time</L>
+            <L>작업 종료 시간</L>
+            <L>End Time</L>
+        </Text>
+        <Text Key="Sample Wait Flag">
+            <L>Sample Wait Flag</L>
+            <L>샘플 대기</L>
+            <L>Sample Wait Flag</L>
+        </Text>
+        <Text Key="Sample Flag">
+            <L>Sample Flag</L>
+            <L>샘플 검사</L>
+            <L>Sample Flag</L>
+        </Text>
+        <Text Key="Sample Result">
+            <L>Sample Result</L>
+            <L>샘플 결과</L>
+            <L>Sample Result</L>
+        </Text>
+        <Text Key="Split From Lot ID">
+            <L>Split From Lot ID</L>
+            <L>분리 관계 LOT</L>
+            <L>Split From Lot ID</L>
+        </Text>
+        <Text Key="Ship Code">
+            <L>Ship Code</L>
+            <L>이송 코드</L>
+            <L>Ship Code</L>
+        </Text>
+        <Text Key="Ship Time">
+            <L>Ship Time</L>
+            <L>이송 시간</L>
+            <L>Ship Time</L>
+        </Text>
+        <Text Key="Original Due Time">
+            <L>Original Due Time</L>
+            <L>최초 Due Time</L>
+            <L>Original Due Time</L>
+        </Text>
+        <Text Key="Scheduled Due Time">
+            <L>Scheduled Due Time</L>
+            <L>계획된 Due Time</L>
+            <L>Scheduled Due Time</L>
+        </Text>
+        <Text Key="Last Comment">
+            <L>Last Comment</L>
+            <L>최근 주석</L>
+            <L>Last Comment</L>
+        </Text>
+        <Text Key="Factory In Time">
+            <L>Factory In Time</L>
+            <L>공장 인 시간</L>
+            <L>Factory In Time</L>
+        </Text>
+        <Text Key="Flow In Time">
+            <L>Flow In Time</L>
+            <L>플로우 인 시간</L>
+            <L>Flow In Time</L>
+        </Text>
+        <Text Key="Oper In Time">
+            <L>Oper In Time</L>
+            <L>공정 인 시간</L>
+            <L>Oper In Time</L>
+        </Text>
+        <Text Key="Batch ID">
+            <L>Batch ID</L>
+            <L>묶음 ID</L>
+            <L>Batch ID</L>
+        </Text>
+        <Text Key="Batch Seq">
+            <L>Batch Seq</L>
+            <L>묶음 Seq</L>
+            <L>Batch Seq</L>
+        </Text>
+        <Text Key="Order ID">
+            <L>Order ID</L>
+            <L>생산지시 ID</L>
+            <L>Order ID</L>
+        </Text>
+        <Text Key="Lot Location">
+            <L>Lot Location</L>
+            <L>Lot 위치</L>
+            <L>Lot Location</L>
+        </Text>
+        <Text Key="Lot Delete Flag">
+            <L>Lot Delete Flag</L>
+            <L>Lot 삭제 여부</L>
+            <L>Lot Delete Flag</L>
+        </Text>
+        <Text Key="Lot Delete Reason">
+            <L>Lot Delete Reason</L>
+            <L>Lot 삭제 원인</L>
+            <L>Lot Delete Reason</L>
+        </Text>
+        <Text Key="Lot Delete Time">
+            <L>Lot Delete Time</L>
+            <L>Lot 삭제 시간</L>
+            <L>Lot Delete Time</L>
+        </Text>
+        <Text Key="Last Tran Code">
+            <L>Last Tran Code</L>
+            <L>최근 트랜젝션 코드</L>
+            <L>Last Tran Code</L>
+        </Text>
+        <Text Key="Last Tran Time">
+            <L>Last Tran Time</L>
+            <L>최근 트랜젝션 시간</L>
+            <L>Last Tran Time</L>
+        </Text>
+
+        <!-- View Lot List by Resource -->
+        <Text Key="Only Proc Lot">
+            <L>Only Proc Lot</L>
+            <L>진행중인 Lot 만</L>
+            <L>Only Proc Lot</L>
+        </Text>
+
+        <!-- New User Design -->
+        <Text Key="Group ID">
+            <L>Group ID</L>
+            <L>그룹</L>
+            <L>Group ID</L>
+        </Text>
+
+        <!-- Create Tag -->
+        <Text Key="Shape">
+            <L>Shape</L>
+            <L>모양</L>
+            <L>Shape</L>
+        </Text>
+
+        <!-- Event -->
+        <Text Key="Transaction Time">
+            <L>Transaction Time</L>
+            <L>트랜젝션 시간</L>
+            <L>Transaction Time</L>
+        </Text>
+        <Text Key="Collect Resource Data">
+            <L>Collect Resource Data</L>
+            <L>자원 데이터 수집</L>
+            <L>Collect Resource Data</L>
+        </Text>
+        <Text Key="Collection Set">
+            <L>Collection Set</L>
+            <L>콜랙션 셋</L>
+            <L>Collection Set</L>
+        </Text>
+        <Text Key="Collection Set Version">
+            <L>Collection Set Version</L>
+            <L>콜랙션 셋 버전</L>
+            <L>Collection Set Version</L>
+        </Text>
+        <Text Key="Character">
+            <L>Character</L>
+            <L>캐릭터</L>
+            <L>Character</L>
+        </Text>
+        <Text Key="Unit ID">
+            <L>Unit ID</L>
+            <L>Unit ID</L>
+            <L>Unit ID</L>
+        </Text>
+        <Text Key="Value">
+            <L>Value</L>
+            <L>값</L>
+            <L>Value</L>
+        </Text>
+        <Text Key="Resource Information">
+            <L>Resource Information</L>
+            <L>자원 정보</L>
+            <L>Resource Information</L>
+        </Text>
+        <Text Key="Up/Down Flag">
+            <L>Up/Down Flag</L>
+            <L>Up/Down 여부</L>
+            <L>Up/Down Flag</L>
+        </Text>
+        <Text Key="Chart">
+            <L>Chart</L>
+            <L>차트</L>
+            <L>Chart</L>
+        </Text>
+        <Text Key="Rule Type">
+            <L>Rule Type</L>
+            <L>Rule 종류</L>
+            <L>Rule Type</L>
+        </Text>
+        <Text Key="Rule Description">
+            <L>Rule Description</L>
+            <L>Rule 내용</L>
+            <L>Rule Description</L>
+        </Text>
+        <Text Key="Seq">
+            <L>Seq</L>
+            <L>순번</L>
+            <L>Seq</L>
+        </Text>
+
+        <Text Key="Rectangle">
+            <L>Rectangle</L>
+            <L>사각형</L>
+            <L>Rectangle</L>
+        </Text>
+        <Text Key="Ellipse">
+            <L>Ellipse</L>
+            <L>타원형</L>
+            <L>Ellipse</L>
+        </Text>
+        <Text Key="Triangle">
+            <L>Triangle</L>
+            <L>삼각형</L>
+            <L>Triangle</L>
+        </Text>
+        <Text Key="Vertical Line">
+            <L>Vertical Line</L>
+            <L>수직선</L>
+            <L>Vertical Line</L>
+        </Text>
+        <Text Key="Horizontal Line">
+            <L>Horizontal Line</L>
+            <L>평행선</L>
+            <L>Horizontal Line</L>
+        </Text>
+        <Text Key="Pie Type 1">
+            <L>Pie Type 1</L>
+            <L>파이 형태 1</L>
+            <L>Pie Type 1</L>
+        </Text>
+        <Text Key="Pie Type 2">
+            <L>Pie Type 2</L>
+            <L>파이 형태 2</L>
+            <L>Pie Type 2</L>
+        </Text>
+        <Text Key="Pie Type 3">
+            <L>Pie Type 3</L>
+            <L>파이 형태 3</L>
+            <L>Pie Type 3</L>
+        </Text>
+        <Text Key="Pie Type 4">
+            <L>Pie Type 4</L>
+            <L>파이 형태 4</L>
+            <L>Pie Type 4</L>
+        </Text>
+        <Text Key="Tools List">
+            <L>Tools List</L>
+            <L>도구 목록</L>
+            <L>Tools List</L>
+        </Text>
+        <Text Key="Design List">
+            <L>Design List</L>
+            <L>디자인 목록</L>
+            <L>Design List</L>
+        </Text>
+
+        <!-- Send Message -->
+        <Text Key="User ID">
+            <L>User ID</L>
+            <L>사용자</L>
+            <L>User ID</L>
+        </Text>
+        <Text Key="User Group">
+            <L>User Group</L>
+            <L>사용자 그룹</L>
+            <L>User Group</L>
+        </Text>
+
+        <!-- Global Option Setup -->
+        <Text Key="LayOut">
+            <L>LayOut</L>
+            <L>레이아웃</L>
+            <L>LayOut</L>
+        </Text>
+        <Text Key="UDR Group">
+            <L>UDR Group</L>
+            <L>사용자 정의 그룹</L>
+            <L>UDR Group</L>
+        </Text>
+        <Text Key="Pie 1 Type">
+            <L>Pie 1 Type</L>
+            <L>파이 형태 1</L>
+            <L>Pie 1 Type</L>
+        </Text>
+        <Text Key="Pie 2 Type">
+            <L>Pie 2 Type</L>
+            <L>파이 형태 2</L>
+            <L>Pie 2 Type</L>
+        </Text>
+        <Text Key="Pie 3 Type">
+            <L>Pie 3 Type</L>
+            <L>파이 형태 3</L>
+            <L>Pie 3 Type</L>
+        </Text>
+        <Text Key="Pie 4 Type">
+            <L>Pie 4 Type</L>
+            <L>파이 형태 4</L>
+            <L>Pie 4 Type</L>
+        </Text>
+        <Text Key="Text Font Name">
+            <L>Text Font Name</L>
+            <L>글꼴</L>
+            <L>Text Font Name</L>
+        </Text>
+        <Text Key="Changing Resource Color">
+            <L>Changing Resource Color</L>
+            <L>이벤트에 따른 장비 색 바꾸기</L>
+            <L>Changing Resource Color</L>
+        </Text>
+        <Text Key="Color">
+            <L>Color</L>
+            <L>색깔</L>
+            <L>Color</L>
+        </Text>
+        <Text Key="Image">
+            <L>Image</L>
+            <L>이미지</L>
+            <L>Image</L>
+        </Text>
+        <Text Key="Default Size">
+            <L>Default Size</L>
+            <L>기본 크기</L>
+            <L>Default Size</L>
+        </Text>
+        <Text Key="Create / Update Info">
+            <L>Create / Update Info</L>
+            <L>생성/수정 정보</L>
+            <L>Create / Update Info</L>
+        </Text>
+        <Text Key="Blue Signal">
+            <L>Blue Signal</L>
+            <L>파란 신호등</L>
+            <L>Blue Signal</L>
+        </Text>
+
+        <Text Key="Category">
+            <L>Category</L>
+            <L>종류</L>
+            <L>Category</L>
+        </Text>
+        <Text Key="Layout">
+            <L>Layout</L>
+            <L>레이아웃</L>
+            <L>Layout</L>
+        </Text>
+        <Text Key="Select Layout Count">
+            <L>Select Layout Count</L>
+            <L>레이아웃 갯수 선택</L>
+            <L>Select Layout Count</L>
+        </Text>
+        <Text Key="Select Layout">
+            <L>Select Layout</L>
+            <L>레이아웃 선택</L>
+            <L>Select Layout</L>
+        </Text>
+        <Text Key="File Name">
+            <L>File Name</L>
+            <L>파일 이름</L>
+            <L>File Name</L>
+        </Text>
+        <Text Key="Copy Group">
+            <L>Copy Group</L>
+            <L>그룹 복사</L>
+            <L>Copy Group</L>
+        </Text>
+        <Text Key="To Group ID">
+            <L>To Group ID</L>
+            <L>To 그룹 명</L>
+            <L>To Group ID</L>
+        </Text>
+    </Other>
+
+    <Button>
+        <Text Key="Close">
+            <L>Close</L>
+            <L>닫기</L>
+            <L>Close</L>
+        </Text>
+        <Text Key="Clear">
+            <L>Clear</L>
+            <L>지우기</L>
+            <L>Clear</L>
+        </Text>
+        <Text Key="Create">
+            <L>Create</L>
+            <L>생성</L>
+            <L>Create</L>
+        </Text>
+        <Text Key="Update">
+            <L>Update</L>
+            <L>수정</L>
+            <L>Update</L>
+        </Text>
+        <Text Key="Delete">
+            <L>Delete</L>
+            <L>삭제</L>
+            <L>Delete</L>
+        </Text>
+        <Text Key="OK">
+            <L>OK</L>
+            <L>확인</L>
+            <L>OK</L>
+        </Text>
+        <Text Key="Cancel">
+            <L>Cancel</L>
+            <L>취소</L>
+            <L>Cancel</L>
+        </Text>
+        <Text Key="View">
+            <L>View</L>
+            <L>조회</L>
+            <L>View</L>
+        </Text>
+        <Text Key="Send">
+            <L>Send</L>
+            <L>보내기</L>
+            <L>Send</L>
+        </Text>
+        <Text Key="Yes">
+            <L>Yes</L>
+            <L>예</L>
+            <L>Yes</L>
+        </Text>
+        <Text Key="No">
+            <L>No</L>
+            <L>아니요</L>
+            <L>No</L>
+        </Text>
+        <Text Key="Setting">
+            <L>Setting</L>
+            <L>설정</L>
+            <L>Setting</L>
+        </Text>
+        <Text Key="Save">
+            <L>Save</L>
+            <L>저장</L>
+            <L>Save</L>
+        </Text>
+        <Text Key="Select All">
+            <L>Select All</L>
+            <L>전체 선택</L>
+            <L>Select All</L>
+        </Text>
+        <Text Key="Deselect All">
+            <L>Deselect All</L>
+            <L>선택 해제</L>
+            <L>Deselect All</L>
+        </Text>
+        <Text Key="Continue">
+            <L>Continue</L>
+            <L>계속</L>
+            <L>Continue</L>
+        </Text>
+        <Text Key="Data Change">
+            <L>Data Change</L>
+            <L>데이터 변경</L>
+            <L>Data Change</L>
+        </Text>
+        <Text Key="Copy">
+            <L>Copy</L>
+            <L>복사</L>
+            <L>Copy</L>
+        </Text>
+    </Button>
+
+    <Menu>
+        <Text Key="System">
+            <L>System</L>
+            <L>시스템</L>
+            <L>System</L>
+        </Text>
+        <Text Key="Setup">
+            <L>Setup</L>
+            <L>셋업</L>
+            <L>Setup</L>
+        </Text>
+        <Text Key="Design">
+            <L>Design</L>
+            <L>디자인</L>
+            <L>Design</L>
+        </Text>
+        <Text Key="View">
+            <L>View</L>
+            <L>보기</L>
+            <L>View</L>
+        </Text>
+        <Text Key="Inquiry">
+            <L>Inquiry</L>
+            <L>조회</L>
+            <L>Inquiry</L>
+        </Text>
+        <Text Key="Transaction">
+            <L>Transaction</L>
+            <L>트랜잭션</L>
+            <L>Transaction</L>
+        </Text>
+        <Text Key="Format">
+            <L>Format</L>
+            <L>서식</L>
+            <L>Format</L>
+        </Text>
+        <Text Key="Utilities">
+            <L>Utilities</L>
+            <L>도구</L>
+            <L>Utilities</L>
+        </Text>
+        <Text Key="Windows">
+            <L>Windows</L>
+            <L>윈도우</L>
+            <L>Windows</L>
+        </Text>
+        <Text Key="Help">
+            <L>Help</L>
+            <L>도움말</L>
+            <L>Help</L>
+        </Text>
+        <Text Key="Save Configuration">
+            <L>Save Configuration</L>
+            <L>레이아웃 구성 저장</L>
+            <L>Save Configuration</L>
+        </Text>
+
+        <Text Key="Global Option Setup">
+            <L>Global Option Setup</L>
+            <L>환경 설정</L>
+            <L>Global Option Setup</L>
+        </Text>
+        <Text Key="Resource Image Setup">
+            <L>Resource Image Setup</L>
+            <L>장비 이미지 셋업</L>
+            <L>Resource Image Setup</L>
+        </Text>
+        <Text Key="Default Layout Setup">
+            <L>Default Layout Setup</L>
+            <L>기본 레이아웃 설정</L>
+            <L>Default Layout Setup</L>
+        </Text>
+
+        <Text Key="New User Design">
+            <L>New User Design</L>
+            <L>사용자 정의 그룹 생성</L>
+            <L>New User Design</L>
+        </Text>
+        <Text Key="New Layout">
+            <L>New Layout</L>
+            <L>레이아웃 생성</L>
+            <L>New Layout</L>
+        </Text>
+        <Text Key="Design Mode">
+            <L>Design Mode</L>
+            <L>디자인 모드</L>
+            <L>Design Mode</L>
+        </Text>
+        <Text Key="Save Design">
+            <L>Save Design</L>
+            <L>디자인 수정</L>
+            <L>Save Design</L>
+        </Text>
+        <Text Key="Reload">
+            <L>Reload</L>
+            <L>새로 고침</L>
+            <L>Reload</L>
+        </Text>
+        <Text Key="Zoom In">
+            <L>Zoom In</L>
+            <L>확대</L>
+            <L>Zoom In</L>
+        </Text>
+        <Text Key="Zoom Out">
+            <L>Zoom Out</L>
+            <L>축소</L>
+            <L>Zoom Out</L>
+        </Text>
+
+        <Text Key="View Resource Status">
+            <L>View Resource Status</L>
+            <L>자원 상태 조회</L>
+            <L>View Resource Status</L>
+        </Text>
+        <Text Key="View Resource History">
+            <L>View Resource History</L>
+            <L>자원 이력 조회</L>
+            <L>View Resource History</L>
+        </Text>
+        <Text Key="View Resource List Detail">
+            <L>View Resource List Detail</L>
+            <L>자원 목록 상세 조회</L>
+            <L>View Resource List Detail</L>
+        </Text>
+        <Text Key="View Lot List Detail">
+            <L>View Lot List Detail</L>
+            <L>LOT 목록 상세 조회</L>
+            <L>View Lot List Detail</L>
+        </Text>
+        <Text Key="View Lot List by Resource">
+            <L>View Lot List by Resource</L>
+            <L>자원별 Lot 목록 조회</L>
+            <L>View Lot List by Resource</L>
+        </Text>
+        <Text Key="Event">
+            <L>Event</L>
+            <L>이벤트</L>
+            <L>Event</L>
+        </Text>
+
+        <Text Key="Update Resource/Tag">
+            <L>Update Resource/Tag</L>
+            <L>장비/태그 수정</L>
+            <L>Update Resource/Tag</L>
+        </Text>
+        <Text Key="Delete Resource/Tag">
+            <L>Delete Resource/Tag</L>
+            <L>장비/태그 삭제</L>
+            <L>Delete Resource/Tag</L>
+        </Text>
+        <Text Key="Properties Resource/Tag">
+            <L>Properties Resource/Tag</L>
+            <L>장비/태그 속성</L>
+            <L>Properties Resource/Tag</L>
+        </Text>
+        <Text Key="Properties">
+            <L>Properties</L>
+            <L>속성</L>
+            <L>Properties</L>
+        </Text>
+        <Text Key="Refresh Design List">
+            <L>Refresh Design List</L>
+            <L>디자인 목록 새로 고침</L>
+            <L>Refresh Design List</L>
+        </Text>
+        <Text Key="Delete Resource">
+            <L>Delete Resource</L>
+            <L>장비 삭제</L>
+            <L>Delete Resource</L>
+        </Text>
+        <Text Key="Update Layout">
+            <L>Update Layout</L>
+            <L>레이아웃 변경</L>
+            <L>Update Layout</L>
+        </Text>
+        <Text Key="Update User Group Design">
+            <L>Update User Group Design</L>
+            <L>사용자 정의 그룹 변경</L>
+            <L>Update User Group Design</L>
+        </Text>
+        <Text Key="Add Multi Resources">
+            <L>Add Multi Resources</L>
+            <L>여러 장비 추가</L>
+            <L>Add Multi Resources</L>
+        </Text>
+        <Text Key="Copy Tag">
+            <L>Copy Tag</L>
+            <L>태그 복사</L>
+            <L>Copy Tag</L>
+        </Text>
+        <Text Key="Paste Tag">
+            <L>Paste Tag</L>
+            <L>태그 붙여넣기</L>
+            <L>Paste Tag</L>
+        </Text>
+        <Text Key="Set Default Layout">
+            <L>Set Default Layout</L>
+            <L>기본 레이아웃 설정</L>
+            <L>Set Default Layout</L>
+        </Text>
+
+        <Text Key="Log Out">
+            <L>Log Out</L>
+            <L>로그아웃</L>
+            <L>Log Out</L>
+        </Text>
+        <Text Key="Option">
+            <L>Option</L>
+            <L>옵션</L>
+            <L>Option</L>
+        </Text>
+        <Text Key="Client Upgrade">
+            <L>Client Upgrade</L>
+            <L>클라이언트 업그레이드</L>
+            <L>Client Upgrade</L>
+        </Text>
+        <Text Key="Exit">
+            <L>Exit</L>
+            <L>프로그램 종료</L>
+            <L>Exit</L>
+        </Text>
+        <Text Key="Design List">
+            <L>Design List</L>
+            <L>디자인 목록</L>
+            <L>Design List</L>
+        </Text>
+        <Text Key="Tools List">
+            <L>Tools List</L>
+            <L>도구 목록</L>
+            <L>Tools List</L>
+        </Text>
+        <Text Key="Send Message">
+            <L>Send Message</L>
+            <L>메시지 보내기</L>
+            <L>Send Message</L>
+        </Text>
+        <Text Key="Cascade">
+            <L>Cascade</L>
+            <L>계단 정렬</L>
+            <L>Cascade</L>
+        </Text>
+        <Text Key="Close All Windows">
+            <L>Close All Windows</L>
+            <L>모든 창 닫기</L>
+            <L>Close All Windows</L>
+        </Text>
+        <Text Key="Arrange Layouts">
+            <L>Arrange Layouts</L>
+            <L>레이아웃 배치</L>
+            <L>Arrange Layouts</L>
+        </Text>
+
+        <Text Key="Lefts">
+            <L>Lefts</L>
+            <L>왼쪽 맞춤</L>
+            <L>Lefts</L>
+        </Text>
+        <Text Key="Centers">
+            <L>Centers</L>
+            <L>가운데 맞춤</L>
+            <L>Centers</L>
+        </Text>
+        <Text Key="Rights">
+            <L>Rights</L>
+            <L>오른쪽 맞춤</L>
+            <L>Rights</L>
+        </Text>
+        <Text Key="Tops">
+            <L>Tops</L>
+            <L>위쪽 맞춤</L>
+            <L>Tops</L>
+        </Text>
+        <Text Key="Middles">
+            <L>Middles</L>
+            <L>중간 맞춤</L>
+            <L>Middles</L>
+        </Text>
+        <Text Key="Bottoms">
+            <L>Bottoms</L>
+            <L>아래쪽 맞춤</L>
+            <L>Bottoms</L>
+        </Text>
+        <Text Key="Width">
+            <L>Width</L>
+            <L>같은 너비로</L>
+            <L>Width</L>
+        </Text>
+        <Text Key="Height">
+            <L>Height</L>
+            <L>같은 높이로</L>
+            <L>Height</L>
+        </Text>
+        <Text Key="Both">
+            <L>Both</L>
+            <L>같은 크기로</L>
+            <L>Both</L>
+        </Text>
+        <Text Key="Make Equal">
+            <L>Make Equal</L>
+            <L>간격 같게</L>
+            <L>Make Equal</L>
+        </Text>
+        <Text Key="Increase">
+            <L>Increase</L>
+            <L>간격 넓게</L>
+            <L>Increase</L>
+        </Text>
+        <Text Key="Decrease">
+            <L>Decrease</L>
+            <L>간격 좁게</L>
+            <L>Decrease</L>
+        </Text>
+        <Text Key="Remove">
+            <L>Remove</L>
+            <L>간격 제거</L>
+            <L>Remove</L>
+        </Text>
+        <Text Key="Bring To Front">
+            <L>Bring To Front</L>
+            <L>맨 앞으로 가져오기</L>
+            <L>Bring To Front</L>
+        </Text>
+        <Text Key="Send To Back">
+            <L>Send To Back</L>
+            <L>맨 뒤로 보내기</L>
+            <L>Send To Back</L>
+        </Text>
+    </Menu>
+
+</Captions>
+

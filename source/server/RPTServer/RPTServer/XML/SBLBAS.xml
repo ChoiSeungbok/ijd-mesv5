@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<Module ModuleName="RPTBAS">
+
+  <Type TypeName="Cmn_Out_Tag">
+    <Member MemberName="h_status_value" MemberType="char" MemberSize="1"/>
+    <Member MemberName="h_msg_code" MemberType="char" MemberSize="10"/>
+    <Member MemberName="h_msg" MemberType="char" MemberSize="200"/>
+    <Member MemberName="h_field_msg" MemberType="char" MemberSize="200"/>
+    <Member MemberName="h_db_err_msg" MemberType="char" MemberSize="200"/>
+  </Type>
+
+  <!-- SQL Query -->
+  <Type TypeName="RPT_SQL_Query_In_Tag">
+    <Member MemberName="h_passport" MemberType="char" MemberSize="100"/>
+    <Member MemberName="h_language" MemberType="char" MemberSize="1"/>
+    <Member MemberName="h_factory" MemberType="char" MemberSize="10"/>
+    <Member MemberName="h_user_id" MemberType="char" MemberSize="20"/>
+    <Member MemberName="h_password" MemberType="char" MemberSize="20"/>
+    <Member MemberName="h_proc_step" MemberType="char" MemberSize="1"/>
+
+    <Member MemberName="sql" MemberType="char" MemberSize="4000"/>
+    <Member MemberName="next_row" MemberType="int" MemberSize="1"/>
+    <Member MemberName="func_name" MemberType="char" MemberSize="30"/>
+    <Member MemberName="data_1" MemberType="char" MemberSize="30"/>
+    <Member MemberName="data_2" MemberType="char" MemberSize="30"/>
+    <Member MemberName="data_3" MemberType="char" MemberSize="30"/>
+    <Member MemberName="data_4" MemberType="char" MemberSize="30"/>
+    <Member MemberName="data_5" MemberType="char" MemberSize="30"/>
+    <Member MemberName="data_6" MemberType="char" MemberSize="30"/>
+    <Member MemberName="data_7" MemberType="char" MemberSize="30"/>
+    <Member MemberName="data_8" MemberType="char" MemberSize="30"/>
+    <Member MemberName="data_9" MemberType="char" MemberSize="30"/>
+    <Member MemberName="data_10" MemberType="char" MemberSize="30"/>
+    <Member MemberName="data_11" MemberType="char" MemberSize="50"/>
+    <Member MemberName="data_12" MemberType="char" MemberSize="50"/>
+    <Member MemberName="data_13" MemberType="char" MemberSize="50"/>
+    <Member MemberName="data_14" MemberType="char" MemberSize="50"/>
+    <Member MemberName="data_15" MemberType="char" MemberSize="50"/>
+    <Member MemberName="data_16" MemberType="char" MemberSize="50"/>
+    <Member MemberName="data_17" MemberType="char" MemberSize="50"/>
+    <Member MemberName="data_18" MemberType="char" MemberSize="50"/>
+    <Member MemberName="data_19" MemberType="char" MemberSize="50"/>
+    <Member MemberName="data_20" MemberType="char" MemberSize="50"/>
+
+    <Member MemberName="icon_flag" MemberType="char" MemberSize="1"/>
+    <Member MemberName="bgcolor_flag" MemberType="char" MemberSize="1"/>
+  </Type>
+
+  <Type TypeName="RPT_SQL_Query_DataTable_Result_Out_Tag">
+    <Member MemberName="h_status_value" MemberType="char" MemberSize="1"/>
+    <Member MemberName="h_msg_code" MemberType="char" MemberSize="10"/>
+    <Member MemberName="h_msg" MemberType="char" MemberSize="200"/>
+    <Member MemberName="h_field_msg" MemberType="char" MemberSize="200"/>
+    <Member MemberName="h_db_err_msg" MemberType="char" MemberSize="200"/>
+
+    <Member MemberName="binary_length" MemberType="int" MemberSize="1"/>
+    <Member MemberName="col_count" MemberType="int" MemberSize="1"/>
+    <Member MemberName="row_count" MemberType="int" MemberSize="1"/>
+    <Member MemberName="data_count" MemberType="int" MemberSize="1"/>
+    <Member MemberName="next_row" MemberType="int" MemberSize="1"/>
+    <InnerType InnerTypeName="data_tbl" InnerTypeSize="10000000">
+      <Member MemberName="data" MemberType="int" MemberSize="1"/>
+    </InnerType>
+    <Member MemberName="h_db_err_msg" MemberType="char" MemberSize="3000"/>
+    <Member MemberName="icon_flag" MemberType="char" MemberSize="1"/>
+    <Member MemberName="bgcolor_flag" MemberType="char" MemberSize="1"/>
+  </Type>
+
+  <Operation OperationName="RPT_SQL_Query_DataTable_Result" DeliveryMode="REQUEST" Sync="false">
+    <Parameter ParameterName="Sql_In" ParameterType="RPT_SQL_Query_In_Tag" Direction="in" ParameterSize="1"/>
+    <Parameter ParameterName="Sql_Out" ParameterType="RPT_SQL_Query_DataTable_Result_Out_Tag" Direction="out" ParameterSize="1"/>
+  </Operation>
+
+  <!-- Query Definition-->
+  <Type TypeName="RPT_Query_Definition_Setup_In_Tag">
+    <Member MemberName="h_passport" MemberType="char" MemberSize="100"/>
+    <Member MemberName="h_language" MemberType="char" MemberSize="1"/>
+    <Member MemberName="h_factory" MemberType="char" MemberSize="10"/>
+    <Member MemberName="h_user_id" MemberType="char" MemberSize="20"/>
+    <Member MemberName="h_password" MemberType="char" MemberSize="20"/>
+    <Member MemberName="h_proc_step" MemberType="char" MemberSize="1"/>
+
+    <Member MemberName="sql_id" MemberType="char" MemberSize="12"/>
+    <Member MemberName="sql_desc" MemberType="char" MemberSize="50"/>
+    <Member MemberName="sql_type_flag" MemberType="char" MemberSize="1"/>
+    <Member MemberName="sql_group" MemberType="char" MemberSize="20"/>
+    <Member MemberName="sql_text" MemberType="char" MemberSize="4000"/>
+    <Member MemberName="resv_field_1" MemberType="char" MemberSize="30"/>
+    <Member MemberName="resv_field_2" MemberType="char" MemberSize="30"/>
+    <Member MemberName="resv_field_3" MemberType="char" MemberSize="30"/>
+    <Member MemberName="resv_field_4" MemberType="char" MemberSize="30"/>
+    <Member MemberName="resv_field_5" MemberType="char" MemberSize="30"/>
+    <Member MemberName="create_user_id" MemberType="char" MemberSize="20"/>
+    <Member MemberName="create_time" MemberType="char" MemberSize="14"/>
+    <Member MemberName="update_user_id" MemberType="char" MemberSize="20"/>
+    <Member MemberName="update_time" MemberType="char" MemberSize="14"/>
+  </Type>
+
+  <Operation OperationName="RPT_Query_Definition_Setup" DeliveryMode="REQUEST" Sync="false">
+    <Parameter ParameterName="_In" ParameterType="RPT_Query_Definition_Setup_In_Tag" Direction="in" ParameterSize="1"/>
+    <Parameter ParameterName="_Out" ParameterType="Cmn_Out_Tag" Direction="out" ParameterSize="1"/>
+  </Operation>
+
+  <!--Get/Set MySingle Login Infon-->
+  <Type  TypeName = "RPT_MySingle_Information_In_Tag">
+    <Member MemberName="h_passport" MemberType="char" MemberSize="100"/>
+    <Member MemberName="h_language" MemberType="char" MemberSize="1"/>
+    <Member MemberName="h_factory" MemberType="char" MemberSize="10"/>
+    <Member MemberName="h_user_id" MemberType="char" MemberSize="20"/>
+    <Member MemberName="h_password" MemberType="char" MemberSize="20"/>
+    <Member MemberName="h_proc_step" MemberType="char" MemberSize="1"/>
+
+    <Member MemberName="ConnData" MemberType="char" MemberSize="4000"/>
+    <Member MemberName="ip" MemberType="char" MemberSize="15"/>
+  </Type>
+  
+  <Type  TypeName = "RPT_MySingle_Information_Out_Tag">
+    <Member MemberName="h_status_value" MemberType="char" MemberSize="1"/>
+    <Member MemberName="h_msg_code" MemberType="char" MemberSize="10"/>
+    <Member MemberName="h_msg" MemberType="char" MemberSize="200"/>
+    <Member MemberName="h_field_msg" MemberType="char" MemberSize="200"/>
+    <Member MemberName="h_db_err_msg" MemberType="char" MemberSize="200"/>
+    
+    <Member MemberName="ConnData" MemberType="char" MemberSize="4000"/>
+  </Type>
+  
+  <Operation OperationName="RPT_MySingle_Information" DeliveryMode="REQUEST" Sync="false">
+    <Parameter ParameterName="_In" ParameterType="RPT_MySingle_Information_In_Tag" Direction="in" ParameterSize="1"/>
+    <Parameter ParameterName="_Out" ParameterType="RPT_MySingle_Information_Out_Tag" Direction="out" ParameterSize="1"/>
+  </Operation>
+
+
+</Module>

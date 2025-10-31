@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F3F3"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <com.pda.mes.widget.FontTextView
+        android:background="#F3F3F3"
+        style="@style/Settings_Text.SubTitle"
+        android:text="@string/screen_name_settings"/>
+
+    <View
+        style="@style/Settings_Line"/>
+
+    <LinearLayout
+        android:clickable="true"
+        android:id="@+id/settingServerLayout"
+        android:background="@drawable/selector_white_cell"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <com.pda.mes.widget.FontTextView
+            style="@style/Settings_Text.Title"
+            android:text="@string/setting_menu_name_01"/>
+
+        <com.pda.mes.widget.FontTextView
+            style="@style/Settings_Text.Content.DropDown"
+            android:id="@+id/settingServerLabel"/>
+    </LinearLayout>
+
+    <View
+        style="@style/Settings_Line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffffff"
+        android:orientation="horizontal">
+
+        <com.pda.mes.widget.FontTextView
+            style="@style/Settings_Text.Title"
+            android:text="@string/setting_menu_name_03"/>
+
+        <com.pda.mes.widget.FontEditTextView
+            android:id="@+id/timeOutInputField"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="13dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:hint="0"
+            android:inputType="numberDecimal"
+            android:letterSpacing="-0.04"
+            android:paddingRight="13dp"
+            android:textColor="#ff2f2f2f"
+            android:textColorHint="#ff2f2f2f"
+            android:textSize="15dp"
+            app:custom_font="@string/FONT_NANUM_SQUARE_OTFR"/>
+
+        <com.pda.mes.widget.FontTextView
+            android:layout_width="34.5dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="left|center_vertical"
+            android:inputType="numberDecimal"
+            android:letterSpacing="-0.04"
+            android:paddingRight="13.3dp"
+            android:text="@string/sec"
+            android:textColor="#ff2f2f2f"
+            android:textColorHint="#ff2f2f2f"
+            android:textSize="15dp"
+            app:custom_font="@string/FONT_NANUM_SQUARE_OTFR"/>
+    </LinearLayout>
+
+    <View
+        style="@style/Settings_Line"/>
+
+    <LinearLayout
+        android:clickable="true"
+        android:id="@+id/settingLanguageLayout"
+        android:background="@drawable/selector_white_cell"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <com.pda.mes.widget.FontTextView
+            style="@style/Settings_Text.Title"
+            android:text="@string/setting_menu_name_04"/>
+
+        <com.pda.mes.widget.FontTextView
+            style="@style/Settings_Text.Content.DropDown"
+            android:id="@+id/settingLanguageLabel"/>
+    </LinearLayout>
+
+    <View
+        style="@style/Settings_Line"/>
+
+
+    <com.pda.mes.widget.FontTextView
+        android:background="#F3F3F3"
+        style="@style/Settings_Text.SubTitle"
+        android:text="@string/app_info"/>
+
+    <View
+        style="@style/Settings_Line"/>
+
+    <LinearLayout
+        android:id="@+id/versionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:onClick="onClickUpdate"
+        android:background="@drawable/selector_white_cell"
+        android:orientation="horizontal">
+
+        <com.pda.mes.widget.FontTextView
+            style="@style/Settings_Text.Title"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/version_info"/>
+
+        <ImageView
+            android:id="@+id/newIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:src="@drawable/ico_menu_new"/>
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/baseline_arrow_forward_ios_black_24"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/updateLine"
+        style="@style/Settings_Line"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        style="@style/Bottom_Button"
+        android:onClick="onClickDone">
+
+        <com.pda.mes.widget.FontTextView
+            style="@style/Bottom_Button_Text"
+            android:text="@string/done"/>
+    </LinearLayout>
+</LinearLayout>

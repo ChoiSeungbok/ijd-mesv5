@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/main_layout_id"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pda.mes.activity.MainActivity">
+
+    <ScrollView
+        android:id="@+id/rootScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/rootLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/logoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="25dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.pda.mes.widget.FontTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Manufacturing Execution System"
+                    android:textColor="#ffffffff"
+                    android:textSize="15dp"
+                    app:custom_font="@string/FONT_NOTO_SANS_KR_REG"/>
+
+                <com.pda.mes.widget.FontTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/main_title"
+                    android:textColor="#ffffffff"
+                    android:textSize="22dp"
+                    app:custom_font="@string/FONT_NOTO_SANS_KR_BOLD"/>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/page_login_main_image"/>
+            </LinearLayout>
+
+            <com.pda.mes.widget.FontEditTextView
+                android:id="@+id/inputIdField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+                android:layout_marginTop="25dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="ID"
+                android:inputType=""
+                android:maxLines="1"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:singleLine="true"
+                android:textColor="#ffffffff"
+                android:textColorHint="#e1e1e1"
+                android:textSize="17dp"
+                android:text=""
+                app:custom_font="@string/FONT_NOTO_SANS_KR_REG"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="5dp"
+                android:background="#ffffffff"/>
+
+            <com.pda.mes.widget.FontEditTextView
+                android:id="@+id/inputPasswordField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+                android:layout_marginTop="25dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="PASSWORD"
+                android:inputType=""
+                android:maxLines="1"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:singleLine="true"
+                android:textColor="#ffffffff"
+                android:textColorHint="#e1e1e1"
+                android:textSize="17dp"
+                android:visibility="gone"
+                app:custom_font="@string/FONT_NOTO_SANS_KR_REG"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="5dp"
+                android:background="#ffffffff"
+                android:visibility="gone"/>
+
+            <com.pda.mes.widget.FontButtonView
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/raised_selector_login_btn"
+                android:onClick="onClickLogin"
+                android:text="@string/login_btn_name"
+                android:textColor="#ffffffff"
+                android:textSize="16dp"
+                app:custom_font="@string/FONT_NANUM_SQUARE_OTFB"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="35dp"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:paddingTop="35dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/languageChange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.pda.mes.widget.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="80dp"
+                            android:text="@string/setting_menu_name_04"
+                            android:textColor="#ffffff"
+                            android:textSize="15dp"
+                            app:custom_font="@string/FONT_NANUM_SQUARE_OTFR"/>
+
+                        <com.pda.mes.widget.FontTextView
+                            android:id="@+id/langLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
+                            android:textSize="15dp"
+                            app:custom_font="@string/FONT_NANUM_SQUARE_OTFB"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7.5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.pda.mes.widget.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="80dp"
+                            android:text="@string/setting_menu_name_01"
+                            android:textColor="#ffffff"
+                            android:textSize="15dp"
+                            app:custom_font="@string/FONT_NANUM_SQUARE_OTFR"/>
+
+                        <com.pda.mes.widget.FontTextView
+                            android:id="@+id/serverLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
+                            android:textSize="15dp"
+                            app:custom_font="@string/FONT_NANUM_SQUARE_OTFB"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7.5dp"
+                        android:orientation="horizontal">
+
+                        <com.pda.mes.widget.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="80dp"
+                            android:text="@string/version"
+                            android:textColor="#ffffff"
+                            android:textSize="15dp"
+                            app:custom_font="@string/FONT_NANUM_SQUARE_OTFR"/>
+
+                        <com.pda.mes.widget.FontTextView
+                            android:id="@+id/versionLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
+                            android:textSize="15dp"
+                            app:custom_font="@string/FONT_NANUM_SQUARE_OTFB"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12.5dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:onClick="onClickSettings"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7.5dp"
+                            android:src="@drawable/baseline_settings_white_24"/>
+
+                        <com.pda.mes.widget.FontTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings"
+                            android:textColor="@drawable/text_selector_white"
+                            android:textSize="16dp"
+                            app:custom_font="@string/FONT_NANUM_SQUARE_OTFB"/>
+                    </LinearLayout>
+
+                    <!--<LinearLayout-->
+                        <!--android:visibility="gone1"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:clickable="true"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:onClick="onClickUpdate"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<ImageView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginRight="7.5dp"-->
+                            <!--android:src="@drawable/ic_fiber_new_white_24dp"/>-->
+
+                        <!--<com.pda.mes.widget.FontTextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="@string/update_button"-->
+                            <!--android:textColor="@drawable/text_selector_white"-->
+                            <!--android:textSize="16dp"-->
+                            <!--app:custom_font="@string/FONT_NANUM_SQUARE_OTFB"/>-->
+                    <!--</LinearLayout>-->
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/versionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#323232"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="23dp"
+            android:paddingRight="23dp">
+
+            <com.pda.mes.widget.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="@dimen/content_padding"
+                android:text="@string/alert_message_ask_update"
+                android:textColor="@drawable/text_selector_white"
+                android:textSize="13dp"
+                app:custom_font="@string/FONT_NANUM_SQUARE_OTFR"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:orientation="horizontal">
+
+                <com.pda.mes.widget.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickUpdateCancel"
+                    android:padding="@dimen/content_padding"
+                    android:text="Cancel"
+                    android:textColor="#FFA2B0"
+                    android:textSize="12dp"
+                    app:custom_font="@string/FONT_NANUM_SQUARE_OTFR"/>
+
+                <com.pda.mes.widget.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:onClick="onClickUpdate"
+                    android:padding="@dimen/content_padding"
+                    android:text="Update"
+                    android:textColor="#83C5C6"
+                    android:textSize="12dp"
+                    app:custom_font="@string/FONT_NANUM_SQUARE_OTFB"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ef_shadow_h1"/>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

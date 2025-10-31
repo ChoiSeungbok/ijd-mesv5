@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADMINClient", "ADMINClient.csproj", "{5A6FE5D2-A546-43F4-AF7D-7B156F044F31}"
+	ProjectSection(ProjectDependencies) = postProject
+		{31A9A356-BE99-474E-B80E-806431AEC799} = {31A9A356-BE99-474E-B80E-806431AEC799}
+		{549587F9-A18E-485F-A43B-60E5634DBACD} = {549587F9-A18E-485F-A43B-60E5634DBACD}
+		{E12885D5-DE86-4D9B-A61E-0C4228C47C2F} = {E12885D5-DE86-4D9B-A61E-0C4228C47C2F}
+		{3B491085-4850-4855-821F-4884E5B92BBA} = {3B491085-4850-4855-821F-4884E5B92BBA}
+	EndProjectSection
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admin.ADMCore", "Admin.ADMCore\Admin.ADMCore.csproj", "{549587F9-A18E-485F-A43B-60E5634DBACD}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admin.ARCCore", "Admin.ARCCore\Admin.ARCCore.csproj", "{3B491085-4850-4855-821F-4884E5B92BBA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{31A9A356-BE99-474E-B80E-806431AEC799} = {31A9A356-BE99-474E-B80E-806431AEC799}
+	EndProjectSection
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admin.COMCore", "Admin.COMCore\Admin.COMCore.csproj", "{31A9A356-BE99-474E-B80E-806431AEC799}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admin.RPTCore", "Admin.RPTCore\Admin.RPTCore.csproj", "{E12885D5-DE86-4D9B-A61E-0C4228C47C2F}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ADMClientSetupKit", "ADMClientSetupKit\ADMClientSetupKit.vdproj", "{D4348C44-83CB-468C-A655-40977CF4FA6B}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ADMClientSetupKitForWin7", "ADMClientSetupKitForWin7\ADMClientSetupKitForWin7.vdproj", "{B2FA7ACA-E418-4DA1-819E-2391A728AC6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A6FE5D2-A546-43F4-AF7D-7B156F044F31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A6FE5D2-A546-43F4-AF7D-7B156F044F31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A6FE5D2-A546-43F4-AF7D-7B156F044F31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A6FE5D2-A546-43F4-AF7D-7B156F044F31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{549587F9-A18E-485F-A43B-60E5634DBACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{549587F9-A18E-485F-A43B-60E5634DBACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{549587F9-A18E-485F-A43B-60E5634DBACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{549587F9-A18E-485F-A43B-60E5634DBACD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B491085-4850-4855-821F-4884E5B92BBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B491085-4850-4855-821F-4884E5B92BBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B491085-4850-4855-821F-4884E5B92BBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B491085-4850-4855-821F-4884E5B92BBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31A9A356-BE99-474E-B80E-806431AEC799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31A9A356-BE99-474E-B80E-806431AEC799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31A9A356-BE99-474E-B80E-806431AEC799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31A9A356-BE99-474E-B80E-806431AEC799}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E12885D5-DE86-4D9B-A61E-0C4228C47C2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E12885D5-DE86-4D9B-A61E-0C4228C47C2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E12885D5-DE86-4D9B-A61E-0C4228C47C2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E12885D5-DE86-4D9B-A61E-0C4228C47C2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4348C44-83CB-468C-A655-40977CF4FA6B}.Debug|Any CPU.ActiveCfg = Debug
+		{D4348C44-83CB-468C-A655-40977CF4FA6B}.Release|Any CPU.ActiveCfg = Release
+		{B2FA7ACA-E418-4DA1-819E-2391A728AC6F}.Debug|Any CPU.ActiveCfg = Debug
+		{B2FA7ACA-E418-4DA1-819E-2391A728AC6F}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

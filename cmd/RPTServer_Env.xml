@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<APP_ENV>
+  <APP_ENV_list>
+    <OptionName>RPTSiteID</OptionName>
+    <OptionValue>MPT1</OptionValue>
+  </APP_ENV_list>
+  <APP_ENV_list>
+    <OptionName>RPTHomeDir</OptionName>
+    <OptionValue>D:\일진다이아\Source\MESV5\bin</OptionValue>
+  </APP_ENV_list>
+  <APP_ENV_list>
+    <OptionName>RPTLogDir</OptionName>
+    <OptionValue>D:\일진다이아\Source\MESV5\log</OptionValue>
+  </APP_ENV_list>
+  <APP_ENV_list>
+    <OptionName>RPTLogWriteLevel</OptionName>
+    <OptionValue>I</OptionValue>
+  </APP_ENV_list>
+  <APP_ENV_list>
+    <OptionName>RPTServerName</OptionName>
+    <OptionValue>RPTServer</OptionValue>
+  </APP_ENV_list>
+  <APP_ENV_list>
+    <OptionName>RPTProcessName</OptionName>
+    <OptionValue>RPTServer</OptionValue>
+  </APP_ENV_list>
+  <APP_ENV_list>
+    <OptionName>RPTDBType</OptionName>
+    <OptionValue>ORACLE</OptionValue>
+    <!--
+        <OptionValue>MSSQL</OptionValue>
+        <OptionValue>ORACLE</OptionValue>
+        -->
+  </APP_ENV_list>
+  <APP_ENV_list>
+    <OptionName>RPTRemoteAddress</OptionName>
+    <OptionValue>localhost</OptionValue>
+  </APP_ENV_list>
+  <APP_ENV_list>
+    <OptionName>QueryCommandTimeout</OptionName>
+    <!-- 초단위 -->
+    <OptionValue>240</OptionValue>
+  </APP_ENV_list>
+  <APP_ENV_list>
+    <OptionName>RPTSessionMode</OptionName>
+    <OptionValue>INNER</OptionValue>
+  </APP_ENV_list>
+  <APP_ENV_list>
+    <OptionName>RPTDBConnectionString</OptionName>
+    <!--SQL Server Connect String-->
+    <!--<OptionValue>Provider=OraOLEDB.Oracle.1;Password=mesmgr;Persist Security Info=True;User ID=mesmgr;Data Source=MESDB</OptionValue>-->
+	<OptionValue>User ID=mesmgr;Password=mesmgr;Data Source=DIA_IJDVEM;Min Pool Size=1; Max Pool Size=1</OptionValue>
+    <!--<OptionValue>User ID=mesmgr;Password=mesmgr;Data Source=IJDMES;Min Pool Size=1; Max Pool Size=1</OptionValue>-->
+    <!--<OptionValue>User ID=MESMGR;Password=mesmgr;Data Source=MESDB_DEV;Min Pool Size=1; Max Pool Size=1</OptionValue>-->
+    <!--ORACLE Server Connect String-->
+    <!--
+        <OptionValue>Provider=OraOLEDB.Oracle.1;Password=mesmgr;Persist Security Info=True;User ID=HTTMESMGR;Data Source=MESDB</OptionValue>    
+        -->
+  </APP_ENV_list>
+
+</APP_ENV>

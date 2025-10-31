@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!--   Usage
+    <ExeFile>MESClient.exe</ExeFile> : 모든 Upgrade 파일 Download 후에 실행시킬 파일명
+    <DownFile>
+        <DownFileDesc>MESClient</DownFileDesc> : 파일에 대한 설명
+        <DownFileName>MESClient.exe</DownFileName> : 파일명
+        <DownFileVersion>4.0.0.0</DownFileVersion> : 파일 버젼 (0.0.0.0 으로 셋팅시 버젼 비교하지 않음)
+        <DownFilePath>.</DownFilePath> : Zip 파일인 경우는 압축을 풀 경로, 그 외 파일은 Download 할 경로
+        <ActionFlag>EXE</ActionFlag>
+    </DownFile>   
+
+  --> 
+<Download_list>
+ <ExeFile>ADMINClient.exe</ExeFile>
+ <DownFile>
+  <DownFileDesc>ADMINClient Upgrade</DownFileDesc> 
+  <DownFileName>ADMClient.zip</DownFileName> 
+  <DownFileVersion>4.2.0.0</DownFileVersion>
+  <DownFilePath>.</DownFilePath> 
+  <ActionFlag>ZIP</ActionFlag> 
+ </DownFile>
+</Download_list>

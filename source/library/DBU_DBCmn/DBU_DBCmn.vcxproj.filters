@@ -1,0 +1,2076 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="_Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="_Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="BAS">
+      <UniqueIdentifier>{76ec29ff-4e1d-4851-861a-b9ac4b57fc3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BAS\Header Files">
+      <UniqueIdentifier>{b6369d9a-8332-45c4-91f8-a1e558cae4ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BAS\Source Files">
+      <UniqueIdentifier>{c205c061-27fc-4c26-a9f2-089b6b2230b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RAS">
+      <UniqueIdentifier>{8c8ec1d2-9fb4-4725-9cb3-d379a327f4e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RAS\Header Files">
+      <UniqueIdentifier>{65d40171-d9b0-4652-be5d-40acc2b9d232}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RAS\Source Files">
+      <UniqueIdentifier>{3937327a-8f96-4811-a7ab-2285d6cca1b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WIP">
+      <UniqueIdentifier>{d10fbca4-1305-41de-a5cf-a4f4809c38e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WIP\Header Files">
+      <UniqueIdentifier>{1185aa15-8cca-42de-a8a1-b63a7518cc65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WIP\Source Files">
+      <UniqueIdentifier>{8f2e989a-2e22-4904-81c6-7b66dbb122fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="INV">
+      <UniqueIdentifier>{010addd4-2378-4f6b-98ba-3a16488c26b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="INV\Header Files">
+      <UniqueIdentifier>{6713604b-29a1-42a6-9cb9-0ec3af54ac13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="INV\Source Files">
+      <UniqueIdentifier>{e71a653f-2ffe-4af8-977f-028507c8e06b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SHP">
+      <UniqueIdentifier>{d2bcee76-c7e3-41a9-aa23-781736f7f5e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SHP\Header Files">
+      <UniqueIdentifier>{75135c00-7b88-4e7a-81d9-0a6624ef8055}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SHP\Source Files">
+      <UniqueIdentifier>{31cc1c00-72b0-43bd-a3b3-244737ad4d6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EDC">
+      <UniqueIdentifier>{5b2a3ab6-289b-40a6-836f-272a5923f86e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EDC\Header Files">
+      <UniqueIdentifier>{433bb044-cadc-4958-a684-1f408c63a172}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EDC\Source Files">
+      <UniqueIdentifier>{fe2107c3-6a9b-4c3f-b620-d9cdef92076d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QCM">
+      <UniqueIdentifier>{cc97fe2e-8587-4e2d-921a-8490d1c64054}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QCM\Header Files">
+      <UniqueIdentifier>{a67ff180-35a4-4b33-8696-2d5aefe25a44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QCM\Source Files">
+      <UniqueIdentifier>{c0e5b252-f66d-46a0-bfcf-17adbbc2a645}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IFS">
+      <UniqueIdentifier>{9d0bafa4-0797-4e91-9458-a59a326dbae8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IFS\Header Files">
+      <UniqueIdentifier>{a184b8b7-dc15-4226-b336-ad44ab36378b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IFS\Source Files">
+      <UniqueIdentifier>{85b556b7-0fe2-4fbf-ae77-163d8681d7a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SEC">
+      <UniqueIdentifier>{52d66e78-2d3b-42e3-a62d-e10813c45d3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SEC\Header Files">
+      <UniqueIdentifier>{4d84bdcf-9634-47ec-812e-51f4ca23a9e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SEC\Source Files">
+      <UniqueIdentifier>{3c002172-aca4-4b02-a6b1-11875f221859}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ORD">
+      <UniqueIdentifier>{1099857f-d474-488e-82e9-7af0d3738849}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ORD\Header Files">
+      <UniqueIdentifier>{932bdb3e-a520-4233-9c6d-40eb1406bc7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ORD\Source Files">
+      <UniqueIdentifier>{92e825e5-3bd4-4768-be22-6a68ea17e872}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IDMESR">
+      <UniqueIdentifier>{5fee1865-9197-40c8-8a9c-72cdc552fad2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IDMESR\Header Files">
+      <UniqueIdentifier>{7ca1b2c8-15f1-461a-bc24-6088e5eb886e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IDMESR\Source Files">
+      <UniqueIdentifier>{39c75976-ff70-4646-b0e7-e348f1f84416}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BOM">
+      <UniqueIdentifier>{e5ee5fa3-b5be-47c7-b2af-0201b0404701}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BOM\Header Files">
+      <UniqueIdentifier>{6ffce753-f623-4fb7-abed-d27e0795d66e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BOM\Source Files">
+      <UniqueIdentifier>{55690d9a-a854-41e7-a292-2f4876d163bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SUM">
+      <UniqueIdentifier>{e3103acc-0e54-4054-b8a1-66fe6d1aca99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SUM\Header Files">
+      <UniqueIdentifier>{3ef38834-d8f8-4f39-943c-30b6e64f57de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SUM\Source Files">
+      <UniqueIdentifier>{cbe60deb-a1e6-4982-972a-de74c956f42f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GCM">
+      <UniqueIdentifier>{1621c6a4-5866-467c-80a6-e8d46dd02840}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GCM\Header Files">
+      <UniqueIdentifier>{c0bd6065-b335-4fb5-b75a-ee5dcfd4d90e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GCM\Source Files">
+      <UniqueIdentifier>{fb7a4be1-b2f3-4654-b72a-e503288b58b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PROCEDURE">
+      <UniqueIdentifier>{d314a4af-7031-4ae7-9b0d-51d64bb7284a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PROCEDURE\Header Files">
+      <UniqueIdentifier>{4ba41110-71fd-43f5-b856-6ef4ca50a399}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PROCEDURE\Source Files">
+      <UniqueIdentifier>{e4f5a0a2-afad-424f-b054-21897cf6a02c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AddLib_Sample.bat" />
+    <None Include="AddLib.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DBU_common.h">
+      <Filter>_Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_common_n.h">
+      <Filter>_Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_common.pc">
+      <Filter>_Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dbu_q_cond_n.h">
+      <Filter>_Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cbascptdef.h">
+      <Filter>BAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cbascptdef_n.h">
+      <Filter>BAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crassprsts.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crassprsts_n.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwipoprdef.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwipoprdef_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwipmatdef.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwipmatdef_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mrasresdef.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mrasresdef_n.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mrasreshis.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mrasreshis_n.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mrasresmfo.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mrasresmfo_n.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mrastoldef.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mrastoldef_n.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwipflwdef.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwipflwdef_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwipflwopr.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwipflwopr_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwipmatflw_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwipmatflw.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crasrprsts.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crasrprsts_n.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crasrprspr.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crasrprspr_n.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crasrprwrk.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crasrprwrk_n.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwipordsts.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwipordsts_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiperpopr.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiperpopr_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipoprwrk.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipoprwrk_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipordbom.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipordbom_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipwrkdef.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipwrkdef_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipwrkgrp.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipwrkgrp_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotlst.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotlst_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvdlvdtl.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvdlvdtl_n.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvdlvmst.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvlothis.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvdlvmst_n.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvlothis_n.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvlothld.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvlothld_n.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvlotiss.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvlotiss_n.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvlotmvh.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvlotmvh_n.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvlotsts.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvlotsts_n.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvlotswh.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvlotswh_n.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvmatiss.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvmatiss_n.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvreqdtl.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvreqdtl_n.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvreqmst.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvreqmst_n.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvdlvlbl.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvdlvlbl_n.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvdlvlot.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvdlvlot_n.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipinvlod.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipinvlod_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cbasfildef.h">
+      <Filter>BAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cbasfildef_n.h">
+      <Filter>BAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotmvc.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotmvc_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotmvm.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotmvm_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotmvr.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotmvr_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvreqlot.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvreqlot_n.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipdwnsts.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipdwnsts_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipgrplot.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipgrplot_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipgrpsts.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipgrpsts_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cpaklotsts.h">
+      <Filter>SHP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cpaklotsts_n.h">
+      <Filter>SHP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cpakordsts.h">
+      <Filter>SHP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cpakordsts_n.h">
+      <Filter>SHP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cretordsts.h">
+      <Filter>SHP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cretordsts_n.h">
+      <Filter>SHP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cshporddtl.h">
+      <Filter>SHP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cshporddtl_n.h">
+      <Filter>SHP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cshpordmst.h">
+      <Filter>SHP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cshpordmst_n.h">
+      <Filter>SHP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crasdspreq.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crasdspreq_n.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crasdsptol.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crasdsptol_n.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cbaschkdef.h">
+      <Filter>BAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cbaschkdef_n.h">
+      <Filter>BAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_medclotdat.h">
+      <Filter>EDC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_medclotdat_n.h">
+      <Filter>EDC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_medccolver.h">
+      <Filter>EDC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_medccolver_n.h">
+      <Filter>EDC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_medccolchr.h">
+      <Filter>EDC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_medccolchr_n.h">
+      <Filter>EDC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_medccoldef.h">
+      <Filter>EDC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_medccoldef_n.h">
+      <Filter>EDC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_medcchrdef.h">
+      <Filter>EDC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_medcchrdef_n.h">
+      <Filter>EDC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_medcresdat.h">
+      <Filter>EDC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_medcresdat_n.h">
+      <Filter>EDC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmispcol.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmispcol_n.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmispdat.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmispdat_n.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmisplos.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmisplos_n.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmispsts.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmispsts_n.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_po_rcv_header.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_po_rcv_header_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_po_rcv_txns.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_po_rcv_txns_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_po_rcv_txn_lots_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_po_rcv_txn_lots.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_inv_txns.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_inv_txns_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_inv_txn_lots.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_inv_txn_lots_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_move_trx.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_move_trx_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_completion_trx.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_completion_trx_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_comp_issue_trx.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_comp_issue_trx_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_om_txns_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_om_txns.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_om_txn_lots.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_om_txn_lots_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_om_ship_headers.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_om_ship_headers_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_om_ship_lines_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_om_ship_lines.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_om_ship_line_lots.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_om_ship_line_lots_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_po_rma_headers.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_po_rma_headers_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_po_rma_txns.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_po_rma_txns_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_po_rma_txn_lots.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_po_rma_txn_lots_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_om_promise_date_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_om_promise_date.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_std_bom_def.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_std_bom_def_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_uom_conv_def.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_uom_conv_def_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_mat_def.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_mat_def_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_vendor_def.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_vendor_def_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_customer_def.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_customer_def_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_wh_def.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_wh_def_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_sub_area_def.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_sub_area_def_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_txn_type_def.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_txn_type_def_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_po_info.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_po_info_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_wo_bom_info.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_wo_bom_info_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_wo_info_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_wo_info.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_so_mst.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_so_mst_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_so_dtl.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_so_dtl_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_ro_info.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_ro_info_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_po_consign_txns.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_po_consign_txns_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipgrtcss.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipgrtcss_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipgrtbld.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipgrtbld_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_customer_def_his.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_customer_def_his_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_mat_def_his.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_mat_def_his_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_po_info_his.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_po_info_his_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_ro_info_his.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_ro_info_his_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_so_dtl_his.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_so_dtl_his_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_so_mst_his.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_so_mst_his_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_std_bom_def_his.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_std_bom_def_his_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_sub_area_def_his.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_sub_area_def_his_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_txn_type_def_his.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_txn_type_def_his_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_uom_conv_def_his.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_uom_conv_def_his_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_vendor_def_his.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_vendor_def_his_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_wh_def_his.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_wh_def_his_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_wo_bom_info_his.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_wo_bom_info_his_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_wo_info_his.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_wo_info_his_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwipcoldef.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwipcoldef_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotcum.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotcum_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotdry.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotdry_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_csecusedat.h">
+      <Filter>SEC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_csecusedat_n.h">
+      <Filter>SEC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipgrtcls.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipgrtcls_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cbastxndef.h">
+      <Filter>BAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cbastxndef_n.h">
+      <Filter>BAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmgrtcot.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmgrtcot_n.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmgrthlt.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmgrthlt_n.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmgrtsiv.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmgrtsiv_n.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwipcaldef.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwipcaldef_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cbastxndef.h">
+      <Filter>BAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cbastxndef_n.h">
+      <Filter>BAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmgrtasp_n.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmgrtasp.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotprs.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotprs_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cretlotsts.h">
+      <Filter>SHP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cretlotsts_n.h">
+      <Filter>SHP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cordprdpln.h">
+      <Filter>ORD\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cordprdpln_n.h">
+      <Filter>ORD\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotcup.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotcup_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotimp.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotimp_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotlmk_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotlmk.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotrim.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotrim_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotrnd.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotrnd_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwiplothisx.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwiplothisx_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwiplotstsx.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwiplotstsx_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotcls.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotcls_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplottrc.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplottrc_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotbas.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotbas_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_ct_sal110t.h">
+      <Filter>IDMESR\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_ct_sal110t_n.h">
+      <Filter>IDMESR\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmispwrk.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmispwrk_n.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiprcpdef.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiprcpdef_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_pack_info.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_pack_info_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_pack_info_his.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_pack_info_his_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_p_wo_info_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_p_wo_info.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_p_wo_info_his.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_p_wo_info_his_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipordrwk.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipordrwk_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_ct_packing_v.h">
+      <Filter>IDMESR\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_ct_packing_v_n.h">
+      <Filter>IDMESR\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cbomstddef.h">
+      <Filter>BOM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cbomstddef_n.h">
+      <Filter>BOM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_csumlotdat.h">
+      <Filter>SUM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_csumlotdat_n.h">
+      <Filter>SUM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwiplotlos.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwiplotlos_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cbaslbldat.h">
+      <Filter>BAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cbaslbldat_n.h">
+      <Filter>BAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmrptctm.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmrptctm_n.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmrpthmm.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmrpthmm_n.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cbastaktim.h">
+      <Filter>BAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cbastaktim_n.h">
+      <Filter>BAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvmovlot.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvmovlot_n.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvmovsts.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvmovsts_n.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmrptgnp.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmrptgnp_n.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmrptgny.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmrptgny_n.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmrptgrn.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmrptgrn_n.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_csumreswip.h">
+      <Filter>SUM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_csumreswip_n.h">
+      <Filter>SUM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipprsrun.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipprsrun_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipuoplot.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipuoplot_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_ct_mtl510t.h">
+      <Filter>IDMESR\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_ct_mtl510t_n.h">
+      <Filter>IDMESR\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwipidghis.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mwipidghis_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmrptgmp.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmrptgmp_n.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmrptgrm.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmrptgrm_n.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipordopr.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipordopr_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmcstspm.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmcstspm_n.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipinvldm.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipinvldm_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mgcmtbldat.h">
+      <Filter>GCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mgcmtbldat_n.h">
+      <Filter>GCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mgcmtbldef.h">
+      <Filter>GCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mgcmtbldef_n.h">
+      <Filter>GCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mgcmlagdat.h">
+      <Filter>GCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mgcmlagdat_n.h">
+      <Filter>GCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmcstspg.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmcstspg_n.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipprdgol.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipprdgol_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_batch_job_n.h">
+      <Filter>PROCEDURE\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mrastevdef.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mrastevdef_n.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_esecusrdef.h">
+      <Filter>SEC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_esecusrdef_n.h">
+      <Filter>SEC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_ct_mtl100t.h">
+      <Filter>IDMESR\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_ct_mtl100t_n.h">
+      <Filter>IDMESR\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotrec.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotrec_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_ct_prd210t.h">
+      <Filter>IDMESR\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_ct_prd210t_n.h">
+      <Filter>IDMESR\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_ct_prd200t.h">
+      <Filter>IDMESR\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_ct_prd200t_n.h">
+      <Filter>IDMESR\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_ct_mold_v.h">
+      <Filter>IDMESR\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_ct_mold_v_n.h">
+      <Filter>IDMESR\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cinvuoplot.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cinvuoplot_n.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipwrkinp.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipwrkinp_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_completion_trx_save.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_completion_trx_save_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_comp_issue_trx_save_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_comp_issue_trx_save.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_move_trx_save.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_move_trx_save_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvetclot.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_minvetclot_n.h">
+      <Filter>INV\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotchg.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotchg_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cpaklothis_n.h">
+      <Filter>SHP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cpaklothis.h">
+      <Filter>SHP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_ishplotiss.h">
+      <Filter>SHP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_ishplotiss_n.h">
+      <Filter>SHP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_ishplotrcv.h">
+      <Filter>SHP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_ishplotrcv_n.h">
+      <Filter>SHP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipbldavg.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwipbldavg_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crasbasdat.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crasbasdat_n.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cbasshpbom_n.h">
+      <Filter>BAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cbasshpbom.h">
+      <Filter>BAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crastolbrk.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crastolbrk_n.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mrastolhis_n.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_mrastolhis.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwippryer.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwippryer_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_ishpispiss.h">
+      <Filter>SHP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_ishpispiss_n.h">
+      <Filter>SHP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_ishpisprcv.h">
+      <Filter>SHP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_ishpisprcv_n.h">
+      <Filter>SHP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crashitfnc_n.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crashitfnc.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cerpaststs.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cerpaststs_n.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crasmdextd.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crasmdextd_n.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crasvcmfnc.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crasvcmfnc_n.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cras5thprs.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cras5thprs_n.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cras4hrprs.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cras4hrprs_n.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_craspntmix.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_craspntmix_n.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crasbalmil.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_crasbalmil_n.h">
+      <Filter>RAS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_batch_job.h">
+      <Filter>_Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_csecusrdef.h">
+      <Filter>SEC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_csecusrdef_n.h">
+      <Filter>SEC\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmcplmst_n.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmcplmst.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotrmk_n.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cwiplotrmk.h">
+      <Filter>WIP\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_po_requests_receipts_n.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_if_po_requests_receipts.h">
+      <Filter>IFS\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmsplmst.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmsplmst_n.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmvocmst.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmvocmst_n.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmcusspe.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBU_cqcmcusspe_n.h">
+      <Filter>QCM\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <PC_File_Compile Include="DBU_cbascptdef.pc">
+      <Filter>BAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_crassprsts.pc">
+      <Filter>RAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_mwipoprdef.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_mwipmatdef.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_mrasresdef.pc">
+      <Filter>RAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_mrasreshis.pc">
+      <Filter>RAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_mrasresmfo.pc">
+      <Filter>RAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_mrastoldef.pc">
+      <Filter>RAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_mwipflwdef.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_mwipflwopr.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_mwipmatflw.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_crasrprsts.pc">
+      <Filter>RAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_crasrprspr.pc">
+      <Filter>RAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_crasrprwrk.pc">
+      <Filter>RAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_mwipordsts.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwiperpopr.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwipoprwrk.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwipordbom.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwipwrkdef.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwipwrkgrp.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwiplotlst.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_minvdlvdtl.pc">
+      <Filter>INV\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_minvdlvmst.pc">
+      <Filter>INV\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_minvlothis.pc">
+      <Filter>INV\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_minvlothld.pc">
+      <Filter>INV\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_minvlotiss.pc">
+      <Filter>INV\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_minvlotmvh.pc">
+      <Filter>INV\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_minvlotsts.pc">
+      <Filter>INV\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_minvlotswh.pc">
+      <Filter>INV\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_minvmatiss.pc">
+      <Filter>INV\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_minvreqdtl.pc">
+      <Filter>INV\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_minvreqmst.pc">
+      <Filter>INV\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_minvdlvlbl.pc">
+      <Filter>INV\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwipinvlod.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_minvdlvlot.pc">
+      <Filter>INV\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cbasfildef.pc">
+      <Filter>BAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwiplotmvc.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwiplotmvm.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwiplotmvr.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_minvreqlot.pc">
+      <Filter>INV\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwipdwnsts.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwipgrplot.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwipgrpsts.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cpaklotsts.pc">
+      <Filter>SHP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cpakordsts.pc">
+      <Filter>SHP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cretordsts.pc">
+      <Filter>SHP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cshporddtl.pc">
+      <Filter>SHP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cshpordmst.pc">
+      <Filter>SHP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_crasdspreq.pc">
+      <Filter>RAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_crasdsptol.pc">
+      <Filter>RAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cbaschkdef.pc">
+      <Filter>BAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_medclotdat.pc">
+      <Filter>EDC\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_medccolver.pc">
+      <Filter>EDC\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_medccolchr.pc">
+      <Filter>EDC\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_medccoldef.pc">
+      <Filter>EDC\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_medcchrdef.pc">
+      <Filter>EDC\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_medcresdat.pc">
+      <Filter>EDC\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmispcol.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmispdat.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmisplos.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmispsts.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_po_rcv_header.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_po_rcv_txns.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_po_rcv_txn_lots.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_inv_txns.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_inv_txn_lots.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_move_trx.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_completion_trx.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_comp_issue_trx.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_om_txns.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_om_txn_lots.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_om_ship_headers.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_om_ship_lines.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_om_ship_line_lots.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_po_rma_headers.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_po_rma_txns.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_po_rma_txn_lots.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_om_promise_date.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_std_bom_def.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_uom_conv_def.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_mat_def.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_vendor_def.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_customer_def.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_wh_def.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_sub_area_def.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_txn_type_def.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_po_info.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_wo_bom_info.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_wo_info.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_so_mst.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_so_dtl.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_ro_info.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_po_consign_txns.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwipgrtcss.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwipgrtbld.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_customer_def_his.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_mat_def_his.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_po_info_his.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_ro_info_his.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_so_dtl_his.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_so_mst_his.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_std_bom_def_his.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_sub_area_def_his.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_txn_type_def_his.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_uom_conv_def_his.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_vendor_def_his.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_wh_def_his.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_wo_bom_info_his.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_wo_info_his.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_mwipcoldef.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwiplotcum.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwiplotdry.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_csecusedat.pc">
+      <Filter>SEC\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwipgrtcls.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmgrtcot.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmgrthlt.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmgrtsiv.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_mwipcaldef.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmgrtcot.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmgrthlt.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmgrtsiv.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_mwipcaldef.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cbastxndef.pc">
+      <Filter>BAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmgrtasp.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwiplotprs.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cretlotsts.pc">
+      <Filter>SHP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cordprdpln.pc">
+      <Filter>ORD\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwiplotcup.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwiplotimp.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwiplotlmk.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwiplotrim.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwiplotrnd.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_mwiplothisx.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_mwiplotstsx.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwiplotcls.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwiplottrc.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwiplotbas.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_ct_sal110t.pc">
+      <Filter>IDMESR\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmispwrk.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwiprcpdef.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_pack_info.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_pack_info_his.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_p_wo_info.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_p_wo_info_his.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwipordrwk.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_ct_packing_v.pc">
+      <Filter>IDMESR\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cbomstddef.pc">
+      <Filter>BOM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_csumlotdat.pc">
+      <Filter>SUM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_mwiplotlos.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cbaslbldat.pc">
+      <Filter>BAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmrptctm.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmrpthmm.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cbastaktim.pc">
+      <Filter>BAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_minvmovsts.pc">
+      <Filter>INV\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_minvmovlot.pc">
+      <Filter>INV\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmrptgnp.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmrptgny.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmrptgrn.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_csumreswip.pc">
+      <Filter>SUM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwipprsrun.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwipuoplot.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_ct_mtl510t.pc">
+      <Filter>IDMESR\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_mwipidghis.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmrptgrm.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmrptgmp.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwipordopr.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmcstspm.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwipinvldm.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_mgcmtbldat.pc">
+      <Filter>GCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_mgcmtbldef.pc">
+      <Filter>GCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_mgcmlagdat.pc">
+      <Filter>GCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmcstspg.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwipprdgol.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_batch_job.pc">
+      <Filter>PROCEDURE\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_mrastevdef.pc">
+      <Filter>RAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_esecusrdef.pc">
+      <Filter>SEC\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_ct_mtl100t.pc">
+      <Filter>IDMESR\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwiplotrec.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_ct_prd210t.pc">
+      <Filter>IDMESR\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_ct_prd200t.pc">
+      <Filter>IDMESR\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_ct_mold_v.pc">
+      <Filter>IDMESR\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cinvuoplot.pc">
+      <Filter>INV\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwipwrkinp.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_comp_issue_trx_save.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_completion_trx_save.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_move_trx_save.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_minvetclot.pc">
+      <Filter>INV\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwiplotchg.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cpaklothis.pc">
+      <Filter>SHP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_ishplotiss.pc">
+      <Filter>SHP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_ishplotrcv.pc">
+      <Filter>SHP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwipbldavg.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_crasbasdat.pc">
+      <Filter>RAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cbasshpbom.pc">
+      <Filter>BAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_crastolbrk.pc">
+      <Filter>RAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_mrastolhis.pc">
+      <Filter>RAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwippryer.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_ishpispiss.pc">
+      <Filter>SHP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_ishpisprcv.pc">
+      <Filter>SHP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_crashitfnc.pc">
+      <Filter>RAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cerpaststs.pc">
+      <Filter>RAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_crasmdextd.pc">
+      <Filter>RAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_crasvcmfnc.pc">
+      <Filter>RAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cras5thprs.pc">
+      <Filter>RAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cras4hrprs.pc">
+      <Filter>RAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_craspntmix.pc">
+      <Filter>RAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_crasbalmil.pc">
+      <Filter>RAS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmcplmst.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_csecusrdef.pc">
+      <Filter>SEC\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cwiplotrmk.pc">
+      <Filter>WIP\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_if_po_requests_receipts.pc">
+      <Filter>IFS\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmsplmst.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmvocmst.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+    <PC_File_Compile Include="DBU_cqcmcusspe.pc">
+      <Filter>QCM\Source Files</Filter>
+    </PC_File_Compile>
+  </ItemGroup>
+</Project>

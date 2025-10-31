@@ -1,0 +1,1 @@
+D:\01_Source\00_MIR_MES\source\library\Miracom_DNMCore\x64\Release\Miracom_DNMCore.lib

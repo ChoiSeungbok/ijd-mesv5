@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1BC92E3B-5995-43B4-8C29-9CF26E771952}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Miracom.FMBCore</RootNamespace>
+    <AssemblyName>Miracom.FMBCore</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FarPoint.Win, Version=10.40.20174.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="FarPoint.Win.Spread, Version=10.40.20174.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Infragistics2.Shared.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Shared.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinDock.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinDock.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinEditors.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinToolbars.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinToolbars.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.CliFrx, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.CliFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.FMBUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.FMBUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.MESCore, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.MESCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.MsgHandler, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.MsgHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.RASCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.RASCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.TRSCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.TRSCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsCommon.cs" />
+    <Compile Include="clsGlobalOptions.cs" />
+    <Compile Include="Design\frmFMBAddMultiResources.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\frmFMBCreateLayOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\frmFMBCreatePort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\frmFMBCreateResource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\frmFMBCreateSubResource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\frmFMBCreateTag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\frmFMBCreateTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\frmFMBCreateUDRGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\frmFMBDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\udcFMBDesign.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\udcFMBLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\udcFMBLayout.Designer.cs">
+      <DependentUpon>udcFMBLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmFMBViewPortHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmFMBViewPortStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmFMBViewSubResourceHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmFMBViewSubResourceStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmFMBViewToolHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmFMBViewToolStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="intFMBMdiFormFunction.cs" />
+    <Compile Include="Inquiry\frmFMBViewLotListByResource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmFMBViewLotListDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmFMBViewResourceHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmFMBViewResourceListDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmFMBViewResourceStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modCommonFunction.cs" />
+    <Compile Include="modGlobalConstant.cs" />
+    <Compile Include="modGlobalEnum.cs" />
+    <Compile Include="modGlobalVariable.cs" />
+    <Compile Include="modListRoutine.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmFMBSetupGlobalOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmFMBSetupResourceColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmFMBSetupResourceColor.Designer.cs">
+      <DependentUpon>frmFMBSetupResourceColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmFMBSetupSubResourceImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\frmFMBAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\frmFMBAbout.Designer.cs">
+      <DependentUpon>frmFMBAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\frmFMBArrangeLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\frmFMBLoginCore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\frmFMBLoginCore.designer.cs">
+      <DependentUpon>frmFMBLoginCore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\frmFMBOptionCore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\frmFMBOptionCore.designer.cs">
+      <DependentUpon>frmFMBOptionCore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\frmFMBSaveLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\frmFMBSetupDefaultLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UTL\frmFMBPublishMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UTL\frmFMBSendMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Design\frmFMBAddMultiResources.resx">
+      <DependentUpon>frmFMBAddMultiResources.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\frmFMBCreateLayOut.resx">
+      <DependentUpon>frmFMBCreateLayOut.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\frmFMBCreatePort.resx">
+      <DependentUpon>frmFMBCreatePort.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\frmFMBCreateResource.resx">
+      <DependentUpon>frmFMBCreateResource.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\frmFMBCreateSubResource.resx">
+      <DependentUpon>frmFMBCreateSubResource.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\frmFMBCreateTag.resx">
+      <DependentUpon>frmFMBCreateTag.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\frmFMBCreateTool.resx">
+      <DependentUpon>frmFMBCreateTool.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\frmFMBCreateUDRGroup.resx">
+      <DependentUpon>frmFMBCreateUDRGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\frmFMBDesign.resx">
+      <DependentUpon>frmFMBDesign.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\udcFMBDesign.resx">
+      <DependentUpon>udcFMBDesign.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\udcFMBLayout.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>udcFMBLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmFMBViewLotListByResource.resx">
+      <DependentUpon>frmFMBViewLotListByResource.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmFMBViewLotListDetail.resx">
+      <DependentUpon>frmFMBViewLotListDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmFMBViewPortHistory.resx">
+      <DependentUpon>frmFMBViewPortHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmFMBViewPortStatus.resx">
+      <DependentUpon>frmFMBViewPortStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmFMBViewResourceHistory.resx">
+      <DependentUpon>frmFMBViewResourceHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmFMBViewResourceListDetail.resx">
+      <DependentUpon>frmFMBViewResourceListDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmFMBViewResourceStatus.resx">
+      <DependentUpon>frmFMBViewResourceStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmFMBViewSubResourceHistory.resx">
+      <DependentUpon>frmFMBViewSubResourceHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmFMBViewSubResourceStatus.resx">
+      <DependentUpon>frmFMBViewSubResourceStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmFMBViewToolHistory.resx">
+      <DependentUpon>frmFMBViewToolHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmFMBViewToolStatus.resx">
+      <DependentUpon>frmFMBViewToolStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmFMBSetupGlobalOption.resx">
+      <DependentUpon>frmFMBSetupGlobalOption.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmFMBSetupResourceColor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmFMBSetupResourceColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmFMBSetupSubResourceImage.resx">
+      <DependentUpon>frmFMBSetupSubResourceImage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System\frmFMBArrangeLayout.resx">
+      <DependentUpon>frmFMBArrangeLayout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System\frmFMBLoginCore.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmFMBLoginCore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System\frmFMBOptionCore.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmFMBOptionCore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System\frmFMBSaveLayout.resx">
+      <DependentUpon>frmFMBSaveLayout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System\frmFMBSetupDefaultLayout.resx">
+      <DependentUpon>frmFMBSetupDefaultLayout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UTL\frmFMBPublishMessage.resx">
+      <DependentUpon>frmFMBPublishMessage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UTL\frmFMBSendMessage.resx">
+      <DependentUpon>frmFMBSendMessage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetPath)" "$(SolutionDir)..\Components\" /d/r/y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

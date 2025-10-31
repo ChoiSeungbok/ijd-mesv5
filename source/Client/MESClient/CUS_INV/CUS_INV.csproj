@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1789E066-392B-4A66-94F9-5B2566C2F112}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CUS_INV</RootNamespace>
+    <AssemblyName>CUS_INV</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FarPoint.Excel, Version=10.40.20174.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GrapeCity\Spread Studio 10\Windows Forms\v10.40.20174.0\bin\FarPoint.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Localization, Version=10.40.20174.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GrapeCity\Spread Studio 10\Windows Forms\v10.40.20174.0\bin\FarPoint.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win, Version=10.40.20174.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GrapeCity\Spread Studio 10\Windows Forms\v10.40.20174.0\bin\FarPoint.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win.Spread, Version=10.40.20174.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GrapeCity\Spread Studio 10\Windows Forms\v10.40.20174.0\bin\FarPoint.Win.Spread.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.PluginInputMan, Version=10.40.20174.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Shared.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Shared.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.Misc.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.Misc.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinEditors.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinSchedule.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinSchedule.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTabControl.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.UltraWinTabControl.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v10.3, Version=10.3.20103.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2010.3\Windows Forms\Bin\Infragistics2.Win.v10.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Excel, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\..\Components\Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files\WindowsApps\Microsoft.Copilot_1.25074.146.0_x64__8wekyb3d8bbwe\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.CliFrx">
+      <HintPath>..\..\Components\Miracom.CliFrx.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.DNMCore, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Miracom.DNMCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.MESCore">
+      <HintPath>..\..\Components\Miracom.MESCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.MsgHandler">
+      <HintPath>..\..\Components\Miracom.MsgHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.TRSCore">
+      <HintPath>..\..\Components\Miracom.TRSCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Miracom.UI">
+      <HintPath>..\..\Components\Miracom.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="transceiverxnet, Version=7.0.0.0, Culture=neutral, PublicKeyToken=d1edfc8a280ba121, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\transceiverxnet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Inquiry\frmViewETCLotList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewETCLotList.Designer.cs">
+      <DependentUpon>frmViewETCLotList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewShipLotRawMaterialList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewShipLotRawMaterialList.Designer.cs">
+      <DependentUpon>frmViewShipLotRawMaterialList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInvLotHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInvLotHistory.Designer.cs">
+      <DependentUpon>frmViewInvLotHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInvLotListByMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInvLotListByMat.Designer.cs">
+      <DependentUpon>frmViewInvLotListByMat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewKittingInvLotList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewKittingInvLotList.Designer.cs">
+      <DependentUpon>frmViewKittingInvLotList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewDlvLotList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewDlvLotList.Designer.cs">
+      <DependentUpon>frmViewDlvLotList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewStoreInvLotList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewStoreInvLotList.Designer.cs">
+      <DependentUpon>frmViewStoreInvLotList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInvLotListByOper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInvLotListByOper.Designer.cs">
+      <DependentUpon>frmViewInvLotListByOper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewPOList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewPOList.Designer.cs">
+      <DependentUpon>frmViewPOList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInvLotIssueList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInvLotIssueList.Designer.cs">
+      <DependentUpon>frmViewInvLotIssueList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInvLotMoveHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewInvLotMoveHistory.Designer.cs">
+      <DependentUpon>frmViewInvLotMoveHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transaction\frmTranCvInvLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranCvInvLot.Designer.cs">
+      <DependentUpon>frmTranCvInvLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranEtcOutInInvLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranEtcOutInInvLot.Designer.cs">
+      <DependentUpon>frmTranEtcOutInInvLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranEtcOutInvLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranEtcOutInvLot.Designer.cs">
+      <DependentUpon>frmTranEtcOutInvLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranKittingInvLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranKittingInvLot.Designer.cs">
+      <DependentUpon>frmTranKittingInvLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranEtcInInvLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranEtcInInvLot.Designer.cs">
+      <DependentUpon>frmTranEtcInInvLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranMoveConfirmInvLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranMoveConfirmInvLot.Designer.cs">
+      <DependentUpon>frmTranMoveConfirmInvLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranPrintLabelSplit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranPrintLabelSplit.Designer.cs">
+      <DependentUpon>frmTranPrintLabelSplit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranProductionLotConversion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranProductionLotConversion.Designer.cs">
+      <DependentUpon>frmTranProductionLotConversion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranMoveShipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranMoveShipment.Designer.cs">
+      <DependentUpon>frmTranMoveShipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranMoveRegistInvLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranMoveRegistInvLot.Designer.cs">
+      <DependentUpon>frmTranMoveRegistInvLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranPrintLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranPrintLabel.Designer.cs">
+      <DependentUpon>frmTranPrintLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranReceiveIssueReqInvLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranReceiveIssueReqInvLot.Designer.cs">
+      <DependentUpon>frmTranReceiveIssueReqInvLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranArrivalLotFromShip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranArrivalLotFromShip.Designer.cs">
+      <DependentUpon>frmTranArrivalLotFromShip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranRegistArrivalLotAnsan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranRegistArrivalLotAnsan.Designer.cs">
+      <DependentUpon>frmTranRegistArrivalLotAnsan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranRegistArrivalLot_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranRegistArrivalLot_New.Designer.cs">
+      <DependentUpon>frmTranRegistArrivalLot_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranRegistIssueReqInvLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranRegistIssueReqInvLot.Designer.cs">
+      <DependentUpon>frmTranRegistIssueReqInvLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranHoldInvLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranHoldInvLot.Designer.cs">
+      <DependentUpon>frmTranHoldInvLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranMergeInvLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranMergeInvLot.Designer.cs">
+      <DependentUpon>frmTranMergeInvLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranCreateIssueRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranCreateIssueRequest.Designer.cs">
+      <DependentUpon>frmTranCreateIssueRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranMoveInvLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranMoveInvLot.Designer.cs">
+      <DependentUpon>frmTranMoveInvLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranReleaseInvLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranReleaseInvLot.Designer.cs">
+      <DependentUpon>frmTranReleaseInvLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranSplitInvLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranSplitInvLot.Designer.cs">
+      <DependentUpon>frmTranSplitInvLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranStoreInvLotAnsan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranStoreInvLotAnsan.Designer.cs">
+      <DependentUpon>frmTranStoreInvLotAnsan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranStoreInvLotMult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranStoreInvLotMult.Designer.cs">
+      <DependentUpon>frmTranStoreInvLotMult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranStoreInvLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranStoreInvLot.Designer.cs">
+      <DependentUpon>frmTranStoreInvLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmTranRegistArrivalLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranRegistArrivalLot.Designer.cs">
+      <DependentUpon>frmTranRegistArrivalLot.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Setup\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CUS_COM\CUS_COM.csproj">
+      <Project>{3c73ea3b-cca6-4e6b-b0f3-f054bce8eb4b}</Project>
+      <Name>CUS_COM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Inquiry\frmViewETCLotList.resx">
+      <DependentUpon>frmViewETCLotList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewShipLotRawMaterialList.resx">
+      <DependentUpon>frmViewShipLotRawMaterialList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewInvLotHistory.resx">
+      <DependentUpon>frmViewInvLotHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewInvLotListByMat.resx">
+      <DependentUpon>frmViewInvLotListByMat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewKittingInvLotList.resx">
+      <DependentUpon>frmViewKittingInvLotList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewDlvLotList.resx">
+      <DependentUpon>frmViewDlvLotList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewStoreInvLotList.resx">
+      <DependentUpon>frmViewStoreInvLotList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewInvLotListByOper.resx">
+      <DependentUpon>frmViewInvLotListByOper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewPOList.resx">
+      <DependentUpon>frmViewPOList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewInvLotIssueList.resx">
+      <DependentUpon>frmViewInvLotIssueList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\frmViewInvLotMoveHistory.resx">
+      <DependentUpon>frmViewInvLotMoveHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Transaction\frmTranCvInvLot.resx">
+      <DependentUpon>frmTranCvInvLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranEtcOutInInvLot.resx">
+      <DependentUpon>frmTranEtcOutInInvLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranEtcOutInvLot.resx">
+      <DependentUpon>frmTranEtcOutInvLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranKittingInvLot.resx">
+      <DependentUpon>frmTranKittingInvLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranEtcInInvLot.resx">
+      <DependentUpon>frmTranEtcInInvLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranMoveConfirmInvLot.resx">
+      <DependentUpon>frmTranMoveConfirmInvLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranPrintLabelSplit.resx">
+      <DependentUpon>frmTranPrintLabelSplit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranProductionLotConversion.resx">
+      <DependentUpon>frmTranProductionLotConversion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranMoveShipment.resx">
+      <DependentUpon>frmTranMoveShipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranMoveRegistInvLot.resx">
+      <DependentUpon>frmTranMoveRegistInvLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranPrintLabel.resx">
+      <DependentUpon>frmTranPrintLabel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranReceiveIssueReqInvLot.resx">
+      <DependentUpon>frmTranReceiveIssueReqInvLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranArrivalLotFromShip.resx">
+      <DependentUpon>frmTranArrivalLotFromShip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranRegistArrivalLotAnsan.resx">
+      <DependentUpon>frmTranRegistArrivalLotAnsan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranRegistArrivalLot_New.resx">
+      <DependentUpon>frmTranRegistArrivalLot_New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranRegistIssueReqInvLot.resx">
+      <DependentUpon>frmTranRegistIssueReqInvLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranHoldInvLot.resx">
+      <DependentUpon>frmTranHoldInvLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranMergeInvLot.resx">
+      <DependentUpon>frmTranMergeInvLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranCreateIssueRequest.resx">
+      <DependentUpon>frmTranCreateIssueRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranMoveInvLot.resx">
+      <DependentUpon>frmTranMoveInvLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranReleaseInvLot.resx">
+      <DependentUpon>frmTranReleaseInvLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranSplitInvLot.resx">
+      <DependentUpon>frmTranSplitInvLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranStoreInvLotAnsan.resx">
+      <DependentUpon>frmTranStoreInvLotAnsan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranStoreInvLotMult.resx">
+      <DependentUpon>frmTranStoreInvLotMult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranStoreInvLot.resx">
+      <DependentUpon>frmTranStoreInvLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmTranRegistArrivalLot.resx">
+      <DependentUpon>frmTranRegistArrivalLot.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
