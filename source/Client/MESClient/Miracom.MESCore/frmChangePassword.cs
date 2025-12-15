@@ -73,9 +73,9 @@ namespace Miracom.MESCore
             this.lblCurrentPassword = new System.Windows.Forms.Label();
             this.lblUserId = new System.Windows.Forms.Label();
             this.pnlBottom = new System.Windows.Forms.Panel();
+            this.btnNext = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
-            this.btnNext = new System.Windows.Forms.Button();
             this.pnlMid.SuspendLayout();
             this.grpPassword.SuspendLayout();
             this.pnlBottom.SuspendLayout();
@@ -116,10 +116,10 @@ namespace Miracom.MESCore
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 111);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(373, 44);
+            this.label1.Size = new System.Drawing.Size(373, 64);
             this.label1.TabIndex = 8;
-            this.label1.Text = "1.영어 대문자, 소문자, 숫자, 특수문자 포함한 8자리이상입니다.\r\n2.패스워드 변경주기는 3개월입니다.\r\n3.비밀번호 분실시  MES 담당자에" +
-    "게 문의 바랍니다.(010-3053-5161)\r\n";
+            this.label1.Text = "1.영어 대문자, 소문자, 숫자, 특수문자 포함한 8자리이상입니다.\r\n2.패스워드 변경주기는 3개월입니다.\r\n3.비밀번호 분실시 담당자에게 문의 " +
+    "바랍니다.\r\n◆ MES담당자(010-8962-6376), 생산기획팀(010-5257-3714)\r\n";
             // 
             // txtConfirmPassword
             // 
@@ -214,6 +214,18 @@ namespace Miracom.MESCore
             this.pnlBottom.Size = new System.Drawing.Size(391, 36);
             this.pnlBottom.TabIndex = 1;
             // 
+            // btnNext
+            // 
+            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.Location = new System.Drawing.Point(5, 7);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(88, 23);
+            this.btnNext.TabIndex = 2;
+            this.btnNext.Text = "Change next time";
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -236,18 +248,6 @@ namespace Miracom.MESCore
             this.btnOK.TabIndex = 0;
             this.btnOK.Text = "OK";
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
-            // btnNext
-            // 
-            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.Location = new System.Drawing.Point(5, 7);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(88, 23);
-            this.btnNext.TabIndex = 2;
-            this.btnNext.Text = "Change next time";
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // frmChangePassword
             // 
