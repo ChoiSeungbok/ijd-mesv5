@@ -1,0 +1,96 @@
+[01]2025-11-06 18:03:01
+DB Open Start 
+
+[01]2025-11-06 18:03:05
+DB Open End: User ID=mesmgr;Password=mesmgr;Data Source=IJDMES;Min Pool Size=1; Max Pool Size=1
+
+[01]2025-11-06 18:03:05
+DB Connect Success
+
+[01]2025-11-06 18:03:30
+DB Open Start 
+
+[01]2025-11-06 18:03:31
+DB Open End: User ID=mesmgr;Password=mesmgr;Data Source=IJDMES;Min Pool Size=1; Max Pool Size=1
+
+[01]2025-11-06 18:03:31
+DB Connect Success
+
+[01]2025-11-06 18:03:32
+H101 Connect Success
+
+[01]2025-11-06 18:03:32
+RPTServer Start
+
+[01]2025-11-06 18:06:04
+START : RPT_View_Dynamic
+
+[01]2025-11-06 18:06:04
+
+
+[01]2025-11-06 18:06:05
+END : RPT_View_Dynamic
+
+[01]2025-11-06 18:06:35
+START : RPT_View_Dynamic
+
+[01]2025-11-06 18:06:35
+
+
+[01]2025-11-06 18:06:35
+END : RPT_View_Dynamic
+
+[01]2025-11-06 18:06:35
+START : RPT_View_Dynamic
+
+[01]2025-11-06 18:06:35
+
+
+[01]2025-11-06 18:06:35
+END : RPT_View_Dynamic
+
+[01]2025-11-06 18:06:52
+START : RPT_View_Dynamic
+
+[01]2025-11-06 18:06:52
+
+
+[01]2025-11-06 18:06:52
+END : RPT_View_Dynamic
+
+[01]2025-11-06 18:06:56
+START : RPT_View_Dynamic
+
+[01]2025-11-06 18:06:56
+
+
+[01]2025-11-06 18:06:56
+END : RPT_View_Dynamic
+
+[01]2025-11-06 18:07:00
+START : RPT_View_Dynamic
+
+[01]2025-11-06 18:07:00
+
+
+[01]2025-11-06 18:07:00
+END : RPT_View_Dynamic
+
+[01]2025-11-06 18:07:02
+START : RPT_View_Dynamic
+
+[01]2025-11-06 18:07:02
+
+
+[01]2025-11-06 18:07:02
+END : RPT_View_Dynamic
+
+[01]2025-11-06 18:55:46
+DB Disconnect Success
+
+[01]2025-11-06 18:55:46
+H101 term Success
+
+[01]2025-11-06 18:55:46
+RPTServer Close
+

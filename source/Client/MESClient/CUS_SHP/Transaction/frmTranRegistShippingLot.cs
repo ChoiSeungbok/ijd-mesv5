@@ -1148,6 +1148,9 @@ namespace CUS_SHP
                     GC.Collect();
                     return;
                 }
+                
+                string sATTRIBUTE02 = dt.Rows[0]["ATTRIBUTE02"].ToString();
+
                 dt.Columns.Add("IMAGE_A", typeof(byte[]));
                 dt.Columns.Add("IMAGE_B", typeof(byte[]));
                 num = dt.Rows.Count;
@@ -1172,7 +1175,16 @@ namespace CUS_SHP
                     dt.Rows[j]["IMAGE_A"] = dt2.Rows[0]["IMAGE_A"];
                     dt.Rows[j]["IMAGE_B"] = dt2.Rows[0]["IMAGE_B"];
                 }
-                DevReport.PreviewXtraReport(dt, sFileName);
+
+                if (sATTRIBUTE02 != null && sATTRIBUTE02 == "HM_03")
+                {
+                    DevReport.PreviewXtraReport(dt, "pip520pc"); // SPEC 성적서
+                }
+                else
+                {
+                    DevReport.PreviewXtraReport(dt, sFileName);  //일반성적서 pip510p
+                }
+                    
             }
             catch (Exception ex)
             {

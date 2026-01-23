@@ -86,6 +86,7 @@ namespace CUS_QCM
                 TPDR.DirectViewCond[] dvcArgu = new TPDR.DirectViewCond[8];
                 DataTable dt = null;
                 string sSql = "";
+                string sSql_ID = "";
                 int i = 0;
 
                 dvcArgu[0].sCondition_ID = "FACTORY";
@@ -110,9 +111,19 @@ namespace CUS_QCM
                 dvcArgu[6].sCondition_Value = txtLotID.Text + "%";
 
                 dvcArgu[7].sCondition_ID = "MAT_ID";
-                dvcArgu[7].sCondition_Value = "%" + cdvMat.Text + "%";
+                dvcArgu[7].sCondition_Value = "%" + cdvMat.Text + "%"; 
+                 
+                if (rdoReq.Checked)
+                {
+                    sSql_ID = "CQCM3001-002";
+                }
+                else
+                {
+                    sSql_ID = "CQCM3001-013";
+                }
+                    
 
-                if (TPDR.GetDataOne("", ref dt, "CQCM3001-002", dvcArgu, false, false, ref sSql) == false)
+                if (TPDR.GetDataOne("", ref dt, sSql_ID, dvcArgu, false, false, ref sSql) == false)
                 {
                     if (dt != null)
                         dt.Dispose();
@@ -166,6 +177,8 @@ namespace CUS_QCM
                 btnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 btnView.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 btnFileManager.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+                rdoReq.Checked = true;
+
             }
             catch (Exception ex)
             {

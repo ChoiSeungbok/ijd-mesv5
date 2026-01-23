@@ -1,0 +1,9 @@
+[01]2026-01-12 09:14:48
+DB Open Start 
+
+[01]2026-01-12 09:14:51
+DB Open End: User ID=mesmgr;Password=mesmgr;Data Source=TIJDMES;Min Pool Size=1; Max Pool Size=1
+
+[01]2026-01-12 09:14:51
+DB Connect Success
+

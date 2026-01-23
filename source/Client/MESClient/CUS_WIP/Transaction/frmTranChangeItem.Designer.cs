@@ -120,6 +120,7 @@
             Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.grpLotInfo = new Infragistics.Win.Misc.UltraGroupBox();
             this.spdBeforeLotList = new FarPoint.Win.Spread.FpSpread();
@@ -155,6 +156,7 @@
             this.btnPortOpen = new Infragistics.Win.Misc.UltraButton();
             this.lblWeareHouse = new System.Windows.Forms.Label();
             this.cdvWearHouse = new Miracom.UI.Controls.MCCodeView.MCCodeView();
+            this.btnClear = new Infragistics.Win.Misc.UltraButton();
             this.pnlStsCond.SuspendLayout();
             this.pnlMID.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cdvOper)).BeginInit();
@@ -204,6 +206,7 @@
             // pnlMID
             // 
             this.pnlMID.Controls.Add(this.splitContainer1);
+            this.pnlMID.Controls.SetChildIndex(this.chkFavorite, 0);
             this.pnlMID.Controls.SetChildIndex(this.lblFormName, 0);
             this.pnlMID.Controls.SetChildIndex(this.pnlStsCond, 0);
             this.pnlMID.Controls.SetChildIndex(this.lblDirectQuery, 0);
@@ -211,7 +214,7 @@
             // 
             // lblFormName
             // 
-            this.lblFormName.Size = new System.Drawing.Size(180, 37);
+            this.lblFormName.Size = new System.Drawing.Size(141, 30);
             this.lblFormName.Text = "Item Change";
             // 
             // lblDirectQuery
@@ -225,6 +228,7 @@
             // 
             // lblOper
             // 
+            this.lblOper.Enabled = false;
             this.lblOper.Location = new System.Drawing.Point(1112, 16);
             this.lblOper.Size = new System.Drawing.Size(86, 16);
             this.lblOper.Text = "Warehouse";
@@ -232,6 +236,7 @@
             // 
             // cdvOper
             // 
+            this.cdvOper.Enabled = false;
             this.cdvOper.Location = new System.Drawing.Point(1189, 16);
             this.cdvOper.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
             this.cdvOper.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
@@ -242,10 +247,12 @@
             // 
             // lblWorkPlace
             // 
+            this.lblWorkPlace.Enabled = false;
             this.lblWorkPlace.Location = new System.Drawing.Point(1114, 32);
             // 
             // cdvWorkPlace
             // 
+            this.cdvWorkPlace.Enabled = false;
             this.cdvWorkPlace.Location = new System.Drawing.Point(1205, 10);
             this.cdvWorkPlace.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
             this.cdvWorkPlace.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
@@ -278,6 +285,7 @@
             // 
             // pnlBottom
             // 
+            this.pnlBottom.Controls.Add(this.btnClear);
             this.pnlBottom.Controls.Add(this.label3);
             this.pnlBottom.Controls.Add(this.cboPort);
             this.pnlBottom.Controls.Add(this.btnPortOpen);
@@ -293,6 +301,7 @@
             this.pnlBottom.Controls.SetChildIndex(this.btnPortOpen, 0);
             this.pnlBottom.Controls.SetChildIndex(this.cboPort, 0);
             this.pnlBottom.Controls.SetChildIndex(this.label3, 0);
+            this.pnlBottom.Controls.SetChildIndex(this.btnClear, 0);
             // 
             // pnlTop
             // 
@@ -1620,6 +1629,25 @@
             this.cdvWearHouse.VisibleColumnHeader = false;
             this.cdvWearHouse.VisibleDescription = false;
             // 
+            // btnClear
+            // 
+            this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            appearance18.BackColor = System.Drawing.Color.White;
+            appearance18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
+            appearance18.FontData.BoldAsString = "True";
+            appearance18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
+            this.btnClear.Appearance = appearance18;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(704, 10);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(100, 30);
+            this.btnClear.TabIndex = 285;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
+            this.btnClear.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // frmTranChangeItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1703,5 +1731,6 @@
         public System.Windows.Forms.TextBox txtBeforeLotID;
         public System.Windows.Forms.Label lblWeareHouse;
         public Miracom.UI.Controls.MCCodeView.MCCodeView cdvWearHouse;
+        protected Infragistics.Win.Misc.UltraButton btnClear;
     }
 }

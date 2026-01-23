@@ -210,6 +210,12 @@ namespace CUS_QCM
                             MPCF.ShowMsgBox(MPCF.GetMessage(487));
                             return false;
                         }
+                        if (cdvShipReportType.Text == "")
+                        {
+                            MPCF.ShowMsgBox(MPCF.GetMessage(490));
+                            cdvShipReportType.Focus();
+                            return false;
+                        }
                         break;
                     case "PRINT":
                         if (cdvReportNo.Text == "")
@@ -320,6 +326,7 @@ namespace CUS_QCM
                     spdPackingLotList.ActiveSheet.Cells[num, 29].Value = dt.Rows[num]["REMARK"].ToString();
                     spdPackingLotList.ActiveSheet.Cells[num, 30].Value = dt.Rows[num]["IMAGE_NUM1"];
                     spdPackingLotList.ActiveSheet.Cells[num, 31].Value = dt.Rows[num]["IMAGE_NUM2"];
+
                     spdPackingLotList_Sheet1.Cells[num, 21].Value = dt.Rows[num]["GRAIN_SIZE"];
                     spdPackingLotList_Sheet1.Cells[num, 22].Value = dt.Rows[num]["DENSITY_SPEC"];
                     spdPackingLotList_Sheet1.Cells[num, 23].Value = dt.Rows[num]["MAG_SAT_SPEC"];
@@ -374,6 +381,7 @@ namespace CUS_QCM
                         tRSNode2.AddString("GRAIN_SIZE", spdPackingLotList.ActiveSheet.Cells[i, 21].Text);
                         tRSNode2.AddString("COMMENTS", spdPackingLotList.ActiveSheet.Cells[i, 28].Text);
                         tRSNode2.AddString("REMARK", spdPackingLotList.ActiveSheet.Cells[i, 29].Text);
+                        tRSNode2.AddString("ATTRIBUTE02", cdvShipReportType.Text);
                         tRSNode2.AddString("IMAGE_NUM1", spdPackingLotList.ActiveSheet.Cells[i, 30].Text);
                         tRSNode2.AddString("IMAGE_NUM2", spdPackingLotList.ActiveSheet.Cells[i, 31].Text);
                         tRSNode2.AddString("DENSITY_SPEC", spdPackingLotList.ActiveSheet.Cells[i, 22].Text);
@@ -417,8 +425,7 @@ namespace CUS_QCM
             {
                 MPCR.SetInMsg(tRSNode);
                 tRSNode.ProcStep = '2';
-                tRSNode.AddString("REPORT_NO", cdvReportNo.Text);
-                tRSNode.AddString("ATTRIBUTE02", cdvShipReportType.Text); // 2025-10-23(BOK) ATTRIBUTE02 추가
+                tRSNode.AddString("REPORT_NO", cdvReportNo.Text);                
 
                 for (int i = 0; i < spdPackingLotList.ActiveSheet.RowCount; i++)
                 {
@@ -441,6 +448,7 @@ namespace CUS_QCM
                     tRSNode2.AddString("TRS", spdPackingLotList.ActiveSheet.Cells[i, 20].Text);
                     tRSNode2.AddString("COMMENTS", spdPackingLotList.ActiveSheet.Cells[i, 28].Text);
                     tRSNode2.AddString("REMARK", spdPackingLotList.ActiveSheet.Cells[i, 29].Text);
+                    tRSNode2.AddString("ATTRIBUTE02", cdvShipReportType.Text); 
                     tRSNode2.AddString("IMAGE_NUM1", spdPackingLotList.ActiveSheet.Cells[i, 30].Text);
                     tRSNode2.AddString("IMAGE_NUM2", spdPackingLotList.ActiveSheet.Cells[i, 31].Text);
                     tRSNode2.AddString("GRAIN_SIZE", spdPackingLotList.ActiveSheet.Cells[i, 21].Text);
@@ -610,7 +618,7 @@ namespace CUS_QCM
         private void btnGenerateReport_Click(object sender, EventArgs e)
         {
             if (fnGenerateReport())
-            {
+            {           
                 fnviewReport(cdvReportNo.Text);
             }
         }
