@@ -1,1 +1,2 @@
 D:\01_Source\00_MIR_MES\source\library\Miracom_DNMCore\x64\Debug\Miracom_DNMCore.lib
+D:\일진다이아\Source\MESV5\source\library\Miracom_DNMCore\x64\Debug\Miracom_DNMCore.lib

@@ -228,6 +228,8 @@ namespace CUS_SHP
                     return;
                 }
 
+                string sATTRIBUTE02 = dt.Rows[0]["ATTRIBUTE02"].ToString();
+
                 dt.Columns.Add("IMAGE_A", typeof(Byte[]));
                 dt.Columns.Add("IMAGE_B", typeof(Byte[]));
 
@@ -267,11 +269,15 @@ namespace CUS_SHP
 
                 }
 
-
-                //일반성적서 pip510p
-
-                DevReport.PreviewXtraReport(dt, sFileName);
-
+                if (sATTRIBUTE02 != null && sATTRIBUTE02 == "HM_03")
+                {
+                    DevReport.PreviewXtraReport(dt, "pip520pc"); // SPEC 성적서                                                                 
+                }
+                else
+                {
+                    DevReport.PreviewXtraReport(dt, sFileName);  //일반성적서 pip510p
+                }
+                
                 return;
             }
             catch (Exception ex)
@@ -1151,27 +1157,27 @@ namespace CUS_SHP
                 // 2. if (result == "HM_03") { fnPrintShipReport("CQCM2101-011", "pip520pc"); }
                 //    else { fnPrintShipReportHM("CQCM2006-005", "pip520pa"); }
 
-                if (spdShippingLotList.ActiveSheet.RowCount == 0)
-                {
-                    //CMN109 ERROR - Item이 선택되지 않았습니다. Item을 선택해 주십시요.
-                    MPCF.ShowMsgBox(MPCF.GetMessage(109));
-                    return;
-                }
-                else
-                {
+                //if (spdShippingLotList.ActiveSheet.RowCount == 0)
+                //{
+                //    //CMN109 ERROR - Item이 선택되지 않았습니다. Item을 선택해 주십시요.
+                //    MPCF.ShowMsgBox(MPCF.GetMessage(109));
+                //    return;
+                //}
+                //else
+                //{
 
-                    for (int i = 0; i < spdShippingLotList_Sheet1.RowCount; i++)
-                    {
+                //    for (int i = 0; i < spdShippingLotList_Sheet1.RowCount; i++)
+                //    {
 
-                        if (spdShippingLotList.ActiveSheet.Cells[i, (int)SHIPPING_LOT.CHK].Value.ToString().ToUpper() == "TRUE")
-                        {
+                //        if (spdShippingLotList.ActiveSheet.Cells[i, (int)SHIPPING_LOT.CHK].Value.ToString().ToUpper() == "TRUE")
+                //        {
 
-                            ViewHMReport(spdShippingLotList_Sheet1.Cells[i, (int)SHIPPING_LOT.PACK_LOT_ID].Value.ToString());
-                        }
+                //            ViewHMReport(spdShippingLotList_Sheet1.Cells[i, (int)SHIPPING_LOT.PACK_LOT_ID].Value.ToString());
+                //        }
 
 
-                    }
-                }
+                //    }
+                //}
 
                 
 

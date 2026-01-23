@@ -1,0 +1,48 @@
+[01]2026-01-08 15:30:15
+DB Open Start 
+
+[01]2026-01-08 15:30:16
+DB Open End: User ID=mesmgr;Password=mesmgr;Data Source=IJDMES;Min Pool Size=1; Max Pool Size=1
+
+[01]2026-01-08 15:30:16
+DB Connect Success
+
+[01]2026-01-08 15:30:17
+H101 Connect Success
+
+[01]2026-01-08 15:30:17
+RPTServer Start
+
+[01]2026-01-08 15:33:55
+DB Open Start 
+
+[01]2026-01-08 15:33:57
+DB Open End: User ID=mesmgr;Password=mesmgr;Data Source=TIJDMES;Min Pool Size=1; Max Pool Size=1
+
+[01]2026-01-08 15:33:57
+DB Connect Success
+
+[01]2026-01-08 15:33:57
+H101 Connect Success
+
+[01]2026-01-08 15:33:57
+RPTServer Start
+
+[01]2026-01-08 15:35:24
+START : RPT_View_Dynamic
+
+[01]2026-01-08 15:35:24
+
+
+[01]2026-01-08 15:35:24
+END : RPT_View_Dynamic
+
+[01]2026-01-08 15:47:16
+DB Disconnect Success
+
+[01]2026-01-08 15:47:16
+H101 term Success
+
+[01]2026-01-08 15:47:16
+RPTServer Close
+

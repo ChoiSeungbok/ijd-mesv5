@@ -52,7 +52,9 @@ namespace CUS_INV
             MAT_ID,
             MAT_DESC,
             QTY,
-            VENDOR_LOT_ID
+            VENDOR_LOT_ID,
+            PO_NO,
+            PO_SEQ
         }
 
         private enum MOVE_INFO
@@ -174,6 +176,8 @@ namespace CUS_INV
                     spdLotList_Sheet1.Cells[num, 3].Value = dt.Rows[num]["MAT_DESC"];
                     spdLotList_Sheet1.Cells[num, 4].Value = dt.Rows[num]["QTY"];
                     spdLotList_Sheet1.Cells[num, 5].Value = dt.Rows[num]["VENDOR_LOT_ID"];
+                    spdLotList_Sheet1.Cells[num, 6].Value = dt.Rows[num]["PO_NO"];
+                    spdLotList_Sheet1.Cells[num, 7].Value = dt.Rows[num]["PO_SEQ"];
                 }
                 MPCF.FitColumnHeader(spdLotList);
                 for (num = 0; num < spdLotList_Sheet1.RowCount; num++)

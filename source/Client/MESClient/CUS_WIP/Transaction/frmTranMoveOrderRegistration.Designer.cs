@@ -192,6 +192,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.grpMoveLotInfo = new Infragistics.Win.Misc.UltraGroupBox();
+            this.lblNotice = new System.Windows.Forms.Label();
             this.spdMoveLotList = new FarPoint.Win.Spread.FpSpread();
             this.spdMoveLotList_Sheet1 = new FarPoint.Win.Spread.SheetView();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -221,7 +222,6 @@
             this.cdvFromOper = new Miracom.UI.Controls.MCCodeView.MCCodeView();
             this.lblDate = new System.Windows.Forms.Label();
             this.dtpWorkDate = new System.Windows.Forms.DateTimePicker();
-            this.lblNotice = new System.Windows.Forms.Label();
             this.pnlStsCond.SuspendLayout();
             this.pnlMID.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cdvOper)).BeginInit();
@@ -1047,6 +1047,21 @@
             this.grpMoveLotInfo.Size = new System.Drawing.Size(570, 379);
             this.grpMoveLotInfo.TabIndex = 251;
             this.grpMoveLotInfo.Text = "Move Lot Information";
+            // 
+            // lblNotice
+            // 
+            this.lblNotice.AutoSize = true;
+            this.lblNotice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(59)))), ((int)(((byte)(98)))));
+            this.lblNotice.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblNotice.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotice.ForeColor = System.Drawing.Color.White;
+            this.lblNotice.Location = new System.Drawing.Point(166, 4);
+            this.lblNotice.Name = "lblNotice";
+            this.lblNotice.Size = new System.Drawing.Size(400, 12);
+            this.lblNotice.TabIndex = 259;
+            this.lblNotice.Text = "If there are many lot. Please copy only Lots information and paste it in Ctrl + V" +
+    "";
+            this.lblNotice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // spdMoveLotList
             // 
@@ -2230,21 +2245,6 @@
             this.dtpWorkDate.TabIndex = 281;
             this.dtpWorkDate.Value = new System.DateTime(2015, 11, 18, 0, 0, 0, 0);
             this.dtpWorkDate.Visible = false;
-            // 
-            // lblNotice
-            // 
-            this.lblNotice.AutoSize = true;
-            this.lblNotice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(59)))), ((int)(((byte)(98)))));
-            this.lblNotice.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblNotice.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotice.ForeColor = System.Drawing.Color.White;
-            this.lblNotice.Location = new System.Drawing.Point(166, 4);
-            this.lblNotice.Name = "lblNotice";
-            this.lblNotice.Size = new System.Drawing.Size(400, 12);
-            this.lblNotice.TabIndex = 259;
-            this.lblNotice.Text = "If there are many lot. Please copy only Lots information and paste it in Ctrl + V" +
-    "";
-            this.lblNotice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmTranMoveOrderRegistration
             // 

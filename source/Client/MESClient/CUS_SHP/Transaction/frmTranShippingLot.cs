@@ -729,6 +729,15 @@ namespace CUS_SHP
                     dvcArgu[3].sCondition_Value = "AND  A.PACK_LOT_ID IN ('Z'" + sLots + ")";
                 }
 
+                //if (TPDR.GetDataOne("", ref dt, sViewID, dvcArgu, false, false, ref sSql) == false)
+                //{
+                //    if (dt != null)
+                //        dt.Dispose();
+
+                //    GC.Collect();
+                //    return;
+                //}
+
                 if (TPDR.GetDataOne("", ref dt, sViewID, dvcArgu, false, false, ref sSql) == false)
                 {
                     if (dt != null)
@@ -738,14 +747,7 @@ namespace CUS_SHP
                     return;
                 }
 
-                if (TPDR.GetDataOne("", ref dt, sViewID, dvcArgu, false, false, ref sSql) == false)
-                {
-                    if (dt != null)
-                        dt.Dispose();
-
-                    GC.Collect();
-                    return;
-                }
+                string sATTRIBUTE02 = dt.Rows[0]["ATTRIBUTE02"].ToString();
 
                 dt.Columns.Add("IMAGE_A", typeof(Byte[]));
                 dt.Columns.Add("IMAGE_B", typeof(Byte[]));
@@ -789,10 +791,14 @@ namespace CUS_SHP
 
                 }
 
-
-                //일반성적서 pip510p
-
-                DevReport.PreviewXtraReport(dt, sFileName);
+                if (sATTRIBUTE02 != null && sATTRIBUTE02 == "HM_03") 
+                { 
+                    DevReport.PreviewXtraReport(dt, "pip520pc"); // SPEC 성적서                                                                 
+                } 
+                else 
+                {  
+                    DevReport.PreviewXtraReport(dt, sFileName);  //일반성적서 pip510p
+                } 
 
                 return;
             }

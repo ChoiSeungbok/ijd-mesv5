@@ -591,7 +591,7 @@ namespace CUS_QCM
             // 
             // lblDirectQuery
             // 
-            this.lblDirectQuery.Location = new System.Drawing.Point(6865, 30);
+            this.lblDirectQuery.Location = new System.Drawing.Point(7008, 30);
             // 
             // btnClose
             // 
@@ -3622,7 +3622,7 @@ namespace CUS_QCM
             this.tpgInspData.Location = new System.Drawing.Point(4, 22);
             this.tpgInspData.Name = "tpgInspData";
             this.tpgInspData.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgInspData.Size = new System.Drawing.Size(1211, 612);
+            this.tpgInspData.Size = new System.Drawing.Size(1354, 612);
             this.tpgInspData.TabIndex = 1;
             this.tpgInspData.Text = "File Registration";
             this.tpgInspData.UseVisualStyleBackColor = true;
@@ -3643,7 +3643,7 @@ namespace CUS_QCM
             this.grpFileRegistration.Location = new System.Drawing.Point(3, 3);
             this.grpFileRegistration.Margin = new System.Windows.Forms.Padding(5);
             this.grpFileRegistration.Name = "grpFileRegistration";
-            this.grpFileRegistration.Size = new System.Drawing.Size(1205, 606);
+            this.grpFileRegistration.Size = new System.Drawing.Size(1348, 606);
             this.grpFileRegistration.TabIndex = 252;
             this.grpFileRegistration.Text = "File Registration";
             // 
@@ -3655,7 +3655,7 @@ namespace CUS_QCM
             this.panFileRegistration.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panFileRegistration.Location = new System.Drawing.Point(1, 19);
             this.panFileRegistration.Name = "panFileRegistration";
-            this.panFileRegistration.Size = new System.Drawing.Size(1203, 586);
+            this.panFileRegistration.Size = new System.Drawing.Size(1346, 586);
             this.panFileRegistration.TabIndex = 0;
             // 
             // panel8
@@ -3666,7 +3666,7 @@ namespace CUS_QCM
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(611, 586);
+            this.panel8.Size = new System.Drawing.Size(754, 586);
             this.panel8.TabIndex = 258;
             // 
             // Brwpdf
@@ -3675,7 +3675,7 @@ namespace CUS_QCM
             this.Brwpdf.Location = new System.Drawing.Point(0, 0);
             this.Brwpdf.MinimumSize = new System.Drawing.Size(20, 20);
             this.Brwpdf.Name = "Brwpdf";
-            this.Brwpdf.Size = new System.Drawing.Size(611, 586);
+            this.Brwpdf.Size = new System.Drawing.Size(754, 586);
             this.Brwpdf.TabIndex = 255;
             this.Brwpdf.Url = new System.Uri("", System.UriKind.Relative);
             // 
@@ -3685,7 +3685,7 @@ namespace CUS_QCM
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(611, 586);
+            this.pictureBox1.Size = new System.Drawing.Size(754, 586);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 254;
             this.pictureBox1.TabStop = false;
@@ -3700,7 +3700,7 @@ namespace CUS_QCM
             this.spdFileRegistration.HorizontalScrollBar.Name = "";
             this.spdFileRegistration.HorizontalScrollBar.Renderer = defaultScrollBarRenderer13;
             this.spdFileRegistration.HorizontalScrollBarPolicy = FarPoint.Win.Spread.ScrollBarPolicy.AsNeeded;
-            this.spdFileRegistration.Location = new System.Drawing.Point(611, 0);
+            this.spdFileRegistration.Location = new System.Drawing.Point(754, 0);
             this.spdFileRegistration.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.spdFileRegistration.Name = "spdFileRegistration";
             namedStyle33.BackColor = System.Drawing.SystemColors.Control;

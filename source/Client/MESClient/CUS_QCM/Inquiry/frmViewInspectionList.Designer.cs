@@ -120,7 +120,6 @@
             this.lblInspectionType = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpToDate = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
             this.dtpFromDate = new System.Windows.Forms.DateTimePicker();
             this.lblStatus = new System.Windows.Forms.Label();
             this.cdvStatus = new Miracom.UI.Controls.MCCodeView.MCCodeView();
@@ -132,6 +131,9 @@
             this.lblMat = new System.Windows.Forms.Label();
             this.cdvMat = new Miracom.UI.Controls.MCCodeView.MCCodeView();
             this.btnFileManager = new Infragistics.Win.Misc.UltraButton();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.rdoJudge = new System.Windows.Forms.RadioButton();
+            this.rdoReq = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.cdvWorkPlace)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cdvDept)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cdvOper)).BeginInit();
@@ -155,6 +157,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cdvStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cdvInspOper)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cdvMat)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblWorkPlace
@@ -179,11 +182,11 @@
             // 
             // cdvDept
             // 
-            this.cdvDept.Location = new System.Drawing.Point(136, 20);
+            this.cdvDept.Location = new System.Drawing.Point(142, 20);
             this.cdvDept.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
             this.cdvDept.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
-            this.cdvDept.Size = new System.Drawing.Size(246, 26);
-            this.cdvDept.TextBoxWidth = 246;
+            this.cdvDept.Size = new System.Drawing.Size(121, 26);
+            this.cdvDept.TextBoxWidth = 121;
             // 
             // lblOper
             // 
@@ -204,6 +207,7 @@
             // 
             // pnlStsCond
             // 
+            this.pnlStsCond.Controls.Add(this.panel5);
             this.pnlStsCond.Controls.Add(this.lblMat);
             this.pnlStsCond.Controls.Add(this.cdvMat);
             this.pnlStsCond.Controls.Add(this.txtLotID);
@@ -214,25 +218,15 @@
             this.pnlStsCond.Controls.Add(this.cdvStatus);
             this.pnlStsCond.Controls.Add(this.label2);
             this.pnlStsCond.Controls.Add(this.dtpToDate);
-            this.pnlStsCond.Controls.Add(this.label1);
             this.pnlStsCond.Controls.Add(this.dtpFromDate);
             this.pnlStsCond.Controls.Add(this.cdvInspectionType);
             this.pnlStsCond.Controls.Add(this.lblInspectionType);
             this.pnlStsCond.Location = new System.Drawing.Point(12, 62);
             this.pnlStsCond.Margin = new System.Windows.Forms.Padding(2);
             this.pnlStsCond.Size = new System.Drawing.Size(1138, 108);
-            this.pnlStsCond.Controls.SetChildIndex(this.pnlStsCond3, 0);
-            this.pnlStsCond.Controls.SetChildIndex(this.pnlStsCond2, 0);
-            this.pnlStsCond.Controls.SetChildIndex(this.cdvDept, 0);
-            this.pnlStsCond.Controls.SetChildIndex(this.lblDept, 0);
-            this.pnlStsCond.Controls.SetChildIndex(this.cdvWorkPlace, 0);
-            this.pnlStsCond.Controls.SetChildIndex(this.lblWorkPlace, 0);
-            this.pnlStsCond.Controls.SetChildIndex(this.cdvOper, 0);
-            this.pnlStsCond.Controls.SetChildIndex(this.lblOper, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.lblInspectionType, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.cdvInspectionType, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.dtpFromDate, 0);
-            this.pnlStsCond.Controls.SetChildIndex(this.label1, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.dtpToDate, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.label2, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.cdvStatus, 0);
@@ -243,6 +237,15 @@
             this.pnlStsCond.Controls.SetChildIndex(this.txtLotID, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.cdvMat, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.lblMat, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.pnlStsCond3, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.pnlStsCond2, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.cdvDept, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.lblDept, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.cdvWorkPlace, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.lblWorkPlace, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.cdvOper, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.lblOper, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.panel5, 0);
             // 
             // pnlMID
             // 
@@ -251,6 +254,7 @@
             this.pnlMID.Margin = new System.Windows.Forms.Padding(4);
             this.pnlMID.Padding = new System.Windows.Forms.Padding(12, 62, 12, 0);
             this.pnlMID.Size = new System.Drawing.Size(1162, 757);
+            this.pnlMID.Controls.SetChildIndex(this.chkFavorite, 0);
             this.pnlMID.Controls.SetChildIndex(this.lblFormName, 0);
             this.pnlMID.Controls.SetChildIndex(this.pnlStsCond, 0);
             this.pnlMID.Controls.SetChildIndex(this.lblDirectQuery, 0);
@@ -271,20 +275,20 @@
             // 
             // lblDirectQuery
             // 
-            this.lblDirectQuery.Location = new System.Drawing.Point(-1989, 30);
+            this.lblDirectQuery.Location = new System.Drawing.Point(-3150, 30);
             this.lblDirectQuery.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             // 
             // btnView
             // 
             this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnView.Location = new System.Drawing.Point(941, 9);
+            this.btnView.Location = new System.Drawing.Point(942, 8);
             this.btnView.Margin = new System.Windows.Forms.Padding(4);
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Location = new System.Drawing.Point(1049, 9);
+            this.btnClose.Location = new System.Drawing.Point(1050, 8);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             // 
             // pnlStsCond2
@@ -1254,7 +1258,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(253, 61);
+            this.label2.Location = new System.Drawing.Point(404, 63);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(17, 16);
@@ -1267,32 +1271,18 @@
             this.dtpToDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.dtpToDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dtpToDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpToDate.Location = new System.Drawing.Point(276, 54);
+            this.dtpToDate.Location = new System.Drawing.Point(427, 58);
             this.dtpToDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpToDate.Name = "dtpToDate";
             this.dtpToDate.Size = new System.Drawing.Size(106, 26);
             this.dtpToDate.TabIndex = 267;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(14, 58);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 16);
-            this.label1.TabIndex = 268;
-            this.label1.Text = "Insp Req Time";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dtpFromDate
             // 
             this.dtpFromDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.dtpFromDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dtpFromDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFromDate.Location = new System.Drawing.Point(136, 54);
+            this.dtpFromDate.Location = new System.Drawing.Point(287, 58);
             this.dtpFromDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFromDate.Name = "dtpFromDate";
             this.dtpFromDate.Size = new System.Drawing.Size(104, 26);
@@ -1304,7 +1294,7 @@
             this.lblStatus.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.ForeColor = System.Drawing.Color.Black;
-            this.lblStatus.Location = new System.Drawing.Point(631, 26);
+            this.lblStatus.Location = new System.Drawing.Point(554, 26);
             this.lblStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(83, 16);
@@ -1326,7 +1316,7 @@
             this.cdvStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cdvStatus.Index = 0;
             this.cdvStatus.IsViewBtnImage = false;
-            this.cdvStatus.Location = new System.Drawing.Point(742, 22);
+            this.cdvStatus.Location = new System.Drawing.Point(665, 22);
             this.cdvStatus.Margin = new System.Windows.Forms.Padding(2);
             this.cdvStatus.MaxLength = 100;
             this.cdvStatus.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
@@ -1341,12 +1331,12 @@
             this.cdvStatus.SelectedSubItemIndex = 0;
             this.cdvStatus.SelectedValueToQueryText = "";
             this.cdvStatus.SelectionStart = 0;
-            this.cdvStatus.Size = new System.Drawing.Size(124, 26);
+            this.cdvStatus.Size = new System.Drawing.Size(155, 26);
             this.cdvStatus.SmallImageList = null;
             this.cdvStatus.StyleBorder = System.Windows.Forms.BorderStyle.Fixed3D;
             this.cdvStatus.TabIndex = 270;
             this.cdvStatus.TextBoxToolTipText = "";
-            this.cdvStatus.TextBoxWidth = 124;
+            this.cdvStatus.TextBoxWidth = 155;
             this.cdvStatus.VisibleButton = true;
             this.cdvStatus.VisibleColumnHeader = false;
             this.cdvStatus.VisibleDescription = false;
@@ -1366,7 +1356,7 @@
             this.cdvInspOper.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cdvInspOper.Index = 0;
             this.cdvInspOper.IsViewBtnImage = false;
-            this.cdvInspOper.Location = new System.Drawing.Point(453, 20);
+            this.cdvInspOper.Location = new System.Drawing.Point(377, 20);
             this.cdvInspOper.MaxLength = 100;
             this.cdvInspOper.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
             this.cdvInspOper.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
@@ -1397,7 +1387,7 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(399, 26);
+            this.label4.Location = new System.Drawing.Point(323, 26);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 16);
             this.label4.TabIndex = 272;
@@ -1410,7 +1400,7 @@
             this.lblLotID.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblLotID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLotID.ForeColor = System.Drawing.Color.Black;
-            this.lblLotID.Location = new System.Drawing.Point(400, 58);
+            this.lblLotID.Location = new System.Drawing.Point(554, 63);
             this.lblLotID.Name = "lblLotID";
             this.lblLotID.Size = new System.Drawing.Size(47, 16);
             this.lblLotID.TabIndex = 274;
@@ -1420,7 +1410,7 @@
             // txtLotID
             // 
             this.txtLotID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtLotID.Location = new System.Drawing.Point(453, 54);
+            this.txtLotID.Location = new System.Drawing.Point(665, 58);
             this.txtLotID.Name = "txtLotID";
             this.txtLotID.Size = new System.Drawing.Size(155, 26);
             this.txtLotID.TabIndex = 275;
@@ -1448,7 +1438,7 @@
             this.lblMat.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMat.ForeColor = System.Drawing.Color.Black;
-            this.lblMat.Location = new System.Drawing.Point(631, 59);
+            this.lblMat.Location = new System.Drawing.Point(836, 63);
             this.lblMat.Name = "lblMat";
             this.lblMat.Size = new System.Drawing.Size(103, 16);
             this.lblMat.TabIndex = 305;
@@ -1469,7 +1459,7 @@
             this.cdvMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cdvMat.Index = 0;
             this.cdvMat.IsViewBtnImage = false;
-            this.cdvMat.Location = new System.Drawing.Point(742, 56);
+            this.cdvMat.Location = new System.Drawing.Point(947, 58);
             this.cdvMat.MaxLength = 100;
             this.cdvMat.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
             this.cdvMat.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
@@ -1512,6 +1502,41 @@
             this.btnFileManager.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             this.btnFileManager.Click += new System.EventHandler(this.btnFileManager_Click);
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.rdoJudge);
+            this.panel5.Controls.Add(this.rdoReq);
+            this.panel5.Location = new System.Drawing.Point(12, 58);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(251, 26);
+            this.panel5.TabIndex = 306;
+            // 
+            // rdoJudge
+            // 
+            this.rdoJudge.AutoSize = true;
+            this.rdoJudge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.rdoJudge.Location = new System.Drawing.Point(134, 2);
+            this.rdoJudge.Name = "rdoJudge";
+            this.rdoJudge.Size = new System.Drawing.Size(105, 20);
+            this.rdoJudge.TabIndex = 264;
+            this.rdoJudge.Text = "Judge Date";
+            this.rdoJudge.UseVisualStyleBackColor = true;
+            // 
+            // rdoReq
+            // 
+            this.rdoReq.AutoSize = true;
+            this.rdoReq.Checked = true;
+            this.rdoReq.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.rdoReq.Location = new System.Drawing.Point(3, 2);
+            this.rdoReq.Name = "rdoReq";
+            this.rdoReq.Size = new System.Drawing.Size(126, 20);
+            this.rdoReq.TabIndex = 263;
+            this.rdoReq.TabStop = true;
+            this.rdoReq.Text = "Insp Req Time";
+            this.rdoReq.UseVisualStyleBackColor = true;
+            // 
             // frmViewInspectionList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1548,6 +1573,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cdvStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cdvInspOper)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cdvMat)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1567,7 +1594,6 @@
         public System.Windows.Forms.Label lblInspectionType;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.DateTimePicker dtpToDate;
-        public System.Windows.Forms.Label label1;
         public System.Windows.Forms.DateTimePicker dtpFromDate;
         public System.Windows.Forms.Label lblStatus;
         public Miracom.UI.Controls.MCCodeView.MCCodeView cdvStatus;
@@ -1584,5 +1610,8 @@
         public System.Windows.Forms.Label lblMat;
         public Miracom.UI.Controls.MCCodeView.MCCodeView cdvMat;
         protected Infragistics.Win.Misc.UltraButton btnFileManager;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.RadioButton rdoJudge;
+        private System.Windows.Forms.RadioButton rdoReq;
     }
 }

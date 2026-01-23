@@ -537,6 +537,18 @@ namespace CUS_WIP
                 cdvAfterMatId.Text = "";
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ClearList("ALL");
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+            }
+        }
+
         #endregion
 
         #region " Function Definition "
@@ -1058,6 +1070,47 @@ namespace CUS_WIP
             }
         }
 
+        //초기화 함수
+        private void ClearList(string sType)
+        {
+            try
+            {
+                switch (sType)
+                {
+                    case "ALL":
+
+                        cdvWearHouse.Text = "";
+                        cdvBeforeMatId.Text = "";
+                        cdvAfterMatId.Text = "";
+                        cdvPrintType.Text = "";
+                        cboPort.Text = "";
+
+                        txtBeforeLotID.Text = "";
+                        txtLotId.Text = ""; 
+
+                        chkNew.Checked = false;
+                        chkInput.Checked = false;                        
+                        chkExist.Checked = false;
+
+                        MPCF.ClearList(spdBeforeLotList);
+                        MPCF.ClearList(spdAfterLotList);
+
+                        break;
+
+                    case "VIEW":
+
+                        MPCF.ClearList(spdAfterLotList);
+                        break;
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+            }
+        }
+
+
         #endregion
 
         #region "Serial Definition"
@@ -1275,7 +1328,6 @@ namespace CUS_WIP
         }
 
         #endregion
-
 
     }
 }

@@ -311,6 +311,7 @@ int CUS_QCM_GENERATE_REPORT(char *s_msg_code, TRSNode *in_node, TRSNode *out_nod
 
 				TRS.copy(CQCMRPTHMM.COMMENTS, sizeof(CQCMRPTHMM.COMMENTS), data_list[i], "COMMENTS");
 				TRS.copy(CQCMRPTHMM.ATTRIBUTE01, sizeof(CQCMRPTHMM.ATTRIBUTE01), data_list[i], "REMARK");
+				TRS.copy(CQCMRPTHMM.ATTRIBUTE02, sizeof(CQCMRPTHMM.ATTRIBUTE02), data_list[i], "ATTRIBUTE02");
 
 				TRS.copy(CQCMRPTHMM.IMAGE_NUM1, sizeof(CQCMRPTHMM.IMAGE_NUM1), data_list[i], "IMAGE_NUM1");
 				TRS.copy(CQCMRPTHMM.IMAGE_NUM2, sizeof(CQCMRPTHMM.IMAGE_NUM2), data_list[i], "IMAGE_NUM2");
