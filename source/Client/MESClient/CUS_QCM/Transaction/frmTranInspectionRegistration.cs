@@ -167,7 +167,7 @@ namespace CUS_QCM
                 btnFileManager.Visible = true;
                 btnFileManager.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 AllowDrop = true;
-                chkAutoRefresh.Checked = false;
+                //chkAutoRefresh.Checked = false;
             }
             catch (Exception ex)
             {
