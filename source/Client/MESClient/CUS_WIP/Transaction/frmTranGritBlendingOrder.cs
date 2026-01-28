@@ -714,6 +714,31 @@ namespace CUS_WIP
             }
         }
 
+
+        //주석 저장
+        private bool Update_Lot_Comment(string sLotId, string sComment)
+        {            
+            TRSNode tRSNode = new TRSNode("Update_Lot_Commnet_In");
+            TRSNode out_node = new TRSNode("Update_Lot_Commnet_Out");
+            try
+            {
+                MPCR.SetInMsg(tRSNode);
+                tRSNode.ProcStep = '1';
+                tRSNode.AddString("LOT_ID", sLotId);
+                tRSNode.AddString("LOT_DESC", sComment);
+                if (!MPCR.CallService("CUS_WIP", "CUS_WIP_Update_Lot_Comment", tRSNode, ref out_node))
+                {
+                    return false;
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                CSCF.ShowMsg(ex.Message);
+                return false;
+            }
+        }
+
         private bool CancelData()
         {
             try
@@ -2645,6 +2670,12 @@ namespace CUS_WIP
 
         private void btnProcess_Click(object sender, EventArgs e)
         {
+            int iSheetCount = 5;
+            string sLot_id = "";
+            string sLot_Comment = "";
+
+            FarPoint.Win.Spread.FpSpread spdSeet = new FarPoint.Win.Spread.FpSpread();
+
             try
             {
                 if (CheckCondition(CSGC.CHECK.SAVE) == false)
@@ -2658,8 +2689,41 @@ namespace CUS_WIP
 
                 if (SaveData() == true)
                 {
+                    //2026-01-28 : Lot 주석 입력 기능 추가(BOK)
+                    for (int k = 0; k < iSheetCount; k++)
+                    {
+                        if (k == 0)
+                            spdSeet = spdLotList;
+                        else if (k == 1)
+                            spdSeet = spdLotList2;
+                        else if (k == 2)
+                            spdSeet = spdLotList3;
+                        else if (k == 3)
+                            spdSeet = spdLotList4;
+                        else if (k == 4)
+                            spdSeet = spdLotList5;
+
+                        for (int i = 0; i < spdSeet.ActiveSheet.RowCount; i++)
+                        {
+                            if (spdSeet.ActiveSheet.Cells[i, (int)LOT_INFO.CHK].Value.ToString().ToUpper() == "TRUE")
+                            {
+                                sLot_id = spdSeet.ActiveSheet.Cells[i, (int)LOT_INFO.LOT_ID].Text;
+                                sLot_Comment = spdSeet.ActiveSheet.Cells[i, (int)LOT_INFO.COMMENT].Text;
+
+                                if (!string.IsNullOrEmpty(sLot_Comment))
+                                {
+                                    if (!Update_Lot_Comment(sLot_id, sLot_Comment))
+                                    {
+                                        return;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                     ClearData("SAVE");
                 }
+
             }
             catch (Exception ex)
             {
