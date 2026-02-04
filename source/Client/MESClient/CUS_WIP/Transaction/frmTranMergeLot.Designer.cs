@@ -132,6 +132,7 @@
             // pnlMID
             // 
             this.pnlMID.Controls.Add(this.tableLayoutPanel1);
+            this.pnlMID.Controls.SetChildIndex(this.chkFavorite, 0);
             this.pnlMID.Controls.SetChildIndex(this.lblFormName, 0);
             this.pnlMID.Controls.SetChildIndex(this.pnlStsCond, 0);
             this.pnlMID.Controls.SetChildIndex(this.lblDirectQuery, 0);
@@ -139,7 +140,7 @@
             // 
             // lblFormName
             // 
-            this.lblFormName.Size = new System.Drawing.Size(151, 37);
+            this.lblFormName.Size = new System.Drawing.Size(117, 30);
             this.lblFormName.Text = "Merge Lot";
             // 
             // btnView
@@ -216,7 +217,7 @@
             this.chkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkLabel.Location = new System.Drawing.Point(20, 16);
             this.chkLabel.Name = "chkLabel";
-            this.chkLabel.Size = new System.Drawing.Size(66, 20);
+            this.chkLabel.Size = new System.Drawing.Size(65, 20);
             this.chkLabel.TabIndex = 275;
             this.chkLabel.Text = "Label";
             this.chkLabel.UseVisualStyleBackColor = true;
@@ -270,7 +271,7 @@
             this.lblLotID.ForeColor = System.Drawing.Color.Black;
             this.lblLotID.Location = new System.Drawing.Point(25, 28);
             this.lblLotID.Name = "lblLotID";
-            this.lblLotID.Size = new System.Drawing.Size(48, 16);
+            this.lblLotID.Size = new System.Drawing.Size(47, 16);
             this.lblLotID.TabIndex = 259;
             this.lblLotID.Text = "Lot ID";
             this.lblLotID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -322,7 +323,7 @@
             this.lblComment.ForeColor = System.Drawing.Color.Black;
             this.lblComment.Location = new System.Drawing.Point(14, 14);
             this.lblComment.Name = "lblComment";
-            this.lblComment.Size = new System.Drawing.Size(80, 16);
+            this.lblComment.Size = new System.Drawing.Size(79, 16);
             this.lblComment.TabIndex = 254;
             this.lblComment.Text = "Uniqueness";
             this.lblComment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -622,7 +623,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(24, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 16);
+            this.label2.Size = new System.Drawing.Size(47, 16);
             this.label2.TabIndex = 259;
             this.label2.Text = "Lot ID";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -715,7 +716,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(837, 122);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 16);
+            this.label1.Size = new System.Drawing.Size(87, 16);
             this.label1.TabIndex = 320;
             this.label1.Text = "Change Qty";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -739,7 +740,7 @@
             this.lblLotStatus.ForeColor = System.Drawing.Color.Black;
             this.lblLotStatus.Location = new System.Drawing.Point(319, 122);
             this.lblLotStatus.Name = "lblLotStatus";
-            this.lblLotStatus.Size = new System.Drawing.Size(76, 16);
+            this.lblLotStatus.Size = new System.Drawing.Size(75, 16);
             this.lblLotStatus.TabIndex = 318;
             this.lblLotStatus.Text = "Lot Status";
             this.lblLotStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -763,7 +764,7 @@
             this.lblLvlType.ForeColor = System.Drawing.Color.Black;
             this.lblLvlType.Location = new System.Drawing.Point(17, 122);
             this.lblLvlType.Name = "lblLvlType";
-            this.lblLvlType.Size = new System.Drawing.Size(69, 16);
+            this.lblLvlType.Size = new System.Drawing.Size(68, 16);
             this.lblLvlType.TabIndex = 316;
             this.lblLvlType.Text = "Lot Type";
             this.lblLvlType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -787,7 +788,7 @@
             this.lblUnit.ForeColor = System.Drawing.Color.Black;
             this.lblUnit.Location = new System.Drawing.Point(621, 80);
             this.lblUnit.Name = "lblUnit";
-            this.lblUnit.Size = new System.Drawing.Size(35, 16);
+            this.lblUnit.Size = new System.Drawing.Size(34, 16);
             this.lblUnit.TabIndex = 314;
             this.lblUnit.Text = "Unit";
             this.lblUnit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -812,7 +813,7 @@
             this.lblQty.ForeColor = System.Drawing.Color.Black;
             this.lblQty.Location = new System.Drawing.Point(621, 122);
             this.lblQty.Name = "lblQty";
-            this.lblQty.Size = new System.Drawing.Size(68, 16);
+            this.lblQty.Size = new System.Drawing.Size(67, 16);
             this.lblQty.TabIndex = 312;
             this.lblQty.Text = "Prod Qty";
             this.lblQty.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -837,7 +838,7 @@
             this.lblOper.ForeColor = System.Drawing.Color.Black;
             this.lblOper.Location = new System.Drawing.Point(621, 38);
             this.lblOper.Name = "lblOper";
-            this.lblOper.Size = new System.Drawing.Size(76, 16);
+            this.lblOper.Size = new System.Drawing.Size(75, 16);
             this.lblOper.TabIndex = 310;
             this.lblOper.Text = "Operation";
             this.lblOper.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -861,7 +862,7 @@
             this.lblMatDesc.ForeColor = System.Drawing.Color.Black;
             this.lblMatDesc.Location = new System.Drawing.Point(319, 80);
             this.lblMatDesc.Name = "lblMatDesc";
-            this.lblMatDesc.Size = new System.Drawing.Size(73, 16);
+            this.lblMatDesc.Size = new System.Drawing.Size(72, 16);
             this.lblMatDesc.TabIndex = 308;
             this.lblMatDesc.Text = "Mat Desc";
             this.lblMatDesc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -885,7 +886,7 @@
             this.lblMatId.ForeColor = System.Drawing.Color.Black;
             this.lblMatId.Location = new System.Drawing.Point(17, 80);
             this.lblMatId.Name = "lblMatId";
-            this.lblMatId.Size = new System.Drawing.Size(74, 16);
+            this.lblMatId.Size = new System.Drawing.Size(73, 16);
             this.lblMatId.TabIndex = 306;
             this.lblMatId.Text = "Mat Code";
             this.lblMatId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -909,7 +910,7 @@
             this.lblSubAreaId.ForeColor = System.Drawing.Color.Black;
             this.lblSubAreaId.Location = new System.Drawing.Point(319, 38);
             this.lblSubAreaId.Name = "lblSubAreaId";
-            this.lblSubAreaId.Size = new System.Drawing.Size(84, 16);
+            this.lblSubAreaId.Size = new System.Drawing.Size(83, 16);
             this.lblSubAreaId.TabIndex = 304;
             this.lblSubAreaId.Text = "WorkPlace";
             this.lblSubAreaId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -933,7 +934,7 @@
             this.lblAreaId.ForeColor = System.Drawing.Color.Black;
             this.lblAreaId.Location = new System.Drawing.Point(17, 38);
             this.lblAreaId.Name = "lblAreaId";
-            this.lblAreaId.Size = new System.Drawing.Size(88, 16);
+            this.lblAreaId.Size = new System.Drawing.Size(87, 16);
             this.lblAreaId.TabIndex = 302;
             this.lblAreaId.Text = "Department";
             this.lblAreaId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

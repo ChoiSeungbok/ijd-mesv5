@@ -317,6 +317,14 @@ namespace CUS_WIP
                             MPCF.ShowMsgBox(MPCF.GetMessage(465)); //체크항목이 존재하지 않습니다. 확인해주세요.
                             return false;
                         }
+
+                        //txtOperCode.Text 값이 GW-FGI 이며 제품창고 Lot 은  Merge 불가 GRIT 요청(2026/02/03)
+                        if (txtOperCode.Text == "GW-FGI")
+                        {
+                            MPCF.ShowMsgBox(MPCF.GetMessage(623)); // [GW-FGI]제품 창고의 로트는 병합할 수 없습니다.
+                            return false;
+                        }
+
                         break;
                 }
                 return true;
