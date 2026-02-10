@@ -1,4 +1,5 @@
 ﻿using CUS_COM;
+using DevExpress.ClipboardSource.SpreadsheetML;
 using FarPoint.Win.Chart;
 using FarPoint.Win.Spread;
 using FarPoint.Win.Spread.Model;
@@ -1317,8 +1318,8 @@ namespace CUS_QCM
                     data_list.AddString("UNIT_ID", " ");
                     data_list.AddChar("VALUE_TYPE", 'N');
                     data_list.AddInt("VALUE_COUNT", 2);
-                    data_list.AddString("VALUE_1", spdDataCollection.ActiveSheet.Cells[i, (int)COLLECTION_DATA.CIQC05_VALUE_1].Value.ToString());
-                    data_list.AddString("VALUE_2", spdDataCollection.ActiveSheet.Cells[i, (int)COLLECTION_DATA.CIQC05_VALUE_2].Value.ToString());
+                    data_list.AddString("VALUE_1", spdDataCollection.ActiveSheet.Cells[i, (int)COLLECTION_DATA.CIQC05_VALUE_1].Value);
+                    data_list.AddString("VALUE_2", spdDataCollection.ActiveSheet.Cells[i, (int)COLLECTION_DATA.CIQC05_VALUE_2].Value);
                 }
                 //높이
                 for (int i = 0; i < iRowCnt; i++)
@@ -1927,6 +1928,30 @@ namespace CUS_QCM
 
         }
 
+        private int DataCount(double[] data)
+        {
+            int iCount = 0;
+            try
+            {
+                foreach (var item in data)
+                {
+                    if (Convert.ToInt32(item) == 0)
+                    {
+                        //break;
+                        continue;
+                    }
+
+                    iCount++;
+                }
+
+                return iCount;
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+                return iCount;
+            }
+        }
         #endregion
 
         #region " Event Definition "
@@ -2587,37 +2612,43 @@ namespace CUS_QCM
 
             }
 
-            double od1_min;
-            double od1_max;
+            int arrayCount = 0;
+            //double od1_min;
+            //double od1_max;            
             double od1_avg;
-
-            double od2_min;
-            double od2_max;
+            double[] od1_Array = new double[2];
+            
+            //double od2_min;
+            //double od2_max;
             double od2_avg;
+            double[] od2_Array = new double[2];
 
-            double id_min;
-            double id_max;
+            //double id_min;
+            //double id_max;
             double id_avg;
+            double[] id_Array = new double[2];
 
-            double height1;
-            double height2;
-            double height3;
-            double height4;
+            //double height1;
+            //double height2;
+            //double height3;
+            //double height4;
             double height_avg;
+            double[] height_Array = new double[4];
 
-            double thick1;
-            double thick2;
-            double thick3;
-            double thick4;
-            double thick5;
+            //double thick1;
+            //double thick2;
+            //double thick3;
+            //double thick4;
+            //double thick5;
             double thick_avg;
+            double[] thick_Array = new double[5];
 
-            double step_height1;
-            double step_height2;
-            double step_height3;
-            double step_height4;
-
+            //double step_height1;
+            //double step_height2;
+            //double step_height3;
+            //double step_height4;
             double step_height_avg;
+            double[] step_height_Array = new double[4];                       
 
             double weight;
 
@@ -2640,36 +2671,63 @@ namespace CUS_QCM
                        e.Column == (int)COLLECTION_DATA.CIQC14_VALUE_1
                        )
                     {
+                        Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC12_VALUE_1].Text, out od1_Array[0]);
+                        Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC12_VALUE_2].Text, out od1_Array[1]);
+                        Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC13_VALUE_1].Text, out od2_Array[0]);
+                        Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC13_VALUE_2].Text, out od2_Array[1]);
+                        Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC05_VALUE_1].Text, out id_Array[0]);
+                        Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC05_VALUE_2].Text, out id_Array[1]);
+                        Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC06_VALUE_1].Text, out height_Array[0]);
+                        Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC06_VALUE_2].Text, out height_Array[1]);
+                        Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC06_VALUE_3].Text, out height_Array[2]);
+                        Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC06_VALUE_4].Text, out height_Array[3]);
+                        Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC07_VALUE_1].Text, out step_height_Array[0]);
+                        Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC07_VALUE_2].Text, out step_height_Array[1]);
+                        Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC07_VALUE_3].Text, out step_height_Array[2]);
+                        Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC07_VALUE_4].Text, out step_height_Array[3]);
+                        Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC08_VALUE_1].Text, out thick_Array[0]);
+                        Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC08_VALUE_2].Text, out thick_Array[1]);
+                        Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC08_VALUE_3].Text, out thick_Array[2]);
+                        Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC08_VALUE_4].Text, out thick_Array[3]);
+                        Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC08_VALUE_5].Text, out thick_Array[4]);                        
+                        Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC14_VALUE_1].Text, out weight);
 
                         //M12
                         if (rdoDencityCalc01.Checked)
                         {
 
-                            if (Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC12_VALUE_1].Text, out od1_min) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC12_VALUE_2].Text, out od1_max) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC13_VALUE_1].Text, out od2_min) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC13_VALUE_2].Text, out od2_max) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC06_VALUE_1].Text, out height1) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC06_VALUE_2].Text, out height2) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC06_VALUE_3].Text, out height3) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC06_VALUE_4].Text, out height4) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC07_VALUE_1].Text, out step_height1) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC07_VALUE_2].Text, out step_height2) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC07_VALUE_3].Text, out step_height3) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC07_VALUE_4].Text, out step_height4) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC05_VALUE_1].Text, out id_min) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC05_VALUE_2].Text, out id_max) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC14_VALUE_1].Text, out weight)
+                            if (
+                                ((od1_Array[0] + od1_Array[1]) > 0 ) &&
+                                ((od2_Array[0] + od2_Array[1]) > 0 ) &&
+                                ((height_Array[0] + height_Array[1] + height_Array[2] + height_Array[3]) > 0 )  &&
+                                ((step_height_Array[0] + step_height_Array[1] + step_height_Array[2] + step_height_Array[3]) > 0 ) &&
+                                ((id_Array[0] + id_Array[1]) > 0 ) &&
+                                (weight > 0)
+                               )
+                            {                                
+                                arrayCount = DataCount(od1_Array);
 
-                                )
-                            {
-                                od1_avg = (od1_min + od1_max) / 2;  //외경1_평균
-                                od2_avg = (od2_min + od2_max) / 2;  //외경2_평균
-                                id_avg = (id_min + id_max) / 2;     //내경_평균
-                                height_avg = (height1 + height2 + height3 + height4) / 4;   // 높이_평균
-                                step_height_avg = (step_height1 + step_height2 + step_height3 + step_height4) / 4; // 단높이_평균
-                                 
-                                dencity = weight / (((od1_avg / 2) * (od1_avg / 2) * dpie * (height_avg - step_height_avg - step_height_avg)) + ((od2_avg / 2) * (od2_avg / 2) * dpie * step_height_avg * 2) - ((id_avg / 2) * (id_avg / 2) * dpie * height_avg) / 1000);
+
+                                od1_avg = (od1_Array[0] + od1_Array[1]) / DataCount(od1_Array);  //외경1_평균
+                                od2_avg = (od2_Array[0] + od2_Array[1]) / DataCount(od2_Array);  //외경2_평균
+                                id_avg = (id_Array[0] + id_Array[1]) / DataCount(id_Array);     //내경_평균
+                                height_avg = (height_Array[0] + height_Array[1] + height_Array[2] + height_Array[3]) / DataCount(height_Array);   // 높이_평균
+                                step_height_avg = (step_height_Array[0] + step_height_Array[1] + step_height_Array[2] + step_height_Array[3]) / DataCount(step_height_Array); // 단높이_평균
+
+                                // 중량 / (
+                                //          (
+                                //           (외경1_평균 / 2 *  외경1_평균 / 2 * 3.141592 * (높이 평균 - 단높이 평균 - 단높이 평균)) +
+                                //           (외경2_평균 / 2 * 외경2_평균/ 2 * 3.141592 * 단높이 평균 * 2) -
+                                //           (내경평균 / 2 * 내경평균 / 2 * 3.141592 * 높이 평균)
+                                //          ) / 1000
+                                //        )
+                                dencity = weight / (
+                                                    (
+                                                     ((od1_avg / 2) * (od1_avg / 2) * dpie * (height_avg - step_height_avg - step_height_avg)) +
+                                                     ((od2_avg / 2) * (od2_avg / 2) * dpie * step_height_avg * 2) - 
+                                                     ((id_avg / 2) * (id_avg / 2) * dpie * height_avg)
+                                                    ) / 1000
+                                                   );
 
                                 spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC09_VALUE_1].Value = Math.Round(dencity, 3, MidpointRounding.AwayFromZero);
 
@@ -2679,20 +2737,21 @@ namespace CUS_QCM
                         //M11
                         else if (rdoDencityCalc02.Checked)
                         {
-                            if (Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC12_VALUE_1].Text, out od1_min) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC12_VALUE_2].Text, out od1_max) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC08_VALUE_1].Text, out thick1) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC08_VALUE_2].Text, out thick2) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC08_VALUE_3].Text, out thick3) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC08_VALUE_4].Text, out thick4) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC08_VALUE_5].Text, out thick5) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC14_VALUE_1].Text, out weight)
+                            if (
+                                ((od1_Array[0] + od1_Array[1]) > 0) &&
+                                ((thick_Array[0] + thick_Array[1] + thick_Array[2] + thick_Array[3] + thick_Array[4]) > 0)  &&
+                                (weight > 0)
                                )
                             {
-                                od1_avg = (od1_min + od1_max) / 2;
-                                thick_avg = (thick1 + thick2 + thick3 + thick4 + thick5) / 5;
+                                od1_avg = (od1_Array[0] + od1_Array[1]) / DataCount(od1_Array);  //외경1_평균
+                                thick_avg = (thick_Array[0] + thick_Array[1] + thick_Array[2] + thick_Array[3] + thick_Array[4]) / DataCount(od1_Array); //두께평균
 
-                                dencity = weight / (((od1_avg / 2) * (od1_avg / 2) * dpie * thick_avg) / 1000);
+                                // 중량 / (
+                                //         (외경1_평균 / 2 * 외경1_평균 / 2 * 3.141592 * 두께평균) / 1000
+                                //        )
+                                dencity = weight / (
+                                                    (((od1_avg / 2) * (od1_avg / 2) * dpie) * thick_avg ) / 1000
+                                                   ) ;
 
                                 spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC09_VALUE_1].Value = Math.Round(dencity, 3, MidpointRounding.AwayFromZero);
 
@@ -2701,26 +2760,29 @@ namespace CUS_QCM
                         //M11(내경)
                         else if (rdoDencityCalc03.Checked)
                         {
-                            if (Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC12_VALUE_1].Text, out od1_min) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC12_VALUE_2].Text, out od1_max) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC08_VALUE_1].Text, out thick1) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC08_VALUE_2].Text, out thick2) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC08_VALUE_3].Text, out thick3) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC08_VALUE_4].Text, out thick4) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC08_VALUE_5].Text, out thick5) &&
-
-
-
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC05_VALUE_1].Text, out id_min) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC05_VALUE_2].Text, out id_max) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC14_VALUE_1].Text, out weight)
+                            if (
+                                ((od1_Array[0] + od1_Array[1]) > 0) &&
+                                ((thick_Array[0] + thick_Array[1] + thick_Array[2] + thick_Array[3] + thick_Array[4]) > 0) &&
+                                ((id_Array[0] + id_Array[1]) > 0) &&
+                                (weight > 0)
                               )
                             {
-                                od1_avg = (od1_min + od1_max) / 2;
-                                id_avg = (id_min + id_max) / 2;
-                                thick_avg = (thick1 + thick2 + thick3 + thick4 + thick5) / 5;  //두께 평균
+                                od1_avg = (od1_Array[0] + od1_Array[1]) / DataCount(od1_Array);  //외경1_평균
+                                id_avg = (id_Array[0] + id_Array[1]) / DataCount(id_Array);     //내경_평균
+                                thick_avg = (thick_Array[0] + thick_Array[1] + thick_Array[2] + thick_Array[3] + thick_Array[4]) / DataCount(od1_Array); //두께평균
 
-                                dencity = weight / ((((od1_avg / 2) * (od1_avg / 2) * dpie * thick_avg) - ((id_avg / 2) * (id_avg / 2) * dpie * thick_avg)) / 1000);
+                                // 중량 / (
+                                //         (
+                                //           (외경1_평균 / 2 * 외경1_평균 / 2 * 3.141592 * 두께_평균) -
+                                //           (내경_평균 / 2 * 내경_평균 / 2 * 3.141592 * 두께_평균)
+                                //         ) / 1000
+                                //        )
+                                dencity = weight / (
+                                                    (
+                                                     ((od1_avg / 2) * (od1_avg / 2) * dpie * thick_avg) - 
+                                                     ((id_avg / 2) * (id_avg / 2) * dpie * thick_avg)
+                                                    ) / 1000
+                                                   );
 
                                 spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC09_VALUE_1].Value = Math.Round(dencity, 3, MidpointRounding.AwayFromZero);
 
@@ -2729,31 +2791,36 @@ namespace CUS_QCM
                         //M11(내경_NEW)
                         else if (rdoDencityCalc04.Checked)
                         {
-                            if (Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC12_VALUE_1].Text, out od1_min) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC12_VALUE_2].Text, out od1_max) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC13_VALUE_1].Text, out od2_min) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC13_VALUE_2].Text, out od2_max) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC07_VALUE_1].Text, out step_height1) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC07_VALUE_2].Text, out step_height2) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC07_VALUE_3].Text, out step_height3) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC07_VALUE_4].Text, out step_height4) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC08_VALUE_1].Text, out thick1) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC08_VALUE_2].Text, out thick2) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC08_VALUE_3].Text, out thick3) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC08_VALUE_4].Text, out thick4) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC08_VALUE_5].Text, out thick5) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC05_VALUE_1].Text, out id_min) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC05_VALUE_2].Text, out id_max) &&
-                                Double.TryParse(spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC14_VALUE_1].Text, out weight)
+                            if (
+                                ((od1_Array[0] + od1_Array[1]) > 0) &&
+                                ((od2_Array[0] + od2_Array[1]) > 0) &&
+                                ((step_height_Array[0] + step_height_Array[1] + step_height_Array[2] + step_height_Array[3]) > 0) &&
+                                ((thick_Array[0] + thick_Array[1] + thick_Array[2] + thick_Array[3] + thick_Array[4]) > 0) &&
+                                ((id_Array[0] + id_Array[1]) > 0) &&
+                                (weight > 0)
                               )
                             {
-                                od1_avg = (od1_min + od1_max) / 2; // 외경1_평균
-                                od2_avg = (od2_min + od2_max) / 2; // 외경2_평균
-                                id_avg = (id_min + id_max) / 2;    // 내경_평균
-                                thick_avg = (thick1 + thick2 + thick3 + thick4 + thick5) / 5;                      //두께 평균
-                                step_height_avg = (step_height1 + step_height2 + step_height3 + step_height4) / 4; //단높이_평균
+                                od1_avg = (od1_Array[0] + od1_Array[1]) / DataCount(od1_Array);  //외경1_평균
+                                od2_avg = (od2_Array[0] + od2_Array[1]) / DataCount(od2_Array);  //외경2_평균
+                                id_avg = (id_Array[0] + id_Array[1]) / DataCount(id_Array);     //내경_평균
+                                thick_avg = (thick_Array[0] + thick_Array[1] + thick_Array[2] + thick_Array[3] + thick_Array[4]) / DataCount(od1_Array); //두께평균
+                                step_height_avg = (step_height_Array[0] + step_height_Array[1] + step_height_Array[2] + step_height_Array[3]) / DataCount(step_height_Array); // 단높이_평균
 
-                                dencity = weight / (((od2_avg / 2) * (od2_avg / 2) * dpie * step_height_avg) + ((od1_avg / 2) * (od1_avg / 2) * dpie * (thick_avg - step_height_avg) - ((id_avg / 2) * (id_avg / 2) * dpie * thick_avg)) * 1000);
+                                // 중량 / (
+                                //         (
+                                //          ((외경2_평균 / 2) * (외경2_평균 / 2) * 3.141592 * 단높이 평균) +
+                                //          ((외경1_평균 / 2) * (외경1_평균 / 2) * 3.141592 * (두께 평균 - 단높이 평균)) -
+                                //          ((내경_평균 / 2) * (내경_평균 / 2) * 3.141592 * 두께 평균)
+                                //         ) / 1000
+                                //        )
+
+                                dencity = weight / (
+                                                    (
+                                                     ((od2_avg / 2) * (od2_avg / 2) * dpie * step_height_avg) +
+                                                     ((od1_avg / 2) * (od1_avg / 2) * dpie * (thick_avg - step_height_avg)) - 
+                                                     ((id_avg / 2) * (id_avg / 2) * dpie * thick_avg) 
+                                                    ) / 1000
+                                                   );
 
                                 spdDataCollection.ActiveSheet.Cells[e.Row, (int)COLLECTION_DATA.CIQC09_VALUE_1].Value = Math.Round(dencity, 3, MidpointRounding.AwayFromZero);
 
