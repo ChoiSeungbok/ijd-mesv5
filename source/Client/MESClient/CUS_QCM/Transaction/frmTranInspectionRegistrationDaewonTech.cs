@@ -1331,7 +1331,7 @@ namespace CUS_QCM
                     data_list.AddInt("VALUE_SEQ", 1);
                     data_list.AddString("UNIT_ID", " ");
                     data_list.AddChar("VALUE_TYPE", 'N');
-                    data_list.AddInt("VALUE_COUNT", 1);
+                    data_list.AddInt("VALUE_COUNT", 4);
                     data_list.AddString("VALUE_1", spdDataCollection.ActiveSheet.Cells[i, (int)COLLECTION_DATA.CIQC06_VALUE_1].Text);
                     data_list.AddString("VALUE_2", spdDataCollection.ActiveSheet.Cells[i, (int)COLLECTION_DATA.CIQC06_VALUE_2].Text);
                     data_list.AddString("VALUE_3", spdDataCollection.ActiveSheet.Cells[i, (int)COLLECTION_DATA.CIQC06_VALUE_3].Text);
@@ -1348,7 +1348,7 @@ namespace CUS_QCM
                     data_list.AddInt("VALUE_SEQ", 1);
                     data_list.AddString("UNIT_ID", " ");
                     data_list.AddChar("VALUE_TYPE", 'N');
-                    data_list.AddInt("VALUE_COUNT", 2);
+                    data_list.AddInt("VALUE_COUNT", 4);
                     data_list.AddString("VALUE_1", spdDataCollection.ActiveSheet.Cells[i, (int)COLLECTION_DATA.CIQC07_VALUE_1].Text);
                     data_list.AddString("VALUE_2", spdDataCollection.ActiveSheet.Cells[i, (int)COLLECTION_DATA.CIQC07_VALUE_2].Text);
                     data_list.AddString("VALUE_3", spdDataCollection.ActiveSheet.Cells[i, (int)COLLECTION_DATA.CIQC07_VALUE_3].Text);
@@ -1366,7 +1366,7 @@ namespace CUS_QCM
                     data_list.AddInt("VALUE_SEQ", 1);
                     data_list.AddString("UNIT_ID", " ");
                     data_list.AddChar("VALUE_TYPE", 'N');
-                    data_list.AddInt("VALUE_COUNT", 2);
+                    data_list.AddInt("VALUE_COUNT", 5);
                     data_list.AddString("VALUE_1", spdDataCollection.ActiveSheet.Cells[i, (int)COLLECTION_DATA.CIQC08_VALUE_1].Text);
                     data_list.AddString("VALUE_2", spdDataCollection.ActiveSheet.Cells[i, (int)COLLECTION_DATA.CIQC08_VALUE_2].Text);
                     data_list.AddString("VALUE_3", spdDataCollection.ActiveSheet.Cells[i, (int)COLLECTION_DATA.CIQC08_VALUE_3].Text);
