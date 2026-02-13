@@ -85,6 +85,14 @@ int CUS_SHP_CHECK_SHIP_LOT(char *s_msg_code, TRSNode *in_node, TRSNode *out_node
 {
 	struct CPAKLOTSTS_TAG CPAKLOTSTS;
 	struct MGCMTBLDAT_TAG MGCMTBLDAT;
+	struct IF_OM_SHIP_LINES_TAG IF_OM_SHIP_LINES;
+
+	TRSNode* confirm_in;
+	TRSNode* cmn_out;
+    TRSNode** pack_lot_list;
+	TRSNode* lot_list;
+	int i;
+
 
 	LOG_head("CUS_SHP_Check_Ship_Lot");
 	TRS.log_add_all_members(in_node);
@@ -100,8 +108,14 @@ int CUS_SHP_CHECK_SHIP_LOT(char *s_msg_code, TRSNode *in_node, TRSNode *out_node
 	// CPAKLOTSTS - 포장 LOT 정보 조회
 	DBU_init_cpaklotsts(&CPAKLOTSTS);
 	TRS.copy(CPAKLOTSTS.FACTORY, sizeof(CPAKLOTSTS.FACTORY), in_node, IN_FACTORY);
+
+	// test-----------------------------------------------------------------------------
+	// TRS.add_string(in_node, "LOT_ID_1", "KGABA25-014-025", strlen("KGABA25-014-025"));
+	// TRS.add_string(in_node, "LOT_ID_2", "KGABA25-014-028", strlen("KGABA25-014-028"));
+	// -------------------------------------------------------------------------------
 	TRS.copy(CPAKLOTSTS.ORG_LOT_ID, sizeof(CPAKLOTSTS.ORG_LOT_ID), in_node, "LOT_ID_1");	// 1번째 INPUT
-	TRS.copy(CPAKLOTSTS.PACK_LOT_ID, sizeof(CPAKLOTSTS.PACK_LOT_ID), in_node, "LOT_ID_2");	// 2번째 INPUT
+	TRS.copy(CPAKLOTSTS.PACK_LOT_ID, sizeof(CPAKLOTSTS.PACK_LOT_ID), in_node, "LOT_ID_2");	// 2번째 INPUT	
+
 	DBU_select_cpaklotsts(1, &CPAKLOTSTS);
 
 	if (DB_error_code != DB_SUCCESS && DB_error_code != DB_NOT_FOUND)
@@ -127,8 +141,14 @@ int CUS_SHP_CHECK_SHIP_LOT(char *s_msg_code, TRSNode *in_node, TRSNode *out_node
 		// CPAKLOTSTS - 포장 LOT 정보 조회
 		DBU_init_cpaklotsts(&CPAKLOTSTS);
 		TRS.copy(CPAKLOTSTS.FACTORY, sizeof(CPAKLOTSTS.FACTORY), in_node, IN_FACTORY);
+
+		// test---------------------------------------------------------------------------
+		// TRS.add_string(in_node, "LOT_ID_1", "KGABA25-014-028", strlen("KGABA25-014-028"));
+		// TRS.add_string(in_node, "LOT_ID_2", "KGABA25-014-025", strlen("KGABA25-014-025"));
+		// -------------------------------------------------------------------------------		
 		TRS.copy(CPAKLOTSTS.ORG_LOT_ID, sizeof(CPAKLOTSTS.ORG_LOT_ID), in_node, "LOT_ID_2");	// 2번째 INPUT
-		TRS.copy(CPAKLOTSTS.PACK_LOT_ID, sizeof(CPAKLOTSTS.PACK_LOT_ID), in_node, "LOT_ID_1");	// 1번째 INPUT
+		TRS.copy(CPAKLOTSTS.PACK_LOT_ID, sizeof(CPAKLOTSTS.PACK_LOT_ID), in_node, "LOT_ID_1");	// 1번째 INPUT		
+		
 		DBU_select_cpaklotsts(1, &CPAKLOTSTS);
 
 		if (DB_error_code != DB_SUCCESS && DB_error_code != DB_NOT_FOUND)
@@ -173,52 +193,188 @@ int CUS_SHP_CHECK_SHIP_LOT(char *s_msg_code, TRSNode *in_node, TRSNode *out_node
 				return MP_FALSE;
 			}
 
-			TRS.add_string(out_node, "MATCH", MGCMTBLDAT.DATA_1, sizeof(MGCMTBLDAT.DATA_1));
+			TRS.add_string(out_node, "MATCH", MGCMTBLDAT.DATA_1, sizeof(MGCMTBLDAT.DATA_1));			
 		}
 		else
 		{
-
-
-			TRS.copy(CPAKLOTSTS.FACTORY, sizeof(CPAKLOTSTS.FACTORY), in_node, IN_FACTORY);
-			memcpy(CPAKLOTSTS.CMF_6, "Y", strlen("Y"));
-
-			DBU_update_cpaklotsts(7, &CPAKLOTSTS);
-
-			if (DB_error_code != DB_SUCCESS && DB_error_code != DB_NOT_FOUND)
+			// 2026-02-11
+			// As-Is : PDA 공정-출하 LOT별 관계체크 화면 매치 클릭시  CPAKLOTSTS.CMF_6 = 'Y' PDA 매치
+			// To-Be : 
+			//      1. 포장확정상태인지 체크 CPAKLOTSTS.PACK_FLAG = 'Y'  이면 PASS   
+			//      2. PDA에서 이미 매치 해둔 상태이면 포장 확정처리 CUS_SHP_CONFIRM_PACK_ORDER_MAIN
+			//      3. PDA에서 매치상태가 아니면 CPAKLOTSTS.CMF_6 = 'Y' 업데이트
+					
+			if (CPAKLOTSTS.PACK_FLAG == 'Y')
 			{
-				strcpy(s_msg_code, "WIP-0004");
-				TRS.add_fieldmsg(out_node, "CPAKLOTSTS UPDATE", MP_NVST);
-				TRS.add_fieldmsg(out_node, "FACTORY", MP_STR, sizeof(CPAKLOTSTS.FACTORY), CPAKLOTSTS.FACTORY);
-				TRS.add_fieldmsg(out_node, "ORG_LOT_ID", MP_STR, sizeof(CPAKLOTSTS.ORG_LOT_ID), CPAKLOTSTS.ORG_LOT_ID);
-				TRS.add_fieldmsg(out_node, "PACK_LOT_ID", MP_INT, CPAKLOTSTS.PACK_LOT_ID);
-				TRS.add_dberrmsg(out_node, DB_error_msg);
+				// 포장 확정 상태면 
 
-				gs_log_type.type = MP_LOG_ERROR;
-				gs_log_type.e_type = MP_LOG_E_SYSTEM;
-				gs_log_type.category = MP_LOG_CATE_TRANS;
-				COM_set_result(out_node, MP_FAIL_C, s_msg_code, MP_MSG_CATE_ERROR, TRS.get_language(in_node));
-				return MP_FALSE;
+				// 포장 메세지
+				DBU_init_mgcmtbldat(&MGCMTBLDAT);
+				TRS.copy(MGCMTBLDAT.FACTORY, sizeof(MGCMTBLDAT.FACTORY), in_node, IN_FACTORY);
+				memcpy(MGCMTBLDAT.TABLE_NAME, MP_GCM_C_SHIP_STATUS, strlen(MP_GCM_C_SHIP_STATUS));
+				memcpy(MGCMTBLDAT.KEY_1, MP_CSHP_STATUS_PACKED, strlen(MP_CSHP_STATUS_PACKED));
+				//memcpy(MGCMTBLDAT.KEY_1, "PACKED", strlen("PACKED")); 
+				DBU_select_mgcmtbldat(1, &MGCMTBLDAT);
+				if (DB_error_code != DB_SUCCESS)
+				{
+					//GCM-0008 : TABLE에 존재하지 않는 항목입니다.
+					strcpy(s_msg_code, "GCM-0008");
+					TRS.add_fieldmsg(out_node, "MGCMTBLDAT SELECT", MP_NVST);
+					TRS.add_fieldmsg(out_node, "FACTORY", MP_STR, sizeof(MGCMTBLDAT.FACTORY), MGCMTBLDAT.FACTORY);
+					TRS.add_fieldmsg(out_node, "TABLE_NAME", MP_STR, sizeof(MGCMTBLDAT.TABLE_NAME), MGCMTBLDAT.TABLE_NAME);
+					TRS.add_fieldmsg(out_node, "STATUS", MP_STR, sizeof(MGCMTBLDAT.KEY_1), MGCMTBLDAT.KEY_1);
+					TRS.add_dberrmsg(out_node, DB_error_msg);
+
+					gs_log_type.type = MP_LOG_ERROR;
+					gs_log_type.e_type = MP_LOG_E_SYSTEM;
+					gs_log_type.category = MP_LOG_CATE_VIEW;
+
+					COM_set_result(out_node, MP_FAIL_C, s_msg_code, MP_MSG_CATE_ERROR, TRS.get_language(in_node));
+					return MP_FALSE;
+				}
+
+				TRS.add_string(out_node, "MATCH", MGCMTBLDAT.DATA_1, sizeof(MGCMTBLDAT.DATA_1));
 			}
+			else
+			{
+				// PDA에서 이미 매치 해둔 상태이면 포장 확정처리
+				if (memcmp(CPAKLOTSTS.CMF_6, "Y", sizeof(CPAKLOTSTS.CMF_6)) == MP_TRUE)
+				{
+					//포장확정
+					confirm_in = TRS.add_node(in_node, "confirm_in");
+					CopyDefaultMembers(confirm_in, in_node);
 
+					TRS.add_char(confirm_in, IN_PROCSTEP, '1');
+					TRS.add_string(confirm_in, "PACK_ORDER_ID", CPAKLOTSTS.PACK_ORDER_ID, sizeof(CPAKLOTSTS.PACK_ORDER_ID));
+					TRS.add_int(confirm_in, "LINE_NO", CPAKLOTSTS.PACK_LINE_NO);
+					
+					pack_lot_list = TRS.add_node(confirm_in, "PACK_LOT_LIST");					 
+					TRS.add_string(pack_lot_list, "ORG_LOT_ID", CPAKLOTSTS.ORG_LOT_ID, sizeof(CPAKLOTSTS.ORG_LOT_ID));
+					TRS.add_string(pack_lot_list, "PACK_LOT_ID", CPAKLOTSTS.PACK_LOT_ID, sizeof(CPAKLOTSTS.PACK_LOT_ID));
 
+					cmn_out = TRS.create_node("Cmn_Out");
+					if (CUS_SHP_CONFIRM_PACK_ORDER_MAIN(s_msg_code, confirm_in, cmn_out) == MP_FALSE)
+					{
+						TRS.clone(out_node, cmn_out);
+						TRS.free_node(cmn_out);
 
-			//일치 데이터 조회
+						return MP_FALSE;
+					}
+					TRS.free_node(cmn_out);
+
+					// 포장 메세지
+					DBU_init_mgcmtbldat(&MGCMTBLDAT);
+					TRS.copy(MGCMTBLDAT.FACTORY, sizeof(MGCMTBLDAT.FACTORY), in_node, IN_FACTORY);
+					memcpy(MGCMTBLDAT.TABLE_NAME, MP_GCM_C_SHIP_STATUS, strlen(MP_GCM_C_SHIP_STATUS));
+					memcpy(MGCMTBLDAT.KEY_1, MP_CSHP_STATUS_PACKED, strlen(MP_CSHP_STATUS_PACKED));
+					//memcpy(MGCMTBLDAT.KEY_1, "PACKED", strlen("PACKED")); 
+					DBU_select_mgcmtbldat(1, &MGCMTBLDAT);
+					if (DB_error_code != DB_SUCCESS)
+					{
+						//GCM-0008 : TABLE에 존재하지 않는 항목입니다.
+						strcpy(s_msg_code, "GCM-0008");
+						TRS.add_fieldmsg(out_node, "MGCMTBLDAT SELECT", MP_NVST);
+						TRS.add_fieldmsg(out_node, "FACTORY", MP_STR, sizeof(MGCMTBLDAT.FACTORY), MGCMTBLDAT.FACTORY);
+						TRS.add_fieldmsg(out_node, "TABLE_NAME", MP_STR, sizeof(MGCMTBLDAT.TABLE_NAME), MGCMTBLDAT.TABLE_NAME);
+						TRS.add_fieldmsg(out_node, "STATUS", MP_STR, sizeof(MGCMTBLDAT.KEY_1), MGCMTBLDAT.KEY_1);
+						TRS.add_dberrmsg(out_node, DB_error_msg);
+
+						gs_log_type.type = MP_LOG_ERROR;
+						gs_log_type.e_type = MP_LOG_E_SYSTEM;
+						gs_log_type.category = MP_LOG_CATE_VIEW;
+
+						COM_set_result(out_node, MP_FAIL_C, s_msg_code, MP_MSG_CATE_ERROR, TRS.get_language(in_node));
+						return MP_FALSE;
+					}
+
+					TRS.add_string(out_node, "MATCH", MGCMTBLDAT.DATA_1, sizeof(MGCMTBLDAT.DATA_1));
+					
+				}
+				else
+				{
+					TRS.copy(CPAKLOTSTS.FACTORY, sizeof(CPAKLOTSTS.FACTORY), in_node, IN_FACTORY);
+					memcpy(CPAKLOTSTS.CMF_6, "Y", strlen("Y"));
+
+					DBU_update_cpaklotsts(7, &CPAKLOTSTS);
+
+					if (DB_error_code != DB_SUCCESS && DB_error_code != DB_NOT_FOUND)
+					{
+						strcpy(s_msg_code, "WIP-0004");
+						TRS.add_fieldmsg(out_node, "CPAKLOTSTS UPDATE", MP_NVST);
+						TRS.add_fieldmsg(out_node, "FACTORY", MP_STR, sizeof(CPAKLOTSTS.FACTORY), CPAKLOTSTS.FACTORY);
+						TRS.add_fieldmsg(out_node, "ORG_LOT_ID", MP_STR, sizeof(CPAKLOTSTS.ORG_LOT_ID), CPAKLOTSTS.ORG_LOT_ID);
+						TRS.add_fieldmsg(out_node, "PACK_LOT_ID", MP_INT, CPAKLOTSTS.PACK_LOT_ID);
+						TRS.add_dberrmsg(out_node, DB_error_msg);
+
+						gs_log_type.type = MP_LOG_ERROR;
+						gs_log_type.e_type = MP_LOG_E_SYSTEM;
+						gs_log_type.category = MP_LOG_CATE_TRANS;
+						COM_set_result(out_node, MP_FAIL_C, s_msg_code, MP_MSG_CATE_ERROR, TRS.get_language(in_node));
+						return MP_FALSE;
+					}
+
+					//일치 데이터 조회
+					DBU_init_mgcmtbldat(&MGCMTBLDAT);
+					TRS.copy(MGCMTBLDAT.FACTORY, sizeof(MGCMTBLDAT.FACTORY), in_node, IN_FACTORY);
+					memcpy(MGCMTBLDAT.TABLE_NAME, MP_GCM_MATCH_STATUS, strlen(MP_GCM_MATCH_STATUS));
+					memcpy(MGCMTBLDAT.KEY_1, "Y", strlen("Y"));
+					DBU_select_mgcmtbldat(1, &MGCMTBLDAT);
+					if (DB_error_code != DB_SUCCESS)
+					{
+						strcpy(s_msg_code, "INV-0004");
+						gs_log_type.e_type = MP_LOG_E_SYSTEM;
+						TRS.add_dberrmsg(out_node, DB_error_msg);
+						TRS.add_fieldmsg(out_node, "MGCMTBLDAT SELECT(1)", MP_NVST);
+						TRS.add_fieldmsg(out_node, "FACTORY", MP_STR, sizeof(MGCMTBLDAT.FACTORY), MGCMTBLDAT.FACTORY);
+						TRS.add_fieldmsg(out_node, "TABLE_NAME", MP_STR, sizeof(MGCMTBLDAT.TABLE_NAME), MGCMTBLDAT.TABLE_NAME);
+						TRS.add_fieldmsg(out_node, "SRC_CODE", MP_STR, sizeof(MGCMTBLDAT.KEY_1), MGCMTBLDAT.KEY_1);
+
+						gs_log_type.type = MP_LOG_ERROR;
+						gs_log_type.category = MP_LOG_CATE_VIEW;
+
+						COM_set_result(out_node, MP_FAIL_C, s_msg_code, MP_MSG_CATE_ERROR, TRS.get_language(in_node));
+						return MP_FALSE;
+					}
+
+					TRS.add_string(out_node, "MATCH", MGCMTBLDAT.DATA_1, sizeof(MGCMTBLDAT.DATA_1));
+
+				}
+
+			}
+			
+		}
+	}
+	else
+	{
+		//--------------------------------------------------------------------------------------------------------------------------
+		// 2026-02-11
+		// As-Is : PDA 공정-출하 LOT별 관계체크 화면 매치 클릭시  CPAKLOTSTS.CMF_6 = 'Y' PDA 매치
+		// To-Be : 
+		//      1. 포장확정상태인지 체크 CPAKLOTSTS.PACK_FLAG = 'Y'  이면 PASS   
+		//      2. PDA에서 이미 매치 해둔 상태이면 포장 확정처리 CUS_SHP_CONFIRM_PACK_ORDER_MAIN
+		//      3. PDA에서 매치상태가 아니면 CPAKLOTSTS.CMF_6 = 'Y' 업데이트
+		  		
+		if (CPAKLOTSTS.PACK_FLAG == 'Y')
+		{
+			// 포장 확정 상태면  
 			DBU_init_mgcmtbldat(&MGCMTBLDAT);
 			TRS.copy(MGCMTBLDAT.FACTORY, sizeof(MGCMTBLDAT.FACTORY), in_node, IN_FACTORY);
-			memcpy(MGCMTBLDAT.TABLE_NAME, MP_GCM_MATCH_STATUS, strlen(MP_GCM_MATCH_STATUS));
-			memcpy(MGCMTBLDAT.KEY_1, "Y", strlen("Y"));
+			memcpy(MGCMTBLDAT.TABLE_NAME, MP_GCM_C_SHIP_STATUS, strlen(MP_GCM_C_SHIP_STATUS));
+			memcpy(MGCMTBLDAT.KEY_1, MP_CSHP_STATUS_PACKED, strlen(MP_CSHP_STATUS_PACKED));
+			//memcpy(MGCMTBLDAT.KEY_1, "PACKED", strlen("PACKED")); 
 			DBU_select_mgcmtbldat(1, &MGCMTBLDAT);
 			if (DB_error_code != DB_SUCCESS)
 			{
-				strcpy(s_msg_code, "INV-0004");
-				gs_log_type.e_type = MP_LOG_E_SYSTEM;
-				TRS.add_dberrmsg(out_node, DB_error_msg);
-				TRS.add_fieldmsg(out_node, "MGCMTBLDAT SELECT(1)", MP_NVST);
+				//GCM-0008 : TABLE에 존재하지 않는 항목입니다.
+				strcpy(s_msg_code, "GCM-0008");
+				TRS.add_fieldmsg(out_node, "MGCMTBLDAT SELECT", MP_NVST);
 				TRS.add_fieldmsg(out_node, "FACTORY", MP_STR, sizeof(MGCMTBLDAT.FACTORY), MGCMTBLDAT.FACTORY);
 				TRS.add_fieldmsg(out_node, "TABLE_NAME", MP_STR, sizeof(MGCMTBLDAT.TABLE_NAME), MGCMTBLDAT.TABLE_NAME);
-				TRS.add_fieldmsg(out_node, "SRC_CODE", MP_STR, sizeof(MGCMTBLDAT.KEY_1), MGCMTBLDAT.KEY_1);
+				TRS.add_fieldmsg(out_node, "STATUS", MP_STR, sizeof(MGCMTBLDAT.KEY_1), MGCMTBLDAT.KEY_1);
+				TRS.add_dberrmsg(out_node, DB_error_msg);
 
 				gs_log_type.type = MP_LOG_ERROR;
+				gs_log_type.e_type = MP_LOG_E_SYSTEM;
 				gs_log_type.category = MP_LOG_CATE_VIEW;
 
 				COM_set_result(out_node, MP_FAIL_C, s_msg_code, MP_MSG_CATE_ERROR, TRS.get_language(in_node));
@@ -227,56 +383,110 @@ int CUS_SHP_CHECK_SHIP_LOT(char *s_msg_code, TRSNode *in_node, TRSNode *out_node
 
 			TRS.add_string(out_node, "MATCH", MGCMTBLDAT.DATA_1, sizeof(MGCMTBLDAT.DATA_1));
 		}
-	}
-	else
-	{
-
-		TRS.copy(CPAKLOTSTS.FACTORY, sizeof(CPAKLOTSTS.FACTORY), in_node, IN_FACTORY);
-		memcpy(CPAKLOTSTS.CMF_6, "Y", strlen("Y"));
-
-		DBU_update_cpaklotsts(7, &CPAKLOTSTS);
-
-		if (DB_error_code != DB_SUCCESS && DB_error_code != DB_NOT_FOUND)
+		else
 		{
-			strcpy(s_msg_code, "WIP-0004");
-			TRS.add_fieldmsg(out_node, "CPAKLOTSTS UPDATE", MP_NVST);
-			TRS.add_fieldmsg(out_node, "FACTORY", MP_STR, sizeof(CPAKLOTSTS.FACTORY), CPAKLOTSTS.FACTORY);
-			TRS.add_fieldmsg(out_node, "ORG_LOT_ID", MP_STR, sizeof(CPAKLOTSTS.ORG_LOT_ID), CPAKLOTSTS.ORG_LOT_ID);
-			TRS.add_fieldmsg(out_node, "PACK_LOT_ID", MP_INT, CPAKLOTSTS.PACK_LOT_ID);
-			TRS.add_dberrmsg(out_node, DB_error_msg);
+			// PDA에서 이미 매치 해둔 상태이면 포장 확정처리
+			if (memcmp(CPAKLOTSTS.CMF_6, "Y", sizeof(CPAKLOTSTS.CMF_6)) == MP_TRUE)
+			{
+				//포장확정
+				confirm_in = TRS.add_node(in_node, "confirm_in");
+				CopyDefaultMembers(confirm_in, in_node);
 
-			gs_log_type.type = MP_LOG_ERROR;
-			gs_log_type.e_type = MP_LOG_E_SYSTEM;
-			gs_log_type.category = MP_LOG_CATE_TRANS;
-			COM_set_result(out_node, MP_FAIL_C, s_msg_code, MP_MSG_CATE_ERROR, TRS.get_language(in_node));
-			return MP_FALSE;
-		}
+				TRS.add_char(confirm_in, IN_PROCSTEP, '1');
+				TRS.add_string(confirm_in, "PACK_ORDER_ID" , CPAKLOTSTS.PACK_ORDER_ID, sizeof(CPAKLOTSTS.PACK_ORDER_ID));
+				TRS.add_int(confirm_in, "LINE_NO"          , CPAKLOTSTS.PACK_LINE_NO);
+
+				pack_lot_list = TRS.add_node(confirm_in, "PACK_LOT_LIST");
+				TRS.add_string(pack_lot_list, "ORG_LOT_ID" , CPAKLOTSTS.ORG_LOT_ID, sizeof(CPAKLOTSTS.ORG_LOT_ID));
+				TRS.add_string(pack_lot_list, "PACK_LOT_ID", CPAKLOTSTS.PACK_LOT_ID, sizeof(CPAKLOTSTS.PACK_LOT_ID));
+
+				cmn_out = TRS.create_node("Cmn_Out");
+				if (CUS_SHP_CONFIRM_PACK_ORDER_MAIN(s_msg_code, confirm_in, cmn_out) == MP_FALSE)
+				{
+					TRS.clone(out_node, cmn_out);
+					TRS.free_node(cmn_out);
+
+					return MP_FALSE;
+				}
+				TRS.free_node(cmn_out);
+
+				// 포장 메세지
+				DBU_init_mgcmtbldat(&MGCMTBLDAT);
+				TRS.copy(MGCMTBLDAT.FACTORY, sizeof(MGCMTBLDAT.FACTORY), in_node, IN_FACTORY);
+				memcpy(MGCMTBLDAT.TABLE_NAME, MP_GCM_C_SHIP_STATUS, strlen(MP_GCM_C_SHIP_STATUS));
+				memcpy(MGCMTBLDAT.KEY_1, MP_CSHP_STATUS_PACKED, strlen(MP_CSHP_STATUS_PACKED));
+				//memcpy(MGCMTBLDAT.KEY_1, "PACKED", strlen("PACKED")); 
+				DBU_select_mgcmtbldat(1, &MGCMTBLDAT);
+				if (DB_error_code != DB_SUCCESS)
+				{
+					//GCM-0008 : TABLE에 존재하지 않는 항목입니다.
+					strcpy(s_msg_code, "GCM-0008");
+					TRS.add_fieldmsg(out_node, "MGCMTBLDAT SELECT", MP_NVST);
+					TRS.add_fieldmsg(out_node, "FACTORY", MP_STR, sizeof(MGCMTBLDAT.FACTORY), MGCMTBLDAT.FACTORY);
+					TRS.add_fieldmsg(out_node, "TABLE_NAME", MP_STR, sizeof(MGCMTBLDAT.TABLE_NAME), MGCMTBLDAT.TABLE_NAME);
+					TRS.add_fieldmsg(out_node, "STATUS", MP_STR, sizeof(MGCMTBLDAT.KEY_1), MGCMTBLDAT.KEY_1);
+					TRS.add_dberrmsg(out_node, DB_error_msg);
+
+					gs_log_type.type = MP_LOG_ERROR;
+					gs_log_type.e_type = MP_LOG_E_SYSTEM;
+					gs_log_type.category = MP_LOG_CATE_VIEW;
+
+					COM_set_result(out_node, MP_FAIL_C, s_msg_code, MP_MSG_CATE_ERROR, TRS.get_language(in_node));
+					return MP_FALSE;
+				}
+
+				TRS.add_string(out_node, "MATCH", MGCMTBLDAT.DATA_1, sizeof(MGCMTBLDAT.DATA_1));
+			}
+			else
+			{
+				TRS.copy(CPAKLOTSTS.FACTORY, sizeof(CPAKLOTSTS.FACTORY), in_node, IN_FACTORY);
+				memcpy(CPAKLOTSTS.CMF_6, "Y", strlen("Y"));
+
+				DBU_update_cpaklotsts(7, &CPAKLOTSTS);
+
+				if (DB_error_code != DB_SUCCESS && DB_error_code != DB_NOT_FOUND)
+				{
+					strcpy(s_msg_code, "WIP-0004");
+					TRS.add_fieldmsg(out_node, "CPAKLOTSTS UPDATE", MP_NVST);
+					TRS.add_fieldmsg(out_node, "FACTORY", MP_STR, sizeof(CPAKLOTSTS.FACTORY), CPAKLOTSTS.FACTORY);
+					TRS.add_fieldmsg(out_node, "ORG_LOT_ID", MP_STR, sizeof(CPAKLOTSTS.ORG_LOT_ID), CPAKLOTSTS.ORG_LOT_ID);
+					TRS.add_fieldmsg(out_node, "PACK_LOT_ID", MP_INT, CPAKLOTSTS.PACK_LOT_ID);
+					TRS.add_dberrmsg(out_node, DB_error_msg);
+
+					gs_log_type.type = MP_LOG_ERROR;
+					gs_log_type.e_type = MP_LOG_E_SYSTEM;
+					gs_log_type.category = MP_LOG_CATE_TRANS;
+					COM_set_result(out_node, MP_FAIL_C, s_msg_code, MP_MSG_CATE_ERROR, TRS.get_language(in_node));
+					return MP_FALSE;
+				}
 
 
-		//일치 데이터 조회
-		DBU_init_mgcmtbldat(&MGCMTBLDAT);
-		TRS.copy(MGCMTBLDAT.FACTORY, sizeof(MGCMTBLDAT.FACTORY), in_node, IN_FACTORY);
-		memcpy(MGCMTBLDAT.TABLE_NAME, MP_GCM_MATCH_STATUS, strlen(MP_GCM_MATCH_STATUS));
-		memcpy(MGCMTBLDAT.KEY_1, "Y", strlen("Y"));
-		DBU_select_mgcmtbldat(1, &MGCMTBLDAT);
-		if (DB_error_code != DB_SUCCESS)
-		{
-			strcpy(s_msg_code, "INV-0004");
-			gs_log_type.e_type = MP_LOG_E_SYSTEM;
-			TRS.add_dberrmsg(out_node, DB_error_msg);
-			TRS.add_fieldmsg(out_node, "MGCMTBLDAT SELECT(1)", MP_NVST);
-			TRS.add_fieldmsg(out_node, "FACTORY", MP_STR, sizeof(MGCMTBLDAT.FACTORY), MGCMTBLDAT.FACTORY);
-			TRS.add_fieldmsg(out_node, "TABLE_NAME", MP_STR, sizeof(MGCMTBLDAT.TABLE_NAME), MGCMTBLDAT.TABLE_NAME);
-			TRS.add_fieldmsg(out_node, "SRC_CODE", MP_STR, sizeof(MGCMTBLDAT.KEY_1), MGCMTBLDAT.KEY_1);
+				//일치 데이터 조회
+				DBU_init_mgcmtbldat(&MGCMTBLDAT);
+				TRS.copy(MGCMTBLDAT.FACTORY, sizeof(MGCMTBLDAT.FACTORY), in_node, IN_FACTORY);
+				memcpy(MGCMTBLDAT.TABLE_NAME, MP_GCM_MATCH_STATUS, strlen(MP_GCM_MATCH_STATUS));
+				memcpy(MGCMTBLDAT.KEY_1, "Y", strlen("Y"));
+				DBU_select_mgcmtbldat(1, &MGCMTBLDAT);
+				if (DB_error_code != DB_SUCCESS)
+				{
+					strcpy(s_msg_code, "INV-0004");
+					gs_log_type.e_type = MP_LOG_E_SYSTEM;
+					TRS.add_dberrmsg(out_node, DB_error_msg);
+					TRS.add_fieldmsg(out_node, "MGCMTBLDAT SELECT(1)", MP_NVST);
+					TRS.add_fieldmsg(out_node, "FACTORY", MP_STR, sizeof(MGCMTBLDAT.FACTORY), MGCMTBLDAT.FACTORY);
+					TRS.add_fieldmsg(out_node, "TABLE_NAME", MP_STR, sizeof(MGCMTBLDAT.TABLE_NAME), MGCMTBLDAT.TABLE_NAME);
+					TRS.add_fieldmsg(out_node, "SRC_CODE", MP_STR, sizeof(MGCMTBLDAT.KEY_1), MGCMTBLDAT.KEY_1);
 
-			gs_log_type.type = MP_LOG_ERROR;
-			gs_log_type.category = MP_LOG_CATE_VIEW;
+					gs_log_type.type = MP_LOG_ERROR;
+					gs_log_type.category = MP_LOG_CATE_VIEW;
 
-			COM_set_result(out_node, MP_FAIL_C, s_msg_code, MP_MSG_CATE_ERROR, TRS.get_language(in_node));
-			return MP_FALSE;
-		}
+					COM_set_result(out_node, MP_FAIL_C, s_msg_code, MP_MSG_CATE_ERROR, TRS.get_language(in_node));
+					return MP_FALSE;
+				}
 
-		TRS.add_string(out_node, "MATCH", MGCMTBLDAT.DATA_1, sizeof(MGCMTBLDAT.DATA_1));
+				TRS.add_string(out_node, "MATCH", MGCMTBLDAT.DATA_1, sizeof(MGCMTBLDAT.DATA_1));
+			}
+		} 
 	}
 
 	return MP_TRUE;

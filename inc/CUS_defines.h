@@ -103,6 +103,7 @@ struct execute_seq_tag
 #define MP_GCM_LOAD_LEVEL		        ("C_LOAD_LEVEL")			//  LOAD LEVEL
 #define MP_GCM_C_INSP_IQC_MES_FLAG		("C_INSP_IQC_MES_FLAG")			//  수입검사유무
 #define MP_GCM_C_SHP_ALL_SHIP_CUS		("C_SHP_ALL_SHIP_CUS")			//  판정제약없이 나갈수있는 고객사명.
+#define MP_GCM_C_SHIP_STATUS            ("C_SHIP_STATUS")			// 출하 상태
 
 //CUSTOM SYSTEM OPTION 
 #define MP_SYS_ORDER_OVER_QTY           ("ORDER_OVER_QTY")          // system option 작업지시 생성 수량 벨리데이션
