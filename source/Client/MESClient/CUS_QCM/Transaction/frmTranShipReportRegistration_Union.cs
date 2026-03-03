@@ -25,9 +25,9 @@ using Miracom.UI;
 
 namespace CUS_QCM
 {
-    public partial class frmTranShipReportRegistration_HM : frmTranForm05
+    public partial class frmTranShipReportRegistration_Union : frmTranForm05
     {
-        public frmTranShipReportRegistration_HM()
+        public frmTranShipReportRegistration_Union()
         {
             InitializeComponent();
 
@@ -425,8 +425,7 @@ namespace CUS_QCM
             {
                 MPCR.SetInMsg(tRSNode);
                 tRSNode.ProcStep = '2';
-                tRSNode.AddString("REPORT_NO", cdvReportNo.Text);
-                tRSNode.AddString("ATTRIBUTE02", cdvShipReportType.Text);
+                tRSNode.AddString("REPORT_NO", cdvReportNo.Text);                
 
                 for (int i = 0; i < spdPackingLotList.ActiveSheet.RowCount; i++)
                 {
@@ -449,6 +448,7 @@ namespace CUS_QCM
                     tRSNode2.AddString("TRS", spdPackingLotList.ActiveSheet.Cells[i, 20].Text);
                     tRSNode2.AddString("COMMENTS", spdPackingLotList.ActiveSheet.Cells[i, 28].Text);
                     tRSNode2.AddString("REMARK", spdPackingLotList.ActiveSheet.Cells[i, 29].Text);
+                    tRSNode2.AddString("ATTRIBUTE02", cdvShipReportType.Text); 
                     tRSNode2.AddString("IMAGE_NUM1", spdPackingLotList.ActiveSheet.Cells[i, 30].Text);
                     tRSNode2.AddString("IMAGE_NUM2", spdPackingLotList.ActiveSheet.Cells[i, 31].Text);
                     tRSNode2.AddString("GRAIN_SIZE", spdPackingLotList.ActiveSheet.Cells[i, 21].Text);
@@ -727,7 +727,7 @@ namespace CUS_QCM
         {
         }
 
-        private void frmTranShipReportRegistration_HM_Load(object sender, EventArgs e)
+        private void frmTranShipReportRegistration_Union_Load(object sender, EventArgs e)
         {
             fnGetUserDesc();
         }
