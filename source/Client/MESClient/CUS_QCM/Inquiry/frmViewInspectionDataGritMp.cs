@@ -42,6 +42,7 @@ namespace CUS_QCM
             RECEIPT_TIME,
             INSP_STATUS,
             LOT_ID,
+            VENDOR_LOT_ID,
             DETAIL,
             IMG,
             GRADE,
@@ -260,7 +261,8 @@ namespace CUS_QCM
 
                     spdInspectionData.ActiveSheet.Cells[i, (int)LOT_INFO.INSP_STATUS].Value = dt.Rows[i]["INSP_STATUS"];
                     spdInspectionData.ActiveSheet.Cells[i, (int)LOT_INFO.LOT_ID].Value = dt.Rows[i]["LOT_ID"];
-
+                    spdInspectionData.ActiveSheet.Cells[i, (int)LOT_INFO.VENDOR_LOT_ID].Value = dt.Rows[i]["VENDOR_LOT_ID"];
+                    　
 
                     if (dt.Rows[i]["IMG_REG_YN"].ToString() == "Y")
                     {
