@@ -49,9 +49,9 @@
     <OptionName>RPTDBConnectionString</OptionName>
     <!--SQL Server Connect String-->
     <!--<OptionValue>Provider=OraOLEDB.Oracle.1;Password=mesmgr;Persist Security Info=True;User ID=mesmgr;Data Source=MESDB</OptionValue>-->
-	<!--<OptionValue>User ID=mesmgr;Password=mesmgr;Data Source=IJDMES;Min Pool Size=1; Max Pool Size=1</OptionValue>-->
-    <!--<OptionValue>User ID=mesmgr;Password=mesmgr;Data Source=MESDB_DEV;Min Pool Size=1; Max Pool Size=1</OptionValue>-->
-	<OptionValue>User ID=mesmgr;Password=mesmgr;Data Source=TIJDMES;Min Pool Size=1; Max Pool Size=1</OptionValue>
+	<!--<OptionValue>User ID=mesmgr;Password=mesmgr;Data Source=MESDB_DEV;Min Pool Size=1; Max Pool Size=1</OptionValue>-->
+	<OptionValue>User ID=mesmgr;Password=mesmgr;Data Source=IJDMES;Min Pool Size=1; Max Pool Size=1</OptionValue>
+	<!--<OptionValue>User ID=mesmgr;Password=mesmgr;Data Source=TIJDMES;Min Pool Size=1; Max Pool Size=1</OptionValue>-->
     <!--<OptionValue>User ID=mesmgr;Password=mesmgr;Data Source=IJDVEM;Min Pool Size=1; Max Pool Size=1</OptionValue> -->
     <!--ORACLE Server Connect String-->
     <!--

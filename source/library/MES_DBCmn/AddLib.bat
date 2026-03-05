@@ -32,13 +32,11 @@ REM If it want to skip SQLCHECK then use as below.
     proc PARSE=PARTIAL iname=%1 oname=%2\%1.c include="..\..\..\inc\dbinc" include="%VCINSTALLDIR%\include" include="%ORA_HOME%\precomp\public"
 ) ELSE IF %1 == DBC_semantics_file (
 REM If it used Stored Procedure in PC file then use as below.
-    proc PARSE=PARTIAL SQLCHECK=SEMANTICS USERID=mesmgr/mesmgr@IJDMES iname=%1 oname=%2\%1.c include="..\..\..\inc\dbinc" include="%VCINSTALLDIR%\include" include="%ORA_HOME%\precomp\public"
-    REM proc PARSE=PARTIAL SQLCHECK=SEMANTICS USERID=mesmgr/mesmgr@TIJDMES iname=%1 oname=%2\%1.c include="..\..\..\inc\dbinc" include="%VCINSTALLDIR%\include" include="%ORA_HOME%\precomp\public" 
-    REM proc PARSE=PARTIAL SQLCHECK=SEMANTICS USERID=mesmgr/mesmgr@IJDMES iname=%1 oname=%2\%1.c include="..\..\..\inc\dbinc" include="%VCINSTALLDIR%\include" include="%ORA_HOME%\precomp\public"    
+    REM proc PARSE=PARTIAL SQLCHECK=SEMANTICS USERID=mesmgr/mesmgr@IJDVEM iname=%1 oname=%2\%1.c include="..\..\..\inc\dbinc" include="%VCINSTALLDIR%\include" include="%ORA_HOME%\precomp\public"
+    proc PARSE=PARTIAL SQLCHECK=SEMANTICS USERID=mesmgr/mesmgr@TIJDMES iname=%1 oname=%2\%1.c include="..\..\..\inc\dbinc" include="%VCINSTALLDIR%\include" include="%ORA_HOME%\precomp\public"
 ) ELSE (
 REM Normal PC files
-    proc PARSE=PARTIAL SQLCHECK=FULL USERID=mesmgr/mesmgr@IJDVEM iname=%1 oname=%2\%1.c include="..\..\..\inc\dbinc" include="%VCINSTALLDIR%\include" include="%ORA_HOME%\precomp\public"
-    REM  proc PARSE=PARTIAL SQLCHECK=FULL USERID=mesmgr/mesmgr@TIJDMES iname=%1 oname=%2\%1.c include="..\..\..\inc\dbinc" include="%VCINSTALLDIR%\include" include="%ORA_HOME%\precomp\public"
+      proc PARSE=PARTIAL SQLCHECK=FULL USERID=mesmgr/mesmgr@TIJDMES iname=%1 oname=%2\%1.c include="..\..\..\inc\dbinc" include="%VCINSTALLDIR%\include" include="%ORA_HOME%\precomp\public"
     REM  proc PARSE=PARTIAL SQLCHECK=FULL USERID=mesmgr/mesmgr@IJDVEM iname=%1 oname=%2\%1.c include="..\..\..\inc\dbinc" include="%VCINSTALLDIR%\include" include="%ORA_HOME%\precomp\public"
 )
 

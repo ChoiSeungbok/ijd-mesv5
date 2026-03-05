@@ -238,7 +238,7 @@ int CUS_SHP_CHECK_SHIP_LOT(char *s_msg_code, TRSNode *in_node, TRSNode *out_node
 			else
 			{
 				// PDA에서 이미 매치 해둔 상태이면 포장 확정처리
-				if (memcmp(CPAKLOTSTS.CMF_6, "Y", sizeof(CPAKLOTSTS.CMF_6)) == MP_TRUE)
+				if (memcmp(CPAKLOTSTS.CMF_6, "Y", strlen("Y")) == MP_TRUE)
 				{
 					//포장확정
 					confirm_in = TRS.add_node(in_node, "confirm_in");
@@ -385,8 +385,8 @@ int CUS_SHP_CHECK_SHIP_LOT(char *s_msg_code, TRSNode *in_node, TRSNode *out_node
 		}
 		else
 		{
-			// PDA에서 이미 매치 해둔 상태이면 포장 확정처리
-			if (memcmp(CPAKLOTSTS.CMF_6, "Y", sizeof(CPAKLOTSTS.CMF_6)) == MP_TRUE)
+			// PDA에서 이미 매치 해둔 상태이면 포장 확정처리 (sizeof 에서 strlen 으로 수정)
+			if (memcmp(CPAKLOTSTS.CMF_6, "Y", strlen("Y")) == MP_TRUE)
 			{
 				//포장확정
 				confirm_in = TRS.add_node(in_node, "confirm_in");
