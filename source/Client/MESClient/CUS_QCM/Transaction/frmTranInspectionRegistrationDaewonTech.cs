@@ -2398,12 +2398,7 @@ namespace CUS_QCM
 
 
         }
-        private void spdDataCollection_ButtonClicked(object sender, EditorNotifyEventArgs e)
-        {
-
-
-
-        }
+        
         private void spdDataCollection_Change(object sender, ChangeEventArgs e)
         {
 
@@ -2744,7 +2739,7 @@ namespace CUS_QCM
                                )
                             {
                                 od1_avg = (od1_Array[0] + od1_Array[1]) / DataCount(od1_Array);  //외경1_평균
-                                thick_avg = (thick_Array[0] + thick_Array[1] + thick_Array[2] + thick_Array[3] + thick_Array[4]) / DataCount(od1_Array); //두께평균
+                                thick_avg = (thick_Array[0] + thick_Array[1] + thick_Array[2] + thick_Array[3] + thick_Array[4]) / DataCount(thick_Array); //두께평균
 
                                 // 중량 / (
                                 //         (외경1_평균 / 2 * 외경1_평균 / 2 * 3.141592 * 두께평균) / 1000
@@ -2769,7 +2764,7 @@ namespace CUS_QCM
                             {
                                 od1_avg = (od1_Array[0] + od1_Array[1]) / DataCount(od1_Array);  //외경1_평균
                                 id_avg = (id_Array[0] + id_Array[1]) / DataCount(id_Array);     //내경_평균
-                                thick_avg = (thick_Array[0] + thick_Array[1] + thick_Array[2] + thick_Array[3] + thick_Array[4]) / DataCount(od1_Array); //두께평균
+                                thick_avg = (thick_Array[0] + thick_Array[1] + thick_Array[2] + thick_Array[3] + thick_Array[4]) / DataCount(thick_Array); //두께평균
 
                                 // 중량 / (
                                 //         (
@@ -2803,7 +2798,7 @@ namespace CUS_QCM
                                 od1_avg = (od1_Array[0] + od1_Array[1]) / DataCount(od1_Array);  //외경1_평균
                                 od2_avg = (od2_Array[0] + od2_Array[1]) / DataCount(od2_Array);  //외경2_평균
                                 id_avg = (id_Array[0] + id_Array[1]) / DataCount(id_Array);     //내경_평균
-                                thick_avg = (thick_Array[0] + thick_Array[1] + thick_Array[2] + thick_Array[3] + thick_Array[4]) / DataCount(od1_Array); //두께평균
+                                thick_avg = (thick_Array[0] + thick_Array[1] + thick_Array[2] + thick_Array[3] + thick_Array[4]) / DataCount(thick_Array); //두께평균
                                 step_height_avg = (step_height_Array[0] + step_height_Array[1] + step_height_Array[2] + step_height_Array[3]) / DataCount(step_height_Array); // 단높이_평균
 
                                 // 중량 / (

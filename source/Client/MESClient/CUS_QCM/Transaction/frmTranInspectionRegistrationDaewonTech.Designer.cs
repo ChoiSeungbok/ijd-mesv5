@@ -2753,7 +2753,6 @@
             this.spdDataCollection.VerticalScrollBar.Renderer = defaultScrollBarRenderer15;
             this.spdDataCollection.VerticalScrollBarPolicy = FarPoint.Win.Spread.ScrollBarPolicy.AsNeeded;
             this.spdDataCollection.EditModeOff += new System.EventHandler(this.spdDataCollection_EditModeOff);
-            this.spdDataCollection.ButtonClicked += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.spdDataCollection_ButtonClicked);
             spdDataCollection_InputMapWhenFocusedNormal.Put(new FarPoint.Win.Spread.Keystroke(System.Windows.Forms.Keys.Back, System.Windows.Forms.Keys.None), FarPoint.Win.Spread.SpreadActions.StartEditing);
             spdDataCollection_InputMapWhenFocusedNormal.Put(new FarPoint.Win.Spread.Keystroke(System.Windows.Forms.Keys.Return, System.Windows.Forms.Keys.None), FarPoint.Win.Spread.SpreadActions.StartEditing);
             spdDataCollection_InputMapWhenFocusedNormal.Put(new FarPoint.Win.Spread.Keystroke('='), FarPoint.Win.Spread.SpreadActions.StartEditingFormula);
