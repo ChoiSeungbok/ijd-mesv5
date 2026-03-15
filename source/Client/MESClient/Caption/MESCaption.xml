@@ -78,7 +78,7 @@
     </Text>
     <Text Key="Arrive">
       <L>Arrive</L>
-      <L>도착</L>
+      <L>입하</L>
       <L>Arrive</L>
     </Text>
     <Text Key="Aspect Ratio Calc">
@@ -95,6 +95,21 @@
       <L>Back</L>
       <L>뒤로</L>
       <L>Back</L>
+    </Text>
+    <Text Key="Base Data">
+      <L>Base Data</L>
+      <L>기준정보</L>
+      <L>Base Data</L>
+    </Text>
+    <Text Key="CUSTOMER">
+      <L>CUSTOMER</L>
+      <L>고객사</L>
+      <L>CUSTOMER</L>
+    </Text>
+    <Text Key="CUSTOMER SIZE">
+      <L>CUSTOMER SIZE</L>
+      <L>고객사기준</L>
+      <L>CUSTOMER SIZE</L>
     </Text>
     <Text Key="Calculation">
       <L>Calculation</L>
@@ -118,7 +133,7 @@
     </Text>
     <Text Key="Cancel Arrival">
       <L>Cancel Arrival</L>
-      <L>도착 취소</L>
+      <L>입하 취소</L>
       <L>Cancel Arrival</L>
     </Text>
     <Text Key="Cancel Confirm">
@@ -140,6 +155,11 @@
       <L>Change</L>
       <L>변경</L>
       <L>Change</L>
+    </Text>
+    <Text Key="Change Lot Work Time">
+      <L>Change Lot Work Time</L>
+      <L>Lot 작업시간 변경</L>
+      <L>Change Lot Work Time</L>
     </Text>
     <Text Key="Change Operand">
       <L>Change Operand</L>
@@ -216,6 +236,11 @@
       <L>마감</L>
       <L>Close Order</L>
     </Text>
+    <Text Key="Collection Set Update">
+      <L>Collection Set Update</L>
+      <L>콜랙션셋 등록/변경</L>
+      <L>Collection Set Update</L>
+    </Text>
     <Text Key="Confirm">
       <L>Confirm</L>
       <L>확정</L>
@@ -231,6 +256,11 @@
       <L>관리도</L>
       <L>Control Chart</L>
     </Text>
+    <Text Key="Conv Prod Qty">
+      <L>Conv Prod Qty</L>
+      <L>환산 생산 수량</L>
+      <L>Conv Prod Qty</L>
+    </Text>
     <Text Key="Copy">
       <L>Copy</L>
       <L>복사</L>
@@ -240,6 +270,26 @@
       <L>Create</L>
       <L>생성</L>
       <L>Create</L>
+    </Text>
+    <Text Key="Create Ship Report">
+      <L>Create Report No</L>
+      <L>성적서 생성</L>
+      <L>Create Report No</L>
+    </Text>
+    <Text Key="Customer Spec">
+      <L>Customer Spec</L>
+      <L>업체 스팩</L>
+      <L>Customer Spec</L>
+    </Text>
+    <Text Key="DELIVERY">
+      <L>DELIVERY</L>
+      <L>납품처</L>
+      <L>DELIVERY</L>
+    </Text>
+    <Text Key="DELIVERY SIZE">
+      <L>DELIVERY SIZE</L>
+      <L>납품처기준</L>
+      <L>DELIVERY SIZE</L>
     </Text>
     <Text Key="DT">
       <L>DT</L>
@@ -511,15 +561,30 @@
       <L>입력</L>
       <L>Insert</L>
     </Text>
+    <Text Key="Insp Hold">
+      <L>Insp Hold</L>
+      <L>판정 보류</L>
+      <L>Insp Hold</L>
+    </Text>
     <Text Key="Judge">
       <L>Judge</L>
       <L>판정</L>
       <L>Judge</L>
     </Text>
+    <Text Key="Judge Return">
+      <L>Judge Return</L>
+      <L>판정 리턴</L>
+      <L>Judge Return</L>
+    </Text>
     <Text Key="Kitting">
       <L>Kitting</L>
       <L>키팅</L>
       <L>Kitting</L>
+    </Text>
+    <Text Key="LP Judge">
+      <L>LP Judge</L>
+      <L>LP 판정</L>
+      <L>LP Judge</L>
     </Text>
     <Text Key="Load Latest Collection Data">
       <L>Load Latest Collection Data</L>
@@ -636,6 +701,11 @@
       <L>옵션</L>
       <L>Options...</L>
     </Text>
+    <Text Key="Outgoing">
+      <L>Outgoing</L>
+      <L>출고</L>
+      <L>Outgoing</L>
+    </Text>
     <Text Key="Pending">
       <L>Pending</L>
       <L>보류</L>
@@ -645,6 +715,11 @@
       <L>Picking</L>
       <L>상차</L>
       <L>Picking</L>
+    </Text>
+    <Text Key="Prev Date(08H ST)">
+      <L>Prev Date(08H ST)</L>
+      <L>이전일(08시기준)</L>
+      <L>Prev Date(08H ST)</L>
     </Text>
     <Text Key="Print">
       <L>Print</L>
@@ -716,6 +791,11 @@
       <L>배포</L>
       <L>Release</L>
     </Text>
+    <Text Key="Release Inv Lot">
+      <L>Release</L>
+      <L>잠금해제</L>
+      <L>Release</L>
+    </Text>
     <Text Key="Release Lot">
       <L>Release</L>
       <L>Lot 보류해제</L>
@@ -775,6 +855,11 @@
       <L>Return In</L>
       <L>반품입고</L>
       <L>Return In</L>
+    </Text>
+    <Text Key="Return Store">
+      <L>Return Store</L>
+      <L>입고리턴</L>
+      <L>Return Store</L>
     </Text>
     <Text Key="SF">
       <L>SF</L>
@@ -836,6 +921,11 @@
       <L>레시피 전송</L>
       <L>Send Recipe</L>
     </Text>
+    <Text Key="Send Recipe Info To Equipment">
+      <L>Send Recipe Info To Equipment</L>
+      <L>설비에 레시피정보 수동 전송</L>
+      <L>Send Recipe Info To Equipment</L>
+    </Text>
     <Text Key="Set Cmf">
       <L>Set Cmf</L>
       <L>Cmf설정</L>
@@ -865,6 +955,11 @@
       <L>Spec</L>
       <L>사양서</L>
       <L>Spec</L>
+    </Text>
+    <Text Key="Spec Update">
+      <L>Spec Update</L>
+      <L>Spec 등록/변경</L>
+      <L>Spec Update</L>
     </Text>
     <Text Key="Split">
       <L>Split</L>
@@ -961,6 +1056,11 @@
       <L>키팅취소</L>
       <L>UnKitting</L>
     </Text>
+    <Text Key="UnShip">
+      <L>UnShip</L>
+      <L>미출하</L>
+      <L>UnShip</L>
+    </Text>
     <Text Key="Uncapable">
       <L>Uncapable</L>
       <L>사용안함</L>
@@ -975,6 +1075,11 @@
       <L>Undelete</L>
       <L>삭제 취소</L>
       <L>Undelete</L>
+    </Text>
+    <Text Key="Unload">
+      <L>Unload</L>
+      <L>투입해제</L>
+      <L>Unload</L>
     </Text>
     <Text Key="Unpicking">
       <L>Unpicking</L>
@@ -1233,6 +1338,11 @@
       <L>승인 및 배포 설정</L>
       <L>Approval and Release Setup</L>
     </Text>
+    <Text Key="Arrival Lot From Ship">
+      <L>Arrival Lot From Ship</L>
+      <L>입고 LOT 구성(출하정보)</L>
+      <L>Arrival Lot From Ship</L>
+    </Text>
     <Text Key="Assemble">
       <L>Assemble</L>
       <L>Assemble(조립)</L>
@@ -1420,7 +1530,7 @@
     </Text>
     <Text Key="Blending Order">
       <L>Blending Order</L>
-      <L>배합 지시</L>
+      <L>Blending 작업지시</L>
       <L>Blending Order</L>
     </Text>
     <Text Key="Bonus Extension">
@@ -1452,6 +1562,11 @@
       <L>Calendar Setup (Detail)</L>
       <L>캘린더 상세 셋업</L>
       <L>Calendar Setup (Detail)</L>
+    </Text>
+    <Text Key="Cancel Shipping Lot">
+      <L>Cancel Shipping Lot</L>
+      <L>출하등록취소</L>
+      <L>Cancel Shipping Lot</L>
     </Text>
     <Text Key="Capability Analysis">
       <L>Capability Analysis</L>
@@ -1533,6 +1648,11 @@
       <L>품목 변경</L>
       <L>Change Item</L>
     </Text>
+    <Text Key="Change Item History">
+      <L>Change Item History</L>
+      <L>품목 변경 이력조회</L>
+      <L>Change Item History</L>
+    </Text>
     <Text Key="Change Lot Data">
       <L>Change Lot Data</L>
       <L>Lot Data 변경</L>
@@ -1567,6 +1687,11 @@
       <L>Change Resource Data</L>
       <L>장비 데이터 변경</L>
       <L>Change Resource Data</L>
+    </Text>
+    <Text Key="Change Test Lot Prod Lot">
+      <L>Change Test Lot Prod Lot</L>
+      <L>테스트품 양산품 전환</L>
+      <L>Change Test Lot Prod Lot</L>
     </Text>
     <Text Key="Change Transfer State">
       <L>Change Transfer State</L>
@@ -1622,6 +1747,11 @@
       <L>Checklist Relation Setup</L>
       <L>체크리스트를 MFO 또는 장비에 설정</L>
       <L>Checklist Relation Setup</L>
+    </Text>
+    <Text Key="Claim Registration View">
+      <L>Claim Registration View</L>
+      <L>고객불만 현황 조회</L>
+      <L>Claim Registration View</L>
     </Text>
     <Text Key="Clean Carrier">
       <L>Clean Carrier</L>
@@ -1743,6 +1873,11 @@
       <L>차트 설정 장비 데이터 수집 (Type3)</L>
       <L>Collect Resource Data by Chart Set (Type3)</L>
     </Text>
+    <Text Key="Collection Set  Create/Change">
+      <L>Collection Set  Create/Change</L>
+      <L>콜랙션셋 저장 /변경</L>
+      <L>Collection Set  Create/Change</L>
+    </Text>
     <Text Key="Collection Set Setup">
       <L>Collection Set Setup</L>
       <L>콜랙션 셋 셋업</L>
@@ -1772,6 +1907,16 @@
       <L>Confirm Inspection Result</L>
       <L>측정결과 확인</L>
       <L>Confirm Inspection Result</L>
+    </Text>
+    <Text Key="Confirm Packing Lot">
+      <L>Confirm Packing Lot</L>
+      <L>Lot 포장 확정</L>
+      <L>Confirm Packing Lot</L>
+    </Text>
+    <Text Key="Confirm Packing Lot(Multi Select)">
+      <L>Confirm Packing Lot(Multi Select)</L>
+      <L>LOT 포장 확정(다중선택)</L>
+      <L>Confirm Packing Lot(Multi Select)</L>
     </Text>
     <Text Key="Confirm Request Trans For Material">
       <L>Confirm Request Trans For Material</L>
@@ -1863,6 +2008,11 @@
       <L>QCM 배치 생성</L>
       <L>Create QCM Batch</L>
     </Text>
+    <Text Key="Create Test Order">
+      <L>Create Test Order</L>
+      <L>테스트 작업지시 생성</L>
+      <L>Create Test Order</L>
+    </Text>
     <Text Key="Create/Update Message">
       <L>Create/Update Message</L>
       <L>게시글 작성 및 변경</L>
@@ -1875,8 +2025,23 @@
     </Text>
     <Text Key="Cup-Cell Mapping">
       <L>Cup-Cell Mapping</L>
-      <L>컵-셀 연결</L>
+      <L>CTM 컵-셀 구성</L>
       <L>Cup-Cell Mapping</L>
+    </Text>
+    <Text Key="Customer  Claim Registration View">
+      <L>Customer Claim Registration View</L>
+      <L>고객불만 현황 조회</L>
+      <L>Customer Claim Registration View</L>
+    </Text>
+    <Text Key="Customer Claim">
+      <L>Customer Claim</L>
+      <L>고객불만</L>
+      <L>Customer Claim</L>
+    </Text>
+    <Text Key="Customer List">
+      <L>Customer List</L>
+      <L>고객사리스트</L>
+      <L>Customer List</L>
     </Text>
     <Text Key="Customer Return">
       <L>Customer Return</L>
@@ -1892,6 +2057,11 @@
       <L>Customized Flag Setup</L>
       <L>사용자 정의 설정</L>
       <L>Customized Flag Setup</L>
+    </Text>
+    <Text Key="Cut Inspection ( Excel Upload )">
+      <L>Cut Inspection ( Excel Upload )</L>
+      <L>절단품 검사 (업로드)</L>
+      <L>Cut Inspection ( Excel Upload )</L>
     </Text>
     <Text Key="Cycle Time Setup">
       <L>Cycle Time Setup</L>
@@ -1927,6 +2097,11 @@
       <L>Delete Lot History For Step</L>
       <L>Lot의 스텝 이력 삭제</L>
       <L>Delete Lot History For Step</L>
+    </Text>
+    <Text Key="Delete Packing Lot">
+      <L>Delete Packing Lot</L>
+      <L>Lot 포장 삭제</L>
+      <L>Delete Packing Lot</L>
     </Text>
     <Text Key="Delete Process Event History">
       <L>Delete Process Event History</L>
@@ -2113,6 +2288,11 @@
       <L>기타출고 Lot</L>
       <L>Etc Out Lot</L>
     </Text>
+    <Text Key="Etc Out/IN Lot Item Conversion">
+      <L>Etc Out/IN Lot Item Conversion</L>
+      <L>기타입출고를 통한  품목변환</L>
+      <L>Etc Out/IN Lot Item Conversion</L>
+    </Text>
     <Text Key="Etc Stock In(INV)">
       <L>Inv Etc Stock In</L>
       <L>자재 기타입고</L>
@@ -2167,6 +2347,11 @@
       <L>Ext Loss Material Lot</L>
       <L>기타출고</L>
       <L>Ext Loss Material Lot</L>
+    </Text>
+    <Text Key="Extrusion Ressource Data">
+      <L>Extrusion Ressource Data</L>
+      <L>HM 압출 설비 데이터 조회</L>
+      <L>Extrusion Ressource Data</L>
     </Text>
     <Text Key="FMB">
       <L>FMB</L>
@@ -2363,6 +2548,11 @@
       <L>자재 잠금</L>
       <L>Hold Material Lot</L>
     </Text>
+    <Text Key="ICP Inspection View">
+      <L>ICP Inspection View</L>
+      <L>ICP 검사 조회</L>
+      <L>ICP Inspection View</L>
+    </Text>
     <Text Key="ID Generator Relation Setup">
       <L>ID Generator Relation Setup</L>
       <L>ID 발번 규칙을 MFO 또는 장비에 설정</L>
@@ -2437,6 +2627,16 @@
       <L>Input Lot Data</L>
       <L>Lot 정보 등록</L>
       <L>Input Lot Data</L>
+    </Text>
+    <Text Key="Input Material Cancle">
+      <L>Input Material Cancle</L>
+      <L>자재투입취소</L>
+      <L>Input Material Cancle</L>
+    </Text>
+    <Text Key="Input Material Check">
+      <L>Input Material Check</L>
+      <L>투입자재 체크</L>
+      <L>Input Material Check</L>
     </Text>
     <Text Key="Input Materials">
       <L>Input Materials</L>
@@ -2518,6 +2718,11 @@
       <L>검사 제품 셋업</L>
       <L>Inspection Material Setup</L>
     </Text>
+    <Text Key="Inspection Registration (Daewon)">
+      <L>Inspection Registration (Daewon)</L>
+      <L>검사 등록 (대원테크)</L>
+      <L>Inspection Registration (Daewon)</L>
+    </Text>
     <Text Key="Inspection Registration (Grit)">
       <L>Inspection Registration (Grit)</L>
       <L>검사 등록 (Grit)</L>
@@ -2525,12 +2730,12 @@
     </Text>
     <Text Key="Inspection Registration (IQC)">
       <L>Inspection Registration (IQC)</L>
-      <L>검사 등록 (IQC)</L>
+      <L>검사 등록 (원자재 수입검사)</L>
       <L>Inspection Registration (IQC)</L>
     </Text>
     <Text Key="Inspection Registration (PDC)">
       <L>Inspection Registration (PDC)</L>
-      <L>검사 등록 (PDC)</L>
+      <L>검사 등록 (PDC 제품검사)</L>
       <L>Inspection Registration (PDC)</L>
     </Text>
     <Text Key="Inspection Registration (Standard)">
@@ -2542,6 +2747,61 @@
       <L>Inspection Set Setup</L>
       <L>검사 셋 셋업</L>
       <L>Inspection Set Setup</L>
+    </Text>
+    <Text Key="Inspection View (Standard)">
+      <L>Inspection View(Standard)</L>
+      <L>제품검사 현황(표준)</L>
+      <L>Inspection View(Standard)</L>
+    </Text>
+    <Text Key="Inspection View(Cut)">
+      <L>Inspection View(Cut)</L>
+      <L>[CTM] CUT 검사 현황</L>
+      <L>Inspection View(Cut)</L>
+    </Text>
+    <Text Key="Inspection View(Grit MP)">
+      <L>[GRIT] Inspection View(MP)</L>
+      <L>[GRIT] 제품검사 현황(MP)</L>
+      <L>[GRIT] Inspection View(MP)</L>
+    </Text>
+    <Text Key="Inspection View(Grit)">
+      <L>[GRIT] Inspection View</L>
+      <L>[GRIT] 제품검사 현황</L>
+      <L>[GRIT] Inspection View</L>
+    </Text>
+    <Text Key="Inspection View(HM PQC)">
+      <L>[HM] Inspection View(PQC)</L>
+      <L>[HM] 검사현황 (중간검사)</L>
+      <L>[HM] Inspection View(PQC)</L>
+    </Text>
+    <Text Key="Inspection View(L/P)">
+      <L>Inspection View(L/P)</L>
+      <L>[CTM] L/P검사 현황</L>
+      <L>Inspection View(L/P)</L>
+    </Text>
+    <Text Key="Inspection View(Multi)">
+      <L>Inspection View(Multi)</L>
+      <L>검사현황(다중)</L>
+      <L>Inspection View(Multi)</L>
+    </Text>
+    <Text Key="Inspection View(PDC)">
+      <L>[PDC] Inspection View</L>
+      <L>[PDC] 제품검사 현황</L>
+      <L>[PDC] Inspection View</L>
+    </Text>
+    <Text Key="Inspection View(Round)">
+      <L>Inspection View(Round)</L>
+      <L>[CTM] 라운드검사 현황</L>
+      <L>Inspection View(Round)</L>
+    </Text>
+    <Text Key="Inv Lot Move Order Confirm">
+      <L>Inv Lot Move Order Confirm</L>
+      <L>자재 이동 입고 확정</L>
+      <L>Inv Lot Move Order Confirm</L>
+    </Text>
+    <Text Key="Inv Lot Move Order Registration">
+      <L>Inv Lot Move Order Registration</L>
+      <L>자재 이동 출고 등록</L>
+      <L>Inv Lot Move Order Registration</L>
     </Text>
     <Text Key="Inventory Material Setup">
       <L>Inventory Material Setup</L>
@@ -2558,10 +2818,20 @@
       <L>재고조사</L>
       <L>Inventory Survey</L>
     </Text>
+    <Text Key="Item Change">
+      <L>Item Change</L>
+      <L>품목 변경</L>
+      <L>Item Change</L>
+    </Text>
     <Text Key="Item Survey">
       <L>Item Survey</L>
-      <L>재고실사</L>
+      <L>공정 예외 LOT 생성</L>
       <L>Item Survey</L>
+    </Text>
+    <Text Key="LOT Multi Tracking">
+      <L>LOT Multi Tracking</L>
+      <L>다중 LOT 추적조회</L>
+      <L>LOT Multi Tracking</L>
     </Text>
     <Text Key="Label">
       <L>Label</L>
@@ -2703,6 +2973,11 @@
       <L>수율 하한값 설정</L>
       <L>Low Yield Setup</L>
     </Text>
+    <Text Key="MES ERP Inventory Inquiry">
+      <L>MES ERP Inventory Inquiry</L>
+      <L>MES ERP 재고조회</L>
+      <L>MES ERP Inventory Inquiry</L>
+    </Text>
     <Text Key="MES-ERP I/F DT Code Setup">
       <L>MES-ERP I/F DT Code Setup</L>
       <L>MES-ERP I/F DT CODE 셋업</L>
@@ -2782,6 +3057,21 @@
       <L>Material Label Setup</L>
       <L>제품 라벨 셋업</L>
       <L>Material Label Setup</L>
+    </Text>
+    <Text Key="Material List">
+      <L>Material List</L>
+      <L>자재 목록</L>
+      <L>Material List</L>
+    </Text>
+    <Text Key="Material Migration">
+      <L>Material Migration</L>
+      <L>자재 Migration</L>
+      <L>Material Migration</L>
+    </Text>
+    <Text Key="Material Operation Status by Flow">
+      <L>Material Operation Status by Flow</L>
+      <L>플로우기준 품목별 재공조회</L>
+      <L>Material Operation Status by Flow</L>
     </Text>
     <Text Key="Material Return">
       <L>Material Return</L>
@@ -2868,6 +3158,16 @@
       <L>메시지 셋업</L>
       <L>Message Setup</L>
     </Text>
+    <Text Key="Migration QCM Data">
+      <L>Migration QCM Data</L>
+      <L>검사 데이터 Migration</L>
+      <L>Migration QCM Data</L>
+    </Text>
+    <Text Key="Migration QCM Report">
+      <L>Migration QCM Report</L>
+      <L>검사 성적서 Migration</L>
+      <L>Migration QCM Report</L>
+    </Text>
     <Text Key="Modeler">
       <L>Modeler</L>
       <L>모델러</L>
@@ -2893,6 +3193,31 @@
       <L>Sublot 레시피 변경</L>
       <L>Modify Sublot Recipe</L>
     </Text>
+    <Text Key="Mold Break Registration">
+      <L>Mold Break Registration</L>
+      <L>금형 파손정보 등록</L>
+      <L>Mold Break Registration</L>
+    </Text>
+    <Text Key="Mold Break View Report">
+      <L>Mold Break View Report</L>
+      <L>금형레포트</L>
+      <L>Mold Break View Report</L>
+    </Text>
+    <Text Key="Mold Disposal History">
+      <L>Mold Disposal History</L>
+      <L>금형 폐기 이력</L>
+      <L>Mold Disposal History</L>
+    </Text>
+    <Text Key="Mold In Out Event">
+      <L>Mold In Out Event</L>
+      <L>금형 장착 탈착</L>
+      <L>Mold In Out Event</L>
+    </Text>
+    <Text Key="Mold In Out Event(VATNAM)">
+      <L>Mold In Out Event(VATNAM)</L>
+      <L>금형 장착 탈착(베트남)</L>
+      <L>Mold In Out Event(VATNAM)</L>
+    </Text>
     <Text Key="Mold Scrap Confirmation">
       <L>Mold Scrap Confirmation</L>
       <L>금형 폐기 확정</L>
@@ -2903,10 +3228,20 @@
       <L>금형 폐기 요청</L>
       <L>Mold Scrap Request</L>
     </Text>
+    <Text Key="Mold Status">
+      <L>Mold Status</L>
+      <L>금형 현황</L>
+      <L>Mold Status</L>
+    </Text>
     <Text Key="Mold Store Registration">
       <L>Mold Store Registration</L>
       <L>금형 Store 등록</L>
       <L>Mold Store Registration</L>
+    </Text>
+    <Text Key="Mold Store Registration2">
+      <L>Mold Store Registration2</L>
+      <L>금형 Store 등록2</L>
+      <L>Mold Store Registration2</L>
     </Text>
     <Text Key="Monthly Proccess Payment">
       <L>Monthly Proccess Payment</L>
@@ -2918,20 +3253,30 @@
       <L>Move(Lot 이동)</L>
       <L>Move</L>
     </Text>
+    <Text Key="Move Operation and Move Shipment">
+      <L>Move Operation and Move Shipment</L>
+      <L>공정창고이동 및 출하창고이동</L>
+      <L>Move Operation and Move Shipment</L>
+    </Text>
     <Text Key="Move Order Confirm">
-      <L>Move Order Confirm</L>
-      <L>이동지시 확정</L>
-      <L>Move Order Confirm</L>
+      <L>Move Confirm</L>
+      <L>이동 입고 확정</L>
+      <L>Move Confirm</L>
     </Text>
     <Text Key="Move Order Registration">
-      <L>Move Order Registration</L>
-      <L>이동지시 등록</L>
-      <L>Move Order Registration</L>
+      <L>Move Material</L>
+      <L>이동 출고 등록</L>
+      <L>Move Material</L>
     </Text>
     <Text Key="Move Return Lot">
       <L>Move Return Lot</L>
-      <L>이동 반품 Lot</L>
+      <L>반품 Lot 이동</L>
       <L>Move Return Lot</L>
+    </Text>
+    <Text Key="Move Shipment">
+      <L>Move Shipment</L>
+      <L>구매품 출하 이동</L>
+      <L>Move Shipment</L>
     </Text>
     <Text Key="Moving between plant (View Order)">
       <L>Moving between plant (View Order)</L>
@@ -3030,13 +3375,23 @@
     </Text>
     <Text Key="Non Operation">
       <L>Non Operation</L>
-      <L>비가동</L>
+      <L>비가동 등록</L>
       <L>Non Operation</L>
+    </Text>
+    <Text Key="Not Input Material Add">
+      <L>Not Input Material Add</L>
+      <L>미투입 자재 처리</L>
+      <L>Not Input Material Add</L>
     </Text>
     <Text Key="OQC Inspection Result View">
       <L>OQC Inspection Result View</L>
       <L>최종검사현황</L>
       <L>OQC Inspection Result View</L>
+    </Text>
+    <Text Key="OnHand Qty View">
+      <L>OnHand Qty View</L>
+      <L>OnHand 재고현황</L>
+      <L>OnHand Qty View</L>
     </Text>
     <Text Key="Open Return Lot">
       <L>Open Return Lot</L>
@@ -3068,10 +3423,30 @@
       <L>공정</L>
       <L>Operation</L>
     </Text>
+    <Text Key="Operation Collection Set  Create/Change">
+      <L>Operation Collection Set  Create/Change</L>
+      <L>생산 콜렉션셋 저장 /변경</L>
+      <L>Operation Collection Set  Create/Change</L>
+    </Text>
+    <Text Key="Operation Exception Lot Creation">
+      <L>Operation Exception Lot Creation</L>
+      <L>공정 예외 LOT 생성</L>
+      <L>Operation Exception Lot Creation</L>
+    </Text>
+    <Text Key="Operation Lot List">
+      <L>Operation Lot List</L>
+      <L>공정별 Lot 리스트 조회</L>
+      <L>Operation Lot List</L>
+    </Text>
     <Text Key="Operation Setup">
       <L>Operation Setup</L>
       <L>공정 셋업</L>
       <L>Operation Setup</L>
+    </Text>
+    <Text Key="Operation Spec Management">
+      <L>Operation Spec Management</L>
+      <L>생산 스팩관리</L>
+      <L>Operation Spec Management</L>
     </Text>
     <Text Key="Option">
       <L>Option</L>
@@ -3098,6 +3473,21 @@
       <L>외주 입고</L>
       <L>Outsourcing In Process</L>
     </Text>
+    <Text Key="Outsourcing In Process2(Input item standard)">
+      <L>Outsourcing In Process(Input item standard)</L>
+      <L>외주 입고(투입자재기준)</L>
+      <L>Outsourcing In Process(Input item standard)</L>
+    </Text>
+    <Text Key="Outsourcing In Process3(Input and warehousing)">
+      <L>Outsourcing In Process3(Input and warehousing)</L>
+      <L>외주입고(투입 및 입고기준)</L>
+      <L>Outsourcing In Process3(Input and warehousing)</L>
+    </Text>
+    <Text Key="Outsourcing In Process4(Vatenam)">
+      <L>AM Information Setup</L>
+      <L>외주입고(베트남용)</L>
+      <L>AM Information Setup</L>
+    </Text>
     <Text Key="Outsourcing Input Materials">
       <L>Outsourcing Input Materials</L>
       <L>외주 자재 투입</L>
@@ -3107,6 +3497,16 @@
       <L>Outsourcing Out Process</L>
       <L>외주 출고</L>
       <L>Outsourcing Out Process</L>
+    </Text>
+    <Text Key="Outsourcing Return">
+      <L>Outsourcing Return</L>
+      <L>외주 반납</L>
+      <L>Outsourcing Return</L>
+    </Text>
+    <Text Key="P Lot Management">
+      <L>P Lot Management</L>
+      <L>P급 Lot 관리</L>
+      <L>P Lot Management</L>
     </Text>
     <Text Key="PM Check Items Setup">
       <L>PM Check Items Setup</L>
@@ -3135,18 +3535,23 @@
     </Text>
     <Text Key="Packing Box">
       <L>Packing Box</L>
-      <L>포장 박스</L>
+      <L>중박스 포장 구성</L>
       <L>Packing Box</L>
     </Text>
     <Text Key="Packing Final Box">
       <L>Packing Final Box</L>
-      <L>포장 FINAL 박스</L>
+      <L>대박스 포장 구성</L>
       <L>Packing Final Box</L>
     </Text>
     <Text Key="Packing Lot">
       <L>Packing Lot</L>
-      <L>Lot 포장</L>
+      <L>Lot 포장 구성</L>
       <L>Packing Lot</L>
+    </Text>
+    <Text Key="Packing Lot Split">
+      <L>Packing Lot Split</L>
+      <L>Lot 포장 구성(분할)</L>
+      <L>Packing Lot Split</L>
     </Text>
     <Text Key="Partial Merge">
       <L>Partial Merge</L>
@@ -3182,6 +3587,11 @@
       <L>Print Document</L>
       <L>문서 출력</L>
       <L>Print Document</L>
+    </Text>
+    <Text Key="Print Handwriting Label">
+      <L>Print Handwriting Label</L>
+      <L>라벨수기입력 발행</L>
+      <L>Print Handwriting Label</L>
     </Text>
     <Text Key="Print Lot Label">
       <L>Print Lot Label</L>
@@ -3222,6 +3632,11 @@
       <L>Privilege Setup</L>
       <L>권한 셋업</L>
       <L>Privilege Setup</L>
+    </Text>
+    <Text Key="Proc Type">
+      <L>Flag</L>
+      <L>Flag</L>
+      <L>Flag</L>
     </Text>
     <Text Key="Process Event">
       <L>Process Event</L>
@@ -3277,6 +3692,11 @@
       <L>Prod Yield Management</L>
       <L>생산실적관리</L>
       <L>Prod Yield Management</L>
+    </Text>
+    <Text Key="Production Lot Conversion">
+      <L>Production Lot Conversion</L>
+      <L>생산 Lot 변환</L>
+      <L>Production Lot Conversion</L>
     </Text>
     <Text Key="Production Order Setup">
       <L>Production Order Setup</L>
@@ -3353,6 +3773,11 @@
       <L>Receive(Lot 수취)</L>
       <L>Receive</L>
     </Text>
+    <Text Key="Recipe Management">
+      <L>Recipe Management</L>
+      <L>레시피 관리</L>
+      <L>Recipe Management</L>
+    </Text>
     <Text Key="Recipe Setup">
       <L>Recipe Setup</L>
       <L>레시피 셋업</L>
@@ -3375,13 +3800,28 @@
     </Text>
     <Text Key="Regist Shipping Lot">
       <L>Regist Shipping Lot</L>
-      <L>출하 Lot 등록</L>
+      <L>출하 등록</L>
       <L>Regist Shipping Lot</L>
     </Text>
     <Text Key="Register PM Check Result">
       <L>Register PM Check Result</L>
       <L>PM 점검결과 등록</L>
       <L>Register PM Check Result</L>
+    </Text>
+    <Text Key="Register of productivity goals">
+      <L>Register of productivity goals</L>
+      <L>직행률/생산성 목표 등록</L>
+      <L>Register of productivity goals</L>
+    </Text>
+    <Text Key="Register of working time">
+      <L>Register of working time</L>
+      <L>투입공수시간 등록</L>
+      <L>Register of working time</L>
+    </Text>
+    <Text Key="Registration of productivity goals">
+      <L>Registration of productivity goals</L>
+      <L>직행률/생산성 목표 등록</L>
+      <L>Registration of productivity goals</L>
     </Text>
     <Text Key="Release Batch">
       <L>Release Batch</L>
@@ -3545,7 +3985,7 @@
     </Text>
     <Text Key="Return Lot">
       <L>Return Lot</L>
-      <L>반품 Lot</L>
+      <L>반품 등록</L>
       <L>Return Lot</L>
     </Text>
     <Text Key="Return Lot Dump">
@@ -3603,6 +4043,11 @@
       <L>SQL 테스트</L>
       <L>SQL Test</L>
     </Text>
+    <Text Key="Sample and Rnd Inspection List">
+      <L>Sample and Rnd Inspection List</L>
+      <L>Sample 및 연구소 검사 LOT 등록</L>
+      <L>Sample and Rnd Inspection List</L>
+    </Text>
     <Text Key="Sampling Procedure Setup">
       <L>Sampling Procedure Setup</L>
       <L>샘플링 프로시저 셋업</L>
@@ -3653,6 +4098,11 @@
       <L>활성 서비스 버전 설정</L>
       <L>Setup Active Service Version</L>
     </Text>
+    <Text Key="Setup Classify Master Data">
+      <L>Setup Classify Master Data</L>
+      <L>그릿 분류기준 셋업</L>
+      <L>Setup Classify Master Data</L>
+    </Text>
     <Text Key="Setup Daily Work Order">
       <L>Finialize Prod Plan</L>
       <L>생산지시 확정</L>
@@ -3662,6 +4112,16 @@
       <L>Setup Input Operation CMF</L>
       <L>공정입력 CMF 설정</L>
       <L>Setup Input Operation CMF</L>
+    </Text>
+    <Text Key="Setup Manaul OEE">
+      <L>Setup Manaul OEE</L>
+      <L>배치 OEE 실행</L>
+      <L>Setup Manaul OEE</L>
+    </Text>
+    <Text Key="Setup Manual OEE">
+      <L>Setup Manual OEE</L>
+      <L>배치 OEE 실행</L>
+      <L>Setup Manual OEE</L>
     </Text>
     <Text Key="Setup Privilege">
       <L>Setup Privilege</L>
@@ -3677,6 +4137,11 @@
       <L>Setup QA Sample Rule</L>
       <L>QA 샘플 규칙 설정</L>
       <L>Setup QA Sample Rule</L>
+    </Text>
+    <Text Key="Setup Resource Effectiveness Info">
+      <L>Setup Resource Effectiveness Info</L>
+      <L>설비효율 기준정보 등록</L>
+      <L>Setup Resource Effectiveness Info</L>
     </Text>
     <Text Key="Setup User By Oper Group Shift">
       <L>Setup User By Oper Group Shift</L>
@@ -3718,6 +4183,46 @@
       <L>Ship(Lot 출하)</L>
       <L>Ship</L>
     </Text>
+    <Text Key="ShipReport Registration_CTM">
+      <L>[CTM] ShipReport Registration</L>
+      <L>[CTM] 출하검사 성적서 등록</L>
+      <L>[CTM] ShipReport Registration</L>
+    </Text>
+    <Text Key="ShipReport Registration_GRIT">
+      <L>ShipReport Registration_GRIT</L>
+      <L>[GRIT] 출하 검사 성적서 등록</L>
+      <L>ShipReport Registration_GRIT</L>
+    </Text>
+    <Text Key="ShipReport Registration_GRIT(MP)">
+      <L>ShipReport Registration_GRIT(MP)</L>
+      <L>[GRIT] 출하 검사 성적서 등록(MP)</L>
+      <L>ShipReport Registration_GRIT(MP)</L>
+    </Text>
+    <Text Key="ShipReport Registration_HM">
+      <L>[HM] ShipReport Registration</L>
+      <L>[HM] 출하검사 성적서 등록</L>
+      <L>[HM] ShipReport Registration</L>
+    </Text>
+    <Text Key="ShipReport Registration_Union">
+      <L>[HM] ShipReport Registration Union</L>
+      <L>[HM] 출하검사 성적서 등록 Union</L>
+      <L>[HM] ShipReport Registration Union</L>
+    </Text>
+    <Text Key="ShipReport Sign">
+      <L>ShipReport Sign</L>
+      <L>출하성적서 사인 변경</L>
+      <L>ShipReport Sign</L>
+    </Text>
+    <Text Key="ShipReport Spec Registration (Grade)">
+      <L>ShipReport Spec Registration (Grade)</L>
+      <L>출하검사 성적서 스펙 등록(GRADE)</L>
+      <L>ShipReport Spec Registration (Grade)</L>
+    </Text>
+    <Text Key="ShipReport Spec Registration (Material)">
+      <L>ShipReport Spec Registration (Material)</L>
+      <L>출하검사 성적서 스펙 등록(품목)</L>
+      <L>ShipReport Spec Registration (Material)</L>
+    </Text>
     <Text Key="Shipment">
       <L>Shipment</L>
       <L>출하관리</L>
@@ -3725,7 +4230,7 @@
     </Text>
     <Text Key="Shipping Lot">
       <L>Shipping Lot</L>
-      <L>출하 Lot</L>
+      <L>출하 확정</L>
       <L>Shipping Lot</L>
     </Text>
     <Text Key="Shipping Order Result List">
@@ -3793,6 +4298,11 @@
       <L>자재 LOT 분할</L>
       <L>Split Material Lot</L>
     </Text>
+    <Text Key="Split Merge History">
+      <L>Split Merge History</L>
+      <L>Split/Merge 이력 조회</L>
+      <L>Split Merge History</L>
+    </Text>
     <Text Key="Split to Carrier Lot">
       <L>Split to Carrier Lot</L>
       <L>캐리어/블락 Lot으로 분리</L>
@@ -3807,6 +4317,11 @@
       <L>Staff Tran Compose Pallet</L>
       <L>팔레트 적재 ( Staff )</L>
       <L>Staff Tran Compose Pallet</L>
+    </Text>
+    <Text Key="Standard Tacktime Registration">
+      <L>Standard Tack Time Registration</L>
+      <L>표준 Tack Time 등록</L>
+      <L>Standard Tack Time Registration</L>
     </Text>
     <Text Key="Start Batch">
       <L>Start Batch</L>
@@ -3867,6 +4382,11 @@
       <L>Stock Out</L>
       <L>자재 출고</L>
       <L>Stock Out</L>
+    </Text>
+    <Text Key="Store Inv Lot(Multi)">
+      <L>Store Inv Lot(Multi)</L>
+      <L>자재 LOT 입고(다중)</L>
+      <L>Store Inv Lot(Multi)</L>
     </Text>
     <Text Key="Store Lot">
       <L>Store</L>
@@ -4075,7 +4595,7 @@
     </Text>
     <Text Key="Tran Create Issue Request">
       <L>Tran Create Issue Request</L>
-      <L>불출요청 생성</L>
+      <L>자재 불출 요청</L>
       <L>Tran Create Issue Request</L>
     </Text>
     <Text Key="Tran Delete Inventory History">
@@ -4095,17 +4615,17 @@
     </Text>
     <Text Key="Tran Etc In Lot">
       <L>Tran Etc In Lot</L>
-      <L>Lot 기타입고</L>
+      <L>기타 입고</L>
       <L>Tran Etc In Lot</L>
     </Text>
     <Text Key="Tran Etc Out Inv Lot">
       <L>Tran Etc Out Inv Lot</L>
-      <L>Lot 기타출고</L>
+      <L>기타 출고</L>
       <L>Tran Etc Out Inv Lot</L>
     </Text>
     <Text Key="Tran Etc Out Lot">
       <L>Tran Etc Out Lot</L>
-      <L>Lot 기타출고</L>
+      <L>기타 출고</L>
       <L>Tran Etc Out Lot</L>
     </Text>
     <Text Key="Tran Event">
@@ -4225,7 +4745,7 @@
     </Text>
     <Text Key="Tran Move Return Lot">
       <L>Tran Move Return Lot</L>
-      <L>이동 반품 Lot</L>
+      <L>반품 Lot 이동</L>
       <L>Tran Move Return Lot</L>
     </Text>
     <Text Key="Tran Nonconformity Terminate">
@@ -4238,14 +4758,24 @@
       <L>창고 불출</L>
       <L>Tran Out Store</L>
     </Text>
+    <Text Key="Tran P Lot Management">
+      <L>Tran P Lot Management</L>
+      <L>P급 Lot 관리</L>
+      <L>Tran P Lot Management</L>
+    </Text>
+    <Text Key="Tran Packing Box">
+      <L>Tran Packing Box</L>
+      <L>포장박스</L>
+      <L>Tran Packing Box</L>
+    </Text>
     <Text Key="Tran Packing Final Box">
       <L>Tran Packing Final Box</L>
-      <L>포장 FINAL 박스</L>
+      <L>대박스 포장 구성</L>
       <L>Tran Packing Final Box</L>
     </Text>
     <Text Key="Tran Packing Lot">
       <L>Tran Packing Lot</L>
-      <L>Lot 포장</L>
+      <L>Lot 포장 구성</L>
       <L>Tran Packing Lot</L>
     </Text>
     <Text Key="Tran Process">
@@ -4310,7 +4840,7 @@
     </Text>
     <Text Key="Tran Receive Issue Request Inv Lot">
       <L>Tran Receive Issue Request Inv Lot</L>
-      <L>자재인수</L>
+      <L>자재 인수</L>
       <L>Tran Receive Issue Request Inv Lot</L>
     </Text>
     <Text Key="Tran Receive Lot">
@@ -4325,17 +4855,22 @@
     </Text>
     <Text Key="Tran Regist Arrival Lot">
       <L>Tran Regist Arrival Lot</L>
-      <L>입하 Lot 등록</L>
+      <L>입하 등록</L>
       <L>Tran Regist Arrival Lot</L>
+    </Text>
+    <Text Key="Tran Regist Arrival Lot(Multi)">
+      <L>Tran Regist Arrival Lot(Multi)</L>
+      <L>입하 등록(일괄)</L>
+      <L>Tran Regist Arrival Lot(Multi)</L>
     </Text>
     <Text Key="Tran Regist Issue Request Inv Lot">
       <L>Tran Regist Issue Request Inv Lot</L>
-      <L>자재 Lot 불출 요청 등록</L>
+      <L>자재 불출 등록</L>
       <L>Tran Regist Issue Request Inv Lot</L>
     </Text>
     <Text Key="Tran Regist Shipping Lot">
       <L>Tran Regist Shipping Lot</L>
-      <L>출하 Lot 등록</L>
+      <L>출하 등록</L>
       <L>Tran Regist Shipping Lot</L>
     </Text>
     <Text Key="Tran Release Inventory Lot">
@@ -4365,7 +4900,7 @@
     </Text>
     <Text Key="Tran Return Lot">
       <L>Tran Return Lot</L>
-      <L>반품 Lot</L>
+      <L>반품 등록</L>
       <L>Tran Return Lot</L>
     </Text>
     <Text Key="Tran Scrap">
@@ -4375,7 +4910,7 @@
     </Text>
     <Text Key="Tran Shipping Lot">
       <L>Tran Shipping Lot</L>
-      <L>출하 Lot</L>
+      <L>출하 확정</L>
       <L>Tran Shipping Lot</L>
     </Text>
     <Text Key="Tran Spare Part">
@@ -4397,6 +4932,11 @@
       <L>Tran Store Inv Lot</L>
       <L>자재 Lot 입고</L>
       <L>Tran Store Inv Lot</L>
+    </Text>
+    <Text Key="Tran Store Inv Lot(Multi)">
+      <L>Tran Store Inv Lot(Multi)</L>
+      <L>자재 LOT 입고(다중)</L>
+      <L>Tran Store Inv Lot(Multi)</L>
     </Text>
     <Text Key="Tran Transfer Store">
       <L>Tran Transfer Store</L>
@@ -4528,10 +5068,20 @@
       <L>공급사 조달관리</L>
       <L>Vendor Delivery Time Management</L>
     </Text>
+    <Text Key="Vendor List">
+      <L>Vendor List</L>
+      <L>업체리스트</L>
+      <L>Vendor List</L>
+    </Text>
     <Text Key="Vendor Return Worst">
       <L>Vendor Return Worst</L>
       <L>협력업체 반품</L>
       <L>Vendor Return Worst</L>
+    </Text>
+    <Text Key="View Actual Result Of Lots">
+      <L>View Actual Result Of Lots</L>
+      <L>Lot 실적 조회</L>
+      <L>View Actual Result Of Lots</L>
     </Text>
     <Text Key="View Adjust History">
       <L>View Adjust History</L>
@@ -4592,6 +5142,46 @@
       <L>View Batch Status</L>
       <L>배치 상태 조회</L>
       <L>View Batch Status</L>
+    </Text>
+    <Text Key="View CTM 400ton Press Data">
+      <L>View CTM 400ton Press Data</L>
+      <L>400ton 프레스 설비 데이터 조회</L>
+      <L>View CTM 400ton Press Data</L>
+    </Text>
+    <Text Key="View CTM 5000ton Press Data">
+      <L>View CTM L-Press Data</L>
+      <L>L-프레스 설비 데이터 조회</L>
+      <L>View CTM L-Press Data</L>
+    </Text>
+    <Text Key="View CTM Ballmill Data">
+      <L>View CTM Ballmill Data</L>
+      <L>Ball Mill 설비 데이터 조회</L>
+      <L>View CTM Ballmill Data</L>
+    </Text>
+    <Text Key="View CTM Furnace Data">
+      <L>View CTM Furnace Data</L>
+      <L>전처리 디왁싱로 설비 데이터 조회</L>
+      <L>View CTM Furnace Data</L>
+    </Text>
+    <Text Key="View CTM Mixed Power Vacuum Furnace Data">
+      <L>View CTM Mixed Power Vacuum Furnace Data</L>
+      <L>전처리 열처리로 설비 데이터 조회</L>
+      <L>View CTM Mixed Power Vacuum Furnace Data</L>
+    </Text>
+    <Text Key="View CTM Planetary Mixer Data">
+      <L>View CTM Planetary Mixer Data</L>
+      <L>Planetary Mixer 설비 데이터 조회</L>
+      <L>View CTM Planetary Mixer Data</L>
+    </Text>
+    <Text Key="View CTM Planetary Mixer Data(Chart)">
+      <L>View CTM Planetary Mixer Data(Chart)</L>
+      <L>Planetary Mixer 설비 데이터 조회(차트포함)</L>
+      <L>View CTM Planetary Mixer Data(Chart)</L>
+    </Text>
+    <Text Key="View CTM Product Vacuum Furnace Data">
+      <L>View CTM Product Vacuum Furnace Data</L>
+      <L>가공 열처리로 설비 데이터 조회</L>
+      <L>View CTM Product Vacuum Furnace Data</L>
     </Text>
     <Text Key="View Carrier History">
       <L>View Carrier History</L>
@@ -4713,6 +5303,11 @@
       <L>디스패치된 장비 목록 조회</L>
       <L>View Dispatched Resource List</L>
     </Text>
+    <Text Key="View Dlv Lot List">
+      <L>View Dlv Lot List</L>
+      <L>입하 LOT 현황</L>
+      <L>View Dlv Lot List</L>
+    </Text>
     <Text Key="View Down Time List">
       <L>View Down Time List</L>
       <L>비가동 조회</L>
@@ -4727,6 +5322,16 @@
       <L>View EDC Data</L>
       <L>EDC 데이터 조회</L>
       <L>View EDC Data</L>
+    </Text>
+    <Text Key="View ERP Asset">
+      <L>AM Information Setup</L>
+      <L>ERP 자산정보 조회</L>
+      <L>View ERP Asset</L>
+    </Text>
+    <Text Key="View ETC Lot List">
+      <L>View ETC Lot List</L>
+      <L>기타 입출고 현황</L>
+      <L>View ETC Lot List</L>
     </Text>
     <Text Key="View Event By Group">
       <L>View Event By Group</L>
@@ -4763,10 +5368,25 @@
       <L>Lot의 생산흐름유형와 공정 보기 (Flexible Inquiry)</L>
       <L>View Flow and Oper by Lot (Flexible Inquiry)</L>
     </Text>
+    <Text Key="View Grit Class Lot Trace">
+      <L>View Grit Class Lot Trace</L>
+      <L>그릿 분류 추적</L>
+      <L>View Grit Class Lot Trace</L>
+    </Text>
     <Text Key="View Group Label">
       <L>View Group Label</L>
       <L>그룹라벨 조회</L>
       <L>View Group Label</L>
+    </Text>
+    <Text Key="View HM Extruder Data">
+      <L>View HM Extruder Data</L>
+      <L>MD 압출기 설비 데이터 조회</L>
+      <L>View HM Extruder Data</L>
+    </Text>
+    <Text Key="View Hm Extrusion Res Data">
+      <L>View Hm Extrusion Res Data</L>
+      <L>HM 압출 설비 데이터 조회</L>
+      <L>View Hm Extrusion Res Data</L>
     </Text>
     <Text Key="View Hold Lot List">
       <L>View Hold Lot List</L>
@@ -4820,17 +5440,27 @@
     </Text>
     <Text Key="View Inv Lot Issue List">
       <L>View Inv Lot Issue List</L>
-      <L>자재 Lot 불출 리스트 조회</L>
+      <L>자재 불출 현황</L>
       <L>View Inv Lot Issue List</L>
+    </Text>
+    <Text Key="View Inv Lot List By Material">
+      <L>View Inv Lot List By Material</L>
+      <L>품목 별 자재 현황</L>
+      <L>View Inv Lot List By Material</L>
     </Text>
     <Text Key="View Inv Lot List By Oper">
       <L>View Inv Lot List By Oper</L>
-      <L>공정에 의한 자재 Lot 조회</L>
+      <L>창고 별 자재 현황</L>
       <L>View Inv Lot List By Oper</L>
+    </Text>
+    <Text Key="View Inv Lot List By Warehouse">
+      <L>View Inv Lot List By Warehouse</L>
+      <L>창고 별 자재 현황</L>
+      <L>View Inv Lot List By Warehouse</L>
     </Text>
     <Text Key="View Inv Lot Move History">
       <L>View Inv Lot Move History</L>
-      <L>자재 Lot 이동 이력 조회</L>
+      <L>자재 이동 이력 조회</L>
       <L>View Inv Lot Move History</L>
     </Text>
     <Text Key="View Inventory History">
@@ -4853,6 +5483,11 @@
       <L>월간수불현황</L>
       <L>View Inventory Material Move Monthly</L>
     </Text>
+    <Text Key="View Kitting Inv Lot List">
+      <L>View Kitting Inv Lot List</L>
+      <L>자재 Kitting 현황</L>
+      <L>View Kitting Inv Lot List</L>
+    </Text>
     <Text Key="View Laser Marking Lot">
       <L>View Laser Marking Lot</L>
       <L>Laser Marking Lot 조회</L>
@@ -4862,6 +5497,11 @@
       <L>View Line History List</L>
       <L>라인 이력 조회</L>
       <L>View Line History List</L>
+    </Text>
+    <Text Key="View Loss List By Oper">
+      <L>View Loss List By Oper</L>
+      <L>공정별 불량현황</L>
+      <L>View Loss List By Oper</L>
     </Text>
     <Text Key="View Loss List By Order">
       <L>View Loss List By Order</L>
@@ -5013,6 +5653,11 @@
       <L>자재 Lot 추적</L>
       <L>View Lot Trace List</L>
     </Text>
+    <Text Key="View Lot Trace Other Factory">
+      <L>View Lot Trace(Other Factory)</L>
+      <L>Lot 이력 추적(타공장)</L>
+      <L>Xem theo dõi lô</L>
+    </Text>
     <Text Key="View Lot Trace Tree">
       <L>View Lot Trace Tree</L>
       <L>Lot 추적 경로 보기</L>
@@ -5032,6 +5677,16 @@
       <L>View Lot List By Product</L>
       <L>제품별 Lot 목록 조회</L>
       <L>View Lot List By Product</L>
+    </Text>
+    <Text Key="View MES ERP Inventory Inquiry">
+      <L>View MES ERP Inventory Inquiry</L>
+      <L>ERP &amp; MES 재고 비교</L>
+      <L>View MES ERP Inventory Inquiry</L>
+    </Text>
+    <Text Key="View Machine Interface">
+      <L>View Machine Interface</L>
+      <L>설비 인터페이스(직접전송)</L>
+      <L>View Machine Interface</L>
     </Text>
     <Text Key="View Maintain Resource">
       <L>View Maintain Resource</L>
@@ -5053,6 +5708,16 @@
       <L>제품 그룹에 의한 목록 조회</L>
       <L>View Material By Group</L>
     </Text>
+    <Text Key="View Material Input History">
+      <L>View Material Input History</L>
+      <L>자재 투입 이력</L>
+      <L>View Material Input History</L>
+    </Text>
+    <Text Key="View Material Input Status">
+      <L>View Material Input Status</L>
+      <L>자재 LOAD 현황</L>
+      <L>View Material Input Status</L>
+    </Text>
     <Text Key="View Material List">
       <L>View Material List</L>
       <L>품목조회</L>
@@ -5073,10 +5738,20 @@
       <L>그룹별 제품 목록 조회</L>
       <L>View Material List By Group</L>
     </Text>
+    <Text Key="View Material List By Oper">
+      <L>View Material List By Oper</L>
+      <L>공정(창고)별 품목 리스트</L>
+      <L>View Material List By Oper</L>
+    </Text>
     <Text Key="View Material Lot Status">
       <L>View Material Lot Status</L>
       <L>자재 조회</L>
       <L>View Material Lot Status</L>
+    </Text>
+    <Text Key="View Material Move History">
+      <L>View Material Move History</L>
+      <L>LOT 이동 이력</L>
+      <L>View Material Move History</L>
     </Text>
     <Text Key="View Material Spec">
       <L>View Material Spec</L>
@@ -5087,6 +5762,11 @@
       <L>View Material Status By Oper</L>
       <L>부품 재고 현황</L>
       <L>View Material Status By Oper</L>
+    </Text>
+    <Text Key="View Mold Status">
+      <L>View Mold Status</L>
+      <L>금형 현황</L>
+      <L>View Mold Status</L>
     </Text>
     <Text Key="View Monthly Quality Situation">
       <L>View Daily Quality Situation</L>
@@ -5135,8 +5815,18 @@
     </Text>
     <Text Key="View PO List">
       <L>View PO List</L>
-      <L>구매 리스트 조회</L>
+      <L>PO 정보 조회</L>
       <L>View PO List</L>
+    </Text>
+    <Text Key="View Packing Lot">
+      <L>View Packing Lot</L>
+      <L>포장 Lot 조회</L>
+      <L>View Packing Lot</L>
+    </Text>
+    <Text Key="View Packing Order List">
+      <L>View Packing Order List</L>
+      <L>주문 지시 조회</L>
+      <L>View Packing Order List</L>
     </Text>
     <Text Key="View Plan List">
       <L>View Plan List</L>
@@ -5157,6 +5847,11 @@
       <L>View Pre-Dispatched History</L>
       <L>선행 디스패치 이력 조회</L>
       <L>View Pre-Dispatched History</L>
+    </Text>
+    <Text Key="View Press Yield Status">
+      <L>View Press Yield Status</L>
+      <L>프레스 실적 현황</L>
+      <L>View Press Yield Status</L>
     </Text>
     <Text Key="View Process Capability">
       <L>View Process Capability</L>
@@ -5378,6 +6073,16 @@
       <L>장표 재발행</L>
       <L>View Sheet History</L>
     </Text>
+    <Text Key="View Ship Lot Raw Material List">
+      <L>View Ship Lot Raw Material List</L>
+      <L>출하 Lot 원자재 리스트</L>
+      <L>View Ship Lot Raw Material List</L>
+    </Text>
+    <Text Key="View Ship Report">
+      <L>View Ship Report</L>
+      <L>성적서 현황</L>
+      <L>View Ship Report</L>
+    </Text>
     <Text Key="View Shipped List">
       <L>View Shipped List</L>
       <L>출하 목록 조회</L>
@@ -5418,6 +6123,11 @@
       <L>제품 명세값 조회</L>
       <L>View Specification Value</L>
     </Text>
+    <Text Key="View Stock">
+      <L>View Stock</L>
+      <L>재고조회</L>
+      <L>View Stock</L>
+    </Text>
     <Text Key="View Stock Investigation List">
       <L>View Stock Investigation List</L>
       <L>재고실사 조회</L>
@@ -5430,7 +6140,7 @@
     </Text>
     <Text Key="View Store Inv Lot List">
       <L>View Store Inv Lot List</L>
-      <L>자재 Lot Store 리스트 조회</L>
+      <L>자재 입고 현황</L>
       <L>View Store Inv Lot List</L>
     </Text>
     <Text Key="View Sub Lot Recipe History">
@@ -5615,7 +6325,7 @@
     </Text>
     <Text Key="Worker Management">
       <L>Worker Management</L>
-      <L>작업자 괸리</L>
+      <L>작업자 관리</L>
       <L>Worker Management</L>
     </Text>
     <Text Key="Worker Registration">
@@ -5627,6 +6337,11 @@
       <L>Worker Setup</L>
       <L>작업자 셋업</L>
       <L>Worker Setup</L>
+    </Text>
+    <Text Key="Workorder List">
+      <L>Workorder List</L>
+      <L>작업지시 리스트</L>
+      <L>Workorder List</L>
     </Text>
     <Text Key="Yield Setup">
       <L>Yield Setup</L>
@@ -5663,6 +6378,96 @@
       <L>[BOM] 부품 조립 관리</L>
       <L>[BOM] Bill Of Material</L>
     </Text>
+    <Text Key="[CINV] Inquiry">
+      <L>Inquiry</L>
+      <L>조회</L>
+      <L>Inquiry</L>
+    </Text>
+    <Text Key="[CINV] Setup">
+      <L>Setup</L>
+      <L>셋업</L>
+      <L>Setup</L>
+    </Text>
+    <Text Key="[CINV] Transaction">
+      <L>Transaction</L>
+      <L>실적</L>
+      <L>Transaction</L>
+    </Text>
+    <Text Key="[CORD] Inquiry">
+      <L>Inquiry</L>
+      <L>조회</L>
+      <L>Inquiry</L>
+    </Text>
+    <Text Key="[CORD] Setup">
+      <L>Setup</L>
+      <L>셋업</L>
+      <L>Setup</L>
+    </Text>
+    <Text Key="[CORD] Transaction">
+      <L>Transaction</L>
+      <L>실적</L>
+      <L>Transaction</L>
+    </Text>
+    <Text Key="[CQCM] Inquiry">
+      <L>Inquiry</L>
+      <L>조회</L>
+      <L>Inquiry</L>
+    </Text>
+    <Text Key="[CQCM] Setup">
+      <L>Setup</L>
+      <L>셋업</L>
+      <L>Setup</L>
+    </Text>
+    <Text Key="[CQCM] Transaction">
+      <L>Transaction</L>
+      <L>실적</L>
+      <L>Transaction</L>
+    </Text>
+    <Text Key="[CRAS] Inquiry">
+      <L>Inquiry</L>
+      <L>조회</L>
+      <L>Inquiry</L>
+    </Text>
+    <Text Key="[CRAS] Setup">
+      <L>Setup</L>
+      <L>셋업</L>
+      <L>Setup</L>
+    </Text>
+    <Text Key="[CRAS] Transaction">
+      <L>Transaction</L>
+      <L>실적</L>
+      <L>Transaction</L>
+    </Text>
+    <Text Key="[CSHP] Inquiry">
+      <L>Inquiry</L>
+      <L>조회</L>
+      <L>Inquiry</L>
+    </Text>
+    <Text Key="[CSHP] Setup">
+      <L>Setup</L>
+      <L>셋업</L>
+      <L>Setup</L>
+    </Text>
+    <Text Key="[CSHP] Transaction">
+      <L>Transaction</L>
+      <L>실적</L>
+      <L>Transaction</L>
+    </Text>
+    <Text Key="[CWIP] Inquiry">
+      <L>Inquiry</L>
+      <L>조회</L>
+      <L>Inquiry</L>
+    </Text>
+    <Text Key="[CWIP] Setup">
+      <L>Setup</L>
+      <L>셋업</L>
+      <L>Setup</L>
+    </Text>
+    <Text Key="[CWIP] Transaction">
+      <L>Transaction</L>
+      <L>실적</L>
+      <L>Transaction</L>
+    </Text>
     <Text Key="[EDC] Engineering Data Collection">
       <L>[EDC] Engineering Data Collection</L>
       <L>[EDC] 엔지니어링 데이터 수집</L>
@@ -5682,6 +6487,56 @@
       <L>[GCM] General Code Management</L>
       <L>[GCM] General Code 관리</L>
       <L>[GCM] General Code Management</L>
+    </Text>
+    <Text Key="[ILJIN]EMI">
+      <L>EMI(Report)</L>
+      <L>EMI(레포트)</L>
+      <L>EMI(Report)</L>
+    </Text>
+    <Text Key="[ILJIN]ETC SYSTEM">
+      <L>Etc_System(Link)</L>
+      <L>타시스템(LINK)</L>
+      <L>Etc_System(Link)</L>
+    </Text>
+    <Text Key="[ILJIN]FMB">
+      <L>FMB(Oper Board)</L>
+      <L>FMB(현황판)</L>
+      <L>FMB(Oper Board)</L>
+    </Text>
+    <Text Key="[ILJIN]INV">
+      <L>Inventory</L>
+      <L>자재관리</L>
+      <L>Inventory</L>
+    </Text>
+    <Text Key="[ILJIN]ORD">
+      <L>Order</L>
+      <L>작업지시관리</L>
+      <L>Order</L>
+    </Text>
+    <Text Key="[ILJIN]OSP">
+      <L>Outsourcing MES</L>
+      <L>외주MES</L>
+      <L>Outsourcing MES</L>
+    </Text>
+    <Text Key="[ILJIN]QCM">
+      <L>Quality</L>
+      <L>품질관리</L>
+      <L>Quality</L>
+    </Text>
+    <Text Key="[ILJIN]RAS">
+      <L>Resource</L>
+      <L>설비관리</L>
+      <L>Resource</L>
+    </Text>
+    <Text Key="[ILJIN]SHP">
+      <L>Shipment</L>
+      <L>출하관리</L>
+      <L>Shipment</L>
+    </Text>
+    <Text Key="[ILJIN]WIP">
+      <L>Production</L>
+      <L>생산관리</L>
+      <L>Production</L>
     </Text>
     <Text Key="[INV] Inventory">
       <L>[INV] Inventory</L>
@@ -5845,6 +6700,16 @@
       <L>0 함량</L>
       <L>0 Content</L>
     </Text>
+    <Text Key="00 Hour ST">
+      <L>00 Hour ST</L>
+      <L>00시기준</L>
+      <L>00 Hour ST</L>
+    </Text>
+    <Text Key="08 Hour ST">
+      <L>08 Hour ST</L>
+      <L>08시기준</L>
+      <L>08 Hour ST</L>
+    </Text>
     <Text Key="1 Degree">
       <L>1 Degree</L>
       <L>1차</L>
@@ -5859,6 +6724,11 @@
       <L>1 Degree Time</L>
       <L>1차 Time</L>
       <L>1 Degree Time</L>
+    </Text>
+    <Text Key="1 Factory">
+      <L>1 Factory</L>
+      <L>1공장</L>
+      <L>1 Factory</L>
     </Text>
     <Text Key="1 point beyond 3 sigma (OOC)">
       <L>1 point beyond 3 sigma (OOC)</L>
@@ -5890,15 +6760,40 @@
       <L>2차</L>
       <L>2 Degree</L>
     </Text>
+    <Text Key="2 Degree Count">
+      <L>2 Degree Count</L>
+      <L>2차 Count</L>
+      <L>2 Degree Count</L>
+    </Text>
+    <Text Key="2 Factory">
+      <L>2 Factory</L>
+      <L>2공장</L>
+      <L>2 Factory</L>
+    </Text>
     <Text Key="2 out of 3 consecutive points beyond 2 sigma">
       <L>2 out of 3 consecutive points beyond 2 sigma</L>
       <L>3점 중 2점이 2시그마 이상 벗어난 경우</L>
       <L>2 out of 3 consecutive points beyond 2 sigma</L>
     </Text>
+    <Text Key="3 Factory">
+      <L>3 Factory</L>
+      <L>3공장</L>
+      <L>3 Factory</L>
+    </Text>
+    <Text Key="3 Mon Avg">
+      <L>3 Mon Avg</L>
+      <L>3개월출하평균</L>
+      <L>3 Mon Avg</L>
+    </Text>
     <Text Key="4 out of 5 consecutive points beyond 1 sigma">
       <L>4 out of 5 consecutive points beyond 1 sigma</L>
       <L>5점 중 4점이 1시그마 이상 벗어난 경우</L>
       <L>4 out of 5 consecutive points beyond 1 sigma</L>
+    </Text>
+    <Text Key="6 Mon Avg">
+      <L>6 Mon Avg</L>
+      <L>6개월출하평균</L>
+      <L>6 Mon Avg</L>
     </Text>
     <Text Key="7 consecutive points above the CL">
       <L>7 consecutive points above the CL</L>
@@ -6160,6 +7055,11 @@
       <L>활성 버전</L>
       <L>Active Version</L>
     </Text>
+    <Text Key="Actual Outer Diameter">
+      <L>Actual Outer Diameter</L>
+      <L>실제 외경</L>
+      <L>Actual Outer Diameter</L>
+    </Text>
     <Text Key="Ad Hoc">
       <L>Ad Hoc</L>
       <L>진행 중</L>
@@ -6179,6 +7079,16 @@
       <L>Adapt</L>
       <L>Lot 특성 변경</L>
       <L>Adapt Lot</L>
+    </Text>
+    <Text Key="Add Char">
+      <L>Add Char</L>
+      <L>추가 문자</L>
+      <L>Add Char</L>
+    </Text>
+    <Text Key="Add Merge">
+      <L>Add Merge</L>
+      <L>Merge 포함</L>
+      <L>Add Merge</L>
     </Text>
     <Text Key="Add Order ID 1">
       <L>Add Order ID 1</L>
@@ -6255,10 +7165,25 @@
       <L>변경후 품목 정보</L>
       <L>After Mat Info</L>
     </Text>
+    <Text Key="After Material">
+      <L>After Material</L>
+      <L>변경 품목</L>
+      <L>After Material</L>
+    </Text>
+    <Text Key="After Material Code">
+      <L>After Material Code</L>
+      <L>변경 품목 코드</L>
+      <L>After Material Code</L>
+    </Text>
     <Text Key="After last lot">
       <L>After last lot</L>
       <L>마지막 Lot의 뒤</L>
       <L>After last lot</L>
+    </Text>
+    <Text Key="Air Pocket">
+      <L>Air Pocket</L>
+      <L>Air Pocket</L>
+      <L>Air Pocket</L>
     </Text>
     <Text Key="Alarm">
       <L>Alarm</L>
@@ -6284,6 +7209,11 @@
       <L>Alarm Condition</L>
       <L>알람 조건</L>
       <L>Alarm Condition</L>
+    </Text>
+    <Text Key="Alarm Count">
+      <L>Alarm Count</L>
+      <L>경고 타수</L>
+      <L>Alarm Count</L>
     </Text>
     <Text Key="Alarm Customized Field">
       <L>Alarm Customized Field</L>
@@ -6475,6 +7405,36 @@
       <L>전체 템플릿</L>
       <L>All Templates</L>
     </Text>
+    <Text Key="All Thick">
+      <L>All Thick</L>
+      <L>전체두께</L>
+      <L>All Thick</L>
+    </Text>
+    <Text Key="All Thick#1">
+      <L>All Thick#1</L>
+      <L>전체두께#1</L>
+      <L>All Thick#1</L>
+    </Text>
+    <Text Key="All Thick#2">
+      <L>All Thick#2</L>
+      <L>전체두께#2</L>
+      <L>All Thick#2</L>
+    </Text>
+    <Text Key="All Thick#3">
+      <L>All Thick#3</L>
+      <L>전체두께#3</L>
+      <L>All Thick#3</L>
+    </Text>
+    <Text Key="All Thick#4">
+      <L>All Thick#4</L>
+      <L>전체두께#4</L>
+      <L>All Thick#4</L>
+    </Text>
+    <Text Key="All Thick#5">
+      <L>All Thick#5</L>
+      <L>전체두께#5</L>
+      <L>All Thick#5</L>
+    </Text>
     <Text Key="All Tool">
       <L>All Tool</L>
       <L>모든 툴</L>
@@ -6640,6 +7600,16 @@
       <L>개조 반환 공정</L>
       <L>Alter Return Oper</L>
     </Text>
+    <Text Key="Angle#1">
+      <L>Angle#1</L>
+      <L>각도#1</L>
+      <L>Angle#1</L>
+    </Text>
+    <Text Key="Angle#2">
+      <L>Angle#2</L>
+      <L>각도#2</L>
+      <L>Angle#2</L>
+    </Text>
     <Text Key="Answer">
       <L>Answer</L>
       <L>체크값</L>
@@ -6669,6 +7639,11 @@
       <L>Apply From ~ To</L>
       <L>적용 시작 ~ 끝</L>
       <L>Apply From ~ To</L>
+    </Text>
+    <Text Key="Apply Qty">
+      <L>Apply Qty</L>
+      <L>적용 수량</L>
+      <L>Apply Qty</L>
     </Text>
     <Text Key="Apply Shift">
       <L>Apply Shift</L>
@@ -6862,12 +7837,12 @@
     </Text>
     <Text Key="Arrival Create Info">
       <L>Arrival Create Info</L>
-      <L>도착 Lot 생성 정보</L>
+      <L>입하 Lot 생성 정보</L>
       <L>Arrival Create Info</L>
     </Text>
     <Text Key="Arrival Date">
       <L>Arrival Date</L>
-      <L>도착 날짜</L>
+      <L>입하 일자</L>
       <L>Arrival Date</L>
     </Text>
     <Text Key="Arrival Lot Create Info">
@@ -6875,15 +7850,25 @@
       <L>입하 Lot 생성 정보</L>
       <L>Arrival Lot Create Info</L>
     </Text>
+    <Text Key="Arrival Lot From Ship">
+      <L>Arrival Lot From Ship</L>
+      <L>입고 LOT 구성(출하정보)</L>
+      <L>Arrival Lot From Ship</L>
+    </Text>
     <Text Key="Arrival Lot ID">
       <L>Arrival Lot ID</L>
-      <L>도착 Lot 번호</L>
+      <L>입하 Lot 번호</L>
       <L>Arrival Lot ID</L>
     </Text>
     <Text Key="Arrival Lot Status">
       <L>Arrival Lot Status</L>
-      <L>도착 Lot 상태</L>
+      <L>입하 Lot 상태</L>
       <L>Arrival Lot Status</L>
+    </Text>
+    <Text Key="As of the end date">
+      <L>As of the end date</L>
+      <L>완공일 기준</L>
+      <L>As of the end date</L>
     </Text>
     <Text Key="Asc State">
       <L>Asc State</L>
@@ -7034,6 +8019,11 @@
       <L>At a Time</L>
       <L>동일값 입력</L>
       <L>At a Time</L>
+    </Text>
+    <Text Key="At least 8 digits including uppercase, lowercase, number, and special characters">
+      <L>At least 8 digits including uppercase, lowercase, number, and special characters</L>
+      <L>1.영어 대문자, 소문자, 숫자, 특수문자 포함한 8자리이상입니다.</L>
+      <L>At least 8 digits including uppercase, lowercase, number, and special characters</L>
     </Text>
     <Text Key="Att Qty 1">
       <L>Att Qty 1</L>
@@ -7475,6 +8465,11 @@
       <L>공정 작업시작시 자동 시작</L>
       <L>Auto Start By Operation Start</L>
     </Text>
+    <Text Key="Auto input item setting">
+      <L>Auto input item setting</L>
+      <L>공정별 자동투입 품목</L>
+      <L>Auto input item setting</L>
+    </Text>
     <Text Key="Auto. Final Decision">
       <L>Auto. Final Decision</L>
       <L>자동 최종 판정</L>
@@ -7529,6 +8524,16 @@
       <L>B.D</L>
       <L>B.D</L>
       <L>B.D</L>
+    </Text>
+    <Text Key="B/O Die No">
+      <L>B/O Die No</L>
+      <L>B/O 발생 Die 번호</L>
+      <L>B/O Die No</L>
+    </Text>
+    <Text Key="B/O Sec">
+      <L>B/O Sec</L>
+      <L>B/O발생 SEC</L>
+      <L>B/O Sec</L>
     </Text>
     <Text Key="BAPoint">
       <L>Before-After</L>
@@ -7705,6 +8710,11 @@
       <L>불량현황</L>
       <L>Bad Status</L>
     </Text>
+    <Text Key="Ball Mill">
+      <L>Ball Mill</L>
+      <L>볼밀</L>
+      <L>Ball Mill</L>
+    </Text>
     <Text Key="Bar Height">
       <L>Bar Height</L>
       <L>바의 높이</L>
@@ -7724,6 +8734,11 @@
       <L>Barcode Font</L>
       <L>바코드 글꼴</L>
       <L>Barcode Font</L>
+    </Text>
+    <Text Key="Bare Input Date">
+      <L>Bare Input Date</L>
+      <L>베어인계일</L>
+      <L>Bare Input Date</L>
     </Text>
     <Text Key="Base LYL">
       <L>Base LYL</L>
@@ -7905,6 +8920,11 @@
       <L>Before / After 서비스 섹션</L>
       <L>Before / After Section of Service</L>
     </Text>
+    <Text Key="Before Judge">
+      <L>Before Judge</L>
+      <L>이전 판정</L>
+      <L>Before Judge</L>
+    </Text>
     <Text Key="Before Lot ID">
       <L>Before Lot ID</L>
       <L>이전 LOT ID</L>
@@ -7919,6 +8939,16 @@
       <L>Before Mat Info</L>
       <L>변경전 품목 정보</L>
       <L>Before Mat Info</L>
+    </Text>
+    <Text Key="Before Material">
+      <L>Before Material</L>
+      <L>이전 품목</L>
+      <L>Before Material</L>
+    </Text>
+    <Text Key="Before Material Code">
+      <L>Before Material Code</L>
+      <L>이전 품목 코드</L>
+      <L>Before Material Code</L>
     </Text>
     <Text Key="Before first lot">
       <L>Before first lot</L>
@@ -7982,23 +9012,43 @@
     </Text>
     <Text Key="Blending Information">
       <L>Blending Information</L>
-      <L>배합 정보</L>
+      <L>Blending 정보</L>
       <L>Blending Information</L>
     </Text>
     <Text Key="Blending Order">
       <L>Blending Order</L>
-      <L>배합 지시</L>
+      <L>Blending 작업지시</L>
       <L>Blending Order</L>
+    </Text>
+    <Text Key="Blending Weight">
+      <L>Blending Weight</L>
+      <L>블랜딩 수량</L>
+      <L>Blending Weight</L>
     </Text>
     <Text Key="Bom Active Hist Seq">
       <L>Bom Active Hist Seq</L>
       <L>BOM 활성 이력 순번</L>
       <L>Bom Active Hist Seq</L>
     </Text>
+    <Text Key="Bom Check Operation">
+      <L>Bom Check Operation</L>
+      <L>생산완료시 자재체크</L>
+      <L>Bom Check Operation</L>
+    </Text>
+    <Text Key="Bom Converted Qty">
+      <L>Bom Converted Qty</L>
+      <L>Bom 환산 수량</L>
+      <L>Bom Converted Qty</L>
+    </Text>
     <Text Key="Bom Information">
       <L>Bom Information</L>
       <L>Bom 정보</L>
       <L>Bom Information</L>
+    </Text>
+    <Text Key="Bom Mat Count">
+      <L>Bom Mat Count</L>
+      <L>Bom 자재 수</L>
+      <L>Bom Mat Count</L>
     </Text>
     <Text Key="Bonus">
       <L>Bonus</L>
@@ -8097,7 +9147,7 @@
     </Text>
     <Text Key="Box ID">
       <L>Box ID</L>
-      <L>박스 ID</L>
+      <L>중박스 ID</L>
       <L>Box ID</L>
     </Text>
     <Text Key="Box List">
@@ -8125,15 +9175,65 @@
       <L>고장 분류</L>
       <L>Break Class</L>
     </Text>
+    <Text Key="Break Infomation">
+      <L>Break Infomation</L>
+      <L>파손 정보</L>
+      <L>Break Infomation</L>
+    </Text>
     <Text Key="Break Part">
       <L>Break Part</L>
       <L>고장부위</L>
       <L>Break Part</L>
     </Text>
+    <Text Key="Break Time">
+      <L>Break Time(m)</L>
+      <L>휴게시간(분)</L>
+      <L>Break Time(m)</L>
+    </Text>
     <Text Key="Break Type">
       <L>Break Type</L>
       <L>고장유형</L>
       <L>Break Type</L>
+    </Text>
+    <Text Key="Breakage Cause">
+      <L>Breakage Cause</L>
+      <L>파손 원인</L>
+      <L>Breakage Cause</L>
+    </Text>
+    <Text Key="Breakage Date">
+      <L>Breakage Date</L>
+      <L>파손 일자</L>
+      <L>Breakage Date</L>
+    </Text>
+    <Text Key="Breakage Day">
+      <L>Breakage Day</L>
+      <L>파손 일</L>
+      <L>Breakage Day</L>
+    </Text>
+    <Text Key="Breakage Month">
+      <L>Breakage Month</L>
+      <L>파손 월</L>
+      <L>Breakage Month</L>
+    </Text>
+    <Text Key="Breakage Pattern">
+      <L>Breakage Pattern</L>
+      <L>파손양상</L>
+      <L>Breakage Pattern</L>
+    </Text>
+    <Text Key="Breakage Pattern Code">
+      <L>Breakage Pattern Code</L>
+      <L>파손양상 코드</L>
+      <L>Breakage Pattern Code</L>
+    </Text>
+    <Text Key="Breakage Week">
+      <L>Breakage Week</L>
+      <L>파손 주</L>
+      <L>Breakage Week</L>
+    </Text>
+    <Text Key="Breakage Year">
+      <L>Breakage Year</L>
+      <L>파손 년</L>
+      <L>Breakage Year</L>
     </Text>
     <Text Key="Bulletin Board">
       <L>Bulletin Board</L>
@@ -8159,6 +9259,16 @@
       <L>C Old</L>
       <L>C Old</L>
       <L>C Old</L>
+    </Text>
+    <Text Key="C SCAN">
+      <L>C SCAN</L>
+      <L>C SCAN</L>
+      <L>C SCAN</L>
+    </Text>
+    <Text Key="C SCAN Code">
+      <L>C SCAN Code</L>
+      <L>C SCAN 코드</L>
+      <L>C SCAN Code</L>
     </Text>
     <Text Key="C Zone">
       <L>C Zone</L>
@@ -8200,10 +9310,25 @@
       <L>완료</L>
       <L>COMPLETED</L>
     </Text>
+    <Text Key="CT(Min)">
+      <L>CT(Min)</L>
+      <L>이론 CT (분)</L>
+      <L>CT(Min)</L>
+    </Text>
+    <Text Key="CTM Stock Qty">
+      <L>CTM Stock Qty</L>
+      <L>CTM 재고 수량</L>
+      <L>CTM Stock Qty</L>
+    </Text>
     <Text Key="CTRL">
       <L>CTRL</L>
       <L>CTRL</L>
       <L>CTRL</L>
+    </Text>
+    <Text Key="CUSTOMER SIZE">
+      <L>CUSTOMER SIZE</L>
+      <L>고객사기준</L>
+      <L>CUSTOMER SIZE</L>
     </Text>
     <Text Key="CV Comment">
       <L>CV Comment</L>
@@ -8340,6 +9465,11 @@
       <L>마감 취소</L>
       <L>Cancel End Order</L>
     </Text>
+    <Text Key="Cancel Shipping Lot">
+      <L>Cancel Shipping Lot</L>
+      <L>출하등록취소</L>
+      <L>Cancel Shipping Lot</L>
+    </Text>
     <Text Key="Capability Analysis">
       <L>Capability Analysis</L>
       <L>공정능력 분석</L>
@@ -8369,6 +9499,41 @@
       <L>Car</L>
       <L>Car</L>
       <L>Car</L>
+    </Text>
+    <Text Key="Carbide Height(mm)">
+      <L>Carbide Height(mm)</L>
+      <L>초경높이(g)</L>
+      <L>Carbide Height(mm)</L>
+    </Text>
+    <Text Key="Carbide Input Count">
+      <L>Carbide Input Count</L>
+      <L>초경투입카운트</L>
+      <L>Carbide Input Count</L>
+    </Text>
+    <Text Key="Carbide Lot">
+      <L>Carbide Lot</L>
+      <L>초경 Lot</L>
+      <L>Carbide Lot</L>
+    </Text>
+    <Text Key="Carbide Outer Diameter(mm)">
+      <L>Carbide Outer Diameter(mm)</L>
+      <L>초경외경(mm)</L>
+      <L>Carbide Outer Diameter(mm)</L>
+    </Text>
+    <Text Key="Carbide Sample">
+      <L>Carbide Sample</L>
+      <L>초경샘플</L>
+      <L>Carbide Sample</L>
+    </Text>
+    <Text Key="Carbide Type">
+      <L>Carbide Type</L>
+      <L>초경종류</L>
+      <L>Carbide Type</L>
+    </Text>
+    <Text Key="Carbide Weight(g)">
+      <L>Carbide Weight(g)</L>
+      <L>초경무게(g)</L>
+      <L>Carbide Weight(g)</L>
     </Text>
     <Text Key="Carrier">
       <L>Carrier</L>
@@ -8705,6 +9870,11 @@
       <L>생성 코드 변경</L>
       <L>Change Create Code</L>
     </Text>
+    <Text Key="Change Date">
+      <L>Change Date</L>
+      <L>변경 일자</L>
+      <L>Change Date</L>
+    </Text>
     <Text Key="Change EDC Data">
       <L>Change EDC Data</L>
       <L>EDC 데이터 변경</L>
@@ -8780,6 +9950,11 @@
       <L>변경 항목</L>
       <L>Change Item</L>
     </Text>
+    <Text Key="Change Item History">
+      <L>Change Item History</L>
+      <L>품목 변경 이력조회</L>
+      <L>Change Item History</L>
+    </Text>
     <Text Key="Change Load Status">
       <L>Change Load Status</L>
       <L>변경후 상차상태</L>
@@ -8804,6 +9979,11 @@
       <L>Change Lot Type</L>
       <L>Lot 타입 변경</L>
       <L>Change Lot Type</L>
+    </Text>
+    <Text Key="Change Mapping Count">
+      <L>Change Mapping Count</L>
+      <L>묶음 단위수 변경</L>
+      <L>Change Mapping Count</L>
     </Text>
     <Text Key="Change Material">
       <L>Change Material</L>
@@ -8844,6 +10024,16 @@
       <L>Change Port Status</L>
       <L>포트 상태 변경</L>
       <L>Change Port Status</L>
+    </Text>
+    <Text Key="Change Qty">
+      <L>Change Qty</L>
+      <L>변경 수량</L>
+      <L>Change Qty</L>
+    </Text>
+    <Text Key="Change Ratio">
+      <L>Change Ratio</L>
+      <L>환산 비율</L>
+      <L>Change Ratio</L>
     </Text>
     <Text Key="Change Resource Data">
       <L>Change Resource Data</L>
@@ -8960,6 +10150,11 @@
       <L>Change Status9</L>
       <L>Change Status9</L>
     </Text>
+    <Text Key="Change Test Lot Prod Lot">
+      <L>Change Test Lot Prod Lot</L>
+      <L>테스트품 양산품 전환</L>
+      <L>Change Test Lot Prod Lot</L>
+    </Text>
     <Text Key="Change Up Down">
       <L>Change Up Down</L>
       <L>Up Down 변경</L>
@@ -8984,6 +10179,11 @@
       <L>Change Value</L>
       <L>변경값</L>
       <L>Change Value</L>
+    </Text>
+    <Text Key="Change Work Time">
+      <L>Change Work Time</L>
+      <L>작업시간 변경</L>
+      <L>Change Work Time</L>
     </Text>
     <Text Key="Changed Qty">
       <L>Changed Qty</L>
@@ -9715,6 +10915,21 @@
       <L>클래스 종류</L>
       <L>Class Type</L>
     </Text>
+    <Text Key="Class Type Code">
+      <L>Class Type Code</L>
+      <L>클래스 종류 코드</L>
+      <L>Class Type Code</L>
+    </Text>
+    <Text Key="Class Value">
+      <L>Class Value</L>
+      <L>클래스 값</L>
+      <L>Class Value</L>
+    </Text>
+    <Text Key="Class Value Code">
+      <L>Class Value Code</L>
+      <L>클래스 값 코드</L>
+      <L>Class Value Code</L>
+    </Text>
     <Text Key="Classification">
       <L>Classification</L>
       <L>분류</L>
@@ -10117,7 +11332,7 @@
     </Text>
     <Text Key="Coating Per">
       <L>Coating Per</L>
-      <L>코팅 Per</L>
+      <L>코팅 퍼센트</L>
       <L>Coating Per</L>
     </Text>
     <Text Key="Code">
@@ -10250,6 +11465,11 @@
       <L>수집 모드</L>
       <L>Collection Mode</L>
     </Text>
+    <Text Key="Collection Sec">
+      <L>Collection Sec</L>
+      <L>수집초</L>
+      <L>Collection Sec</L>
+    </Text>
     <Text Key="Collection Set">
       <L>Collection Set</L>
       <L>콜랙션 셋</L>
@@ -10284,6 +11504,11 @@
       <L>Collection Set Version</L>
       <L>콜랙션 셋 버전</L>
       <L>Collection Set Version</L>
+    </Text>
+    <Text Key="Collection Time">
+      <L>Collection Time</L>
+      <L>수집시간</L>
+      <L>Collection Time</L>
     </Text>
     <Text Key="Column">
       <L>Column</L>
@@ -10395,6 +11620,11 @@
       <L>완료 여부</L>
       <L>Complete Flag</L>
     </Text>
+    <Text Key="Complete Flatness(mm)">
+      <L>Complete Flatness(mm)</L>
+      <L>완료품평탄도(mm)</L>
+      <L>Complete Flatness(mm)</L>
+    </Text>
     <Text Key="Complete Time">
       <L>Complete Time</L>
       <L>완료 시간</L>
@@ -10404,6 +11634,11 @@
       <L>Complete User</L>
       <L>완료 사용자</L>
       <L>Complete User</L>
+    </Text>
+    <Text Key="Complete Weight(g)">
+      <L>Complete Weight(g)</L>
+      <L>완료품무게(g)</L>
+      <L>Complete Weight(g)</L>
     </Text>
     <Text Key="Compress Rate">
       <L>Compress Rate</L>
@@ -10465,6 +11700,11 @@
       <L>실적 처리 확정</L>
       <L>Confirm End Lot</L>
     </Text>
+    <Text Key="Confirm Flag">
+      <L>Confirm Flag</L>
+      <L>확정 여부</L>
+      <L>Confirm Flag</L>
+    </Text>
     <Text Key="Confirm Key">
       <L>Confirm Key</L>
       <L>확인 키</L>
@@ -10474,6 +11714,16 @@
       <L>Confirm Lot List</L>
       <L>확정 Lot 리스트</L>
       <L>Confirm Lot List</L>
+    </Text>
+    <Text Key="Confirm Packing Lot">
+      <L>Confirm Packing Lot</L>
+      <L>Lot 포장 확정</L>
+      <L>Confirm Packing Lot</L>
+    </Text>
+    <Text Key="Confirm Packing Lot(Multi Select)">
+      <L>Confirm Packing Lot(Multi Select)</L>
+      <L>LOT 포장 확정(다중선택)</L>
+      <L>Confirm Packing Lot(Multi Select)</L>
     </Text>
     <Text Key="Confirm Password">
       <L>Confirm Password</L>
@@ -10489,6 +11739,11 @@
       <L>Confirm Status</L>
       <L>확정 상태</L>
       <L>Confirm Status</L>
+    </Text>
+    <Text Key="Confirm User">
+      <L>Confirm User</L>
+      <L>확정자</L>
+      <L>Confirm User</L>
     </Text>
     <Text Key="Confirmed Information">
       <L>Confirmed Information</L>
@@ -10507,7 +11762,7 @@
     </Text>
     <Text Key="Consignment Flag">
       <L>Consignment Flag</L>
-      <L>위탁 Flag</L>
+      <L>위탁 여부</L>
       <L>Consignment Flag</L>
     </Text>
     <Text Key="Constant">
@@ -10640,6 +11895,46 @@
       <L>환산계수</L>
       <L>Conversion Factor</L>
     </Text>
+    <Text Key="Conv Order Qty">
+      <L>Conv Order Qty</L>
+      <L>환산 지시 수량</L>
+      <L>Conv Order Qty</L>
+    </Text>
+    <Text Key="Conv Prod Qty">
+      <L>Conv Prod Qty</L>
+      <L>환산 생산 수량</L>
+      <L>Conv Prod Qty</L>
+    </Text>
+    <Text Key="Conv Stock Qty">
+      <L>Conv Stock Qty</L>
+      <L>환산 재고 수량</L>
+      <L>Conv Stock Qty</L>
+    </Text>
+    <Text Key="Conv Stocked Qty">
+      <L>Conv Stocked Qty</L>
+      <L>환산 재고 수량</L>
+      <L>Conv Stocked Qty</L>
+    </Text>
+    <Text Key="Conv Unit">
+      <L>Conv Unit</L>
+      <L>환산 단위</L>
+      <L>Conv Unit</L>
+    </Text>
+    <Text Key="Conv Unit Qty">
+      <L>Conv Unit Qty</L>
+      <L>환산 단위 수량</L>
+      <L>Conv Unit Qty</L>
+    </Text>
+    <Text Key="Conversion">
+      <L>Conversion</L>
+      <L>환산</L>
+      <L>Conversion</L>
+    </Text>
+    <Text Key="Conversion Time">
+      <L>Conversion Time</L>
+      <L>환산 시간</L>
+      <L>Conversion Time</L>
+    </Text>
     <Text Key="Convert Inventory To Lot">
       <L>Convert Inventory To Lot</L>
       <L>자재에서 Lot으로 변환</L>
@@ -10669,6 +11964,11 @@
       <L>Convert Qty 3</L>
       <L>변환 수량 3</L>
       <L>Convert Qty 3</L>
+    </Text>
+    <Text Key="Convert Time">
+      <L>Convert Time</L>
+      <L>변환 시간</L>
+      <L>Convert Time</L>
     </Text>
     <Text Key="Convexity">
       <L>Convexity</L>
@@ -11022,7 +12322,7 @@
     </Text>
     <Text Key="Create Issue Request">
       <L>Create Issue Request</L>
-      <L>불출 요청 생성</L>
+      <L>자재 불출 요청</L>
       <L>Create Issue Request</L>
     </Text>
     <Text Key="Create Lot">
@@ -11095,10 +12395,20 @@
       <L>Queue Time 생성</L>
       <L>Create Queue Time</L>
     </Text>
+    <Text Key="Create Ship Report">
+      <L>Create</L>
+      <L>성적서 생성</L>
+      <L>Create</L>
+    </Text>
     <Text Key="Create Status">
       <L>Create Status</L>
       <L>생성 상태</L>
       <L>Create Status</L>
+    </Text>
+    <Text Key="Create Test Order">
+      <L>Create Test Order</L>
+      <L>테스트 작업지시 생성</L>
+      <L>Create Test Order</L>
     </Text>
     <Text Key="Create Time">
       <L>Create Time</L>
@@ -11117,7 +12427,7 @@
     </Text>
     <Text Key="Create User">
       <L>Create User</L>
-      <L>생성 사용자</L>
+      <L>생성자</L>
       <L>Create User</L>
     </Text>
     <Text Key="Create User ID">
@@ -11185,6 +12495,11 @@
       <L>중요 장비</L>
       <L>Critical Resource ID</L>
     </Text>
+    <Text Key="Crown No">
+      <L>Crown No</L>
+      <L>크라운 번호</L>
+      <L>Crown No</L>
+    </Text>
     <Text Key="Crr ID">
       <L>Crr ID</L>
       <L>캐리어 ID</L>
@@ -11194,6 +12509,31 @@
       <L>Ctrl Mode</L>
       <L>제어 모드</L>
       <L>Ctrl Mode</L>
+    </Text>
+    <Text Key="Cup Assembly">
+      <L>Cup Assembly</L>
+      <L> 컵 조립</L>
+      <L>Cup Assembly</L>
+    </Text>
+    <Text Key="Cup Input Counter">
+      <L>Cup Input Counter</L>
+      <L>컵투입 카우터</L>
+      <L>Cup Input Counter</L>
+    </Text>
+    <Text Key="Cup Type">
+      <L>Cup Type</L>
+      <L>컵종류</L>
+      <L>Cup Type</L>
+    </Text>
+    <Text Key="Cup Weight(g)">
+      <L>Cup Weight(g)</L>
+      <L>컵무게(g)</L>
+      <L>Cup Weight(g)</L>
+    </Text>
+    <Text Key="Cup-Cell Mapping">
+      <L>Cup-Cell Mapping</L>
+      <L>CTM 컵-셀 구성</L>
+      <L>Cup-Cell Mapping</L>
     </Text>
     <Text Key="Current">
       <L>Current</L>
@@ -11337,8 +12677,13 @@
     </Text>
     <Text Key="Customer ID">
       <L>Customer ID</L>
-      <L>고객</L>
+      <L>고객사</L>
       <L>Customer ID</L>
+    </Text>
+    <Text Key="Customer List">
+      <L>Customer List</L>
+      <L>고객사리스트</L>
+      <L>Customer List</L>
     </Text>
     <Text Key="Customer Mat ID">
       <L>Customer Mat ID</L>
@@ -11349,6 +12694,21 @@
       <L>Customer Material</L>
       <L>고객 제품</L>
       <L>Customer Material</L>
+    </Text>
+    <Text Key="Customer Name">
+      <L>Customer Name</L>
+      <L>고객사명</L>
+      <L>Customer Name</L>
+    </Text>
+    <Text Key="Customer Number">
+      <L>Customer Number</L>
+      <L>고객사 번호</L>
+      <L>Customer Number</L>
+    </Text>
+    <Text Key="Customer Site ID">
+      <L>Customer Site ID</L>
+      <L>고객사 Site ID</L>
+      <L>Customer Site ID</L>
     </Text>
     <Text Key="Customer Specification">
       <L>Use Customer Specification</L>
@@ -11495,6 +12855,11 @@
       <L>사용자 정의 정보</L>
       <L>Customized Information</L>
     </Text>
+    <Text Key="Cut Inspection ( Excel Upload )">
+      <L>Cut Inspection ( Excel Upload )</L>
+      <L>절단품 검사 (업로드)</L>
+      <L>Cut Inspection ( Excel Upload )</L>
+    </Text>
     <Text Key="Cycle Initial value">
       <L>Cycle Initial value</L>
       <L>순환시 초기값</L>
@@ -11509,6 +12874,11 @@
       <L>Cycle Time Setup</L>
       <L>작업 시간 셋업</L>
       <L>Cycle Time Setup</L>
+    </Text>
+    <Text Key="D Zone">
+      <L>D Zone</L>
+      <L>D 구역</L>
+      <L>D Zone</L>
     </Text>
     <Text Key="D/T Code">
       <L>D/T Code</L>
@@ -11529,6 +12899,31 @@
       <L>D10</L>
       <L>D10</L>
       <L>D10</L>
+    </Text>
+    <Text Key="D10 Create Time">
+      <L>D10 Create Time</L>
+      <L>D10 생성 시간</L>
+      <L>D10 Create Time</L>
+    </Text>
+    <Text Key="D10 Height">
+      <L>D10 Height</L>
+      <L>D10  높이</L>
+      <L>D10 Height</L>
+    </Text>
+    <Text Key="D10 Type">
+      <L>D10 Type</L>
+      <L>D10 종류</L>
+      <L>D10 Type</L>
+    </Text>
+    <Text Key="D10 Type Code">
+      <L>D10 Type Code</L>
+      <L>D10 종류 코드</L>
+      <L>D10 Type Code</L>
+    </Text>
+    <Text Key="D10 Weight">
+      <L>D10 Weight</L>
+      <L>D10  중량</L>
+      <L>D10 Weight</L>
     </Text>
     <Text Key="D25">
       <L>D25</L>
@@ -11565,6 +12960,11 @@
       <L>DB 입력 스크립트 생성</L>
       <L>DB Insert Script Create</L>
     </Text>
+    <Text Key="DELIVERY SIZE">
+      <L>DELIVERY SIZE</L>
+      <L>납품처기준</L>
+      <L>DELIVERY SIZE</L>
+    </Text>
     <Text Key="DIR CODE">
       <L>DIR CODE</L>
       <L>직/간접 코드</L>
@@ -11582,17 +12982,17 @@
     </Text>
     <Text Key="DLV Expiration Date">
       <L>DLV Expiration Date</L>
-      <L>도착만기일자</L>
+      <L>납품예정일자</L>
       <L>DLV Expiration Date</L>
     </Text>
     <Text Key="DLV No">
       <L>DLV No</L>
-      <L>입하번호</L>
+      <L>입고번호</L>
       <L>DLV No</L>
     </Text>
     <Text Key="DLV Seq">
       <L>DLV Seq</L>
-      <L>DLV순번</L>
+      <L>입고 순번</L>
       <L>DLV Seq</L>
     </Text>
     <Text Key="DSP ID">
@@ -11644,6 +13044,11 @@
       <L>DT Time</L>
       <L>비가동 시간</L>
       <L>DT Time</L>
+    </Text>
+    <Text Key="Damage">
+      <L>Damage</L>
+      <L>데미지</L>
+      <L>Damage</L>
     </Text>
     <Text Key="Darkness">
       <L>Darkness</L>
@@ -11920,6 +13325,11 @@
       <L>경고 발생 제한값 설정</L>
       <L>Default Warning Limit</L>
     </Text>
+    <Text Key="Default WearHouse">
+      <L>Default WearHouse</L>
+      <L>공정별 고정 창고</L>
+      <L>Default WearHouse</L>
+    </Text>
     <Text Key="Defect">
       <L>Defect</L>
       <L>결함</L>
@@ -12025,6 +13435,11 @@
       <L>결함 순번</L>
       <L>Defect_Seq</L>
     </Text>
+    <Text Key="Degree">
+      <L>Degree</L>
+      <L>차수</L>
+      <L>Degree</L>
+    </Text>
     <Text Key="Del Flag">
       <L>Del Flag</L>
       <L>삭제 여부</L>
@@ -12090,6 +13505,11 @@
       <L>미스캔 Lot 삭제</L>
       <L>Delete Not Scanned Lot</L>
     </Text>
+    <Text Key="Delete Packing Lot">
+      <L>Delete Packing Lot</L>
+      <L>Lot 포장 삭제</L>
+      <L>Delete Packing Lot</L>
+    </Text>
     <Text Key="Delete Reason">
       <L>Delete Reason</L>
       <L>삭제 이유</L>
@@ -12135,6 +13555,11 @@
       <L>삭제 여부</L>
       <L>Deleted Flag</L>
     </Text>
+    <Text Key="Delivery">
+      <L>Delivery</L>
+      <L>납품처</L>
+      <L>Delivery</L>
+    </Text>
     <Text Key="Delivery Car">
       <L>Delivery Car</L>
       <L>출고 차량</L>
@@ -12152,18 +13577,33 @@
     </Text>
     <Text Key="Delivery ID">
       <L>Delivery ID</L>
-      <L>납품번호</L>
+      <L>납품처 ID</L>
       <L>Delivery ID</L>
+    </Text>
+    <Text Key="Delivery Info">
+      <L>Delivery Info</L>
+      <L>납품처 정보</L>
+      <L>Delivery Info</L>
     </Text>
     <Text Key="Delivery Information">
       <L>Delivery Information</L>
       <L>납품 정보</L>
       <L>Delivery Information</L>
     </Text>
+    <Text Key="Delivery List">
+      <L>Delivery List</L>
+      <L>납품처 리스트</L>
+      <L>Delivery List</L>
+    </Text>
     <Text Key="Delivery Location">
       <L>Delivery Location</L>
       <L>납품위치</L>
       <L>Delivery Location</L>
+    </Text>
+    <Text Key="Delivery Name">
+      <L>Delivery Name</L>
+      <L>납품처명</L>
+      <L>Delivery Name</L>
     </Text>
     <Text Key="Delivery Phone No">
       <L>Delivery Phone No</L>
@@ -12185,10 +13625,20 @@
       <L>납품자</L>
       <L>Delivery User</L>
     </Text>
+    <Text Key="Density Calc">
+      <L>Density Calc</L>
+      <L>밀도 계산방식</L>
+      <L>Density Calc</L>
+    </Text>
     <Text Key="Department">
       <L>Department</L>
       <L>사업부</L>
       <L>Department</L>
+    </Text>
+    <Text Key="Department Code">
+      <L>Department Code</L>
+      <L>사업부 코드</L>
+      <L>Department Code</L>
     </Text>
     <Text Key="Department Name">
       <L>Department Name</L>
@@ -12518,6 +13968,11 @@
       <L>납품일</L>
       <L>Dlv Date</L>
     </Text>
+    <Text Key="Dlv In Qty">
+      <L>Dlv In Qty</L>
+      <L>입하확정수량</L>
+      <L>Dlv In Qty</L>
+    </Text>
     <Text Key="Dlv No">
       <L>Dlv No</L>
       <L>입고 번호</L>
@@ -12535,7 +13990,7 @@
     </Text>
     <Text Key="Dlv Qty">
       <L>Dlv Qty</L>
-      <L>납품수량</L>
+      <L>입하수량</L>
       <L>Dlv Qty</L>
     </Text>
     <Text Key="Do not make history flag">
@@ -12733,6 +14188,26 @@
       <L>Down 사용자</L>
       <L>Down Tran User ID</L>
     </Text>
+    <Text Key="Down Up">
+      <L>Down Up</L>
+      <L>상향식</L>
+      <L>Down Up</L>
+    </Text>
+    <Text Key="Down Up(c)">
+      <L>Down Up(c)</L>
+      <L>상향식</L>
+      <L>Down Up(c)</L>
+    </Text>
+    <Text Key="Drawing Flag">
+      <L>Drawing Flag</L>
+      <L>도면유무</L>
+      <L>Drawing Flag</L>
+    </Text>
+    <Text Key="Dry CIP Count">
+      <L>Dry CIP Count</L>
+      <L>Dry CIP 카운트</L>
+      <L>Dry CIP Count</L>
+    </Text>
     <Text Key="Dsp Reason">
       <L>Dsp Reason</L>
       <L>디스패치 사유</L>
@@ -12788,6 +14263,11 @@
       <L>ERP 비가동명</L>
       <L>ERP DT Desc</L>
     </Text>
+    <Text Key="ERP I/F Not Send Flag">
+      <L>ERP I/F Not Send Flag</L>
+      <L>ERP I/F 미전송 여부</L>
+      <L>ERP I/F Not Send Flag</L>
+    </Text>
     <Text Key="ERP Interface">
       <L>ERP Interface</L>
       <L>ERP와 공유</L>
@@ -12798,6 +14278,11 @@
       <L>생산일보 수동 재집계</L>
       <L>ERP Manual MPI Batch</L>
     </Text>
+    <Text Key="ERP Open YN">
+      <L>ERP Open Y/N</L>
+      <L>ERP Open 여부</L>
+      <L>ERP Open Y/N</L>
+    </Text>
     <Text Key="ERP Oper">
       <L>ERP Oper</L>
       <L>ERP 공정</L>
@@ -12807,6 +14292,26 @@
       <L>ERP Oper Desc</L>
       <L>ERP 공정명</L>
       <L>ERP Oper Desc</L>
+    </Text>
+    <Text Key="ERP Qty">
+      <L>ERP Qty</L>
+      <L>ERP 수량</L>
+      <L>ERP Qty</L>
+    </Text>
+    <Text Key="ETC Date">
+      <L>ETC Date</L>
+      <L>기타입출고 일자</L>
+      <L>ETC Date</L>
+    </Text>
+    <Text Key="ETC Lot List">
+      <L>ETC Lot List</L>
+      <L>기타 입출고 Lot 리스트</L>
+      <L>ETC Lot List</L>
+    </Text>
+    <Text Key="ETC Type">
+      <L>ETC Type</L>
+      <L>기타유형</L>
+      <L>ETC Type</L>
     </Text>
     <Text Key="Each Commit">
       <L>Each Commit</L>
@@ -12923,6 +14428,11 @@
       <L>작업지시 마감</L>
       <L>End Order</L>
     </Text>
+    <Text Key="End Qty">
+      <L>End Qty</L>
+      <L>완료 수량</L>
+      <L>End Qty</L>
+    </Text>
     <Text Key="End Req">
       <L>End Req</L>
       <L>완료 필요 유무</L>
@@ -12942,6 +14452,11 @@
       <L>End Resource ID</L>
       <L>작업 종료 장비</L>
       <L>End Resource ID</L>
+    </Text>
+    <Text Key="End Ship To Name">
+      <L>End Ship To Name</L>
+      <L>최종납품처</L>
+      <L>End Ship To Name</L>
     </Text>
     <Text Key="End Time">
       <L>End Time</L>
@@ -12968,6 +14483,11 @@
       <L>전체 작업자 정보</L>
       <L>Entire Worker Info</L>
     </Text>
+    <Text Key="Equipment Data">
+      <L>Equipment Data</L>
+      <L>설비 데이터</L>
+      <L>Equipment Data</L>
+    </Text>
     <Text Key="Erp NWK Code">
       <L>Erp NWK Code</L>
       <L>Erp 비가동 유형</L>
@@ -12978,6 +14498,16 @@
       <L>Erp 비가동명</L>
       <L>Erp NWK Desc</L>
     </Text>
+    <Text Key="Err Log List">
+      <L>Err Log List</L>
+      <L>에러 로그 리스트</L>
+      <L>Err Log List</L>
+    </Text>
+    <Text Key="Err Time">
+      <L>Error Time</L>
+      <L>에러 일시</L>
+      <L>Error Time</L>
+    </Text>
     <Text Key="Error">
       <L>Error</L>
       <L>오류</L>
@@ -12987,6 +14517,11 @@
       <L>Error Alarm</L>
       <L>오류 알람</L>
       <L>Error Alarm</L>
+    </Text>
+    <Text Key="Error Code">
+      <L>Error Code</L>
+      <L>에러 코드</L>
+      <L>Error Code</L>
     </Text>
     <Text Key="Error Detail">
       <L>Error Detail</L>
@@ -13040,7 +14575,7 @@
     </Text>
     <Text Key="Etc In Lot">
       <L>Etc In Lot</L>
-      <L>Lot 기타입고</L>
+      <L>기타 입고</L>
       <L>Etc In Lot</L>
     </Text>
     <Text Key="Etc In Type">
@@ -13048,15 +14583,30 @@
       <L>기타입고유형</L>
       <L>Etc In Type</L>
     </Text>
+    <Text Key="Etc Out">
+      <L>Etc Out</L>
+      <L>기타출고</L>
+      <L>Etc Out</L>
+    </Text>
     <Text Key="Etc Out Lot">
       <L>Etc Out Lot</L>
-      <L>Lot 기타출고</L>
+      <L>기타 출고</L>
       <L>Etc Out Lot</L>
     </Text>
     <Text Key="Etc Out Type">
       <L>Etc Out Type</L>
       <L>기타출고유형</L>
       <L>Etc Out Type</L>
+    </Text>
+    <Text Key="Etc Out/IN Lot Item Conversion">
+      <L>Etc Out/IN Lot Item Conversion</L>
+      <L>기타입출고를 통한 품목변환</L>
+      <L>Etc Out/IN Lot Item Conversion</L>
+    </Text>
+    <Text Key="Etc Out/In Group">
+      <L>Etc Out/In Group</L>
+      <L>기타 출고./입고 그룹</L>
+      <L>Etc Out/In Group</L>
     </Text>
     <Text Key="Etc Stock In(WIP)">
       <L>WIP Etc Stock In</L>
@@ -13163,6 +14713,11 @@
       <L>기존 LOT 번호</L>
       <L>Exist Lot Number</L>
     </Text>
+    <Text Key="Expect Ship Date">
+      <L>Expect Ship Date</L>
+      <L>출하예정일</L>
+      <L>Expect Ship Date</L>
+    </Text>
     <Text Key="Expiration date">
       <L>Expiration date</L>
       <L>유효기간</L>
@@ -13223,6 +14778,11 @@
       <L>기타 정보</L>
       <L>Extra Information</L>
     </Text>
+    <Text Key="Extrusion Ressource Data">
+      <L>Extrusion Ressource Data</L>
+      <L>HM 압출 설비 데이터 조회</L>
+      <L>Extrusion Ressource Data</L>
+    </Text>
     <Text Key="F Seq">
       <L>F Seq</L>
       <L>플로우 Seq</L>
@@ -13232,6 +14792,11 @@
       <L>FAILURE</L>
       <L>실패</L>
       <L>FAILURE</L>
+    </Text>
+    <Text Key="FILE NO">
+      <L>FILE NO</L>
+      <L>파일 번호</L>
+      <L>FILE NO</L>
     </Text>
     <Text Key="FINDING">
       <L>FINDING</L>
@@ -13373,6 +14938,11 @@
       <L>이미지 이름</L>
       <L>File</L>
     </Text>
+    <Text Key="File Delete">
+      <L>File Delete</L>
+      <L>파일 삭제</L>
+      <L>File Delete</L>
+    </Text>
     <Text Key="File Down">
       <L>File Down</L>
       <L>다운로드</L>
@@ -13423,6 +14993,11 @@
       <L>파일 업로드</L>
       <L>File Upload</L>
     </Text>
+    <Text Key="File Upload List">
+      <L>File Upload List</L>
+      <L>파일 업로드 리스트</L>
+      <L>File Upload List</L>
+    </Text>
     <Text Key="FileType">
       <L>FileType</L>
       <L>파일구분</L>
@@ -13455,7 +15030,7 @@
     </Text>
     <Text Key="Final Box ID">
       <L>Final Box ID</L>
-      <L>최종박스 ID</L>
+      <L>대박스 ID</L>
       <L>Final Box ID</L>
     </Text>
     <Text Key="Final Decision">
@@ -13472,6 +15047,11 @@
       <L>Finish Clean Flag</L>
       <L>세척 완료 여부</L>
       <L>Finish Clean Flag</L>
+    </Text>
+    <Text Key="Finished Goods">
+      <L>Finished Goods</L>
+      <L>완제품</L>
+      <L>Finished Goods</L>
     </Text>
     <Text Key="Finished Product Adjust In Stock">
       <L>Finished Product Adjust In Stock</L>
@@ -13582,6 +15162,111 @@
       <L>Flags</L>
       <L>필드</L>
       <L>Flags</L>
+    </Text>
+    <Text Key="Flatness">
+      <L>Flatness</L>
+      <L>평탄도</L>
+      <L>Flatness</L>
+    </Text>
+    <Text Key="Flatness 1">
+      <L>Flatness 1</L>
+      <L>평탄도 1</L>
+      <L>Flatness 1</L>
+    </Text>
+    <Text Key="Flatness 2">
+      <L>Flatness 2</L>
+      <L>평탄도 2</L>
+      <L>Flatness 2</L>
+    </Text>
+    <Text Key="Flatness 3">
+      <L>Flatness 3</L>
+      <L>평탄도 3</L>
+      <L>Flatness 3</L>
+    </Text>
+    <Text Key="Flatness 4">
+      <L>Flatness 4</L>
+      <L>평탄도 4</L>
+      <L>Flatness 4</L>
+    </Text>
+    <Text Key="Flatness 5">
+      <L>Flatness 5</L>
+      <L>평탄도 5</L>
+      <L>Flatness 5</L>
+    </Text>
+    <Text Key="Flatness Max">
+      <L>Flatness Max</L>
+      <L>평탄도 Max</L>
+      <L>Flatness Max</L>
+    </Text>
+    <Text Key="Flatness Min">
+      <L>Flatness Min</L>
+      <L>평탄도 Min</L>
+      <L>Flatness Min</L>
+    </Text>
+    <Text Key="Flatness#1">
+      <L>Flatness#9</L>
+      <L>평탄도#1</L>
+      <L>Flatness#9</L>
+    </Text>
+    <Text Key="Flatness#10">
+      <L>Flatness#10</L>
+      <L>평탄도#10</L>
+      <L>Flatness#10</L>
+    </Text>
+    <Text Key="Flatness#11">
+      <L>Flatness#11</L>
+      <L>평탄도#11</L>
+      <L>Flatness#11</L>
+    </Text>
+    <Text Key="Flatness#12">
+      <L>Flatness#12</L>
+      <L>평탄도#12</L>
+      <L>Flatness#12</L>
+    </Text>
+    <Text Key="Flatness#13">
+      <L>Flatness#13</L>
+      <L>평탄도#13</L>
+      <L>Flatness#13</L>
+    </Text>
+    <Text Key="Flatness#2">
+      <L>Flatness#2</L>
+      <L>평탄도#2</L>
+      <L>Flatness#2</L>
+    </Text>
+    <Text Key="Flatness#3">
+      <L>Flatness#3</L>
+      <L>평탄도#3</L>
+      <L>Flatness#3</L>
+    </Text>
+    <Text Key="Flatness#4">
+      <L>Flatness#4</L>
+      <L>평탄도#4</L>
+      <L>Flatness#4</L>
+    </Text>
+    <Text Key="Flatness#5">
+      <L>Flatness#5</L>
+      <L>평탄도#5</L>
+      <L>Flatness#5</L>
+    </Text>
+    <Text Key="Flatness#6">
+      <L>Flatness#6</L>
+      <L>평탄도#6</L>
+      <L>Flatness#6</L>
+    </Text>
+    <Text Key="Flatness#7">
+      <L>Flatness#7</L>
+      <L>평탄도#7</L>
+      <L>Flatness#7</L>
+    </Text>
+    <Text Key="Flatness#8">
+      <L>Flatness#8</L>
+      <L>평탄도#8</L>
+      <L>Flatness#8</L>
+    </Text>
+    <Text Key="Flatness#9">
+      <L>Flatness#9</L>
+      <L>평탄도#9</L>
+      <L>Flatness#9</L>
     </Text>
     <Text Key="Flexible Screen MFO Relation">
       <L>Flexible Screen MFO Relation</L>
@@ -13833,6 +15518,11 @@
       <L>From 공장</L>
       <L>From Factory</L>
     </Text>
+    <Text Key="From File Path">
+      <L>From File Path</L>
+      <L>파일 경로</L>
+      <L>From File Path</L>
+    </Text>
     <Text Key="From Flow">
       <L>From Flow</L>
       <L>From 플로우</L>
@@ -13862,6 +15552,16 @@
       <L>From Inv Oper</L>
       <L>From 저장 공정</L>
       <L>From Inv Oper</L>
+    </Text>
+    <Text Key="From Lot ID">
+      <L>From Lot ID</L>
+      <L>투입 LOT ID</L>
+      <L>From Lot ID</L>
+    </Text>
+    <Text Key="From Lot List">
+      <L>From Lot List</L>
+      <L>From Lot 리스트</L>
+      <L>From Lot List</L>
     </Text>
     <Text Key="From Material ID">
       <L>From Material ID</L>
@@ -13982,6 +15682,16 @@
       <L>From Version</L>
       <L>From 버전</L>
       <L>From Version</L>
+    </Text>
+    <Text Key="From Warehouse">
+      <L>From Warehouse</L>
+      <L>From 창고</L>
+      <L>From Warehouse</L>
+    </Text>
+    <Text Key="From Warehouse Desc">
+      <L>From Warehouse Desc</L>
+      <L>From 창고명</L>
+      <L>From Warehouse Desc</L>
     </Text>
     <Text Key="From WorkPlace">
       <L>From WorkPlace</L>
@@ -14183,17 +15893,22 @@
       <L>단계 진행중 파일 입력</L>
       <L>Get file on processing step</L>
     </Text>
+    <Text Key="Goal Class Type">
+      <L>Goal Class Type</L>
+      <L>목표 타입</L>
+      <L>Goal Class Type</L>
+    </Text>
+    <Text Key="Goal Year">
+      <L>Goal Year</L>
+      <L>목표년도</L>
+      <L>Goal Year</L>
+    </Text>
     <Text Key="Good Q">
       <L>Good Q</L>
       <L>양품</L>
       <L>Good Q</L>
     </Text>
     <Text Key="Good Qty">
-      <L>Good Qty</L>
-      <L>양품 수량</L>
-      <L>Good Qty</L>
-    </Text>
-    <Text Key="Gool Qty">
       <L>Good Qty</L>
       <L>양품 수량</L>
       <L>Good Qty</L>
@@ -14242,6 +15957,21 @@
       <L>Graphic Width</L>
       <L>그래픽 폭</L>
       <L>Graphic Width</L>
+    </Text>
+    <Text Key="Grit Class Lot Trace">
+      <L>Grit Class Lot Trace</L>
+      <L>그릿 분류 추적</L>
+      <L>Grit Class Lot Trace</L>
+    </Text>
+    <Text Key="Grit Class Oper Qty">
+      <L>Grit Class Oper Qty</L>
+      <L>그릿 분류공정 수량</L>
+      <L>Grit Class Oper Qty</L>
+    </Text>
+    <Text Key="Grit Class QC Qty">
+      <L>Grit Class QC Qty</L>
+      <L>그릿 약식검사 수량</L>
+      <L>Grit Class QC Qty</L>
     </Text>
     <Text Key="Grit Classification Process">
       <L>Grit Classification Process</L>
@@ -14373,10 +16103,20 @@
       <L>종별</L>
       <L>Grp Desc</L>
     </Text>
+    <Text Key="Gubun">
+      <L>Kind</L>
+      <L>구분</L>
+      <L>Kind</L>
+    </Text>
     <Text Key="HFI Transfer">
       <L>HFI Transfer</L>
       <L>HFI 창고 이송</L>
       <L>HFI Transfer</L>
+    </Text>
+    <Text Key="HM Input Qty">
+      <L>HM Input Qty</L>
+      <L>HM 입력수량</L>
+      <L>HM Input Qty</L>
     </Text>
     <Text Key="Half Life Time">
       <L>Half Life Time</L>
@@ -14673,6 +16413,11 @@
       <L>일간 근무시간</L>
       <L>Hours Per Day</L>
     </Text>
+    <Text Key="Hydraulic Oil Temp">
+      <L>Hydraulic Oil Temp</L>
+      <L>유압유 온도</L>
+      <L>Hydraulic Oil Temp</L>
+    </Text>
     <Text Key="ID">
       <L>ID</L>
       <L>ID</L>
@@ -14695,7 +16440,7 @@
     </Text>
     <Text Key="INV Lot ID">
       <L>INV Lot ID</L>
-      <L>투입 Lot ID</L>
+      <L>자재 Lot ID</L>
       <L>INV Lot ID</L>
     </Text>
     <Text Key="INV Oper">
@@ -14808,6 +16553,16 @@
       <L>ISPCmf 3</L>
       <L>ISPCmf 3</L>
     </Text>
+    <Text Key="If there are many lot? Please copy only Lots information and paste it in Ctrl + V">
+      <L>If there are many lot? Please copy only Lots information and paste it in Ctrl + V</L>
+      <L>Lot이 많은 경우 LOT들만 Copy해서 Ctrl + V 로 붙여넣기 바랍니다.</L>
+      <L>If there are many lot? Please copy only Lots information and paste it in Ctrl + V</L>
+    </Text>
+    <Text Key="If you lose your password, please contact the MES representative">
+      <L>If you lose your password, please contact the MES representative</L>
+      <L>3.비밀번호 분실시  MES 담당자에게 문의 바랍니다.(010-3053-5161)</L>
+      <L>If you lose your password, please contact the MES representative</L>
+    </Text>
     <Text Key="Image">
       <L>Image</L>
       <L>이미지</L>
@@ -14883,6 +16638,26 @@
       <L>이미지 5</L>
       <L>Img 5</L>
     </Text>
+    <Text Key="Impact">
+      <L>Impact</L>
+      <L>임팩트</L>
+      <L>Impact</L>
+    </Text>
+    <Text Key="Impact No">
+      <L>Impact No</L>
+      <L>임팩트 번호</L>
+      <L>Impact No</L>
+    </Text>
+    <Text Key="Impact Time">
+      <L>Impact Time</L>
+      <L>임팩트 시간</L>
+      <L>Impact Time</L>
+    </Text>
+    <Text Key="Impact process input quantity">
+      <L>Impact process input quantity</L>
+      <L>입팩트공정투입수량</L>
+      <L>Impact process input quantity</L>
+    </Text>
     <Text Key="Import">
       <L>Import</L>
       <L>들여오기</L>
@@ -14907,6 +16682,16 @@
       <L>In Inventory</L>
       <L>저장소 입고</L>
       <L>In Inventory</L>
+    </Text>
+    <Text Key="In Material Desc">
+      <L>In Material Desc</L>
+      <L>입고할 품목명</L>
+      <L>In Material Desc</L>
+    </Text>
+    <Text Key="In Material id">
+      <L>In Material id</L>
+      <L>입고할 품목코드</L>
+      <L>In Material id</L>
     </Text>
     <Text Key="In Message">
       <L>In Message</L>
@@ -14958,20 +16743,25 @@
       <L>입고 유형</L>
       <L>In Type</L>
     </Text>
+    <Text Key="InSide">
+      <L>InSide</L>
+      <L>내부</L>
+      <L>InSide</L>
+    </Text>
     <Text Key="Inactive">
       <L>Inactive</L>
       <L>비활성</L>
       <L>Inactive</L>
     </Text>
-    <Text Key="Inch1">
-      <L>Inch1</L>
-      <L>인치1</L>
-      <L>Inch1</L>
+    <Text Key="Inch 1">
+      <L>Inch 1</L>
+      <L>인치 1</L>
+      <L>Inch 1</L>
     </Text>
-    <Text Key="Inch2">
-      <L>Inch2</L>
-      <L>인치2</L>
-      <L>Inch2</L>
+    <Text Key="Inch 2">
+      <L>Inch 2</L>
+      <L>인치 2</L>
+      <L>Inch 2</L>
     </Text>
     <Text Key="Include Clean History">
       <L>Include Clean History</L>
@@ -15073,6 +16863,11 @@
       <L>확장 이력 포함</L>
       <L>Include Extension History</L>
     </Text>
+    <Text Key="Include Inspection">
+      <L>Include Inspection</L>
+      <L>성적서 필요</L>
+      <L>Include Inspection</L>
+    </Text>
     <Text Key="Include Old Status">
       <L>Include Old Status</L>
       <L>이전 상태 포함</L>
@@ -15168,6 +16963,11 @@
       <L>정보</L>
       <L>Info</L>
     </Text>
+    <Text Key="Infomation Hold">
+      <L>Infomation Hold</L>
+      <L>정보 고정</L>
+      <L>Infomation Hold</L>
+    </Text>
     <Text Key="Information">
       <L>Information</L>
       <L>정보</L>
@@ -15188,6 +16988,11 @@
       <L>초기값</L>
       <L>Initial Value</L>
     </Text>
+    <Text Key="Ink Print">
+      <L>Ink Print</L>
+      <L>잉크 프린트</L>
+      <L>Ink Print</L>
+    </Text>
     <Text Key="Input">
       <L>Input</L>
       <L>입력</L>
@@ -15198,6 +17003,11 @@
       <L>승인자 입력</L>
       <L>Input Approver</L>
     </Text>
+    <Text Key="Input Coolant Temp">
+      <L>Input Coolant Temp</L>
+      <L>냉각수 온도 In</L>
+      <L>Input Coolant Temp</L>
+    </Text>
     <Text Key="Input Data">
       <L>Input Data</L>
       <L>작업 데이터 입력</L>
@@ -15207,6 +17017,11 @@
       <L>Input Data Type</L>
       <L>입력 데이터 종류</L>
       <L>Input Data Type</L>
+    </Text>
+    <Text Key="Input Date">
+      <L>Input Date</L>
+      <L>투입일자</L>
+      <L>Input Date</L>
     </Text>
     <Text Key="Input INV">
       <L>Input INV</L>
@@ -15223,6 +17038,21 @@
       <L>투입 품번</L>
       <L>Input Mat Id</L>
     </Text>
+    <Text Key="Input Material Check">
+      <L>Input Material Check</L>
+      <L>투입자재체크</L>
+      <L>Input Material Check</L>
+    </Text>
+    <Text Key="Input Material Code">
+      <L>Input Material Code</L>
+      <L>투입 자재 코드</L>
+      <L>Input Material Code</L>
+    </Text>
+    <Text Key="Input Material YN">
+      <L>Input Material YN</L>
+      <L>투입 자재 여부</L>
+      <L>Input Material YN</L>
+    </Text>
     <Text Key="Input Materials">
       <L>Input Materials</L>
       <L>자재 투입</L>
@@ -15232,6 +17062,21 @@
       <L>Input Materials Reinspection</L>
       <L>자재 투입 (5%재검사)</L>
       <L>Input Materials Reinspection</L>
+    </Text>
+    <Text Key="Input Method">
+      <L>Input Method</L>
+      <L>투입방식</L>
+      <L>Input Method</L>
+    </Text>
+    <Text Key="Input No">
+      <L>Input No</L>
+      <L>투입번호</L>
+      <L>Input No</L>
+    </Text>
+    <Text Key="Input Now">
+      <L>Input Now</L>
+      <L>지금 투입될 수량</L>
+      <L>Input Now</L>
     </Text>
     <Text Key="Input Operation Value">
       <L>Input Operation Value</L>
@@ -15243,6 +17088,11 @@
       <L>팔레트 ID 입력</L>
       <L>Input Pallet ID</L>
     </Text>
+    <Text Key="Input Qty">
+      <L>Input Qty</L>
+      <L>투입수량</L>
+      <L>Input Qty</L>
+    </Text>
     <Text Key="Input Remain Lot Id">
       <L>Input Remain Lot Id</L>
       <L>자투리 Lot 정보 입력</L>
@@ -15252,6 +17102,11 @@
       <L>Input Res Id</L>
       <L>투입 설비</L>
       <L>Input Res Id</L>
+    </Text>
+    <Text Key="Input Status">
+      <L>Input Status</L>
+      <L>투입 상태 여부</L>
+      <L>Input Status</L>
     </Text>
     <Text Key="Input Time">
       <L>Input Time</L>
@@ -15267,6 +17122,16 @@
       <L>Input Value Type</L>
       <L>입력 값 종류</L>
       <L>Input Value Type</L>
+    </Text>
+    <Text Key="Input Weight">
+      <L>Input Weight</L>
+      <L>입력 중량</L>
+      <L>Input Weight</L>
+    </Text>
+    <Text Key="InputWeight">
+      <L>InputWeight</L>
+      <L>입력 중량</L>
+      <L>InputWeight</L>
     </Text>
     <Text Key="Inquiry">
       <L>Inquiry</L>
@@ -15338,10 +17203,25 @@
       <L>검사공정</L>
       <L>Insp Oper</L>
     </Text>
+    <Text Key="Insp Oper Code">
+      <L>Insp Oper Code</L>
+      <L>검사공정코드</L>
+      <L>Insp Oper Code</L>
+    </Text>
     <Text Key="Insp Qty">
       <L>Insp Qty</L>
       <L>검사 수량</L>
       <L>Insp Qty</L>
+    </Text>
+    <Text Key="Insp Reproc Flag">
+      <L>All Re-Proc Flag</L>
+      <L>덮어쓰기</L>
+      <L>All Re-Proc Flag</L>
+    </Text>
+    <Text Key="Insp Req Time">
+      <L>Insp Req Time</L>
+      <L>요청 일자</L>
+      <L>Insp Req Time</L>
     </Text>
     <Text Key="Insp Result Flag">
       <L>Insp Result Flag</L>
@@ -15362,6 +17242,11 @@
       <L>Insp Set Version</L>
       <L>검사 셋 버전</L>
       <L>Insp Set Version</L>
+    </Text>
+    <Text Key="Insp Status">
+      <L>Insp Status</L>
+      <L>검사상태</L>
+      <L>Insp Status</L>
     </Text>
     <Text Key="Insp Step">
       <L>Insp Step</L>
@@ -15408,6 +17293,16 @@
       <L>검사항목코드</L>
       <L>Inspection Code</L>
     </Text>
+    <Text Key="Inspection Count">
+      <L>Inspection Count</L>
+      <L>검사차수</L>
+      <L>Inspection Count</L>
+    </Text>
+    <Text Key="Inspection Data">
+      <L>Inspection Data</L>
+      <L>검사 데이터</L>
+      <L>Inspection Data</L>
+    </Text>
     <Text Key="Inspection Data Collection">
       <L>Inspection Data Collection</L>
       <L>검사 데이터</L>
@@ -15420,7 +17315,7 @@
     </Text>
     <Text Key="Inspection Flag">
       <L>Inspection Flag</L>
-      <L>검사 Flag</L>
+      <L>검사 여부</L>
       <L>Inspection Flag</L>
     </Text>
     <Text Key="Inspection ID">
@@ -15432,6 +17327,26 @@
       <L>Inspection Item</L>
       <L>검사 아이템</L>
       <L>Inspection Item</L>
+    </Text>
+    <Text Key="Inspection Judge">
+      <L>Inspection Judge</L>
+      <L>검사 판정</L>
+      <L>Inspection Judge</L>
+    </Text>
+    <Text Key="Inspection List">
+      <L>Inspection List</L>
+      <L>검사 리스트</L>
+      <L>Inspection List</L>
+    </Text>
+    <Text Key="Inspection Lot ID">
+      <L>Inspection Lot ID</L>
+      <L>검사 Lot ID</L>
+      <L>Inspection Lot ID</L>
+    </Text>
+    <Text Key="Inspection Lot List">
+      <L>Inspection Lot List</L>
+      <L>검사 Lot 목록</L>
+      <L>Inspection Lot List</L>
     </Text>
     <Text Key="Inspection Material Setup">
       <L>Inspection Material Setup</L>
@@ -15473,10 +17388,75 @@
       <L>검사 종류</L>
       <L>Inspection Type</L>
     </Text>
+    <Text Key="Inspection Type Desc">
+      <L>Inspection Type Desc</L>
+      <L>검사유형명</L>
+      <L>Inspection Type Desc</L>
+    </Text>
     <Text Key="Inspection Version">
       <L>Inspection Version</L>
       <L>검사셋 버전</L>
       <L>Inspection Version</L>
+    </Text>
+    <Text Key="Inspection View (standard_MULTI)">
+      <L>Inspection View (MULTI)</L>
+      <L>검사현황조회(다중)</L>
+      <L>Inspection View (MULTI)</L>
+    </Text>
+    <Text Key="Inspection View(Cut)">
+      <L>Inspection View(Cut)</L>
+      <L>[CTM] CUT 검사 현황</L>
+      <L>Inspection View(Cut)</L>
+    </Text>
+    <Text Key="Inspection View(Grit MP)">
+      <L>[GRIT] Inspection View(MP)</L>
+      <L>[GRIT] 제품검사 현황(MP)</L>
+      <L>[GRIT] Inspection View(MP)</L>
+    </Text>
+    <Text Key="Inspection View(Grit)">
+      <L>[GRIT] Inspection View</L>
+      <L>[GRIT] 제품검사 현황</L>
+      <L>[GRIT] Inspection View</L>
+    </Text>
+    <Text Key="Inspection View(HM PQC)">
+      <L>[HM] Inspection View(PQC)</L>
+      <L>[HM] 검사현황 (중간검사)</L>
+      <L>[HM] Inspection View(PQC)</L>
+    </Text>
+    <Text Key="Inspection View(L/P)">
+      <L>Inspection View(L/P)</L>
+      <L>[CTM] L/P 검사 현황</L>
+      <L>Inspection View(L/P)</L>
+    </Text>
+    <Text Key="Inspection View(Multi)">
+      <L>Inspection View(Multi)</L>
+      <L>검사현황조회(다중)</L>
+      <L>Inspection View(Multi)</L>
+    </Text>
+    <Text Key="Inspection View(PDC)">
+      <L>[PDC] Inspection View</L>
+      <L>[PDC] 제품검사 현황</L>
+      <L>[PDC] Inspection View</L>
+    </Text>
+    <Text Key="Inspection View(Round)">
+      <L>Inspection View(Round)</L>
+      <L>[CTM] 라운드검사 현황</L>
+      <L>Inspection View(Round)</L>
+    </Text>
+    <Text Key="Inspection View(standard_MULTI)">
+      <L>Inspection View (MULTI)</L>
+      <L>검사현황조회(다중)</L>
+      <L>Inspection View (MULTI)</L>
+    </Text>
+    <Text Key="Inspection pass count">
+      <L>Inspection pass count</L>
+      <L>검사통과 횟수</L>
+      <L>Inspection pass count</L>
+    </Text>
+    <Text Key="Inspection(Daewon)">
+      <L>Inspection(Daewon)</L>
+      <L>대원테크 검사등록</L>
+      <L>Inspection(Daewon)</L>
     </Text>
     <Text Key="Inspection(GRIT)">
       <L>Inspection(GRIT)</L>
@@ -15495,7 +17475,7 @@
     </Text>
     <Text Key="Inspection(Standard)">
       <L>Inspection(Standard)</L>
-      <L>검사(표준)</L>
+      <L>검사 등록(표준)</L>
       <L>Inspection(Standard)</L>
     </Text>
     <Text Key="InspectionResult">
@@ -15512,6 +17492,16 @@
       <L>Inspector</L>
       <L>검사자</L>
       <L>Inspector</L>
+    </Text>
+    <Text Key="Installation">
+      <L>Installation</L>
+      <L>장착</L>
+      <L>Installation</L>
+    </Text>
+    <Text Key="Internal Defect">
+      <L>Internal Defect</L>
+      <L>내부결함</L>
+      <L>Internal Defect</L>
     </Text>
     <Text Key="Internal Input">
       <L>Internal Input</L>
@@ -15578,6 +17568,16 @@
       <L>자재 이동 리스트</L>
       <L>Inv Lot Move History List</L>
     </Text>
+    <Text Key="Inv Lot Move Order Confirm">
+      <L>Inv Lot Move Order Confirm</L>
+      <L>자재 이동 입고 확정</L>
+      <L>Inv Lot Move Order Confirm</L>
+    </Text>
+    <Text Key="Inv Lot Move Order Registration">
+      <L>Inv Lot Move Order Registration</L>
+      <L>자재 이동 출고 등록</L>
+      <L>Inv Lot Move Order Registration</L>
+    </Text>
     <Text Key="Inv Lot Priority">
       <L>Inv Lot Priority</L>
       <L>자재 Lot 우선순위</L>
@@ -15617,6 +17617,11 @@
       <L>S/Loc</L>
       <L>저장창고</L>
       <L>S/Loc</L>
+    </Text>
+    <Text Key="Inv Oper Desc">
+      <L>Inv Oper Desc</L>
+      <L>자재 투입공정</L>
+      <L>Inv Oper Desc</L>
     </Text>
     <Text Key="Inv Oper In Time">
       <L>Inv Oper In Time</L>
@@ -15673,10 +17678,10 @@
       <L>저장 공정</L>
       <L>Inventory Operation</L>
     </Text>
-    <Text Key="Inventory Survey">
-      <L>Inventory Survey</L>
-      <L>재고 실사</L>
-      <L>Inventory Survey</L>
+    <Text Key="Inventory Qty">
+      <L>Inventory Qty</L>
+      <L>재고수량</L>
+      <L>Inventory Qty</L>
     </Text>
     <Text Key="Inventory Unit">
       <L>Inventory Unit</L>
@@ -15703,6 +17708,11 @@
       <L>배차번호</L>
       <L>Invoice No</L>
     </Text>
+    <Text Key="Issue Comment">
+      <L>Issue Comment</L>
+      <L>이상 내용</L>
+      <L>Issue Comment</L>
+    </Text>
     <Text Key="Issue Date">
       <L>Issue Date</L>
       <L>발생 날짜</L>
@@ -15712,6 +17722,11 @@
       <L>Issue Inv Lot List</L>
       <L>불출 자재 Lot 리스트</L>
       <L>Issue Inv Lot List</L>
+    </Text>
+    <Text Key="Issue Mat Count">
+      <L>Issue Mat Count</L>
+      <L>투입 자재 수</L>
+      <L>Issue Mat Count</L>
     </Text>
     <Text Key="Issue Mat List">
       <L>Issue Mat List</L>
@@ -15742,6 +17757,16 @@
       <L>Issue Time</L>
       <L>불출시간</L>
       <L>Issue Time</L>
+    </Text>
+    <Text Key="Issue Type">
+      <L>Issue Type</L>
+      <L>발생 형태</L>
+      <L>Issue Type</L>
+    </Text>
+    <Text Key="Issue Type Code">
+      <L>Issue Type Code</L>
+      <L>발생 형태 코드</L>
+      <L>Issue Type Code</L>
     </Text>
     <Text Key="Item">
       <L>Item</L>
@@ -15843,6 +17868,21 @@
       <L>항목리스트</L>
       <L>Item List</L>
     </Text>
+    <Text Key="Item Name(Grade)">
+      <L>Item Name(Grade)</L>
+      <L>품명(GRADE)</L>
+      <L>Item Name(Grade)</L>
+    </Text>
+    <Text Key="Item Name(Spec)">
+      <L>Item Name(Spec)</L>
+      <L>품명(SPEC)</L>
+      <L>Item Name(Spec)</L>
+    </Text>
+    <Text Key="Item Name(Type)">
+      <L>Item Name(Type)</L>
+      <L>품명(TYPE)</L>
+      <L>Item Name(Type)</L>
+    </Text>
     <Text Key="Item No">
       <L>Item No</L>
       <L>납품서순번</L>
@@ -15887,6 +17927,21 @@
       <L>Judge</L>
       <L>판정</L>
       <L>Judge</L>
+    </Text>
+    <Text Key="Judge Date">
+      <L>Judge Date</L>
+      <L>판정일자</L>
+      <L>Judge Date</L>
+    </Text>
+    <Text Key="Judge Time">
+      <L>Judge Time</L>
+      <L>판정 시간</L>
+      <L>Judge Time</L>
+    </Text>
+    <Text Key="JudgeResult">
+      <L>JudgeResult</L>
+      <L>판정결과</L>
+      <L>JudgeResult</L>
     </Text>
     <Text Key="Julian Day">
       <L>Julian Day</L>
@@ -16073,15 +18128,30 @@
       <L>자재 Lot Kitting 리스트</L>
       <L>Kitting Inv Lot List</L>
     </Text>
+    <Text Key="Kitting List">
+      <L>Kitting List</L>
+      <L>Kitting 리스트</L>
+      <L>Kitting List</L>
+    </Text>
     <Text Key="Kitting Qty">
       <L>Kitting Qty</L>
       <L>Kitting수량</L>
       <L>Kitting Qty</L>
     </Text>
+    <Text Key="Knife Flattening Usage">
+      <L>Knife Flattening Usage</L>
+      <L>나이프 평탄 사용</L>
+      <L>Knife Flattening Usage</L>
+    </Text>
     <Text Key="L/R">
       <L>L/R</L>
       <L>L/R</L>
       <L>L/R</L>
+    </Text>
+    <Text Key="LABEL SPLITE">
+      <L>LABEL SPLITE</L>
+      <L>라벨 분활</L>
+      <L>LABEL SPLITE</L>
     </Text>
     <Text Key="LCL">
       <L>LCL</L>
@@ -16092,6 +18162,11 @@
       <L>LCL2</L>
       <L>LCL2</L>
       <L>LCL2</L>
+    </Text>
+    <Text Key="LP Judge">
+      <L>LP Judge</L>
+      <L>LP 판정</L>
+      <L>LP Judge</L>
     </Text>
     <Text Key="LSL">
       <L>LSL</L>
@@ -16112,6 +18187,11 @@
       <L>Label ID</L>
       <L>라벨 ID</L>
       <L>Label ID</L>
+    </Text>
+    <Text Key="Label List">
+      <L>Label List</L>
+      <L>라벨 리스트</L>
+      <L>Label List</L>
     </Text>
     <Text Key="Label Mesh">
       <L>Label Mesh</L>
@@ -16157,6 +18237,11 @@
       <L>Language</L>
       <L>언어</L>
       <L>Language</L>
+    </Text>
+    <Text Key="Laser Marking">
+      <L>Laser Marking</L>
+      <L>레이져 마킹</L>
+      <L>Laser Marking</L>
     </Text>
     <Text Key="Last Act Hist Seq">
       <L>Last Act Hist Seq</L>
@@ -16348,6 +18433,11 @@
       <L>전주</L>
       <L>Last Week</L>
     </Text>
+    <Text Key="Leave Type">
+      <L>Leave Type</L>
+      <L>근태 종류</L>
+      <L>Leave Type</L>
+    </Text>
     <Text Key="Left">
       <L>Left</L>
       <L>왼쪽</L>
@@ -16372,6 +18462,21 @@
       <L>Length</L>
       <L>길이</L>
       <L>Length</L>
+    </Text>
+    <Text Key="Length#1">
+      <L>Length#1</L>
+      <L>변길이#1</L>
+      <L>Length#1</L>
+    </Text>
+    <Text Key="Length#2">
+      <L>Length#2</L>
+      <L>변길이#2</L>
+      <L>Length#2</L>
+    </Text>
+    <Text Key="Length#3">
+      <L>Length#3</L>
+      <L>변길이#3</L>
+      <L>Length#3</L>
     </Text>
     <Text Key="Level">
       <L>Level</L>
@@ -16422,6 +18527,11 @@
       <L>Limit Information</L>
       <L>제한 정보</L>
       <L>Limit Information</L>
+    </Text>
+    <Text Key="Limit Life Span">
+      <L>Limit Life Span</L>
+      <L>한계 수명</L>
+      <L>Limit Life Span</L>
     </Text>
     <Text Key="Line">
       <L>Line</L>
@@ -16480,13 +18590,18 @@
     </Text>
     <Text Key="Load Flag">
       <L>Load Flag</L>
-      <L>상차 여부</L>
+      <L>투입 여부</L>
       <L>Load Flag</L>
     </Text>
     <Text Key="Load Lot Count">
       <L>Load Lot Count</L>
       <L>상차 Lot 개수</L>
       <L>Load Lot Count</L>
+    </Text>
+    <Text Key="Load Oper">
+      <L>Load Oper</L>
+      <L>투입 공정</L>
+      <L>Load Oper</L>
     </Text>
     <Text Key="Load Qty">
       <L>Load Qty</L>
@@ -16502,6 +18617,11 @@
       <L>Load Remain Qty</L>
       <L>상차잔여수량</L>
       <L>Load Remain Qty</L>
+    </Text>
+    <Text Key="Load Workplace">
+      <L>Load Workplace</L>
+      <L>투입 작업장</L>
+      <L>Load Workplace</L>
     </Text>
     <Text Key="Load only">
       <L>Load only</L>
@@ -16658,6 +18778,11 @@
       <L>손실 주석</L>
       <L>Loss Comment</L>
     </Text>
+    <Text Key="Loss Date">
+      <L>Loss Date</L>
+      <L>불량발생일자</L>
+      <L>Loss Date</L>
+    </Text>
     <Text Key="Loss Desc">
       <L>Loss Desc</L>
       <L>불량명</L>
@@ -16762,6 +18887,11 @@
       <L>Lot Action</L>
       <L>Lot 처리 방법</L>
       <L>Lot Action</L>
+    </Text>
+    <Text Key="Lot Actual Result">
+      <L>Lot Actual Result</L>
+      <L>Lot 실적</L>
+      <L>Lot Actual Result</L>
     </Text>
     <Text Key="Lot Additional Information">
       <L>Lot Additional Information</L>
@@ -16907,6 +19037,11 @@
       <L>Lot Count</L>
       <L>Lot개수</L>
       <L>Lot Count</L>
+    </Text>
+    <Text Key="Lot Count of Box">
+      <L>Lot Count of Box</L>
+      <L>박스당 LOT 개수</L>
+      <L>Lot Count of Box</L>
     </Text>
     <Text Key="Lot Create Customized Field (1 ~ 20)">
       <L>Lot Create Customized Field (1 ~ 20)</L>
@@ -17218,6 +19353,11 @@
       <L>Lot번호</L>
       <L>LotId</L>
     </Text>
+    <Text Key="LotPressData View/Registration">
+      <L>LotPressData View/Registration</L>
+      <L>LOT 프레스 데이터 뷰/등록</L>
+      <L>LotPressData View/Registration</L>
+    </Text>
     <Text Key="Lot_ID">
       <L>Lot_ID</L>
       <L>Lot_ID</L>
@@ -17278,15 +19418,45 @@
       <L>M.A</L>
       <L>M.A</L>
     </Text>
+    <Text Key="M13 Lot ID">
+      <L>M13 Lot ID</L>
+      <L>M13 Lot 번호</L>
+      <L>M13 Lot ID</L>
+    </Text>
+    <Text Key="M15 Lot ID">
+      <L>M15 Lot ID</L>
+      <L>M15 Lot 번호</L>
+      <L>M15 Lot ID</L>
+    </Text>
     <Text Key="MANUFACTURER_ID">
       <L>MANUFACTURER ID</L>
       <L>제조회사</L>
       <L>MANUFACTURER ID</L>
     </Text>
+    <Text Key="MAX-D">
+      <L>MAX-D</L>
+      <L>최대직경</L>
+      <L>MAX-D</L>
+    </Text>
+    <Text Key="MAX_VALUE">
+      <L>MAX</L>
+      <L>MAX</L>
+      <L>MAX</L>
+    </Text>
     <Text Key="MES Channel">
       <L>MES Channel</L>
       <L>MES 통신채널</L>
       <L>MES Channel</L>
+    </Text>
+    <Text Key="MES ERP Inventory Inquiry">
+      <L>MES ERP Inventory Inquiry</L>
+      <L>MES ERP 재고조회</L>
+      <L>MES ERP Inventory Inquiry</L>
+    </Text>
+    <Text Key="MES ERP Quantity difference">
+      <L>MES ERP Quantity difference</L>
+      <L>MES ERP 차이수량</L>
+      <L>MES ERP Quantity difference</L>
     </Text>
     <Text Key="MES Lot List (Not In Scanned List)">
       <L>MES Lot List (Not In Scanned List)</L>
@@ -17307,6 +19477,11 @@
       <L>MES Qty</L>
       <L>전산 수량</L>
       <L>MES Qty</L>
+    </Text>
+    <Text Key="MES Sum Qty">
+      <L>MES Sum Qty</L>
+      <L>MES 합계수량</L>
+      <L>MES Sum Qty</L>
     </Text>
     <Text Key="MES-ERP I/F DT Code Setup">
       <L>MES-ERP I/F DT Code Setup</L>
@@ -17363,6 +19538,51 @@
       <L>MFO-스텝 관계</L>
       <L>MFO-Step Relation</L>
     </Text>
+    <Text Key="MIN _VALUE">
+      <L>MIN</L>
+      <L>MIN</L>
+      <L>MIN</L>
+    </Text>
+    <Text Key="MIN_VALUE">
+      <L>MIN</L>
+      <L>MIN</L>
+      <L>MIN</L>
+    </Text>
+    <Text Key="MP_PSD">
+      <L>PSD Data</L>
+      <L>PSD Data</L>
+      <L>PSD Data</L>
+    </Text>
+    <Text Key="MP_SEM_HIGHT">
+      <L>SEM HIGH</L>
+      <L>SEM 고배율</L>
+      <L>SEM HIGH</L>
+    </Text>
+    <Text Key="MP_SEM_LOW1">
+      <L>SEM LOWER</L>
+      <L>SEM 저배율1</L>
+      <L>SEM LOWER</L>
+    </Text>
+    <Text Key="MP_SEM_LOW2">
+      <L>SEM Low2</L>
+      <L>SEM 저배율2</L>
+      <L>SEM Low2</L>
+    </Text>
+    <Text Key="MP_SEM_MEASURE">
+      <L>Measure Data</L>
+      <L>측정 Data</L>
+      <L>Measure Data</L>
+    </Text>
+    <Text Key="Machine Interface">
+      <L>Machine Interface</L>
+      <L>설비 인터페이스</L>
+      <L>Machine Interface</L>
+    </Text>
+    <Text Key="Magnetism Information">
+      <L>Magnetism Information</L>
+      <L>자성 정보</L>
+      <L>Magnetism Information</L>
+    </Text>
     <Text Key="Mail">
       <L>Mail</L>
       <L>메일</L>
@@ -17372,6 +19592,11 @@
       <L>Main</L>
       <L>메인</L>
       <L>Main</L>
+    </Text>
+    <Text Key="Main Loss">
+      <L>Main Loss</L>
+      <L>메인불량</L>
+      <L>Main Loss</L>
     </Text>
     <Text Key="Main Menu">
       <L>Main Menu</L>
@@ -17467,6 +19692,11 @@
       <L>Mat Desc</L>
       <L>제품 설명</L>
       <L>Mat Desc</L>
+    </Text>
+    <Text Key="Mat Grade">
+      <L>Grade</L>
+      <L>Grade</L>
+      <L>Grade</L>
     </Text>
     <Text Key="Mat Group">
       <L>Mat Group</L>
@@ -17748,10 +19978,25 @@
       <L>제품 매치</L>
       <L>Material Match</L>
     </Text>
+    <Text Key="Material Migration">
+      <L>Material Migration</L>
+      <L>자재 Migration</L>
+      <L>Material Migration</L>
+    </Text>
+    <Text Key="Material Operation Status by Flow">
+      <L>Material Operation Status by Flow</L>
+      <L>플로우기준 품목별 재공조회</L>
+      <L>Material Operation Status by Flow</L>
+    </Text>
     <Text Key="Material Qty">
       <L>Material Qty</L>
       <L>제품 수량</L>
       <L>Material Qty</L>
+    </Text>
+    <Text Key="Material Quantity Change">
+      <L>Material Quantity Change</L>
+      <L>자재 투입 변경</L>
+      <L>Material Quantity Change</L>
     </Text>
     <Text Key="Material Serial">
       <L>Material Serial</L>
@@ -17763,10 +20008,25 @@
       <L>제품 셋업</L>
       <L>Material Setup</L>
     </Text>
+    <Text Key="Material Status">
+      <L>Material Status</L>
+      <L>자재 현황 조회</L>
+      <L>Material Status</L>
+    </Text>
     <Text Key="Material Type">
       <L>Material Type</L>
       <L>제품 종류</L>
       <L>Material Type</L>
+    </Text>
+    <Text Key="Material Type Code">
+      <L>Material Type Code</L>
+      <L>제품 종류 코드</L>
+      <L>Material Type Code</L>
+    </Text>
+    <Text Key="Material Usage Actual Result">
+      <L>Material Usage Actual Result</L>
+      <L>자재 사용 실적</L>
+      <L>Material Usage Actual Result</L>
     </Text>
     <Text Key="Material Ver">
       <L>Material Ver</L>
@@ -17803,6 +20063,11 @@
       <L>제품-공정</L>
       <L>Material-Operation</L>
     </Text>
+    <Text Key="Materials Information">
+      <L>Materials Information</L>
+      <L>자재 정보</L>
+      <L>Materials Information</L>
+    </Text>
     <Text Key="Matr Ver">
       <L>Matr Ver</L>
       <L>제품 버전</L>
@@ -17838,6 +20103,11 @@
       <L>최대 진행 Lot 수</L>
       <L>Max Proc Count</L>
     </Text>
+    <Text Key="Max Use Count">
+      <L>Max Use Count</L>
+      <L>한계 수명</L>
+      <L>Max Use Count</L>
+    </Text>
     <Text Key="Max Value">
       <L>Max Value</L>
       <L>최대값</L>
@@ -17847,6 +20117,11 @@
       <L>Max(Sec)</L>
       <L>최대(Sec)</L>
       <L>Max(Sec)</L>
+    </Text>
+    <Text Key="Max.">
+      <L>Max.</L>
+      <L>Max</L>
+      <L>Max.</L>
     </Text>
     <Text Key="Mbr Table">
       <L>Mbr Table</L>
@@ -17943,10 +20218,20 @@
       <L>병합 Lot</L>
       <L>Merge Lot Id</L>
     </Text>
+    <Text Key="Merge Lot Info">
+      <L>Merge Lot Info</L>
+      <L>병합 Lot 정보</L>
+      <L>Merge Lot Info</L>
+    </Text>
     <Text Key="Merge Pallet Id">
       <L>Merge Pallet Id</L>
       <L>병합할 팔레트 ID</L>
       <L>Merge Pallet Id</L>
+    </Text>
+    <Text Key="Mesh Delete Flag">
+      <L>Mesh Delete Flag</L>
+      <L>Mesh 제거 여부</L>
+      <L>Mesh Delete Flag</L>
     </Text>
     <Text Key="Message">
       <L>Message</L>
@@ -18058,6 +20343,11 @@
       <L>최소 입력값 수를 Lot수량으로</L>
       <L>Minimum Value by Lot QTY</L>
     </Text>
+    <Text Key="Minute">
+      <L>Minute</L>
+      <L>분</L>
+      <L>Minute</L>
+    </Text>
     <Text Key="Modal">
       <L>Modal</L>
       <L>모달</L>
@@ -18128,10 +20418,25 @@
       <L>모듈 이름</L>
       <L>Module Name</L>
     </Text>
+    <Text Key="Mold">
+      <L>Mold</L>
+      <L>금형</L>
+      <L>Mold</L>
+    </Text>
     <Text Key="Mold Barcode">
       <L>Mold Barcode</L>
       <L>금형 바코드</L>
       <L>Mold Barcode</L>
+    </Text>
+    <Text Key="Mold Break Registration">
+      <L>Mold Break Registration</L>
+      <L>금형 파손정보 등록</L>
+      <L>Mold Break Registration</L>
+    </Text>
+    <Text Key="Mold Break View Report">
+      <L>Mold Break View Report</L>
+      <L>금형 레포트</L>
+      <L>Mold Break View Report</L>
     </Text>
     <Text Key="Mold Code">
       <L>Mold Code</L>
@@ -18143,10 +20448,25 @@
       <L>금형 명</L>
       <L>Mold Desc</L>
     </Text>
+    <Text Key="Mold Disposal History">
+      <L>Mold Disposal History</L>
+      <L>금형 폐기 이력</L>
+      <L>Mold Disposal History</L>
+    </Text>
     <Text Key="Mold ID">
       <L>Mold ID</L>
-      <L>금형ID</L>
+      <L>금형 번호</L>
       <L>Mold ID</L>
+    </Text>
+    <Text Key="Mold In Out Event">
+      <L>Mold In Out Event</L>
+      <L>금형 장착 탈착</L>
+      <L>Mold In Out Event</L>
+    </Text>
+    <Text Key="Mold In Out Event(VATNAM)">
+      <L>Mold In Out Event(VATNAM)</L>
+      <L>금형 장착 탈착(베트남)</L>
+      <L>Mold In Out Event(VATNAM)</L>
     </Text>
     <Text Key="Mold List">
       <L>Mold List</L>
@@ -18167,6 +20487,11 @@
       <L>Mold Scrap Request Info</L>
       <L>금형 폐기 요청 정보</L>
       <L>Mold Scrap Request Info</L>
+    </Text>
+    <Text Key="Mold Status">
+      <L>Mold Status</L>
+      <L>금형 현황</L>
+      <L>Mold Status</L>
     </Text>
     <Text Key="Mold Store Info">
       <L>Mold Store Info</L>
@@ -18220,7 +20545,7 @@
     </Text>
     <Text Key="Move Date">
       <L>Move Date</L>
-      <L>납품 날짜</L>
+      <L>이동일자</L>
       <L>Move Date</L>
     </Text>
     <Text Key="Move Flag">
@@ -18252,6 +20577,11 @@
       <L>Move Lot Information</L>
       <L>이동 Lot 정보</L>
       <L>Move Lot Information</L>
+    </Text>
+    <Text Key="Move Operation and Move Shipment">
+      <L>Move Operation and Move Shipment</L>
+      <L>공정창고이동 및 출하창고이동</L>
+      <L>Move Operation and Move Shipment</L>
     </Text>
     <Text Key="Move Order Confirm">
       <L>Move Order Confirm</L>
@@ -18317,6 +20647,16 @@
       <L>Move Return Lot</L>
       <L>반품 Lot 이동</L>
       <L>Move Return Lot</L>
+    </Text>
+    <Text Key="Move Shipment">
+      <L>Move Shipment</L>
+      <L>구매품 출하 이동</L>
+      <L>Move Shipment</L>
+    </Text>
+    <Text Key="Move Time">
+      <L>Move Time</L>
+      <L>이동 시간</L>
+      <L>Move Time</L>
     </Text>
     <Text Key="Move to Operation">
       <L>Move to Operation</L>
@@ -18407,6 +20747,11 @@
       <L>N-Att Qty 3</L>
       <L>남은 수량 3</L>
       <L>N-Att Qty 3</L>
+    </Text>
+    <Text Key="NG Count">
+      <L>NG Count</L>
+      <L>NG 수량</L>
+      <L>NG Count</L>
     </Text>
     <Text Key="NG Operation">
       <L>NG Operation</L>
@@ -18512,6 +20857,11 @@
       <L>Negative</L>
       <L>시간 내에서</L>
       <L>Negative</L>
+    </Text>
+    <Text Key="Negative Remain Qty Check">
+      <L>Negative Remain Qty Check</L>
+      <L>음수 잔량 체크</L>
+      <L>Negative Remain Qty Check</L>
     </Text>
     <Text Key="Net">
       <L>Net</L>
@@ -18683,6 +21033,11 @@
       <L>SPM 값 사용하지 않음</L>
       <L>No Use SPM Value Flag</L>
     </Text>
+    <Text Key="No.">
+      <L>No.</L>
+      <L>번호</L>
+      <L>No.</L>
+    </Text>
     <Text Key="Nominal">
       <L>Nominal</L>
       <L>Nominal</L>
@@ -18705,7 +21060,7 @@
     </Text>
     <Text Key="Non Operation">
       <L>Non Operation</L>
-      <L>비가동</L>
+      <L>비가동 등록</L>
       <L>Non Operation</L>
     </Text>
     <Text Key="Non Periodic">
@@ -18743,6 +21098,11 @@
       <L>제거되지 않은 데이터</L>
       <L>Not Cleaned</L>
     </Text>
+    <Text Key="Not Input Material Add">
+      <L>Not Input Material Add</L>
+      <L>미투입 자재 처리</L>
+      <L>Not Input Material Add</L>
+    </Text>
     <Text Key="Not Print">
       <L>Not Print</L>
       <L>숨김</L>
@@ -18768,6 +21128,21 @@
       <L>도착 알람 ID</L>
       <L>Notify Alarm ID</L>
     </Text>
+    <Text Key="Now Date">
+      <L>Now Date</L>
+      <L>현재일</L>
+      <L>Now Date</L>
+    </Text>
+    <Text Key="Now Date Only">
+      <L>Now Date Only</L>
+      <L>현시점만 조회</L>
+      <L>Now Date Only</L>
+    </Text>
+    <Text Key="Nowork Type">
+      <L>Nowork Type</L>
+      <L>고정 비 근무 적용</L>
+      <L>Nowork Type</L>
+    </Text>
     <Text Key="Null">
       <L>Null</L>
       <L>Null</L>
@@ -18788,6 +21163,16 @@
       <L>숫자</L>
       <L>Number</L>
     </Text>
+    <Text Key="Number Of Press">
+      <L>Number Of Press</L>
+      <L>프레스 횟수</L>
+      <L>Number Of Press</L>
+    </Text>
+    <Text Key="Number of Defect">
+      <L>Number of Defect</L>
+      <L>Defect 수</L>
+      <L>Number of Defect</L>
+    </Text>
     <Text Key="Number of blank">
       <L>Number of blank</L>
       <L>공백 개수</L>
@@ -18802,6 +21187,16 @@
       <L>OCCURED</L>
       <L>발생</L>
       <L>OCCURED</L>
+    </Text>
+    <Text Key="OD Meter">
+      <L>OD Meter</L>
+      <L>외경</L>
+      <L>OD Meter</L>
+    </Text>
+    <Text Key="OD Thick">
+      <L>OD Thick</L>
+      <L>외경 두께</L>
+      <L>OD Thick</L>
     </Text>
     <Text Key="OK Qty">
       <L>OK Qty</L>
@@ -18887,6 +21282,11 @@
       <L>Occured Alarm Shift 1</L>
       <L>알람 발생 구역 1</L>
       <L>Occured Alarm Shift 1</L>
+    </Text>
+    <Text Key="Occurrence time">
+      <L>Occurrence time</L>
+      <L>발생 시간</L>
+      <L>Occurrence time</L>
     </Text>
     <Text Key="Odd/Even alpha">
       <L>Odd/Even alpha</L>
@@ -19093,15 +21493,30 @@
       <L>이전 값</L>
       <L>Old Value</L>
     </Text>
+    <Text Key="Old Warehouse">
+      <L>Old Warehouse</L>
+      <L>이전 창고</L>
+      <L>Old Warehouse</L>
+    </Text>
     <Text Key="Old WorkPlace">
       <L>Old WorkPlace</L>
       <L>이전 작업장</L>
       <L>Old WorkPlace</L>
     </Text>
+    <Text Key="OnHand Qty View">
+      <L>OnHand Qty View</L>
+      <L>OnHand 재고현황</L>
+      <L>OnHand Qty View</L>
+    </Text>
     <Text Key="Only Counter">
       <L>Only Counter</L>
       <L>계수기만 조회</L>
       <L>Only Counter</L>
+    </Text>
+    <Text Key="Only Cup">
+      <L>Only Cup</L>
+      <L>컵조립만 전송</L>
+      <L>Only Cup</L>
     </Text>
     <Text Key="Only Deleted History">
       <L>Only Deleted History</L>
@@ -19158,6 +21573,11 @@
       <L>로그인 공장 전용</L>
       <L>Only for This Factory</L>
     </Text>
+    <Text Key="Only selected">
+      <L>Only selected</L>
+      <L>선택된 것만</L>
+      <L>Only selected</L>
+    </Text>
     <Text Key="Open Comment">
       <L>Open Comment</L>
       <L>반송 주석</L>
@@ -19177,6 +21597,11 @@
       <L>Oper</L>
       <L>공정</L>
       <L>Oper</L>
+    </Text>
+    <Text Key="Oper Code">
+      <L>Oper Code</L>
+      <L>공정 코드</L>
+      <L>Oper Code</L>
     </Text>
     <Text Key="Oper Desc">
       <L>Oper Desc</L>
@@ -19227,6 +21652,11 @@
       <L>Oper Name</L>
       <L>공정 이름</L>
       <L>Oper Name</L>
+    </Text>
+    <Text Key="Oper Seq">
+      <L>Oper Seq</L>
+      <L>공정 번호</L>
+      <L>Oper Seq</L>
     </Text>
     <Text Key="Oper Tran Flag">
       <L>Oper Tran Flag</L>
@@ -19283,10 +21713,25 @@
       <L>공정 속성 정의 (병합)</L>
       <L>Operation Attribute Setup (Merge Only)</L>
     </Text>
+    <Text Key="Operation Code">
+      <L>Operation Code</L>
+      <L>공정 코드</L>
+      <L>Operation Code</L>
+    </Text>
+    <Text Key="Operation Data Set">
+      <L>Operation Data Set</L>
+      <L>공정 데이터 셋</L>
+      <L>Operation Data Set</L>
+    </Text>
     <Text Key="Operation Desc">
       <L>Operation Desc</L>
       <L>공정 설명</L>
       <L>Operation Desc</L>
+    </Text>
+    <Text Key="Operation Exception Lot Creation">
+      <L>Operation Exception Lot Creation</L>
+      <L>공정 예외 LOT 생성</L>
+      <L>Operation Exception Lot Creation</L>
     </Text>
     <Text Key="Operation Group">
       <L>Operation Group</L>
@@ -19298,15 +21743,35 @@
       <L>공정 그룹 (1~10)</L>
       <L>Operation Group (1~10)</L>
     </Text>
+    <Text Key="Operation Lot List">
+      <L>Operation Lot List</L>
+      <L>공정별 Lot 리스트 조회</L>
+      <L>Operation Lot List</L>
+    </Text>
     <Text Key="Operation Match">
       <L>Operation Match</L>
       <L>공정 매치</L>
       <L>Operation Match</L>
     </Text>
+    <Text Key="Operation Materil Desc">
+      <L>Operation Materil Desc</L>
+      <L>생산 품목명</L>
+      <L>Operation Materil Desc</L>
+    </Text>
+    <Text Key="Operation Materil ID">
+      <L>Operation Materil ID</L>
+      <L>생산 품목코드</L>
+      <L>Operation Materil ID</L>
+    </Text>
     <Text Key="Operation Point">
       <L>Operation Point</L>
       <L>공정 포인트</L>
       <L>Operation Point</L>
+    </Text>
+    <Text Key="Operation Press">
+      <L>Operation Press</L>
+      <L>운전압력</L>
+      <L>Operation Press</L>
     </Text>
     <Text Key="Operation Setup">
       <L>Operation Setup</L>
@@ -19493,9 +21958,14 @@
       <L>작업지시</L>
       <L>Order</L>
     </Text>
+    <Text Key="Order Bom quantity">
+      <L>Order Bom quantity</L>
+      <L>오더 투입수량</L>
+      <L>Order Bom quantity</L>
+    </Text>
     <Text Key="Order Date">
       <L>Order Date</L>
-      <L>지시 날짜</L>
+      <L>지시일자</L>
       <L>Order Date</L>
     </Text>
     <Text Key="Order Detail">
@@ -19588,6 +22058,11 @@
       <L>지시 유형</L>
       <L>Order Type</L>
     </Text>
+    <Text Key="OrderType">
+      <L>OrderType</L>
+      <L>지시 유형</L>
+      <L>OrderType</L>
+    </Text>
     <Text Key="Org Due Date">
       <L>Org Due Date</L>
       <L>최초 Due Date</L>
@@ -19620,7 +22095,7 @@
     </Text>
     <Text Key="Original Lot ID">
       <L>Original Lot ID</L>
-      <L>오리지날 Lot번호</L>
+      <L>공정 Lot 번호</L>
       <L>Original Lot ID</L>
     </Text>
     <Text Key="Originated Services">
@@ -19637,6 +22112,11 @@
       <L>Out Date</L>
       <L>출고일자</L>
       <L>Out Date</L>
+    </Text>
+    <Text Key="Out Diameter Min">
+      <L>Out Diameter Min</L>
+      <L>외경 Min</L>
+      <L>Out Diameter Min</L>
     </Text>
     <Text Key="Out Flag">
       <L>Out Flag</L>
@@ -19668,6 +22148,16 @@
       <L>출고 품목 리스트</L>
       <L>Out Mat List</L>
     </Text>
+    <Text Key="Out Material Code">
+      <L>Out Material Code</L>
+      <L>생성 자재 코드</L>
+      <L>Out Material Code</L>
+    </Text>
+    <Text Key="Out Materials">
+      <L>Out Materials</L>
+      <L>생성 자재</L>
+      <L>Out Materials</L>
+    </Text>
     <Text Key="Out Qty">
       <L>Out Qty</L>
       <L>출고 수량</L>
@@ -19693,6 +22183,11 @@
       <L>출고사유</L>
       <L>Out Reason</L>
     </Text>
+    <Text Key="Out Throttle(%)">
+      <L>Out Throttle (%)</L>
+      <L>Gas 분압 (%)</L>
+      <L>Out Throttle (%)</L>
+    </Text>
     <Text Key="Out Warehouse">
       <L>Out Warehouse</L>
       <L>완료 창고</L>
@@ -19703,10 +22198,30 @@
       <L>규격한계를 벗어난 경우</L>
       <L>Out of Spec (OOS)</L>
     </Text>
+    <Text Key="OutSide">
+      <L>OutSide</L>
+      <L>외부</L>
+      <L>OutSide</L>
+    </Text>
+    <Text Key="OutSourcing Warehouse">
+      <L>OutSourcing Warehouse</L>
+      <L>외주 창고</L>
+      <L>OutSourcing Warehouse</L>
+    </Text>
+    <Text Key="Outgoing">
+      <L>Outgoing</L>
+      <L>출고</L>
+      <L>Outgoing</L>
+    </Text>
     <Text Key="Output">
       <L>Output</L>
       <L>출력</L>
       <L>Output</L>
+    </Text>
+    <Text Key="Output Coolant Temp">
+      <L>Output Coolant Temp</L>
+      <L>냉각수 온도 Out</L>
+      <L>Output Coolant Temp</L>
     </Text>
     <Text Key="Outsourcing Date">
       <L>Outsourcing Date</L>
@@ -19718,10 +22233,105 @@
       <L>외주 입고</L>
       <L>Outsourcing In Process</L>
     </Text>
+    <Text Key="Outsourcing In Process3(Input and warehousing)">
+      <L>Outsourcing In Process3(Input and warehousing)</L>
+      <L>외주입고(투입 및 생산 기준)</L>
+      <L>Outsourcing In Process3(Input and warehousing)</L>
+    </Text>
     <Text Key="Outsourcing Out Process">
       <L>Outsourcing Out Process</L>
       <L>외주 출고</L>
       <L>Outsourcing Out Process</L>
+    </Text>
+    <Text Key="Outsourcing Return">
+      <L>Outsourcing Return</L>
+      <L>외주 반납</L>
+      <L>Outsourcing Return</L>
+    </Text>
+    <Text Key="Overall Thickness">
+      <L>Overall Thickness</L>
+      <L>전체두께</L>
+      <L>Overall Thickness</L>
+    </Text>
+    <Text Key="Overall Thickness#1">
+      <L>Overall Thickness#1</L>
+      <L>전체두께#1</L>
+      <L>Overall Thickness#1</L>
+    </Text>
+    <Text Key="Overall Thickness#10">
+      <L>Overall Thickness#10</L>
+      <L>전체두께#10</L>
+      <L>Overall Thickness#10</L>
+    </Text>
+    <Text Key="Overall Thickness#11">
+      <L>Overall Thickness#11</L>
+      <L>전체두께#11</L>
+      <L>Overall Thickness#11</L>
+    </Text>
+    <Text Key="Overall Thickness#12">
+      <L>Overall Thickness#12</L>
+      <L>전체두께#12</L>
+      <L>Overall Thickness#12</L>
+    </Text>
+    <Text Key="Overall Thickness#13">
+      <L>Overall Thickness#13</L>
+      <L>전체두께#13</L>
+      <L>Overall Thickness#13</L>
+    </Text>
+    <Text Key="Overall Thickness#2">
+      <L>Overall Thickness#2</L>
+      <L>전체두께#2</L>
+      <L>Overall Thickness#2</L>
+    </Text>
+    <Text Key="Overall Thickness#3">
+      <L>Overall Thickness#3</L>
+      <L>전체두께#3</L>
+      <L>Overall Thickness#3</L>
+    </Text>
+    <Text Key="Overall Thickness#4">
+      <L>Overall Thickness#4</L>
+      <L>전체두께#4</L>
+      <L>Overall Thickness#4</L>
+    </Text>
+    <Text Key="Overall Thickness#5">
+      <L>Overall Thickness#5</L>
+      <L>전체두께#5</L>
+      <L>Overall Thickness#5</L>
+    </Text>
+    <Text Key="Overall Thickness#6">
+      <L>Overall Thickness#6</L>
+      <L>전체두께#6</L>
+      <L>Overall Thickness#6</L>
+    </Text>
+    <Text Key="Overall Thickness#7">
+      <L>Overall Thickness#7</L>
+      <L>전체두께#7</L>
+      <L>Overall Thickness#7</L>
+    </Text>
+    <Text Key="Overall Thickness#8">
+      <L>Overall Thickness#8</L>
+      <L>전체두께#8</L>
+      <L>Overall Thickness#8</L>
+    </Text>
+    <Text Key="Overall Thickness#9">
+      <L>Overall Thickness#9</L>
+      <L>전체두께#9</L>
+      <L>Overall Thickness#9</L>
+    </Text>
+    <Text Key="Overall thickness Max">
+      <L>Overall thickness Max</L>
+      <L>전체두께 Max</L>
+      <L>Overall thickness Max</L>
+    </Text>
+    <Text Key="Overall thickness Min">
+      <L>Overall thickness Min</L>
+      <L>전체두께 Min</L>
+      <L>Overall thickness Min</L>
+    </Text>
+    <Text Key="Overall thickness target">
+      <L>Overall thickness target</L>
+      <L>전체두께 Target</L>
+      <L>Overall thickness target</L>
     </Text>
     <Text Key="Override">
       <L>Override</L>
@@ -19767,6 +22377,11 @@
       <L>OwnerCode</L>
       <L>소유자 코드</L>
       <L>OwnerCode</L>
+    </Text>
+    <Text Key="P Grade Lot Management">
+      <L>P Grade Lot Management</L>
+      <L>P급 Lot 관리</L>
+      <L>P Grade Lot Management</L>
     </Text>
     <Text Key="P Move">
       <L>P Move</L>
@@ -19853,10 +22468,25 @@
       <L>PO</L>
       <L>PO</L>
     </Text>
+    <Text Key="PO Create Date">
+      <L>PO Create Date</L>
+      <L>PO 생성일자</L>
+      <L>PO Create Date</L>
+    </Text>
     <Text Key="PO Date">
       <L>PO Date</L>
       <L>PO 일자</L>
       <L>PO Date</L>
+    </Text>
+    <Text Key="PO Detail List">
+      <L>PO Detail List</L>
+      <L>구매 상세 리스트</L>
+      <L>PO Detail List</L>
+    </Text>
+    <Text Key="PO Gubun">
+      <L>PO Gubun</L>
+      <L>발주구분</L>
+      <L>PO Gubun</L>
     </Text>
     <Text Key="PO Info">
       <L>PO Info</L>
@@ -19893,6 +22523,66 @@
       <L>PO 순번</L>
       <L>PO Seq</L>
     </Text>
+    <Text Key="POQC006MM">
+      <L>Height(mm)</L>
+      <L>높이(mm)</L>
+      <L>Height(mm)</L>
+    </Text>
+    <Text Key="POQC006_MM">
+      <L>Height(mm)</L>
+      <L>높이(mm)</L>
+      <L>Height(mm)</L>
+    </Text>
+    <Text Key="POQC029MM">
+      <L>Dia Chamfer(mm)</L>
+      <L>다이아층 챔퍼길이(mm)</L>
+      <L>Dia Chamfer(mm)</L>
+    </Text>
+    <Text Key="POQC029_MM">
+      <L>Dia Chamfer(mm)</L>
+      <L>다이아층 챔퍼길이(mm)</L>
+      <L>Dia Chamfer(mm)</L>
+    </Text>
+    <Text Key="POQC030MM">
+      <L>Carbide Chamfer(mm)</L>
+      <L>초경층 챔퍼길이(mm)</L>
+      <L>Carbide Chamfer(mm)</L>
+    </Text>
+    <Text Key="POQC030_MM">
+      <L>Carbide Chamfer(mm)</L>
+      <L>초경층 챔퍼길이(mm)</L>
+      <L>Carbide Chamfer(mm)</L>
+    </Text>
+    <Text Key="POQC033MM">
+      <L>Diameter(mm)</L>
+      <L>외경(mm)</L>
+      <L>Diameter(mm)</L>
+    </Text>
+    <Text Key="POQC033_MM">
+      <L>Diameter(mm)</L>
+      <L>외경(mm)</L>
+      <L>Diameter(mm)</L>
+    </Text>
+    <Text Key="POQC052MM">
+      <L>Layer Thickness(mm)</L>
+      <L>총두께(mm)</L>
+      <L>Layer Thickness(mm)</L>
+    </Text>
+    <Text Key="POQC052_MM">
+      <L>Layer Thickness(mm)</L>
+      <L>총두께(mm)</L>
+      <L>Layer Thickness(mm)</L>
+    </Text>
+    <Text Key="POQC053MM">
+      <L>Leaching depth(mm)</L>
+      <L>리칭깊이(mm)</L>
+      <L>Leaching depth(mm)</L>
+    </Text>
+    <Text Key="POQC053_MM">
+      <L>Leaching depth(mm)</L>
+      <L>리칭깊이(mm)</L>
+      <L>Leaching depth(mm)</L>
+    </Text>
     <Text Key="PP ID">
       <L>PP ID</L>
       <L>PP ID</L>
@@ -19923,6 +22613,91 @@
       <L>PULL 공정</L>
       <L>PULL Operation</L>
     </Text>
+    <Text Key="PV CLW In Temp">
+      <L>PV CLW In Temp (℃)</L>
+      <L>냉각수온도(IN) (℃)</L>
+      <L>PV CLW In Temp (℃)</L>
+    </Text>
+    <Text Key="PV CLW Out Temp">
+      <L>PV CLW Out Temp (℃)</L>
+      <L>냉각수온도(OUT) (℃)</L>
+      <L>PV CLW Out Temp (℃)</L>
+    </Text>
+    <Text Key="PV Electric">
+      <L>PV Electric (A)</L>
+      <L>전류 (A)</L>
+      <L>PV Electric (A)</L>
+    </Text>
+    <Text Key="PV HDL Temp">
+      <L>PV HDL Temp (℃)</L>
+      <L>유압유온도 (℃)</L>
+      <L>PV HDL Temp (℃)</L>
+    </Text>
+    <Text Key="PV Power">
+      <L>PV Power (KVA)</L>
+      <L>전력 (KVA)</L>
+      <L>PV Power (KVA)</L>
+    </Text>
+    <Text Key="PV Pressure">
+      <L>PV Pressure</L>
+      <L>압력</L>
+      <L>PV Pressure</L>
+    </Text>
+    <Text Key="PV Pressure_bar">
+      <L>PV Pressure (bar)</L>
+      <L>압력 (bar)</L>
+      <L>PV Pressure (bar)</L>
+    </Text>
+    <Text Key="PV Pressure_psi">
+      <L>PV Pressure (psi)</L>
+      <L>압력 (psi)</L>
+      <L>PV Pressure (psi)</L>
+    </Text>
+    <Text Key="PV Pressure_ton">
+      <L>PV Pressure (Ton)</L>
+      <L>압력 (Ton)</L>
+      <L>PV Pressure (Ton)</L>
+    </Text>
+    <Text Key="PV RPM">
+      <L>PV RPM (RPM)</L>
+      <L>측정 속도 (RPM)</L>
+      <L>PV RPM (RPM)</L>
+    </Text>
+    <Text Key="PV Resistance">
+      <L>PV Resistance (μΩ)</L>
+      <L>저항 (μΩ)</L>
+      <L>PV Resistance (μΩ)</L>
+    </Text>
+    <Text Key="PV Stroke">
+      <L>PV Stroke (INCH)</L>
+      <L>Stroke (INCH)</L>
+      <L>PV Stroke (INCH)</L>
+    </Text>
+    <Text Key="PV Temp">
+      <L>PV Temp (℃)</L>
+      <L>온도 (℃)</L>
+      <L>PV Temp (℃)</L>
+    </Text>
+    <Text Key="PV Throttle">
+      <L>PV Throttle (Torr)</L>
+      <L>실측 Gas 분압 (Torr)</L>
+      <L>PV Throttle (Torr)</L>
+    </Text>
+    <Text Key="PV Time">
+      <L>PV Time (Hr)</L>
+      <L>가동시간 (Hr)</L>
+      <L>PV Time (Hr)</L>
+    </Text>
+    <Text Key="PV Vacuum">
+      <L>PV Vacuum (Torr)</L>
+      <L>진공도 (Torr)</L>
+      <L>PV Vacuum (Torr)</L>
+    </Text>
+    <Text Key="PV Volt">
+      <L>PV Volt (V)</L>
+      <L>전압 (V)</L>
+      <L>PV Volt (V)</L>
+    </Text>
     <Text Key="Pack Date">
       <L>Pack Date</L>
       <L>포장일자</L>
@@ -19930,7 +22705,7 @@
     </Text>
     <Text Key="Pack Flag">
       <L>Pack Flag</L>
-      <L>포장Flag</L>
+      <L>포장여부</L>
       <L>Pack Flag</L>
     </Text>
     <Text Key="Pack LIne No">
@@ -19943,20 +22718,35 @@
       <L>포장 Lot 개수</L>
       <L>Pack Lot Count</L>
     </Text>
+    <Text Key="Pack Lot Create Date">
+      <L>Pack Lot Create Date</L>
+      <L>포장 확정일자</L>
+      <L>Pack Lot Create Date</L>
+    </Text>
     <Text Key="Pack Lot ID">
       <L>Pack Lot ID</L>
       <L>포장 Lot번호</L>
       <L>Pack Lot ID</L>
     </Text>
+    <Text Key="Pack Lot List">
+      <L>Pack Lot List</L>
+      <L>포장 Lot 목록</L>
+      <L>Pack Lot List</L>
+    </Text>
     <Text Key="Pack Order Date">
       <L>Pack Order Date</L>
-      <L>포장지시일자</L>
+      <L>주문 일자</L>
       <L>Pack Order Date</L>
     </Text>
     <Text Key="Pack Order ID">
       <L>Pack Order ID</L>
-      <L>포장지시번호</L>
+      <L>주문지시번호</L>
       <L>Pack Order ID</L>
+    </Text>
+    <Text Key="Pack Order No">
+      <L>Pack Order No</L>
+      <L>포장지시번호</L>
+      <L>Pack Order No</L>
     </Text>
     <Text Key="Pack Qty">
       <L>Pack Qty</L>
@@ -19975,7 +22765,7 @@
     </Text>
     <Text Key="Packing Box">
       <L>Packing Box</L>
-      <L>포장 박스</L>
+      <L>중박스 포장 구성</L>
       <L>Packing Box</L>
     </Text>
     <Text Key="Packing Box List">
@@ -19983,20 +22773,35 @@
       <L>포장 Box 리스트</L>
       <L>Packing Box List</L>
     </Text>
+    <Text Key="Packing Date">
+      <L>Packing Date</L>
+      <L>포장일자</L>
+      <L>Packing Date</L>
+    </Text>
     <Text Key="Packing Final Box">
       <L>Packing Final Box</L>
-      <L>포장 FINAL 박스</L>
+      <L>대박스 포장 구성</L>
       <L>Packing Final Box</L>
+    </Text>
+    <Text Key="Packing Instructions">
+      <L>Packing Instructions</L>
+      <L>용기</L>
+      <L>Packing Instructions</L>
     </Text>
     <Text Key="Packing Lot">
       <L>Packing Lot</L>
-      <L>Lot 포장</L>
+      <L>Lot 포장 구성</L>
       <L>Packing Lot</L>
     </Text>
     <Text Key="Packing Lot List">
       <L>Packing Lot List</L>
       <L>포장 Lot 리스트</L>
       <L>Packing Lot List</L>
+    </Text>
+    <Text Key="Packing Lot Split">
+      <L>Packing Lot Split</L>
+      <L>Lot 포장 구성(분할)</L>
+      <L>Packing Lot Split</L>
     </Text>
     <Text Key="Packing Order List">
       <L>Packing Order List</L>
@@ -20158,6 +22963,16 @@
       <L>Pass Count For Skip</L>
       <L>Pass Count For Skip</L>
     </Text>
+    <Text Key="Pass Qty">
+      <L>Pass Qty</L>
+      <L>합격수량</L>
+      <L>Pass Qty</L>
+    </Text>
+    <Text Key="Pass Rate">
+      <L>Pass Rate</L>
+      <L>합격률</L>
+      <L>Pass Rate</L>
+    </Text>
     <Text Key="Pass Sum">
       <L>Pass Sum</L>
       <L>합격 합계</L>
@@ -20182,6 +22997,11 @@
       <L>Password Change Period</L>
       <L>암호 변경 주기</L>
       <L>Password Change Period</L>
+    </Text>
+    <Text Key="Password change cycle is 3 months">
+      <L>Password change cycle is 3 months</L>
+      <L>2.패스워드 변경주기는 3개월입니다</L>
+      <L>Password change cycle is 3 months</L>
     </Text>
     <Text Key="Pds Cmf 1">
       <L>Pds Cmf 1</L>
@@ -20353,6 +23173,11 @@
       <L>계획 Due Time</L>
       <L>Plan Due Time</L>
     </Text>
+    <Text Key="Plan End TIme">
+      <L>Plan End TIme</L>
+      <L>계획종료시간</L>
+      <L>Plan End TIme</L>
+    </Text>
     <Text Key="Plan End Time">
       <L>Plan End Time</L>
       <L>계획 종료 시간</L>
@@ -20372,6 +23197,11 @@
       <L>Plan Qty (KG)</L>
       <L>계획 수량 (KG)</L>
       <L>Plan Qty (KG)</L>
+    </Text>
+    <Text Key="Plan Start TIme">
+      <L>Plan Start TIme</L>
+      <L>계획시작시간</L>
+      <L>Plan Start TIme</L>
     </Text>
     <Text Key="Plan Start Time">
       <L>Plan Start Time</L>
@@ -20408,6 +23238,11 @@
       <L>플랜트명</L>
       <L>Plant Name</L>
     </Text>
+    <Text Key="Please Input Splite Count">
+      <L>Please Input Splite Count</L>
+      <L>분할갯수를 입력해주세요</L>
+      <L>Please Input Splite Count</L>
+    </Text>
     <Text Key="Pmt">
       <L>Pmt</L>
       <L>문자열</L>
@@ -20417,6 +23252,11 @@
       <L>Po Information</L>
       <L>PO 정보</L>
       <L>Po Information</L>
+    </Text>
+    <Text Key="Po Line ID">
+      <L>Po Line ID</L>
+      <L>Po 라인 번호</L>
+      <L>Po Line ID</L>
     </Text>
     <Text Key="Point">
       <L>Point</L>
@@ -20437,6 +23277,11 @@
       <L>Point Type</L>
       <L>입력 포인트</L>
       <L>Point Type</L>
+    </Text>
+    <Text Key="Pol Yn">
+      <L>Pol Yn</L>
+      <L>Pol 여부</L>
+      <L>Pol Yn</L>
     </Text>
     <Text Key="Popup Cycle">
       <L>Popup Cycle</L>
@@ -20472,6 +23317,11 @@
       <L>Port Level</L>
       <L>포트 우선 순위</L>
       <L>Port Level</L>
+    </Text>
+    <Text Key="Port Open">
+      <L>Port Open</L>
+      <L>포트 연결</L>
+      <L>Port Open</L>
     </Text>
     <Text Key="Port Sequence">
       <L>Port Sequence</L>
@@ -20513,6 +23363,11 @@
       <L>시간 이상에서</L>
       <L>Positive</L>
     </Text>
+    <Text Key="Powder Injection Position">
+      <L>Powder Injection Position</L>
+      <L>분말투입위치</L>
+      <L>Powder Injection Position</L>
+    </Text>
     <Text Key="Power Current">
       <L>Power Current</L>
       <L>전력 현재</L>
@@ -20548,10 +23403,35 @@
       <L>소수점 자릿수</L>
       <L>Precision</L>
     </Text>
+    <Text Key="Precision weighing(g)">
+      <L>Precision weighing(g)</L>
+      <L>정밀계량(g)</L>
+      <L>Precision weighing(g)</L>
+    </Text>
+    <Text Key="Press Hold Time 1">
+      <L>Press Hold Time 1</L>
+      <L>압력 유지 시간 1</L>
+      <L>Press Hold Time 1</L>
+    </Text>
+    <Text Key="Press Hold Time 2">
+      <L>Press Hold Time 2</L>
+      <L>압력 유지 시간 2</L>
+      <L>Press Hold Time 2</L>
+    </Text>
     <Text Key="Press Resource">
       <L>Press Resource</L>
       <L>Press 호기</L>
       <L>Press Resource</L>
+    </Text>
+    <Text Key="Press Time">
+      <L>Press Time</L>
+      <L>프레스 시간</L>
+      <L>Press Time</L>
+    </Text>
+    <Text Key="Press Type">
+      <L>Press Type</L>
+      <L>프레스 종류</L>
+      <L>Press Type</L>
     </Text>
     <Text Key="Pressure Current">
       <L>Pressure Current</L>
@@ -20567,6 +23447,21 @@
       <L>Prev Active Hist Seq</L>
       <L>이전 이력 Seq</L>
       <L>Prev Active Hist Seq</L>
+    </Text>
+    <Text Key="Prev Date">
+      <L>Prev Date</L>
+      <L>이전일</L>
+      <L>Prev Date</L>
+    </Text>
+    <Text Key="Prev Date(00H ST)">
+      <L>Prev Date(00H ST)</L>
+      <L>이전일(00시기준)</L>
+      <L>Prev Date(00H ST)</L>
+    </Text>
+    <Text Key="Prev Date(08H ST)">
+      <L>Prev Date(08H ST)</L>
+      <L>이전일(08시기준)</L>
+      <L>Prev Date(08H ST)</L>
     </Text>
     <Text Key="Prevention Data">
       <L>Prevention Data</L>
@@ -20638,6 +23533,16 @@
       <L>프린트</L>
       <L>Print</L>
     </Text>
+    <Text Key="Print Date">
+      <L>Print Date</L>
+      <L>출력일자</L>
+      <L>Print Date</L>
+    </Text>
+    <Text Key="Print Handwriting Label">
+      <L>Print Handwriting Label</L>
+      <L>라벨수기입력 발행</L>
+      <L>Print Handwriting Label</L>
+    </Text>
     <Text Key="Print Information">
       <L>Print Information</L>
       <L>프린터 정보</L>
@@ -20648,6 +23553,11 @@
       <L>라벨 출력</L>
       <L>Print Lot Label</L>
     </Text>
+    <Text Key="Print Lot Label Splite">
+      <L>Print Lot Label Splite</L>
+      <L>라벨 프린트 분할</L>
+      <L>Print Lot Label Splite</L>
+    </Text>
     <Text Key="Print Qty">
       <L>Print Qty</L>
       <L>프린트 수량</L>
@@ -20657,6 +23567,16 @@
       <L>Print Speed</L>
       <L>프린트 속도</L>
       <L>Print Speed</L>
+    </Text>
+    <Text Key="Print User">
+      <L>Print User</L>
+      <L>인쇄자</L>
+      <L>Print User</L>
+    </Text>
+    <Text Key="PrintType">
+      <L>PrintType</L>
+      <L>출력유형</L>
+      <L>PrintType</L>
     </Text>
     <Text Key="Printer">
       <L>Printer</L>
@@ -20808,6 +23728,11 @@
       <L>진행 모드</L>
       <L>Proc Mode</L>
     </Text>
+    <Text Key="Proc Name">
+      <L>Proc Name</L>
+      <L>처리 프로그램</L>
+      <L>Proc Name</L>
+    </Text>
     <Text Key="Proc Oper">
       <L>Proc Oper</L>
       <L>진행 공정</L>
@@ -20847,6 +23772,11 @@
       <L>Proc Time</L>
       <L>작업 시간</L>
       <L>Proc Time</L>
+    </Text>
+    <Text Key="Proc Yn">
+      <L>Proc YN</L>
+      <L>대상유무</L>
+      <L>Proc YN</L>
     </Text>
     <Text Key="Process Event ID">
       <L>Process Event ID</L>
@@ -20933,6 +23863,11 @@
       <L>진행 작업지시 리스트</L>
       <L>Processing Work Order List</L>
     </Text>
+    <Text Key="Processing status">
+      <L>Processing status</L>
+      <L>진행 상태</L>
+      <L>Processing status</L>
+    </Text>
     <Text Key="Prod Count">
       <L>Prod Count</L>
       <L>실적 수량</L>
@@ -20958,10 +23893,20 @@
       <L>생산 수량</L>
       <L>Prod Qty</L>
     </Text>
-    <Text Key="Prodction Lot ID">
-      <L>Prodction Lot ID</L>
-      <L>생산 Lot ID</L>
-      <L>Prodction Lot ID</L>
+    <Text Key="ProdGoalProductivity">
+      <L>Productivity</L>
+      <L>목표 생산성</L>
+      <L>Productivity</L>
+    </Text>
+    <Text Key="ProdGoalYield">
+      <L>Yield(%)</L>
+      <L>목표 수율(%)</L>
+      <L>Yield(%)</L>
+    </Text>
+    <Text Key="Product Rule">
+      <L>Product Rule</L>
+      <L>제품 ID 채번</L>
+      <L>Product Rule</L>
     </Text>
     <Text Key="Product Warehouse">
       <L>Product Warehouse</L>
@@ -20972,6 +23917,16 @@
       <L>Production</L>
       <L>생산</L>
       <L>Production</L>
+    </Text>
+    <Text Key="Production Lot Conversion">
+      <L>Production Lot Conversion</L>
+      <L>생산 Lot 변환</L>
+      <L>Production Lot Conversion</L>
+    </Text>
+    <Text Key="Production Lot ID">
+      <L>Production Lot ID</L>
+      <L>생산 Lot ID</L>
+      <L>Production Lot ID</L>
     </Text>
     <Text Key="Production Order Setup">
       <L>Production Order Setup</L>
@@ -20987,6 +23942,11 @@
       <L>Production date</L>
       <L>생산일</L>
       <L>Production date</L>
+    </Text>
+    <Text Key="Productivity Goals Info">
+      <L>Productivity Goals Info</L>
+      <L>생산성 목표 정보</L>
+      <L>Productivity Goals Info</L>
     </Text>
     <Text Key="Profile">
       <L>Profile</L>
@@ -21112,6 +24072,11 @@
       <L>Purchase Order</L>
       <L>구매 주문</L>
       <L>Purchase Order</L>
+    </Text>
+    <Text Key="Q'ty">
+      <L>Q'ty</L>
+      <L>수량</L>
+      <L>Q'ty</L>
     </Text>
     <Text Key="QA Gate Operation">
       <L>QA Gate Operation</L>
@@ -21298,6 +24263,21 @@
       <L>범위 명세 종류</L>
       <L>R Spec Type</L>
     </Text>
+    <Text Key="REAL-D Exclude Calc">
+      <L>REAL-D Exclude Calc</L>
+      <L>실제직경 계산기준</L>
+      <L>REAL-D Exclude Calc</L>
+    </Text>
+    <Text Key="REAL-D Max Value">
+      <L>REAL-D Max Value</L>
+      <L>실직최대값</L>
+      <L>REAL-D Max Value</L>
+    </Text>
+    <Text Key="REAL-D Min Value">
+      <L>REAL-D Min Value</L>
+      <L>실직최소값</L>
+      <L>REAL-D Min Value</L>
+    </Text>
     <Text Key="RES_ID">
       <L>RES_ID</L>
       <L>장비</L>
@@ -21470,7 +24450,7 @@
     </Text>
     <Text Key="Receive Issue Request Inv Lot">
       <L>Receive Issue Request Inv Lot</L>
-      <L>자재 Lot 인수</L>
+      <L>자재 인수</L>
       <L>Receive Issue Request Inv Lot</L>
     </Text>
     <Text Key="Receive Lot">
@@ -21498,6 +24478,11 @@
       <L>접수내용 (현상)</L>
       <L>Reception Data(Current)</L>
     </Text>
+    <Text Key="Reception Time">
+      <L>Reception Time</L>
+      <L>접수시간</L>
+      <L>Reception Time</L>
+    </Text>
     <Text Key="Recipe">
       <L>Recipe</L>
       <L>레시피</L>
@@ -21508,15 +24493,35 @@
       <L>레시피 ID</L>
       <L>Recipe ID</L>
     </Text>
+    <Text Key="Recipe Info">
+      <L>Recipe Info</L>
+      <L>레시피 정보</L>
+      <L>Recipe Info</L>
+    </Text>
     <Text Key="Recipe MFO Relation">
       <L>Recipe MFO Relation</L>
       <L>레시피 MFO 관계</L>
       <L>Recipe MFO Relation</L>
     </Text>
+    <Text Key="Recipe Management">
+      <L>Recipe Management</L>
+      <L>레시피 관리</L>
+      <L>Recipe Management</L>
+    </Text>
+    <Text Key="Recipe No">
+      <L>Recipe No</L>
+      <L>레시피</L>
+      <L>Recipe No</L>
+    </Text>
     <Text Key="Recipe Setup">
       <L>Recipe Setup</L>
       <L>레시피 셋업</L>
       <L>Recipe Setup</L>
+    </Text>
+    <Text Key="Recipe Unregistered List">
+      <L>Recipe Unregistered List</L>
+      <L>레시피 미등록 품목</L>
+      <L>Recipe Unregistered List</L>
     </Text>
     <Text Key="Recipe Version">
       <L>Recipe Version</L>
@@ -21548,6 +24553,11 @@
       <L>참조 공정</L>
       <L>Refer Oper</L>
     </Text>
+    <Text Key="Reference Line ID">
+      <L>Reference Line ID</L>
+      <L>참고 라인 ID</L>
+      <L>Reference Line ID</L>
+    </Text>
     <Text Key="Reference Oper">
       <L>Reference Oper</L>
       <L>참조 공정</L>
@@ -21568,20 +24578,35 @@
       <L>입하 Lot 등록</L>
       <L>Regist Arrival Lot</L>
     </Text>
+    <Text Key="Regist Flag">
+      <L>Regist Flag</L>
+      <L>등록여부</L>
+      <L>Regist Flag</L>
+    </Text>
     <Text Key="Regist Issue Request Inv Lot">
       <L>Regist Issue Request Inv Lot</L>
-      <L>자재 Lot 불출 요청 등록</L>
+      <L>자재 불출 등록</L>
       <L>Regist Issue Request Inv Lot</L>
     </Text>
     <Text Key="Regist Shipping Lot">
       <L>Regist Shipping Lot</L>
-      <L>출하 Lot 등록</L>
+      <L>출하 등록</L>
       <L>Regist Shipping Lot</L>
     </Text>
     <Text Key="Register Alarm automatically">
       <L>Register Alarm automatically</L>
       <L>장비 알람 발생시 자동 등록 여부</L>
       <L>Register Alarm automatically</L>
+    </Text>
+    <Text Key="Register of productivity goals">
+      <L>Register of productivity goals</L>
+      <L>직행률/생산성 목표 등록</L>
+      <L>Register of productivity goals</L>
+    </Text>
+    <Text Key="Register of working time">
+      <L>Register of working time</L>
+      <L>투입공수시간 등록</L>
+      <L>Register of working time</L>
     </Text>
     <Text Key="Registered Woker Info">
       <L>Registered Woker Info</L>
@@ -21597,6 +24622,11 @@
       <L>Registration Date</L>
       <L>등록일</L>
       <L>Registration Date</L>
+    </Text>
+    <Text Key="Registration of productivity goals">
+      <L>Registration of productivity goals</L>
+      <L>직행률/생산성 목표 등록</L>
+      <L>Registration of productivity goals</L>
     </Text>
     <Text Key="Rel Flag">
       <L>Rel Flag</L>
@@ -21738,6 +24768,11 @@
       <L>마지막에 사용한 화면 자동 표시</L>
       <L>Reload last use screens</L>
     </Text>
+    <Text Key="Reload last used screens automatically">
+      <L>Reload last used screens automatically</L>
+      <L>마지막 사용 화면들 자동열기</L>
+      <L>Reload last used screens automatically</L>
+    </Text>
     <Text Key="Remain">
       <L>Remain</L>
       <L>나머지</L>
@@ -21747,6 +24782,11 @@
       <L>Remain Date</L>
       <L>잔여일</L>
       <L>Remain Date</L>
+    </Text>
+    <Text Key="Remain Flag">
+      <L>Remain Flag</L>
+      <L>잔량 여부</L>
+      <L>Remain Flag</L>
     </Text>
     <Text Key="Remain Lot Id">
       <L>Remain Lot Id</L>
@@ -21797,6 +24837,11 @@
       <L>Remote Shipping Flag</L>
       <L>원격지 출하 설정</L>
       <L>Remote Shipping Flag</L>
+    </Text>
+    <Text Key="Removal">
+      <L>Removal</L>
+      <L>탈착</L>
+      <L>Removal</L>
     </Text>
     <Text Key="Rep Flag">
       <L>Rep Flag</L>
@@ -21872,6 +24917,11 @@
       <L>Replace Period</L>
       <L>교체주기</L>
       <L>Replace Period</L>
+    </Text>
+    <Text Key="Report Apply">
+      <L>Report Apply</L>
+      <L>Report 적용</L>
+      <L>Report Apply</L>
     </Text>
     <Text Key="Report Time">
       <L>Report Time</L>
@@ -21987,6 +25037,11 @@
       <L>Request User</L>
       <L>요청자</L>
       <L>Request User</L>
+    </Text>
+    <Text Key="Request Warehouse">
+      <L>Request Warehouse</L>
+      <L>요청 창고</L>
+      <L>Request Warehouse</L>
     </Text>
     <Text Key="Request master Info">
       <L>Request master Info</L>
@@ -22358,10 +25413,20 @@
       <L>예약된 장비</L>
       <L>Reserved Resource</L>
     </Text>
-    <Text Key="Resitance Current">
-      <L>Resitance Current</L>
+    <Text Key="Resistance Current">
+      <L>Resistance Current</L>
       <L>저항 현재</L>
-      <L>Resitance Current</L>
+      <L>Resistance Current</L>
+    </Text>
+    <Text Key="Resistance Setup">
+      <L>Resistance Setup</L>
+      <L>저항 설정</L>
+      <L>Resistance Setup</L>
+    </Text>
+    <Text Key="Resitance Setup">
+      <L>Resistance Setup</L>
+      <L>저항 설정</L>
+      <L>Resistance Setup</L>
     </Text>
     <Text Key="Resolution(DPI)">
       <L>Resolution(DPI)</L>
@@ -22438,6 +25503,11 @@
       <L>장비 주석</L>
       <L>Resource Comment</L>
     </Text>
+    <Text Key="Resource Data">
+      <L>Resource Data</L>
+      <L>설비 데이터</L>
+      <L>Resource Data</L>
+    </Text>
     <Text Key="Resource Delete Flag">
       <L>Resource Delete Flag</L>
       <L>장비 삭제 여부</L>
@@ -22452,6 +25522,11 @@
       <L>Resource Down</L>
       <L>장비 다운</L>
       <L>Resource Down</L>
+    </Text>
+    <Text Key="Resource Effeciency Info">
+      <L>Resource Effeciency Info</L>
+      <L>설비효율 기준정보</L>
+      <L>Resource Effeciency Info</L>
     </Text>
     <Text Key="Resource Event">
       <L>Resource Event</L>
@@ -22592,6 +25667,11 @@
       <L>Result Flag</L>
       <L>처리 여부</L>
       <L>Result Flag</L>
+    </Text>
+    <Text Key="Result Message">
+      <L>Result Message</L>
+      <L>결과 메시지</L>
+      <L>Result Message</L>
     </Text>
     <Text Key="Result Recording">
       <L>Result Recording</L>
@@ -22793,6 +25873,11 @@
       <L>재작업 후 반환 정보</L>
       <L>Retrun Information</L>
     </Text>
+    <Text Key="Retry Inspection Count">
+      <L>Retry Inspection Count</L>
+      <L>재검사 횟수</L>
+      <L>Retry Inspection Count</L>
+    </Text>
     <Text Key="Return Date">
       <L>Return Date</L>
       <L>반품일자</L>
@@ -22825,12 +25910,12 @@
     </Text>
     <Text Key="Return Lot">
       <L>Return Lot</L>
-      <L>반품 Lot</L>
+      <L>반품 등록</L>
       <L>Return Lot</L>
     </Text>
     <Text Key="Return Lot ID">
       <L>Return Lot ID</L>
-      <L>반품Lot번호</L>
+      <L>반품 Lot 번호</L>
       <L>Return Lot ID</L>
     </Text>
     <Text Key="Return Lot List">
@@ -22882,6 +25967,11 @@
       <L>Return Rework Clear Flag</L>
       <L>반환시 재작업 취소</L>
       <L>Return Rework Clear Flag</L>
+    </Text>
+    <Text Key="Return warehouse">
+      <L>Return warehouse</L>
+      <L>반납창고</L>
+      <L>Return warehouse</L>
     </Text>
     <Text Key="Returned Qty">
       <L>Returned Qty</L>
@@ -22973,6 +26063,11 @@
       <L>재작업 플로우 셋업</L>
       <L>Rework Flow Setup</L>
     </Text>
+    <Text Key="Rework In Qty">
+      <L>Rework In Qty</L>
+      <L>재작업 투입수량</L>
+      <L>Rework In Qty</L>
+    </Text>
     <Text Key="Rework Information">
       <L>Rework Information</L>
       <L>재작업 정보</L>
@@ -22993,10 +26088,20 @@
       <L>재작업 공정</L>
       <L>Rework Operation</L>
     </Text>
+    <Text Key="Rework Out Qty">
+      <L>Rework Out Qty</L>
+      <L>재작업 생산수량</L>
+      <L>Rework Out Qty</L>
+    </Text>
     <Text Key="Rework Qty">
       <L>Rework Qty</L>
       <L>재작업 수량</L>
       <L>Rework Qty</L>
+    </Text>
+    <Text Key="Rework Rate">
+      <L>Rework Rate</L>
+      <L>재작업률</L>
+      <L>Rework Rate</L>
     </Text>
     <Text Key="Rework Ret Clear Flag">
       <L>Rework Ret Clear Flag</L>
@@ -23073,6 +26178,11 @@
       <L>오른쪽 간격</L>
       <L>Right Space</L>
     </Text>
+    <Text Key="Robot Measurable(g)">
+      <L>Robot Measurable(g)</L>
+      <L>Robot 계량</L>
+      <L>Robot Measurable(g)</L>
+    </Text>
     <Text Key="Rotate">
       <L>Rotate</L>
       <L>회전</L>
@@ -23082,6 +26192,16 @@
       <L>Roughness</L>
       <L>Roughness</L>
       <L>Roughness</L>
+    </Text>
+    <Text Key="Round Inspection">
+      <L>Round Inspection</L>
+      <L>라운드 검사</L>
+      <L>Round Inspection</L>
+    </Text>
+    <Text Key="Round Judge">
+      <L>Round Judge</L>
+      <L>Round 판정</L>
+      <L>Round Judge</L>
     </Text>
     <Text Key="Row">
       <L>Row</L>
@@ -23153,6 +26273,16 @@
       <L>규칙 위반 조치</L>
       <L>Rule Violation Action</L>
     </Text>
+    <Text Key="Run Log List">
+      <L>Run Log List</L>
+      <L>실행 로그 리스트</L>
+      <L>Run Log List</L>
+    </Text>
+    <Text Key="Run Type">
+      <L>Run Type</L>
+      <L>고정 비 부하  적용</L>
+      <L>Run Type</L>
+    </Text>
     <Text Key="SEQ Position">
       <L>SEQ Position</L>
       <L>SEQ 위치</L>
@@ -23172,6 +26302,11 @@
       <L>SF</L>
       <L>SF</L>
       <L>SF</L>
+    </Text>
+    <Text Key="SHP Store">
+      <L>SHP Store</L>
+      <L>물류 창고</L>
+      <L>SHP Store</L>
     </Text>
     <Text Key="SM Flag">
       <L>SM Flag</L>
@@ -23323,6 +26458,51 @@
       <L>SURFACE B</L>
       <L>SURFACE B</L>
     </Text>
+    <Text Key="SV Power">
+      <L>SV Power (KVA)</L>
+      <L>설정 전력 (KVA)</L>
+      <L>SV Power (KVA)</L>
+    </Text>
+    <Text Key="SV Pressure">
+      <L>SV Pressure</L>
+      <L>설정 압력</L>
+      <L>SV Pressure</L>
+    </Text>
+    <Text Key="SV Pressure_bar">
+      <L>SV Pressure (bar)</L>
+      <L>설정 압력 (bar)</L>
+      <L>SV Pressure (bar)</L>
+    </Text>
+    <Text Key="SV Pressure_psi">
+      <L>SV Pressure (psi)</L>
+      <L>설정 압력 (psi)</L>
+      <L>SV Pressure (psi)</L>
+    </Text>
+    <Text Key="SV Pressure_ton">
+      <L>SV Pressure (Ton)</L>
+      <L>설정 압력 (Ton)</L>
+      <L>SV Pressure (Ton)</L>
+    </Text>
+    <Text Key="SV RPM">
+      <L>SV RPM (RPM)</L>
+      <L>설정 속도 (RPM)</L>
+      <L>SV RPM (RPM)</L>
+    </Text>
+    <Text Key="SV Temp">
+      <L>SV Temp (℃)</L>
+      <L>설정 온도 (℃)</L>
+      <L>SV Temp (℃)</L>
+    </Text>
+    <Text Key="SV Throttle">
+      <L>SV Throttle (Torr)</L>
+      <L>설정 Gas 분압 (Torr)</L>
+      <L>SV Throttle (Torr)</L>
+    </Text>
+    <Text Key="SV Time">
+      <L>SV Time (Hr)</L>
+      <L>설정 가동시간 (Hr)</L>
+      <L>SV Time (Hr)</L>
+    </Text>
     <Text Key="Sales Order No">
       <L>Sales Order No</L>
       <L>판매지시 번호</L>
@@ -23417,6 +26597,11 @@
       <L>Sample Wait Flag</L>
       <L>샘플 대기</L>
       <L>Sample Wait Flag</L>
+    </Text>
+    <Text Key="Sample and Rnd Inspection List">
+      <L>Sample and Rnd Inspection List</L>
+      <L>Sample 및 연구소 검사 LOT 등록</L>
+      <L>Sample and Rnd Inspection List</L>
     </Text>
     <Text Key="Sample_Rule">
       <L>Sample_Rule</L>
@@ -23528,6 +26713,11 @@
       <L>계획된 Due Date</L>
       <L>Sch Due Date</L>
     </Text>
+    <Text Key="Schedule Ship Date">
+      <L>Schedule Ship Date</L>
+      <L>예상납기일</L>
+      <L>Schedule Ship Date</L>
+    </Text>
     <Text Key="Scheduled">
       <L>Scheduled</L>
       <L>계획실행</L>
@@ -23552,6 +26742,11 @@
       <L>Scrap Code</L>
       <L>폐기 코드</L>
       <L>Scrap Code</L>
+    </Text>
+    <Text Key="Scrap Date">
+      <L>Scrap Date</L>
+      <L>폐기 일자</L>
+      <L>Scrap Date</L>
     </Text>
     <Text Key="Scrap Qty">
       <L>Scrap Qty</L>
@@ -23607,6 +26802,11 @@
       <L>Search Merge History</L>
       <L>병합 이력을 검색</L>
       <L>Search Merge History</L>
+    </Text>
+    <Text Key="Search Type">
+      <L>Search Type</L>
+      <L>조회타입</L>
+      <L>Search Type</L>
     </Text>
     <Text Key="Sec">
       <L>Sec</L>
@@ -23718,6 +26918,11 @@
       <L>테이블칼럼 입력 설정</L>
       <L>Select Table-Column Value</L>
     </Text>
+    <Text Key="Select To Operation">
+      <L>Select To Operation</L>
+      <L>다음 공정 선택</L>
+      <L>Select To Operation</L>
+    </Text>
     <Text Key="Select Tool Value">
       <L>Select Tool Value</L>
       <L>툴 입력 설정</L>
@@ -23733,6 +26938,11 @@
       <L>선택된</L>
       <L>Seleted</L>
     </Text>
+    <Text Key="Semi Goods">
+      <L>Semi Goods</L>
+      <L>반제품</L>
+      <L>Semi Goods</L>
+    </Text>
     <Text Key="Send Information">
       <L>Send Information</L>
       <L>발신 정보</L>
@@ -23742,6 +26952,11 @@
       <L>Send Message</L>
       <L>메시지 보내기</L>
       <L>Send Message</L>
+    </Text>
+    <Text Key="Send Recipe to Equipment">
+      <L>Send Recipe to Equipment</L>
+      <L>설비 레시피 수동 전송</L>
+      <L>Send Recipe to Equipment</L>
     </Text>
     <Text Key="Send To Occur Alarm User">
       <L>Send To Occur Alarm User</L>
@@ -23933,6 +27148,16 @@
       <L>셋업</L>
       <L>Setup</L>
     </Text>
+    <Text Key="Setup Classify Master Data">
+      <L>Setup Classify Master Data</L>
+      <L>그릿 분류기준 셋업</L>
+      <L>Setup Classify Master Data</L>
+    </Text>
+    <Text Key="Setup Resource Effectiveness Info">
+      <L>Setup Resource Effectiveness Info</L>
+      <L>설비효율 기준정보 등록</L>
+      <L>Setup Resource Effectiveness Info</L>
+    </Text>
     <Text Key="Setup Work Time">
       <L>Setup Work Time</L>
       <L>작업시간 설정</L>
@@ -23942,6 +27167,11 @@
       <L>Sex</L>
       <L>성별</L>
       <L>Sex</L>
+    </Text>
+    <Text Key="Shape Information">
+      <L>Shape Information</L>
+      <L>형상 정보</L>
+      <L>Shape Information</L>
     </Text>
     <Text Key="ShapeFactor">
       <L>ShapeFactor</L>
@@ -24033,6 +27263,46 @@
       <L>근무조 4 시작시간</L>
       <L>Shift 4  Start</L>
     </Text>
+    <Text Key="Shift Day Holiday">
+      <L>Shift Day Holiday</L>
+      <L>휴일 낮근무 시간</L>
+      <L>Shift Day Holiday</L>
+    </Text>
+    <Text Key="Shift Day Holiday(Overtime)">
+      <L>Shift Day Holiday(Overtime)</L>
+      <L>휴일 낮근무 시간(초과)</L>
+      <L>Shift Day Holiday(Overtime)</L>
+    </Text>
+    <Text Key="Shift Day Week">
+      <L>Shift Day Week</L>
+      <L>주말 낮근무 시간</L>
+      <L>Shift Day Week</L>
+    </Text>
+    <Text Key="Shift Day Week(Overtime)">
+      <L>Shift Day Week(Overtime)</L>
+      <L>주말 낮근무 시간(초과)</L>
+      <L>Shift Day Week(Overtime)</L>
+    </Text>
+    <Text Key="Shift Night Holiday">
+      <L>Shift Night Holiday</L>
+      <L>휴일 밤근무 시간</L>
+      <L>Shift Night Holiday</L>
+    </Text>
+    <Text Key="Shift Night Holiday(Overtime)">
+      <L>Shift Night Holiday(Overtime)</L>
+      <L>휴일 밤근무 시간(초과)</L>
+      <L>Shift Night Holiday(Overtime)</L>
+    </Text>
+    <Text Key="Shift Night Week">
+      <L>Shift Night Week</L>
+      <L>주말 밤근무 시간</L>
+      <L>Shift Night Week</L>
+    </Text>
+    <Text Key="Shift Night Week(Overtime)">
+      <L>Shift Night Week(Overtime)</L>
+      <L>주말 밤근무 시간(초과)</L>
+      <L>Shift Night Week(Overtime)</L>
+    </Text>
     <Text Key="Shifts Definition">
       <L>Shifts Definition</L>
       <L>근무조 정의</L>
@@ -24057,6 +27327,21 @@
       <L>Ship Flag</L>
       <L>출하 여부</L>
       <L>Ship Flag</L>
+    </Text>
+    <Text Key="Ship Line ID">
+      <L>Ship Line ID</L>
+      <L>출하지시 라인 ID</L>
+      <L>Ship Line ID</L>
+    </Text>
+    <Text Key="Ship Line IF ID">
+      <L>Ship Line IF ID</L>
+      <L>인터페이스 라인 ID</L>
+      <L>Ship Line IF ID</L>
+    </Text>
+    <Text Key="Ship Line Lot IF ID">
+      <L>Ship Line Lot IF ID</L>
+      <L>인터페이스 Lot ID</L>
+      <L>Ship Line Lot IF ID</L>
     </Text>
     <Text Key="Ship Lot">
       <L>Ship</L>
@@ -24093,10 +27378,65 @@
       <L>출하 수량</L>
       <L>Ship Qty</L>
     </Text>
+    <Text Key="Ship Report No">
+      <L>Ship Report No</L>
+      <L>성적서 번호</L>
+      <L>Ship Report No</L>
+    </Text>
+    <Text Key="Ship Report Type">
+      <L>Ship Report Type</L>
+      <L>성적서 타입</L>
+      <L>Ship Report Type</L>
+    </Text>
+    <Text Key="Ship Req Date">
+      <L>Ship Req Date</L>
+      <L>출하요청일</L>
+      <L>Ship Req Date</L>
+    </Text>
     <Text Key="Ship Time">
       <L>Ship Time</L>
       <L>출하 시간</L>
       <L>Ship Time</L>
+    </Text>
+    <Text Key="ShipReport Registration_CTM">
+      <L>[CTM] ShipReport Registration</L>
+      <L>[CTM] 출하성적서 등록</L>
+      <L>[CTM] ShipReport Registration</L>
+    </Text>
+    <Text Key="ShipReport Registration_GRIT">
+      <L>ShipReport Registration_GRIT</L>
+      <L>[GRIT] 출하 검사 성적서 등록</L>
+      <L>ShipReport Registration_GRIT</L>
+    </Text>
+    <Text Key="ShipReport Registration_GRIT(MP)">
+      <L>ShipReport Registration_GRIT(MP)</L>
+      <L>[GRIT] 출하 검사 성적서 등록(MP)</L>
+      <L>ShipReport Registration_GRIT(MP)</L>
+    </Text>
+    <Text Key="ShipReport Registration_HM">
+      <L>[HM] ShipReport Registration</L>
+      <L>[HM] 출하검사 성적서 등록</L>
+      <L>[HM] ShipReport Registration</L>
+    </Text>
+    <Text Key="ShipReport Sign">
+      <L>ShipReport Sign</L>
+      <L>출하성적서 사인</L>
+      <L>ShipReport Sign</L>
+    </Text>
+    <Text Key="ShipReport Spec Registration (Grade)">
+      <L>ShipReport Spec Registration (Grade)</L>
+      <L>출하검사 성적서 스펙 등록(GRADE)</L>
+      <L>ShipReport Spec Registration (Grade)</L>
+    </Text>
+    <Text Key="ShipReport Spec Registration (Material)">
+      <L>ShipReport Spec Registration (Material)</L>
+      <L>출하검사 성적서 스펙 등록(품목)</L>
+      <L>ShipReport Spec Registration (Material)</L>
+    </Text>
+    <Text Key="Shipped History">
+      <L>Shipped History</L>
+      <L>출하정보</L>
+      <L>Shipped History</L>
     </Text>
     <Text Key="Shipped Qty">
       <L>Shipped Qty</L>
@@ -24120,12 +27460,12 @@
     </Text>
     <Text Key="Shipping Lot">
       <L>Shipping Lot</L>
-      <L>출하 Lot 목록</L>
+      <L>출하 확정</L>
       <L>Shipping Lot</L>
     </Text>
     <Text Key="Shipping Lot List">
       <L>Shipping Lot List</L>
-      <L>출하 Lot 목록</L>
+      <L>출하 확정</L>
       <L>Shipping Lot List</L>
     </Text>
     <Text Key="Shipping Operation">
@@ -24193,6 +27533,11 @@
       <L>서비스 처리 개수 표시</L>
       <L>Show with Service Count</L>
     </Text>
+    <Text Key="Side">
+      <L>Zone</L>
+      <L>구역</L>
+      <L>Zone</L>
+    </Text>
     <Text Key="Sieve">
       <L>Sieve</L>
       <L>체</L>
@@ -24240,13 +27585,33 @@
     </Text>
     <Text Key="Size">
       <L>Size</L>
-      <L>크기</L>
+      <L>Size</L>
       <L>Size</L>
     </Text>
-    <Text Key="Size Infomation">
-      <L>Size Infomation</L>
+    <Text Key="Size Information">
+      <L>Size Information</L>
       <L>사이즈 정보</L>
-      <L>Size Infomation</L>
+      <L>Size Information</L>
+    </Text>
+    <Text Key="Size1">
+      <L>Size1</L>
+      <L>치수 1</L>
+      <L>Size1</L>
+    </Text>
+    <Text Key="Size2">
+      <L>Size2</L>
+      <L>치수 2</L>
+      <L>Size2</L>
+    </Text>
+    <Text Key="Size3">
+      <L>Size3</L>
+      <L>치수 3</L>
+      <L>Size3</L>
+    </Text>
+    <Text Key="Sizes">
+      <L>Sizes</L>
+      <L>Sizes</L>
+      <L>Sizes</L>
     </Text>
     <Text Key="Skip">
       <L>Skip</L>
@@ -24383,6 +27748,11 @@
       <L>소스 설명 3</L>
       <L>Source Desc 3</L>
     </Text>
+    <Text Key="Source ID">
+      <L>Source ID</L>
+      <L>소스 ID</L>
+      <L>Source ID</L>
+    </Text>
     <Text Key="Source ID 1">
       <L>Source ID 1</L>
       <L>소스 1</L>
@@ -24403,6 +27773,11 @@
       <L>소스 Lot</L>
       <L>Source Lot</L>
     </Text>
+    <Text Key="Source Name">
+      <L>Source Name</L>
+      <L>소스명</L>
+      <L>Source Name</L>
+    </Text>
     <Text Key="Space Count">
       <L>Space Count</L>
       <L>윗쪽 여백</L>
@@ -24412,6 +27787,11 @@
       <L>Spare Desc</L>
       <L>품명</L>
       <L>Spare Desc</L>
+    </Text>
+    <Text Key="Spare Information">
+      <L>Spare Information</L>
+      <L>Spare 정보</L>
+      <L>Spare Information</L>
     </Text>
     <Text Key="Spare Manager">
       <L>Spare Manager</L>
@@ -24452,6 +27832,16 @@
       <L>Spec Check Type</L>
       <L>스펙 체크 종류</L>
       <L>Spec Check Type</L>
+    </Text>
+    <Text Key="Spec Flag">
+      <L>Spec Flag</L>
+      <L>SPEC 등록 여부</L>
+      <L>Spec Flag</L>
+    </Text>
+    <Text Key="Spec List">
+      <L>Spec List</L>
+      <L>스펙 리스트</L>
+      <L>Spec List</L>
     </Text>
     <Text Key="Spec Management">
       <L>Spec Management</L>
@@ -24565,7 +27955,7 @@
     </Text>
     <Text Key="Split Inv Lot ID">
       <L>Split Inv Lot ID</L>
-      <L>스플릿 자재 Lot 번호</L>
+      <L>분할 자재 Lot 번호</L>
       <L>Split Inv Lot ID</L>
     </Text>
     <Text Key="Split Inv Lot Info">
@@ -24582,6 +27972,16 @@
       <L>Split Lot ID Rule</L>
       <L>Lot ID 분할 규칙</L>
       <L>Split Lot ID Rule</L>
+    </Text>
+    <Text Key="Split Lot Info">
+      <L>Split Lot Info</L>
+      <L>분할 Lot 정보</L>
+      <L>Split Lot Info</L>
+    </Text>
+    <Text Key="Split Merge History">
+      <L>Split Merge History</L>
+      <L>Split/Merge 이력 조회</L>
+      <L>Split Merge History</L>
     </Text>
     <Text Key="Split Qty">
       <L>Split Qty</L>
@@ -24618,10 +28018,20 @@
       <L>Stand By Outgoing</L>
       <L>Stand By Outgoing</L>
     </Text>
+    <Text Key="Standard">
+      <L>Standard</L>
+      <L>규격</L>
+      <L>Standard</L>
+    </Text>
     <Text Key="Standard Lot">
       <L>Standard Lot</L>
       <L>대표 Lot</L>
       <L>Standard Lot</L>
+    </Text>
+    <Text Key="Standard Tacktime Registration">
+      <L>Standard Tack Time Registration</L>
+      <L>표준 Tack Time등록</L>
+      <L>Standard Tack Time Registration</L>
     </Text>
     <Text Key="Start">
       <L>Start</L>
@@ -24667,6 +28077,11 @@
       <L>Start Pos</L>
       <L>시작 인덱스</L>
       <L>Start Pos</L>
+    </Text>
+    <Text Key="Start Qty">
+      <L>Start Qty</L>
+      <L>시작 수량</L>
+      <L>Start Qty</L>
     </Text>
     <Text Key="Start Qty 1">
       <L>Start Qty 1</L>
@@ -24722,6 +28137,16 @@
       <L>Start Time</L>
       <L>작업 시작 시간</L>
       <L>Start Time</L>
+    </Text>
+    <Text Key="Start of discharge operation">
+      <L>Start of discharge operation</L>
+      <L>배출 운전 시작</L>
+      <L>Start of discharge operation</L>
+    </Text>
+    <Text Key="Start pressurized operation">
+      <L>Start pressurized operation</L>
+      <L>가압 운전 시작</L>
+      <L>Start pressurized operation</L>
     </Text>
     <Text Key="Start/End Time">
       <L>Start/End Time</L>
@@ -25018,6 +28443,16 @@
       <L>입고 반환 공정</L>
       <L>Store Return Oper</L>
     </Text>
+    <Text Key="Stored Date">
+      <L>Stored Date</L>
+      <L>입고 일자</L>
+      <L>Stored Date</L>
+    </Text>
+    <Text Key="Stored Qty">
+      <L>Stored Qty</L>
+      <L>입고 수량</L>
+      <L>Stored Qty</L>
+    </Text>
     <Text Key="Sub Area">
       <L>Sub Area</L>
       <L>서브 에어리어</L>
@@ -25027,6 +28462,11 @@
       <L>Sub Area ID</L>
       <L>서브 에어리어</L>
       <L>Sub Area ID</L>
+    </Text>
+    <Text Key="Sub Loss">
+      <L>Sub Loss</L>
+      <L>서브불량</L>
+      <L>Sub Loss</L>
     </Text>
     <Text Key="Sub Lot">
       <L>Sub Lot</L>
@@ -25438,6 +28878,11 @@
       <L>Sublot 유닛 토탈</L>
       <L>Sublot Unit Total</L>
     </Text>
+    <Text Key="Suffix">
+      <L>Suffix</L>
+      <L>추가 문자</L>
+      <L>Suffix</L>
+    </Text>
     <Text Key="Sum">
       <L>Sum</L>
       <L>합계</L>
@@ -25678,6 +29123,11 @@
       <L>탭 페이지 9</L>
       <L>Tabpage Name 9</L>
     </Text>
+    <Text Key="Tacktime Info">
+      <L>Tack Time Info</L>
+      <L>Tack Time 정보</L>
+      <L>Tack Time Info</L>
+    </Text>
     <Text Key="Tank Count">
       <L>Tank Count</L>
       <L>탱크 수</L>
@@ -25762,6 +29212,11 @@
       <L>Target Yield</L>
       <L>목표 생산율</L>
       <L>Target Yield</L>
+    </Text>
+    <Text Key="Team">
+      <L>Team</L>
+      <L>팀</L>
+      <L>Team</L>
     </Text>
     <Text Key="Temp Batch ID">
       <L>Temp Batch ID</L>
@@ -25973,6 +29428,11 @@
       <L>보낼 공장</L>
       <L>To Factory</L>
     </Text>
+    <Text Key="To File Path">
+      <L>To File Path</L>
+      <L>FTP 파일 경로</L>
+      <L>To File Path</L>
+    </Text>
     <Text Key="To Flow">
       <L>To Flow</L>
       <L>To 플로우</L>
@@ -26017,6 +29477,11 @@
       <L>To Label</L>
       <L>새 라벨</L>
       <L>To Label</L>
+    </Text>
+    <Text Key="To Lot List">
+      <L>To Lot List</L>
+      <L>To Lot 리스트</L>
+      <L>To Lot List</L>
     </Text>
     <Text Key="To Lot Type">
       <L>To Lot Type</L>
@@ -26168,6 +29633,16 @@
       <L>To 버전</L>
       <L>To Version</L>
     </Text>
+    <Text Key="To Warehouse">
+      <L>To Warehouse</L>
+      <L>To 창고</L>
+      <L>To Warehouse</L>
+    </Text>
+    <Text Key="To Warehouse Desc">
+      <L>To Warehouse Desc</L>
+      <L>To 창고명</L>
+      <L>To Warehouse Desc</L>
+    </Text>
     <Text Key="To WorkPlace">
       <L>To WorkPlace</L>
       <L>To 작업장</L>
@@ -26177,6 +29652,11 @@
       <L>To WorkPlace Desc</L>
       <L>To 작업장</L>
       <L>To WorkPlace Desc</L>
+    </Text>
+    <Text Key="Toal Conv Time">
+      <L>Toal Conv Time</L>
+      <L>총환산시간</L>
+      <L>Toal Conv Time</L>
     </Text>
     <Text Key="Tool">
       <L>Tool</L>
@@ -26597,6 +30077,11 @@
       <L>Total Use Time</L>
       <L>총 조치시간</L>
       <L>Total Use Time</L>
+    </Text>
+    <Text Key="Total Work Time">
+      <L>Total Work Time(h)</L>
+      <L>총작업시간(시)</L>
+      <L>Total Work Time(h)</L>
     </Text>
     <Text Key="Total Yield">
       <L>Total Yield</L>
@@ -27128,6 +30613,11 @@
       <L>트랜잭션 정보</L>
       <L>Transaction Information</L>
     </Text>
+    <Text Key="Transaction Lot Info">
+      <L>Transaction Lot Info</L>
+      <L>처리 LOT 정보</L>
+      <L>Transaction Lot Info</L>
+    </Text>
     <Text Key="Transaction Time">
       <L>Transaction Time</L>
       <L>트랜잭션 시간</L>
@@ -27160,7 +30650,7 @@
     </Text>
     <Text Key="Transfer Resource Infomation">
       <L>Transfer Resource Infomation</L>
-      <L>설비 정보 정송</L>
+      <L>설비 정보 전송</L>
       <L>Transfer Resource Infomation</L>
     </Text>
     <Text Key="Transfer State">
@@ -27258,6 +30748,16 @@
       <L>TurnKey</L>
       <L>TurnKey</L>
     </Text>
+    <Text Key="Type">
+      <L>Type</L>
+      <L>종류</L>
+      <L>Type</L>
+    </Text>
+    <Text Key="Type Code">
+      <L>Type Code</L>
+      <L>종류 코드</L>
+      <L>Type Code</L>
+    </Text>
     <Text Key="Type Defined Field">
       <L>Type Defined Field</L>
       <L>종류 정의 필드</L>
@@ -27288,6 +30788,21 @@
       <L>상한스펙제한</L>
       <L>USL</L>
     </Text>
+    <Text Key="UT Dev Value">
+      <L>UT Dev Value</L>
+      <L>UT 편차</L>
+      <L>UT Dev Value</L>
+    </Text>
+    <Text Key="UT Max Value">
+      <L>UT Max Value</L>
+      <L>UT 최대값</L>
+      <L>UT Max Value</L>
+    </Text>
+    <Text Key="UT Min Value">
+      <L>UT Min Value</L>
+      <L>UT 최소값</L>
+      <L>UT Min Value</L>
+    </Text>
     <Text Key="Uncapable">
       <L>Uncapable</L>
       <L>사용불가능</L>
@@ -27307,6 +30822,11 @@
       <L>Under First Item</L>
       <L>첫번째 항목 이하</L>
       <L>Under First Item</L>
+    </Text>
+    <Text Key="Uniqueness">
+      <L>Uniqueness</L>
+      <L>특이사항</L>
+      <L>Uniqueness</L>
     </Text>
     <Text Key="Unit">
       <L>Unit</L>
@@ -27408,6 +30928,16 @@
       <L>빈 유닛 여부</L>
       <L>Unit Null Flag</L>
     </Text>
+    <Text Key="Unit Pass Qty">
+      <L>Unit Pass Qty</L>
+      <L>단위생산량(합격)</L>
+      <L>Unit Pass Qty</L>
+    </Text>
+    <Text Key="Unit Prod Qty">
+      <L>Unit Prod Qty</L>
+      <L>단위생산량</L>
+      <L>Unit Prod Qty</L>
+    </Text>
     <Text Key="Unit Qty">
       <L>Unit Qty</L>
       <L>단위수량</L>
@@ -27508,11 +31038,6 @@
       <L>개체</L>
       <L>Units</L>
     </Text>
-    <Text Key="Unload">
-      <L>Unload</L>
-      <L>하차</L>
-      <L>Unload</L>
-    </Text>
     <Text Key="Unschduled">
       <L>Unschduled</L>
       <L>비계획</L>
@@ -27577,6 +31102,11 @@
       <L>Up Down Flag</L>
       <L>Up Down Flag</L>
       <L>Up Down Flag</L>
+    </Text>
+    <Text Key="Up Down(c)">
+      <L>Up Down(c)</L>
+      <L>하향식</L>
+      <L>Up Down(c)</L>
     </Text>
     <Text Key="Up Event ID">
       <L>Up Event ID</L>
@@ -27688,6 +31218,11 @@
       <L>Queue Time 변경</L>
       <L>Update Queue Time</L>
     </Text>
+    <Text Key="Update Resource WorkTime">
+      <L>Update Resource WorkTime</L>
+      <L>설비 작업시간 변경</L>
+      <L>Update Resource WorkTime</L>
+    </Text>
     <Text Key="Update Time">
       <L>Update Time</L>
       <L>수정 시간</L>
@@ -27695,7 +31230,7 @@
     </Text>
     <Text Key="Update User">
       <L>Update User</L>
-      <L>수정 사용자</L>
+      <L>수정자</L>
       <L>Update User</L>
     </Text>
     <Text Key="Update User ID">
@@ -27717,6 +31252,11 @@
       <L>Upload Date</L>
       <L>업로드 시간</L>
       <L>Upload Date</L>
+    </Text>
+    <Text Key="Upload Management">
+      <L>Upload Management</L>
+      <L>파일 업로드 관리</L>
+      <L>Upload Management</L>
     </Text>
     <Text Key="Upper">
       <L>Upper</L>
@@ -27815,7 +31355,7 @@
     </Text>
     <Text Key="Use Count">
       <L>Use Count</L>
-      <L>사용개수</L>
+      <L>사용 수명</L>
       <L>Use Count</L>
     </Text>
     <Text Key="Use Customer Specification">
@@ -28083,6 +31623,16 @@
       <L>VMI 자재 타입</L>
       <L>VMI Material Type</L>
     </Text>
+    <Text Key="Vaccum 1">
+      <L>Vaccum 1 (Torr)</L>
+      <L>진공도1 (Torr)</L>
+      <L>Vaccum 1 (Torr)</L>
+    </Text>
+    <Text Key="Vaccum 2">
+      <L>Vaccum 2 (Torr)</L>
+      <L>진공도2 (Torr)</L>
+      <L>Vaccum 2 (Torr)</L>
+    </Text>
     <Text Key="Valid Table">
       <L>Valid Table</L>
       <L>유효 테이블</L>
@@ -28215,8 +31765,18 @@
     </Text>
     <Text Key="Vendor ID">
       <L>Vendor ID</L>
-      <L>고객사ID</L>
+      <L>업체 ID</L>
       <L>Vendor ID</L>
+    </Text>
+    <Text Key="Vendor Info">
+      <L>Vendor Info</L>
+      <L>업체 정보</L>
+      <L>Vendor Info</L>
+    </Text>
+    <Text Key="Vendor List">
+      <L>Vendor List</L>
+      <L>업체리스트</L>
+      <L>Vendor List</L>
     </Text>
     <Text Key="Vendor Lot ID">
       <L>Vendor Lot ID</L>
@@ -28225,13 +31785,18 @@
     </Text>
     <Text Key="Vendor Lot No">
       <L>Vendor Lot No</L>
-      <L>벤더 Lot 번호</L>
+      <L>업체 Lot 번호</L>
       <L>Vendor Lot No</L>
     </Text>
     <Text Key="Vendor Material">
       <L>Vendor Material</L>
       <L>자재 제품</L>
       <L>Vendor Material</L>
+    </Text>
+    <Text Key="Vendor Site ID">
+      <L>Vendor Site ID</L>
+      <L>업체 사이트 ID</L>
+      <L>Vendor Site ID</L>
     </Text>
     <Text Key="Vendor Tool ID">
       <L>Vendor Tool ID</L>
@@ -28288,6 +31853,11 @@
       <L>3 시그마선 보기</L>
       <L>View 3 Sigma Line</L>
     </Text>
+    <Text Key="View Actual Result Of Lots">
+      <L>View Actual Result Of Lots</L>
+      <L>Lot 실적 조회</L>
+      <L>View Actual Result Of Lots</L>
+    </Text>
     <Text Key="View Adjust History">
       <L>View Adjust History</L>
       <L>재고 실사 이력 조회</L>
@@ -28302,6 +31872,46 @@
       <L>View All</L>
       <L>모두 조회</L>
       <L>View All</L>
+    </Text>
+    <Text Key="View CTM 400ton Press Data">
+      <L>View CTM 400ton Press Data</L>
+      <L>400ton 프레스 설비 데이터 조회</L>
+      <L>View CTM 400ton Press Data</L>
+    </Text>
+    <Text Key="View CTM 5000ton Press Data">
+      <L>View CTM L-Press Data</L>
+      <L>L-프레스 설비 데이터 조회</L>
+      <L>View CTM L-Press Data</L>
+    </Text>
+    <Text Key="View CTM Ballmill Data">
+      <L>View CTM Ballmill Data</L>
+      <L>Ball Mill 설비 데이터 조회</L>
+      <L>View CTM Ballmill Data</L>
+    </Text>
+    <Text Key="View CTM Furnace Data">
+      <L>View CTM Furnace Data</L>
+      <L>전처리 디왁싱로 설비 데이터 조회</L>
+      <L>View CTM Furnace Data</L>
+    </Text>
+    <Text Key="View CTM Mixed Power Vacuum Furnace Data">
+      <L>View CTM Mixed Power Vacuum Furnace Data</L>
+      <L>전처리 열처리로 설비 데이터 조회</L>
+      <L>View CTM Mixed Power Vacuum Furnace Data</L>
+    </Text>
+    <Text Key="View CTM Planetary Mixer Data">
+      <L>View CTM Planetary Mixer Data</L>
+      <L>Planetary Mixer 설비 데이터 조회</L>
+      <L>View CTM Planetary Mixer Data</L>
+    </Text>
+    <Text Key="View CTM Planetary Mixer Data(Chart)">
+      <L>View CTM Planetary Mixer Data(Chart)</L>
+      <L>Planetary Mixer 설비 데이터 조회(차트포함)</L>
+      <L>View CTM Planetary Mixer Data(Chart)</L>
+    </Text>
+    <Text Key="View CTM Product Vacuum Furnace Data">
+      <L>View CTM Product Vacuum Furnace Data</L>
+      <L>가공 열처리로 설비 데이터 조회</L>
+      <L>View CTM Product Vacuum Furnace Data</L>
     </Text>
     <Text Key="View Carrier Status">
       <L>View Carrier Status</L>
@@ -28363,10 +31973,25 @@
       <L>날짜 보기</L>
       <L>View Date</L>
     </Text>
+    <Text Key="View Dlv Lot List">
+      <L>View Dlv Lot List</L>
+      <L>입하 LOT 현황</L>
+      <L>View Dlv Lot List</L>
+    </Text>
     <Text Key="View EDC Data">
       <L>View EDC Data</L>
       <L>EDC 데이터 조회</L>
       <L>View EDC Data</L>
+    </Text>
+    <Text Key="View ERP Asset">
+      <L>View ERP Asset</L>
+      <L>ERP 자산정보 조회</L>
+      <L>View ERP Asset</L>
+    </Text>
+    <Text Key="View ETC Lot List">
+      <L>View ETC Lot List</L>
+      <L>기타 입출고 현황</L>
+      <L>View ETC Lot List</L>
     </Text>
     <Text Key="View Event List by Event Group">
       <L>View Event List by Event Group</L>
@@ -28398,6 +32023,16 @@
       <L>그리드 보기</L>
       <L>View Grid Line</L>
     </Text>
+    <Text Key="View Grit Class Lot Trace">
+      <L>View Grit Class Lot Trace</L>
+      <L>그릿 분류 추적</L>
+      <L>View Grit Class Lot Trace</L>
+    </Text>
+    <Text Key="View HM Extruder Data">
+      <L>View HM Extruder Data</L>
+      <L>MD 압출기 설비 데이터 조회</L>
+      <L>View HM Extruder Data</L>
+    </Text>
     <Text Key="View Hold Lot List">
       <L>View Hold Lot List</L>
       <L>보류 Lot 목록 조회</L>
@@ -28420,17 +32055,27 @@
     </Text>
     <Text Key="View Inv Lot Issue List">
       <L>View Inv Lot Issue List</L>
-      <L>자재 Lot 불출 리스트 조회</L>
+      <L>자재 불출 현황</L>
       <L>View Inv Lot Issue List</L>
+    </Text>
+    <Text Key="View Inv Lot List By Material">
+      <L>View Inv Lot List By Material</L>
+      <L>품목 별 자재 현황</L>
+      <L>View Inv Lot List By Material</L>
     </Text>
     <Text Key="View Inv Lot List By Oper">
       <L>View Inv Lot List By Oper</L>
-      <L>공정에 의한 자재 Lot 조회</L>
+      <L>창고 별 자재 현황</L>
       <L>View Inv Lot List By Oper</L>
+    </Text>
+    <Text Key="View Inv Lot List By Warehouse">
+      <L>View Inv Lot List By Warehouse</L>
+      <L>창고 별 자재 현황</L>
+      <L>View Inv Lot List By Warehouse</L>
     </Text>
     <Text Key="View Inv Lot Move History">
       <L>View Inv Lot Move History</L>
-      <L>자재 Lot 이동 이력 조회</L>
+      <L>자재 이동 이력 조회</L>
       <L>View Inv Lot Move History</L>
     </Text>
     <Text Key="View Inventory History">
@@ -28438,10 +32083,20 @@
       <L>자재 이력 조회</L>
       <L>View Inventory History</L>
     </Text>
+    <Text Key="View Kitting Inv Lot List">
+      <L>View Kitting Inv Lot List</L>
+      <L>자재 Kitting 현황</L>
+      <L>View Kitting Inv Lot List</L>
+    </Text>
     <Text Key="View Line History List">
       <L>View Line History List</L>
       <L>라인 이력 조회</L>
       <L>View Line History List</L>
+    </Text>
+    <Text Key="View Loss List By Oper">
+      <L>View Loss List By Oper</L>
+      <L>공정별 불량 현황</L>
+      <L>View Loss List By Oper</L>
     </Text>
     <Text Key="View Loss List By Order">
       <L>View Loss List By Order</L>
@@ -28533,10 +32188,25 @@
       <L>Lot 이력 추적</L>
       <L>View Lot Trace</L>
     </Text>
+    <Text Key="View Lot Trace Other Factory">
+      <L>View Lot Trace(Other Factory)</L>
+      <L>Lot 이력 추적(타공장)</L>
+      <L>Xem theo dõi lô</L>
+    </Text>
     <Text Key="View Lot Trace Tree">
       <L>View Lot Trace Tree</L>
       <L>Lot 이력 추적(트리형)</L>
       <L>View Lot Trace Tree</L>
+    </Text>
+    <Text Key="View Material Input History">
+      <L>View Material Input History</L>
+      <L>자재 투입 이력</L>
+      <L>View Material Input History</L>
+    </Text>
+    <Text Key="View Material Input Status">
+      <L>View Material Input Status</L>
+      <L>자재투입 현황 조회</L>
+      <L>View Material Input Status</L>
     </Text>
     <Text Key="View Material List By BOM Set ID">
       <L>View Material List By BOM Set ID</L>
@@ -28552,6 +32222,16 @@
       <L>View Material List By Group</L>
       <L>그룹별 제품목록 조회</L>
       <L>View Material List By Group</L>
+    </Text>
+    <Text Key="View Material List By Oper">
+      <L>View Material List By Oper</L>
+      <L>공정(창고)별 품목 리스트</L>
+      <L>View Material List By Oper</L>
+    </Text>
+    <Text Key="View Material Move History">
+      <L>View Material Move History</L>
+      <L>LOT 이동 이력</L>
+      <L>View Material Move History</L>
     </Text>
     <Text Key="View Material Spec">
       <L>View Material Spec</L>
@@ -28610,8 +32290,18 @@
     </Text>
     <Text Key="View PO List">
       <L>View PO List</L>
-      <L>구매리스트 조회</L>
+      <L>PO 정보 조회</L>
       <L>View PO List</L>
+    </Text>
+    <Text Key="View Packing Lot">
+      <L>View Packing Lot</L>
+      <L>포장 Lot 조회</L>
+      <L>View Packing Lot</L>
+    </Text>
+    <Text Key="View Packing Order List">
+      <L>View Packing Order List</L>
+      <L>주문 지시 조회</L>
+      <L>View Packing Order List</L>
     </Text>
     <Text Key="View Plan List">
       <L>View Plan List</L>
@@ -28627,6 +32317,11 @@
       <L>View Port History</L>
       <L>포트 이력 조회</L>
       <L>View Port History</L>
+    </Text>
+    <Text Key="View Press Yield Status">
+      <L>View Press Yield Status</L>
+      <L>프레스 실적 현황</L>
+      <L>View Press Yield Status</L>
     </Text>
     <Text Key="View Process Capability Report">
       <L>View Process Capability Report</L>
@@ -28758,6 +32453,16 @@
       <L>SPC 알람 이력 조회</L>
       <L>View SPC Alarm History</L>
     </Text>
+    <Text Key="View Ship Lot Raw Material List">
+      <L>View Ship Lot Raw Material List</L>
+      <L>출하 Lot 원자재 리스트</L>
+      <L>View Ship Lot Raw Material List</L>
+    </Text>
+    <Text Key="View Ship Report">
+      <L>View Ship Report</L>
+      <L>성적서 현황</L>
+      <L>View Ship Report</L>
+    </Text>
     <Text Key="View Shipped List">
       <L>View Shipped List</L>
       <L>출하 목록 조회</L>
@@ -28798,9 +32503,14 @@
       <L>상태 조회</L>
       <L>View Status</L>
     </Text>
+    <Text Key="View Stock">
+      <L>View Stock</L>
+      <L>재고조회</L>
+      <L>View Stock</L>
+    </Text>
     <Text Key="View Store Inv Lot List">
       <L>View Store Inv Lot List</L>
-      <L>자재 Lot Store 리스트 조회</L>
+      <L>자재 입고 현황</L>
       <L>View Store Inv Lot List</L>
     </Text>
     <Text Key="View Sub Lot History">
@@ -28893,6 +32603,11 @@
       <L>전압 현재</L>
       <L>Voltage Current</L>
     </Text>
+    <Text Key="Voltage Setup">
+      <L>Voltage Setup</L>
+      <L>전압 설정</L>
+      <L>Voltage Setup</L>
+    </Text>
     <Text Key="Volume">
       <L>Volume</L>
       <L>부피</L>
@@ -28902,6 +32617,11 @@
       <L>Volume Unit</L>
       <L>부피 단위</L>
       <L>Volume Unit</L>
+    </Text>
+    <Text Key="W/D Judge">
+      <L>W/D Judge</L>
+      <L>W/D 판정</L>
+      <L>W/D Judge</L>
     </Text>
     <Text Key="W/O No">
       <L>W/O No</L>
@@ -28918,6 +32638,11 @@
       <L>공정 창고 여부</L>
       <L>WIP Operation</L>
     </Text>
+    <Text Key="WIP Store">
+      <L>WIP Store</L>
+      <L>생산 창고</L>
+      <L>WIP Store</L>
+    </Text>
     <Text Key="WT(%)">
       <L>WT(%)</L>
       <L>WT(%)</L>
@@ -28927,6 +32652,11 @@
       <L>Wafer Base</L>
       <L>웨이퍼 기준</L>
       <L>Wafer Base</L>
+    </Text>
+    <Text Key="Wait For Shipment">
+      <L>Wait For Shipment</L>
+      <L>출하대기</L>
+      <L>Wait For Shipment</L>
     </Text>
     <Text Key="Wait Lot ID">
       <L>Wait Lot ID</L>
@@ -28942,6 +32672,11 @@
       <L>Wait Receive Lot</L>
       <L>수취 대기 Lot 목록</L>
       <L>Wait Receive Lot</L>
+    </Text>
+    <Text Key="WareHouse Wait For Shipment">
+      <L>WareHouse Wait For Shipment</L>
+      <L>출하대기 창고</L>
+      <L>WareHouse Wait For Shipment</L>
     </Text>
     <Text Key="Warehouse">
       <L>Warehouse</L>
@@ -29002,6 +32737,11 @@
       <L>Warning</L>
       <L>경고</L>
       <L>Warning</L>
+    </Text>
+    <Text Key="Warning Count">
+      <L>Warning Count</L>
+      <L>경고 타수</L>
+      <L>Warning Count</L>
     </Text>
     <Text Key="Warning Queue Time">
       <L>Warning Queue Time</L>
@@ -29068,6 +32808,11 @@
       <L>Where절</L>
       <L>Where</L>
     </Text>
+    <Text Key="Whether In WH">
+      <L>Whether In WH</L>
+      <L>창고 여부</L>
+      <L>Whether In WH</L>
+    </Text>
     <Text Key="Wide Bar Width">
       <L>Wide Bar Width</L>
       <L>넓은 바코드 폭</L>
@@ -29102,6 +32847,11 @@
       <L>Work Date</L>
       <L>작업 날짜</L>
       <L>Work Date</L>
+    </Text>
+    <Text Key="Work Detail">
+      <L>Work Detail</L>
+      <L>상세보기</L>
+      <L>Work Detail</L>
     </Text>
     <Text Key="Work Group">
       <L>Work Group</L>
@@ -29153,6 +32903,11 @@
       <L>생산 지시 종류</L>
       <L>Work Order Type</L>
     </Text>
+    <Text Key="Work Place">
+      <L>Work Place</L>
+      <L>작업장</L>
+      <L>Work Place</L>
+    </Text>
     <Text Key="Work Position">
       <L>Work Position</L>
       <L>작업 위치</L>
@@ -29173,15 +32928,30 @@
       <L>작업 수량</L>
       <L>Work Qty</L>
     </Text>
+    <Text Key="Work Seq">
+      <L>No.</L>
+      <L>No.</L>
+      <L>No.</L>
+    </Text>
     <Text Key="Work Shift">
       <L>Work Shift</L>
       <L>작업조</L>
       <L>Work Shift</L>
     </Text>
+    <Text Key="Work Status">
+      <L>Work Status</L>
+      <L>작업 상태</L>
+      <L>Work Status</L>
+    </Text>
     <Text Key="Work Time">
       <L>Work Time</L>
       <L>작업 시간</L>
       <L>Work Time</L>
+    </Text>
+    <Text Key="Work Time Info">
+      <L>Work Time Info</L>
+      <L>작업 시간 정보</L>
+      <L>Work Time Info</L>
     </Text>
     <Text Key="Work Time Sec">
       <L>Work Time Sec</L>
@@ -29198,11 +32968,6 @@
       <L>작업 종류명</L>
       <L>Work Type Desc</L>
     </Text>
-    <Text Key="WorkOrder">
-      <L>WorkOrder</L>
-      <L>작업지시</L>
-      <L>WorkOrder</L>
-    </Text>
     <Text Key="WorkPalce">
       <L>WorkPalce</L>
       <L>작업장</L>
@@ -29212,6 +32977,11 @@
       <L>WorkPlace</L>
       <L>작업장</L>
       <L>WorkPlace</L>
+    </Text>
+    <Text Key="WorkPlace Code">
+      <L>WorkPlace Code</L>
+      <L>작업장 코드</L>
+      <L>WorkPlace Code</L>
     </Text>
     <Text Key="WorkPlace Name">
       <L>WorkPlace Name</L>
@@ -29267,6 +33037,11 @@
       <L>Worker Type</L>
       <L>타입</L>
       <L>Worker Type</L>
+    </Text>
+    <Text Key="Workorder List">
+      <L>Workorder List</L>
+      <L>작업지시 리스트</L>
+      <L>Workorder List</L>
     </Text>
     <Text Key="Worst BM Time">
       <L>Worst BM Time</L>
@@ -29332,6 +33107,11 @@
       <L>Year View</L>
       <L>년 단위</L>
       <L>Year View</L>
+    </Text>
+    <Text Key="YearMonth">
+      <L>Work Month</L>
+      <L>년월</L>
+      <L>Work Month</L>
     </Text>
     <Text Key="Yes">
       <L>Yes</L>
@@ -29403,6 +33183,11 @@
       <L>0장 Lot만</L>
       <L>Zero Quantity Lot</L>
     </Text>
+    <Text Key="already Input">
+      <L>already Input</L>
+      <L>이미 투입된 수량</L>
+      <L>already Input</L>
+    </Text>
     <Text Key="days">
       <L>days</L>
       <L>일</L>
@@ -29412,6 +33197,11 @@
       <L>displayType</L>
       <L>출력 종류</L>
       <L>displayType</L>
+    </Text>
+    <Text Key="proceed with the input as above information?">
+      <L>proceed with the input as above information?</L>
+      <L>위의 정보와 같이 입력을 진행하시겠습니까?</L>
+      <L>proceed with the input as above information?</L>
     </Text>
     <Text Key="type">
       <L>Type</L>

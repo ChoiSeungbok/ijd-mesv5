@@ -1855,4 +1855,771 @@
     <L>CMN477 INFO - 변경하려는 품목의 종류가 다릅니다.</L>
     <L>CMN477 INFO - The type of item you want to change is different.</L>
   </Text>
+  <Text Key="478">
+    <L>CMN478 INFO - There is no INSP ID information. Scan Lot first.</L>
+    <L>CMN478 INFO - 검사ID(INSP ID)정보가 없습니다. 먼저 Lot를(을) 스캔하세요.</L>
+    <L>CMN478 INFO - There is no INSP ID information. Scan Lot first.</L>
+  </Text>
+  <Text Key="479">
+    <L>CMN479 INFO - In case of handwriting input method, LotID must be inputed.</L>
+    <L>CMN479 INFO - 수기입력방식인경우 LotID를 지정해주셔야 합니다.</L>
+    <L>CMN479 INFO - In case of handwriting input method, LotID must be inputed.</L>
+  </Text>
+  <Text Key="480">
+    <L>CMN480 INFO - In case of handwriting input method, only one item can be added.</L>
+    <L>CMN480 INFO - 수기입력방식인경우 한 항목만 추가할수 있습니다.</L>
+    <L>CMN480 INFO - In case of handwriting input method, only one item can be added.</L>
+  </Text>
+  <Text Key="481">
+    <L>CMN481 INFO - No data exists.</L>
+    <L>CMN481 INFO - 데이터가 존재하지 않습니다.</L>
+    <L>CMN481 INFO - No data exists.</L>
+  </Text>
+  <Text Key="482">
+    <L>CMN482 INFO - There is no data to delete.</L>
+    <L>CMN482 INFO - 삭제할 데이터가 없습니다.</L>
+    <L>CMN482 INFO - There is no data to delete.</L>
+  </Text>
+  <Text Key="483">
+    <L>CMN483 INFO - Print is not possible because LOT does not exist.</L>
+    <L>CMN483 INFO - LOT이 존재하지 않아 출력이 불가합니다.</L>
+    <L>CMN483 INFO - Print is not possible because LOT does not exist.</L>
+  </Text>
+  <Text Key="484">
+    <L>CMN484 INFO - Check the relationship start and end date.</L>
+    <L>CMN484 INFO - 날짜 선후관계를 확인하세요.</L>
+    <L>CMN484 INFO - Check the relationship start and end date.</L>
+  </Text>
+  <Text Key="485">
+    <L>CMN485 INFO-It is not possible to enter the warehousing quantity more than the delivery quantity.</L>
+    <L>CMN485 INFO - 출고수량보다 더 많은 입고 수량을 입력 할 수 없습니다.</L>
+    <L>CMN485 INFO-It is not possible to enter the warehousing quantity more than the delivery quantity.</L>
+  </Text>
+  <Text Key="486">
+    <L>CMN486 INFO - There is no packing lot information to be saved.</L>
+    <L>CMN486 INFO - 저장 할 포장Lot정보가 존재하지 않습니다.</L>
+    <L>CMN486 INFO - There is no packing lot information to be saved.</L>
+  </Text>
+  <Text Key="487">
+    <L>CMN487 INFO - It has already been issued.</L>
+    <L>CMN487 INFO -  성적서 번호가 이미 발번되었습니다.</L>
+    <L>CMN487 INFO - It has already been issued.</L>
+  </Text>
+  <Text Key="488">
+    <L>CMN488 INFO - After creating the report, it can be printed out.</L>
+    <L>CMN488 INFO -  성적서 생성 후 출력가능합니다.</L>
+    <L>CMN488 INFO - After creating the report, it can be printed out.</L>
+  </Text>
+  <Text Key="489">
+    <L>CMN489 INFO -  Ship report has not been selected to save the data.</L>
+    <L>CMN489 INFO -  데이터를 저장 할 성적서가 선택되지 않았습니다.</L>
+    <L>CMN489 INFO -  Ship report has not been selected to save the data.</L>
+  </Text>
+  <Text Key="490">
+    <L>CMN490 INFO -  Please select the report type.</L>
+    <L>CMN490 INFO -  레포트 종류를 선택해주세요.</L>
+    <L>CMN490 INFO -  Please select the report type.</L>
+  </Text>
+  <Text Key="491">
+    <L>CMN491 INFO -  Please check the lot to be applied to the report.</L>
+    <L>CMN491 INFO -  성적서에 적용할 Lot을 체크 하시기 바랍니다.</L>
+    <L>CMN491 INFO -  Please check the lot to be applied to the report.</L>
+  </Text>
+  <Text Key="492">
+    <L>CMN492 INFO -  Select LotID and register the image.</L>
+    <L>CMN492 INFO -  LotID를 선택 후 이미지를 등록하시기 바랍니다.</L>
+    <L>CMN492 INFO -  Select LotID and register the image.</L>
+  </Text>
+  <Text Key="493">
+    <L>CMN493 INFO -  This Lot is already packed.</L>
+    <L>CMN493 INFO -  해당 Lot은 이미 포장되어 있습니다.</L>
+    <L>CMN493 INFO -  This Lot is already packed.</L>
+  </Text>
+  <Text Key="494">
+    <L>CMN494 INFO -  Would you like to proceed with the shipment?</L>
+    <L>CMN494 INFO -  출하 작업을 진행하시겠습니까?</L>
+    <L>CMN494 INFO -  Would you like to proceed with the shipment?</L>
+  </Text>
+  <Text Key="495">
+    <L>CMN495 INFO - Please check Out qty. Out qty must be greater than zero.</L>
+    <L>CMN495 INFO - 출고 수량은 0보다 큰 수량이어야 합니다.</L>
+    <L>CMN495 INFO - Please check Out qty. Out qty must be greater than zero.</L>
+  </Text>
+  <Text Key="496">
+    <L>CMN496 INFO - Packing Qty is exceeded.</L>
+    <L>CMN496 INFO - 포장 수량이 초과되었습니다.</L>
+    <L>CMN496 INFO - Packing Qty is exceeded.</L>
+  </Text>
+  <Text Key="497">
+    <L>CMN497 INFO-Did not choose whether to lose or not. Please check if there is any loss.</L>
+    <L>CMN497 INFO - 손실 여부를 선택하지 않았습니다. 손실여부를 확인해 주세요.</L>
+    <L>CMN497 INFO-Did not choose whether to lose or not. Please check if there is any loss.</L>
+  </Text>
+  <Text Key="498">
+    <L>CMN498 INFO-Do you want to migrate QCM data.</L>
+    <L>CMN498 INFO - QCM 데이터를 마이그레이션 하시겠습니까?.</L>
+    <L>CMN498 INFO-Do you want to migrate QCM data.</L>
+  </Text>
+  <Text Key="499">
+    <L>CMN499 INFO-Do you want to migrate QCM Report data.</L>
+    <L>CMN499 INFO - QCM 성적서 데이터를 마이그레이션 하시겠습니까?.</L>
+    <L>CMN499 INFO-Do you want to migrate QCM Report data.</L>
+  </Text>
+  <Text Key="500">
+    <L>CMN500 INFO- Comfort is connected successfully.</L>
+    <L>CMN500 INFO - 컴포트가 정상적으로 연결되었습니다.</L>
+    <L>CMN500 INFO- Comfort is connected successfully.</L>
+  </Text>
+  <Text Key="501">
+    <L>CMN501 ERROR- The migration was not processed normally. Please check the detailed description</L>
+    <L>CMN501 ERROR - 마이그레이션이  정상적으로 처리되지 않았습니다. 상세 설명을 확인해주세요'</L>
+    <L>CMN501 ERROR- The migration was not processed normally. Please check the detailed description</L>
+  </Text>
+  <Text Key="502">
+    <L>CMN502 ERROR - This function can use only ctm area.</L>
+    <L>CMN502 ERROR - 해당 기능은 정밀소재 사업부만 사용할 수 있습니다.</L>
+    <L>CMN502 ERROR - This function can use only ctm area.</L>
+  </Text>
+  <Text Key="503">
+    <L>CMN503 ERROR - Do you want to proceed with the final decision(Judge)?</L>
+    <L>CMN503 ERROR - 최종판정을 진행하시겠습니까?</L>
+    <L>CMN503 ERROR - Do you want to proceed with the final decision(Judge)?</L>
+  </Text>
+  <Text Key="504">
+    <L>CMN504 ERROR -The file size cannot be exceeded ( &lt; 2MByte Limited )</L>
+    <L>CMN504 ERROR - 파일사이즈를 초과할 수 없습니다 ( 2MByte 이하 제한)</L>
+    <L>CMN504 ERROR -The file size cannot be exceeded ( &lt; 2MByte Limited )</L>
+  </Text>
+  <Text Key="505">
+    <L>CMN505 INFO-There is a material that does not exist in the BOM. Check the BOM.</L>
+    <L>CMN505 INFO - BOM에 존재하지 않은 자재가 있습니다. BOM을 확인하세요.</L>
+    <L>CMN505 INFO-There is a material that does not exist in the BOM. Check the BOM.</L>
+  </Text>
+  <Text Key="506">
+    <L>CMN506 ERROR - Print Shipping Label is only possible to have packing order.</L>
+    <L>CMN506 ERROR - 출하 라벨은 주문 지시를 가지고 있어야 출력이 가능합니다.</L>
+    <L>CMN506 ERROR - Print Shipping Label is only possible to have packing order.</L>
+  </Text>
+  <Text Key="507">
+    <L>CMN506 INFO-The material is not on the BOM. Do you really want to put it in?</L>
+    <L>CMN507 INFO - BOM 상에 있는 자재가 아닙니다. 정말 투입하시겠습니까?</L>
+    <L>CMN506 INFO-The material is not on the BOM. Do you really want to put it in?</L>
+  </Text>
+  <Text Key="508">
+    <L>CMN508 INFO - Inspection[P] is in only CTM, GRT.</L>
+    <L>CMN508 INFO - P급 판정은 CTM, GRT 사업부만 존재합니다.</L>
+    <L>CMN508 INFO - Inspection[P] is in only CTM, GRT.</L>
+  </Text>
+  <Text Key="509">
+    <L>CMN509 INFO-This LOT has already been selected. Check the LOT.</L>
+    <L>CMN509 INFO - 이 LOT은 이미 선택되어 있습니다. LOT을 확인 하세요.</L>
+    <L>CMN509 INFO-This LOT has already been selected. Check the LOT.</L>
+  </Text>
+  <Text Key="510">
+    <L>CMN510 INFO - The maximum number of searches exceeded 1000.</L>
+    <L>CMN510 INFO - 최대 검색개수 1000개를 초과했습니다.</L>
+    <L>CMN510 INFO - The maximum number of searches exceeded 1000.</L>
+  </Text>
+  <Text Key="511">
+    <L>CMN511 INFO-This is a process that can proceed only one lot.</L>
+    <L>CMN511 INFO - 하나의 lot만 진행 할 수 있는 공정입니다.</L>
+    <L>CMN511 INFO-This is a process that can proceed only one lot.</L>
+  </Text>
+  <Text Key="512">
+    <L>CMN512 INFO-Lots cannot be merged if the items or processes are different.</L>
+    <L>CMN512 INFO - 품목 또는 공정이 다르면 Lot을 병합 할 수 없습니다.</L>
+    <L>CMN512 INFO-Lots cannot be merged if the items or processes are different.</L>
+  </Text>
+  <Text Key="513">
+    <L>CMN513 INFO-Lots cannot be merged if status of lot are different.</L>
+    <L>CMN513 INFO -LOT 상태가  다르면 Lot을 병합 할 수 없습니다.</L>
+    <L>CMN513 INFO-Lots cannot be merged if status of lot are different.</L>
+  </Text>
+  <Text Key="514">
+    <L>CMN514 INFO-Lots same as parent lot cannot be merged.</L>
+    <L>CMN514 INFO -모LOT과 같은 LOT은 병합 할 수 없습니다.</L>
+    <L>CMN514 INFO-Lots same as parent lot cannot be merged.</L>
+  </Text>
+  <Text Key="515">
+    <L>CMN515 INFO-The lot could not be found. Check the inquiry conditions.</L>
+    <L>CMN515 INFO -해당 Lot을 찾수 없습니다. 조회 조건을 확인해세요.</L>
+    <L>CMN515 INFO-The lot could not be found. Check the inquiry conditions.</L>
+  </Text>
+  <Text Key="516">
+    <L>CMN516 INFO - Only one item can be selected.</L>
+    <L>CMN516 INFO - 1개의 항목만 선택가능합니다.</L>
+    <L>CMN516 INFO - Only one item can be selected.</L>
+  </Text>
+  <Text Key="517">
+    <L>CMN517 INFO - Please enter either the material or lot</L>
+    <L>CMN517 INFO - 적어도 Lot ID 또는 제품을 입력해주세요.</L>
+    <L>CMN517 INFO - Please enter either the material or lot</L>
+  </Text>
+  <Text Key="518">
+    <L>CMN518 INFO - Please enter either the material or lot</L>
+    <L>CMN518 INFO - 적어도 Lot ID 또는 제품을 입력해주세요.</L>
+    <L>CMN518 INFO - Please enter either the material or lot</L>
+  </Text>
+  <Text Key="519">
+    <L>CMN519 INFO-No label type has been selected. Please select a label type.</L>
+    <L>CMN519 INFO - 라벨종류를 선택하지 않았습니다. 라벨 종류를 선택하세요.</L>
+    <L>CMN519 INFO-No label type has been selected. Please select a label type.</L>
+  </Text>
+  <Text Key="520">
+    <L>CMN520 INFO-Do you really want to delete the blending work order mapping history?</L>
+    <L>CMN520 INFO - Blending 작업지시 맵핑내역을 정말 삭제 하시겠습니까?</L>
+    <L>CMN520 INFO-Do you really want to delete the blending work order mapping history?</L>
+  </Text>
+  <Text Key="521">
+    <L>CMN521 ERROR - This lot does not exist. Please check lot id.</L>
+    <L>CMN521 ERROR - 이 LOT은 존재 하지 않습니다. LOT을  확인 하세요.</L>
+    <L>CMN521 ERROR - Dieses Los existiert nicht. Bitte ueberpruefen Sie die Lot-ID.</L>
+  </Text>
+  <Text Key="522">
+    <L>CMN522 ERROR-This LOT cannot be deleted. Only the LOT created in the process can be deleted.</L>
+    <L>CMN522 ERROR - 삭제 할 수 없는 LOT입니다. 해당 공정에서 생성된 LOT만 삭제 할 수 있습니다.</L>
+    <L>CMN522 ERROR-This LOT cannot be deleted. Only the LOT created in the process can be deleted.</L>
+  </Text>
+  <Text Key="523">
+    <L>CMN523 INFO-Lot already exists in the selected warehouse. Check the LOT process.</L>
+    <L>CMN523 INFO - 선택된 창고에 이미 LOT이 존재 합니다. LOT의 공정을 확인하세요.</L>
+    <L>CMN523 INFO-Lot already exists in the selected warehouse. Check the LOT process.</L>
+  </Text>
+  <Text Key="524">
+    <L>CMN524 ERROR - This user has duplicate times.</L>
+    <L>CMN524 ERROR - 해당 사용자는 중복된 시간이 있습니다.</L>
+    <L>CMN524 ERROR - This user has duplicate times.</L>
+  </Text>
+  <Text Key="525">
+    <L>CMN525 INFO- Please Input LotNo(Mold)</L>
+    <L>CMN525 INFO - LOT NO ( 금형 ID)를 입력하시기 바랍니다.</L>
+    <L>CMN525 INFO- Please Input LotNo(Mold)</L>
+  </Text>
+  <Text Key="526">
+    <L>CMN526 INFO -  Would you like to proceed with the warehousing?</L>
+    <L>CMN526 INFO -  입고 작업을 진행하시겠습니까?</L>
+    <L>CMN526 INFO -  Would you like to proceed with the warehousing?</L>
+  </Text>
+  <Text Key="527">
+    <L>CMN527 INFO-Already registered work orders cannot be deleted.</L>
+    <L>CMN527 INFO -  이미 등록된 작업지시는 삭제할 수 없습니다.</L>
+    <L>CMN527 INFO-Already registered work orders cannot be deleted.</L>
+  </Text>
+  <Text Key="528">
+    <L>CMN528 INFO- Would you like to send recipe information to the Round inspection facility for the current lot?</L>
+    <L>CMN528 INFO -  현재의 Lot을 대상으로 라운드검사 설비에 레시피정보를 전송하시겠습니까?</L>
+    <L>CMN528 INFO- Would you like to send recipe information to the Round inspection facility for the current lot?</L>
+  </Text>
+  <Text Key="529">
+    <L>CMN529 INFO-Check the registration information of the blending work order and whether the text behind the lot is registered. Do you want to proceed?</L>
+    <L>CMN529 INFO -  Blending 작업지시 등록 정보 및 Lot뒤 문자 등록 여부  확인하세요. 계속 진행 하시겠습니까?</L>
+    <L>CMN529 INFO-Check the registration information of the blending work order and whether the text behind the lot is registered. Do you want to proceed?</L>
+  </Text>
+  <Text Key="530">
+    <L>CMN530 INFO-Check whether the text behind the lot is registered. Do you want to proceed?</L>
+    <L>CMN530 INFO -  Lot뒤 문자 등록 여부  확인하세요. 계속 진행 하시겠습니까?</L>
+    <L>CMN530 INFO-Check whether the text behind the lot is registered. Do you want to proceed?</L>
+  </Text>
+  <Text Key="531">
+    <L>CMN531 INFO- There is no data to save.</L>
+    <L>CMN531 INFO -  저장 할 데이터가 없습니다.</L>
+    <L>CMN531 INFO- There is no data to save.</L>
+  </Text>
+  <Text Key="532">
+    <L>CMN532 INFO- Sample number must be entered.</L>
+    <L>CMN532 INFO -  샘플번호는 반드시 입력되어야 합니다.</L>
+    <L>CMN532 INFO- Sample number must be entered.</L>
+  </Text>
+  <Text Key="533">
+    <L>CMN533 INFO- You can enter only numbers for the sample number.</L>
+    <L>CMN533 INFO -  샘플번호는 반드시 숫자만 입력 할 수 있습니다.</L>
+    <L>CMN533 INFO- You can enter only numbers for the sample number.</L>
+  </Text>
+  <Text Key="534">
+    <L>CMN534 INFO- The sample number value cannot exceed 25.</L>
+    <L>CMN534 INFO -  샘플번호는 25를 초과할 수 없습니다.</L>
+    <L>CMN534 INFO- The sample number value cannot exceed 25.</L>
+  </Text>
+  <Text Key="535">
+    <L>CMN535 INFO-Test products cannot be loaded with materials. Check the LOT type.</L>
+    <L>CMN535 INFO -  테스트품은 자재를 투입할 수 없습니다. LOT 종류를 확인하세요.</L>
+    <L>CMN535 INFO-Test products cannot be loaded with materials. Check the LOT type.</L>
+  </Text>
+  <Text Key="536">
+    <L>CMN536 INFO-The installed equipment is different. Check the starting facility of the LOT.</L>
+    <L>CMN536 INFO -  투입된 설비가 다릅니다. LOT의 시작 설비를 확인하세요.</L>
+    <L>CMN536 INFO-The installed equipment is different. Check the starting facility of the LOT.</L>
+  </Text>
+  <Text Key="537">
+    <L>CMN537 INFO-Movement instruction cannot be modified in the selected process.</L>
+    <L>CMN537 INFO -  선택된 공정에서는 이동지시를 수정할 수 없습니다.</L>
+    <L>CMN537 INFO-Movement instruction cannot be modified in the selected process.</L>
+  </Text>
+  <Text Key="538">
+    <L>CMN538 INFO-In this process, the quantity of production cannot be higher than the quantity of work order. Check the generated quantity.</L>
+    <L>CMN538 INFO -  해당 공정에서는 작업지시 수량보다 생성수량이 많을 수 없습니다. 생성 수량을 확인하세요.</L>
+    <L>CMN538 INFO-In this process, the quantity of production cannot be higher than the quantity of work order. Check the generated quantity.</L>
+  </Text>
+  <Text Key="539">
+    <L>CMN539 INFO-Non-input material exists. Would you like to proceed?</L>
+    <L>CMN539 INFO -  미투입 자재가 존재합니다. 계속 진행하시겠습니까?</L>
+    <L>CMN539 INFO-Non-input material exists. Would you like to proceed?</L>
+  </Text>
+  <Text Key="540">
+    <L>CMN540 INFO-Do you really want to mount the mold?</L>
+    <L>CMN540 INFO -  금형을 정말 장착 하시겠습니까?</L>
+    <L>CMN540 INFO-Do you really want to mount the mold?</L>
+  </Text>
+  <Text Key="541">
+    <L>CMN541 INFO-Do you really want to remove the mold?</L>
+    <L>CMN541 INFO -  금형을 정말 탈착 하시겠습니까?</L>
+    <L>CMN541 INFO-Do you really want to remove the mold?</L>
+  </Text>
+  <Text Key="542">
+    <L>CMN542 INFO-The mold is already installed. Install after detaching.</L>
+    <L>CMN542 INFO -  이미 금형이 장착되어 있습니다. 탈착 후 장착하세요.</L>
+    <L>CMN542 INFO-The mold is already installed. Install after detaching.</L>
+  </Text>
+  <Text Key="543">
+    <L>CMN543 INFO-The mold has already been removed. Check whether the mold is installed.</L>
+    <L>CMN543 INFO -  이미 금형이 탈착되어 있습니다. 금형 장착 여부를 확인하세요.</L>
+    <L>CMN543 INFO-The mold has already been removed. Check whether the mold is installed.</L>
+  </Text>
+  <Text Key="544">
+    <L>CMN544 INFO-Check whether the text behind the lot is registered.</L>
+    <L>CMN544 INFO -  Lot뒤 문자 등록 여부  확인하세요.</L>
+    <L>CMN544 INFO-Check whether the text behind the lot is registered.</L>
+  </Text>
+  <Text Key="545">
+    <L>CMN545 INFO- The ERP may have an error .Please be careful..!!</L>
+    <L>CMN545 INFO - ERP 미연결시 ERP 와재고차이로 오류가 발생할수 있습니다. 주의바랍니다</L>
+    <L>CMN545 INFO-ERP The ERP may have an error .Please be careful..!!</L>
+  </Text>
+  <Text Key="546">
+    <L>CMN546 INFO-  Insert Data Error Please contact your administrator.</L>
+    <L>CMN546 INFO -저장중 오류가 발생하였습니다. 관리자에게 문의바랍니다.</L>
+    <L>CMN546 INFO - Insert Data Error Please contact your administrator.</L>
+  </Text>
+  <Text Key="547">
+    <L>CMN547 INFO - Is Not Inv Lot Label  Insert,  Please process after registration Label</L>
+    <L>CMN547 INFO-  자재 LOT LABEL이 등록이 되지 않았습니다. 등록후 처리 바랍니다.</L>
+    <L>CMN547 INFO - Is Not Inv Lot Label  Insert,  Please process after registration Label.</L>
+  </Text>
+  <Text Key="548">
+    <L>CMN548 INFO - Information already saved./Please search again.</L>
+    <L>CMN548 INFO-  이미 저장된 정보입니다./ 재조회하여 처리바랍니다.</L>
+    <L>CMN548 INFO - Information already saved./Please search again.</L>
+  </Text>
+  <Text Key="549">
+    <L>CMN549 INFO - Successfully completed.  /  Continue reload changes to data?</L>
+    <L>CMN549 INFO - 작업을 성공적으로 수행하였습니다. / 다시조회하시겠습니까?</L>
+    <L>CMN549 INFO - Erfolgreich abeschlossen.  /  Continue reload changes to data?</L>
+  </Text>
+  <Text Key="550">
+    <L>CMN550 INFO -You can proceed after reviewing again!</L>
+    <L>CMN550 INFO - 재조회 후 진행가능합니다.</L>
+    <L>CMN550 INFO -You can proceed after reviewing again!</L>
+  </Text>
+  <Text Key="551">
+    <L>CMN551 INFO -  There is a LOT with no shipping results registered. Do you want to keep going?</L>
+    <L>CMN551 INFO - 출하성적서가 등록 안된 LOT이 존재합니다. 계속진행하기겠습니까?</L>
+    <L>CMN551 INFO -There is a LOT with no shipping results registered. Do you want to keep going?</L>
+  </Text>
+  <Text Key="552">
+    <L>CMN552 INFO - Equipment time registration confirmation check is not checked. Please check the facility time registration confirmation check.</L>
+    <L>CMN552 INFO - 설비시간 등록 확인 체크가 안되었습니다. 설비 시간등록 확인 체크를 해주세요.</L>
+    <L>CMN552 INFO - Equipment time registration confirmation check is not checked. Please check the facility time registration confirmation check.</L>
+  </Text>
+  <Text Key="553">
+    <L>CMN553 INFO - Change Qty?</L>
+    <L>CMN553 INFO - 수량변경하시겠습니까?</L>
+    <L>CMN553 INFO - Change Qty?</L>
+  </Text>
+  <Text Key="554">
+    <L>CMN554 INFO - Not Web Browser</L>
+    <L>CMN554 INFO - 실행가능 웹브라우저가 없습니다.</L>
+    <L>CMN554 INFO - Not Web Browser</L>
+  </Text>
+  <Text Key="555">
+    <L>CMN555 INFO -  Inspection is not possible with the current CollectionSet.  Do you want to change to a registrationable CollectionSet?</L>
+    <L>CMN555 INFO - 현재의 CollectionSet으로는 검사가 불가합니다. 등록 가능한 CollectionSet으로 변경하시겠습니까?</L>
+    <L>CMN555 INFO -  Inspection is not possible with the current CollectionSet.  Do you want to change to a registrationable CollectionSet?</L>
+  </Text>
+  <Text Key="556">
+    <L>CMN556 INFO - There is no registered CollectionSet, so I registered the CollectionSet that is automatically possible.</L>
+    <L>CMN556 INFO - 등록된  CollectionSet이 없어서 자동으로 가능한 CollectionSet 등록하였습니다.</L>
+    <L>CMN556 INFO - There is no registered CollectionSet, so I registered the CollectionSet that is automatically possible.</L>
+  </Text>
+  <Text Key="557">
+    <L>CMN557 INFO -At least one CollectionSet is registered and one is deleted.</L>
+    <L>CMN557 INFO - CollectionSet 이 1개이상 등록되어 1개 삭제합니다.</L>
+    <L>CMN557 INFO - At least one CollectionSet is registered and one is deleted.</L>
+  </Text>
+  <Text Key="558">
+    <L>CMN558 INFO -The inspection quantity will increase. Would you like to proceed?</L>
+    <L>CMN558 INFO - 검사수량이 늘어나게 됩니다. 진행하시겟습니까?</L>
+    <L>CMN558 INFO -The inspection quantity will increase. Would you like to proceed?</L>
+  </Text>
+  <Text Key="559">
+    <L>CMN559 INFO -Only LOTs that have been processing for import inspection can be processed.</L>
+    <L>CMN559 INFO - 수입검사 LOT만 처리가능합니다.</L>
+    <L>CMN559 INFO -Only LOTs that have been processing for import inspection can be processed.</L>
+  </Text>
+  <Text Key="560">
+    <L>CMN560 INFO  -Change the collection set (already registered collection sets will be deleted)</L>
+    <L>CMN560 INFO - 콜렉션셋을 변경합니다.(이미 등록된 콜렉션셋은 삭제됩니다.)</L>
+    <L>CMN560 INFO - Change the collection set (already registered collection sets will be deleted)</L>
+  </Text>
+  <Text Key="561">
+    <L>CMN561 INFO  - Register specification information for the item. Please re-examine and register again.</L>
+    <L>CMN561 INFO - 해당품목 품목스펙버전정보 등록합니다.(최초1회) 재조회 후 다시 등록 바랍니다.</L>
+    <L>CMN561 INFO - Register specification information for the item. Please re-examine and register again.</L>
+  </Text>
+  <Text Key="562">
+    <L>CMN562 INFO  - The change has been completed.</L>
+    <L>CMN562 INFO - 변경이 완료되었습니다.</L>
+    <L>CMN562 INFO - The change has been completed.</L>
+  </Text>
+  <Text Key="563">
+    <L>CMN563 INFO - No CollectionSet is registered. Are you sure you want to proceed with the registration?</L>
+    <L>CMN563 INFO - 등록된  CollectionSet이 없습니다. 등록 진행하시겠습니까?</L>
+    <L>CMN563 INFO - No CollectionSet is registered. Are you sure you want to proceed with the registration?</L>
+  </Text>
+  <Text Key="564">
+    <L>CMN564 INFO - There are inspection data not entered.?</L>
+    <L>CMN564 INFO - 미입력된 검사데이터가 있습니다.</L>
+    <L>CMN564 INFO - There are inspection data not entered.?</L>
+  </Text>
+  <Text Key="565">
+    <L>CMN565 INFO - modify  "Use Count", Maybe Today Count" problems can arise /Change Count"?</L>
+    <L>CMN565 INFO -  사용횟수를 수정하면 /금일의 사용횟수는 틀릴수 있습니다. / 변경하시겠습니까?</L>
+    <L>CMN565 INFO - modify  "Use Count", Maybe Today Count" problems can arise /Change Count"?</L>
+  </Text>
+  <Text Key="566">
+    <L>CMN566 INFO -Is this LOT an MP item? (Yes or No)</L>
+    <L>CMN566 INFO - 해당 LOT은 MP품목이십니까?  맞으면Yes 틀리면 No</L>
+    <L>CMN566 INFO - Is this LOT an MP item? (Yes or No)</L>
+  </Text>
+  <Text Key="567">
+    <L>CMN567 INFO  - Do you want to change the Judge?</L>
+    <L>CMN567 INFO - 판정을 변경하시겠습니까?</L>
+    <L>CMN567 INFO  - Do you want to change the Judge?</L>
+  </Text>
+  <Text Key="568">
+    <L>CMN568 INFO  - Do you want to make a Judgement right away without registering inspection information?</L>
+    <L>CMN568 INFO - 검사정보 등록없이 바로 판정하시겠습니까?</L>
+    <L>CMN568 INFO  - Do you want to make a Judgement right away without registering inspection information?</L>
+  </Text>
+  <Text Key="569">
+    <L>CMN569 INFO  - Are you sure you want to cancel the QC Judgement?</L>
+    <L>CMN569 INFO - 검사 판정을 취소하시겠습니까?</L>
+    <L>CMN569 INFO  - Are you sure you want to cancel the QC Judgement?</L>
+  </Text>
+  <Text Key="570">
+    <L>CMN570 INFO  - This is not a LOT that has been purchased and received.</L>
+    <L>CMN570 INFO - 구매입고를 진행한 LOT이 아닙니다.</L>
+    <L>CMN570 INFO  - This is not a LOT that has been purchased and received.</L>
+  </Text>
+  <Text Key="571">
+    <L>CMN571 INFO  - Manually entered LOTs may cause an overall error in the system later.You need to be careful.!!!(going to proceed? Yes/No)</L>
+    <L>CMN571 INFO -  수기로 입력한  LOT은 나중에 시스템에 전체적인 오류를 발생시킬수도 있습니다. 주의가 필요합니다.(진행하시겠습니까? Yes/No)</L>
+    <L>CMN571 INFO  - Manually entered LOTs may cause an overall error in the system later.You need to be careful.!!!(going to proceed? Yes/No)</L>
+  </Text>
+  <Text Key="572">
+    <L>CMN572 INFO  -You cannot enter raw materials by Manually entered. (going to proceed? YES/No)</L>
+    <L>CMN572 INFO -  현재 원자재는 LOT을 수기입력으로 할수 없습니다..(진행하시겠습니까? Yes/No)</L>
+    <L>CMN572 INFO  -You cannot enter raw materials by Manually entered. (going to proceed? YES/No)</L>
+  </Text>
+  <Text Key="573">
+    <L>CMN573 INFO  - It's an unchangeable decision.</L>
+    <L>CMN573 INFO -  변경이 불가능한 판정입니다.</L>
+    <L>CMN573 INFO   - It's an unchangeable decision.</L>
+  </Text>
+  <Text Key="574">
+    <L>CMN574 INFO  - The unit is "EA" and the total input Qty  has a decimal point. Convert to integer (YES/NO)?</L>
+    <L>CMN574 INFO -  단위가  "EA"이면서  총 입력 수량은 소수점을 갖습니다.정수로 변환(YES/NO)?</L>
+    <L>CMN574 INFO  - The unit is "EA" and the total input Qty  has a decimal point. Convert to integer (YES/NO)?</L>
+  </Text>
+  <Text Key="575">
+    <L>CMN575 ERROR - It is mandatory to enter the contents in the remarks column.</L>
+    <L>CMN575 ERROR - 비고란에 내용입력은 필수입니다.</L>
+    <L>CMN575 ERROR - It is mandatory to enter the contents in the remarks column.</L>
+  </Text>
+  <Text Key="576">
+    <L>Save is complete!</L>
+    <L>저장되었습니다.</L>
+    <L>Save is complete!</L>
+  </Text>
+  <Text Key="577">
+    <L>will you split?(If you need to cancel the packaging, there may be a problem)</L>
+    <L>분할하시겠습니까?(혹시 포장취소를 진행하는 경우에는 문제가 있을수 있습니다.)</L>
+    <L>will you split?(If you need to cancel the packaging, there may be a problem)</L>
+  </Text>
+  <Text Key="578">
+    <L>CMN578 INFO - The OutSourcing W/O is empty. Are you sure you want to delete the OutSourcing W/O?</L>
+    <L>CMN578 INFO - 외주작지번호가 빈값입니다. 외주작지번호를  삭제 계속 진행하시겠습니까?</L>
+    <L>CMN578 INFO - The OutSourcing W/O is empty. Are you sure you want to delete the OutSourcing W/O?</L>
+  </Text>
+  <Text Key="579">
+    <L>CMN579 INFO - Only LOTs that exist in the same warehouse can be moved together.</L>
+    <L>CMN579 INFO - 동일창고에 존재하는 LOT만 같이 이동 가능합니다.</L>
+    <L>CMN579 INFO - Only LOTs that exist in the same warehouse can be moved together.</L>
+  </Text>
+  <Text Key="580">
+    <L>CMN580 INFO - Only LOTs in the warehouse can be moved.</L>
+    <L>CMN580 INFO - 창고에 있는  LOT만 이동 가능합니다.</L>
+    <L>CMN580 INFO - Only LOTs in the warehouse can be moved.</L>
+  </Text>
+  <Text Key="581">
+    <L>CMN581 INFO - Shipping  Warehouses can't be moved.</L>
+    <L>CMN581 INFO - 출하창고는 이동이 불가능 합니다.</L>
+    <L>CMN581 INFO - Shipping  Warehouses can't be moved.</L>
+  </Text>
+  <Text Key="582">
+    <L>CMN582 INFO - Only this month's history can be deleted.</L>
+    <L>CMN582 INFO - 당월 이력만 삭제 가능합니다.</L>
+    <L>CMN582 INFO - Only this month's history can be deleted.</L>
+  </Text>
+  <Text Key="583">
+    <L>CMN583 INFO - History that has already been deleted.</L>
+    <L>CMN583 INFO - 이미 삭제된 이력입니다.</L>
+    <L>CMN583 INFO - History that has already been deleted.</L>
+  </Text>
+  <Text Key="584">
+    <L>CMN583 INFO - History that has already been deleted.</L>
+    <L>MES 리턴완료. ERP는 별도처리바랍니다</L>
+    <L>CMN583 INFO - History that has already been deleted.</L>
+  </Text>
+  <Text Key="585">
+    <L>CMN 585 INFO - Only "Pass" or "Special approval"  Judgement can be converted into mass-produced products.</L>
+    <L>CMN 585 INFO - 합격 혹은 특채 판정만 양산품 전환 가능합니다.</L>
+    <L>CMN 585 INFO - Only "Pass" or "Special approval"  Judgement can be converted into mass-produced products.</L>
+  </Text>
+  <Text Key="586">
+    <L>CMN586 INFO - Consignment  Warehouses can't be moved.</L>
+    <L>CMN586 INFO - 위탁창고는 이동이 불가능 합니다.</L>
+    <L>CMN586 INFO - Consignment  Warehouses can't be moved.</L>
+  </Text>
+  <Text Key="587">
+    <L>CMN587 INFO - This flows will be Not "prod Lot" converting, change flow or flag please</L>
+    <L>CMN587 INFO - 해당 플로우는 자동으로 양산품 전환이 불가합니다. 플로우 혹은 자동 양산품 전환 플레그 변경해주세요</L>
+    <L>CMN586 INFO - This flows will be Not "prod Lot" converting, change flow or flag please</L>
+  </Text>
+  <Text Key="588">
+    <L>CMN588 INFO - Do you want to correct LOT matching?  (Work Order Operation)</L>
+    <L>CMN588 INFO - 작업지시공정 LOT진행 바로 하시겠습니까?</L>
+    <L>CMN588 INFO - Do you want to correct LOT matching?  (Work Order Operation)</L>
+  </Text>
+  <Text Key="589">
+    <L>CMN589 INFO - No BOM information. Please register</L>
+    <L>CMN589 INFO - BOM 정보가 없습니다. 등록해주세요</L>
+    <L>CMN589 INFO - No BOM information. Please register</L>
+  </Text>
+  <Text Key="590">
+    <L>CMN590 INFO - the Order Qty has been changed . Are you going to changed Bom Total Qty?</L>
+    <L>CMN590 INFO - 수량이 수정되었습니다. BOM의 총소요량도 수정합니까?</L>
+    <L>CMN590 INFO - the Order Qty has been changed . Are you going to changed Bom Total Qty?</L>
+  </Text>
+  <Text Key="591">
+    <L>CMN591 INFO -There is a  "WorkOrder" in progress.  Do you want to go back to the New Line?</L>
+    <L>CMN591 INFO - 생성중인 작업지시가 있습니다.처음부터 다시진행합니까?</L>
+    <L>CMN591 INFO -There is a  "WorkOrder" in progress.  Do you want to go back to the New Line?</L>
+  </Text>
+  <Text Key="592">
+    <L>CMN592 INFO -This can't copy WorkOrder(incomplete Order)</L>
+    <L>CMN592 INFO - 생성되지 않은 지시정보는 복사할수 없습니다.</L>
+    <L>CMN592 INFO -This can't copy WorkOrder(incomplete Order)</L>
+  </Text>
+  <Text Key="593">
+    <L>CMN593 INFO - Only this month's history can be Changed.</L>
+    <L>CMN593 INFO - 당월 이력만 수정 가능합니다.</L>
+    <L>CMN593 INFO - Only this month's history can be Changed.</L>
+  </Text>
+  <Text Key="594">
+    <L>CMN594 ERROR - Cannot Judged Loss because the lot is already included at Loss</L>
+    <L>CMN594 ERROR - 이미 불량으로 처리가 되었기 때문에 다시 불량처리는 할수 없습니다.</L>
+    <L>CMN594 ERROR - Cannot Judged Loss because the lot is already included at Loss</L>
+  </Text>
+  <Text Key="595">
+    <L>Are you going to change it to a Loss?? (Yes or No)</L>
+    <L>불량으로 처리를 하시겠습니까? (예/아니요)</L>
+    <L>Are you going to change it to a Loss?? (Yes or No)</L>
+  </Text>
+  <Text Key="596">
+    <L>CMN596 INFO - The change history of inventory quantities in the warehouse cannot be retrieved. (Please contact the administrator.)</L>
+    <L>CMN596 INFO - 창고에서의 수량변경이력은 리턴할수 없습니다.(관리자에 문의요청하세요)</L>
+    <L>CMN596 INFO - The change history of inventory quantities in the warehouse cannot be retrieved. (Please contact the administrator.)</L>
+  </Text>
+  <Text Key="597">
+    <L>Do you want to open the downloaded file now?</L>
+    <L>다운받은 파일을 바로 OPEN 하시겠습니까?</L>
+    <L>Do you want to open the downloaded file now?</L>
+  </Text>
+  <Text Key="598">
+    <L>CMN598 INFO - 
+Quality inspections cannot be returned (Please contact the administrator.)</L>
+    <L>CMN598 INFO - 검사 실적은 리턴하실수 없습니다.(품질관리자에 문의하세요)</L>
+    <L>CMN598 INFO - 
+Quality inspections cannot be returned (Please contact the administrator.)</L>
+  </Text>
+  <Text Key="599">
+    <L>CMN599 INFO - The next process and warehouse transfer have been completed, making defect handling impossible.(It can be processed after return.
+
+
+
+
+
+
+
+)</L>
+    <L>CMN599 INFO - 다음 공정 및 창고이동이 진행되어 불량처리가 불가합니다.(리턴후 처리가능합니다.)</L>
+    <L>CMN599 INFO - The next process and warehouse transfer have been completed, making defect handling impossible.(It can be processed after return.
+
+
+
+
+
+
+
+)</L>
+  </Text>
+  <Text Key="600">
+    <L>The search results contain more than 50,000 records.
+
+The data will be exported directly to a CSV file.
+Do you want to continue?
+
+(The file will be split into parts of 50,000 records each.)</L>
+    <L>조회 데이터가 50000건이상입니다.
+CSV파일로 바로출력됩니다.진행하시겠습니까? 
+(50000건단위로 분할출력됩니다.)</L>
+    <L>The search results contain more than 50,000 records.
+
+The data will be exported directly to a CSV file.
+Do you want to continue?
+
+(The file will be split into parts of 50,000 records 
+
+
+
+
+
+
+)</L>
+  </Text>
+  <Text Key="601">
+    <L>CMN601 INFO -The same directory name  exists.</L>
+    <L>CMN601 INFO -동일디렉토리가 존재합니다</L>
+    <L>CMN601 THÔNG TIN -Tồn tại cùng một tên thư mục.</L>
+  </Text>
+  <Text Key="602">
+    <L>CMN602 INFO -Directory creation error occurred</L>
+    <L>CMN602 INFO - 디렉토리 생성 오류발생</L>
+    <L>CMN602 INFO - Đã xảy ra lỗi tạo thư mục</L>
+  </Text>
+  <Text Key="603">
+    <L>CMN603 INFO -The file already exists. Do you want to overwrite it?</L>
+    <L>CMN603 INFO - 파일이 이미 존재합니다. 덮어쓰시겠습니까?</L>
+    <L>CMN603 INFO - Tệp đã tồn tại. Bạn có muốn ghi đè lên không?</L>
+  </Text>
+  <Text Key="604">
+    <L>CMN604 INFO -There is no selected save path. Please choose a path</L>
+    <L>CMN604 INFO - 선택된 저장경로가 없습니다. 경로를 선택해주세요.</L>
+    <L>CMN604 INFO - Không có đường dẫn lưu nào được chọn. Vui lòng chọn một đường dẫn</L>
+  </Text>
+  <Text Key="605">
+    <L>CMN605 INFO - select Directory.Please</L>
+    <L>CMN605 INFO - 먼저 디렉토리를 선택해주세요</L>
+    <L>CMN605 INFO - chọn Thư mục. Vui lòng</L>
+  </Text>
+  <Text Key="606">
+    <L>CMN606 INFO -Incorrect directory name</L>
+    <L>CMN606 INFO -잘못된 폴더 이름입니다.</L>
+    <L>CMN606 THÔNG TIN -Tên thư mục không đúng</L>
+  </Text>
+  <Text Key="607">
+    <L>CMN607 INFO -There's no inspection result file in the specified path</L>
+    <L>CMN607 INFO -지정 경로에 검사결과 파일이 없습니다.</L>
+    <L>CMN607 THÔNG TIN - Không có tệp kết quả kiểm tra nào trong đường dẫn đã chỉ định</L>
+  </Text>
+  <Text Key="608">
+    <L>CMN608 INFO -The LOT and recipe information has been sent to the inspection equipment</L>
+    <L>CMN608 INFO - 검사장비에 LOT 및 레시피정보를 전송하였습니다.</L>
+    <L>CMN608 THÔNG TIN -Thông tin LÔ và công thức đã được gửi đến thiết bị kiểm tra</L>
+  </Text>
+  <Text Key="609">
+    <L>CMN609 INFO -Raw materials and supplies cannot be entered manually. Please contact the administrator.</L>
+    <L>CMN609 INFO - 원재료 및 저장품은 수기입력이 불가능합니다.(관리자에 문의해주세요)</L>
+    <L>CMN609 INFO -Raw materials and supplies cannot be entered manually. Please contact the administrator.</L>
+  </Text>
+  <Text Key="610">
+    <L>CMN610 INFO – Do you want to keep the packaging LOT when reshipping? (If the label is already attached, please select YES. Otherwise, select NO.)</L>
+    <L>CMN610 INFO - 재출하시 포장LOT을 유지하시겠습니까?(이미 라벨이 부착된 상태면 YES,그외경우면 NO를 부탁드립니다.)</L>
+    <L>CMN610 INFO – Bạn có muốn giữ lại LOT đóng gói khi giao hàng lại không? (Nếu nhãn đã được dán thì chọn YES, nếu chưa thì chọn NO nhé.)</L>
+  </Text>
+  <Text Key="611">
+    <L>CMN611 INFO – For test orders in SKY DIA, please set “Auto Prod Change” to “Y”.</L>
+    <L>CMN611 INFO - SKY DIA에서 진행하는 테스트 오더는 "Auto Prod Change(자동양산품전환)"을  "Y"로 변경해주세요.</L>
+    <L>CMN611 INFO – Với các lệnh thử nghiệm trong SKY DIA, vui lòng đặt “Auto Prod Change” thành “Y”.</L>
+  </Text>
+  <Text Key="612">
+    <L>CMN612 INFO –  Only check this on the PC connected to the ROUND inspection machine at the Korea factory. Is this the inspection machine? (YES/NO)</L>
+    <L>CMN612 INFO –  한국공장 ROUND검사장비에 연결된 PC에서만 해당 체크해주세요 검사장비가 맞습니까?(YES/NO)</L>
+    <L>CMN612 INFO –  Chỉ kiểm tra trên máy tính kết nối với máy kiểm tra ROUND tại nhà máy Hàn Quốc. Đây có phải là máy kiểm tra không? (CÓ/KHÔNG)</L>
+  </Text>
+  <Text Key="613">
+    <L>CMN612 INFO – No information entered. Is it okay to delete the existing comments? (YES/NO)</L>
+    <L>CMN612 INFO – 입력된 정보가 없습니다.기존 특기사항 삭제되어도 됩니까?(YES/NO)</L>
+    <L>CMN612 INFO – Không có thông tin được nhập. Có xóa ghi chú hiện tại không? (YES/NO)</L>
+  </Text>
+  <Text Key="614">
+    <L>Would you like to proceed with the return now?</L>
+    <L>지금 리턴하시겠습니까?</L>
+    <L>Bạn có muốn tiến hành trả hàng ngay bây giờ không?</L>
+  </Text>
+  <Text Key="615">
+    <L>If there is an actual inspection result, do you also want to update it? (If you select No, only the current LOT judgment for shipment will be changed.)</L>
+    <L>실제검사판정이있는경우 실제검사판정도 변경하시겠습니까?(No선택시 출하목적의현상태의 LOT 판정정보만 바뀜)</L>
+    <L>Nếu đã có kết quả kiểm tra thực tế, bạn có muốn cập nhật kết quả đó không? (Nếu chọn Không, chỉ thông tin đánh giá LOT hiện tại cho mục đích xuất hàng sẽ được thay đổi.)</L>
+  </Text>
+  <Text Key="616">
+    <L>CMN616 INFO - You do not have permission to approve the shipment. Please contact the person in charge.</L>
+    <L>CMN616 INFO - 출하 승인 판정관련 권한이 없습니다.(처리 담당자에게 요청하세요)</L>
+    <L>CMN616 INFO - Bạn không có quyền phê duyệt xuất hàng. Vui lòng liên hệ với người phụ trách.</L>
+  </Text>
+  <Text Key="617">
+    <L>CMN617 INFO - You do not have permission to return the performance record.</L>
+    <L>CMN617 INFO -실적리턴에 대한 권한을 가지고 있지않습니다.</L>
+    <L>CMN617 INFO - Bạn không có quyền trả lại dữ liệu thực tế.</L>
+  </Text>
+  <Text Key="618">
+    <L>Please check if there's any issue with the actual "Material Desc" differing from the "Label Name" one.&lt; If it's not a problem, you may disregard this message.&gt;</L>
+    <L>혹시 실제 품목과 라벨품목이 다른것에 대해 잘못된 것이면 확인부탁드립니다.&lt;상관없다면 메세지 무시하세요&gt;</L>
+    <L>Vui lòng kiểm tra xem có vấn đề gì không nếu "Mô tả vật liệu" thực tế khác với "Tên nhãn". Nếu không có vấn đề gì, bạn có thể bỏ qua tin nhắn này.</L>
+  </Text>
+  <Text Key="619">
+    <L>Customers on this list can ship goods regardless of inspection results.(For adnding a company, please ask the admin.)</L>
+    <L>해당기준정보에 등록된 고객사는 검사판정에 영향없이 출하 가능합니다.(업체추가는 MES 관리자에게 문의하세요.)</L>
+    <L>Khách hàng đã được đăng ký trong thông tin tiêu chuẩn có thể xuất hàng mà không ảnh hưởng đến kết quả kiểm tra. (Vui lòng liên hệ quản trị viên MES để thêm nhà cung cấp mới.)</L>
+  </Text>
+  <Text Key="620">
+    <L>Customer allowed to ship regardless of inspection result</L>
+    <L>검사판정 상관없이 출하 가능 고객사</L>
+    <L>Khách hàng được phép xuất hàng bất kể kết quả kiểm tra</L>
+  </Text>
+  <Text Key="621">
+    <L>Material allowed to ship regardless of inspection result</L>
+    <L>검사판정 상관없이 출하 가능 품목</L>
+    <L>Vật liệu được phép xuất hàng bất kể kết quả kiểm tra.</L>
+  </Text>
+  <Text Key="622">
+    <L>Material on this list can ship goods regardless of inspection results.</L>
+    <L>해당기준정보에 등록된 품목은 검사판정에 영향없이 출하 가능합니다.</L>
+    <L>Vật liệu trong danh sách này được phép xuất hàng dù kết quả kiểm tra như thế nào.</L>
+  </Text>
+  <Text Key="623">
+    <L>[GW-FGI]Lots in the product warehouse  cannot be merged.</L>
+    <L>[GW-FGI]제품 창고의 로트는 병합할 수 없습니다.</L>
+    <L>[GW-FGI]Lots in the product warehouse  cannot be merged.</L>
+  </Text>
 </Message>

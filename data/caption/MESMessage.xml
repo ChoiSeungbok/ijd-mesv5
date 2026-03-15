@@ -2450,4 +2450,176 @@
     <L>CMN596 INFO - 창고에서의 수량변경이력은 리턴할수 없습니다.(관리자에 문의요청하세요)</L>
     <L>CMN596 INFO - The change history of inventory quantities in the warehouse cannot be retrieved. (Please contact the administrator.)</L>
   </Text>
+  <Text Key="597">
+    <L>Do you want to open the downloaded file now?</L>
+    <L>다운받은 파일을 바로 OPEN 하시겠습니까?</L>
+    <L>Do you want to open the downloaded file now?</L>
+  </Text>
+  <Text Key="598">
+    <L>CMN598 INFO - 
+Quality inspections cannot be returned (Please contact the administrator.)</L>
+    <L>CMN598 INFO - 검사 실적은 리턴하실수 없습니다.(품질관리자에 문의하세요)</L>
+    <L>CMN598 INFO - 
+Quality inspections cannot be returned (Please contact the administrator.)</L>
+  </Text>
+  <Text Key="599">
+    <L>CMN599 INFO - The next process and warehouse transfer have been completed, making defect handling impossible.(It can be processed after return.
+
+
+
+
+
+
+
+)</L>
+    <L>CMN599 INFO - 다음 공정 및 창고이동이 진행되어 불량처리가 불가합니다.(리턴후 처리가능합니다.)</L>
+    <L>CMN599 INFO - The next process and warehouse transfer have been completed, making defect handling impossible.(It can be processed after return.
+
+
+
+
+
+
+
+)</L>
+  </Text>
+  <Text Key="600">
+    <L>The search results contain more than 50,000 records.
+
+The data will be exported directly to a CSV file.
+Do you want to continue?
+
+(The file will be split into parts of 50,000 records each.)</L>
+    <L>조회 데이터가 50000건이상입니다.
+CSV파일로 바로출력됩니다.진행하시겠습니까? 
+(50000건단위로 분할출력됩니다.)</L>
+    <L>The search results contain more than 50,000 records.
+
+The data will be exported directly to a CSV file.
+Do you want to continue?
+
+(The file will be split into parts of 50,000 records 
+
+
+
+
+
+
+)</L>
+  </Text>
+  <Text Key="601">
+    <L>CMN601 INFO -The same directory name  exists.</L>
+    <L>CMN601 INFO -동일디렉토리가 존재합니다</L>
+    <L>CMN601 THÔNG TIN -Tồn tại cùng một tên thư mục.</L>
+  </Text>
+  <Text Key="602">
+    <L>CMN602 INFO -Directory creation error occurred</L>
+    <L>CMN602 INFO - 디렉토리 생성 오류발생</L>
+    <L>CMN602 INFO - Đã xảy ra lỗi tạo thư mục</L>
+  </Text>
+  <Text Key="603">
+    <L>CMN603 INFO -The file already exists. Do you want to overwrite it?</L>
+    <L>CMN603 INFO - 파일이 이미 존재합니다. 덮어쓰시겠습니까?</L>
+    <L>CMN603 INFO - Tệp đã tồn tại. Bạn có muốn ghi đè lên không?</L>
+  </Text>
+  <Text Key="604">
+    <L>CMN604 INFO -There is no selected save path. Please choose a path</L>
+    <L>CMN604 INFO - 선택된 저장경로가 없습니다. 경로를 선택해주세요.</L>
+    <L>CMN604 INFO - Không có đường dẫn lưu nào được chọn. Vui lòng chọn một đường dẫn</L>
+  </Text>
+  <Text Key="605">
+    <L>CMN605 INFO - select Directory.Please</L>
+    <L>CMN605 INFO - 먼저 디렉토리를 선택해주세요</L>
+    <L>CMN605 INFO - chọn Thư mục. Vui lòng</L>
+  </Text>
+  <Text Key="606">
+    <L>CMN606 INFO -Incorrect directory name</L>
+    <L>CMN606 INFO -잘못된 폴더 이름입니다.</L>
+    <L>CMN606 THÔNG TIN -Tên thư mục không đúng</L>
+  </Text>
+  <Text Key="607">
+    <L>CMN607 INFO -There's no inspection result file in the specified path</L>
+    <L>CMN607 INFO -지정 경로에 검사결과 파일이 없습니다.</L>
+    <L>CMN607 THÔNG TIN - Không có tệp kết quả kiểm tra nào trong đường dẫn đã chỉ định</L>
+  </Text>
+  <Text Key="608">
+    <L>CMN608 INFO -The LOT and recipe information has been sent to the inspection equipment</L>
+    <L>CMN608 INFO - 검사장비에 LOT 및 레시피정보를 전송하였습니다.</L>
+    <L>CMN608 THÔNG TIN -Thông tin LÔ và công thức đã được gửi đến thiết bị kiểm tra</L>
+  </Text>
+  <Text Key="609">
+    <L>CMN609 INFO -Raw materials and supplies cannot be entered manually. Please contact the administrator.</L>
+    <L>CMN609 INFO - 원재료 및 저장품은 수기입력이 불가능합니다.(관리자에 문의해주세요)</L>
+    <L>CMN609 INFO -Raw materials and supplies cannot be entered manually. Please contact the administrator.</L>
+  </Text>
+  <Text Key="610">
+    <L>CMN610 INFO – Do you want to keep the packaging LOT when reshipping? (If the label is already attached, please select YES. Otherwise, select NO.)</L>
+    <L>CMN610 INFO - 재출하시 포장LOT을 유지하시겠습니까?(이미 라벨이 부착된 상태면 YES,그외경우면 NO를 부탁드립니다.)</L>
+    <L>CMN610 INFO – Bạn có muốn giữ lại LOT đóng gói khi giao hàng lại không? (Nếu nhãn đã được dán thì chọn YES, nếu chưa thì chọn NO nhé.)</L>
+  </Text>
+  <Text Key="611">
+    <L>CMN611 INFO – For test orders in SKY DIA, please set “Auto Prod Change” to “Y”.</L>
+    <L>CMN611 INFO - SKY DIA에서 진행하는 테스트 오더는 "Auto Prod Change(자동양산품전환)"을  "Y"로 변경해주세요.</L>
+    <L>CMN611 INFO – Với các lệnh thử nghiệm trong SKY DIA, vui lòng đặt “Auto Prod Change” thành “Y”.</L>
+  </Text>
+  <Text Key="612">
+    <L>CMN612 INFO –  Only check this on the PC connected to the ROUND inspection machine at the Korea factory. Is this the inspection machine? (YES/NO)</L>
+    <L>CMN612 INFO –  한국공장 ROUND검사장비에 연결된 PC에서만 해당 체크해주세요 검사장비가 맞습니까?(YES/NO)</L>
+    <L>CMN612 INFO –  Chỉ kiểm tra trên máy tính kết nối với máy kiểm tra ROUND tại nhà máy Hàn Quốc. Đây có phải là máy kiểm tra không? (CÓ/KHÔNG)</L>
+  </Text>
+  <Text Key="613">
+    <L>CMN612 INFO – No information entered. Is it okay to delete the existing comments? (YES/NO)</L>
+    <L>CMN612 INFO – 입력된 정보가 없습니다.기존 특기사항 삭제되어도 됩니까?(YES/NO)</L>
+    <L>CMN612 INFO – Không có thông tin được nhập. Có xóa ghi chú hiện tại không? (YES/NO)</L>
+  </Text>
+  <Text Key="614">
+    <L>Would you like to proceed with the return now?</L>
+    <L>지금 리턴하시겠습니까?</L>
+    <L>Bạn có muốn tiến hành trả hàng ngay bây giờ không?</L>
+  </Text>
+  <Text Key="615">
+    <L>If there is an actual inspection result, do you also want to update it? (If you select No, only the current LOT judgment for shipment will be changed.)</L>
+    <L>실제검사판정이있는경우 실제검사판정도 변경하시겠습니까?(No선택시 출하목적의현상태의 LOT 판정정보만 바뀜)</L>
+    <L>Nếu đã có kết quả kiểm tra thực tế, bạn có muốn cập nhật kết quả đó không? (Nếu chọn Không, chỉ thông tin đánh giá LOT hiện tại cho mục đích xuất hàng sẽ được thay đổi.)</L>
+  </Text>
+  <Text Key="616">
+    <L>CMN616 INFO - You do not have permission to approve the shipment. Please contact the person in charge.</L>
+    <L>CMN616 INFO - 출하 승인 판정관련 권한이 없습니다.(처리 담당자에게 요청하세요)</L>
+    <L>CMN616 INFO - Bạn không có quyền phê duyệt xuất hàng. Vui lòng liên hệ với người phụ trách.</L>
+  </Text>
+  <Text Key="617">
+    <L>CMN617 INFO - You do not have permission to return the performance record.</L>
+    <L>CMN617 INFO -실적리턴에 대한 권한을 가지고 있지않습니다.</L>
+    <L>CMN617 INFO - Bạn không có quyền trả lại dữ liệu thực tế.</L>
+  </Text>
+  <Text Key="618">
+    <L>Please check if there's any issue with the actual "Material Desc" differing from the "Label Name" one.&lt; If it's not a problem, you may disregard this message.&gt;</L>
+    <L>혹시 실제 품목과 라벨품목이 다른것에 대해 잘못된 것이면 확인부탁드립니다.&lt;상관없다면 메세지 무시하세요&gt;</L>
+    <L>Vui lòng kiểm tra xem có vấn đề gì không nếu "Mô tả vật liệu" thực tế khác với "Tên nhãn". Nếu không có vấn đề gì, bạn có thể bỏ qua tin nhắn này.</L>
+  </Text>
+  <Text Key="619">
+    <L>Customers on this list can ship goods regardless of inspection results.(For adnding a company, please ask the admin.)</L>
+    <L>해당기준정보에 등록된 고객사는 검사판정에 영향없이 출하 가능합니다.(업체추가는 MES 관리자에게 문의하세요.)</L>
+    <L>Khách hàng đã được đăng ký trong thông tin tiêu chuẩn có thể xuất hàng mà không ảnh hưởng đến kết quả kiểm tra. (Vui lòng liên hệ quản trị viên MES để thêm nhà cung cấp mới.)</L>
+  </Text>
+  <Text Key="620">
+    <L>Customer allowed to ship regardless of inspection result</L>
+    <L>검사판정 상관없이 출하 가능 고객사</L>
+    <L>Khách hàng được phép xuất hàng bất kể kết quả kiểm tra</L>
+  </Text>
+  <Text Key="621">
+    <L>Material allowed to ship regardless of inspection result</L>
+    <L>검사판정 상관없이 출하 가능 품목</L>
+    <L>Vật liệu được phép xuất hàng bất kể kết quả kiểm tra.</L>
+  </Text>
+  <Text Key="622">
+    <L>Material on this list can ship goods regardless of inspection results.</L>
+    <L>해당기준정보에 등록된 품목은 검사판정에 영향없이 출하 가능합니다.</L>
+    <L>Vật liệu trong danh sách này được phép xuất hàng dù kết quả kiểm tra như thế nào.</L>
+  </Text>
+  <Text Key="623">
+    <L>[GW-FGI]Lots in the product warehouse  cannot be merged.</L>
+    <L>[GW-FGI]제품 창고의 로트는 병합할 수 없습니다.</L>
+    <L>[GW-FGI]Lots in the product warehouse  cannot be merged.</L>
+  </Text>
 </Message>
