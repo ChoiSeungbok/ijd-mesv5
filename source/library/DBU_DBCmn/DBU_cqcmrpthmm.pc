@@ -85,7 +85,22 @@ void DBU_select_cqcmrpthmm(int sel_type, struct CQCMRPTHMM_TAG *CQCMRPTHMM)
                     COER_FORCE_SPEC,
                     HARDNESS_HV20_SPEC,
                     TRS_SPEC,
-                    GRAIN_SIZE_SPEC
+                    GRAIN_SIZE_SPEC,
+                    RPT_CMF_1,
+                    RPT_CMF_2,
+                    RPT_CMF_3,
+                    RPT_CMF_4,
+                    RPT_CMF_5,
+                    RPT_CMF_6,
+                    RPT_CMF_7,
+                    RPT_CMF_8,
+                    RPT_CMF_9,
+                    RPT_CMF_10,
+                    RPT_CMF_11,
+                    RPT_CMF_12,
+                    RPT_CMF_13,
+                    RPT_CMF_14,
+                    RPT_CMF_15
 
                 INTO 
                     :CQCMRPTHMM_N.FACTORY,
@@ -129,7 +144,22 @@ void DBU_select_cqcmrpthmm(int sel_type, struct CQCMRPTHMM_TAG *CQCMRPTHMM)
                     :CQCMRPTHMM_N.COER_FORCE_SPEC,
                     :CQCMRPTHMM_N.HARDNESS_HV20_SPEC,
                     :CQCMRPTHMM_N.TRS_SPEC,
-                    :CQCMRPTHMM_N.GRAIN_SIZE_SPEC
+                    :CQCMRPTHMM_N.GRAIN_SIZE_SPEC,
+                    :CQCMRPTHMM_N.RPT_CMF_1,
+                    :CQCMRPTHMM_N.RPT_CMF_2,
+                    :CQCMRPTHMM_N.RPT_CMF_3,
+                    :CQCMRPTHMM_N.RPT_CMF_4,
+                    :CQCMRPTHMM_N.RPT_CMF_5,
+                    :CQCMRPTHMM_N.RPT_CMF_6,
+                    :CQCMRPTHMM_N.RPT_CMF_7,
+                    :CQCMRPTHMM_N.RPT_CMF_8,
+                    :CQCMRPTHMM_N.RPT_CMF_9,
+                    :CQCMRPTHMM_N.RPT_CMF_10,
+                    :CQCMRPTHMM_N.RPT_CMF_11,
+                    :CQCMRPTHMM_N.RPT_CMF_12,
+                    :CQCMRPTHMM_N.RPT_CMF_13,
+                    :CQCMRPTHMM_N.RPT_CMF_14,
+                    :CQCMRPTHMM_N.RPT_CMF_15
                 FROM CQCMRPTHMM
                 WHERE FACTORY = :CQCMRPTHMM_N.FACTORY
                     AND REPORT_NO = :CQCMRPTHMM_N.REPORT_NO
@@ -213,7 +243,22 @@ void DBU_select_cqcmrpthmm_for_update(int sel_type, struct CQCMRPTHMM_TAG *CQCMR
                     COER_FORCE_SPEC,
                     HARDNESS_HV20_SPEC,
                     TRS_SPEC,
-                    GRAIN_SIZE_SPEC
+                    GRAIN_SIZE_SPEC,
+                    RPT_CMF_1,
+                    RPT_CMF_2,
+                    RPT_CMF_3,
+                    RPT_CMF_4,
+                    RPT_CMF_5,
+                    RPT_CMF_6,
+                    RPT_CMF_7,
+                    RPT_CMF_8,
+                    RPT_CMF_9,
+                    RPT_CMF_10,
+                    RPT_CMF_11,
+                    RPT_CMF_12,
+                    RPT_CMF_13,
+                    RPT_CMF_14,
+                    RPT_CMF_15
                 INTO 
                     :CQCMRPTHMM_N.FACTORY,
                     :CQCMRPTHMM_N.REPORT_NO,
@@ -256,7 +301,22 @@ void DBU_select_cqcmrpthmm_for_update(int sel_type, struct CQCMRPTHMM_TAG *CQCMR
                     :CQCMRPTHMM_N.COER_FORCE_SPEC,
                     :CQCMRPTHMM_N.HARDNESS_HV20_SPEC,
                     :CQCMRPTHMM_N.TRS_SPEC,
-                    :CQCMRPTHMM_N.GRAIN_SIZE_SPEC
+                    :CQCMRPTHMM_N.GRAIN_SIZE_SPEC,
+                    :CQCMRPTHMM_N.RPT_CMF_1,
+                    :CQCMRPTHMM_N.RPT_CMF_2,
+                    :CQCMRPTHMM_N.RPT_CMF_3,
+                    :CQCMRPTHMM_N.RPT_CMF_4,
+                    :CQCMRPTHMM_N.RPT_CMF_5,
+                    :CQCMRPTHMM_N.RPT_CMF_6,
+                    :CQCMRPTHMM_N.RPT_CMF_7,
+                    :CQCMRPTHMM_N.RPT_CMF_8,
+                    :CQCMRPTHMM_N.RPT_CMF_9,
+                    :CQCMRPTHMM_N.RPT_CMF_10,
+                    :CQCMRPTHMM_N.RPT_CMF_11,
+                    :CQCMRPTHMM_N.RPT_CMF_12,
+                    :CQCMRPTHMM_N.RPT_CMF_13,
+                    :CQCMRPTHMM_N.RPT_CMF_14,
+                    :CQCMRPTHMM_N.RPT_CMF_15
                 FROM CQCMRPTHMM
                 WHERE FACTORY = :CQCMRPTHMM_N.FACTORY
                     AND REPORT_NO = :CQCMRPTHMM_N.REPORT_NO
@@ -428,7 +488,22 @@ void DBU_insert_cqcmrpthmm(struct CQCMRPTHMM_TAG *CQCMRPTHMM)
                     COER_FORCE_SPEC,
                     HARDNESS_HV20_SPEC,
                     TRS_SPEC,
-                    GRAIN_SIZE_SPEC
+                    GRAIN_SIZE_SPEC,
+                    RPT_CMF_1,
+                    RPT_CMF_2,
+                    RPT_CMF_3,
+                    RPT_CMF_4,
+                    RPT_CMF_5,
+                    RPT_CMF_6,
+                    RPT_CMF_7,
+                    RPT_CMF_8,
+                    RPT_CMF_9,
+                    RPT_CMF_10,
+                    RPT_CMF_11,
+                    RPT_CMF_12,
+                    RPT_CMF_13,
+                    RPT_CMF_14,
+                    RPT_CMF_15
          ) 
         VALUES (
                     :CQCMRPTHMM_N.FACTORY,
@@ -472,7 +547,22 @@ void DBU_insert_cqcmrpthmm(struct CQCMRPTHMM_TAG *CQCMRPTHMM)
                     :CQCMRPTHMM_N.COER_FORCE_SPEC,
                     :CQCMRPTHMM_N.HARDNESS_HV20_SPEC,
                     :CQCMRPTHMM_N.TRS_SPEC,
-                    :CQCMRPTHMM_N.GRAIN_SIZE_SPEC
+                    :CQCMRPTHMM_N.GRAIN_SIZE_SPEC,
+                    :CQCMRPTHMM_N.RPT_CMF_1,
+                    :CQCMRPTHMM_N.RPT_CMF_2,
+                    :CQCMRPTHMM_N.RPT_CMF_3,
+                    :CQCMRPTHMM_N.RPT_CMF_4,
+                    :CQCMRPTHMM_N.RPT_CMF_5,
+                    :CQCMRPTHMM_N.RPT_CMF_6,
+                    :CQCMRPTHMM_N.RPT_CMF_7,
+                    :CQCMRPTHMM_N.RPT_CMF_8,
+                    :CQCMRPTHMM_N.RPT_CMF_9,
+                    :CQCMRPTHMM_N.RPT_CMF_10,
+                    :CQCMRPTHMM_N.RPT_CMF_11,
+                    :CQCMRPTHMM_N.RPT_CMF_12,
+                    :CQCMRPTHMM_N.RPT_CMF_13,
+                    :CQCMRPTHMM_N.RPT_CMF_14,
+                    :CQCMRPTHMM_N.RPT_CMF_15
          );
 
     DB_stop_query_timer("DBU_insert_cqcmrpthmm", 0);
@@ -533,7 +623,22 @@ void DBU_update_cqcmrpthmm(int sel_type, struct CQCMRPTHMM_TAG *CQCMRPTHMM)
                     COER_FORCE_SPEC = :CQCMRPTHMM_N.COER_FORCE_SPEC,
                     HARDNESS_HV20_SPEC = :CQCMRPTHMM_N.HARDNESS_HV20_SPEC,
                     TRS_SPEC = :CQCMRPTHMM_N.TRS_SPEC,
-                    GRAIN_SIZE_SPEC = :CQCMRPTHMM_N.GRAIN_SIZE_SPEC
+                    GRAIN_SIZE_SPEC = :CQCMRPTHMM_N.GRAIN_SIZE_SPEC,
+                    RPT_CMF_1 = :CQCMRPTHMM_N.RPT_CMF_1,
+                    RPT_CMF_2 = :CQCMRPTHMM_N.RPT_CMF_2,
+                    RPT_CMF_3 = :CQCMRPTHMM_N.RPT_CMF_3,
+                    RPT_CMF_4 = :CQCMRPTHMM_N.RPT_CMF_4,
+                    RPT_CMF_5 = :CQCMRPTHMM_N.RPT_CMF_5,
+                    RPT_CMF_6 = :CQCMRPTHMM_N.RPT_CMF_6,
+                    RPT_CMF_7 = :CQCMRPTHMM_N.RPT_CMF_7,
+                    RPT_CMF_8 = :CQCMRPTHMM_N.RPT_CMF_8,
+                    RPT_CMF_9 = :CQCMRPTHMM_N.RPT_CMF_9,
+                    RPT_CMF_10 = :CQCMRPTHMM_N.RPT_CMF_10,
+                    RPT_CMF_11 = :CQCMRPTHMM_N.RPT_CMF_11,
+                    RPT_CMF_12 = :CQCMRPTHMM_N.RPT_CMF_12,
+                    RPT_CMF_13 = :CQCMRPTHMM_N.RPT_CMF_13,
+                    RPT_CMF_14 = :CQCMRPTHMM_N.RPT_CMF_14,
+                    RPT_CMF_15 = :CQCMRPTHMM_N.RPT_CMF_15
                 WHERE FACTORY = :CQCMRPTHMM_N.FACTORY
                     AND REPORT_NO = :CQCMRPTHMM_N.REPORT_NO
                     AND PACK_LOT_ID = :CQCMRPTHMM_N.PACK_LOT_ID
@@ -611,7 +716,22 @@ void DBU_open_cqcmrpthmm(int sel_type, struct CQCMRPTHMM_TAG *CQCMRPTHMM)
                     COER_FORCE_SPEC,
                     HARDNESS_HV20_SPEC,
                     TRS_SPEC,
-                    GRAIN_SIZE_SPEC
+                    GRAIN_SIZE_SPEC,
+                    RPT_CMF_1,
+                    RPT_CMF_2,
+                    RPT_CMF_3,
+                    RPT_CMF_4,
+                    RPT_CMF_5,
+                    RPT_CMF_6,
+                    RPT_CMF_7,
+                    RPT_CMF_8,
+                    RPT_CMF_9,
+                    RPT_CMF_10,
+                    RPT_CMF_11,
+                    RPT_CMF_12,
+                    RPT_CMF_13,
+                    RPT_CMF_14,
+                    RPT_CMF_15
                 FROM CQCMRPTHMM
                 ORDER BY FACTORY ASC,
                     REPORT_NO ASC,
@@ -688,7 +808,24 @@ void DBU_fetch_cqcmrpthmm(int sel_type, struct CQCMRPTHMM_TAG *CQCMRPTHMM)
                 :CQCMRPTHMM_N.COER_FORCE_SPEC,
                 :CQCMRPTHMM_N.HARDNESS_HV20_SPEC,
                 :CQCMRPTHMM_N.TRS_SPEC,
-                :CQCMRPTHMM_N.GRAIN_SIZE_SPEC;
+                :CQCMRPTHMM_N.GRAIN_SIZE_SPEC,
+                :CQCMRPTHMM_N.RPT_CMF_1,
+                :CQCMRPTHMM_N.RPT_CMF_2,
+                :CQCMRPTHMM_N.RPT_CMF_3,
+                :CQCMRPTHMM_N.RPT_CMF_4,
+                :CQCMRPTHMM_N.RPT_CMF_5,
+                :CQCMRPTHMM_N.RPT_CMF_6,
+                :CQCMRPTHMM_N.RPT_CMF_7,
+                :CQCMRPTHMM_N.RPT_CMF_8,
+                :CQCMRPTHMM_N.RPT_CMF_9,
+                :CQCMRPTHMM_N.RPT_CMF_10,
+                :CQCMRPTHMM_N.RPT_CMF_11,
+                :CQCMRPTHMM_N.RPT_CMF_12,
+                :CQCMRPTHMM_N.RPT_CMF_13,
+                :CQCMRPTHMM_N.RPT_CMF_14,
+                :CQCMRPTHMM_N.RPT_CMF_15;
+                
+
             break;
 
 
@@ -791,7 +928,21 @@ void DBU_add_null_cqcmrpthmm(struct CQCMRPTHMM_N_TAG *CQCMRPTHMM_N, struct CQCMR
     MEMCPY_AN(CQCMRPTHMM_N->HARDNESS_HV20_SPEC, CQCMRPTHMM->HARDNESS_HV20_SPEC, sizeof(CQCMRPTHMM->HARDNESS_HV20_SPEC));
     MEMCPY_AN(CQCMRPTHMM_N->TRS_SPEC, CQCMRPTHMM->TRS_SPEC, sizeof(CQCMRPTHMM->TRS_SPEC));
     MEMCPY_AN(CQCMRPTHMM_N->GRAIN_SIZE_SPEC, CQCMRPTHMM->GRAIN_SIZE_SPEC, sizeof(CQCMRPTHMM->GRAIN_SIZE_SPEC));
-
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_1, CQCMRPTHMM->RPT_CMF_1, sizeof(CQCMRPTHMM->RPT_CMF_1));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_2, CQCMRPTHMM->RPT_CMF_2, sizeof(CQCMRPTHMM->RPT_CMF_2));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_3, CQCMRPTHMM->RPT_CMF_3, sizeof(CQCMRPTHMM->RPT_CMF_3));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_4, CQCMRPTHMM->RPT_CMF_4, sizeof(CQCMRPTHMM->RPT_CMF_4));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_5, CQCMRPTHMM->RPT_CMF_5, sizeof(CQCMRPTHMM->RPT_CMF_5));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_6, CQCMRPTHMM->RPT_CMF_6, sizeof(CQCMRPTHMM->RPT_CMF_6));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_7, CQCMRPTHMM->RPT_CMF_7, sizeof(CQCMRPTHMM->RPT_CMF_7));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_8, CQCMRPTHMM->RPT_CMF_8, sizeof(CQCMRPTHMM->RPT_CMF_8));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_9, CQCMRPTHMM->RPT_CMF_9, sizeof(CQCMRPTHMM->RPT_CMF_9));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_10, CQCMRPTHMM->RPT_CMF_10, sizeof(CQCMRPTHMM->RPT_CMF_10));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_11, CQCMRPTHMM->RPT_CMF_11, sizeof(CQCMRPTHMM->RPT_CMF_11));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_12, CQCMRPTHMM->RPT_CMF_12, sizeof(CQCMRPTHMM->RPT_CMF_12));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_13, CQCMRPTHMM->RPT_CMF_13, sizeof(CQCMRPTHMM->RPT_CMF_13));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_14, CQCMRPTHMM->RPT_CMF_14, sizeof(CQCMRPTHMM->RPT_CMF_14));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_15, CQCMRPTHMM->RPT_CMF_15, sizeof(CQCMRPTHMM->RPT_CMF_15));
 
 }
 
@@ -841,6 +992,21 @@ void DBU_del_null_cqcmrpthmm(struct CQCMRPTHMM_N_TAG *CQCMRPTHMM_N, struct CQCMR
     MEMCPY_DN(CQCMRPTHMM->HARDNESS_HV20_SPEC, CQCMRPTHMM_N->HARDNESS_HV20_SPEC, sizeof(CQCMRPTHMM->HARDNESS_HV20_SPEC));
     MEMCPY_DN(CQCMRPTHMM->TRS_SPEC, CQCMRPTHMM_N->TRS_SPEC, sizeof(CQCMRPTHMM->TRS_SPEC));
     MEMCPY_DN(CQCMRPTHMM->GRAIN_SIZE_SPEC, CQCMRPTHMM_N->GRAIN_SIZE_SPEC, sizeof(CQCMRPTHMM->GRAIN_SIZE_SPEC));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_1, CQCMRPTHMM_N->RPT_CMF_1, sizeof(CQCMRPTHMM->RPT_CMF_1));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_2, CQCMRPTHMM_N->RPT_CMF_2, sizeof(CQCMRPTHMM->RPT_CMF_2));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_3, CQCMRPTHMM_N->RPT_CMF_3, sizeof(CQCMRPTHMM->RPT_CMF_3));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_4, CQCMRPTHMM_N->RPT_CMF_4, sizeof(CQCMRPTHMM->RPT_CMF_4));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_5, CQCMRPTHMM_N->RPT_CMF_5, sizeof(CQCMRPTHMM->RPT_CMF_5));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_6, CQCMRPTHMM_N->RPT_CMF_6, sizeof(CQCMRPTHMM->RPT_CMF_6));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_7, CQCMRPTHMM_N->RPT_CMF_7, sizeof(CQCMRPTHMM->RPT_CMF_7));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_8, CQCMRPTHMM_N->RPT_CMF_8, sizeof(CQCMRPTHMM->RPT_CMF_8));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_9, CQCMRPTHMM_N->RPT_CMF_9, sizeof(CQCMRPTHMM->RPT_CMF_9));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_10, CQCMRPTHMM_N->RPT_CMF_10, sizeof(CQCMRPTHMM->RPT_CMF_10));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_11, CQCMRPTHMM_N->RPT_CMF_11, sizeof(CQCMRPTHMM->RPT_CMF_11));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_12, CQCMRPTHMM_N->RPT_CMF_12, sizeof(CQCMRPTHMM->RPT_CMF_12));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_13, CQCMRPTHMM_N->RPT_CMF_13, sizeof(CQCMRPTHMM->RPT_CMF_13));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_14, CQCMRPTHMM_N->RPT_CMF_14, sizeof(CQCMRPTHMM->RPT_CMF_14));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_15, CQCMRPTHMM_N->RPT_CMF_15, sizeof(CQCMRPTHMM->RPT_CMF_15));
 
 }
 

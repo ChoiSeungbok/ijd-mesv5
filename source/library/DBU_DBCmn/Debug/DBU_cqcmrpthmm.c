@@ -103,16 +103,16 @@ static struct sqlexd {
    unsigned int   sqcmod;
    unsigned int   sqfmod;
    unsigned int   sqlpfmem;
-            void  *sqhstv[46];
-   unsigned int   sqhstl[46];
-            int   sqhsts[46];
-            void  *sqindv[46];
-            int   sqinds[46];
-   unsigned int   sqharm[46];
-   unsigned int   *sqharc[46];
-   unsigned short  sqadto[46];
-   unsigned short  sqtdso[46];
-} sqlstm = {13,46};
+            void  *sqhstv[61];
+   unsigned int   sqhstl[61];
+            int   sqhsts[61];
+            void  *sqindv[61];
+            int   sqinds[61];
+   unsigned int   sqharm[61];
+   unsigned int   *sqharc[61];
+   unsigned short  sqadto[61];
+   unsigned short  sqtdso[61];
+} sqlstm = {13,61};
 
 /* SQLLIB Prototypes */
 extern void sqlcxt (void **, unsigned int *,
@@ -136,8 +136,11 @@ NSITY ,MAG_SAT ,COER_FORCE ,HARDNESS_HV20 ,HARDNESS_HRA ,TRS ,ATTRIBUTE01 ,AT\
 TRIBUTE02 ,ATTRIBUTE03 ,ATTRIBUTE04 ,ATTRIBUTE05 ,COMMENTS ,IMAGE_NUM1 ,IMAGE\
 _NUM2 ,PITCH_AVG ,ROUGHNESS_AVG ,ROUGHNESS_STD ,CREATE_USER_ID ,CREATE_TIME ,\
 UPDATE_USER_ID ,UPDATE_TIME ,GRAIN_SIZE ,DENSITY_SPEC ,MAG_SAT_SPEC ,COER_FOR\
-CE_SPEC ,HARDNESS_HV20_SPEC ,TRS_SPEC ,GRAIN_SIZE_SPEC  from CQCMRPTHMM  orde\
-r by FACTORY asc ,REPORT_NO asc ,PACK_LOT_ID asc ,ORG_LOT_ID asc             ";
+CE_SPEC ,HARDNESS_HV20_SPEC ,TRS_SPEC ,GRAIN_SIZE_SPEC ,RPT_CMF_1 ,RPT_CMF_2 \
+,RPT_CMF_3 ,RPT_CMF_4 ,RPT_CMF_5 ,RPT_CMF_6 ,RPT_CMF_7 ,RPT_CMF_8 ,RPT_CMF_9 \
+,RPT_CMF_10 ,RPT_CMF_11 ,RPT_CMF_12 ,RPT_CMF_13 ,RPT_CMF_14 ,RPT_CMF_15  from\
+ CQCMRPTHMM  order by FACTORY asc ,REPORT_NO asc ,PACK_LOT_ID asc ,ORG_LOT_ID\
+ asc             ";
 
 typedef struct { unsigned short len; unsigned char arr[1]; } VARCHAR;
 typedef struct { unsigned short len; unsigned char arr[1]; } varchar;
@@ -145,43 +148,50 @@ typedef struct { unsigned short len; unsigned char arr[1]; } varchar;
 /* cud (compilation unit data) array */
 static const short sqlcud0[] =
 {13,4130,873,0,0,
-5,0,0,1,817,0,4,46,0,0,46,4,0,1,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
-2,97,0,0,2,97,0,0,2,97,0,0,2,4,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,
-0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,
-0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,
-97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
-2,97,0,0,2,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
-204,0,0,2,829,0,4,174,0,0,46,4,0,1,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,
-0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,4,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,
-97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
-2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,
-0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,
-0,0,2,97,0,0,2,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
-403,0,0,3,123,0,4,304,0,0,5,4,0,1,0,2,4,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,
-0,
-438,0,0,4,80,0,4,314,0,0,3,2,0,1,0,2,4,0,0,1,97,0,0,1,97,0,0,
-465,0,0,5,105,0,2,351,0,0,4,4,0,1,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
-496,0,0,6,62,0,2,359,0,0,2,2,0,1,0,1,97,0,0,1,97,0,0,
-519,0,0,7,700,0,3,389,0,0,42,42,0,1,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,
-0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,4,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,
-97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
-1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,
-0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,
-0,0,1,97,0,0,1,97,0,0,
-702,0,0,8,713,0,5,498,0,0,42,42,0,1,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,4,
-0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,
-97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
-1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,
-0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,
-0,0,1,97,0,0,1,97,0,0,
-885,0,0,9,614,0,9,620,0,0,0,0,0,1,0,
-900,0,0,9,0,0,13,649,0,0,42,0,0,1,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,
+5,0,0,1,1063,0,4,46,0,0,61,4,0,1,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,
 0,2,97,0,0,2,97,0,0,2,97,0,0,2,4,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,
 0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,
 97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
 2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,
-0,2,97,0,0,2,97,0,0,
-1083,0,0,9,0,0,15,721,0,0,0,0,0,1,0,
+0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,
+0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,1,
+97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
+264,0,0,2,1075,0,4,204,0,0,61,4,0,1,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,
+0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,4,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,
+97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
+2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,
+0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,
+0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,
+97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
+1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
+523,0,0,3,123,0,4,364,0,0,5,4,0,1,0,2,4,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,
+0,
+558,0,0,4,80,0,4,374,0,0,3,2,0,1,0,2,4,0,0,1,97,0,0,1,97,0,0,
+585,0,0,5,105,0,2,411,0,0,4,4,0,1,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
+616,0,0,6,62,0,2,419,0,0,2,2,0,1,0,1,97,0,0,1,97,0,0,
+639,0,0,7,931,0,3,449,0,0,57,57,0,1,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,
+0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,4,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,
+97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
+1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,
+0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,
+0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,
+97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
+882,0,0,8,944,0,5,588,0,0,57,57,0,1,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,4,
+0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,
+97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
+1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,
+0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,
+0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,
+97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
+1125,0,0,9,785,0,9,740,0,0,0,0,0,1,0,
+1140,0,0,9,0,0,13,769,0,0,57,0,0,1,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,
+0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,4,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,
+97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
+2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,
+0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,
+0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,
+97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
+1383,0,0,9,0,0,15,858,0,0,0,0,0,1,0,
 };
 
 
@@ -508,7 +518,22 @@ void DBU_select_cqcmrpthmm(int sel_type, struct CQCMRPTHMM_TAG *CQCMRPTHMM)
                     COER_FORCE_SPEC,
                     HARDNESS_HV20_SPEC,
                     TRS_SPEC,
-                    GRAIN_SIZE_SPEC
+                    GRAIN_SIZE_SPEC,
+                    RPT_CMF_1,
+                    RPT_CMF_2,
+                    RPT_CMF_3,
+                    RPT_CMF_4,
+                    RPT_CMF_5,
+                    RPT_CMF_6,
+                    RPT_CMF_7,
+                    RPT_CMF_8,
+                    RPT_CMF_9,
+                    RPT_CMF_10,
+                    RPT_CMF_11,
+                    RPT_CMF_12,
+                    RPT_CMF_13,
+                    RPT_CMF_14,
+                    RPT_CMF_15
 
                 INTO 
                     :CQCMRPTHMM_N.FACTORY,
@@ -552,7 +577,22 @@ void DBU_select_cqcmrpthmm(int sel_type, struct CQCMRPTHMM_TAG *CQCMRPTHMM)
                     :CQCMRPTHMM_N.COER_FORCE_SPEC,
                     :CQCMRPTHMM_N.HARDNESS_HV20_SPEC,
                     :CQCMRPTHMM_N.TRS_SPEC,
-                    :CQCMRPTHMM_N.GRAIN_SIZE_SPEC
+                    :CQCMRPTHMM_N.GRAIN_SIZE_SPEC,
+                    :CQCMRPTHMM_N.RPT_CMF_1,
+                    :CQCMRPTHMM_N.RPT_CMF_2,
+                    :CQCMRPTHMM_N.RPT_CMF_3,
+                    :CQCMRPTHMM_N.RPT_CMF_4,
+                    :CQCMRPTHMM_N.RPT_CMF_5,
+                    :CQCMRPTHMM_N.RPT_CMF_6,
+                    :CQCMRPTHMM_N.RPT_CMF_7,
+                    :CQCMRPTHMM_N.RPT_CMF_8,
+                    :CQCMRPTHMM_N.RPT_CMF_9,
+                    :CQCMRPTHMM_N.RPT_CMF_10,
+                    :CQCMRPTHMM_N.RPT_CMF_11,
+                    :CQCMRPTHMM_N.RPT_CMF_12,
+                    :CQCMRPTHMM_N.RPT_CMF_13,
+                    :CQCMRPTHMM_N.RPT_CMF_14,
+                    :CQCMRPTHMM_N.RPT_CMF_15
                 FROM CQCMRPTHMM
                 WHERE FACTORY = :CQCMRPTHMM_N.FACTORY
                     AND REPORT_NO = :CQCMRPTHMM_N.REPORT_NO
@@ -562,20 +602,25 @@ void DBU_select_cqcmrpthmm(int sel_type, struct CQCMRPTHMM_TAG *CQCMRPTHMM)
 {
             struct sqlexd sqlstm;
             sqlstm.sqlvsn = 13;
-            sqlstm.arrsiz = 46;
+            sqlstm.arrsiz = 61;
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
-            sqlstm.stmt = "select FACTORY ,REPORT_NO ,PACK_LOT_ID ,ORG_LOT_\
-ID ,GRADE ,TYPES ,PACK_ORDER_ID ,CUSTOMER_ID ,LOT_QTY ,OD_METER ,ID_METER ,HE\
-IGHT ,DIA_METER ,LENGTH ,DENSITY ,MAG_SAT ,COER_FORCE ,HARDNESS_HV20 ,HARDNES\
-S_HRA ,TRS ,ATTRIBUTE01 ,ATTRIBUTE02 ,ATTRIBUTE03 ,ATTRIBUTE04 ,ATTRIBUTE05 ,\
-COMMENTS ,IMAGE_NUM1 ,IMAGE_NUM2 ,PITCH_AVG ,ROUGHNESS_AVG ,ROUGHNESS_STD ,CR\
-EATE_USER_ID ,CREATE_TIME ,UPDATE_USER_ID ,UPDATE_TIME ,GRAIN_SIZE ,DENSITY_S\
-PEC ,MAG_SAT_SPEC ,COER_FORCE_SPEC ,HARDNESS_HV20_SPEC ,TRS_SPEC ,GRAIN_SIZE_\
-SPEC into :b0,:b1,:b2,:b3,:b4,:b5,:b6,:b7,:b8,:b9,:b10,:b11,:b12,:b13,:b14,:b\
-15,:b16,:b17,:b18,:b19,:b20,:b21,:b22,:b23,:b24,:b25,:b26,:b27,:b28,:b29,:b30\
-,:b31,:b32,:b33,:b34,:b35,:b36,:b37,:b38,:b39,:b40,:b41  from CQCMRPTHMM wher\
-e (((FACTORY=:b0 and REPORT_NO=:b1) and PACK_LOT_ID=:b2) and ORG_LOT_ID=:b3)";
+            sqlbuft((void **)0,
+              "select FACTORY ,REPORT_NO ,PACK_LOT_ID ,ORG_LOT_ID ,GRADE ,TY\
+PES ,PACK_ORDER_ID ,CUSTOMER_ID ,LOT_QTY ,OD_METER ,ID_METER ,HEIGHT ,DIA_ME\
+TER ,LENGTH ,DENSITY ,MAG_SAT ,COER_FORCE ,HARDNESS_HV20 ,HARDNESS_HRA ,TRS \
+,ATTRIBUTE01 ,ATTRIBUTE02 ,ATTRIBUTE03 ,ATTRIBUTE04 ,ATTRIBUTE05 ,COMMENTS ,\
+IMAGE_NUM1 ,IMAGE_NUM2 ,PITCH_AVG ,ROUGHNESS_AVG ,ROUGHNESS_STD ,CREATE_USER\
+_ID ,CREATE_TIME ,UPDATE_USER_ID ,UPDATE_TIME ,GRAIN_SIZE ,DENSITY_SPEC ,MAG\
+_SAT_SPEC ,COER_FORCE_SPEC ,HARDNESS_HV20_SPEC ,TRS_SPEC ,GRAIN_SIZE_SPEC ,R\
+PT_CMF_1 ,RPT_CMF_2 ,RPT_CMF_3 ,RPT_CMF_4 ,RPT_CMF_5 ,RPT_CMF_6 ,RPT_CMF_7 ,\
+RPT_CMF_8 ,RPT_CMF_9 ,RPT_CMF_10 ,RPT_CMF_11 ,RPT_CMF_12 ,RPT_CMF_13 ,RPT_CM\
+F_14 ,RPT_CMF_15 into :b0,:b1,:b2,:b3,:b4,:b5,:b6,:b7,:b8,:b9,:b10,:b11,:b12\
+,:b13,:b14,:b15,:b16,:b17,:b18,:b19,:b20,:b21,:b22,:b23,:b24,:b25,:b26,:b27,\
+:b28,:b29,:b30,:b31,:b32,:b33,:b34,:b35,:b36,:b37,:b38,:b39,:b40,:b41,:b42,:\
+b43,:b44,:b45,:b46,:b47,:b48,:b49,:b50,:b51,:b52,:b53,:b54,:b55,:b56  from C\
+QCMRPTHMM where (((FACTORY=:b0 and REPORT_NO=:b1) a");
+            sqlstm.stmt = "nd PACK_LOT_ID=:b2) and ORG_LOT_ID=:b3)";
             sqlstm.iters = (unsigned int  )1;
             sqlstm.offset = (unsigned int  )5;
             sqlstm.selerr = (unsigned short)1;
@@ -920,38 +965,158 @@ e (((FACTORY=:b0 and REPORT_NO=:b1) and PACK_LOT_ID=:b2) and ORG_LOT_ID=:b3)";
             sqlstm.sqharm[41] = (unsigned int  )0;
             sqlstm.sqadto[41] = (unsigned short )0;
             sqlstm.sqtdso[41] = (unsigned short )0;
-            sqlstm.sqhstv[42] = (         void  *)(CQCMRPTHMM_N.FACTORY);
-            sqlstm.sqhstl[42] = (unsigned int  )11;
+            sqlstm.sqhstv[42] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_1);
+            sqlstm.sqhstl[42] = (unsigned int  )51;
             sqlstm.sqhsts[42] = (         int  )0;
             sqlstm.sqindv[42] = (         void  *)0;
             sqlstm.sqinds[42] = (         int  )0;
             sqlstm.sqharm[42] = (unsigned int  )0;
             sqlstm.sqadto[42] = (unsigned short )0;
             sqlstm.sqtdso[42] = (unsigned short )0;
-            sqlstm.sqhstv[43] = (         void  *)(CQCMRPTHMM_N.REPORT_NO);
-            sqlstm.sqhstl[43] = (unsigned int  )21;
+            sqlstm.sqhstv[43] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_2);
+            sqlstm.sqhstl[43] = (unsigned int  )51;
             sqlstm.sqhsts[43] = (         int  )0;
             sqlstm.sqindv[43] = (         void  *)0;
             sqlstm.sqinds[43] = (         int  )0;
             sqlstm.sqharm[43] = (unsigned int  )0;
             sqlstm.sqadto[43] = (unsigned short )0;
             sqlstm.sqtdso[43] = (unsigned short )0;
-            sqlstm.sqhstv[44] = (         void  *)(CQCMRPTHMM_N.PACK_LOT_ID);
-            sqlstm.sqhstl[44] = (unsigned int  )21;
+            sqlstm.sqhstv[44] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_3);
+            sqlstm.sqhstl[44] = (unsigned int  )51;
             sqlstm.sqhsts[44] = (         int  )0;
             sqlstm.sqindv[44] = (         void  *)0;
             sqlstm.sqinds[44] = (         int  )0;
             sqlstm.sqharm[44] = (unsigned int  )0;
             sqlstm.sqadto[44] = (unsigned short )0;
             sqlstm.sqtdso[44] = (unsigned short )0;
-            sqlstm.sqhstv[45] = (         void  *)(CQCMRPTHMM_N.ORG_LOT_ID);
-            sqlstm.sqhstl[45] = (unsigned int  )26;
+            sqlstm.sqhstv[45] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_4);
+            sqlstm.sqhstl[45] = (unsigned int  )51;
             sqlstm.sqhsts[45] = (         int  )0;
             sqlstm.sqindv[45] = (         void  *)0;
             sqlstm.sqinds[45] = (         int  )0;
             sqlstm.sqharm[45] = (unsigned int  )0;
             sqlstm.sqadto[45] = (unsigned short )0;
             sqlstm.sqtdso[45] = (unsigned short )0;
+            sqlstm.sqhstv[46] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_5);
+            sqlstm.sqhstl[46] = (unsigned int  )51;
+            sqlstm.sqhsts[46] = (         int  )0;
+            sqlstm.sqindv[46] = (         void  *)0;
+            sqlstm.sqinds[46] = (         int  )0;
+            sqlstm.sqharm[46] = (unsigned int  )0;
+            sqlstm.sqadto[46] = (unsigned short )0;
+            sqlstm.sqtdso[46] = (unsigned short )0;
+            sqlstm.sqhstv[47] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_6);
+            sqlstm.sqhstl[47] = (unsigned int  )51;
+            sqlstm.sqhsts[47] = (         int  )0;
+            sqlstm.sqindv[47] = (         void  *)0;
+            sqlstm.sqinds[47] = (         int  )0;
+            sqlstm.sqharm[47] = (unsigned int  )0;
+            sqlstm.sqadto[47] = (unsigned short )0;
+            sqlstm.sqtdso[47] = (unsigned short )0;
+            sqlstm.sqhstv[48] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_7);
+            sqlstm.sqhstl[48] = (unsigned int  )51;
+            sqlstm.sqhsts[48] = (         int  )0;
+            sqlstm.sqindv[48] = (         void  *)0;
+            sqlstm.sqinds[48] = (         int  )0;
+            sqlstm.sqharm[48] = (unsigned int  )0;
+            sqlstm.sqadto[48] = (unsigned short )0;
+            sqlstm.sqtdso[48] = (unsigned short )0;
+            sqlstm.sqhstv[49] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_8);
+            sqlstm.sqhstl[49] = (unsigned int  )51;
+            sqlstm.sqhsts[49] = (         int  )0;
+            sqlstm.sqindv[49] = (         void  *)0;
+            sqlstm.sqinds[49] = (         int  )0;
+            sqlstm.sqharm[49] = (unsigned int  )0;
+            sqlstm.sqadto[49] = (unsigned short )0;
+            sqlstm.sqtdso[49] = (unsigned short )0;
+            sqlstm.sqhstv[50] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_9);
+            sqlstm.sqhstl[50] = (unsigned int  )51;
+            sqlstm.sqhsts[50] = (         int  )0;
+            sqlstm.sqindv[50] = (         void  *)0;
+            sqlstm.sqinds[50] = (         int  )0;
+            sqlstm.sqharm[50] = (unsigned int  )0;
+            sqlstm.sqadto[50] = (unsigned short )0;
+            sqlstm.sqtdso[50] = (unsigned short )0;
+            sqlstm.sqhstv[51] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_10);
+            sqlstm.sqhstl[51] = (unsigned int  )51;
+            sqlstm.sqhsts[51] = (         int  )0;
+            sqlstm.sqindv[51] = (         void  *)0;
+            sqlstm.sqinds[51] = (         int  )0;
+            sqlstm.sqharm[51] = (unsigned int  )0;
+            sqlstm.sqadto[51] = (unsigned short )0;
+            sqlstm.sqtdso[51] = (unsigned short )0;
+            sqlstm.sqhstv[52] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_11);
+            sqlstm.sqhstl[52] = (unsigned int  )51;
+            sqlstm.sqhsts[52] = (         int  )0;
+            sqlstm.sqindv[52] = (         void  *)0;
+            sqlstm.sqinds[52] = (         int  )0;
+            sqlstm.sqharm[52] = (unsigned int  )0;
+            sqlstm.sqadto[52] = (unsigned short )0;
+            sqlstm.sqtdso[52] = (unsigned short )0;
+            sqlstm.sqhstv[53] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_12);
+            sqlstm.sqhstl[53] = (unsigned int  )51;
+            sqlstm.sqhsts[53] = (         int  )0;
+            sqlstm.sqindv[53] = (         void  *)0;
+            sqlstm.sqinds[53] = (         int  )0;
+            sqlstm.sqharm[53] = (unsigned int  )0;
+            sqlstm.sqadto[53] = (unsigned short )0;
+            sqlstm.sqtdso[53] = (unsigned short )0;
+            sqlstm.sqhstv[54] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_13);
+            sqlstm.sqhstl[54] = (unsigned int  )51;
+            sqlstm.sqhsts[54] = (         int  )0;
+            sqlstm.sqindv[54] = (         void  *)0;
+            sqlstm.sqinds[54] = (         int  )0;
+            sqlstm.sqharm[54] = (unsigned int  )0;
+            sqlstm.sqadto[54] = (unsigned short )0;
+            sqlstm.sqtdso[54] = (unsigned short )0;
+            sqlstm.sqhstv[55] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_14);
+            sqlstm.sqhstl[55] = (unsigned int  )51;
+            sqlstm.sqhsts[55] = (         int  )0;
+            sqlstm.sqindv[55] = (         void  *)0;
+            sqlstm.sqinds[55] = (         int  )0;
+            sqlstm.sqharm[55] = (unsigned int  )0;
+            sqlstm.sqadto[55] = (unsigned short )0;
+            sqlstm.sqtdso[55] = (unsigned short )0;
+            sqlstm.sqhstv[56] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_15);
+            sqlstm.sqhstl[56] = (unsigned int  )51;
+            sqlstm.sqhsts[56] = (         int  )0;
+            sqlstm.sqindv[56] = (         void  *)0;
+            sqlstm.sqinds[56] = (         int  )0;
+            sqlstm.sqharm[56] = (unsigned int  )0;
+            sqlstm.sqadto[56] = (unsigned short )0;
+            sqlstm.sqtdso[56] = (unsigned short )0;
+            sqlstm.sqhstv[57] = (         void  *)(CQCMRPTHMM_N.FACTORY);
+            sqlstm.sqhstl[57] = (unsigned int  )11;
+            sqlstm.sqhsts[57] = (         int  )0;
+            sqlstm.sqindv[57] = (         void  *)0;
+            sqlstm.sqinds[57] = (         int  )0;
+            sqlstm.sqharm[57] = (unsigned int  )0;
+            sqlstm.sqadto[57] = (unsigned short )0;
+            sqlstm.sqtdso[57] = (unsigned short )0;
+            sqlstm.sqhstv[58] = (         void  *)(CQCMRPTHMM_N.REPORT_NO);
+            sqlstm.sqhstl[58] = (unsigned int  )21;
+            sqlstm.sqhsts[58] = (         int  )0;
+            sqlstm.sqindv[58] = (         void  *)0;
+            sqlstm.sqinds[58] = (         int  )0;
+            sqlstm.sqharm[58] = (unsigned int  )0;
+            sqlstm.sqadto[58] = (unsigned short )0;
+            sqlstm.sqtdso[58] = (unsigned short )0;
+            sqlstm.sqhstv[59] = (         void  *)(CQCMRPTHMM_N.PACK_LOT_ID);
+            sqlstm.sqhstl[59] = (unsigned int  )21;
+            sqlstm.sqhsts[59] = (         int  )0;
+            sqlstm.sqindv[59] = (         void  *)0;
+            sqlstm.sqinds[59] = (         int  )0;
+            sqlstm.sqharm[59] = (unsigned int  )0;
+            sqlstm.sqadto[59] = (unsigned short )0;
+            sqlstm.sqtdso[59] = (unsigned short )0;
+            sqlstm.sqhstv[60] = (         void  *)(CQCMRPTHMM_N.ORG_LOT_ID);
+            sqlstm.sqhstl[60] = (unsigned int  )26;
+            sqlstm.sqhsts[60] = (         int  )0;
+            sqlstm.sqindv[60] = (         void  *)0;
+            sqlstm.sqinds[60] = (         int  )0;
+            sqlstm.sqharm[60] = (unsigned int  )0;
+            sqlstm.sqadto[60] = (unsigned short )0;
+            sqlstm.sqtdso[60] = (unsigned short )0;
             sqlstm.sqphsv = sqlstm.sqhstv;
             sqlstm.sqphsl = sqlstm.sqhstl;
             sqlstm.sqphss = sqlstm.sqhsts;
@@ -1047,7 +1212,22 @@ void DBU_select_cqcmrpthmm_for_update(int sel_type, struct CQCMRPTHMM_TAG *CQCMR
                     COER_FORCE_SPEC,
                     HARDNESS_HV20_SPEC,
                     TRS_SPEC,
-                    GRAIN_SIZE_SPEC
+                    GRAIN_SIZE_SPEC,
+                    RPT_CMF_1,
+                    RPT_CMF_2,
+                    RPT_CMF_3,
+                    RPT_CMF_4,
+                    RPT_CMF_5,
+                    RPT_CMF_6,
+                    RPT_CMF_7,
+                    RPT_CMF_8,
+                    RPT_CMF_9,
+                    RPT_CMF_10,
+                    RPT_CMF_11,
+                    RPT_CMF_12,
+                    RPT_CMF_13,
+                    RPT_CMF_14,
+                    RPT_CMF_15
                 INTO 
                     :CQCMRPTHMM_N.FACTORY,
                     :CQCMRPTHMM_N.REPORT_NO,
@@ -1090,7 +1270,22 @@ void DBU_select_cqcmrpthmm_for_update(int sel_type, struct CQCMRPTHMM_TAG *CQCMR
                     :CQCMRPTHMM_N.COER_FORCE_SPEC,
                     :CQCMRPTHMM_N.HARDNESS_HV20_SPEC,
                     :CQCMRPTHMM_N.TRS_SPEC,
-                    :CQCMRPTHMM_N.GRAIN_SIZE_SPEC
+                    :CQCMRPTHMM_N.GRAIN_SIZE_SPEC,
+                    :CQCMRPTHMM_N.RPT_CMF_1,
+                    :CQCMRPTHMM_N.RPT_CMF_2,
+                    :CQCMRPTHMM_N.RPT_CMF_3,
+                    :CQCMRPTHMM_N.RPT_CMF_4,
+                    :CQCMRPTHMM_N.RPT_CMF_5,
+                    :CQCMRPTHMM_N.RPT_CMF_6,
+                    :CQCMRPTHMM_N.RPT_CMF_7,
+                    :CQCMRPTHMM_N.RPT_CMF_8,
+                    :CQCMRPTHMM_N.RPT_CMF_9,
+                    :CQCMRPTHMM_N.RPT_CMF_10,
+                    :CQCMRPTHMM_N.RPT_CMF_11,
+                    :CQCMRPTHMM_N.RPT_CMF_12,
+                    :CQCMRPTHMM_N.RPT_CMF_13,
+                    :CQCMRPTHMM_N.RPT_CMF_14,
+                    :CQCMRPTHMM_N.RPT_CMF_15
                 FROM CQCMRPTHMM
                 WHERE FACTORY = :CQCMRPTHMM_N.FACTORY
                     AND REPORT_NO = :CQCMRPTHMM_N.REPORT_NO
@@ -1101,23 +1296,28 @@ void DBU_select_cqcmrpthmm_for_update(int sel_type, struct CQCMRPTHMM_TAG *CQCMR
 {
             struct sqlexd sqlstm;
             sqlstm.sqlvsn = 13;
-            sqlstm.arrsiz = 46;
+            sqlstm.arrsiz = 61;
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
-            sqlstm.stmt = "select FACTORY ,REPORT_NO ,PACK_LOT_ID ,ORG_LOT_\
-ID ,GRADE ,TYPES ,PACK_ORDER_ID ,CUSTOMER_ID ,LOT_QTY ,OD_METER ,ID_METER ,HE\
-IGHT ,DIA_METER ,LENGTH ,DENSITY ,MAG_SAT ,COER_FORCE ,HARDNESS_HV20 ,HARDNES\
-S_HRA ,TRS ,ATTRIBUTE01 ,ATTRIBUTE02 ,ATTRIBUTE03 ,ATTRIBUTE04 ,ATTRIBUTE05 ,\
-COMMENTS ,IMAGE_NUM1 ,IMAGE_NUM2 ,PITCH_AVG ,ROUGHNESS_AVG ,ROUGHNESS_STD ,CR\
-EATE_USER_ID ,CREATE_TIME ,UPDATE_USER_ID ,UPDATE_TIME ,GRAIN_SIZE ,DENSITY_S\
-PEC ,MAG_SAT_SPEC ,COER_FORCE_SPEC ,HARDNESS_HV20_SPEC ,TRS_SPEC ,GRAIN_SIZE_\
-SPEC into :b0,:b1,:b2,:b3,:b4,:b5,:b6,:b7,:b8,:b9,:b10,:b11,:b12,:b13,:b14,:b\
-15,:b16,:b17,:b18,:b19,:b20,:b21,:b22,:b23,:b24,:b25,:b26,:b27,:b28,:b29,:b30\
-,:b31,:b32,:b33,:b34,:b35,:b36,:b37,:b38,:b39,:b40,:b41  from CQCMRPTHMM wher\
-e (((FACTORY=:b0 and REPORT_NO=:b1) and PACK_LOT_ID=:b2) and ORG_LOT_ID=:b3) \
-for update ";
+            sqlbuft((void **)0,
+              "select FACTORY ,REPORT_NO ,PACK_LOT_ID ,ORG_LOT_ID ,GRADE ,TY\
+PES ,PACK_ORDER_ID ,CUSTOMER_ID ,LOT_QTY ,OD_METER ,ID_METER ,HEIGHT ,DIA_ME\
+TER ,LENGTH ,DENSITY ,MAG_SAT ,COER_FORCE ,HARDNESS_HV20 ,HARDNESS_HRA ,TRS \
+,ATTRIBUTE01 ,ATTRIBUTE02 ,ATTRIBUTE03 ,ATTRIBUTE04 ,ATTRIBUTE05 ,COMMENTS ,\
+IMAGE_NUM1 ,IMAGE_NUM2 ,PITCH_AVG ,ROUGHNESS_AVG ,ROUGHNESS_STD ,CREATE_USER\
+_ID ,CREATE_TIME ,UPDATE_USER_ID ,UPDATE_TIME ,GRAIN_SIZE ,DENSITY_SPEC ,MAG\
+_SAT_SPEC ,COER_FORCE_SPEC ,HARDNESS_HV20_SPEC ,TRS_SPEC ,GRAIN_SIZE_SPEC ,R\
+PT_CMF_1 ,RPT_CMF_2 ,RPT_CMF_3 ,RPT_CMF_4 ,RPT_CMF_5 ,RPT_CMF_6 ,RPT_CMF_7 ,\
+RPT_CMF_8 ,RPT_CMF_9 ,RPT_CMF_10 ,RPT_CMF_11 ,RPT_CMF_12 ,RPT_CMF_13 ,RPT_CM\
+F_14 ,RPT_CMF_15 into :b0,:b1,:b2,:b3,:b4,:b5,:b6,:b7,:b8,:b9,:b10,:b11,:b12\
+,:b13,:b14,:b15,:b16,:b17,:b18,:b19,:b20,:b21,:b22,:b23,:b24,:b25,:b26,:b27,\
+:b28,:b29,:b30,:b31,:b32,:b33,:b34,:b35,:b36,:b37,:b38,:b39,:b40,:b41,:b42,:\
+b43,:b44,:b45,:b46,:b47,:b48,:b49,:b50,:b51,:b52,:b53,:b54,:b55,:b56  from C\
+QCMRPTHMM where (((FACTORY=:b0 and REPORT_NO=:b1) a");
+            sqlstm.stmt = "nd PACK_LOT_ID=:b2) and ORG_LOT_ID=:b3) for upda\
+te ";
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )204;
+            sqlstm.offset = (unsigned int  )264;
             sqlstm.selerr = (unsigned short)1;
             sqlstm.sqlpfmem = (unsigned int  )0;
             sqlstm.cud = sqlcud0;
@@ -1460,38 +1660,158 @@ for update ";
             sqlstm.sqharm[41] = (unsigned int  )0;
             sqlstm.sqadto[41] = (unsigned short )0;
             sqlstm.sqtdso[41] = (unsigned short )0;
-            sqlstm.sqhstv[42] = (         void  *)(CQCMRPTHMM_N.FACTORY);
-            sqlstm.sqhstl[42] = (unsigned int  )11;
+            sqlstm.sqhstv[42] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_1);
+            sqlstm.sqhstl[42] = (unsigned int  )51;
             sqlstm.sqhsts[42] = (         int  )0;
             sqlstm.sqindv[42] = (         void  *)0;
             sqlstm.sqinds[42] = (         int  )0;
             sqlstm.sqharm[42] = (unsigned int  )0;
             sqlstm.sqadto[42] = (unsigned short )0;
             sqlstm.sqtdso[42] = (unsigned short )0;
-            sqlstm.sqhstv[43] = (         void  *)(CQCMRPTHMM_N.REPORT_NO);
-            sqlstm.sqhstl[43] = (unsigned int  )21;
+            sqlstm.sqhstv[43] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_2);
+            sqlstm.sqhstl[43] = (unsigned int  )51;
             sqlstm.sqhsts[43] = (         int  )0;
             sqlstm.sqindv[43] = (         void  *)0;
             sqlstm.sqinds[43] = (         int  )0;
             sqlstm.sqharm[43] = (unsigned int  )0;
             sqlstm.sqadto[43] = (unsigned short )0;
             sqlstm.sqtdso[43] = (unsigned short )0;
-            sqlstm.sqhstv[44] = (         void  *)(CQCMRPTHMM_N.PACK_LOT_ID);
-            sqlstm.sqhstl[44] = (unsigned int  )21;
+            sqlstm.sqhstv[44] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_3);
+            sqlstm.sqhstl[44] = (unsigned int  )51;
             sqlstm.sqhsts[44] = (         int  )0;
             sqlstm.sqindv[44] = (         void  *)0;
             sqlstm.sqinds[44] = (         int  )0;
             sqlstm.sqharm[44] = (unsigned int  )0;
             sqlstm.sqadto[44] = (unsigned short )0;
             sqlstm.sqtdso[44] = (unsigned short )0;
-            sqlstm.sqhstv[45] = (         void  *)(CQCMRPTHMM_N.ORG_LOT_ID);
-            sqlstm.sqhstl[45] = (unsigned int  )26;
+            sqlstm.sqhstv[45] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_4);
+            sqlstm.sqhstl[45] = (unsigned int  )51;
             sqlstm.sqhsts[45] = (         int  )0;
             sqlstm.sqindv[45] = (         void  *)0;
             sqlstm.sqinds[45] = (         int  )0;
             sqlstm.sqharm[45] = (unsigned int  )0;
             sqlstm.sqadto[45] = (unsigned short )0;
             sqlstm.sqtdso[45] = (unsigned short )0;
+            sqlstm.sqhstv[46] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_5);
+            sqlstm.sqhstl[46] = (unsigned int  )51;
+            sqlstm.sqhsts[46] = (         int  )0;
+            sqlstm.sqindv[46] = (         void  *)0;
+            sqlstm.sqinds[46] = (         int  )0;
+            sqlstm.sqharm[46] = (unsigned int  )0;
+            sqlstm.sqadto[46] = (unsigned short )0;
+            sqlstm.sqtdso[46] = (unsigned short )0;
+            sqlstm.sqhstv[47] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_6);
+            sqlstm.sqhstl[47] = (unsigned int  )51;
+            sqlstm.sqhsts[47] = (         int  )0;
+            sqlstm.sqindv[47] = (         void  *)0;
+            sqlstm.sqinds[47] = (         int  )0;
+            sqlstm.sqharm[47] = (unsigned int  )0;
+            sqlstm.sqadto[47] = (unsigned short )0;
+            sqlstm.sqtdso[47] = (unsigned short )0;
+            sqlstm.sqhstv[48] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_7);
+            sqlstm.sqhstl[48] = (unsigned int  )51;
+            sqlstm.sqhsts[48] = (         int  )0;
+            sqlstm.sqindv[48] = (         void  *)0;
+            sqlstm.sqinds[48] = (         int  )0;
+            sqlstm.sqharm[48] = (unsigned int  )0;
+            sqlstm.sqadto[48] = (unsigned short )0;
+            sqlstm.sqtdso[48] = (unsigned short )0;
+            sqlstm.sqhstv[49] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_8);
+            sqlstm.sqhstl[49] = (unsigned int  )51;
+            sqlstm.sqhsts[49] = (         int  )0;
+            sqlstm.sqindv[49] = (         void  *)0;
+            sqlstm.sqinds[49] = (         int  )0;
+            sqlstm.sqharm[49] = (unsigned int  )0;
+            sqlstm.sqadto[49] = (unsigned short )0;
+            sqlstm.sqtdso[49] = (unsigned short )0;
+            sqlstm.sqhstv[50] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_9);
+            sqlstm.sqhstl[50] = (unsigned int  )51;
+            sqlstm.sqhsts[50] = (         int  )0;
+            sqlstm.sqindv[50] = (         void  *)0;
+            sqlstm.sqinds[50] = (         int  )0;
+            sqlstm.sqharm[50] = (unsigned int  )0;
+            sqlstm.sqadto[50] = (unsigned short )0;
+            sqlstm.sqtdso[50] = (unsigned short )0;
+            sqlstm.sqhstv[51] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_10);
+            sqlstm.sqhstl[51] = (unsigned int  )51;
+            sqlstm.sqhsts[51] = (         int  )0;
+            sqlstm.sqindv[51] = (         void  *)0;
+            sqlstm.sqinds[51] = (         int  )0;
+            sqlstm.sqharm[51] = (unsigned int  )0;
+            sqlstm.sqadto[51] = (unsigned short )0;
+            sqlstm.sqtdso[51] = (unsigned short )0;
+            sqlstm.sqhstv[52] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_11);
+            sqlstm.sqhstl[52] = (unsigned int  )51;
+            sqlstm.sqhsts[52] = (         int  )0;
+            sqlstm.sqindv[52] = (         void  *)0;
+            sqlstm.sqinds[52] = (         int  )0;
+            sqlstm.sqharm[52] = (unsigned int  )0;
+            sqlstm.sqadto[52] = (unsigned short )0;
+            sqlstm.sqtdso[52] = (unsigned short )0;
+            sqlstm.sqhstv[53] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_12);
+            sqlstm.sqhstl[53] = (unsigned int  )51;
+            sqlstm.sqhsts[53] = (         int  )0;
+            sqlstm.sqindv[53] = (         void  *)0;
+            sqlstm.sqinds[53] = (         int  )0;
+            sqlstm.sqharm[53] = (unsigned int  )0;
+            sqlstm.sqadto[53] = (unsigned short )0;
+            sqlstm.sqtdso[53] = (unsigned short )0;
+            sqlstm.sqhstv[54] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_13);
+            sqlstm.sqhstl[54] = (unsigned int  )51;
+            sqlstm.sqhsts[54] = (         int  )0;
+            sqlstm.sqindv[54] = (         void  *)0;
+            sqlstm.sqinds[54] = (         int  )0;
+            sqlstm.sqharm[54] = (unsigned int  )0;
+            sqlstm.sqadto[54] = (unsigned short )0;
+            sqlstm.sqtdso[54] = (unsigned short )0;
+            sqlstm.sqhstv[55] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_14);
+            sqlstm.sqhstl[55] = (unsigned int  )51;
+            sqlstm.sqhsts[55] = (         int  )0;
+            sqlstm.sqindv[55] = (         void  *)0;
+            sqlstm.sqinds[55] = (         int  )0;
+            sqlstm.sqharm[55] = (unsigned int  )0;
+            sqlstm.sqadto[55] = (unsigned short )0;
+            sqlstm.sqtdso[55] = (unsigned short )0;
+            sqlstm.sqhstv[56] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_15);
+            sqlstm.sqhstl[56] = (unsigned int  )51;
+            sqlstm.sqhsts[56] = (         int  )0;
+            sqlstm.sqindv[56] = (         void  *)0;
+            sqlstm.sqinds[56] = (         int  )0;
+            sqlstm.sqharm[56] = (unsigned int  )0;
+            sqlstm.sqadto[56] = (unsigned short )0;
+            sqlstm.sqtdso[56] = (unsigned short )0;
+            sqlstm.sqhstv[57] = (         void  *)(CQCMRPTHMM_N.FACTORY);
+            sqlstm.sqhstl[57] = (unsigned int  )11;
+            sqlstm.sqhsts[57] = (         int  )0;
+            sqlstm.sqindv[57] = (         void  *)0;
+            sqlstm.sqinds[57] = (         int  )0;
+            sqlstm.sqharm[57] = (unsigned int  )0;
+            sqlstm.sqadto[57] = (unsigned short )0;
+            sqlstm.sqtdso[57] = (unsigned short )0;
+            sqlstm.sqhstv[58] = (         void  *)(CQCMRPTHMM_N.REPORT_NO);
+            sqlstm.sqhstl[58] = (unsigned int  )21;
+            sqlstm.sqhsts[58] = (         int  )0;
+            sqlstm.sqindv[58] = (         void  *)0;
+            sqlstm.sqinds[58] = (         int  )0;
+            sqlstm.sqharm[58] = (unsigned int  )0;
+            sqlstm.sqadto[58] = (unsigned short )0;
+            sqlstm.sqtdso[58] = (unsigned short )0;
+            sqlstm.sqhstv[59] = (         void  *)(CQCMRPTHMM_N.PACK_LOT_ID);
+            sqlstm.sqhstl[59] = (unsigned int  )21;
+            sqlstm.sqhsts[59] = (         int  )0;
+            sqlstm.sqindv[59] = (         void  *)0;
+            sqlstm.sqinds[59] = (         int  )0;
+            sqlstm.sqharm[59] = (unsigned int  )0;
+            sqlstm.sqadto[59] = (unsigned short )0;
+            sqlstm.sqtdso[59] = (unsigned short )0;
+            sqlstm.sqhstv[60] = (         void  *)(CQCMRPTHMM_N.ORG_LOT_ID);
+            sqlstm.sqhstl[60] = (unsigned int  )26;
+            sqlstm.sqhsts[60] = (         int  )0;
+            sqlstm.sqindv[60] = (         void  *)0;
+            sqlstm.sqinds[60] = (         int  )0;
+            sqlstm.sqharm[60] = (unsigned int  )0;
+            sqlstm.sqadto[60] = (unsigned short )0;
+            sqlstm.sqtdso[60] = (unsigned short )0;
             sqlstm.sqphsv = sqlstm.sqhstv;
             sqlstm.sqphsl = sqlstm.sqhstl;
             sqlstm.sqphss = sqlstm.sqhsts;
@@ -1558,13 +1878,13 @@ double DBU_select_cqcmrpthmm_scalar(int sel_type, struct CQCMRPTHMM_TAG *CQCMRPT
 {
             struct sqlexd sqlstm;
             sqlstm.sqlvsn = 13;
-            sqlstm.arrsiz = 46;
+            sqlstm.arrsiz = 61;
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
             sqlstm.stmt = "select count(*)  into :b0  from CQCMRPTHMM where\
  (((FACTORY=:b1 and REPORT_NO=:b2) and PACK_LOT_ID=:b3) and ORG_LOT_ID=:b4)";
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )403;
+            sqlstm.offset = (unsigned int  )523;
             sqlstm.selerr = (unsigned short)1;
             sqlstm.sqlpfmem = (unsigned int  )0;
             sqlstm.cud = sqlcud0;
@@ -1638,13 +1958,13 @@ double DBU_select_cqcmrpthmm_scalar(int sel_type, struct CQCMRPTHMM_TAG *CQCMRPT
 {
             struct sqlexd sqlstm;
             sqlstm.sqlvsn = 13;
-            sqlstm.arrsiz = 46;
+            sqlstm.arrsiz = 61;
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
             sqlstm.stmt = "select count(*)  into :b0  from CQCMRPTHMM where\
  (FACTORY=:b1 and REPORT_NO=:b2)";
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )438;
+            sqlstm.offset = (unsigned int  )558;
             sqlstm.selerr = (unsigned short)1;
             sqlstm.sqlpfmem = (unsigned int  )0;
             sqlstm.cud = sqlcud0;
@@ -1733,13 +2053,13 @@ void DBU_delete_cqcmrpthmm(int sel_type, struct CQCMRPTHMM_TAG *CQCMRPTHMM)
 {
             struct sqlexd sqlstm;
             sqlstm.sqlvsn = 13;
-            sqlstm.arrsiz = 46;
+            sqlstm.arrsiz = 61;
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
             sqlstm.stmt = "delete  from CQCMRPTHMM  where (((FACTORY=:b0 an\
 d REPORT_NO=:b1) and PACK_LOT_ID=:b2) and ORG_LOT_ID=:b3)";
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )465;
+            sqlstm.offset = (unsigned int  )585;
             sqlstm.cud = sqlcud0;
             sqlstm.sqlest = (unsigned char  *)&sqlca;
             sqlstm.sqlety = (unsigned short)4352;
@@ -1801,13 +2121,13 @@ d REPORT_NO=:b1) and PACK_LOT_ID=:b2) and ORG_LOT_ID=:b3)";
 {
             struct sqlexd sqlstm;
             sqlstm.sqlvsn = 13;
-            sqlstm.arrsiz = 46;
+            sqlstm.arrsiz = 61;
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
             sqlstm.stmt = "delete  from CQCMRPTHMM  where (FACTORY=:b0 and \
 REPORT_NO=:b1)";
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )496;
+            sqlstm.offset = (unsigned int  )616;
             sqlstm.cud = sqlcud0;
             sqlstm.sqlest = (unsigned char  *)&sqlca;
             sqlstm.sqlety = (unsigned short)4352;
@@ -1914,7 +2234,22 @@ void DBU_insert_cqcmrpthmm(struct CQCMRPTHMM_TAG *CQCMRPTHMM)
                     COER_FORCE_SPEC,
                     HARDNESS_HV20_SPEC,
                     TRS_SPEC,
-                    GRAIN_SIZE_SPEC
+                    GRAIN_SIZE_SPEC,
+                    RPT_CMF_1,
+                    RPT_CMF_2,
+                    RPT_CMF_3,
+                    RPT_CMF_4,
+                    RPT_CMF_5,
+                    RPT_CMF_6,
+                    RPT_CMF_7,
+                    RPT_CMF_8,
+                    RPT_CMF_9,
+                    RPT_CMF_10,
+                    RPT_CMF_11,
+                    RPT_CMF_12,
+                    RPT_CMF_13,
+                    RPT_CMF_14,
+                    RPT_CMF_15
          ) 
         VALUES (
                     :CQCMRPTHMM_N.FACTORY,
@@ -1958,13 +2293,28 @@ void DBU_insert_cqcmrpthmm(struct CQCMRPTHMM_TAG *CQCMRPTHMM)
                     :CQCMRPTHMM_N.COER_FORCE_SPEC,
                     :CQCMRPTHMM_N.HARDNESS_HV20_SPEC,
                     :CQCMRPTHMM_N.TRS_SPEC,
-                    :CQCMRPTHMM_N.GRAIN_SIZE_SPEC
+                    :CQCMRPTHMM_N.GRAIN_SIZE_SPEC,
+                    :CQCMRPTHMM_N.RPT_CMF_1,
+                    :CQCMRPTHMM_N.RPT_CMF_2,
+                    :CQCMRPTHMM_N.RPT_CMF_3,
+                    :CQCMRPTHMM_N.RPT_CMF_4,
+                    :CQCMRPTHMM_N.RPT_CMF_5,
+                    :CQCMRPTHMM_N.RPT_CMF_6,
+                    :CQCMRPTHMM_N.RPT_CMF_7,
+                    :CQCMRPTHMM_N.RPT_CMF_8,
+                    :CQCMRPTHMM_N.RPT_CMF_9,
+                    :CQCMRPTHMM_N.RPT_CMF_10,
+                    :CQCMRPTHMM_N.RPT_CMF_11,
+                    :CQCMRPTHMM_N.RPT_CMF_12,
+                    :CQCMRPTHMM_N.RPT_CMF_13,
+                    :CQCMRPTHMM_N.RPT_CMF_14,
+                    :CQCMRPTHMM_N.RPT_CMF_15
          ); */ 
 
 {
     struct sqlexd sqlstm;
     sqlstm.sqlvsn = 13;
-    sqlstm.arrsiz = 46;
+    sqlstm.arrsiz = 61;
     sqlstm.sqladtp = &sqladt;
     sqlstm.sqltdsp = &sqltds;
     sqlstm.stmt = "insert into CQCMRPTHMM (FACTORY,REPORT_NO,PACK_LOT_ID,OR\
@@ -1973,12 +2323,15 @@ HT,DIA_METER,LENGTH,DENSITY,MAG_SAT,COER_FORCE,HARDNESS_HV20,HARDNESS_HRA,TRS\
 ,ATTRIBUTE01,ATTRIBUTE02,ATTRIBUTE03,ATTRIBUTE04,ATTRIBUTE05,COMMENTS,IMAGE_N\
 UM1,IMAGE_NUM2,PITCH_AVG,ROUGHNESS_AVG,ROUGHNESS_STD,CREATE_USER_ID,CREATE_TI\
 ME,UPDATE_USER_ID,UPDATE_TIME,GRAIN_SIZE,DENSITY_SPEC,MAG_SAT_SPEC,COER_FORCE\
-_SPEC,HARDNESS_HV20_SPEC,TRS_SPEC,GRAIN_SIZE_SPEC) values (:b0,:b1,:b2,:b3,:b\
-4,:b5,:b6,:b7,:b8,:b9,:b10,:b11,:b12,:b13,:b14,:b15,:b16,:b17,:b18,:b19,:b20,\
-:b21,:b22,:b23,:b24,:b25,:b26,:b27,:b28,:b29,:b30,:b31,:b32,:b33,:b34,:b35,:b\
-36,:b37,:b38,:b39,:b40,:b41)";
+_SPEC,HARDNESS_HV20_SPEC,TRS_SPEC,GRAIN_SIZE_SPEC,RPT_CMF_1,RPT_CMF_2,RPT_CMF\
+_3,RPT_CMF_4,RPT_CMF_5,RPT_CMF_6,RPT_CMF_7,RPT_CMF_8,RPT_CMF_9,RPT_CMF_10,RPT\
+_CMF_11,RPT_CMF_12,RPT_CMF_13,RPT_CMF_14,RPT_CMF_15) values (:b0,:b1,:b2,:b3,\
+:b4,:b5,:b6,:b7,:b8,:b9,:b10,:b11,:b12,:b13,:b14,:b15,:b16,:b17,:b18,:b19,:b2\
+0,:b21,:b22,:b23,:b24,:b25,:b26,:b27,:b28,:b29,:b30,:b31,:b32,:b33,:b34,:b35,\
+:b36,:b37,:b38,:b39,:b40,:b41,:b42,:b43,:b44,:b45,:b46,:b47,:b48,:b49,:b50,:b\
+51,:b52,:b53,:b54,:b55,:b56)";
     sqlstm.iters = (unsigned int  )1;
-    sqlstm.offset = (unsigned int  )519;
+    sqlstm.offset = (unsigned int  )639;
     sqlstm.cud = sqlcud0;
     sqlstm.sqlest = (unsigned char  *)&sqlca;
     sqlstm.sqlety = (unsigned short)4352;
@@ -2319,6 +2672,126 @@ _SPEC,HARDNESS_HV20_SPEC,TRS_SPEC,GRAIN_SIZE_SPEC) values (:b0,:b1,:b2,:b3,:b\
     sqlstm.sqharm[41] = (unsigned int  )0;
     sqlstm.sqadto[41] = (unsigned short )0;
     sqlstm.sqtdso[41] = (unsigned short )0;
+    sqlstm.sqhstv[42] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_1);
+    sqlstm.sqhstl[42] = (unsigned int  )51;
+    sqlstm.sqhsts[42] = (         int  )0;
+    sqlstm.sqindv[42] = (         void  *)0;
+    sqlstm.sqinds[42] = (         int  )0;
+    sqlstm.sqharm[42] = (unsigned int  )0;
+    sqlstm.sqadto[42] = (unsigned short )0;
+    sqlstm.sqtdso[42] = (unsigned short )0;
+    sqlstm.sqhstv[43] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_2);
+    sqlstm.sqhstl[43] = (unsigned int  )51;
+    sqlstm.sqhsts[43] = (         int  )0;
+    sqlstm.sqindv[43] = (         void  *)0;
+    sqlstm.sqinds[43] = (         int  )0;
+    sqlstm.sqharm[43] = (unsigned int  )0;
+    sqlstm.sqadto[43] = (unsigned short )0;
+    sqlstm.sqtdso[43] = (unsigned short )0;
+    sqlstm.sqhstv[44] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_3);
+    sqlstm.sqhstl[44] = (unsigned int  )51;
+    sqlstm.sqhsts[44] = (         int  )0;
+    sqlstm.sqindv[44] = (         void  *)0;
+    sqlstm.sqinds[44] = (         int  )0;
+    sqlstm.sqharm[44] = (unsigned int  )0;
+    sqlstm.sqadto[44] = (unsigned short )0;
+    sqlstm.sqtdso[44] = (unsigned short )0;
+    sqlstm.sqhstv[45] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_4);
+    sqlstm.sqhstl[45] = (unsigned int  )51;
+    sqlstm.sqhsts[45] = (         int  )0;
+    sqlstm.sqindv[45] = (         void  *)0;
+    sqlstm.sqinds[45] = (         int  )0;
+    sqlstm.sqharm[45] = (unsigned int  )0;
+    sqlstm.sqadto[45] = (unsigned short )0;
+    sqlstm.sqtdso[45] = (unsigned short )0;
+    sqlstm.sqhstv[46] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_5);
+    sqlstm.sqhstl[46] = (unsigned int  )51;
+    sqlstm.sqhsts[46] = (         int  )0;
+    sqlstm.sqindv[46] = (         void  *)0;
+    sqlstm.sqinds[46] = (         int  )0;
+    sqlstm.sqharm[46] = (unsigned int  )0;
+    sqlstm.sqadto[46] = (unsigned short )0;
+    sqlstm.sqtdso[46] = (unsigned short )0;
+    sqlstm.sqhstv[47] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_6);
+    sqlstm.sqhstl[47] = (unsigned int  )51;
+    sqlstm.sqhsts[47] = (         int  )0;
+    sqlstm.sqindv[47] = (         void  *)0;
+    sqlstm.sqinds[47] = (         int  )0;
+    sqlstm.sqharm[47] = (unsigned int  )0;
+    sqlstm.sqadto[47] = (unsigned short )0;
+    sqlstm.sqtdso[47] = (unsigned short )0;
+    sqlstm.sqhstv[48] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_7);
+    sqlstm.sqhstl[48] = (unsigned int  )51;
+    sqlstm.sqhsts[48] = (         int  )0;
+    sqlstm.sqindv[48] = (         void  *)0;
+    sqlstm.sqinds[48] = (         int  )0;
+    sqlstm.sqharm[48] = (unsigned int  )0;
+    sqlstm.sqadto[48] = (unsigned short )0;
+    sqlstm.sqtdso[48] = (unsigned short )0;
+    sqlstm.sqhstv[49] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_8);
+    sqlstm.sqhstl[49] = (unsigned int  )51;
+    sqlstm.sqhsts[49] = (         int  )0;
+    sqlstm.sqindv[49] = (         void  *)0;
+    sqlstm.sqinds[49] = (         int  )0;
+    sqlstm.sqharm[49] = (unsigned int  )0;
+    sqlstm.sqadto[49] = (unsigned short )0;
+    sqlstm.sqtdso[49] = (unsigned short )0;
+    sqlstm.sqhstv[50] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_9);
+    sqlstm.sqhstl[50] = (unsigned int  )51;
+    sqlstm.sqhsts[50] = (         int  )0;
+    sqlstm.sqindv[50] = (         void  *)0;
+    sqlstm.sqinds[50] = (         int  )0;
+    sqlstm.sqharm[50] = (unsigned int  )0;
+    sqlstm.sqadto[50] = (unsigned short )0;
+    sqlstm.sqtdso[50] = (unsigned short )0;
+    sqlstm.sqhstv[51] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_10);
+    sqlstm.sqhstl[51] = (unsigned int  )51;
+    sqlstm.sqhsts[51] = (         int  )0;
+    sqlstm.sqindv[51] = (         void  *)0;
+    sqlstm.sqinds[51] = (         int  )0;
+    sqlstm.sqharm[51] = (unsigned int  )0;
+    sqlstm.sqadto[51] = (unsigned short )0;
+    sqlstm.sqtdso[51] = (unsigned short )0;
+    sqlstm.sqhstv[52] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_11);
+    sqlstm.sqhstl[52] = (unsigned int  )51;
+    sqlstm.sqhsts[52] = (         int  )0;
+    sqlstm.sqindv[52] = (         void  *)0;
+    sqlstm.sqinds[52] = (         int  )0;
+    sqlstm.sqharm[52] = (unsigned int  )0;
+    sqlstm.sqadto[52] = (unsigned short )0;
+    sqlstm.sqtdso[52] = (unsigned short )0;
+    sqlstm.sqhstv[53] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_12);
+    sqlstm.sqhstl[53] = (unsigned int  )51;
+    sqlstm.sqhsts[53] = (         int  )0;
+    sqlstm.sqindv[53] = (         void  *)0;
+    sqlstm.sqinds[53] = (         int  )0;
+    sqlstm.sqharm[53] = (unsigned int  )0;
+    sqlstm.sqadto[53] = (unsigned short )0;
+    sqlstm.sqtdso[53] = (unsigned short )0;
+    sqlstm.sqhstv[54] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_13);
+    sqlstm.sqhstl[54] = (unsigned int  )51;
+    sqlstm.sqhsts[54] = (         int  )0;
+    sqlstm.sqindv[54] = (         void  *)0;
+    sqlstm.sqinds[54] = (         int  )0;
+    sqlstm.sqharm[54] = (unsigned int  )0;
+    sqlstm.sqadto[54] = (unsigned short )0;
+    sqlstm.sqtdso[54] = (unsigned short )0;
+    sqlstm.sqhstv[55] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_14);
+    sqlstm.sqhstl[55] = (unsigned int  )51;
+    sqlstm.sqhsts[55] = (         int  )0;
+    sqlstm.sqindv[55] = (         void  *)0;
+    sqlstm.sqinds[55] = (         int  )0;
+    sqlstm.sqharm[55] = (unsigned int  )0;
+    sqlstm.sqadto[55] = (unsigned short )0;
+    sqlstm.sqtdso[55] = (unsigned short )0;
+    sqlstm.sqhstv[56] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_15);
+    sqlstm.sqhstl[56] = (unsigned int  )51;
+    sqlstm.sqhsts[56] = (         int  )0;
+    sqlstm.sqindv[56] = (         void  *)0;
+    sqlstm.sqinds[56] = (         int  )0;
+    sqlstm.sqharm[56] = (unsigned int  )0;
+    sqlstm.sqadto[56] = (unsigned short )0;
+    sqlstm.sqtdso[56] = (unsigned short )0;
     sqlstm.sqphsv = sqlstm.sqhstv;
     sqlstm.sqphsl = sqlstm.sqhstl;
     sqlstm.sqphss = sqlstm.sqhsts;
@@ -2395,7 +2868,22 @@ void DBU_update_cqcmrpthmm(int sel_type, struct CQCMRPTHMM_TAG *CQCMRPTHMM)
                     COER_FORCE_SPEC = :CQCMRPTHMM_N.COER_FORCE_SPEC,
                     HARDNESS_HV20_SPEC = :CQCMRPTHMM_N.HARDNESS_HV20_SPEC,
                     TRS_SPEC = :CQCMRPTHMM_N.TRS_SPEC,
-                    GRAIN_SIZE_SPEC = :CQCMRPTHMM_N.GRAIN_SIZE_SPEC
+                    GRAIN_SIZE_SPEC = :CQCMRPTHMM_N.GRAIN_SIZE_SPEC,
+                    RPT_CMF_1 = :CQCMRPTHMM_N.RPT_CMF_1,
+                    RPT_CMF_2 = :CQCMRPTHMM_N.RPT_CMF_2,
+                    RPT_CMF_3 = :CQCMRPTHMM_N.RPT_CMF_3,
+                    RPT_CMF_4 = :CQCMRPTHMM_N.RPT_CMF_4,
+                    RPT_CMF_5 = :CQCMRPTHMM_N.RPT_CMF_5,
+                    RPT_CMF_6 = :CQCMRPTHMM_N.RPT_CMF_6,
+                    RPT_CMF_7 = :CQCMRPTHMM_N.RPT_CMF_7,
+                    RPT_CMF_8 = :CQCMRPTHMM_N.RPT_CMF_8,
+                    RPT_CMF_9 = :CQCMRPTHMM_N.RPT_CMF_9,
+                    RPT_CMF_10 = :CQCMRPTHMM_N.RPT_CMF_10,
+                    RPT_CMF_11 = :CQCMRPTHMM_N.RPT_CMF_11,
+                    RPT_CMF_12 = :CQCMRPTHMM_N.RPT_CMF_12,
+                    RPT_CMF_13 = :CQCMRPTHMM_N.RPT_CMF_13,
+                    RPT_CMF_14 = :CQCMRPTHMM_N.RPT_CMF_14,
+                    RPT_CMF_15 = :CQCMRPTHMM_N.RPT_CMF_15
                 WHERE FACTORY = :CQCMRPTHMM_N.FACTORY
                     AND REPORT_NO = :CQCMRPTHMM_N.REPORT_NO
                     AND PACK_LOT_ID = :CQCMRPTHMM_N.PACK_LOT_ID
@@ -2404,7 +2892,7 @@ void DBU_update_cqcmrpthmm(int sel_type, struct CQCMRPTHMM_TAG *CQCMRPTHMM)
 {
             struct sqlexd sqlstm;
             sqlstm.sqlvsn = 13;
-            sqlstm.arrsiz = 46;
+            sqlstm.arrsiz = 61;
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
             sqlstm.stmt = "update CQCMRPTHMM  set GRADE=:b0,TYPES=:b1,PACK_\
@@ -2415,10 +2903,13 @@ UTE03=:b18,ATTRIBUTE04=:b19,ATTRIBUTE05=:b20,COMMENTS=:b21,IMAGE_NUM1=:b22,IM\
 AGE_NUM2=:b23,PITCH_AVG=:b24,ROUGHNESS_AVG=:b25,ROUGHNESS_STD=:b26,CREATE_USE\
 R_ID=:b27,CREATE_TIME=:b28,UPDATE_USER_ID=:b29,UPDATE_TIME=:b30,GRAIN_SIZE=:b\
 31,DENSITY_SPEC=:b32,MAG_SAT_SPEC=:b33,COER_FORCE_SPEC=:b34,HARDNESS_HV20_SPE\
-C=:b35,TRS_SPEC=:b36,GRAIN_SIZE_SPEC=:b37 where (((FACTORY=:b38 and REPORT_NO\
-=:b39) and PACK_LOT_ID=:b40) and ORG_LOT_ID=:b41)";
+C=:b35,TRS_SPEC=:b36,GRAIN_SIZE_SPEC=:b37,RPT_CMF_1=:b38,RPT_CMF_2=:b39,RPT_C\
+MF_3=:b40,RPT_CMF_4=:b41,RPT_CMF_5=:b42,RPT_CMF_6=:b43,RPT_CMF_7=:b44,RPT_CMF\
+_8=:b45,RPT_CMF_9=:b46,RPT_CMF_10=:b47,RPT_CMF_11=:b48,RPT_CMF_12=:b49,RPT_CM\
+F_13=:b50,RPT_CMF_14=:b51,RPT_CMF_15=:b52 where (((FACTORY=:b53 and REPORT_NO\
+=:b54) and PACK_LOT_ID=:b55) and ORG_LOT_ID=:b56)";
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )702;
+            sqlstm.offset = (unsigned int  )882;
             sqlstm.cud = sqlcud0;
             sqlstm.sqlest = (unsigned char  *)&sqlca;
             sqlstm.sqlety = (unsigned short)4352;
@@ -2727,38 +3218,158 @@ C=:b35,TRS_SPEC=:b36,GRAIN_SIZE_SPEC=:b37 where (((FACTORY=:b38 and REPORT_NO\
             sqlstm.sqharm[37] = (unsigned int  )0;
             sqlstm.sqadto[37] = (unsigned short )0;
             sqlstm.sqtdso[37] = (unsigned short )0;
-            sqlstm.sqhstv[38] = (         void  *)(CQCMRPTHMM_N.FACTORY);
-            sqlstm.sqhstl[38] = (unsigned int  )11;
+            sqlstm.sqhstv[38] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_1);
+            sqlstm.sqhstl[38] = (unsigned int  )51;
             sqlstm.sqhsts[38] = (         int  )0;
             sqlstm.sqindv[38] = (         void  *)0;
             sqlstm.sqinds[38] = (         int  )0;
             sqlstm.sqharm[38] = (unsigned int  )0;
             sqlstm.sqadto[38] = (unsigned short )0;
             sqlstm.sqtdso[38] = (unsigned short )0;
-            sqlstm.sqhstv[39] = (         void  *)(CQCMRPTHMM_N.REPORT_NO);
-            sqlstm.sqhstl[39] = (unsigned int  )21;
+            sqlstm.sqhstv[39] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_2);
+            sqlstm.sqhstl[39] = (unsigned int  )51;
             sqlstm.sqhsts[39] = (         int  )0;
             sqlstm.sqindv[39] = (         void  *)0;
             sqlstm.sqinds[39] = (         int  )0;
             sqlstm.sqharm[39] = (unsigned int  )0;
             sqlstm.sqadto[39] = (unsigned short )0;
             sqlstm.sqtdso[39] = (unsigned short )0;
-            sqlstm.sqhstv[40] = (         void  *)(CQCMRPTHMM_N.PACK_LOT_ID);
-            sqlstm.sqhstl[40] = (unsigned int  )21;
+            sqlstm.sqhstv[40] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_3);
+            sqlstm.sqhstl[40] = (unsigned int  )51;
             sqlstm.sqhsts[40] = (         int  )0;
             sqlstm.sqindv[40] = (         void  *)0;
             sqlstm.sqinds[40] = (         int  )0;
             sqlstm.sqharm[40] = (unsigned int  )0;
             sqlstm.sqadto[40] = (unsigned short )0;
             sqlstm.sqtdso[40] = (unsigned short )0;
-            sqlstm.sqhstv[41] = (         void  *)(CQCMRPTHMM_N.ORG_LOT_ID);
-            sqlstm.sqhstl[41] = (unsigned int  )26;
+            sqlstm.sqhstv[41] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_4);
+            sqlstm.sqhstl[41] = (unsigned int  )51;
             sqlstm.sqhsts[41] = (         int  )0;
             sqlstm.sqindv[41] = (         void  *)0;
             sqlstm.sqinds[41] = (         int  )0;
             sqlstm.sqharm[41] = (unsigned int  )0;
             sqlstm.sqadto[41] = (unsigned short )0;
             sqlstm.sqtdso[41] = (unsigned short )0;
+            sqlstm.sqhstv[42] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_5);
+            sqlstm.sqhstl[42] = (unsigned int  )51;
+            sqlstm.sqhsts[42] = (         int  )0;
+            sqlstm.sqindv[42] = (         void  *)0;
+            sqlstm.sqinds[42] = (         int  )0;
+            sqlstm.sqharm[42] = (unsigned int  )0;
+            sqlstm.sqadto[42] = (unsigned short )0;
+            sqlstm.sqtdso[42] = (unsigned short )0;
+            sqlstm.sqhstv[43] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_6);
+            sqlstm.sqhstl[43] = (unsigned int  )51;
+            sqlstm.sqhsts[43] = (         int  )0;
+            sqlstm.sqindv[43] = (         void  *)0;
+            sqlstm.sqinds[43] = (         int  )0;
+            sqlstm.sqharm[43] = (unsigned int  )0;
+            sqlstm.sqadto[43] = (unsigned short )0;
+            sqlstm.sqtdso[43] = (unsigned short )0;
+            sqlstm.sqhstv[44] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_7);
+            sqlstm.sqhstl[44] = (unsigned int  )51;
+            sqlstm.sqhsts[44] = (         int  )0;
+            sqlstm.sqindv[44] = (         void  *)0;
+            sqlstm.sqinds[44] = (         int  )0;
+            sqlstm.sqharm[44] = (unsigned int  )0;
+            sqlstm.sqadto[44] = (unsigned short )0;
+            sqlstm.sqtdso[44] = (unsigned short )0;
+            sqlstm.sqhstv[45] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_8);
+            sqlstm.sqhstl[45] = (unsigned int  )51;
+            sqlstm.sqhsts[45] = (         int  )0;
+            sqlstm.sqindv[45] = (         void  *)0;
+            sqlstm.sqinds[45] = (         int  )0;
+            sqlstm.sqharm[45] = (unsigned int  )0;
+            sqlstm.sqadto[45] = (unsigned short )0;
+            sqlstm.sqtdso[45] = (unsigned short )0;
+            sqlstm.sqhstv[46] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_9);
+            sqlstm.sqhstl[46] = (unsigned int  )51;
+            sqlstm.sqhsts[46] = (         int  )0;
+            sqlstm.sqindv[46] = (         void  *)0;
+            sqlstm.sqinds[46] = (         int  )0;
+            sqlstm.sqharm[46] = (unsigned int  )0;
+            sqlstm.sqadto[46] = (unsigned short )0;
+            sqlstm.sqtdso[46] = (unsigned short )0;
+            sqlstm.sqhstv[47] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_10);
+            sqlstm.sqhstl[47] = (unsigned int  )51;
+            sqlstm.sqhsts[47] = (         int  )0;
+            sqlstm.sqindv[47] = (         void  *)0;
+            sqlstm.sqinds[47] = (         int  )0;
+            sqlstm.sqharm[47] = (unsigned int  )0;
+            sqlstm.sqadto[47] = (unsigned short )0;
+            sqlstm.sqtdso[47] = (unsigned short )0;
+            sqlstm.sqhstv[48] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_11);
+            sqlstm.sqhstl[48] = (unsigned int  )51;
+            sqlstm.sqhsts[48] = (         int  )0;
+            sqlstm.sqindv[48] = (         void  *)0;
+            sqlstm.sqinds[48] = (         int  )0;
+            sqlstm.sqharm[48] = (unsigned int  )0;
+            sqlstm.sqadto[48] = (unsigned short )0;
+            sqlstm.sqtdso[48] = (unsigned short )0;
+            sqlstm.sqhstv[49] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_12);
+            sqlstm.sqhstl[49] = (unsigned int  )51;
+            sqlstm.sqhsts[49] = (         int  )0;
+            sqlstm.sqindv[49] = (         void  *)0;
+            sqlstm.sqinds[49] = (         int  )0;
+            sqlstm.sqharm[49] = (unsigned int  )0;
+            sqlstm.sqadto[49] = (unsigned short )0;
+            sqlstm.sqtdso[49] = (unsigned short )0;
+            sqlstm.sqhstv[50] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_13);
+            sqlstm.sqhstl[50] = (unsigned int  )51;
+            sqlstm.sqhsts[50] = (         int  )0;
+            sqlstm.sqindv[50] = (         void  *)0;
+            sqlstm.sqinds[50] = (         int  )0;
+            sqlstm.sqharm[50] = (unsigned int  )0;
+            sqlstm.sqadto[50] = (unsigned short )0;
+            sqlstm.sqtdso[50] = (unsigned short )0;
+            sqlstm.sqhstv[51] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_14);
+            sqlstm.sqhstl[51] = (unsigned int  )51;
+            sqlstm.sqhsts[51] = (         int  )0;
+            sqlstm.sqindv[51] = (         void  *)0;
+            sqlstm.sqinds[51] = (         int  )0;
+            sqlstm.sqharm[51] = (unsigned int  )0;
+            sqlstm.sqadto[51] = (unsigned short )0;
+            sqlstm.sqtdso[51] = (unsigned short )0;
+            sqlstm.sqhstv[52] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_15);
+            sqlstm.sqhstl[52] = (unsigned int  )51;
+            sqlstm.sqhsts[52] = (         int  )0;
+            sqlstm.sqindv[52] = (         void  *)0;
+            sqlstm.sqinds[52] = (         int  )0;
+            sqlstm.sqharm[52] = (unsigned int  )0;
+            sqlstm.sqadto[52] = (unsigned short )0;
+            sqlstm.sqtdso[52] = (unsigned short )0;
+            sqlstm.sqhstv[53] = (         void  *)(CQCMRPTHMM_N.FACTORY);
+            sqlstm.sqhstl[53] = (unsigned int  )11;
+            sqlstm.sqhsts[53] = (         int  )0;
+            sqlstm.sqindv[53] = (         void  *)0;
+            sqlstm.sqinds[53] = (         int  )0;
+            sqlstm.sqharm[53] = (unsigned int  )0;
+            sqlstm.sqadto[53] = (unsigned short )0;
+            sqlstm.sqtdso[53] = (unsigned short )0;
+            sqlstm.sqhstv[54] = (         void  *)(CQCMRPTHMM_N.REPORT_NO);
+            sqlstm.sqhstl[54] = (unsigned int  )21;
+            sqlstm.sqhsts[54] = (         int  )0;
+            sqlstm.sqindv[54] = (         void  *)0;
+            sqlstm.sqinds[54] = (         int  )0;
+            sqlstm.sqharm[54] = (unsigned int  )0;
+            sqlstm.sqadto[54] = (unsigned short )0;
+            sqlstm.sqtdso[54] = (unsigned short )0;
+            sqlstm.sqhstv[55] = (         void  *)(CQCMRPTHMM_N.PACK_LOT_ID);
+            sqlstm.sqhstl[55] = (unsigned int  )21;
+            sqlstm.sqhsts[55] = (         int  )0;
+            sqlstm.sqindv[55] = (         void  *)0;
+            sqlstm.sqinds[55] = (         int  )0;
+            sqlstm.sqharm[55] = (unsigned int  )0;
+            sqlstm.sqadto[55] = (unsigned short )0;
+            sqlstm.sqtdso[55] = (unsigned short )0;
+            sqlstm.sqhstv[56] = (         void  *)(CQCMRPTHMM_N.ORG_LOT_ID);
+            sqlstm.sqhstl[56] = (unsigned int  )26;
+            sqlstm.sqhsts[56] = (         int  )0;
+            sqlstm.sqindv[56] = (         void  *)0;
+            sqlstm.sqinds[56] = (         int  )0;
+            sqlstm.sqharm[56] = (unsigned int  )0;
+            sqlstm.sqadto[56] = (unsigned short )0;
+            sqlstm.sqtdso[56] = (unsigned short )0;
             sqlstm.sqphsv = sqlstm.sqhstv;
             sqlstm.sqphsl = sqlstm.sqhstl;
             sqlstm.sqphss = sqlstm.sqhsts;
@@ -2849,7 +3460,22 @@ void DBU_open_cqcmrpthmm(int sel_type, struct CQCMRPTHMM_TAG *CQCMRPTHMM)
                     COER_FORCE_SPEC,
                     HARDNESS_HV20_SPEC,
                     TRS_SPEC,
-                    GRAIN_SIZE_SPEC
+                    GRAIN_SIZE_SPEC,
+                    RPT_CMF_1,
+                    RPT_CMF_2,
+                    RPT_CMF_3,
+                    RPT_CMF_4,
+                    RPT_CMF_5,
+                    RPT_CMF_6,
+                    RPT_CMF_7,
+                    RPT_CMF_8,
+                    RPT_CMF_9,
+                    RPT_CMF_10,
+                    RPT_CMF_11,
+                    RPT_CMF_12,
+                    RPT_CMF_13,
+                    RPT_CMF_14,
+                    RPT_CMF_15
                 FROM CQCMRPTHMM
                 ORDER BY FACTORY ASC,
                     REPORT_NO ASC,
@@ -2861,12 +3487,12 @@ void DBU_open_cqcmrpthmm(int sel_type, struct CQCMRPTHMM_TAG *CQCMRPTHMM)
 {
             struct sqlexd sqlstm;
             sqlstm.sqlvsn = 13;
-            sqlstm.arrsiz = 46;
+            sqlstm.arrsiz = 61;
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
             sqlstm.stmt = sq0009;
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )885;
+            sqlstm.offset = (unsigned int  )1125;
             sqlstm.selerr = (unsigned short)1;
             sqlstm.sqlpfmem = (unsigned int  )0;
             sqlstm.cud = sqlcud0;
@@ -2951,16 +3577,31 @@ void DBU_fetch_cqcmrpthmm(int sel_type, struct CQCMRPTHMM_TAG *CQCMRPTHMM)
                 :CQCMRPTHMM_N.COER_FORCE_SPEC,
                 :CQCMRPTHMM_N.HARDNESS_HV20_SPEC,
                 :CQCMRPTHMM_N.TRS_SPEC,
-                :CQCMRPTHMM_N.GRAIN_SIZE_SPEC; */ 
+                :CQCMRPTHMM_N.GRAIN_SIZE_SPEC,
+                :CQCMRPTHMM_N.RPT_CMF_1,
+                :CQCMRPTHMM_N.RPT_CMF_2,
+                :CQCMRPTHMM_N.RPT_CMF_3,
+                :CQCMRPTHMM_N.RPT_CMF_4,
+                :CQCMRPTHMM_N.RPT_CMF_5,
+                :CQCMRPTHMM_N.RPT_CMF_6,
+                :CQCMRPTHMM_N.RPT_CMF_7,
+                :CQCMRPTHMM_N.RPT_CMF_8,
+                :CQCMRPTHMM_N.RPT_CMF_9,
+                :CQCMRPTHMM_N.RPT_CMF_10,
+                :CQCMRPTHMM_N.RPT_CMF_11,
+                :CQCMRPTHMM_N.RPT_CMF_12,
+                :CQCMRPTHMM_N.RPT_CMF_13,
+                :CQCMRPTHMM_N.RPT_CMF_14,
+                :CQCMRPTHMM_N.RPT_CMF_15; */ 
 
 {
             struct sqlexd sqlstm;
             sqlstm.sqlvsn = 13;
-            sqlstm.arrsiz = 46;
+            sqlstm.arrsiz = 61;
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )900;
+            sqlstm.offset = (unsigned int  )1140;
             sqlstm.selerr = (unsigned short)1;
             sqlstm.sqlpfmem = (unsigned int  )0;
             sqlstm.cud = sqlcud0;
@@ -3305,6 +3946,126 @@ void DBU_fetch_cqcmrpthmm(int sel_type, struct CQCMRPTHMM_TAG *CQCMRPTHMM)
             sqlstm.sqharm[41] = (unsigned int  )0;
             sqlstm.sqadto[41] = (unsigned short )0;
             sqlstm.sqtdso[41] = (unsigned short )0;
+            sqlstm.sqhstv[42] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_1);
+            sqlstm.sqhstl[42] = (unsigned int  )51;
+            sqlstm.sqhsts[42] = (         int  )0;
+            sqlstm.sqindv[42] = (         void  *)0;
+            sqlstm.sqinds[42] = (         int  )0;
+            sqlstm.sqharm[42] = (unsigned int  )0;
+            sqlstm.sqadto[42] = (unsigned short )0;
+            sqlstm.sqtdso[42] = (unsigned short )0;
+            sqlstm.sqhstv[43] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_2);
+            sqlstm.sqhstl[43] = (unsigned int  )51;
+            sqlstm.sqhsts[43] = (         int  )0;
+            sqlstm.sqindv[43] = (         void  *)0;
+            sqlstm.sqinds[43] = (         int  )0;
+            sqlstm.sqharm[43] = (unsigned int  )0;
+            sqlstm.sqadto[43] = (unsigned short )0;
+            sqlstm.sqtdso[43] = (unsigned short )0;
+            sqlstm.sqhstv[44] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_3);
+            sqlstm.sqhstl[44] = (unsigned int  )51;
+            sqlstm.sqhsts[44] = (         int  )0;
+            sqlstm.sqindv[44] = (         void  *)0;
+            sqlstm.sqinds[44] = (         int  )0;
+            sqlstm.sqharm[44] = (unsigned int  )0;
+            sqlstm.sqadto[44] = (unsigned short )0;
+            sqlstm.sqtdso[44] = (unsigned short )0;
+            sqlstm.sqhstv[45] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_4);
+            sqlstm.sqhstl[45] = (unsigned int  )51;
+            sqlstm.sqhsts[45] = (         int  )0;
+            sqlstm.sqindv[45] = (         void  *)0;
+            sqlstm.sqinds[45] = (         int  )0;
+            sqlstm.sqharm[45] = (unsigned int  )0;
+            sqlstm.sqadto[45] = (unsigned short )0;
+            sqlstm.sqtdso[45] = (unsigned short )0;
+            sqlstm.sqhstv[46] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_5);
+            sqlstm.sqhstl[46] = (unsigned int  )51;
+            sqlstm.sqhsts[46] = (         int  )0;
+            sqlstm.sqindv[46] = (         void  *)0;
+            sqlstm.sqinds[46] = (         int  )0;
+            sqlstm.sqharm[46] = (unsigned int  )0;
+            sqlstm.sqadto[46] = (unsigned short )0;
+            sqlstm.sqtdso[46] = (unsigned short )0;
+            sqlstm.sqhstv[47] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_6);
+            sqlstm.sqhstl[47] = (unsigned int  )51;
+            sqlstm.sqhsts[47] = (         int  )0;
+            sqlstm.sqindv[47] = (         void  *)0;
+            sqlstm.sqinds[47] = (         int  )0;
+            sqlstm.sqharm[47] = (unsigned int  )0;
+            sqlstm.sqadto[47] = (unsigned short )0;
+            sqlstm.sqtdso[47] = (unsigned short )0;
+            sqlstm.sqhstv[48] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_7);
+            sqlstm.sqhstl[48] = (unsigned int  )51;
+            sqlstm.sqhsts[48] = (         int  )0;
+            sqlstm.sqindv[48] = (         void  *)0;
+            sqlstm.sqinds[48] = (         int  )0;
+            sqlstm.sqharm[48] = (unsigned int  )0;
+            sqlstm.sqadto[48] = (unsigned short )0;
+            sqlstm.sqtdso[48] = (unsigned short )0;
+            sqlstm.sqhstv[49] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_8);
+            sqlstm.sqhstl[49] = (unsigned int  )51;
+            sqlstm.sqhsts[49] = (         int  )0;
+            sqlstm.sqindv[49] = (         void  *)0;
+            sqlstm.sqinds[49] = (         int  )0;
+            sqlstm.sqharm[49] = (unsigned int  )0;
+            sqlstm.sqadto[49] = (unsigned short )0;
+            sqlstm.sqtdso[49] = (unsigned short )0;
+            sqlstm.sqhstv[50] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_9);
+            sqlstm.sqhstl[50] = (unsigned int  )51;
+            sqlstm.sqhsts[50] = (         int  )0;
+            sqlstm.sqindv[50] = (         void  *)0;
+            sqlstm.sqinds[50] = (         int  )0;
+            sqlstm.sqharm[50] = (unsigned int  )0;
+            sqlstm.sqadto[50] = (unsigned short )0;
+            sqlstm.sqtdso[50] = (unsigned short )0;
+            sqlstm.sqhstv[51] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_10);
+            sqlstm.sqhstl[51] = (unsigned int  )51;
+            sqlstm.sqhsts[51] = (         int  )0;
+            sqlstm.sqindv[51] = (         void  *)0;
+            sqlstm.sqinds[51] = (         int  )0;
+            sqlstm.sqharm[51] = (unsigned int  )0;
+            sqlstm.sqadto[51] = (unsigned short )0;
+            sqlstm.sqtdso[51] = (unsigned short )0;
+            sqlstm.sqhstv[52] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_11);
+            sqlstm.sqhstl[52] = (unsigned int  )51;
+            sqlstm.sqhsts[52] = (         int  )0;
+            sqlstm.sqindv[52] = (         void  *)0;
+            sqlstm.sqinds[52] = (         int  )0;
+            sqlstm.sqharm[52] = (unsigned int  )0;
+            sqlstm.sqadto[52] = (unsigned short )0;
+            sqlstm.sqtdso[52] = (unsigned short )0;
+            sqlstm.sqhstv[53] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_12);
+            sqlstm.sqhstl[53] = (unsigned int  )51;
+            sqlstm.sqhsts[53] = (         int  )0;
+            sqlstm.sqindv[53] = (         void  *)0;
+            sqlstm.sqinds[53] = (         int  )0;
+            sqlstm.sqharm[53] = (unsigned int  )0;
+            sqlstm.sqadto[53] = (unsigned short )0;
+            sqlstm.sqtdso[53] = (unsigned short )0;
+            sqlstm.sqhstv[54] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_13);
+            sqlstm.sqhstl[54] = (unsigned int  )51;
+            sqlstm.sqhsts[54] = (         int  )0;
+            sqlstm.sqindv[54] = (         void  *)0;
+            sqlstm.sqinds[54] = (         int  )0;
+            sqlstm.sqharm[54] = (unsigned int  )0;
+            sqlstm.sqadto[54] = (unsigned short )0;
+            sqlstm.sqtdso[54] = (unsigned short )0;
+            sqlstm.sqhstv[55] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_14);
+            sqlstm.sqhstl[55] = (unsigned int  )51;
+            sqlstm.sqhsts[55] = (         int  )0;
+            sqlstm.sqindv[55] = (         void  *)0;
+            sqlstm.sqinds[55] = (         int  )0;
+            sqlstm.sqharm[55] = (unsigned int  )0;
+            sqlstm.sqadto[55] = (unsigned short )0;
+            sqlstm.sqtdso[55] = (unsigned short )0;
+            sqlstm.sqhstv[56] = (         void  *)(CQCMRPTHMM_N.RPT_CMF_15);
+            sqlstm.sqhstl[56] = (unsigned int  )51;
+            sqlstm.sqhsts[56] = (         int  )0;
+            sqlstm.sqindv[56] = (         void  *)0;
+            sqlstm.sqinds[56] = (         int  )0;
+            sqlstm.sqharm[56] = (unsigned int  )0;
+            sqlstm.sqadto[56] = (unsigned short )0;
+            sqlstm.sqtdso[56] = (unsigned short )0;
             sqlstm.sqphsv = sqlstm.sqhstv;
             sqlstm.sqphsl = sqlstm.sqhstl;
             sqlstm.sqphss = sqlstm.sqhsts;
@@ -3319,6 +4080,8 @@ void DBU_fetch_cqcmrpthmm(int sel_type, struct CQCMRPTHMM_TAG *CQCMRPTHMM)
             if (sqlca.sqlcode < 0) DB_usr_error();
 }
 
+
+                
 
             break;
 
@@ -3354,11 +4117,11 @@ void DBU_close_cqcmrpthmm(int sel_type)
 {
             struct sqlexd sqlstm;
             sqlstm.sqlvsn = 13;
-            sqlstm.arrsiz = 46;
+            sqlstm.arrsiz = 61;
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )1083;
+            sqlstm.offset = (unsigned int  )1383;
             sqlstm.cud = sqlcud0;
             sqlstm.sqlest = (unsigned char  *)&sqlca;
             sqlstm.sqlety = (unsigned short)4352;
@@ -3440,7 +4203,21 @@ void DBU_add_null_cqcmrpthmm(struct CQCMRPTHMM_N_TAG *CQCMRPTHMM_N, struct CQCMR
     MEMCPY_AN(CQCMRPTHMM_N->HARDNESS_HV20_SPEC, CQCMRPTHMM->HARDNESS_HV20_SPEC, sizeof(CQCMRPTHMM->HARDNESS_HV20_SPEC));
     MEMCPY_AN(CQCMRPTHMM_N->TRS_SPEC, CQCMRPTHMM->TRS_SPEC, sizeof(CQCMRPTHMM->TRS_SPEC));
     MEMCPY_AN(CQCMRPTHMM_N->GRAIN_SIZE_SPEC, CQCMRPTHMM->GRAIN_SIZE_SPEC, sizeof(CQCMRPTHMM->GRAIN_SIZE_SPEC));
-
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_1, CQCMRPTHMM->RPT_CMF_1, sizeof(CQCMRPTHMM->RPT_CMF_1));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_2, CQCMRPTHMM->RPT_CMF_2, sizeof(CQCMRPTHMM->RPT_CMF_2));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_3, CQCMRPTHMM->RPT_CMF_3, sizeof(CQCMRPTHMM->RPT_CMF_3));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_4, CQCMRPTHMM->RPT_CMF_4, sizeof(CQCMRPTHMM->RPT_CMF_4));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_5, CQCMRPTHMM->RPT_CMF_5, sizeof(CQCMRPTHMM->RPT_CMF_5));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_6, CQCMRPTHMM->RPT_CMF_6, sizeof(CQCMRPTHMM->RPT_CMF_6));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_7, CQCMRPTHMM->RPT_CMF_7, sizeof(CQCMRPTHMM->RPT_CMF_7));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_8, CQCMRPTHMM->RPT_CMF_8, sizeof(CQCMRPTHMM->RPT_CMF_8));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_9, CQCMRPTHMM->RPT_CMF_9, sizeof(CQCMRPTHMM->RPT_CMF_9));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_10, CQCMRPTHMM->RPT_CMF_10, sizeof(CQCMRPTHMM->RPT_CMF_10));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_11, CQCMRPTHMM->RPT_CMF_11, sizeof(CQCMRPTHMM->RPT_CMF_11));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_12, CQCMRPTHMM->RPT_CMF_12, sizeof(CQCMRPTHMM->RPT_CMF_12));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_13, CQCMRPTHMM->RPT_CMF_13, sizeof(CQCMRPTHMM->RPT_CMF_13));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_14, CQCMRPTHMM->RPT_CMF_14, sizeof(CQCMRPTHMM->RPT_CMF_14));
+    MEMCPY_AN(CQCMRPTHMM_N->RPT_CMF_15, CQCMRPTHMM->RPT_CMF_15, sizeof(CQCMRPTHMM->RPT_CMF_15));
 
 }
 
@@ -3490,6 +4267,21 @@ void DBU_del_null_cqcmrpthmm(struct CQCMRPTHMM_N_TAG *CQCMRPTHMM_N, struct CQCMR
     MEMCPY_DN(CQCMRPTHMM->HARDNESS_HV20_SPEC, CQCMRPTHMM_N->HARDNESS_HV20_SPEC, sizeof(CQCMRPTHMM->HARDNESS_HV20_SPEC));
     MEMCPY_DN(CQCMRPTHMM->TRS_SPEC, CQCMRPTHMM_N->TRS_SPEC, sizeof(CQCMRPTHMM->TRS_SPEC));
     MEMCPY_DN(CQCMRPTHMM->GRAIN_SIZE_SPEC, CQCMRPTHMM_N->GRAIN_SIZE_SPEC, sizeof(CQCMRPTHMM->GRAIN_SIZE_SPEC));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_1, CQCMRPTHMM_N->RPT_CMF_1, sizeof(CQCMRPTHMM->RPT_CMF_1));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_2, CQCMRPTHMM_N->RPT_CMF_2, sizeof(CQCMRPTHMM->RPT_CMF_2));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_3, CQCMRPTHMM_N->RPT_CMF_3, sizeof(CQCMRPTHMM->RPT_CMF_3));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_4, CQCMRPTHMM_N->RPT_CMF_4, sizeof(CQCMRPTHMM->RPT_CMF_4));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_5, CQCMRPTHMM_N->RPT_CMF_5, sizeof(CQCMRPTHMM->RPT_CMF_5));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_6, CQCMRPTHMM_N->RPT_CMF_6, sizeof(CQCMRPTHMM->RPT_CMF_6));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_7, CQCMRPTHMM_N->RPT_CMF_7, sizeof(CQCMRPTHMM->RPT_CMF_7));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_8, CQCMRPTHMM_N->RPT_CMF_8, sizeof(CQCMRPTHMM->RPT_CMF_8));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_9, CQCMRPTHMM_N->RPT_CMF_9, sizeof(CQCMRPTHMM->RPT_CMF_9));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_10, CQCMRPTHMM_N->RPT_CMF_10, sizeof(CQCMRPTHMM->RPT_CMF_10));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_11, CQCMRPTHMM_N->RPT_CMF_11, sizeof(CQCMRPTHMM->RPT_CMF_11));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_12, CQCMRPTHMM_N->RPT_CMF_12, sizeof(CQCMRPTHMM->RPT_CMF_12));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_13, CQCMRPTHMM_N->RPT_CMF_13, sizeof(CQCMRPTHMM->RPT_CMF_13));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_14, CQCMRPTHMM_N->RPT_CMF_14, sizeof(CQCMRPTHMM->RPT_CMF_14));
+    MEMCPY_DN(CQCMRPTHMM->RPT_CMF_15, CQCMRPTHMM_N->RPT_CMF_15, sizeof(CQCMRPTHMM->RPT_CMF_15));
 
 }
 

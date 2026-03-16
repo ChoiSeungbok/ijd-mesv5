@@ -777,7 +777,108 @@ int CUS_QCM_GENERATE_REPORT(char *s_msg_code, TRSNode *in_node, TRSNode *out_nod
 
 		}
 	}
+	else if (TRS.get_procstep(in_node) == '5') //HM UNION
+	{
+		
+		if (TRS.mem_cmp(in_node, "AREA_ID", gs_area_hm, strlen(gs_area_hm)) == 0)
+		{
+			gen_in_node = TRS.add_node(in_node, "gen_in_node");
 
+			//INSP_ID ¹ß¹ø
+			CopyDefaultMembers(gen_in_node, in_node);
+			TRS.add_string(gen_in_node, "RULE_ID", MP_SHIP_REPORT_HM, strlen(MP_SHIP_REPORT_HM));
+			TRS.add_string(gen_in_node, "DATETIME", gs_sys_time, 8);
+			TRS.add_string(gen_in_node, "OVR_TIME", gs_sys_time, 8);
+			TRS.add_string(gen_in_node, "SEQ_KEY_10", gs_sys_time, 8);
+			TRS.add_char(gen_in_node, IN_PROCSTEP, '2');
+
+			cmn_out = TRS.create_node("cmn_out");
+
+			if (CUS_WIP_GENERATE_ID(s_msg_code, gen_in_node, cmn_out) == MP_FALSE)
+			{
+				TRS.clone(out_node, cmn_out);
+				TRS.free_node(cmn_out);
+				return MP_FALSE;
+			}
+
+			memcpy(s_report_no, TRS.get_string(cmn_out, "GEN_ID"), strlen(TRS.get_string(cmn_out, "GEN_ID")));
+			TRS.free_node(cmn_out);
+
+
+
+			data_list = TRS.get_list(in_node, "DATA_LIST");
+			i_data_count = TRS.get_item_count(in_node, "DATA_LIST");
+
+			for (int i = 0; i < i_data_count; i++)
+			{
+				DBU_init_cqcmrpthmm(&CQCMRPTHMM);
+				TRS.copy(CQCMRPTHMM.FACTORY, sizeof(CQCMRPTHMM.FACTORY), in_node, IN_FACTORY);
+				memcpy(CQCMRPTHMM.REPORT_NO, s_report_no, sizeof(CQCMRPTHMM.REPORT_NO));
+				
+				TRS.copy(CQCMRPTHMM.PACK_ORDER_ID, sizeof(CQCMRPTHMM.PACK_ORDER_ID), data_list[i], "PACK_ORDER_ID");
+				TRS.copy(CQCMRPTHMM.PACK_LOT_ID, sizeof(CQCMRPTHMM.PACK_LOT_ID), data_list[i], "PACK_LOT_ID");
+				TRS.copy(CQCMRPTHMM.ORG_LOT_ID, sizeof(CQCMRPTHMM.ORG_LOT_ID), data_list[i], "ORG_LOT_ID");		
+				TRS.copy(CQCMRPTHMM.CUSTOMER_ID, sizeof(CQCMRPTHMM.CUSTOMER_ID), data_list[i], "CUSTOMER_ID");
+
+				TRS.copy(CQCMRPTHMM.GRADE, sizeof(CQCMRPTHMM.GRADE), data_list[i], "GRADE");
+				TRS.copy(CQCMRPTHMM.TYPES, sizeof(CQCMRPTHMM.TYPES), data_list[i], "TYPES");
+				CQCMRPTHMM.LOT_QTY = TRS.get_double(data_list[i], "LOT_QTY");		
+
+				TRS.copy(CQCMRPTHMM.LENGTH, sizeof(CQCMRPTHMM.LENGTH), data_list[i], "LENGTH");
+				TRS.copy(CQCMRPTHMM.OD_METER, sizeof(CQCMRPTHMM.OD_METER), data_list[i], "OD_METER");
+				 
+
+				TRS.copy(CQCMRPTHMM.DENSITY, sizeof(CQCMRPTHMM.DENSITY), data_list[i], "DENSITY");
+				TRS.copy(CQCMRPTHMM.MAG_SAT, sizeof(CQCMRPTHMM.MAG_SAT), data_list[i], "MAG_SAT");
+				TRS.copy(CQCMRPTHMM.COER_FORCE, sizeof(CQCMRPTHMM.COER_FORCE), data_list[i], "COER_FORCE");
+				TRS.copy(CQCMRPTHMM.HARDNESS_HV20, sizeof(CQCMRPTHMM.HARDNESS_HV20), data_list[i], "HARDNESS_HV20");
+				TRS.copy(CQCMRPTHMM.TRS, sizeof(CQCMRPTHMM.TRS), data_list[i], "TRS");
+
+				
+				TRS.copy(CQCMRPTHMM.ATTRIBUTE01, sizeof(CQCMRPTHMM.ATTRIBUTE01), data_list[i], "REMARK");
+				TRS.copy(CQCMRPTHMM.ATTRIBUTE02, sizeof(CQCMRPTHMM.ATTRIBUTE02), data_list[i], "ATTRIBUTE02");  // "HM_03"
+				TRS.copy(CQCMRPTHMM.ATTRIBUTE03, sizeof(CQCMRPTHMM.ATTRIBUTE03), data_list[i], "ATTRIBUTE03");  // LENGTH_SPEC
+				TRS.copy(CQCMRPTHMM.ATTRIBUTE04, sizeof(CQCMRPTHMM.ATTRIBUTE04), data_list[i], "ATTRIBUTE04");  // OD_METER_SPEC
+				TRS.copy(CQCMRPTHMM.COMMENTS, sizeof(CQCMRPTHMM.COMMENTS), data_list[i], "COMMENTS");
+				TRS.copy(CQCMRPTHMM.IMAGE_NUM1, sizeof(CQCMRPTHMM.IMAGE_NUM1), data_list[i], "IMAGE_NUM1");
+				TRS.copy(CQCMRPTHMM.IMAGE_NUM2, sizeof(CQCMRPTHMM.IMAGE_NUM2), data_list[i], "IMAGE_NUM2");
+
+				TRS.copy(CQCMRPTHMM.CREATE_USER_ID, sizeof(CQCMRPTHMM.CREATE_USER_ID), in_node, IN_USERID);
+				memcpy(CQCMRPTHMM.CREATE_TIME, s_sys_time, sizeof(s_sys_time));
+
+				TRS.copy(CQCMRPTHMM.RPT_CMF_10, sizeof(CQCMRPTHMM.RPT_CMF_10), data_list[i], "RPT_CMF_10");  //WC_SPEC
+				TRS.copy(CQCMRPTHMM.RPT_CMF_11, sizeof(CQCMRPTHMM.RPT_CMF_11), data_list[i], "RPT_CMF_11");  //WC 
+				TRS.copy(CQCMRPTHMM.RPT_CMF_12, sizeof(CQCMRPTHMM.RPT_CMF_12), data_list[i], "RPT_CMF_12");  //CO_SPEC
+				TRS.copy(CQCMRPTHMM.RPT_CMF_13, sizeof(CQCMRPTHMM.RPT_CMF_13), data_list[i], "RPT_CMF_13");  //CO
+				TRS.copy(CQCMRPTHMM.RPT_CMF_14, sizeof(CQCMRPTHMM.RPT_CMF_14), data_list[i], "RPT_CMF_14");  //ETC_SPEC
+				TRS.copy(CQCMRPTHMM.RPT_CMF_15, sizeof(CQCMRPTHMM.RPT_CMF_15), data_list[i], "RPT_CMF_15");  //ETC
+
+
+				TRS.copy(CQCMRPTHMM.DENSITY_SPEC, sizeof(CQCMRPTHMM.DENSITY_SPEC), data_list[i], "DENSITY_SPEC");
+				TRS.copy(CQCMRPTHMM.MAG_SAT_SPEC, sizeof(CQCMRPTHMM.MAG_SAT_SPEC), data_list[i], "MAG_SAT_SPEC");
+				TRS.copy(CQCMRPTHMM.COER_FORCE_SPEC, sizeof(CQCMRPTHMM.COER_FORCE_SPEC), data_list[i], "COER_FORCE_SPEC");
+				TRS.copy(CQCMRPTHMM.HARDNESS_HV20_SPEC, sizeof(CQCMRPTHMM.HARDNESS_HV20_SPEC), data_list[i], "HARDNESS_HV20_SPEC");
+				TRS.copy(CQCMRPTHMM.TRS_SPEC, sizeof(CQCMRPTHMM.TRS_SPEC), data_list[i], "TRS_SPEC");
+				
+				DBU_insert_cqcmrpthmm(&CQCMRPTHMM);
+				if (DB_error_code != DB_SUCCESS)
+				{
+					strcpy(s_msg_code, "QCM-0004");
+					TRS.add_fieldmsg(out_node, "CQCMRPTHMM INSERT", MP_NVST);
+					TRS.add_dberrmsg(out_node, DB_error_msg);
+
+					gs_log_type.type = MP_LOG_ERROR;
+					gs_log_type.e_type = MP_LOG_E_SYSTEM;
+					gs_log_type.category = MP_LOG_CATE_TRANS;
+					COM_set_result(out_node, MP_FAIL_C, s_msg_code, MP_MSG_CATE_ERROR, TRS.get_language(in_node));
+					return MP_FALSE;
+				}
+			}
+
+			TRS.add_string(out_node, "REPORT_NO", s_report_no, sizeof(s_report_no));
+
+		}
+	}
     return MP_TRUE;
 }
 

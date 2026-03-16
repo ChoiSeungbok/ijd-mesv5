@@ -58,6 +58,21 @@ struct CQCMRPTHMM_TAG
     char          HARDNESS_HV20_SPEC[50];
     char          TRS_SPEC[50];
     char          GRAIN_SIZE_SPEC[50];
+    char          RPT_CMF_1[50];
+    char          RPT_CMF_2[50];
+    char          RPT_CMF_3[50];
+    char          RPT_CMF_4[50];
+    char          RPT_CMF_5[50];
+    char          RPT_CMF_6[50];
+    char          RPT_CMF_7[50];
+    char          RPT_CMF_8[50];
+    char          RPT_CMF_9[50];
+    char          RPT_CMF_10[50];
+    char          RPT_CMF_11[50];
+    char          RPT_CMF_12[50];
+    char          RPT_CMF_13[50];
+    char          RPT_CMF_14[50];
+    char          RPT_CMF_15[50];
 };
 
 
