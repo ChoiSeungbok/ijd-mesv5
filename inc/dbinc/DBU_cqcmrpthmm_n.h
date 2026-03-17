@@ -59,21 +59,20 @@ struct CQCMRPTHMM_N_TAG
 	char          TRS_SPEC[51];
 	char          GRAIN_SIZE_SPEC[51];
 	char          RPT_CMF_1[51];
-	char          RPT_CMF_2[51];
-	char          RPT_CMF_3[51];
-	char          RPT_CMF_4[51];
-	char          RPT_CMF_5[51];
-	char          RPT_CMF_6[51];
-	char          RPT_CMF_7[51];
-	char          RPT_CMF_8[51];
-	char          RPT_CMF_9[51];
-	char          RPT_CMF_10[51];
-	char          RPT_CMF_11[51];
-	char          RPT_CMF_12[51];
-	char          RPT_CMF_13[51];
-	char          RPT_CMF_14[51];
-	char          RPT_CMF_15[51];
-
+    char          RPT_CMF_2[51];
+    char          RPT_CMF_3[51];
+    char          RPT_CMF_4[51];
+    char          RPT_CMF_5[51];
+    char          RPT_CMF_6[51];
+    char          RPT_CMF_7[51];
+    char          RPT_CMF_8[51];
+    char          RPT_CMF_9[51];
+    char          RPT_CMF_10[51];
+    char          RPT_CMF_11[51];
+    char          RPT_CMF_12[51];
+    char          RPT_CMF_13[51];
+    char          RPT_CMF_14[51];
+    char          RPT_CMF_15[51];
 };
 
 

@@ -73,7 +73,6 @@ struct CQCMRPTHMM_TAG
     char          RPT_CMF_13[50];
     char          RPT_CMF_14[50];
     char          RPT_CMF_15[50];
-
 };
 
 

@@ -426,7 +426,6 @@ namespace CUS_QCM
                 MPCR.SetInMsg(tRSNode);
                 tRSNode.ProcStep = '2';
                 tRSNode.AddString("REPORT_NO", cdvReportNo.Text);
-                tRSNode.AddString("ATTRIBUTE02", cdvShipReportType.Text);
 
                 for (int i = 0; i < spdPackingLotList.ActiveSheet.RowCount; i++)
                 {
@@ -458,6 +457,7 @@ namespace CUS_QCM
                     tRSNode2.AddString("HARDNESS_HV20_SPEC", spdPackingLotList.ActiveSheet.Cells[i, 25].Text);
                     tRSNode2.AddString("TRS_SPEC", spdPackingLotList.ActiveSheet.Cells[i, 26].Text);
                     tRSNode2.AddString("GRAIN_SIZE_SPEC", spdPackingLotList.ActiveSheet.Cells[i, 27].Text);
+                    tRSNode2.AddString("ATTRIBUTE02", cdvShipReportType.Text); 
                 }
                 if (!MPCR.CallService("CUS_QCM", "CUS_QCM_Save_Report", tRSNode, ref out_node, b_ignore_message: false))
                 {

@@ -100,7 +100,7 @@ namespace CUS_QCM
             try
             {
                 cdvDept.Text = "HM";
-                fngetReportType(cdvShipReportType.GetListView);
+                //fngetReportType(cdvShipReportType.GetListView);
                 btnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 btnProcess.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 btnGenerateReport.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -125,7 +125,7 @@ namespace CUS_QCM
                 array[0].sCondition_Value = MPGV.gsFactory;
                 array[1].sCondition_ID = "PACK_ORDER_ID";
                 array[1].sCondition_Value = packOrderId;
-                if (!TPDR.GetDataOne("", ref dt, "CQCM2101-001", array, bIcon: false, bBGColor: false, ref sSql))
+                if (!TPDR.GetDataOne("", ref dt, "CQCM2105-001", array, bIcon: false, bBGColor: false, ref sSql))
                 {
                     dt?.Dispose();
                     GC.Collect();
@@ -148,43 +148,48 @@ namespace CUS_QCM
                     spdPackingLotList_Sheet1.Cells[num, 9].Value = dt.Rows[num]["TYPES"];
                     spdPackingLotList_Sheet1.Cells[num, 10].Value = dt.Rows[num]["SPECIFIC_SPEC"];
                     spdPackingLotList_Sheet1.Cells[num, 11].Value = dt.Rows[num]["QTY"];
-                    spdPackingLotList_Sheet1.Cells[num, 12].Value = dt.Rows[num]["LENGTH"];
-                    spdPackingLotList_Sheet1.Cells[num, 13].Value = dt.Rows[num]["OD_METER"];
-                    spdPackingLotList_Sheet1.Cells[num, 14].Value = dt.Rows[num]["ID_METER"];
-                    spdPackingLotList_Sheet1.Cells[num, 15].Value = dt.Rows[num]["HEIGHT"];
-                    spdPackingLotList_Sheet1.Cells[num, 16].Value = dt.Rows[num]["DENSITY"];
-                    spdPackingLotList_Sheet1.Cells[num, 17].Value = dt.Rows[num]["MAG_SAT"];
-                    spdPackingLotList_Sheet1.Cells[num, 18].Value = dt.Rows[num]["COER_FORCE"];
-                    spdPackingLotList_Sheet1.Cells[num, 19].Value = dt.Rows[num]["HARDNESS_HV20"];
-                    spdPackingLotList_Sheet1.Cells[num, 20].Value = dt.Rows[num]["TRS"];
-                    spdPackingLotList_Sheet1.Cells[num, 28].Value = dt.Rows[num]["COMMENTS"];
-                    spdPackingLotList_Sheet1.Cells[num, 30].Value = dt.Rows[num]["IMAGE_NUM1"];
-                    spdPackingLotList_Sheet1.Cells[num, 31].Value = dt.Rows[num]["IMAGE_NUM2"];
-                    spdPackingLotList_Sheet1.Cells[num, 32].Value = dt.Rows[num]["OUTSIDE_MIN"];
-                    spdPackingLotList_Sheet1.Cells[num, 33].Value = dt.Rows[num]["OUTSIDE_MAX"];
-                    spdPackingLotList_Sheet1.Cells[num, 34].Value = dt.Rows[num]["LENGTH_MIN"];
-                    spdPackingLotList_Sheet1.Cells[num, 35].Value = dt.Rows[num]["LENGTH_MAX"];
-                    spdPackingLotList_Sheet1.Cells[num, 36].Value = dt.Rows[num]["SG_MIN"];
-                    spdPackingLotList_Sheet1.Cells[num, 37].Value = dt.Rows[num]["SG_MAX"];
-                    spdPackingLotList_Sheet1.Cells[num, 38].Value = dt.Rows[num]["MS_MIN"];
-                    spdPackingLotList_Sheet1.Cells[num, 39].Value = dt.Rows[num]["MS_MAX"];
-                    spdPackingLotList_Sheet1.Cells[num, 40].Value = dt.Rows[num]["HC_MIN"];
-                    spdPackingLotList_Sheet1.Cells[num, 41].Value = dt.Rows[num]["HC_MAX"];
-                    spdPackingLotList_Sheet1.Cells[num, 42].Value = dt.Rows[num]["HV_MIN"];
-                    spdPackingLotList_Sheet1.Cells[num, 43].Value = dt.Rows[num]["HV_MAX"];
-                    spdPackingLotList_Sheet1.Cells[num, 44].Value = dt.Rows[num]["TRS_MIN"];
-                    spdPackingLotList_Sheet1.Cells[num, 45].Value = dt.Rows[num]["TRS_MAX"];
-                    spdPackingLotList_Sheet1.Cells[num, 44].Value = dt.Rows[num]["GRAIN_SIZE_MIN"];
-                    spdPackingLotList_Sheet1.Cells[num, 45].Value = dt.Rows[num]["GRAIN_SIZE_MAX"];
-                    spdPackingLotList_Sheet1.Cells[num, 21].Value = dt.Rows[num]["GRAIN_SIZE"];
-                    spdPackingLotList_Sheet1.Cells[num, 22].Value = dt.Rows[num]["DENSITY_SPEC"];
-                    spdPackingLotList_Sheet1.Cells[num, 23].Value = dt.Rows[num]["MAG_SAT_SPEC"];
-                    spdPackingLotList_Sheet1.Cells[num, 24].Value = dt.Rows[num]["COER_FORCE_SPEC"];
-                    spdPackingLotList_Sheet1.Cells[num, 25].Value = dt.Rows[num]["HARDNESS_HV20_SPEC"];
-                    spdPackingLotList_Sheet1.Cells[num, 26].Value = dt.Rows[num]["TRS_SPEC"];
-                    spdPackingLotList_Sheet1.Cells[num, 27].Value = dt.Rows[num]["GRAIN_SIZE_SPEC"];
-                    spdPackingLotList_Sheet1.Cells[num, 46].Value = dt.Rows[num]["GRAIN_SIZE_MIN"];
-                    spdPackingLotList_Sheet1.Cells[num, 47].Value = dt.Rows[num]["GRAIN_SIZE_MAX"];
+                    //12 LENGTH_SPEC
+                    //13 OD_METER_SPEC
+                    spdPackingLotList_Sheet1.Cells[num, 14].Value = dt.Rows[num]["LENGTH"];
+                    spdPackingLotList_Sheet1.Cells[num, 15].Value = dt.Rows[num]["OD_METER"];
+                     
+                    spdPackingLotList_Sheet1.Cells[num, 16].Value = dt.Rows[num]["DENSITY_SPEC"];
+                    spdPackingLotList_Sheet1.Cells[num, 17].Value = dt.Rows[num]["MAG_SAT_SPEC"];
+                    spdPackingLotList_Sheet1.Cells[num, 18].Value = dt.Rows[num]["COER_FORCE_SPEC"];
+                    spdPackingLotList_Sheet1.Cells[num, 19].Value = dt.Rows[num]["HARDNESS_HV20_SPEC"]; //Hv10
+                    spdPackingLotList_Sheet1.Cells[num, 20].Value = dt.Rows[num]["TRS_SPEC"];
+
+                    spdPackingLotList_Sheet1.Cells[num, 21].Value = dt.Rows[num]["DENSITY"];
+                    spdPackingLotList_Sheet1.Cells[num, 22].Value = dt.Rows[num]["MAG_SAT"];
+                    spdPackingLotList_Sheet1.Cells[num, 23].Value = dt.Rows[num]["COER_FORCE"];
+                    spdPackingLotList_Sheet1.Cells[num, 24].Value = dt.Rows[num]["HARDNESS_HV20"];  //Hv10
+                    spdPackingLotList_Sheet1.Cells[num, 25].Value = dt.Rows[num]["TRS"];
+                    //26 WC_SPEC
+                    //27 Co_SPEC
+                    //28 Etc_SPEC
+                    //29 WC
+                    //30 Co
+                    //31 Etc
+                    spdPackingLotList_Sheet1.Cells[num, 32].Value = dt.Rows[num]["COMMENTS"];
+                    //33 Remark
+                    spdPackingLotList_Sheet1.Cells[num, 34].Value = dt.Rows[num]["IMAGE_NUM1"];
+                    spdPackingLotList_Sheet1.Cells[num, 35].Value = dt.Rows[num]["IMAGE_NUM2"];
+
+                    spdPackingLotList_Sheet1.Cells[num, 36].Value = dt.Rows[num]["OUTSIDE_MIN"];
+                    spdPackingLotList_Sheet1.Cells[num, 37].Value = dt.Rows[num]["OUTSIDE_MAX"];
+                    spdPackingLotList_Sheet1.Cells[num, 38].Value = dt.Rows[num]["LENGTH_MIN"];
+                    spdPackingLotList_Sheet1.Cells[num, 39].Value = dt.Rows[num]["LENGTH_MAX"];
+                    spdPackingLotList_Sheet1.Cells[num, 40].Value = dt.Rows[num]["SG_MIN"];
+                    spdPackingLotList_Sheet1.Cells[num, 41].Value = dt.Rows[num]["SG_MAX"];
+                    spdPackingLotList_Sheet1.Cells[num, 42].Value = dt.Rows[num]["MS_MIN"];
+                    spdPackingLotList_Sheet1.Cells[num, 43].Value = dt.Rows[num]["MS_MAX"];
+                    spdPackingLotList_Sheet1.Cells[num, 44].Value = dt.Rows[num]["HC_MIN"];
+                    spdPackingLotList_Sheet1.Cells[num, 45].Value = dt.Rows[num]["HC_MAX"];
+                    spdPackingLotList_Sheet1.Cells[num, 46].Value = dt.Rows[num]["HV_MIN"];
+                    spdPackingLotList_Sheet1.Cells[num, 47].Value = dt.Rows[num]["HV_MAX"];
+                    spdPackingLotList_Sheet1.Cells[num, 48].Value = dt.Rows[num]["TRS_MIN"];
+                    spdPackingLotList_Sheet1.Cells[num, 49].Value = dt.Rows[num]["TRS_MAX"];
+                    
                 }
             }
             catch (Exception ex)
@@ -209,27 +214,17 @@ namespace CUS_QCM
                         {
                             MPCF.ShowMsgBox(MPCF.GetMessage(487));
                             return false;
-                        }
-                        if (cdvShipReportType.Text == "")
-                        {
-                            MPCF.ShowMsgBox(MPCF.GetMessage(490));
-                            cdvShipReportType.Focus();
-                            return false;
-                        }
+                        }                        
                         break;
+
                     case "PRINT":
                         if (cdvReportNo.Text == "")
                         {
                             MPCF.ShowMsgBox(MPCF.GetMessage(488));
                             return false;
-                        }
-                        if (cdvShipReportType.Text == "")
-                        {
-                            MPCF.ShowMsgBox(MPCF.GetMessage(490));
-                            cdvShipReportType.Focus();
-                            return false;
-                        }
+                        }                        
                         break;
+
                     case "SAVE":
                         if (cdvReportNo.Text == "")
                         {
@@ -237,6 +232,7 @@ namespace CUS_QCM
                             return false;
                         }
                         break;
+
                     case "FILE_UPLOAD":
                         if (spdPackingLotList.ActiveSheet.ActiveRowIndex < 0)
                         {
@@ -287,7 +283,7 @@ namespace CUS_QCM
                 array[0].sCondition_Value = MPGV.gsFactory;
                 array[1].sCondition_ID = "REPORT_NO";
                 array[1].sCondition_Value = sReportNo;
-                if (!TPDR.GetDataOne("", ref dt, "CQCM2101-002", array, bIcon: false, bBGColor: false, ref sSql))
+                if (!TPDR.GetDataOne("", ref dt, "CQCM2105-002", array, bIcon: false, bBGColor: false, ref sSql))
                 {
                     dt?.Dispose();
                     GC.Collect();
@@ -304,6 +300,52 @@ namespace CUS_QCM
                         txtType.Text = dt.Rows[num]["TYPES"].ToString();
                         txtCustomerDesc.Text = dt.Rows[num]["DELIVERY_NAME"].ToString();
                     }
+
+                    spdPackingLotList.ActiveSheet.SetValue(num, 0, false);                    
+                    spdPackingLotList.ActiveSheet.Cells[num, 2].Value = dt.Rows[num]["PACK_LOT_ID"];
+                    spdPackingLotList.ActiveSheet.Cells[num, 3].Value = dt.Rows[num]["ORG_LOT_ID"];
+                    spdPackingLotList.ActiveSheet.Cells[num, 1].Value = dt.Rows[num]["PACK_ORDER_ID"];
+
+                    spdPackingLotList.ActiveSheet.Cells[num, 6].Value = dt.Rows[num]["DELIVERY_ID"];
+                    spdPackingLotList.ActiveSheet.Cells[num, 7].Value = dt.Rows[num]["DELIVERY_NAME"];
+                    spdPackingLotList.ActiveSheet.Cells[num, 8].Value = dt.Rows[num]["GRADE"];
+                    spdPackingLotList.ActiveSheet.Cells[num, 9].Value = dt.Rows[num]["TYPES"];                      
+                    spdPackingLotList.ActiveSheet.Cells[num, 11].Value = dt.Rows[num]["LOT_QTY"].ToString();
+
+                    
+                    spdPackingLotList.ActiveSheet.Cells[num, 12].Value = dt.Rows[num]["ATTRIBUTE03"];  // LENGTH_SPEC
+                    spdPackingLotList.ActiveSheet.Cells[num, 13].Value = dt.Rows[num]["ATTRIBUTE04"];  // OD_METER_SPEC
+                    spdPackingLotList.ActiveSheet.Cells[num, 14].Value = dt.Rows[num]["LENGTH"];
+                    spdPackingLotList.ActiveSheet.Cells[num, 15].Value = dt.Rows[num]["OD_METER"];
+
+                    spdPackingLotList.ActiveSheet.Cells[num, 16].Value = dt.Rows[num]["DENSITY_SPEC"];
+                    spdPackingLotList.ActiveSheet.Cells[num, 17].Value = dt.Rows[num]["MAG_SAT_SPEC"];
+                    spdPackingLotList.ActiveSheet.Cells[num, 18].Value = dt.Rows[num]["COER_FORCE_SPEC"];
+                    spdPackingLotList.ActiveSheet.Cells[num, 19].Value = dt.Rows[num]["HARDNESS_HV20_SPEC"];
+                    spdPackingLotList.ActiveSheet.Cells[num, 20].Value = dt.Rows[num]["TRS_SPEC"];
+
+                    spdPackingLotList.ActiveSheet.Cells[num, 21].Value = dt.Rows[num]["DENSITY"];
+                    spdPackingLotList.ActiveSheet.Cells[num, 22].Value = dt.Rows[num]["MAG_SAT"];
+                    spdPackingLotList.ActiveSheet.Cells[num, 23].Value = dt.Rows[num]["COER_FORCE"];
+                    spdPackingLotList.ActiveSheet.Cells[num, 24].Value = dt.Rows[num]["HARDNESS_HV20"];
+                    spdPackingLotList.ActiveSheet.Cells[num, 25].Value = dt.Rows[num]["TRS"];
+
+                    spdPackingLotList.ActiveSheet.Cells[num, 26].Value = dt.Rows[num]["RPT_CMF_10"];        //WC_SPEC
+                    spdPackingLotList.ActiveSheet.Cells[num, 27].Value = dt.Rows[num]["RPT_CMF_12"];        //CO_SPEC
+                    spdPackingLotList.ActiveSheet.Cells[num, 28].Value = dt.Rows[num]["RPT_CMF_14"];        //ETC_SPEC
+
+                    spdPackingLotList.ActiveSheet.Cells[num, 29].Value = dt.Rows[num]["RPT_CMF_11"];        //WC
+                    spdPackingLotList.ActiveSheet.Cells[num, 30].Value = dt.Rows[num]["RPT_CMF_13"];        //CO
+                    spdPackingLotList.ActiveSheet.Cells[num, 31].Value = dt.Rows[num]["RPT_CMF_15"];        //ETC
+
+                    spdPackingLotList.ActiveSheet.Cells[num, 32].Value = dt.Rows[num]["COMMENTS"].ToString();
+                    spdPackingLotList.ActiveSheet.Cells[num, 33].Value = dt.Rows[num]["REMARK"].ToString();
+                    spdPackingLotList.ActiveSheet.Cells[num, 34].Value = dt.Rows[num]["IMAGE_NUM1"];
+                    spdPackingLotList.ActiveSheet.Cells[num, 35].Value = dt.Rows[num]["IMAGE_NUM2"];
+
+                    
+
+                    /*
                     spdPackingLotList.ActiveSheet.SetValue(num, 0, false);
                     spdPackingLotList.ActiveSheet.Cells[num, 2].Value = dt.Rows[num]["PACK_LOT_ID"];
                     spdPackingLotList.ActiveSheet.Cells[num, 3].Value = dt.Rows[num]["ORG_LOT_ID"];
@@ -334,6 +376,8 @@ namespace CUS_QCM
                     spdPackingLotList_Sheet1.Cells[num, 25].Value = dt.Rows[num]["HARDNESS_HV20_SPEC"];
                     spdPackingLotList_Sheet1.Cells[num, 26].Value = dt.Rows[num]["TRS_SPEC"];
                     spdPackingLotList_Sheet1.Cells[num, 27].Value = dt.Rows[num]["GRAIN_SIZE_SPEC"];
+                    */
+
                 }
             }
             catch (Exception ex)
@@ -354,13 +398,56 @@ namespace CUS_QCM
             try
             {
                 MPCR.SetInMsg(tRSNode);
-                tRSNode.ProcStep = '2';
+                tRSNode.ProcStep = '5';
                 tRSNode.AddString("AREA_ID", cdvDept.Text);
                 for (int i = 0; i < spdPackingLotList.ActiveSheet.RowCount; i++)
                 {
                     if (spdPackingLotList.ActiveSheet.Cells[i, 0].Value.ToString().ToUpper() == "TRUE")
                     {
                         TRSNode tRSNode2 = tRSNode.AddNode("DATA_LIST");
+                        tRSNode2.AddString("PACK_ORDER_ID", spdPackingLotList.ActiveSheet.Cells[i, 1].Text);
+                        tRSNode2.AddString("PACK_LOT_ID", spdPackingLotList.ActiveSheet.Cells[i, 2].Text);
+                        tRSNode2.AddString("ORG_LOT_ID", spdPackingLotList.ActiveSheet.Cells[i, 3].Text);
+                        tRSNode2.AddString("CUSTOMER_ID", spdPackingLotList.ActiveSheet.Cells[i, 6].Text);
+
+                        tRSNode2.AddString("GRADE", spdPackingLotList.ActiveSheet.Cells[i, 8].Text);
+                        tRSNode2.AddString("TYPES", spdPackingLotList.ActiveSheet.Cells[i, 9].Text);                        
+                        tRSNode2.AddDouble("LOT_QTY", spdPackingLotList.ActiveSheet.Cells[i, 11].Value);
+
+                        tRSNode2.AddString("ATTRIBUTE02", "HM_03"); //스펙타입
+                        tRSNode2.AddString("ATTRIBUTE03", spdPackingLotList.ActiveSheet.Cells[i, 12].Text);   // LENGTH_SPEC
+                        tRSNode2.AddString("ATTRIBUTE04", spdPackingLotList.ActiveSheet.Cells[i, 13].Text);   // OD_METER_SPEC
+                        tRSNode2.AddString("LENGTH", spdPackingLotList.ActiveSheet.Cells[i, 14].Text);
+                        tRSNode2.AddString("OD_METER", spdPackingLotList.ActiveSheet.Cells[i, 15].Text);
+
+                        tRSNode2.AddString("DENSITY_SPEC", spdPackingLotList.ActiveSheet.Cells[i, 16].Text);
+                        tRSNode2.AddString("MAG_SAT_SPEC", spdPackingLotList.ActiveSheet.Cells[i, 17].Text);
+                        tRSNode2.AddString("COER_FORCE_SPEC", spdPackingLotList.ActiveSheet.Cells[i, 18].Text);
+                        tRSNode2.AddString("HARDNESS_HV20_SPEC", spdPackingLotList.ActiveSheet.Cells[i, 19].Text);
+                        tRSNode2.AddString("TRS_SPEC", spdPackingLotList.ActiveSheet.Cells[i, 20].Text);
+
+                        tRSNode2.AddString("DENSITY", spdPackingLotList.ActiveSheet.Cells[i, 21].Text);
+                        tRSNode2.AddString("MAG_SAT", spdPackingLotList.ActiveSheet.Cells[i, 22].Text);
+                        tRSNode2.AddString("COER_FORCE", spdPackingLotList.ActiveSheet.Cells[i, 23].Text);
+                        tRSNode2.AddString("HARDNESS_HV20", spdPackingLotList.ActiveSheet.Cells[i, 24].Text);
+                        tRSNode2.AddString("TRS", spdPackingLotList.ActiveSheet.Cells[i, 25].Text);
+
+                        tRSNode2.AddString("RPT_CMF_10", spdPackingLotList.ActiveSheet.Cells[i, 26].Text); //WC_SPEC
+                        tRSNode2.AddString("RPT_CMF_12", spdPackingLotList.ActiveSheet.Cells[i, 27].Text); //Co_SPEC
+                        tRSNode2.AddString("RPT_CMF_14", spdPackingLotList.ActiveSheet.Cells[i, 28].Text); //Etc_SPEC
+
+                        tRSNode2.AddString("RPT_CMF_11", spdPackingLotList.ActiveSheet.Cells[i, 29].Text); //WC
+                        tRSNode2.AddString("RPT_CMF_13", spdPackingLotList.ActiveSheet.Cells[i, 30].Text); //Co
+                        tRSNode2.AddString("RPT_CMF_15", spdPackingLotList.ActiveSheet.Cells[i, 31].Text); //ETC
+
+                        tRSNode2.AddString("COMMENTS", spdPackingLotList.ActiveSheet.Cells[i, 32].Text);
+                        tRSNode2.AddString("REMARK", spdPackingLotList.ActiveSheet.Cells[i, 33].Text);
+
+                        
+                        tRSNode2.AddString("IMAGE_NUM1", spdPackingLotList.ActiveSheet.Cells[i, 34].Text);
+                        tRSNode2.AddString("IMAGE_NUM2", spdPackingLotList.ActiveSheet.Cells[i, 35].Text);
+                        
+                        /*
                         tRSNode2.AddString("PACK_LOT_ID", spdPackingLotList.ActiveSheet.Cells[i, 2].Text);
                         tRSNode2.AddString("ORG_LOT_ID", spdPackingLotList.ActiveSheet.Cells[i, 3].Text);
                         tRSNode2.AddString("GRADE", spdPackingLotList.ActiveSheet.Cells[i, 8].Text);
@@ -381,7 +468,7 @@ namespace CUS_QCM
                         tRSNode2.AddString("GRAIN_SIZE", spdPackingLotList.ActiveSheet.Cells[i, 21].Text);
                         tRSNode2.AddString("COMMENTS", spdPackingLotList.ActiveSheet.Cells[i, 28].Text);
                         tRSNode2.AddString("REMARK", spdPackingLotList.ActiveSheet.Cells[i, 29].Text);
-                        tRSNode2.AddString("ATTRIBUTE02", cdvShipReportType.Text);
+                        tRSNode2.AddString("ATTRIBUTE02", "HM_03"); //스펙타입
                         tRSNode2.AddString("IMAGE_NUM1", spdPackingLotList.ActiveSheet.Cells[i, 30].Text);
                         tRSNode2.AddString("IMAGE_NUM2", spdPackingLotList.ActiveSheet.Cells[i, 31].Text);
                         tRSNode2.AddString("DENSITY_SPEC", spdPackingLotList.ActiveSheet.Cells[i, 22].Text);
@@ -390,6 +477,7 @@ namespace CUS_QCM
                         tRSNode2.AddString("HARDNESS_HV20_SPEC", spdPackingLotList.ActiveSheet.Cells[i, 25].Text);
                         tRSNode2.AddString("TRS_SPEC", spdPackingLotList.ActiveSheet.Cells[i, 26].Text);
                         tRSNode2.AddString("GRAIN_SIZE_SPEC", spdPackingLotList.ActiveSheet.Cells[i, 27].Text);
+                        */
                         num++;
                     }
                 }
@@ -424,12 +512,55 @@ namespace CUS_QCM
             try
             {
                 MPCR.SetInMsg(tRSNode);
-                tRSNode.ProcStep = '2';
+                tRSNode.ProcStep = '5';
                 tRSNode.AddString("REPORT_NO", cdvReportNo.Text);                
 
                 for (int i = 0; i < spdPackingLotList.ActiveSheet.RowCount; i++)
                 {
                     TRSNode tRSNode2 = tRSNode.AddNode("DATA_LIST");
+                    tRSNode2.AddString("PACK_ORDER_ID", spdPackingLotList.ActiveSheet.Cells[i, 1].Text);
+                    tRSNode2.AddString("PACK_LOT_ID", spdPackingLotList.ActiveSheet.Cells[i, 2].Text);
+                    tRSNode2.AddString("ORG_LOT_ID", spdPackingLotList.ActiveSheet.Cells[i, 3].Text);
+                    tRSNode2.AddString("CUSTOMER_ID", spdPackingLotList.ActiveSheet.Cells[i, 6].Text);
+
+                    tRSNode2.AddString("GRADE", spdPackingLotList.ActiveSheet.Cells[i, 8].Text);
+                    tRSNode2.AddString("TYPES", spdPackingLotList.ActiveSheet.Cells[i, 9].Text);
+                    tRSNode2.AddDouble("LOT_QTY", spdPackingLotList.ActiveSheet.Cells[i, 11].Text);
+
+                    tRSNode2.AddString("ATTRIBUTE02", "HM_03"); //스펙타입
+                    tRSNode2.AddString("ATTRIBUTE03", spdPackingLotList.ActiveSheet.Cells[i, 12].Text);   // LENGTH_SPEC
+                    tRSNode2.AddString("ATTRIBUTE04", spdPackingLotList.ActiveSheet.Cells[i, 13].Text);   // OD_METER_SPEC
+                    tRSNode2.AddString("LENGTH", spdPackingLotList.ActiveSheet.Cells[i, 14].Text);
+                    tRSNode2.AddString("OD_METER", spdPackingLotList.ActiveSheet.Cells[i, 15].Text);
+
+                    tRSNode2.AddString("DENSITY_SPEC", spdPackingLotList.ActiveSheet.Cells[i, 16].Text);
+                    tRSNode2.AddString("MAG_SAT_SPEC", spdPackingLotList.ActiveSheet.Cells[i, 17].Text);
+                    tRSNode2.AddString("COER_FORCE_SPEC", spdPackingLotList.ActiveSheet.Cells[i, 18].Text);
+                    tRSNode2.AddString("HARDNESS_HV20_SPEC", spdPackingLotList.ActiveSheet.Cells[i, 19].Text);
+                    tRSNode2.AddString("TRS_SPEC", spdPackingLotList.ActiveSheet.Cells[i, 20].Text);
+
+                    tRSNode2.AddString("DENSITY", spdPackingLotList.ActiveSheet.Cells[i, 21].Text);
+                    tRSNode2.AddString("MAG_SAT", spdPackingLotList.ActiveSheet.Cells[i, 22].Text);
+                    tRSNode2.AddString("COER_FORCE", spdPackingLotList.ActiveSheet.Cells[i, 23].Text);
+                    tRSNode2.AddString("HARDNESS_HV20", spdPackingLotList.ActiveSheet.Cells[i, 24].Text);
+                    tRSNode2.AddString("TRS", spdPackingLotList.ActiveSheet.Cells[i, 25].Text);
+
+                    tRSNode2.AddString("RPT_CMF_10", spdPackingLotList.ActiveSheet.Cells[i, 26].Text); 
+                    tRSNode2.AddString("RPT_CMF_12", spdPackingLotList.ActiveSheet.Cells[i, 27].Text);
+                    tRSNode2.AddString("RPT_CMF_14", spdPackingLotList.ActiveSheet.Cells[i, 28].Text);
+
+                    tRSNode2.AddString("RPT_CMF_11", spdPackingLotList.ActiveSheet.Cells[i, 29].Text);
+                    tRSNode2.AddString("RPT_CMF_13", spdPackingLotList.ActiveSheet.Cells[i, 30].Text);
+                    tRSNode2.AddString("RPT_CMF_15", spdPackingLotList.ActiveSheet.Cells[i, 31].Text);
+
+                    tRSNode2.AddString("COMMENTS", spdPackingLotList.ActiveSheet.Cells[i, 32].Text);
+                    tRSNode2.AddString("REMARK", spdPackingLotList.ActiveSheet.Cells[i, 33].Text);
+
+                    
+                    tRSNode2.AddString("IMAGE_NUM1", spdPackingLotList.ActiveSheet.Cells[i, 34].Text);
+                    tRSNode2.AddString("IMAGE_NUM2", spdPackingLotList.ActiveSheet.Cells[i, 35].Text);
+
+                    /*
                     tRSNode2.AddString("PACK_LOT_ID", spdPackingLotList.ActiveSheet.Cells[i, 2].Text);
                     tRSNode2.AddString("ORG_LOT_ID", spdPackingLotList.ActiveSheet.Cells[i, 3].Text);
                     tRSNode2.AddString("GRADE", spdPackingLotList.ActiveSheet.Cells[i, 8].Text);
@@ -448,7 +579,7 @@ namespace CUS_QCM
                     tRSNode2.AddString("TRS", spdPackingLotList.ActiveSheet.Cells[i, 20].Text);
                     tRSNode2.AddString("COMMENTS", spdPackingLotList.ActiveSheet.Cells[i, 28].Text);
                     tRSNode2.AddString("REMARK", spdPackingLotList.ActiveSheet.Cells[i, 29].Text);
-                    tRSNode2.AddString("ATTRIBUTE02", cdvShipReportType.Text); 
+                    tRSNode2.AddString("ATTRIBUTE02", "HM_03"); 
                     tRSNode2.AddString("IMAGE_NUM1", spdPackingLotList.ActiveSheet.Cells[i, 30].Text);
                     tRSNode2.AddString("IMAGE_NUM2", spdPackingLotList.ActiveSheet.Cells[i, 31].Text);
                     tRSNode2.AddString("GRAIN_SIZE", spdPackingLotList.ActiveSheet.Cells[i, 21].Text);
@@ -458,6 +589,7 @@ namespace CUS_QCM
                     tRSNode2.AddString("HARDNESS_HV20_SPEC", spdPackingLotList.ActiveSheet.Cells[i, 25].Text);
                     tRSNode2.AddString("TRS_SPEC", spdPackingLotList.ActiveSheet.Cells[i, 26].Text);
                     tRSNode2.AddString("GRAIN_SIZE_SPEC", spdPackingLotList.ActiveSheet.Cells[i, 27].Text);
+                    */
                 }
                 if (!MPCR.CallService("CUS_QCM", "CUS_QCM_Save_Report", tRSNode, ref out_node, b_ignore_message: false))
                 {
@@ -622,27 +754,13 @@ namespace CUS_QCM
                 fnviewReport(cdvReportNo.Text);
             }
         }
-
-        private void mcCodeView1_ButtonPress(object sender, EventArgs e)
-        {
-        }
+                
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
             if (CheckCondition("PRINT"))
             {
-                if (cdvShipReportType.Text == "HM_01")
-                {
-                    fnPrintShipReport("CQCM2101-006", "pip520pa");
-                }
-                else if (cdvShipReportType.Text == "HM_02")
-                {
-                    fnPrintShipReport("CQCM2101-007", "pip520pb");
-                }
-                else if (cdvShipReportType.Text == "HM_03")
-                {
-                    fnPrintShipReport("CQCM2101-011", "pip520pc");
-                }
+                fnPrintShipReport("CQCM2105-003", "pip520pd");
             }
         }
 
@@ -653,10 +771,7 @@ namespace CUS_QCM
             }
         }
 
-        private void btnView_Click(object sender, EventArgs e)
-        {
-        }
-
+       
         private void cdvPackOrderNo_ButtonPress(object sender, EventArgs e)
         {
             try
@@ -721,10 +836,6 @@ namespace CUS_QCM
             {
                 MPCF.ShowMsgBox(ex.Message);
             }
-        }
-
-        private void cdvReportNo_SelectedItemChanged(object sender, MCCodeViewSelChanged_EventArgs e)
-        {
         }
 
         private void frmTranShipReportRegistration_Union_Load(object sender, EventArgs e)
@@ -827,5 +938,6 @@ namespace CUS_QCM
                 }
             }
         }
+
     }
 }
