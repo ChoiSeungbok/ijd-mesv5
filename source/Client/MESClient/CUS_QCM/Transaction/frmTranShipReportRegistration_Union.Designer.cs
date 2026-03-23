@@ -112,6 +112,10 @@
             FarPoint.Win.Spread.CellType.RowHeaderRenderer rowHeaderRenderer43 = new FarPoint.Win.Spread.CellType.RowHeaderRenderer();
             FarPoint.Win.Spread.CellType.ColumnHeaderRenderer columnHeaderRenderer44 = new FarPoint.Win.Spread.CellType.ColumnHeaderRenderer();
             FarPoint.Win.Spread.CellType.RowHeaderRenderer rowHeaderRenderer44 = new FarPoint.Win.Spread.CellType.RowHeaderRenderer();
+            FarPoint.Win.Spread.CellType.ColumnHeaderRenderer columnHeaderRenderer45 = new FarPoint.Win.Spread.CellType.ColumnHeaderRenderer();
+            FarPoint.Win.Spread.CellType.RowHeaderRenderer rowHeaderRenderer45 = new FarPoint.Win.Spread.CellType.RowHeaderRenderer();
+            FarPoint.Win.Spread.CellType.ColumnHeaderRenderer columnHeaderRenderer46 = new FarPoint.Win.Spread.CellType.ColumnHeaderRenderer();
+            FarPoint.Win.Spread.CellType.RowHeaderRenderer rowHeaderRenderer46 = new FarPoint.Win.Spread.CellType.RowHeaderRenderer();
             Infragistics.Win.Appearance appearance = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             FarPoint.Win.Spread.DefaultFocusIndicatorRenderer defaultFocusIndicatorRenderer1 = new FarPoint.Win.Spread.DefaultFocusIndicatorRenderer();
@@ -127,25 +131,11 @@
             FarPoint.Win.Spread.NamedStyle namedStyle5 = new FarPoint.Win.Spread.NamedStyle("FilterBarDefault");
             FarPoint.Win.Spread.CellType.FilterBarCellType filterBarCellType2 = new FarPoint.Win.Spread.CellType.FilterBarCellType();
             FarPoint.Win.Spread.NamedStyle namedStyle6 = new FarPoint.Win.Spread.NamedStyle("HeaderDefault");
-            FarPoint.Win.Spread.CellType.ColumnHeaderRenderer columnHeaderRenderer45 = new FarPoint.Win.Spread.CellType.ColumnHeaderRenderer();
             FarPoint.Win.Spread.NamedStyle namedStyle7 = new FarPoint.Win.Spread.NamedStyle("Style3");
             FarPoint.Win.Spread.NamedStyle namedStyle8 = new FarPoint.Win.Spread.NamedStyle("RowHeaderDefault");
-            FarPoint.Win.Spread.CellType.RowHeaderRenderer rowHeaderRenderer45 = new FarPoint.Win.Spread.CellType.RowHeaderRenderer();
             FarPoint.Win.Spread.NamedStyle namedStyle9 = new FarPoint.Win.Spread.NamedStyle("Style2");
             FarPoint.Win.Spread.CellType.GeneralCellType generalCellType3 = new FarPoint.Win.Spread.CellType.GeneralCellType();
             FarPoint.Win.Spread.SpreadSkin spreadSkin1 = new FarPoint.Win.Spread.SpreadSkin();
-            FarPoint.Win.Spread.NamedStyle namedStyle10 = new FarPoint.Win.Spread.NamedStyle("HeaderDefault");
-            FarPoint.Win.Spread.CellType.ColumnHeaderRenderer columnHeaderRenderer46 = new FarPoint.Win.Spread.CellType.ColumnHeaderRenderer();
-            FarPoint.Win.Spread.NamedStyle namedStyle11 = new FarPoint.Win.Spread.NamedStyle("Style1");
-            FarPoint.Win.BevelBorder bevelBorder3 = new FarPoint.Win.BevelBorder(FarPoint.Win.BevelBorderType.Lowered);
-            FarPoint.Win.Spread.CellType.GeneralCellType generalCellType5 = new FarPoint.Win.Spread.CellType.GeneralCellType();
-            FarPoint.Win.Spread.NamedStyle namedStyle12 = new FarPoint.Win.Spread.NamedStyle("RowHeaderDefault");
-            FarPoint.Win.Spread.CellType.RowHeaderRenderer rowHeaderRenderer46 = new FarPoint.Win.Spread.CellType.RowHeaderRenderer();
-            FarPoint.Win.Spread.NamedStyle namedStyle13 = new FarPoint.Win.Spread.NamedStyle("Style2");
-            FarPoint.Win.Spread.CellType.GeneralCellType generalCellType6 = new FarPoint.Win.Spread.CellType.GeneralCellType();
-            FarPoint.Win.Spread.NamedStyle namedStyle14 = new FarPoint.Win.Spread.NamedStyle("FilterBarDefault");
-            FarPoint.Win.Spread.CellType.FilterBarCellType filterBarCellType3 = new FarPoint.Win.Spread.CellType.FilterBarCellType();
-            FarPoint.Win.Spread.NamedStyle namedStyle15 = new FarPoint.Win.Spread.NamedStyle("Style3");
             FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer2 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
             FarPoint.Win.Spread.StatusBarSkin statusBarSkin1 = new FarPoint.Win.Spread.StatusBarSkin();
             FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer3 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
@@ -268,7 +258,7 @@
             // 
             // lblDirectQuery
             // 
-            this.lblDirectQuery.Location = new System.Drawing.Point(2362, 30);
+            this.lblDirectQuery.Location = new System.Drawing.Point(2336, 30);
             // 
             // pnlStsCond
             // 
@@ -904,6 +894,30 @@
             rowHeaderRenderer44.PictureZoomEffect = false;
             rowHeaderRenderer44.TextRotationAngle = 0D;
             rowHeaderRenderer44.ZoomFactor = 1F;
+            columnHeaderRenderer45.BackColor = System.Drawing.SystemColors.Control;
+            columnHeaderRenderer45.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            columnHeaderRenderer45.ForeColor = System.Drawing.SystemColors.ControlText;
+            columnHeaderRenderer45.Name = "columnHeaderRenderer45";
+            columnHeaderRenderer45.PictureZoomEffect = false;
+            columnHeaderRenderer45.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            columnHeaderRenderer45.TextRotationAngle = 0D;
+            columnHeaderRenderer45.ZoomFactor = 1F;
+            rowHeaderRenderer45.BackColor = System.Drawing.SystemColors.Control;
+            rowHeaderRenderer45.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            rowHeaderRenderer45.ForeColor = System.Drawing.SystemColors.ControlText;
+            rowHeaderRenderer45.Name = "rowHeaderRenderer45";
+            rowHeaderRenderer45.PictureZoomEffect = false;
+            rowHeaderRenderer45.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            rowHeaderRenderer45.TextRotationAngle = 0D;
+            rowHeaderRenderer45.ZoomFactor = 1F;
+            columnHeaderRenderer46.Name = "columnHeaderRenderer46";
+            columnHeaderRenderer46.PictureZoomEffect = false;
+            columnHeaderRenderer46.TextRotationAngle = 0D;
+            columnHeaderRenderer46.ZoomFactor = 1F;
+            rowHeaderRenderer46.Name = "rowHeaderRenderer46";
+            rowHeaderRenderer46.PictureZoomEffect = false;
+            rowHeaderRenderer46.TextRotationAngle = 0D;
+            rowHeaderRenderer46.ZoomFactor = 1F;
             // 
             // lblPackingOrder
             // 
@@ -1043,15 +1057,7 @@
             namedStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
             namedStyle6.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
             namedStyle6.NoteIndicatorColor = System.Drawing.Color.Red;
-            columnHeaderRenderer45.BackColor = System.Drawing.SystemColors.Control;
-            columnHeaderRenderer45.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            columnHeaderRenderer45.ForeColor = System.Drawing.SystemColors.ControlText;
-            columnHeaderRenderer45.Name = "";
-            columnHeaderRenderer45.PictureZoomEffect = false;
-            columnHeaderRenderer45.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            columnHeaderRenderer45.TextRotationAngle = 0D;
-            columnHeaderRenderer45.ZoomFactor = 1F;
-            namedStyle6.Renderer = columnHeaderRenderer45;
+            namedStyle6.Renderer = columnHeaderRenderer46;
             namedStyle6.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
             namedStyle6.VisualStyles = FarPoint.Win.VisualStyles.Auto;
             namedStyle7.BackColor = System.Drawing.SystemColors.Control;
@@ -1067,15 +1073,7 @@
             namedStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
             namedStyle8.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
             namedStyle8.NoteIndicatorColor = System.Drawing.Color.Red;
-            rowHeaderRenderer45.BackColor = System.Drawing.SystemColors.Control;
-            rowHeaderRenderer45.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            rowHeaderRenderer45.ForeColor = System.Drawing.SystemColors.ControlText;
-            rowHeaderRenderer45.Name = "";
-            rowHeaderRenderer45.PictureZoomEffect = false;
-            rowHeaderRenderer45.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            rowHeaderRenderer45.TextRotationAngle = 0D;
-            rowHeaderRenderer45.ZoomFactor = 1F;
-            namedStyle8.Renderer = rowHeaderRenderer45;
+            namedStyle8.Renderer = rowHeaderRenderer46;
             namedStyle8.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
             namedStyle8.VisualStyles = FarPoint.Win.VisualStyles.Auto;
             namedStyle9.BackColor = System.Drawing.Color.White;
@@ -1102,77 +1100,15 @@
             this.spdPackingLotList.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.spdPackingLotList_Sheet1});
             this.spdPackingLotList.Size = new System.Drawing.Size(976, 518);
-            namedStyle10.BackColor = System.Drawing.SystemColors.Control;
-            namedStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            namedStyle10.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
-            namedStyle10.NoteIndicatorColor = System.Drawing.Color.Red;
-            columnHeaderRenderer46.Name = "";
-            columnHeaderRenderer46.PictureZoomEffect = false;
-            columnHeaderRenderer46.TextRotationAngle = 0D;
-            columnHeaderRenderer46.ZoomFactor = 1F;
-            namedStyle10.Renderer = columnHeaderRenderer46;
-            namedStyle10.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
-            namedStyle10.VisualStyles = FarPoint.Win.VisualStyles.Auto;
-            spreadSkin1.ColumnFooterDefaultStyle = namedStyle10;
-            namedStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
-            namedStyle11.Border = bevelBorder3;
-            namedStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            namedStyle11.ForeColor = System.Drawing.Color.White;
-            namedStyle11.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
-            namedStyle11.Locked = false;
-            namedStyle11.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle11.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
-            namedStyle11.Renderer = generalCellType5;
-            namedStyle11.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
-            namedStyle11.VisualStyles = FarPoint.Win.VisualStyles.Auto;
-            spreadSkin1.ColumnHeaderDefaultStyle = namedStyle11;
-            namedStyle12.BackColor = System.Drawing.SystemColors.Control;
-            namedStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            namedStyle12.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
-            namedStyle12.NoteIndicatorColor = System.Drawing.Color.Red;
-            rowHeaderRenderer46.Name = "";
-            rowHeaderRenderer46.PictureZoomEffect = false;
-            rowHeaderRenderer46.TextRotationAngle = 0D;
-            rowHeaderRenderer46.ZoomFactor = 1F;
-            namedStyle12.Renderer = rowHeaderRenderer46;
-            namedStyle12.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
-            namedStyle12.VisualStyles = FarPoint.Win.VisualStyles.Auto;
-            spreadSkin1.CornerDefaultStyle = namedStyle12;
-            namedStyle13.BackColor = System.Drawing.Color.White;
-            namedStyle13.CellType = generalCellType6;
-            namedStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            namedStyle13.ForeColor = System.Drawing.Color.Black;
-            namedStyle13.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.General;
-            namedStyle13.Locked = false;
-            namedStyle13.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle13.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
-            namedStyle13.Renderer = generalCellType6;
-            namedStyle13.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.General;
-            namedStyle13.VisualStyles = FarPoint.Win.VisualStyles.Auto;
-            spreadSkin1.DefaultStyle = namedStyle13;
-            namedStyle14.BackColor = System.Drawing.SystemColors.Control;
-            filterBarCellType3.FormatString = "";
-            namedStyle14.CellType = filterBarCellType3;
-            namedStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            namedStyle14.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
-            namedStyle14.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle14.Renderer = filterBarCellType3;
-            namedStyle14.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
-            namedStyle14.VisualStyles = FarPoint.Win.VisualStyles.Auto;
-            spreadSkin1.FilterBarDefaultStyle = namedStyle14;
-            spreadSkin1.FilterBarHeaderDefaultStyle = namedStyle12;
+            spreadSkin1.ColumnFooterDefaultStyle = namedStyle6;
+            spreadSkin1.ColumnHeaderDefaultStyle = namedStyle4;
+            spreadSkin1.CornerDefaultStyle = namedStyle8;
+            spreadSkin1.DefaultStyle = namedStyle9;
+            spreadSkin1.FilterBarDefaultStyle = namedStyle5;
+            spreadSkin1.FilterBarHeaderDefaultStyle = namedStyle8;
             spreadSkin1.FocusRenderer = defaultFocusIndicatorRenderer1;
             spreadSkin1.Name = "사용1";
-            namedStyle15.BackColor = System.Drawing.SystemColors.Control;
-            namedStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            namedStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
-            namedStyle15.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
-            namedStyle15.Locked = false;
-            namedStyle15.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle15.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
-            namedStyle15.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
-            namedStyle15.VisualStyles = FarPoint.Win.VisualStyles.Auto;
-            spreadSkin1.RowHeaderDefaultStyle = namedStyle15;
+            spreadSkin1.RowHeaderDefaultStyle = namedStyle7;
             spreadSkin1.ScrollBarRenderer = defaultScrollBarRenderer2;
             spreadSkin1.SelectionRenderer = new FarPoint.Win.Spread.DefaultSelectionRenderer();
             statusBarSkin1.BackColor = System.Drawing.SystemColors.Control;
@@ -1593,6 +1529,7 @@
             this.txtGRAINSIZEMAX.Size = new System.Drawing.Size(50, 22);
             this.txtGRAINSIZEMAX.TabIndex = 316;
             this.txtGRAINSIZEMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtGRAINSIZEMAX.Visible = false;
             // 
             // label18
             // 
@@ -1606,6 +1543,7 @@
             this.label18.TabIndex = 315;
             this.label18.Text = "~";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label18.Visible = false;
             // 
             // txtGRAINSIZEMIN
             // 
@@ -1615,6 +1553,7 @@
             this.txtGRAINSIZEMIN.Size = new System.Drawing.Size(50, 22);
             this.txtGRAINSIZEMIN.TabIndex = 314;
             this.txtGRAINSIZEMIN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtGRAINSIZEMIN.Visible = false;
             // 
             // label19
             // 
@@ -1628,6 +1567,7 @@
             this.label19.TabIndex = 313;
             this.label19.Text = "Grain Size";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label19.Visible = false;
             // 
             // txtTRSMAX
             // 
@@ -1901,6 +1841,7 @@
             this.txtLengthSpecMAX.Size = new System.Drawing.Size(50, 22);
             this.txtLengthSpecMAX.TabIndex = 288;
             this.txtLengthSpecMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtLengthSpecMAX.Visible = false;
             // 
             // label3
             // 
@@ -1914,6 +1855,7 @@
             this.label3.TabIndex = 287;
             this.label3.Text = "~";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.Visible = false;
             // 
             // txtLengthSpecMIN
             // 
@@ -1923,6 +1865,7 @@
             this.txtLengthSpecMIN.Size = new System.Drawing.Size(50, 22);
             this.txtLengthSpecMIN.TabIndex = 286;
             this.txtLengthSpecMIN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtLengthSpecMIN.Visible = false;
             // 
             // label2
             // 
@@ -1936,6 +1879,7 @@
             this.label2.TabIndex = 272;
             this.label2.Text = "Length";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Visible = false;
             // 
             // panel3
             // 

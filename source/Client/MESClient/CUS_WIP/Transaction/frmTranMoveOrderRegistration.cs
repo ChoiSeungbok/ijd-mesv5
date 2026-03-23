@@ -182,7 +182,7 @@ namespace CUS_WIP
         {
             try
             {
-                TPDR.DirectViewCond[] dvcArgu = new TPDR.DirectViewCond[5];
+                TPDR.DirectViewCond[] dvcArgu = new TPDR.DirectViewCond[7];
                 DataTable dt = null;
                 string sSql = "";
                 int i = 0;
@@ -208,6 +208,12 @@ namespace CUS_WIP
 
                 dvcArgu[4].sCondition_ID = "TO_DATE";
                 dvcArgu[4].sCondition_Value = dtpWorkDate.Text.Replace("-", "") + "235959";
+
+                dvcArgu[5].sCondition_ID = "MAT_ID";
+                dvcArgu[5].sCondition_Value = cdvMat.Text + "%";
+
+                dvcArgu[6].sCondition_ID = "MAT_DESC";
+                dvcArgu[6].sCondition_Value = "%" + txtMatDesc.Text + "%"; 
 
                 if (TPDR.GetDataOne("", ref dt, sViewID, dvcArgu, false, false, ref sSql) == false)
                 {
@@ -1837,5 +1843,50 @@ namespace CUS_WIP
 
             e.Handled = true;
         }
+       
+        private void cdvMat_ButtonPress(object sender, EventArgs e)
+        {
+            try
+            {
+                frmPopMaterialList frmPopMaterialList = new frmPopMaterialList();
+                frmPopMaterialList.StartPosition = FormStartPosition.CenterParent;
+                frmPopMaterialList.sArea_id = cdvDept.Text;
+                frmPopMaterialList.sArea_desc = cdvDept.DisplayText;
+                if (frmPopMaterialList.ShowDialog() == DialogResult.OK)
+                {
+                    cdvMat.Text = frmPopMaterialList.sMat_id;
+                    txtMatDesc.Text = frmPopMaterialList.sMat_Desc;
+                    frmPopMaterialList = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+            }
+        }
+        private void cdvMat_TextBoxTextChanged(object sender, EventArgs e)
+        {
+            if (cdvMat.DisplayText == "")
+            {
+                cdvMat.Text = "";
+            }
+        }
+
+        private void txtMatDesc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                if (e.KeyChar == '\r')
+                {
+                    btnView.PerformClick();
+                }
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+            }
+        }
+
+
     }
 }

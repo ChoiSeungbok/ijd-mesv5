@@ -179,9 +179,12 @@
             this.grpOrderInfo = new Infragistics.Win.Misc.UltraGroupBox();
             this.panOrderInfo = new System.Windows.Forms.Panel();
             this.chkPressDay = new System.Windows.Forms.CheckBox();
+            this.chkMerge = new System.Windows.Forms.CheckBox();
+            this.txtMatDesc = new System.Windows.Forms.TextBox();
+            this.cdvMat = new Miracom.UI.Controls.MCCodeView.MCCodeView();
             this.lblToWorkPlace = new System.Windows.Forms.Label();
             this.cdvToWorkPlace = new Miracom.UI.Controls.MCCodeView.MCCodeView();
-            this.chkMerge = new System.Windows.Forms.CheckBox();
+            this.lblMat = new System.Windows.Forms.Label();
             this.lblToOper = new System.Windows.Forms.Label();
             this.cdvToOper = new Miracom.UI.Controls.MCCodeView.MCCodeView();
             this.txtMoveOrder = new System.Windows.Forms.TextBox();
@@ -233,6 +236,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grpOrderInfo)).BeginInit();
             this.grpOrderInfo.SuspendLayout();
             this.panOrderInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvMat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cdvToWorkPlace)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cdvToOper)).BeginInit();
             this.panel1.SuspendLayout();
@@ -802,9 +806,12 @@
             // 
             this.panOrderInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.panOrderInfo.Controls.Add(this.chkPressDay);
+            this.panOrderInfo.Controls.Add(this.chkMerge);
+            this.panOrderInfo.Controls.Add(this.txtMatDesc);
+            this.panOrderInfo.Controls.Add(this.cdvMat);
             this.panOrderInfo.Controls.Add(this.lblToWorkPlace);
             this.panOrderInfo.Controls.Add(this.cdvToWorkPlace);
-            this.panOrderInfo.Controls.Add(this.chkMerge);
+            this.panOrderInfo.Controls.Add(this.lblMat);
             this.panOrderInfo.Controls.Add(this.lblToOper);
             this.panOrderInfo.Controls.Add(this.cdvToOper);
             this.panOrderInfo.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -815,13 +822,75 @@
             // 
             // chkPressDay
             // 
+            this.chkPressDay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkPressDay.AutoSize = true;
-            this.chkPressDay.Location = new System.Drawing.Point(900, 14);
+            this.chkPressDay.Location = new System.Drawing.Point(1085, 14);
             this.chkPressDay.Name = "chkPressDay";
             this.chkPressDay.Size = new System.Drawing.Size(121, 20);
             this.chkPressDay.TabIndex = 263;
             this.chkPressDay.Text = "Only selected";
             this.chkPressDay.UseVisualStyleBackColor = true;
+            // 
+            // chkMerge
+            // 
+            this.chkMerge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkMerge.AutoSize = true;
+            this.chkMerge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.chkMerge.Location = new System.Drawing.Point(1003, 14);
+            this.chkMerge.Name = "chkMerge";
+            this.chkMerge.Size = new System.Drawing.Size(65, 20);
+            this.chkMerge.TabIndex = 260;
+            this.chkMerge.Text = "Merge";
+            this.chkMerge.UseVisualStyleBackColor = true;
+            // 
+            // txtMatDesc
+            // 
+            this.txtMatDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtMatDesc.Location = new System.Drawing.Point(925, 11);
+            this.txtMatDesc.Name = "txtMatDesc";
+            this.txtMatDesc.Size = new System.Drawing.Size(450, 26);
+            this.txtMatDesc.TabIndex = 265;
+            this.txtMatDesc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMatDesc_KeyPress);
+            // 
+            // cdvMat
+            // 
+            this.cdvMat.BorderColor = System.Drawing.Color.DarkGray;
+            this.cdvMat.BorderHotColor = System.Drawing.Color.Black;
+            this.cdvMat.BtnFlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cdvMat.BtnToolTipText = "";
+            this.cdvMat.ButtonWidth = 30;
+            this.cdvMat.DescText = "";
+            this.cdvMat.DisplaySubItemIndex = 1;
+            this.cdvMat.DisplayText = "";
+            this.cdvMat.Focusing = null;
+            this.cdvMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cdvMat.Index = 0;
+            this.cdvMat.IsViewBtnImage = false;
+            this.cdvMat.Location = new System.Drawing.Point(745, 11);
+            this.cdvMat.MaxLength = 100;
+            this.cdvMat.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
+            this.cdvMat.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
+            this.cdvMat.MultiSelect = false;
+            this.cdvMat.Name = "cdvMat";
+            this.cdvMat.ReadOnly = false;
+            this.cdvMat.SameWidthHeightOfButton = false;
+            this.cdvMat.SearchSubItemIndex = 0;
+            this.cdvMat.SelectedDescIndex = 0;
+            this.cdvMat.SelectedDescToQueryText = "";
+            this.cdvMat.SelectedSubItemIndex = 0;
+            this.cdvMat.SelectedValueToQueryText = "";
+            this.cdvMat.SelectionStart = 0;
+            this.cdvMat.Size = new System.Drawing.Size(170, 26);
+            this.cdvMat.SmallImageList = null;
+            this.cdvMat.StyleBorder = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.cdvMat.TabIndex = 264;
+            this.cdvMat.TextBoxToolTipText = "";
+            this.cdvMat.TextBoxWidth = 170;
+            this.cdvMat.VisibleButton = true;
+            this.cdvMat.VisibleColumnHeader = false;
+            this.cdvMat.VisibleDescription = false;
+            this.cdvMat.ButtonPress += new System.EventHandler(this.cdvMat_ButtonPress);
+            this.cdvMat.TextBoxTextChanged += new System.EventHandler(this.cdvMat_TextBoxTextChanged);
             // 
             // lblToWorkPlace
             // 
@@ -876,16 +945,18 @@
             this.cdvToWorkPlace.SelectedItemChanged += new Miracom.UI.MCCodeViewSelChangedHandler(this.cdvToWorkPlace_SelectedItemChanged);
             this.cdvToWorkPlace.ButtonPress += new System.EventHandler(this.cdvToWorkPlace_ButtonPress);
             // 
-            // chkMerge
+            // lblMat
             // 
-            this.chkMerge.AutoSize = true;
-            this.chkMerge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.chkMerge.Location = new System.Drawing.Point(816, 14);
-            this.chkMerge.Name = "chkMerge";
-            this.chkMerge.Size = new System.Drawing.Size(65, 20);
-            this.chkMerge.TabIndex = 260;
-            this.chkMerge.Text = "Merge";
-            this.chkMerge.UseVisualStyleBackColor = true;
+            this.lblMat.AutoSize = true;
+            this.lblMat.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMat.ForeColor = System.Drawing.Color.Black;
+            this.lblMat.Location = new System.Drawing.Point(655, 16);
+            this.lblMat.Name = "lblMat";
+            this.lblMat.Size = new System.Drawing.Size(82, 16);
+            this.lblMat.TabIndex = 254;
+            this.lblMat.Text = "Material ID";
+            this.lblMat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblToOper
             // 
@@ -928,12 +999,12 @@
             this.cdvToOper.SelectedSubItemIndex = 0;
             this.cdvToOper.SelectedValueToQueryText = "";
             this.cdvToOper.SelectionStart = 0;
-            this.cdvToOper.Size = new System.Drawing.Size(362, 26);
+            this.cdvToOper.Size = new System.Drawing.Size(236, 26);
             this.cdvToOper.SmallImageList = null;
             this.cdvToOper.StyleBorder = System.Windows.Forms.BorderStyle.Fixed3D;
             this.cdvToOper.TabIndex = 1;
             this.cdvToOper.TextBoxToolTipText = "";
-            this.cdvToOper.TextBoxWidth = 362;
+            this.cdvToOper.TextBoxWidth = 236;
             this.cdvToOper.VisibleButton = true;
             this.cdvToOper.VisibleColumnHeader = false;
             this.cdvToOper.VisibleDescription = false;
@@ -2270,6 +2341,7 @@
             this.grpOrderInfo.ResumeLayout(false);
             this.panOrderInfo.ResumeLayout(false);
             this.panOrderInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cdvMat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cdvToWorkPlace)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cdvToOper)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -2348,5 +2420,8 @@
         public System.Windows.Forms.DateTimePicker dtpWorkDate;
         private System.Windows.Forms.CheckBox chkPressDay;
         public System.Windows.Forms.Label lblNotice;
+        private System.Windows.Forms.TextBox txtMatDesc;
+        public Miracom.UI.Controls.MCCodeView.MCCodeView cdvMat;
+        public System.Windows.Forms.Label lblMat;
     }
 }
