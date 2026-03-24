@@ -192,7 +192,6 @@
     <EmbeddedResource Include="Inquiry\frmDNMViewDynamicMenu.resx">
       <DependentUpon>frmDNMViewDynamicMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Setup\frmDNMSetupDirectView.resx">
       <DependentUpon>frmDNMSetupDirectView.cs</DependentUpon>
     </EmbeddedResource>

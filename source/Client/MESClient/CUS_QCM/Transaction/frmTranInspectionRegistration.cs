@@ -167,7 +167,7 @@ namespace CUS_QCM
                 btnFileManager.Visible = true;
                 btnFileManager.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 AllowDrop = true;
-                //chkAutoRefresh.Checked = false;
+                chkAutoRefresh.Checked = false;
             }
             catch (Exception ex)
             {
@@ -3036,14 +3036,14 @@ namespace CUS_QCM
             if (cdvOper.Text == "OC05060" || cdvOper.Text == "OC05070")
             {
                 pnlGCM.Visible = true;
-                chkAutoRefresh.Checked = false;
-                tmrTimer.Stop();
+                //chkAutoRefresh.Checked = false;
+                //tmrTimer.Stop();
             }
             else if (cdvOper.Text == "OC04120")
             {
                 pnlUtComm.Visible = true;
-                chkAutoRefresh.Checked = false;
-                tmrTimer.Stop();
+                //chkAutoRefresh.Checked = false;
+                //tmrTimer.Stop();
             }
         }
 
@@ -3412,26 +3412,7 @@ namespace CUS_QCM
 
         private void chkAutoRefresh_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkAutoRefresh.Checked)
-            {
-                if (MPCF.ShowMsgBox(MPCF.GetMessage(612), MessageBoxButtons.YesNo, 1) != DialogResult.Yes)
-                {
-                    chkAutoRefresh.Checked = false;
-                }
-                else if (numRefreshSec.Value != 0m)
-                {
-                    tmrTimer.Interval = (int)numRefreshSec.Value * 1000;
-                    tmrTimer.Start();
-                }
-                else
-                {
-                    tmrTimer.Stop();
-                }
-            }
-            else
-            {
-                tmrTimer.Stop();
-            }
+
         }
 
         private void numRefreshSec_ValueChanged(object sender, EventArgs e)
@@ -3449,7 +3430,7 @@ namespace CUS_QCM
 
         private async void tmrTimer_Tick(object sender, EventArgs e)
         {
-            await RoundInFileAutoWrite();
+
         }
     }
 

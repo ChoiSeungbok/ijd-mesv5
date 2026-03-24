@@ -475,6 +475,10 @@ namespace CUS_QCM
             this.btnColSetId = new Infragistics.Win.Misc.UltraButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.btnFileManager = new Infragistics.Win.Misc.UltraButton();
+            this.chkAutoRefresh = new System.Windows.Forms.CheckBox();
+            this.numRefreshSec = new System.Windows.Forms.NumericUpDown();
+            this.lblSec = new System.Windows.Forms.Label();
+            this.tmrTimer = new System.Windows.Forms.Timer(this.components);
             spdDataCollection_InputMapWhenFocusedNormal = new FarPoint.Win.Spread.InputMap();
             spdDataCollection_InputMapWhenFocusedNormal.Parent = new FarPoint.Win.Spread.InputMap();
             spdDataCollectionISP_InputMapWhenFocusedNormal = new FarPoint.Win.Spread.InputMap();
@@ -541,6 +545,7 @@ namespace CUS_QCM
             ((System.ComponentModel.ISupportInitialize)(this.cdvInspOper)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cdvOper)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numRefreshSec)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlStsCond
@@ -591,7 +596,7 @@ namespace CUS_QCM
             // 
             // lblDirectQuery
             // 
-            this.lblDirectQuery.Location = new System.Drawing.Point(7008, 30);
+            this.lblDirectQuery.Location = new System.Drawing.Point(7151, 30);
             // 
             // btnClose
             // 
@@ -657,20 +662,26 @@ namespace CUS_QCM
             this.pnlBottom.Controls.Add(this.lblLastSpecTime);
             this.pnlBottom.Controls.Add(this.cboPort);
             this.pnlBottom.Controls.Add(this.btnPrint);
+            this.pnlBottom.Controls.Add(this.lblSec);
+            this.pnlBottom.Controls.Add(this.numRefreshSec);
+            this.pnlBottom.Controls.Add(this.chkAutoRefresh);
             this.pnlBottom.Location = new System.Drawing.Point(0, 770);
             this.pnlBottom.Size = new System.Drawing.Size(1382, 70);
+            this.pnlBottom.Controls.SetChildIndex(this.chkAutoRefresh, 0);
+            this.pnlBottom.Controls.SetChildIndex(this.numRefreshSec, 0);
+            this.pnlBottom.Controls.SetChildIndex(this.lblSec, 0);
             this.pnlBottom.Controls.SetChildIndex(this.btnPrint, 0);
             this.pnlBottom.Controls.SetChildIndex(this.cboPort, 0);
-            this.pnlBottom.Controls.SetChildIndex(this.btnView, 0);
             this.pnlBottom.Controls.SetChildIndex(this.lblLastSpecTime, 0);
             this.pnlBottom.Controls.SetChildIndex(this.txtLastSpecTime, 0);
             this.pnlBottom.Controls.SetChildIndex(this.btnHold, 0);
-            this.pnlBottom.Controls.SetChildIndex(this.btnClose, 0);
-            this.pnlBottom.Controls.SetChildIndex(this.btnProcess, 0);
             this.pnlBottom.Controls.SetChildIndex(this.btnSpec, 0);
             this.pnlBottom.Controls.SetChildIndex(this.brnReturn, 0);
             this.pnlBottom.Controls.SetChildIndex(this.btnColSetId, 0);
             this.pnlBottom.Controls.SetChildIndex(this.btnFileManager, 0);
+            this.pnlBottom.Controls.SetChildIndex(this.btnView, 0);
+            this.pnlBottom.Controls.SetChildIndex(this.btnClose, 0);
+            this.pnlBottom.Controls.SetChildIndex(this.btnProcess, 0);
             // 
             // pnlCenter
             // 
@@ -3285,7 +3296,7 @@ namespace CUS_QCM
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(430, 448);
+            this.tabPage2.Size = new System.Drawing.Size(430, 80);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Drawing Info";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -3306,8 +3317,8 @@ namespace CUS_QCM
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.BrwDrawing);
-            this.splitContainer1.Size = new System.Drawing.Size(424, 442);
-            this.splitContainer1.SplitterDistance = 27;
+            this.splitContainer1.Size = new System.Drawing.Size(424, 74);
+            this.splitContainer1.SplitterDistance = 25;
             this.splitContainer1.TabIndex = 261;
             // 
             // txtDrawingPath
@@ -3359,7 +3370,7 @@ namespace CUS_QCM
             this.BrwDrawing.Location = new System.Drawing.Point(0, 0);
             this.BrwDrawing.MinimumSize = new System.Drawing.Size(20, 20);
             this.BrwDrawing.Name = "BrwDrawing";
-            this.BrwDrawing.Size = new System.Drawing.Size(424, 411);
+            this.BrwDrawing.Size = new System.Drawing.Size(424, 45);
             this.BrwDrawing.TabIndex = 0;
             // 
             // ultraGroupBox2
@@ -3622,7 +3633,7 @@ namespace CUS_QCM
             this.tpgInspData.Location = new System.Drawing.Point(4, 22);
             this.tpgInspData.Name = "tpgInspData";
             this.tpgInspData.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgInspData.Size = new System.Drawing.Size(1354, 612);
+            this.tpgInspData.Size = new System.Drawing.Size(1354, 244);
             this.tpgInspData.TabIndex = 1;
             this.tpgInspData.Text = "File Registration";
             this.tpgInspData.UseVisualStyleBackColor = true;
@@ -3643,7 +3654,7 @@ namespace CUS_QCM
             this.grpFileRegistration.Location = new System.Drawing.Point(3, 3);
             this.grpFileRegistration.Margin = new System.Windows.Forms.Padding(5);
             this.grpFileRegistration.Name = "grpFileRegistration";
-            this.grpFileRegistration.Size = new System.Drawing.Size(1348, 606);
+            this.grpFileRegistration.Size = new System.Drawing.Size(1348, 238);
             this.grpFileRegistration.TabIndex = 252;
             this.grpFileRegistration.Text = "File Registration";
             // 
@@ -3655,7 +3666,7 @@ namespace CUS_QCM
             this.panFileRegistration.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panFileRegistration.Location = new System.Drawing.Point(1, 19);
             this.panFileRegistration.Name = "panFileRegistration";
-            this.panFileRegistration.Size = new System.Drawing.Size(1346, 586);
+            this.panFileRegistration.Size = new System.Drawing.Size(1346, 218);
             this.panFileRegistration.TabIndex = 0;
             // 
             // panel8
@@ -3666,7 +3677,7 @@ namespace CUS_QCM
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(754, 586);
+            this.panel8.Size = new System.Drawing.Size(754, 218);
             this.panel8.TabIndex = 258;
             // 
             // Brwpdf
@@ -3675,7 +3686,7 @@ namespace CUS_QCM
             this.Brwpdf.Location = new System.Drawing.Point(0, 0);
             this.Brwpdf.MinimumSize = new System.Drawing.Size(20, 20);
             this.Brwpdf.Name = "Brwpdf";
-            this.Brwpdf.Size = new System.Drawing.Size(754, 586);
+            this.Brwpdf.Size = new System.Drawing.Size(754, 218);
             this.Brwpdf.TabIndex = 255;
             this.Brwpdf.Url = new System.Uri("", System.UriKind.Relative);
             // 
@@ -3685,7 +3696,7 @@ namespace CUS_QCM
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(754, 586);
+            this.pictureBox1.Size = new System.Drawing.Size(754, 218);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 254;
             this.pictureBox1.TabStop = false;
@@ -3796,7 +3807,7 @@ namespace CUS_QCM
             namedStyle41});
             this.spdFileRegistration.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.spdFileRegistration_Sheet1});
-            this.spdFileRegistration.Size = new System.Drawing.Size(592, 586);
+            this.spdFileRegistration.Size = new System.Drawing.Size(592, 218);
             spreadSkin5.ColumnFooterDefaultStyle = namedStyle38;
             spreadSkin5.ColumnHeaderDefaultStyle = namedStyle36;
             spreadSkin5.CornerDefaultStyle = namedStyle40;
@@ -3913,7 +3924,7 @@ namespace CUS_QCM
             this.tpgInspIcp.Location = new System.Drawing.Point(4, 22);
             this.tpgInspIcp.Name = "tpgInspIcp";
             this.tpgInspIcp.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgInspIcp.Size = new System.Drawing.Size(1211, 612);
+            this.tpgInspIcp.Size = new System.Drawing.Size(1354, 244);
             this.tpgInspIcp.TabIndex = 2;
             this.tpgInspIcp.Text = "icp";
             this.tpgInspIcp.UseVisualStyleBackColor = true;
@@ -4024,7 +4035,7 @@ namespace CUS_QCM
             namedStyle50});
             this.spdDataCollectionISP.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.spdDataCollectionISP_Sheet1});
-            this.spdDataCollectionISP.Size = new System.Drawing.Size(1205, 557);
+            this.spdDataCollectionISP.Size = new System.Drawing.Size(1348, 189);
             spreadSkin6.ColumnFooterDefaultStyle = namedStyle47;
             spreadSkin6.ColumnHeaderDefaultStyle = namedStyle45;
             spreadSkin6.CornerDefaultStyle = namedStyle49;
@@ -4195,7 +4206,7 @@ namespace CUS_QCM
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel13.Location = new System.Drawing.Point(3, 3);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1205, 49);
+            this.panel13.Size = new System.Drawing.Size(1348, 49);
             this.panel13.TabIndex = 259;
             // 
             // btnGCM3
@@ -4643,6 +4654,61 @@ namespace CUS_QCM
             this.btnFileManager.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             this.btnFileManager.Click += new System.EventHandler(this.btnFileManager_Click);
             // 
+            // chkAutoRefresh
+            // 
+            this.chkAutoRefresh.Checked = true;
+            this.chkAutoRefresh.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkAutoRefresh.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.chkAutoRefresh.Location = new System.Drawing.Point(385, 28);
+            this.chkAutoRefresh.Name = "chkAutoRefresh";
+            this.chkAutoRefresh.Size = new System.Drawing.Size(95, 18);
+            this.chkAutoRefresh.TabIndex = 287;
+            this.chkAutoRefresh.Text = "Auto Refresh";
+            this.chkAutoRefresh.Visible = false;
+            // 
+            // numRefreshSec
+            // 
+            this.numRefreshSec.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numRefreshSec.Location = new System.Drawing.Point(476, 27);
+            this.numRefreshSec.Maximum = new decimal(new int[] {
+            6000,
+            0,
+            0,
+            0});
+            this.numRefreshSec.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numRefreshSec.Name = "numRefreshSec";
+            this.numRefreshSec.Size = new System.Drawing.Size(78, 20);
+            this.numRefreshSec.TabIndex = 288;
+            this.numRefreshSec.ThousandsSeparator = true;
+            this.numRefreshSec.Value = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.numRefreshSec.Visible = false;
+            // 
+            // lblSec
+            // 
+            this.lblSec.AutoSize = true;
+            this.lblSec.Location = new System.Drawing.Point(560, 31);
+            this.lblSec.Name = "lblSec";
+            this.lblSec.Size = new System.Drawing.Size(26, 13);
+            this.lblSec.TabIndex = 289;
+            this.lblSec.Text = "Sec";
+            this.lblSec.Visible = false;
+            // 
+            // tmrTimer
+            // 
+            this.tmrTimer.Interval = 60000;
+            // 
             // frmTranInspectionRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4729,6 +4795,7 @@ namespace CUS_QCM
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cdvOper)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numRefreshSec)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4850,14 +4917,11 @@ namespace CUS_QCM
         public System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtRdIfRecipe;
         private System.Windows.Forms.TextBox txtDrawingPath;
-
-        private System.Windows.Forms.Timer tmrTimer;
-
-        private System.Windows.Forms.CheckBox chkAutoRefresh;
-
-        private System.Windows.Forms.NumericUpDown numRefreshSec;
-
-        private System.Windows.Forms.Label lblSec;
+         
+        private CheckBox chkAutoRefresh;
+        private NumericUpDown numRefreshSec;
+        private Label lblSec;
+        private Timer tmrTimer;
         // private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
         //     private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
     }
