@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             FarPoint.Win.Spread.CellType.ColumnHeaderRenderer columnHeaderRenderer2 = new FarPoint.Win.Spread.CellType.ColumnHeaderRenderer();
             FarPoint.Win.Spread.CellType.RowHeaderRenderer rowHeaderRenderer2 = new FarPoint.Win.Spread.CellType.RowHeaderRenderer();
             FarPoint.Win.Spread.CellType.ColumnHeaderRenderer columnHeaderRenderer1 = new FarPoint.Win.Spread.CellType.ColumnHeaderRenderer();
@@ -295,6 +294,12 @@
             FarPoint.Win.Spread.CellType.ColumnHeaderRenderer columnHeaderRenderer89 = new FarPoint.Win.Spread.CellType.ColumnHeaderRenderer();
             FarPoint.Win.Spread.CellType.RowHeaderRenderer rowHeaderRenderer176 = new FarPoint.Win.Spread.CellType.RowHeaderRenderer();
             FarPoint.Win.Spread.CellType.RowHeaderRenderer rowHeaderRenderer177 = new FarPoint.Win.Spread.CellType.RowHeaderRenderer();
+            FarPoint.Win.Spread.CellType.ColumnHeaderRenderer columnHeaderRenderer90 = new FarPoint.Win.Spread.CellType.ColumnHeaderRenderer();
+            FarPoint.Win.Spread.CellType.RowHeaderRenderer rowHeaderRenderer178 = new FarPoint.Win.Spread.CellType.RowHeaderRenderer();
+            FarPoint.Win.Spread.CellType.RowHeaderRenderer rowHeaderRenderer179 = new FarPoint.Win.Spread.CellType.RowHeaderRenderer();
+            FarPoint.Win.Spread.CellType.ColumnHeaderRenderer columnHeaderRenderer91 = new FarPoint.Win.Spread.CellType.ColumnHeaderRenderer();
+            FarPoint.Win.Spread.CellType.RowHeaderRenderer rowHeaderRenderer180 = new FarPoint.Win.Spread.CellType.RowHeaderRenderer();
+            FarPoint.Win.Spread.CellType.RowHeaderRenderer rowHeaderRenderer181 = new FarPoint.Win.Spread.CellType.RowHeaderRenderer();
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
             FarPoint.Win.Spread.DefaultFocusIndicatorRenderer defaultFocusIndicatorRenderer1 = new FarPoint.Win.Spread.DefaultFocusIndicatorRenderer();
@@ -476,6 +481,7 @@
             this.txtProdQty = new System.Windows.Forms.TextBox();
             this.lblProdQty = new System.Windows.Forms.Label();
             this.btnAdd = new Infragistics.Win.Misc.UltraButton();
+            this.chkPaste = new System.Windows.Forms.CheckBox();
             this.grpLossInfo = new Infragistics.Win.Misc.UltraGroupBox();
             this.spdLossList = new FarPoint.Win.Spread.FpSpread();
             this.spdLossList_Sheet1 = new FarPoint.Win.Spread.SheetView();
@@ -517,7 +523,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cboPort = new System.Windows.Forms.ComboBox();
             this.btnPortOpen = new Infragistics.Win.Misc.UltraButton();
-            this.spScanner = new System.IO.Ports.SerialPort(this.components);
+            this.spScanner = new System.IO.Ports.SerialPort();
             ((System.ComponentModel.ISupportInitialize)(this.cdvOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cdvResource)).BeginInit();
             this.pnlStsCond.SuspendLayout();
@@ -2536,6 +2542,46 @@
             rowHeaderRenderer177.RightToLeft = System.Windows.Forms.RightToLeft.No;
             rowHeaderRenderer177.TextRotationAngle = 0D;
             rowHeaderRenderer177.ZoomFactor = 1F;
+            columnHeaderRenderer90.BackColor = System.Drawing.SystemColors.Control;
+            columnHeaderRenderer90.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            columnHeaderRenderer90.ForeColor = System.Drawing.SystemColors.ControlText;
+            columnHeaderRenderer90.Name = "columnHeaderRenderer90";
+            columnHeaderRenderer90.PictureZoomEffect = false;
+            columnHeaderRenderer90.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            columnHeaderRenderer90.TextRotationAngle = 0D;
+            columnHeaderRenderer90.ZoomFactor = 1F;
+            rowHeaderRenderer178.BackColor = System.Drawing.SystemColors.Control;
+            rowHeaderRenderer178.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            rowHeaderRenderer178.ForeColor = System.Drawing.SystemColors.ControlText;
+            rowHeaderRenderer178.Name = "rowHeaderRenderer178";
+            rowHeaderRenderer178.PictureZoomEffect = false;
+            rowHeaderRenderer178.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            rowHeaderRenderer178.TextRotationAngle = 0D;
+            rowHeaderRenderer178.ZoomFactor = 1F;
+            rowHeaderRenderer179.BackColor = System.Drawing.SystemColors.Control;
+            rowHeaderRenderer179.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            rowHeaderRenderer179.ForeColor = System.Drawing.SystemColors.ControlText;
+            rowHeaderRenderer179.Name = "rowHeaderRenderer179";
+            rowHeaderRenderer179.PictureZoomEffect = false;
+            rowHeaderRenderer179.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            rowHeaderRenderer179.TextRotationAngle = 0D;
+            rowHeaderRenderer179.ZoomFactor = 1F;
+            columnHeaderRenderer91.Name = "columnHeaderRenderer91";
+            columnHeaderRenderer91.PictureZoomEffect = false;
+            columnHeaderRenderer91.TextRotationAngle = 0D;
+            columnHeaderRenderer91.ZoomFactor = 1F;
+            rowHeaderRenderer180.Name = "rowHeaderRenderer180";
+            rowHeaderRenderer180.PictureZoomEffect = false;
+            rowHeaderRenderer180.TextRotationAngle = 0D;
+            rowHeaderRenderer180.ZoomFactor = 1F;
+            rowHeaderRenderer181.BackColor = System.Drawing.SystemColors.Control;
+            rowHeaderRenderer181.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            rowHeaderRenderer181.ForeColor = System.Drawing.SystemColors.ControlText;
+            rowHeaderRenderer181.Name = "rowHeaderRenderer181";
+            rowHeaderRenderer181.PictureZoomEffect = false;
+            rowHeaderRenderer181.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            rowHeaderRenderer181.TextRotationAngle = 0D;
+            rowHeaderRenderer181.ZoomFactor = 1F;
             // 
             // lblWorkGroup
             // 
@@ -2739,7 +2785,7 @@
             namedStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
             namedStyle6.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
             namedStyle6.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle6.Renderer = columnHeaderRenderer89;
+            namedStyle6.Renderer = columnHeaderRenderer91;
             namedStyle6.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
             namedStyle6.VisualStyles = FarPoint.Win.VisualStyles.Auto;
             namedStyle7.BackColor = System.Drawing.SystemColors.Control;
@@ -2749,14 +2795,14 @@
             namedStyle7.Locked = false;
             namedStyle7.NoteIndicatorColor = System.Drawing.Color.Red;
             namedStyle7.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
-            namedStyle7.Renderer = rowHeaderRenderer177;
+            namedStyle7.Renderer = rowHeaderRenderer181;
             namedStyle7.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
             namedStyle7.VisualStyles = FarPoint.Win.VisualStyles.Auto;
             namedStyle8.BackColor = System.Drawing.SystemColors.Control;
             namedStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
             namedStyle8.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
             namedStyle8.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle8.Renderer = rowHeaderRenderer176;
+            namedStyle8.Renderer = rowHeaderRenderer180;
             namedStyle8.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
             namedStyle8.VisualStyles = FarPoint.Win.VisualStyles.Auto;
             namedStyle9.BackColor = System.Drawing.Color.White;
@@ -2813,6 +2859,7 @@
             this.spdLotList.Change += new FarPoint.Win.Spread.ChangeEventHandler(this.spdLotList_Change);
             this.spdLotList.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.spdLotList_CellClick);
             this.spdLotList.ButtonClicked += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.spdLotList_ButtonClicked);
+            this.spdLotList.KeyDown += new System.Windows.Forms.KeyEventHandler(this.spdLotList_KeyDown);
             // 
             // spdLotList_Sheet1
             // 
@@ -2846,7 +2893,6 @@
             this.spdLotList_Sheet1.ColumnFooter.DefaultStyle.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.General;
             this.spdLotList_Sheet1.ColumnFooter.Visible = true;
             this.spdLotList_Sheet1.ColumnHeader.Cells.Get(0, 0).CellType = checkBoxCellType1;
-            this.spdLotList_Sheet1.ColumnHeader.Cells.Get(0, 0).Value = "PROD_QTY";
             this.spdLotList_Sheet1.ColumnHeader.Cells.Get(0, 1).Value = "LOT ID";
             this.spdLotList_Sheet1.ColumnHeader.Cells.Get(0, 2).Value = "Material ID";
             this.spdLotList_Sheet1.ColumnHeader.Cells.Get(0, 3).Value = "Material Desc";
@@ -2867,7 +2913,6 @@
             this.spdLotList_Sheet1.ColumnHeader.Rows.Get(0).Height = 25F;
             this.spdLotList_Sheet1.Columns.Get(0).CellType = checkBoxCellType2;
             this.spdLotList_Sheet1.Columns.Get(0).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
-            this.spdLotList_Sheet1.Columns.Get(0).Label = "PROD_QTY";
             this.spdLotList_Sheet1.Columns.Get(0).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
             this.spdLotList_Sheet1.Columns.Get(0).Width = 33F;
             this.spdLotList_Sheet1.Columns.Get(1).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Left;
@@ -3042,6 +3087,7 @@
             this.panLotInfo.Controls.Add(this.txtProdQty);
             this.panLotInfo.Controls.Add(this.lblProdQty);
             this.panLotInfo.Controls.Add(this.btnAdd);
+            this.panLotInfo.Controls.Add(this.chkPaste);
             this.panLotInfo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panLotInfo.Location = new System.Drawing.Point(1, 19);
             this.panLotInfo.Name = "panLotInfo";
@@ -3130,6 +3176,18 @@
             this.btnAdd.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
             this.btnAdd.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // chkPaste
+            // 
+            this.chkPaste.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkPaste.AutoSize = true;
+            this.chkPaste.Location = new System.Drawing.Point(428, 12);
+            this.chkPaste.Name = "chkPaste";
+            this.chkPaste.Size = new System.Drawing.Size(168, 20);
+            this.chkPaste.TabIndex = 255;
+            this.chkPaste.Text = "Paste multiple Lot ID";
+            this.chkPaste.UseVisualStyleBackColor = true;
+            this.chkPaste.CheckedChanged += new System.EventHandler(this.chkPaste_CheckedChanged);
             // 
             // grpLossInfo
             // 
@@ -4791,5 +4849,6 @@
         private System.Windows.Forms.RadioButton rdoLot;
         private System.Windows.Forms.RadioButton rdoAll;
         protected Infragistics.Win.Misc.UltraButton btnMatSetup;
+        private System.Windows.Forms.CheckBox chkPaste;
     }
 }

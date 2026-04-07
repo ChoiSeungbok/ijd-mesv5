@@ -145,6 +145,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Inquiry\frmViewDlvLotListVendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\frmViewDlvLotListVendor.Designer.cs">
+      <DependentUpon>frmViewDlvLotListVendor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inquiry\frmViewETCLotList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -379,6 +385,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Inquiry\frmViewDlvLotListVendor.resx">
+      <DependentUpon>frmViewDlvLotListVendor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inquiry\frmViewETCLotList.resx">
       <DependentUpon>frmViewETCLotList.cs</DependentUpon>
     </EmbeddedResource>

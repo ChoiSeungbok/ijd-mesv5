@@ -5333,6 +5333,11 @@
       <L>입하 LOT 현황</L>
       <L>Xem danh sách lô Dlv</L>
     </Text>
+    <Text Key="View Dlv Lot List(Vendor Lot ID)">
+      <L>View Dlv Lot List(Vendor Lot ID)</L>
+      <L>입하 LOT 현황(Vendor Lot ID)</L>
+      <L>Xem danh sách lô Dlv(Vendor Lot ID)</L>
+    </Text>
     <Text Key="View Down Time List">
       <L>View Down Time List</L>
       <L>비가동 조회</L>
@@ -10230,6 +10235,11 @@
       <L>Change Value</L>
       <L>변경값</L>
       <L>Change Value</L>
+    </Text>
+    <Text Key="Change Vendor Lot ID">
+      <L>Change Vendor Lot ID</L>
+      <L>Vendor Lot ID 변경</L>
+      <L>Change Vendor Lot ID</L>
     </Text>
     <Text Key="Change Work Time">
       <L>Change Work Time</L>
@@ -23154,6 +23164,11 @@
       <L>2.패스워드 변경주기는 3개월입니다</L>
       <L>Password change cycle is 3 months</L>
     </Text>
+    <Text Key="Paste multiple Lot ID">
+      <L>Paste multiple Lot ID</L>
+      <L>다중 Lot ID 붙여넣기</L>
+      <L>Paste multiple Lot ID</L>
+    </Text>
     <Text Key="Pds Cmf 1">
       <L>Pds Cmf 1</L>
       <L>Pds Cmf 1</L>
@@ -31409,6 +31424,11 @@
       <L>수정 사용자</L>
       <L>Update UserID</L>
     </Text>
+    <Text Key="Update Vendor Lot ID">
+      <L>Update Vendor Lot ID</L>
+      <L>Vendor Lot ID 변경</L>
+      <L>Update Vendor Lot ID</L>
+    </Text>
     <Text Key="Upload Date">
       <L>Upload Date</L>
       <L>업로드 시간</L>
@@ -32138,6 +32158,11 @@
       <L>View Dlv Lot List</L>
       <L>입하 LOT 현황</L>
       <L>Xem danh sách lô Dlv</L>
+    </Text>
+    <Text Key="View Dlv Lot List(Vendor Lot ID)">
+      <L>View Dlv Lot Listt(Vendor Lot ID)</L>
+      <L>입하 LOT 현황(Vendor Lot ID)</L>
+      <L>Xem danh sách lô Dlvt(Vendor Lot ID)</L>
     </Text>
     <Text Key="View EDC Data">
       <L>View EDC Data</L>

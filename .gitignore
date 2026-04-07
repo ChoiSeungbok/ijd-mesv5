@@ -27,6 +27,8 @@
 *.ilk
 *.lib
 *.exp
+*.sbr
+*.licx
 
 # Build Results
 [Bb]in/

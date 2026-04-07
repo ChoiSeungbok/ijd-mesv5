@@ -1807,6 +1807,52 @@ namespace CUS_WIP
             }
         }
 
+        public bool Clipboard_to_LotList(string pClipboard)
+        { 
+            // bool bResult = false;
+
+            try
+            {
+                // Row Data를 담기위해 List<T> 컬렉션 선언
+                List<List<string>> tables = new List<List<string>>();
+
+                // 줄바꿈 기준으로 Split
+                string importText = pClipboard;
+                string[] plines = importText.Split('\n');
+
+
+                // Split 된 문자만큼 반복
+                for (int i = 0; i < plines.Length - 1; i++)
+                {
+                    // 없다면 빠져나감
+                    if (string.IsNullOrEmpty(plines[i]))
+                        break;
+
+                    // 임시로 String을 담을 List<T> 선언
+                    List<string> cellList = new List<string>();
+                    string[] cells = plines[i].Split('\t');
+
+                    for (int j = 0; j <= cells.Length - 1; j++)
+                    {
+                        cells[j] = cells[j].Replace(Environment.NewLine, string.Empty);
+                    }
+                    // 임시 List<T>에 값을 담고, 담아진 List를 
+                    cellList.AddRange(cells);
+                    // List 배열에 List를 Add한다.
+                    tables.Add(cellList);
+                }
+
+                // bResult = true;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+                return false;
+            }
+             
+        }
+
         #endregion
 
         #region " Event Definition "
@@ -2933,12 +2979,63 @@ namespace CUS_WIP
 
 
 
+
+
+
+
+
         #endregion
 
+        private void txtClipboard_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.V) // Use Keys.Return or Keys.Enter
+            {
+                Clipboard_to_LotList(Clipboard.GetText()); 
+            }
+        }
 
+        private void spdLotList_KeyDown(object sender, KeyEventArgs e)
+        {            
+            try
+            {
+                if (e.KeyCode == Keys.V)
+                {
+                    if (chkPaste.Checked == true)
+                    {
+                        string s = Clipboard.GetText();
+                        string[] lines = s.Replace("\n", "").Split('\r');
 
+                        if (lines.Length > 0)
+                        {
+                            for (int i = 0; i < lines.Length - 1; i++)
+                            {
+                                string sLotId = lines[i];
 
+                                if (sLotId != "")
+                                {
+                                    ViewLotInfo(sLotId);
+                                }
+                            }
 
+                        }
+                    }
+                }
+            }             
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+            }
+            
+        }
+
+        private void chkPaste_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkPaste.Checked == true)
+            {
+                spdLotList.Focus();
+            }
+            
+        }
     }
 
 }
