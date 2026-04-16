@@ -724,6 +724,46 @@ namespace CUS_WIP
             }
         }
 
+        //BOM 수량과 비교 2개공정만 : OG07110(Sputter-세척), OG07210(MVD-혼합) 
+        private bool CheckBomQty()
+        {
+            string sBomMat = ""; 
+            double dBomQty = 0;            
+
+            try
+            { 
+                for (int i = 0; i < spdBom.ActiveSheet.RowCount; i++)
+                {
+                    double dInputQty = 0;
+                    sBomMat = MPCF.Trim(spdBom.ActiveSheet.Cells[i, (int)BOM.MAT_ID].Text);
+                    dBomQty = MPCF.ToDbl(spdBom.ActiveSheet.Cells[i, (int)BOM.TOTAL_QTY].Text);
+                    
+                    for (int j = 0; j < spdInputList.ActiveSheet.RowCount; j++)
+                    {                        
+                        if (MPCF.Trim(spdInputList.ActiveSheet.Cells[j, (int)INPUT.MAT_ID].Text) == sBomMat)
+                        {
+                            dInputQty = dInputQty + MPCF.ToDbl(spdInputList.ActiveSheet.Cells[j, (int)INPUT.INPUT_QTY].Value);
+                        }                            
+                    }
+                    
+                    //if(dBomQty <> dInputQty) 
+                    if(dBomQty != dInputQty)
+                    {
+                        //CMN624 ERROR - 투입 수량과 BOM 수량이 일치하지 않습니다. 투입수량을 확인하십시오. 
+                        MPCF.ShowMsgBox(MPCF.GetMessage(108) + " BOM 수량 [" + dBomQty + "], 투입 수량 [" + dInputQty + "]");
+                        return false; 
+                    }
+                    
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+                return false;
+            }
+        }
+
         #endregion
 
         #region " Event Definition "
@@ -1185,6 +1225,15 @@ namespace CUS_WIP
             {
                 if (CheckCondition(CSGC.CHECK.SAVE) == false)
                     return;
+
+                // GRIT팀 요청건 2개공정인 경우 OG07110(Sputter-세척), OG07210(MVD - 혼합) BOM 소수점까지 모두 체크하여 다를 경우 메세지
+                if (cdvOper.Text == "OG07110" || cdvOper.Text == "OG07210")
+                {
+                    if (CheckBomQty() == false) 
+                    {
+                        return;
+                    }
+                }
 
                 if (InputMat())
                 {

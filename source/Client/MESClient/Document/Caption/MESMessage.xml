@@ -2622,4 +2622,9 @@ Do you want to continue?
     <L>[GW-FGI]제품 창고의 로트는 병합할 수 없습니다.</L>
     <L>[GW-FGI]Lots in the product warehouse  cannot be merged.</L>
   </Text>
+  <Text Key="624">
+    <L>CMN624 ERROR - Input quantity and BOM quantity do not match. Pleas, Check again.</L>
+    <L>CMN624 ERROR - 투입 수량과 BOM 수량이 일치하지 않습니다. 투입수량을 확인하십시오.</L>
+    <L>CMN624 ERROR - Input quantity and BOM quantity do not match. Pleas, Check again.</L>
+  </Text>
 </Message>

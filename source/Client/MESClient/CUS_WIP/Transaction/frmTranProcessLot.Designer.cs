@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             FarPoint.Win.Spread.CellType.ColumnHeaderRenderer columnHeaderRenderer2 = new FarPoint.Win.Spread.CellType.ColumnHeaderRenderer();
             FarPoint.Win.Spread.CellType.RowHeaderRenderer rowHeaderRenderer2 = new FarPoint.Win.Spread.CellType.RowHeaderRenderer();
             FarPoint.Win.Spread.CellType.ColumnHeaderRenderer columnHeaderRenderer1 = new FarPoint.Win.Spread.CellType.ColumnHeaderRenderer();
@@ -523,7 +524,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cboPort = new System.Windows.Forms.ComboBox();
             this.btnPortOpen = new Infragistics.Win.Misc.UltraButton();
-            this.spScanner = new System.IO.Ports.SerialPort();
+            this.spScanner = new System.IO.Ports.SerialPort(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.cdvOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cdvResource)).BeginInit();
             this.pnlStsCond.SuspendLayout();
