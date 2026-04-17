@@ -42,6 +42,7 @@ namespace CUS_SHP
             PACKED_QTY,
             REMAIN_QTY,
             UNIT,
+            INCLUDE_INSPECTION,
             PACKING_INSTRUCTIONS,
             PACK_ORD_STATUS,
             ERP_PACK_ORDER_ID,
@@ -61,8 +62,7 @@ namespace CUS_SHP
             PO_GUBUN,
             LABEL_TYPE,
             LABEL_MESH,
-            LABEL_NAME,
-            INCLUDE_INSPECTION
+            LABEL_NAME
         }
 
         private enum PACK_LOT
@@ -163,24 +163,25 @@ namespace CUS_SHP
                     spdOrderList_Sheet1.Cells[num, 6].Value = dt.Rows[num]["PACKED_QTY"];
                     spdOrderList_Sheet1.Cells[num, 7].Value = Convert.ToDouble(dt.Rows[num]["QTY"]) - Convert.ToDouble(dt.Rows[num]["REG_QTY"]);
                     spdOrderList_Sheet1.Cells[num, 8].Value = dt.Rows[num]["UNIT"];
-                    spdOrderList_Sheet1.Cells[num, 10].Value = dt.Rows[num]["PACK_ORD_STATUS"];
-                    spdOrderList_Sheet1.Cells[num, 12].Value = dt.Rows[num]["CUSTOMER_ID"];
-                    spdOrderList_Sheet1.Cells[num, 13].Value = dt.Rows[num]["CUSTOMER_SITE_ID"];
-                    spdOrderList_Sheet1.Cells[num, 14].Value = dt.Rows[num]["CUSTOMER_NAME"];
-                    spdOrderList_Sheet1.Cells[num, 15].Value = dt.Rows[num]["DELIVERY_ID"];
-                    spdOrderList_Sheet1.Cells[num, 16].Value = dt.Rows[num]["DELIVERY_NAME"];
-                    spdOrderList_Sheet1.Cells[num, 9].Value = dt.Rows[num]["PACKING_INSTRUCTIONS"];
-                    spdOrderList_Sheet1.Cells[num, 19].Value = dt.Rows[num]["OPER"];
-                    spdOrderList_Sheet1.Cells[num, 20].Value = dt.Rows[num]["OPER_DESC"];
-                    spdOrderList_Sheet1.Cells[num, 21].Value = dt.Rows[num]["DRAWING_FLAG"];
-                    spdOrderList_Sheet1.Cells[num, 22].Value = dt.Rows[num]["ORDER_TYPE"];
-                    spdOrderList_Sheet1.Cells[num, 23].Value = MPCF.MakeDateFormat(dt.Rows[num]["REQUEST_DATE"].ToString(), DATE_TIME_FORMAT.DATE);
-                    spdOrderList_Sheet1.Cells[num, 24].Value = MPCF.MakeDateFormat(dt.Rows[num]["SCHEDULE_SHIP_DATE"].ToString(), DATE_TIME_FORMAT.DATE);
-                    spdOrderList_Sheet1.Cells[num, 25].Value = dt.Rows[num]["PO_GUBUN"];
-                    spdOrderList_Sheet1.Cells[num, 26].Value = dt.Rows[num]["LABEL_TYPE"];
-                    spdOrderList_Sheet1.Cells[num, 27].Value = dt.Rows[num]["LABEL_MESH"];
-                    spdOrderList_Sheet1.Cells[num, 28].Value = dt.Rows[num]["LABEL_NAME"];
-                    spdOrderList_Sheet1.Cells[num, 29].Value = dt.Rows[num]["INCLUDE_INSPECTION"];
+                    spdOrderList_Sheet1.Cells[num, 9].Value = dt.Rows[num]["INCLUDE_INSPECTION"];
+                    spdOrderList_Sheet1.Cells[num, 11].Value = dt.Rows[num]["PACK_ORD_STATUS"];
+                    spdOrderList_Sheet1.Cells[num, 13].Value = dt.Rows[num]["CUSTOMER_ID"];
+                    spdOrderList_Sheet1.Cells[num, 14].Value = dt.Rows[num]["CUSTOMER_SITE_ID"];
+                    spdOrderList_Sheet1.Cells[num, 15].Value = dt.Rows[num]["CUSTOMER_NAME"];
+                    spdOrderList_Sheet1.Cells[num, 16].Value = dt.Rows[num]["DELIVERY_ID"];
+                    spdOrderList_Sheet1.Cells[num, 17].Value = dt.Rows[num]["DELIVERY_NAME"];
+
+                    spdOrderList_Sheet1.Cells[num, 10].Value = dt.Rows[num]["PACKING_INSTRUCTIONS"];
+                    spdOrderList_Sheet1.Cells[num, 20].Value = dt.Rows[num]["OPER"];
+                    spdOrderList_Sheet1.Cells[num, 21].Value = dt.Rows[num]["OPER_DESC"];
+                    spdOrderList_Sheet1.Cells[num, 22].Value = dt.Rows[num]["DRAWING_FLAG"];
+                    spdOrderList_Sheet1.Cells[num, 23].Value = dt.Rows[num]["ORDER_TYPE"];
+                    spdOrderList_Sheet1.Cells[num, 24].Value = MPCF.MakeDateFormat(dt.Rows[num]["REQUEST_DATE"].ToString(), DATE_TIME_FORMAT.DATE);
+                    spdOrderList_Sheet1.Cells[num, 25].Value = MPCF.MakeDateFormat(dt.Rows[num]["SCHEDULE_SHIP_DATE"].ToString(), DATE_TIME_FORMAT.DATE);
+                    spdOrderList_Sheet1.Cells[num, 26].Value = dt.Rows[num]["PO_GUBUN"];
+                    spdOrderList_Sheet1.Cells[num, 27].Value = dt.Rows[num]["LABEL_TYPE"];
+                    spdOrderList_Sheet1.Cells[num, 28].Value = dt.Rows[num]["LABEL_MESH"];
+                    spdOrderList_Sheet1.Cells[num, 29].Value = dt.Rows[num]["LABEL_NAME"];
                     if (packOrderId == spdOrderList_Sheet1.Cells[num, 0].Value.ToString().Trim() && packLineNo == spdOrderList_Sheet1.Cells[num, 1].Value.ToString().Trim())
                     {
                         EXTFUC.SetSelectSheet(spdOrderList, num);

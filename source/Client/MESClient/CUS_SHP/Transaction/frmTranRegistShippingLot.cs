@@ -218,6 +218,7 @@ namespace CUS_SHP
                     spdOrderDetailList_Sheet1.Cells[num, 10].Value = dt.Rows[num]["UNIT"];
                     spdOrderDetailList_Sheet1.Cells[num, 9].Value = dt.Rows[num]["REG_QTY"];
                     spdOrderDetailList_Sheet1.Cells[num, 3].Value = dt.Rows[num]["LABEL_NAME"];
+                    spdOrderDetailList_Sheet1.Cells[num, 13].Value = dt.Rows[num]["INCLUDE_INSPECTION"];
                     if (shipOrderId == spdOrderDetailList_Sheet1.Cells[num, 0].Value.ToString().Trim() && seq == spdOrderDetailList_Sheet1.Cells[num, 1].Value.ToString().Trim())
                     {
                         EXTFUC.SetSelectSheet(spdOrderDetailList, num);

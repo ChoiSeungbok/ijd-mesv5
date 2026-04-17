@@ -39,26 +39,26 @@ namespace CUS_SHP
             PACKED_QTY,            // 7 : 포장된 수량
             REMAIN_QTY,            // 8 : 잔량
             UNIT,                  // 9 : 단위          
-            ERP_PACK_ORDER_ID,     // 10 : ERP 포장 지시 번호
-            CUSTOMER_NAME,         // 11 : 고객사명
-            DELIVERY_NAME,         // 12 : 최종 납품처명
-            CUSTOMER_ID,           // 13 : 고객사
-            CUSTOMER_SITE_ID,      // 14 : 고객사 SITE ID            
-            DELIVERY_ID,           // 15 : 납품처 ID            
-            PACKING_INSTRUCTIONS,  // 16 : 용기
-            DRAWING_FLAG,          // 17 : 도면유무
-            MAT_ID,                // 18 : 제품명
-            MAT_VER,               // 19 : 버전
-            OPER,                  // 20: 창고
-            OPER_DESC,             // 21 : 창고명                        
-            ORDER_TYPE,            // 22 : 주문유형
-            REQUEST_DATE,          // 23 : 출하요청일 
-            SCHEDULE_SHIP_DATE,    // 24 : 출하예정일
-            PO_GUBUN,              // 25 : 발주구분
-            LABEL_TYPE,            // 26 : 라벨 유형
-            LABEL_MESH,            // 27 : 라벨 사이즈 
-            LABEL_NAME,            // 28 : 라벨품명
-            INCLUDE_INSPECTION,    // 29 : 검사 성적서 포함 여부
+            INCLUDE_INSPECTION,    // 10 : 검사 성적서 포함 여부
+            ERP_PACK_ORDER_ID,     // 11 : ERP 포장 지시 번호
+            CUSTOMER_NAME,         // 12 : 고객사명
+            DELIVERY_NAME,         // 13 : 최종 납품처명
+            CUSTOMER_ID,           // 14 : 고객사
+            CUSTOMER_SITE_ID,      // 15 : 고객사 SITE ID            
+            DELIVERY_ID,           // 16 : 납품처 ID            
+            PACKING_INSTRUCTIONS,  // 17 : 용기
+            DRAWING_FLAG,          // 18 : 도면유무
+            MAT_ID,                // 19 : 제품명
+            MAT_VER,               // 20 : 버전
+            OPER,                  // 21: 창고
+            OPER_DESC,             // 22 : 창고명                        
+            ORDER_TYPE,            // 23 : 주문유형
+            REQUEST_DATE,          // 24 : 출하요청일 
+            SCHEDULE_SHIP_DATE,    // 25 : 출하예정일
+            PO_GUBUN,              // 26 : 발주구분
+            LABEL_TYPE,            // 27 : 라벨 유형
+            LABEL_MESH,            // 28 : 라벨 사이즈 
+            LABEL_NAME,            // 29 : 라벨품명            
             PACK_ORD_STATUS,       // 30 : 포장상태
         }
 
@@ -206,6 +206,7 @@ namespace CUS_SHP
                     spdOrderList_Sheet1.Cells[i, (int)PACK_ORDER.PACKED_QTY].Value = dt.Rows[i]["PACKED_QTY"];
                     spdOrderList_Sheet1.Cells[i, (int)PACK_ORDER.REMAIN_QTY].Value = Convert.ToDouble(dt.Rows[i]["QTY"]) - Convert.ToDouble(dt.Rows[i]["REG_QTY"]);
                     spdOrderList_Sheet1.Cells[i, (int)PACK_ORDER.UNIT].Value = dt.Rows[i]["UNIT"];
+                    spdOrderList_Sheet1.Cells[i, (int)PACK_ORDER.INCLUDE_INSPECTION].Value = dt.Rows[i]["INCLUDE_INSPECTION"];
                     spdOrderList_Sheet1.Cells[i, (int)PACK_ORDER.PACK_ORD_STATUS].Value = dt.Rows[i]["PACK_ORD_STATUS"];
                     spdOrderList_Sheet1.Cells[i, (int)PACK_ORDER.CUSTOMER_ID].Value = dt.Rows[i]["CUSTOMER_ID"];
                     spdOrderList_Sheet1.Cells[i, (int)PACK_ORDER.CUSTOMER_SITE_ID].Value = dt.Rows[i]["CUSTOMER_SITE_ID"];
@@ -222,8 +223,7 @@ namespace CUS_SHP
                     spdOrderList_Sheet1.Cells[i, (int)PACK_ORDER.PO_GUBUN].Value = dt.Rows[i]["PO_GUBUN"];
                     spdOrderList_Sheet1.Cells[i, (int)PACK_ORDER.LABEL_TYPE].Value = dt.Rows[i]["LABEL_TYPE"];
                     spdOrderList_Sheet1.Cells[i, (int)PACK_ORDER.LABEL_MESH].Value = dt.Rows[i]["LABEL_MESH"];
-                    spdOrderList_Sheet1.Cells[i, (int)PACK_ORDER.LABEL_NAME].Value = dt.Rows[i]["LABEL_NAME"];
-                    spdOrderList_Sheet1.Cells[i, (int)PACK_ORDER.INCLUDE_INSPECTION].Value = dt.Rows[i]["INCLUDE_INSPECTION"];
+                    spdOrderList_Sheet1.Cells[i, (int)PACK_ORDER.LABEL_NAME].Value = dt.Rows[i]["LABEL_NAME"];                    
                     
                     if (packOrderId == spdOrderList_Sheet1.Cells[i, (int)PACK_ORDER.PACK_ORDER_ID].Value.ToString().Trim()
                            && packLineNo == spdOrderList_Sheet1.Cells[i, (int)PACK_ORDER.LINE_NO].Value.ToString().Trim())
