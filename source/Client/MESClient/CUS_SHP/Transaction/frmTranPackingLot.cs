@@ -153,9 +153,9 @@ namespace CUS_SHP
                     spdOrderList_Sheet1.RowCount++;
                     spdOrderList_Sheet1.Cells[num, 0].Value = dt.Rows[num]["PACK_ORDER_ID"];
                     spdOrderList_Sheet1.Cells[num, 1].Value = dt.Rows[num]["LINE_NO"];
-                    spdOrderList_Sheet1.Cells[num, 11].Value = dt.Rows[num]["CMF_1"];
-                    spdOrderList_Sheet1.Cells[num, 17].Value = dt.Rows[num]["MAT_ID"];
-                    spdOrderList_Sheet1.Cells[num, 18].Value = dt.Rows[num]["MAT_VER"];
+                    spdOrderList_Sheet1.Cells[num, 12].Value = dt.Rows[num]["CMF_1"];
+                    spdOrderList_Sheet1.Cells[num, 18].Value = dt.Rows[num]["MAT_ID"];
+                    spdOrderList_Sheet1.Cells[num, 19].Value = dt.Rows[num]["MAT_VER"];
                     spdOrderList_Sheet1.Cells[num, 2].Value = dt.Rows[num]["MAT_DESC"];
                     spdOrderList_Sheet1.Cells[num, 3].Value = MPCF.MakeDateFormat(dt.Rows[num]["PACK_ORD_DATE"].ToString(), DATE_TIME_FORMAT.DATE);
                     spdOrderList_Sheet1.Cells[num, 4].Value = dt.Rows[num]["QTY"];
@@ -681,7 +681,7 @@ namespace CUS_SHP
                     if (cdvDept.Text == CSGV.gs_area_ctm)
                     {
                         string text = spdOrderList.ActiveSheet.Cells[e.Row, 2].Text;
-                        string text2 = spdOrderList.ActiveSheet.Cells[e.Row, 28].Text;
+                        string text2 = spdOrderList.ActiveSheet.Cells[e.Row, 29].Text;　　// 라벨명
                         if (text.StartsWith("(IDV)."))
                         {
                             text = text.Substring(6);
@@ -706,7 +706,7 @@ namespace CUS_SHP
                 packOrderId = spdOrderList.ActiveSheet.Cells[e.Row, 0].Text;
                 packLineNo = spdOrderList.ActiveSheet.Cells[e.Row, 1].Text;
                 pack_remain_qty = MPCF.ToDbl(spdOrderList.ActiveSheet.Cells[e.Row, 4].Text) - MPCF.ToDbl(spdOrderList.ActiveSheet.Cells[e.Row, 5].Text);
-                matId = spdOrderList.ActiveSheet.Cells[e.Row, 17].Text;
+                matId = spdOrderList.ActiveSheet.Cells[e.Row, 18].Text; //제품코드
                 ViewPackingLotList(packOrderId, packLineNo);
             }
             catch (Exception ex)

@@ -48,9 +48,9 @@ namespace CUS_SHP
             DELIVERY_ID,           // 16 : 납품처 ID            
             PACKING_INSTRUCTIONS,  // 17 : 용기
             DRAWING_FLAG,          // 18 : 도면유무
-            MAT_ID,                // 19 : 제품명
-            MAT_VER,               // 20 : 버전
-            OPER,                  // 21: 창고
+            MAT_ID,                // 19 : 제품
+            MAT_VER,               // 20 : 제품버전
+            OPER,                  // 21 : 창고
             OPER_DESC,             // 22 : 창고명                        
             ORDER_TYPE,            // 23 : 주문유형
             REQUEST_DATE,          // 24 : 출하요청일 
