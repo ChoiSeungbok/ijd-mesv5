@@ -433,6 +433,28 @@ int CUS_QCM_INSPECTION_JUDGE(char* s_msg_code, TRSNode* in_node, TRSNode* out_no
 					return MP_FALSE;
 				}
 			}
+			else if (s_judge_flag == MP_CQMS_INSP_JUDGE_C)
+			{
+				TRS.copy(MINVDLVLOT.INSP_ID, sizeof(MINVDLVLOT.INSP_ID), in_node, "INSP_ID");
+				memcpy(MINVDLVLOT.INSP_REQ_TIME, gs_sys_time, sizeof(gs_sys_time));
+				TRS.copy(MINVDLVLOT.INSP_USER_ID, sizeof(MINVDLVLOT.INSP_USER_ID), in_node, IN_USERID);
+				MINVDLVLOT.INSP_STATUS[0] = MP_CQMS_STATUS_COMPLETE;
+				MINVDLVLOT.INSP_RESULT_FLAG = MP_CQMS_INSP_JUDGE_C; // SAMPLE 2026/04/27 추가(최성수요청)
+
+				TRS.copy(MINVDLVLOT.UPDATE_USER_ID, sizeof(MINVDLVLOT.UPDATE_USER_ID), in_node, IN_USERID);
+				memcpy(MINVDLVLOT.UPDATE_TIME, gs_sys_time, sizeof(gs_sys_time));
+
+				DBU_update_minvdlvlot(2, &MINVDLVLOT);
+				if (DB_error_code != DB_SUCCESS)
+				{
+					strcpy(s_msg_code, "QCM-0004");
+					TRS.add_fieldmsg(out_node, "MINVDLVLOT UPDATE(2)", MP_NVST);
+					TRS.add_fieldmsg(out_node, "FACTORY", MP_STR, sizeof(MINVDLVLOT.FACTORY), MINVDLVLOT.FACTORY);
+					TRS.add_fieldmsg(out_node, "DLV_LOT_ID", MP_STR, sizeof(MINVDLVLOT.DLV_LOT_ID), MINVDLVLOT.DLV_LOT_ID);
+					TRS.add_dberrmsg(out_node, DB_error_msg);
+					return MP_FALSE;
+				}
+			}
 		}
 		else
 		{
