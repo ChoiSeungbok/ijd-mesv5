@@ -750,7 +750,7 @@ namespace CUS_WIP
                     if(dBomQty != dInputQty)
                     {
                         //CMN624 ERROR - 투입 수량과 BOM 수량이 일치하지 않습니다. 투입수량을 확인하십시오. 
-                        MPCF.ShowMsgBox(MPCF.GetMessage(108) + " BOM 수량 [" + dBomQty + "], 투입 수량 [" + dInputQty + "]");
+                        //MPCF.ShowMsgBox(MPCF.GetMessage(108) + " BOM 수량 [" + dBomQty + "], 투입 수량 [" + dInputQty + "]");
                         return false; 
                     }
                     
@@ -1231,7 +1231,12 @@ namespace CUS_WIP
                 {
                     if (CheckBomQty() == false) 
                     {
-                        return;
+                        //CMN624 ERROR - 투입 수량과 BOM 수량이 일치하지 않습니다. 투입수량을 확인하십시오. 
+                        if (MPCF.ShowMsgBox(MPCF.GetMessage(624), MessageBoxButtons.YesNo, 2) == DialogResult.No)
+                        {
+                            MPCF.ClearList(spdInputList);
+                            return;
+                        } 
                     }
                 }
 

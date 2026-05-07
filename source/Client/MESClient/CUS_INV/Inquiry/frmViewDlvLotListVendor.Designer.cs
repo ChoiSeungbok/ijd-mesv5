@@ -124,6 +124,12 @@
             this.spdArrivalLotList = new FarPoint.Win.Spread.FpSpread();
             this.spdArrivalLotList_Sheet1 = new FarPoint.Win.Spread.SheetView();
             this.grpDlvInvVendorLotID = new Infragistics.Win.Misc.UltraGroupBox();
+            this.txtChangeVendorLot = new System.Windows.Forms.TextBox();
+            this.lblChangeVendorLotID = new System.Windows.Forms.Label();
+            this.lblArrivalLotID = new System.Windows.Forms.Label();
+            this.lblVendorLotID = new System.Windows.Forms.Label();
+            this.txtArrivalLotID = new System.Windows.Forms.TextBox();
+            this.txtVendorLotID = new System.Windows.Forms.TextBox();
             this.lblVendorID = new System.Windows.Forms.Label();
             this.cdvVendorID = new Miracom.UI.Controls.MCCodeView.MCCodeView();
             this.label2 = new System.Windows.Forms.Label();
@@ -137,12 +143,6 @@
             this.lblPONo = new System.Windows.Forms.Label();
             this.lblOrderStatus = new System.Windows.Forms.Label();
             this.cdvLotStatus = new Miracom.UI.Controls.MCCodeView.MCCodeView();
-            this.lblVendorLotID = new System.Windows.Forms.Label();
-            this.txtVendorLotID = new System.Windows.Forms.TextBox();
-            this.txtChangeVendorLot = new System.Windows.Forms.TextBox();
-            this.lblChangeVendorLotID = new System.Windows.Forms.Label();
-            this.txtArrivalLotID = new System.Windows.Forms.TextBox();
-            this.lblArrivalLotID = new System.Windows.Forms.Label();
             this.btnSave = new Infragistics.Win.Misc.UltraButton();
             this.pnlStsCond.SuspendLayout();
             this.pnlMID.SuspendLayout();
@@ -1032,6 +1032,76 @@
             this.grpDlvInvVendorLotID.TabIndex = 251;
             this.grpDlvInvVendorLotID.Text = "Vendor Lot ID";
             // 
+            // txtChangeVendorLot
+            // 
+            this.txtChangeVendorLot.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtChangeVendorLot.Location = new System.Drawing.Point(804, 77);
+            this.txtChangeVendorLot.Name = "txtChangeVendorLot";
+            this.txtChangeVendorLot.Size = new System.Drawing.Size(250, 32);
+            this.txtChangeVendorLot.TabIndex = 281;
+            // 
+            // lblChangeVendorLotID
+            // 
+            this.lblChangeVendorLotID.AutoSize = true;
+            this.lblChangeVendorLotID.BackColor = System.Drawing.Color.White;
+            this.lblChangeVendorLotID.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblChangeVendorLotID.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblChangeVendorLotID.ForeColor = System.Drawing.Color.Black;
+            this.lblChangeVendorLotID.Location = new System.Drawing.Point(579, 82);
+            this.lblChangeVendorLotID.Name = "lblChangeVendorLotID";
+            this.lblChangeVendorLotID.Size = new System.Drawing.Size(219, 21);
+            this.lblChangeVendorLotID.TabIndex = 280;
+            this.lblChangeVendorLotID.Text = "Change Vendor Lot ID";
+            this.lblChangeVendorLotID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblArrivalLotID
+            // 
+            this.lblArrivalLotID.AutoSize = true;
+            this.lblArrivalLotID.BackColor = System.Drawing.Color.White;
+            this.lblArrivalLotID.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblArrivalLotID.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblArrivalLotID.ForeColor = System.Drawing.Color.Black;
+            this.lblArrivalLotID.Location = new System.Drawing.Point(20, 40);
+            this.lblArrivalLotID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblArrivalLotID.Name = "lblArrivalLotID";
+            this.lblArrivalLotID.Size = new System.Drawing.Size(130, 21);
+            this.lblArrivalLotID.TabIndex = 278;
+            this.lblArrivalLotID.Text = "Arrival Lot ID";
+            this.lblArrivalLotID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblVendorLotID
+            // 
+            this.lblVendorLotID.AutoSize = true;
+            this.lblVendorLotID.BackColor = System.Drawing.Color.White;
+            this.lblVendorLotID.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblVendorLotID.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblVendorLotID.ForeColor = System.Drawing.Color.Black;
+            this.lblVendorLotID.Location = new System.Drawing.Point(20, 82);
+            this.lblVendorLotID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVendorLotID.Name = "lblVendorLotID";
+            this.lblVendorLotID.Size = new System.Drawing.Size(141, 21);
+            this.lblVendorLotID.TabIndex = 278;
+            this.lblVendorLotID.Text = "Vendor Lot ID";
+            this.lblVendorLotID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtArrivalLotID
+            // 
+            this.txtArrivalLotID.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtArrivalLotID.Location = new System.Drawing.Point(168, 35);
+            this.txtArrivalLotID.Name = "txtArrivalLotID";
+            this.txtArrivalLotID.ReadOnly = true;
+            this.txtArrivalLotID.Size = new System.Drawing.Size(250, 32);
+            this.txtArrivalLotID.TabIndex = 279;
+            // 
+            // txtVendorLotID
+            // 
+            this.txtVendorLotID.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtVendorLotID.Location = new System.Drawing.Point(168, 77);
+            this.txtVendorLotID.Name = "txtVendorLotID";
+            this.txtVendorLotID.ReadOnly = true;
+            this.txtVendorLotID.Size = new System.Drawing.Size(250, 32);
+            this.txtVendorLotID.TabIndex = 279;
+            // 
             // lblVendorID
             // 
             this.lblVendorID.AutoSize = true;
@@ -1281,76 +1351,6 @@
             this.cdvLotStatus.VisibleDescription = false;
             this.cdvLotStatus.ButtonPress += new System.EventHandler(this.cdvLotStatus_ButtonPress);
             this.cdvLotStatus.TextBoxTextChanged += new System.EventHandler(this.cdvLotStatus_TextBoxTextChanged);
-            // 
-            // lblVendorLotID
-            // 
-            this.lblVendorLotID.AutoSize = true;
-            this.lblVendorLotID.BackColor = System.Drawing.Color.White;
-            this.lblVendorLotID.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblVendorLotID.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblVendorLotID.ForeColor = System.Drawing.Color.Black;
-            this.lblVendorLotID.Location = new System.Drawing.Point(20, 82);
-            this.lblVendorLotID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblVendorLotID.Name = "lblVendorLotID";
-            this.lblVendorLotID.Size = new System.Drawing.Size(141, 21);
-            this.lblVendorLotID.TabIndex = 278;
-            this.lblVendorLotID.Text = "Vendor Lot ID";
-            this.lblVendorLotID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtVendorLotID
-            // 
-            this.txtVendorLotID.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtVendorLotID.Location = new System.Drawing.Point(168, 77);
-            this.txtVendorLotID.Name = "txtVendorLotID";
-            this.txtVendorLotID.ReadOnly = true;
-            this.txtVendorLotID.Size = new System.Drawing.Size(250, 32);
-            this.txtVendorLotID.TabIndex = 279;
-            // 
-            // txtChangeVendorLot
-            // 
-            this.txtChangeVendorLot.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtChangeVendorLot.Location = new System.Drawing.Point(804, 77);
-            this.txtChangeVendorLot.Name = "txtChangeVendorLot";
-            this.txtChangeVendorLot.Size = new System.Drawing.Size(250, 32);
-            this.txtChangeVendorLot.TabIndex = 281;
-            // 
-            // lblChangeVendorLotID
-            // 
-            this.lblChangeVendorLotID.AutoSize = true;
-            this.lblChangeVendorLotID.BackColor = System.Drawing.Color.White;
-            this.lblChangeVendorLotID.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblChangeVendorLotID.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblChangeVendorLotID.ForeColor = System.Drawing.Color.Black;
-            this.lblChangeVendorLotID.Location = new System.Drawing.Point(579, 82);
-            this.lblChangeVendorLotID.Name = "lblChangeVendorLotID";
-            this.lblChangeVendorLotID.Size = new System.Drawing.Size(219, 21);
-            this.lblChangeVendorLotID.TabIndex = 280;
-            this.lblChangeVendorLotID.Text = "Change Vendor Lot ID";
-            this.lblChangeVendorLotID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtArrivalLotID
-            // 
-            this.txtArrivalLotID.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtArrivalLotID.Location = new System.Drawing.Point(168, 35);
-            this.txtArrivalLotID.Name = "txtArrivalLotID";
-            this.txtArrivalLotID.ReadOnly = true;
-            this.txtArrivalLotID.Size = new System.Drawing.Size(250, 32);
-            this.txtArrivalLotID.TabIndex = 279;
-            // 
-            // lblArrivalLotID
-            // 
-            this.lblArrivalLotID.AutoSize = true;
-            this.lblArrivalLotID.BackColor = System.Drawing.Color.White;
-            this.lblArrivalLotID.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblArrivalLotID.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblArrivalLotID.ForeColor = System.Drawing.Color.Black;
-            this.lblArrivalLotID.Location = new System.Drawing.Point(20, 40);
-            this.lblArrivalLotID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblArrivalLotID.Name = "lblArrivalLotID";
-            this.lblArrivalLotID.Size = new System.Drawing.Size(130, 21);
-            this.lblArrivalLotID.TabIndex = 278;
-            this.lblArrivalLotID.Text = "Arrival Lot ID";
-            this.lblArrivalLotID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnSave
             // 

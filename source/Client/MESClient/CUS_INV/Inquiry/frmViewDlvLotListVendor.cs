@@ -246,7 +246,6 @@ namespace CUS_INV
         //Vendor Lot ID 저장
         private bool SaveVendorLotID()
         {
-            string ssql = "";
             string sDlvLotID = "";
             string sVendorLotID = "";
             
@@ -254,26 +253,39 @@ namespace CUS_INV
             {
                 sDlvLotID = txtArrivalLotID.Text.Trim();
                 sVendorLotID = txtChangeVendorLot.Text.Trim();
+                
+                // 20260507 : F_VENDOR_LOT_UPDATE 함수호출 자재입고테이블 벤더lot 수정
+                TPDR.DirectViewCond[] dvcArgu = new TPDR.DirectViewCond[3];
+                DataTable dt = null;
+                string sSql = "";
 
-                ssql = "UPDATE MINVDLVLOT SET VENDOR_LOT_ID = '" + sVendorLotID + "' WHERE FACTORY = '" + MPGV.gsFactory + "' AND DLV_LOT_ID = '" + sDlvLotID + "'";
+                dvcArgu[0].sCondition_ID = "FACTORY";
+                dvcArgu[0].sCondition_Value = MPGV.gsFactory;
 
-                TRSNode in_node = new TRSNode("TRAN_IN");
-                TRSNode out_node = new TRSNode("TRAN_OUT");
+                dvcArgu[1].sCondition_ID = "INV_LOT_ID";
+                dvcArgu[1].sCondition_Value = sDlvLotID;
 
-                MPCR.SetInMsg(in_node);
+                dvcArgu[2].sCondition_ID = "VENDOR_LOT_ID";
+                dvcArgu[2].sCondition_Value = sVendorLotID;
 
-                in_node.ProcStep = '1';
-                in_node.AddString("SQL", ssql);
-
-
-                if (MPCR.CallService("BAS", "BAS_SQL_Query", in_node, ref out_node) == false)
+                if (TPDR.GetDataOne("", ref dt, "CINV3014-001", dvcArgu, false, false, ref sSql) == false)
                 {
+                    if (dt != null)
+                        dt.Dispose();
+
+                    GC.Collect();
+
+                    //CMN546 INFO - 저장중 오류가 발생하였습니다. 관리자에게 문의바랍니다.
+                    MPCF.ShowMsgBox(MPCF.GetMessage(546));
                     return false;
                 }
-
-                MPCR.ShowSuccessMsg(out_node);
-
-                return true;
+                else
+                {
+                    //CMN562 INFO - 변경이 완료되었습니다.
+                    MPCF.ShowMsgBox(MPCF.GetMessage(562));
+                    return true;
+                }
+                 
 
             }
             catch (Exception ex)
