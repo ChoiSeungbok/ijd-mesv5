@@ -159,6 +159,7 @@ int CUS_QCM_SHIP_REPORT_SPEC_REGISTRATION_BY_MAT(char *s_msg_code, TRSNode *in_n
             TRS.copy(CQCMCSTSPM.TARGET_VALUE, sizeof(CQCMCSTSPM.TARGET_VALUE), data_list[i], "TARGET_VALUE");
             TRS.copy(CQCMCSTSPM.LOW_SPEC_LIMIT, sizeof(CQCMCSTSPM.LOW_SPEC_LIMIT), data_list[i], "LOW_SPEC_LIMIT");
             TRS.copy(CQCMCSTSPM.UPPER_SPEC_LIMIT, sizeof(CQCMCSTSPM.UPPER_SPEC_LIMIT), data_list[i], "UPPER_SPEC_LIMIT");
+            TRS.copy(CQCMCSTSPM.CMF_1, sizeof(CQCMCSTSPM.CMF_1), data_list[i], "CMF_1");
 
             if (c_flag == 'I')
             {
