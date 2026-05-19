@@ -148,8 +148,10 @@ namespace CUS_QCM
                     spdPackingLotList_Sheet1.Cells[num, 9].Value = dt.Rows[num]["TYPES"];
                     spdPackingLotList_Sheet1.Cells[num, 10].Value = dt.Rows[num]["SPECIFIC_SPEC"];
                     spdPackingLotList_Sheet1.Cells[num, 11].Value = dt.Rows[num]["QTY"];
-                    //12 LENGTH_SPEC
-                    //13 OD_METER_SPEC
+               
+                    spdPackingLotList_Sheet1.Cells[num, 12].Value = dt.Rows[num]["LENGTH_SPEC"];    //12 LENGTH_SPEC
+                    spdPackingLotList_Sheet1.Cells[num, 13].Value = dt.Rows[num]["DIAMETER_SPEC"]; //13 OD_METER_SPEC
+
                     spdPackingLotList_Sheet1.Cells[num, 14].Value = dt.Rows[num]["LENGTH"];
                     spdPackingLotList_Sheet1.Cells[num, 15].Value = dt.Rows[num]["OD_METER"];
                      
@@ -164,12 +166,16 @@ namespace CUS_QCM
                     spdPackingLotList_Sheet1.Cells[num, 23].Value = dt.Rows[num]["COER_FORCE"];
                     spdPackingLotList_Sheet1.Cells[num, 24].Value = dt.Rows[num]["HARDNESS_HV20"];  //Hv10
                     spdPackingLotList_Sheet1.Cells[num, 25].Value = dt.Rows[num]["TRS"];
-                    //26 WC_SPEC
-                    //27 Co_SPEC
-                    //28 Etc_SPEC
-                    //29 WC
-                    //30 Co
-                    //31 Etc
+                    
+                    spdPackingLotList_Sheet1.Cells[num, 26].Value = dt.Rows[num]["WC_SPEC"];    //26 WC_SPEC
+                    spdPackingLotList_Sheet1.Cells[num, 27].Value = dt.Rows[num]["CO_SPEC"];    //27 CO_SPEC
+                    spdPackingLotList_Sheet1.Cells[num, 28].Value = dt.Rows[num]["ETC_SPEC"];   //28 ETC_SPEC
+
+                    // 차후 사용시 주석해제
+                    //spdPackingLotList_Sheet1.Cells[num, 29].Value = dt.Rows[num]["WC"];        //29 WC
+                    //spdPackingLotList_Sheet1.Cells[num, 30].Value = dt.Rows[num]["Co"];        //30 Co
+                    //spdPackingLotList_Sheet1.Cells[num, 31].Value = dt.Rows[num]["ETC"];       //31 Etc
+
                     spdPackingLotList_Sheet1.Cells[num, 32].Value = dt.Rows[num]["COMMENTS"];
                     //33 Remark
                     spdPackingLotList_Sheet1.Cells[num, 34].Value = dt.Rows[num]["IMAGE_NUM1"];
@@ -301,15 +307,17 @@ namespace CUS_QCM
                         txtCustomerDesc.Text = dt.Rows[num]["DELIVERY_NAME"].ToString();
                     }
 
-                    spdPackingLotList.ActiveSheet.SetValue(num, 0, false);                    
+                    spdPackingLotList.ActiveSheet.SetValue(num, 0, false);
+                    spdPackingLotList.ActiveSheet.Cells[num, 1].Value = dt.Rows[num]["PACK_ORDER_ID"];
                     spdPackingLotList.ActiveSheet.Cells[num, 2].Value = dt.Rows[num]["PACK_LOT_ID"];
                     spdPackingLotList.ActiveSheet.Cells[num, 3].Value = dt.Rows[num]["ORG_LOT_ID"];
-                    spdPackingLotList.ActiveSheet.Cells[num, 1].Value = dt.Rows[num]["PACK_ORDER_ID"];
-
+                    spdPackingLotList.ActiveSheet.Cells[num, 4].Value = dt.Rows[num]["MAT_ID"];
+                    spdPackingLotList.ActiveSheet.Cells[num, 5].Value = dt.Rows[num]["MAT_VER"];
                     spdPackingLotList.ActiveSheet.Cells[num, 6].Value = dt.Rows[num]["DELIVERY_ID"];
                     spdPackingLotList.ActiveSheet.Cells[num, 7].Value = dt.Rows[num]["DELIVERY_NAME"];
                     spdPackingLotList.ActiveSheet.Cells[num, 8].Value = dt.Rows[num]["GRADE"];
-                    spdPackingLotList.ActiveSheet.Cells[num, 9].Value = dt.Rows[num]["TYPES"];                      
+                    spdPackingLotList.ActiveSheet.Cells[num, 9].Value = dt.Rows[num]["TYPES"];
+                    spdPackingLotList.ActiveSheet.Cells[num, 10].Value = dt.Rows[num]["SPECIFIC_SPEC"];
                     spdPackingLotList.ActiveSheet.Cells[num, 11].Value = dt.Rows[num]["LOT_QTY"].ToString();
 
                     

@@ -1,19 +1,19 @@
-﻿using System;
+﻿using CUS_COM;
+using FarPoint.Win.Spread;
+using Miracom.CliFrx;
+using Miracom.DNMCore;
+using Miracom.MESCore;
+using Miracom.TRSCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FarPoint.Win.Spread;
-
-using CUS_COM;
-using Miracom.MESCore;
-using Miracom.TRSCore;
-using Miracom.CliFrx;
-using Miracom.DNMCore;
 
 namespace CUS_QCM
 {
@@ -51,7 +51,8 @@ namespace CUS_QCM
             VALUE_TYPE,
             TARGET_VALUE,
             LOW_SPEC_LIMIT,
-            UPPER_SPEC_LIMIT
+            UPPER_SPEC_LIMIT,
+            DISPLAY_SPEC
         }
 
 
@@ -429,6 +430,7 @@ namespace CUS_QCM
                     spdSpecList_Sheet1.Cells[i, (int)SPEC.TARGET_VALUE].Value = dt.Rows[i]["TARGET_VALUE"];
                     spdSpecList_Sheet1.Cells[i, (int)SPEC.LOW_SPEC_LIMIT].Value = dt.Rows[i]["LOW_SPEC_LIMIT"];
                     spdSpecList_Sheet1.Cells[i, (int)SPEC.UPPER_SPEC_LIMIT].Value = dt.Rows[i]["UPPER_SPEC_LIMIT"];
+                    spdSpecList_Sheet1.Cells[i, (int)SPEC.DISPLAY_SPEC].Value = dt.Rows[i]["DISPLAY_SPEC"];
                 }
 
                 saved_row = dt.Rows.Count;
@@ -494,7 +496,7 @@ namespace CUS_QCM
                         spec_list.AddString("TARGET_VALUE", spdSpecList.ActiveSheet.Cells[i, (int)SPEC.TARGET_VALUE].Value);
                         spec_list.AddString("LOW_SPEC_LIMIT", spdSpecList.ActiveSheet.Cells[i, (int)SPEC.LOW_SPEC_LIMIT].Value);
                         spec_list.AddString("UPPER_SPEC_LIMIT", spdSpecList.ActiveSheet.Cells[i, (int)SPEC.UPPER_SPEC_LIMIT].Value);
-
+                        spec_list.AddString("CMF_1", spdSpecList.ActiveSheet.Cells[i, (int)SPEC.DISPLAY_SPEC].Value);
                         iCheckCount++;
                     }
                 }

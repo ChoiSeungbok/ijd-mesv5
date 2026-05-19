@@ -258,7 +258,7 @@
             // 
             // lblDirectQuery
             // 
-            this.lblDirectQuery.Location = new System.Drawing.Point(2336, 30);
+            this.lblDirectQuery.Location = new System.Drawing.Point(2284, 30);
             // 
             // pnlStsCond
             // 
