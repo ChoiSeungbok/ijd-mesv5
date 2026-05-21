@@ -17049,6 +17049,11 @@
       <L>수취 포함</L>
       <L>Included Acknowledged</L>
     </Text>
+    <Text Key="Includes insider trading">
+      <L>Includes insider trading</L>
+      <L>내부 거래 포함</L>
+      <L>Includes insider trading</L>
+    </Text>
     <Text Key="Increase Order">
       <L>Increase Order</L>
       <L>증가 순서</L>

@@ -342,6 +342,13 @@ namespace CUS_SHP
                     }
                 }
 
+                // 최성수대리 요청건(내부거래 미표시 요청건)
+                if (chkInsiderTrading.Checked == false)
+                {
+                    //납품처ID(50101), 납품처명(내부거래) 
+                    sSqlText = sSqlText + " AND ORD.DELIVERY_ID NOT IN('50101') ";
+                }
+
 
                 switch (cdvDept.Text)
                 {
@@ -425,18 +432,10 @@ namespace CUS_SHP
                         }
                         break;
 
-
-
                 }
-
 
                 dvcArgu[13].sCondition_ID = "SQL_TEXT";
                 dvcArgu[13].sCondition_Type = "TEXT";
-
-
-
-
-
 
 
                 if (sSqlText == "")
@@ -447,8 +446,6 @@ namespace CUS_SHP
                 {
                     dvcArgu[13].sCondition_Value = sSqlText;
                 }
-
-
 
 
                 dvcArgu[14].sCondition_ID = "CUSTOMER_NAME";
@@ -477,15 +474,6 @@ namespace CUS_SHP
                 }
 
                 InitializeComponent2();
-
-
-
-
-
-
-
-
-
 
 
                 MPCF.ClearList(spdOrderList);
@@ -842,6 +830,7 @@ namespace CUS_SHP
                         this.txtPackingOrderNo.Text = "";
                         this.txtMatDesc.Text = "";
                         this.chkNegativeQty.Checked = false;
+                        this.chkInsiderTrading.Checked = false;
                         break;
                 }
             }
