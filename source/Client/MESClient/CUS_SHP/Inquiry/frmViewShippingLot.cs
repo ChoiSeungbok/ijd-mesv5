@@ -269,9 +269,13 @@ namespace CUS_SHP
 
                 }
 
-                if (sATTRIBUTE02 != null && sATTRIBUTE02 == "HM_03")
+                if (sATTRIBUTE02 == "HM_03")
                 {
                     DevReport.PreviewXtraReport(dt, "pip520pc"); // SPEC 성적서                                                                 
+                }
+                else if (sATTRIBUTE02 == "HM_04")
+                {
+                    DevReport.PreviewXtraReport(dt, "pip520pd"); //Union SPEC 성적서
                 }
                 else
                 {

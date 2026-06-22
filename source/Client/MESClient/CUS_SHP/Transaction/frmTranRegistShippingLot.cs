@@ -1177,9 +1177,13 @@ namespace CUS_SHP
                     dt.Rows[j]["IMAGE_B"] = dt2.Rows[0]["IMAGE_B"];
                 }
 
-                if (sATTRIBUTE02 != null && sATTRIBUTE02 == "HM_03")
+                if (sATTRIBUTE02 == "HM_03")
                 {
                     DevReport.PreviewXtraReport(dt, "pip520pc"); // SPEC 성적서
+                }
+                else if (sATTRIBUTE02 == "HM_04")
+                {
+                    DevReport.PreviewXtraReport(dt, "pip520pd"); // HM Union SPEC 성적서
                 }
                 else
                 {

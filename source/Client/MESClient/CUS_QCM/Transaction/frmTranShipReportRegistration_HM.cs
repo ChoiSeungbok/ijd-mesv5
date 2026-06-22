@@ -643,6 +643,10 @@ namespace CUS_QCM
                 {
                     fnPrintShipReport("CQCM2101-011", "pip520pc");
                 }
+                else if (cdvShipReportType.Text == "HM_04")
+                {
+                    fnPrintShipReport("CQCM2105-003", "pip520pd"); 
+                }
             }
         }
 

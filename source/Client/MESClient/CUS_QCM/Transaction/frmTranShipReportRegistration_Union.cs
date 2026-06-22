@@ -422,7 +422,7 @@ namespace CUS_QCM
                         tRSNode2.AddString("TYPES", spdPackingLotList.ActiveSheet.Cells[i, 9].Text);                        
                         tRSNode2.AddDouble("LOT_QTY", spdPackingLotList.ActiveSheet.Cells[i, 11].Value);
 
-                        tRSNode2.AddString("ATTRIBUTE02", "HM_03"); //스펙타입
+                        tRSNode2.AddString("ATTRIBUTE02", "HM_04"); //스펙타입
                         tRSNode2.AddString("ATTRIBUTE03", spdPackingLotList.ActiveSheet.Cells[i, 12].Text);   // LENGTH_SPEC
                         tRSNode2.AddString("ATTRIBUTE04", spdPackingLotList.ActiveSheet.Cells[i, 13].Text);   // OD_METER_SPEC
                         tRSNode2.AddString("LENGTH", spdPackingLotList.ActiveSheet.Cells[i, 14].Text);
@@ -535,7 +535,7 @@ namespace CUS_QCM
                     tRSNode2.AddString("TYPES", spdPackingLotList.ActiveSheet.Cells[i, 9].Text);
                     tRSNode2.AddDouble("LOT_QTY", spdPackingLotList.ActiveSheet.Cells[i, 11].Text);
 
-                    tRSNode2.AddString("ATTRIBUTE02", "HM_03"); //스펙타입
+                    tRSNode2.AddString("ATTRIBUTE02", "HM_04"); //스펙타입
                     tRSNode2.AddString("ATTRIBUTE03", spdPackingLotList.ActiveSheet.Cells[i, 12].Text);   // LENGTH_SPEC
                     tRSNode2.AddString("ATTRIBUTE04", spdPackingLotList.ActiveSheet.Cells[i, 13].Text);   // OD_METER_SPEC
                     tRSNode2.AddString("LENGTH", spdPackingLotList.ActiveSheet.Cells[i, 14].Text);
