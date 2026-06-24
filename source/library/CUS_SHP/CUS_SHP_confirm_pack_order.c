@@ -1587,8 +1587,7 @@ int CUS_SHP_CONFIRM_PACK_ORDER(char* s_msg_code,
 			TRS.add_string(erpif_in, "FROM_OPER", MWIPOPRDEF.OPER_CMF_1, sizeof(MWIPOPRDEF.OPER_CMF_1));
 			TRS.add_string(erpif_in, "TO_OPER", MWIPOPRDEF_TO.OPER_CMF_1, sizeof(MWIPOPRDEF_TO.OPER_CMF_1));
 			TRS.add_string(erpif_in, "UNIT", CPAKLOTSTS.UNIT, sizeof(CPAKLOTSTS.UNIT));
-			//TRS.add_double(erpif_in, "QTY", -CPAKLOTSTS.QTY);
-			TRS.add_double(erpif_in, "QTY", -MWIPLOTSTS_PAK.QTY_1);
+			TRS.add_double(erpif_in, "QTY", -CPAKLOTSTS.QTY);			
 			TRS.add_int(erpif_in, "TO_ERP_AREA_ID", COM_atoi(MGCMTBLDAT.DATA_2, sizeof(MGCMTBLDAT.DATA_2)));
 			TRS.add_string(erpif_in, "TO_AREA_ID", MWIPOPRDEF.AREA_ID, sizeof(MWIPOPRDEF.AREA_ID));
 			TRS.add_string(erpif_in, "SRC_CODE", MGCMTBLDAT_SRC.DATA_1, sizeof(MGCMTBLDAT_SRC.DATA_1));
@@ -1621,8 +1620,7 @@ int CUS_SHP_CONFIRM_PACK_ORDER(char* s_msg_code,
 			TRS.add_double(erpif_in, "OM_TXNS_ID", (double)DBU_select_if_om_txns_scalar(2, &IF_OM_TXNS));
 			TRS.add_int(erpif_in, "ERP_MAT_ID", COM_atoi(MWIPMATDEF.MAT_CMF_1, sizeof(MWIPMATDEF.MAT_CMF_1)));
 			TRS.add_string(erpif_in, "MAT_ID", MWIPMATDEF.MAT_ID, sizeof(MWIPMATDEF.MAT_ID));			 
-			//TRS.add_double(erpif_in, "QTY", -CPAKLOTSTS.QTY);
-			TRS.add_double(erpif_in, "QTY", -MWIPLOTSTS_PAK.QTY_1);
+			TRS.add_double(erpif_in, "QTY", -CPAKLOTSTS.QTY);			
 			TRS.add_string(erpif_in, "LOT_ID", MWIPLOTSTS_PAK.LOT_ID, sizeof(MWIPLOTSTS_PAK.LOT_ID));
 			TRS.add_string(erpif_in, "MES_ID", CPAKORDSTS.PACK_ORDER_ID, sizeof(CPAKORDSTS.PACK_ORDER_ID));
 
