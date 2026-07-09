@@ -193,6 +193,8 @@
             this.txtERPPackingOrderLine = new System.Windows.Forms.TextBox();
             this.txtShippingOrderLine = new System.Windows.Forms.TextBox();
             this.btnCsvDirect = new Infragistics.Win.Misc.UltraButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtExcludeWord = new System.Windows.Forms.TextBox();
             this.pnlStsCond.SuspendLayout();
             this.pnlMID.SuspendLayout();
             this.pnlBottom.SuspendLayout();
@@ -212,6 +214,8 @@
             // 
             // pnlStsCond
             // 
+            this.pnlStsCond.Controls.Add(this.label4);
+            this.pnlStsCond.Controls.Add(this.txtExcludeWord);
             this.pnlStsCond.Controls.Add(this.txtShippingOrderLine);
             this.pnlStsCond.Controls.Add(this.txtERPPackingOrderLine);
             this.pnlStsCond.Controls.Add(this.txtPackLotId);
@@ -267,6 +271,8 @@
             this.pnlStsCond.Controls.SetChildIndex(this.txtPackLotId, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.txtERPPackingOrderLine, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.txtShippingOrderLine, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.txtExcludeWord, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.label4, 0);
             // 
             // pnlMID
             // 
@@ -901,7 +907,7 @@
             this.lblShippingOrder.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblShippingOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblShippingOrder.ForeColor = System.Drawing.Color.Black;
-            this.lblShippingOrder.Location = new System.Drawing.Point(13, 64);
+            this.lblShippingOrder.Location = new System.Drawing.Point(13, 59);
             this.lblShippingOrder.Name = "lblShippingOrder";
             this.lblShippingOrder.Size = new System.Drawing.Size(100, 16);
             this.lblShippingOrder.TabIndex = 267;
@@ -914,7 +920,7 @@
             this.lblDept.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblDept.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDept.ForeColor = System.Drawing.Color.Black;
-            this.lblDept.Location = new System.Drawing.Point(13, 29);
+            this.lblDept.Location = new System.Drawing.Point(13, 24);
             this.lblDept.Name = "lblDept";
             this.lblDept.Size = new System.Drawing.Size(87, 16);
             this.lblDept.TabIndex = 266;
@@ -967,7 +973,7 @@
             this.lblMatId.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblMatId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMatId.ForeColor = System.Drawing.Color.Black;
-            this.lblMatId.Location = new System.Drawing.Point(310, 29);
+            this.lblMatId.Location = new System.Drawing.Point(310, 24);
             this.lblMatId.Name = "lblMatId";
             this.lblMatId.Size = new System.Drawing.Size(82, 16);
             this.lblMatId.TabIndex = 270;
@@ -1597,7 +1603,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(865, 64);
+            this.label2.Location = new System.Drawing.Point(865, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(17, 16);
             this.label2.TabIndex = 280;
@@ -1621,7 +1627,7 @@
             this.lblDate.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.Black;
-            this.lblDate.Location = new System.Drawing.Point(634, 64);
+            this.lblDate.Location = new System.Drawing.Point(634, 59);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(83, 16);
             this.lblDate.TabIndex = 279;
@@ -1755,7 +1761,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(310, 64);
+            this.label1.Location = new System.Drawing.Point(310, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(139, 16);
             this.label1.TabIndex = 287;
@@ -1822,7 +1828,7 @@
             this.lblMatDesc.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblMatDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblMatDesc.ForeColor = System.Drawing.Color.Black;
-            this.lblMatDesc.Location = new System.Drawing.Point(634, 29);
+            this.lblMatDesc.Location = new System.Drawing.Point(634, 24);
             this.lblMatDesc.Name = "lblMatDesc";
             this.lblMatDesc.Size = new System.Drawing.Size(103, 16);
             this.lblMatDesc.TabIndex = 290;
@@ -1981,6 +1987,27 @@
             this.btnCsvDirect.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             this.btnCsvDirect.Click += new System.EventHandler(this.btnCsvDirect_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(1014, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(99, 16);
+            this.label4.TabIndex = 339;
+            this.label4.Text = "Exclude word";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtExcludeWord
+            // 
+            this.txtExcludeWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtExcludeWord.Location = new System.Drawing.Point(1117, 19);
+            this.txtExcludeWord.Name = "txtExcludeWord";
+            this.txtExcludeWord.Size = new System.Drawing.Size(300, 26);
+            this.txtExcludeWord.TabIndex = 338;
+            // 
             // frmViewShippingLot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2049,5 +2076,7 @@
         private System.Windows.Forms.TextBox txtShippingOrderLine;
         private System.Windows.Forms.TextBox txtERPPackingOrderLine;
         protected Infragistics.Win.Misc.UltraButton btnCsvDirect;
+        public System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtExcludeWord;
     }
 }

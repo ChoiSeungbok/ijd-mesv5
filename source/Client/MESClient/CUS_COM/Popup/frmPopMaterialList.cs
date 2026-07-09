@@ -1,13 +1,15 @@
-﻿using System;
-using System.Data;
-using System.Windows.Forms;
-
-using Miracom.MESCore;
+﻿using DevExpress.XtraPrinting.Native;
+using FarPoint.Win.Spread;
 using Miracom.CliFrx;
 using Miracom.DNMCore;
-using FarPoint.Win.Spread;
+using Miracom.MESCore;
 using Miracom.TRSCore;
+using System;
+using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
 
 namespace CUS_COM
 {
@@ -83,8 +85,12 @@ namespace CUS_COM
             {
                 TPDR.DirectViewCond[] dvcArgu = new TPDR.DirectViewCond[4];
                 DataTable dt = null;
-                string sSql = "";
-                int i = 0;
+                string sSql = "";                
+                string sMatDesc = "";
+                string sSqlText = "";
+                string sExcludeWord = "";
+                StringBuilder sb = new StringBuilder();
+                int i = 0;                 
 
                 dvcArgu[0].sCondition_ID = "FACTORY";
                 dvcArgu[0].sCondition_Value = MPGV.gsFactory;
@@ -95,9 +101,48 @@ namespace CUS_COM
                 dvcArgu[2].sCondition_ID = "MAT_TYPE";
                 dvcArgu[2].sCondition_Value = cdvMatType.Text;
 
-                dvcArgu[3].sCondition_ID = "MAT_DESC";
-                dvcArgu[3].sCondition_Value = txtMatDesc.Text;
+                //dvcArgu[3].sCondition_ID = "MAT_DESC";
+                //dvcArgu[3].sCondition_Value = txtMatDesc.Text;
 
+
+                //제품명 & 제품코드
+                sMatDesc = MPCF.Trim(txtMatDesc.Text);
+                string[] split_data = sMatDesc.Split(new string[] { string.Format("{0}", "%") }, StringSplitOptions.RemoveEmptyEntries);
+                  
+                if (split_data.Length > 0)
+                {
+                    sb.Append(" AND (");
+                    for (int j = 0; j < split_data.Length; j++)
+                    {
+                        if (j > 0)
+                        {
+                            sb.Append(" OR ");
+                        }
+                        sb.Append($"(MAT_DESC LIKE '%' || '{split_data[j]}' || '%' OR MAT_ID LIKE '%' || '{split_data[j]}' || '%')");
+                    }
+                    sb.Append(")");
+                }
+                sSqlText = sSqlText + sb.ToString();       // 결과 문자열 
+
+                // 제외문자
+                sExcludeWord = MPCF.Trim(txtExcludeWord.Text);
+                string[] split_data2 = sExcludeWord.Split(new string[] { string.Format("{0}", "-") }, StringSplitOptions.RemoveEmptyEntries);
+                for (int k = 0; k < split_data2.Count(); k++)
+                {                    
+                    sSqlText = sSqlText + " AND MAT_DESC NOT LIKE '%' || '" + split_data2[k] + "' || '%'";
+                }
+                
+                dvcArgu[3].sCondition_ID = "SQL_TEXT";
+                dvcArgu[3].sCondition_Type = "TEXT"; 
+
+                if (sSqlText == "")
+                {
+                    dvcArgu[3].sCondition_Value = "AND 1=1";
+                }
+                else
+                {
+                    dvcArgu[3].sCondition_Value = sSqlText;
+                }
 
                 if (TPDR.GetDataOne("", ref dt, "CCOM3001-001", dvcArgu, false, false, ref sSql) == false)
                 {

@@ -126,6 +126,10 @@ namespace CUS_QCM
                 string sCondition_Value4 = "";
                 string sCondition_Value5 = "";
                 string sCondition_Value6 = "";
+                string sMatDesc = "";
+                string sSqlText = "";
+                string sExcludeWord = "";
+                StringBuilder sb = new StringBuilder();
                 DateTime now = DateTime.Now;
                 string sCondition_Value7 = (rdoSubLossC.Checked ? "C" : (rdoSubLossNum.Checked ? "1" : ((!rdoSubLossNull.Checked) ? "V" : "")));
                 if (rdIJDK1.Checked)
@@ -195,8 +199,57 @@ namespace CUS_QCM
                 array[12].sCondition_Value = sCondition_Value6;
                 array[13].sCondition_ID = "LOCAL_FAC";
                 array[13].sCondition_Value = MPGV.gsFactory;
-                array[14].sCondition_ID = "MAT_DESC";
-                array[14].sCondition_Value = "%" + txtMatDesc.Text + "%";
+                //array[14].sCondition_ID = "MAT_DESC";
+                //array[14].sCondition_Value = "%" + txtMatDesc.Text + "%";
+
+
+                //제품명 & 제품코드
+                sMatDesc = MPCF.Trim(txtMatDesc.Text);
+                string[] split_data = sMatDesc.Split(new string[] { string.Format("{0}", "%") }, StringSplitOptions.RemoveEmptyEntries);
+
+                if (split_data.Length > 0)
+                {
+                    sb.Append(" AND (");
+                    for (int j = 0; j < split_data.Length; j++)
+                    {
+                        if (j > 0)
+                        {
+                            sb.Append(" OR ");
+                        } 
+                        sb.Append($"(B.MAT_DESC LIKE '%' || '{split_data[j]}' || '%')");
+                    }
+                    sb.Append(")");
+                }
+                sSqlText = sSqlText + sb.ToString();       // 결과 문자열 
+
+                //for (int j = 0; j < split_data.Count(); j++)
+                //{
+                //    if (j == 0)
+                //        sSqlText = sSqlText + " AND ((B.MAT_DESC LIKE '%' || '" + split_data[j] + "' || '%')";
+                //    else
+                //        sSqlText = sSqlText + " OR (B.MAT_DESC LIKE '%' || '" + split_data[j] + "' || '%')";
+                //}
+                //sSqlText = sSqlText + ")";
+
+                // 제외문자
+                sExcludeWord = MPCF.Trim(txtExcludeWord.Text);
+                string[] split_data2 = sExcludeWord.Split(new string[] { string.Format("{0}", "-") }, StringSplitOptions.RemoveEmptyEntries);
+                for (int k = 0; k < split_data2.Count(); k++)
+                {                    
+                    sSqlText = sSqlText + " AND B.MAT_DESC NOT LIKE '%' || '" + split_data2[k] + "' || '%'";
+                }
+                array[14].sCondition_ID = "SQL_TEXT";
+                array[14].sCondition_Type = "TEXT";
+
+                if (sSqlText == "")
+                {
+                    array[14].sCondition_Value = "AND 1=1";
+                }
+                else
+                {
+                    array[14].sCondition_Value = sSqlText;
+                }
+
                 if (!TPDR.GetDataOne("", ref dt, viewID, array, bIcon: false, bBGColor: false, ref sSql))
                 {
                     dt?.Dispose();
@@ -269,6 +322,12 @@ namespace CUS_QCM
                 string sCondition_Value5 = "";
                 string sCondition_Value6 = "";
                 string sCondition_Value7 = (rdoSubLossC.Checked ? "C" : (rdoSubLossNum.Checked ? "1" : ((!rdoSubLossNull.Checked) ? "V" : "")));
+                string sMatDesc = "";
+                string sSqlText = "";
+                string sExcludeWord = "";
+                StringBuilder sb = new StringBuilder();
+                StringBuilder sb2 = new StringBuilder();
+
                 if (rdIJDK1.Checked)
                 {
                     array[0].sCondition_ID = "FACTORY";
@@ -336,8 +395,94 @@ namespace CUS_QCM
                 array[12].sCondition_Value = sCondition_Value6;
                 array[13].sCondition_ID = "LOCAL_FAC";
                 array[13].sCondition_Value = MPGV.gsFactory;
-                array[14].sCondition_ID = "MAT_DESC";
-                array[14].sCondition_Value = "%" + txtMatDesc.Text + "%";
+                //array[14].sCondition_ID = "MAT_DESC";
+                //array[14].sCondition_Value = "%" + txtMatDesc.Text + "%";
+
+                //제품명 & 제품코드
+                sMatDesc = MPCF.Trim(txtMatDesc.Text);
+                string[] split_data = sMatDesc.Split(new string[] { string.Format("{0}", "%") }, StringSplitOptions.RemoveEmptyEntries);
+                 
+                if (split_data.Length > 0)
+                {
+                    string tableAlias = viewID == "CQCM3006-002" ? "B" : "D";
+                    sb.Append($" AND (({tableAlias}.MAT_DESC LIKE '%' || '{split_data[0]}' || '%')");
+
+                    for (int j = 1; j < split_data.Length; j++)
+                    {
+                        sb.Append($" OR ({tableAlias}.MAT_DESC LIKE '%' || '{split_data[j]}' || '%')");
+                    }
+
+                    sb.Append(")");
+                }
+                sSqlText = sSqlText + sb.ToString();       // 결과 문자열 
+
+                //for (int j = 0; j < split_data.Count(); j++)
+                //{
+                //    if (j == 0)
+                //    {
+                //        if (viewID == "CQCM3006-002")
+                //            sSqlText = sSqlText + " AND ((B.MAT_DESC LIKE '%' || '" + split_data[j] + "' || '%')";
+                //        else
+                //            sSqlText = sSqlText + " AND ((D.MAT_DESC LIKE '%' || '" + split_data[j] + "' || '%')";
+                //    }
+                //    else
+                //    {
+                //        if (viewID == "CQCM3006-002")
+                //            sSqlText = sSqlText + " OR (B.MAT_DESC LIKE '%' || '" + split_data[j] + "' || '%')";
+                //        else
+                //            sSqlText = sSqlText + " OR (D.MAT_DESC LIKE '%' || '" + split_data[j] + "' || '%')";
+                //    }
+                        
+                //}
+                //sSqlText = sSqlText + ")";
+
+                // 제외문자
+                sExcludeWord = MPCF.Trim(txtExcludeWord.Text);
+                string[] split_data2 = sExcludeWord.Split(new string[] { string.Format("{0}", "-") }, StringSplitOptions.RemoveEmptyEntries);
+                
+                if (split_data2.Length > 0)
+                {
+                    // 첫 번째 조건을 처리하기 위해 기본 SQL 문 시작
+                    string tableAlias = viewID == "CQCM3006-002" ? "B" : "D";
+
+                    for (int k = 0; k < split_data2.Length; k++)
+                    {
+                        sb2.Append($" AND {tableAlias}.MAT_DESC NOT LIKE '%' || '{split_data2[k]}' || '%'");
+                    }
+                }                
+                sSqlText = sSqlText + sb2.ToString();    // 결과 문자열
+
+                //for (int k = 0; k < split_data2.Count(); k++)
+                //{
+                //    if (k == 0)
+                //    {
+                //        if (viewID == "CQCM3006-002")
+                //            sSqlText = sSqlText + " AND B.MAT_DESC NOT LIKE '%' || '" + split_data2[k] + "' || '%'";
+                //        else
+                //            sSqlText = sSqlText + " AND D.MAT_DESC NOT LIKE '%' || '" + split_data2[k] + "' || '%'";
+                //    }                        
+                //    else
+                //    {
+                //        if (viewID == "CQCM3006-002")
+                //            sSqlText = sSqlText + " AND B.MAT_DESC NOT LIKE '%' || '" + split_data2[k] + "' || '%'";
+                //        else
+                //            sSqlText = sSqlText + " AND D.MAT_DESC NOT LIKE '%' || '" + split_data2[k] + "' || '%'";
+                //    }
+
+                //}
+                array[14].sCondition_ID = "SQL_TEXT";
+                array[14].sCondition_Type = "TEXT";
+
+                if (sSqlText == "")
+                {
+                    array[14].sCondition_Value = "AND 1=1";
+                }
+                else
+                {
+                    array[14].sCondition_Value = sSqlText;
+                }
+
+
                 if (cdvLanguage.Text.Trim() == "" || cdvLanguage.Text.Trim() == MPGV.gsFactory)
                 {
                     array[15].sCondition_ID = "JUDGE_LANG";

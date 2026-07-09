@@ -149,6 +149,8 @@ namespace CUS_QCM
             this.btnFileManager = new Infragistics.Win.Misc.UltraButton();
             this.lblLanguage = new System.Windows.Forms.Label();
             this.cdvLanguage = new Miracom.UI.Controls.MCCodeView.MCCodeView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtExcludeWord = new System.Windows.Forms.TextBox();
             this.pnlStsCond.SuspendLayout();
             this.pnlMID.SuspendLayout();
             this.pnlBottom.SuspendLayout();
@@ -182,6 +184,7 @@ namespace CUS_QCM
             this.pnlStsCond.Controls.Add(this.panel3);
             this.pnlStsCond.Controls.Add(this.lblStatus);
             this.pnlStsCond.Controls.Add(this.cdvStatus);
+            this.pnlStsCond.Controls.Add(this.txtExcludeWord);
             this.pnlStsCond.Controls.Add(this.txtMatDesc);
             this.pnlStsCond.Controls.Add(this.panel2);
             this.pnlStsCond.Controls.Add(this.label2);
@@ -189,11 +192,13 @@ namespace CUS_QCM
             this.pnlStsCond.Controls.Add(this.lblDate);
             this.pnlStsCond.Controls.Add(this.dtpFromJudgeDate);
             this.pnlStsCond.Controls.Add(this.txtLotID);
+            this.pnlStsCond.Controls.Add(this.label4);
             this.pnlStsCond.Controls.Add(this.lblComment);
             this.pnlStsCond.Controls.Add(this.lblMat);
-            this.pnlStsCond.Size = new System.Drawing.Size(1219, 135);
+            this.pnlStsCond.Size = new System.Drawing.Size(1264, 135);
             this.pnlStsCond.Controls.SetChildIndex(this.lblMat, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.lblComment, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.label4, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.txtLotID, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.dtpFromJudgeDate, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.lblDate, 0);
@@ -201,6 +206,7 @@ namespace CUS_QCM
             this.pnlStsCond.Controls.SetChildIndex(this.label2, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.panel2, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.txtMatDesc, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.txtExcludeWord, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.cdvStatus, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.lblStatus, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.panel3, 0);
@@ -222,6 +228,7 @@ namespace CUS_QCM
             // pnlMID
             // 
             this.pnlMID.Controls.Add(this.spdInspectionData);
+            this.pnlMID.Size = new System.Drawing.Size(1284, 790);
             this.pnlMID.Controls.SetChildIndex(this.chkFavorite, 0);
             this.pnlMID.Controls.SetChildIndex(this.lblFormName, 0);
             this.pnlMID.Controls.SetChildIndex(this.pnlStsCond, 0);
@@ -231,26 +238,46 @@ namespace CUS_QCM
             // pnlStsCond3
             // 
             this.pnlStsCond3.Location = new System.Drawing.Point(0, 125);
+            this.pnlStsCond3.Size = new System.Drawing.Size(1264, 10);
             // 
             // lblFormName
             // 
             this.lblFormName.Size = new System.Drawing.Size(256, 30);
             this.lblFormName.Text = "Inspection View(Round)";
             // 
+            // lblDirectQuery
+            // 
+            this.lblDirectQuery.Location = new System.Drawing.Point(1866, 30);
+            // 
             // btnView
             // 
+            this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnView.Location = new System.Drawing.Point(1068, 10);
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(1174, 10);
+            // 
+            // pnlStsCond2
+            // 
+            this.pnlStsCond2.Size = new System.Drawing.Size(1264, 10);
             // 
             // pnlBottom
             // 
             this.pnlBottom.Controls.Add(this.btnFileManager);
             this.pnlBottom.Controls.Add(this.btnCsvDirect);
             this.pnlBottom.Controls.Add(this.btnExcel);
+            this.pnlBottom.Size = new System.Drawing.Size(1284, 50);
             this.pnlBottom.Controls.SetChildIndex(this.btnClose, 0);
             this.pnlBottom.Controls.SetChildIndex(this.btnView, 0);
             this.pnlBottom.Controls.SetChildIndex(this.btnExcel, 0);
             this.pnlBottom.Controls.SetChildIndex(this.btnCsvDirect, 0);
             this.pnlBottom.Controls.SetChildIndex(this.btnFileManager, 0);
+            // 
+            // pnlCenter
+            // 
+            this.pnlCenter.Size = new System.Drawing.Size(1284, 790);
             // 
             // pnlTop
             // 
@@ -816,7 +843,7 @@ namespace CUS_QCM
             namedStyle9});
             this.spdInspectionData.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.spdInspectionData_Sheet1});
-            this.spdInspectionData.Size = new System.Drawing.Size(1219, 605);
+            this.spdInspectionData.Size = new System.Drawing.Size(1264, 605);
             spreadSkin1.ColumnFooterDefaultStyle = namedStyle6;
             spreadSkin1.ColumnHeaderDefaultStyle = namedStyle4;
             spreadSkin1.CornerDefaultStyle = namedStyle8;
@@ -1515,7 +1542,7 @@ namespace CUS_QCM
             this.txtMatDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtMatDesc.Location = new System.Drawing.Point(681, 49);
             this.txtMatDesc.Name = "txtMatDesc";
-            this.txtMatDesc.Size = new System.Drawing.Size(272, 20);
+            this.txtMatDesc.Size = new System.Drawing.Size(267, 20);
             this.txtMatDesc.TabIndex = 4;
             // 
             // lblStatus
@@ -1524,7 +1551,7 @@ namespace CUS_QCM
             this.lblStatus.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblStatus.ForeColor = System.Drawing.Color.Black;
-            this.lblStatus.Location = new System.Drawing.Point(960, 51);
+            this.lblStatus.Location = new System.Drawing.Point(960, 80);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(83, 16);
             this.lblStatus.TabIndex = 314;
@@ -1545,7 +1572,7 @@ namespace CUS_QCM
             this.cdvStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.cdvStatus.Index = 0;
             this.cdvStatus.IsViewBtnImage = false;
-            this.cdvStatus.Location = new System.Drawing.Point(1044, 49);
+            this.cdvStatus.Location = new System.Drawing.Point(1060, 78);
             this.cdvStatus.MaxLength = 100;
             this.cdvStatus.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
             this.cdvStatus.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
@@ -1559,12 +1586,12 @@ namespace CUS_QCM
             this.cdvStatus.SelectedSubItemIndex = 0;
             this.cdvStatus.SelectedValueToQueryText = "";
             this.cdvStatus.SelectionStart = 0;
-            this.cdvStatus.Size = new System.Drawing.Size(171, 20);
+            this.cdvStatus.Size = new System.Drawing.Size(155, 20);
             this.cdvStatus.SmallImageList = null;
             this.cdvStatus.StyleBorder = System.Windows.Forms.BorderStyle.Fixed3D;
             this.cdvStatus.TabIndex = 6;
             this.cdvStatus.TextBoxToolTipText = "";
-            this.cdvStatus.TextBoxWidth = 171;
+            this.cdvStatus.TextBoxWidth = 155;
             this.cdvStatus.VisibleButton = true;
             this.cdvStatus.VisibleColumnHeader = false;
             this.cdvStatus.VisibleDescription = false;
@@ -1808,13 +1835,14 @@ namespace CUS_QCM
             // 
             // btnCsvDirect
             // 
+            this.btnCsvDirect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             appearance2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
             appearance2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
             appearance2.FontData.BoldAsString = "True";
             appearance2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
             this.btnCsvDirect.Appearance = appearance2;
             this.btnCsvDirect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCsvDirect.Location = new System.Drawing.Point(915, 10);
+            this.btnCsvDirect.Location = new System.Drawing.Point(960, 10);
             this.btnCsvDirect.Name = "btnCsvDirect";
             this.btnCsvDirect.Size = new System.Drawing.Size(100, 30);
             this.btnCsvDirect.TabIndex = 251;
@@ -1839,13 +1867,14 @@ namespace CUS_QCM
             // 
             // btnFileManager
             // 
+            this.btnFileManager.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             appearance3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
             appearance3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
             appearance3.FontData.BoldAsString = "True";
             appearance3.ForeColor = System.Drawing.Color.White;
             this.btnFileManager.Appearance = appearance3;
             this.btnFileManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFileManager.Location = new System.Drawing.Point(806, 10);
+            this.btnFileManager.Location = new System.Drawing.Point(851, 10);
             this.btnFileManager.Name = "btnFileManager";
             this.btnFileManager.Size = new System.Drawing.Size(100, 30);
             this.btnFileManager.TabIndex = 288;
@@ -1895,22 +1924,43 @@ namespace CUS_QCM
             this.cdvLanguage.SelectedSubItemIndex = 0;
             this.cdvLanguage.SelectedValueToQueryText = "";
             this.cdvLanguage.SelectionStart = 0;
-            this.cdvLanguage.Size = new System.Drawing.Size(271, 20);
+            this.cdvLanguage.Size = new System.Drawing.Size(267, 20);
             this.cdvLanguage.SmallImageList = null;
             this.cdvLanguage.StyleBorder = System.Windows.Forms.BorderStyle.Fixed3D;
             this.cdvLanguage.TabIndex = 326;
             this.cdvLanguage.TextBoxToolTipText = "";
-            this.cdvLanguage.TextBoxWidth = 271;
+            this.cdvLanguage.TextBoxWidth = 267;
             this.cdvLanguage.VisibleButton = true;
             this.cdvLanguage.VisibleColumnHeader = false;
             this.cdvLanguage.VisibleDescription = false;
             this.cdvLanguage.ButtonPress += new System.EventHandler(this.cdvLanguage_ButtonPress);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(960, 50);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(99, 16);
+            this.label4.TabIndex = 303;
+            this.label4.Text = "Exclude word";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtExcludeWord
+            // 
+            this.txtExcludeWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtExcludeWord.Location = new System.Drawing.Point(1060, 48);
+            this.txtExcludeWord.Name = "txtExcludeWord";
+            this.txtExcludeWord.Size = new System.Drawing.Size(300, 20);
+            this.txtExcludeWord.TabIndex = 4;
+            // 
             // frmViewInspectionDataRound
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1239, 840);
+            this.ClientSize = new System.Drawing.Size(1284, 840);
             this.Name = "frmViewInspectionDataRound";
             this.Text = "frmViewInspectionDataRound";
             this.Load += new System.EventHandler(this.frmViewInspectionDataRound_Load);
@@ -1980,6 +2030,7 @@ namespace CUS_QCM
         public System.Windows.Forms.Label lblLanguage;
 
         public MCCodeView cdvLanguage;
-
+        private System.Windows.Forms.TextBox txtExcludeWord;
+        public System.Windows.Forms.Label label4;
     }
 }

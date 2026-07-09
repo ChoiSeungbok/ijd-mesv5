@@ -162,6 +162,11 @@ namespace CUS_QCM
                 string sCondition_Value5 = "";
                 string sCondition_Value6 = "";
                 string viewID = "";
+                string sMatDesc = "";
+                string sSqlText = "";
+                string sExcludeWord = "";
+                StringBuilder sb = new StringBuilder();
+
                 DateTime now = DateTime.Now;
                 text2 = (rdoSubLossC.Checked ? "C" : (rdoSubLossNum.Checked ? "1" : ((!rdoSubLossNull.Checked) ? "V" : "")));
                 text = (rdRound.Checked ? "OC05060" : ((!rdoWd.Checked) ? "ALL" : "OC05070"));
@@ -214,8 +219,57 @@ namespace CUS_QCM
                 array[4].sCondition_Value = sCondition_Value4;
                 array[5].sCondition_ID = "INSP_OPER";
                 array[5].sCondition_Value = text;
-                array[6].sCondition_ID = "MAT_DESC";
-                array[6].sCondition_Value = txtMatDesc.Text + "%";
+
+                //제품명 & 제품코드
+                sMatDesc = MPCF.Trim(txtMatDesc.Text);
+                string[] split_data = sMatDesc.Split(new string[] { string.Format("{0}", "%") }, StringSplitOptions.RemoveEmptyEntries);
+              
+                if (split_data.Length > 0)
+                {
+                    sb.Append(" AND (");
+                    for (int j = 0; j < split_data.Length; j++)
+                    {
+                        if (j > 0)
+                        {
+                            sb.Append(" OR ");
+                        }
+                        sb.Append($"(C.MAT_DESC LIKE '%' || '{split_data[j]}' || '%')");
+                    }
+                    sb.Append(")");
+                }
+                sSqlText = sSqlText + sb.ToString();       // 결과 문자열 
+
+                //for (int j = 0; j < split_data.Count(); j++)
+                //{
+                //    if (j == 0)
+                //        sSqlText = sSqlText + " AND ((C.MAT_DESC LIKE '%' || '" + split_data[j] + "' || '%')";
+                //    else
+                //        sSqlText = sSqlText + " OR (C.MAT_DESC LIKE '%' || '" + split_data[j] + "' || '%')";
+                //}
+                //sSqlText = sSqlText + ")";
+
+
+                // 제외문자
+                sExcludeWord = MPCF.Trim(txtExcludeWord.Text);
+                string[] split_data2 = sExcludeWord.Split(new string[] { string.Format("{0}", "-") }, StringSplitOptions.RemoveEmptyEntries);
+                for (int k = 0; k < split_data2.Count(); k++)
+                {                    
+                    sSqlText = sSqlText + " AND C.MAT_DESC NOT LIKE '%' || '" + split_data2[k] + "' || '%'";
+                }
+                array[6].sCondition_ID = "SQL_TEXT";
+                array[6].sCondition_Type = "TEXT";
+
+                if (sSqlText == "")
+                {
+                    array[6].sCondition_Value = "AND 1=1";
+                }
+                else
+                {
+                    array[6].sCondition_Value = sSqlText;
+                }
+                //array[6].sCondition_ID = "MAT_DESC";
+                //array[6].sCondition_Value = txtMatDesc.Text + "%";
+
                 array[7].sCondition_ID = "LOT_ID";
                 array[7].sCondition_Value = txtLotID.Text + "%";
                 array[8].sCondition_ID = "INSP_STATUS";
@@ -344,6 +398,11 @@ namespace CUS_QCM
                 string sCondition_Value5 = "";
                 string sCondition_Value6 = "";
                 string viewID = "";
+                string sMatDesc = "";
+                string sSqlText = "";
+                string sExcludeWord = "";
+                StringBuilder sb = new StringBuilder();
+
                 text2 = (rdoSubLossC.Checked ? "C" : (rdoSubLossNum.Checked ? "1" : ((!rdoSubLossNull.Checked) ? "V" : "")));
                 text = (rdRound.Checked ? "OC05060" : ((!rdoWd.Checked) ? "ALL" : "OC05070"));
                 if (rdoJudge.Checked)
@@ -395,8 +454,59 @@ namespace CUS_QCM
                 array[4].sCondition_Value = sCondition_Value4;
                 array[5].sCondition_ID = "INSP_OPER";
                 array[5].sCondition_Value = text;
-                array[6].sCondition_ID = "MAT_DESC";
-                array[6].sCondition_Value = txtMatDesc.Text + "%";
+
+                
+
+                //제품명 & 제품코드
+                sMatDesc = MPCF.Trim(txtMatDesc.Text);
+                string[] split_data = sMatDesc.Split(new string[] { string.Format("{0}", "%") }, StringSplitOptions.RemoveEmptyEntries);
+
+                if (split_data.Length > 0)
+                {
+                    sb.Append(" AND (");
+                    for (int j = 0; j < split_data.Length; j++)
+                    {
+                        if (j > 0)
+                        {
+                            sb.Append(" OR ");
+                        }
+                        sb.Append($"(C.MAT_DESC LIKE '%' || '{split_data[j]}' || '%')");
+                    }
+                    sb.Append(")");
+                }
+                sSqlText = sSqlText + sb.ToString();       // 결과 문자열 
+
+                //for (int j = 0; j < split_data.Count(); j++)
+                //{
+                //    if (j == 0)
+                //        sSqlText = sSqlText + " AND ((MAT_DESC LIKE '%' || '" + split_data[j] + "' || '%')";
+                //    else
+                //        sSqlText = sSqlText + " OR (MAT_DESC LIKE '%' || '" + split_data[j] + "' || '%')";
+                //}
+                //sSqlText = sSqlText + ")";
+
+                // 제외문자
+                sExcludeWord = MPCF.Trim(txtExcludeWord.Text);
+                string[] split_data2 = sExcludeWord.Split(new string[] { string.Format("{0}", "-") }, StringSplitOptions.RemoveEmptyEntries);
+                for (int k = 0; k < split_data2.Count(); k++)
+                {                     
+                    sSqlText = sSqlText + " AND C.MAT_DESC NOT LIKE '%' || '" + split_data2[k] + "' || '%'";
+                }
+
+                array[6].sCondition_ID = "SQL_TEXT";
+                array[6].sCondition_Type = "TEXT";
+                if (sSqlText == "")
+                {
+                    array[6].sCondition_Value = "AND 1=1";
+                }
+                else
+                {
+                    array[6].sCondition_Value = sSqlText;
+                }
+
+                //array[6].sCondition_ID = "MAT_DESC";
+                //array[6].sCondition_Value = txtMatDesc.Text + "%";
+
                 array[7].sCondition_ID = "LOT_ID";
                 array[7].sCondition_Value = txtLotID.Text + "%";
                 array[8].sCondition_ID = "INSP_STATUS";
