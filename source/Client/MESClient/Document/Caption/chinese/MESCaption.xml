@@ -14639,6 +14639,11 @@
       <L>제품창고 제외</L>
       <L>Loại trừ Kho sản phẩm</L>
     </Text>
+    <Text Key="Exclude word">
+      <L>Exclude word</L>
+      <L>검색 제외 문자</L>
+      <L>Exclude word</L>
+    </Text>
     <Text Key="Execute">
       <L>Execute</L>
       <L>실행</L>
@@ -16918,6 +16923,11 @@
       <L>Included Acknowledged</L>
       <L>수취 포함</L>
       <L>Bao gồm cả biên nhận</L>
+    </Text>
+    <Text Key="Includes insider trading">
+      <L>Includes insider trading</L>
+      <L>내부 거래 포함</L>
+      <L>Includes insider trading</L>
     </Text>
     <Text Key="Increase Order">
       <L>Increase Order</L>

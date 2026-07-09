@@ -14774,6 +14774,11 @@
       <L>제품창고 제외</L>
       <L>Exclude Product Warehouse</L>
     </Text>
+    <Text Key="Exclude Word">
+      <L>Exclude Word</L>
+      <L>검색 제외 문자</L>
+      <L>Exclude Word</L>
+    </Text>
     <Text Key="Execute">
       <L>Execute</L>
       <L>실행</L>
