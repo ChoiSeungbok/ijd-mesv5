@@ -47,7 +47,6 @@ namespace CUS_QCM
 
         bool bDoubleSize;
 
-
         public string g_Dept = string.Empty;
         public string g_DeptDisplay = string.Empty;
         public string g_Oper = string.Empty;
@@ -4043,7 +4042,7 @@ namespace CUS_QCM
 
 
         }
-
+                 
         #endregion
 
         #region " Event Definition "
@@ -4608,6 +4607,7 @@ namespace CUS_QCM
         }
         private void frmTranInspectionRegistrationGRIT_Load(object sender, EventArgs e)
         {
+           
             cdvWorkGroup.Text = "A";
             cdvDept.Text = CSGC.CP_AREA_GRT;
 
@@ -6153,11 +6153,25 @@ namespace CUS_QCM
             {
                 if (e.Column == (int)FILEUPLOAD.REGIST)
                 {
+                    if (MPGV.gsUserGroup != "QLT_GRP" && MPGV.gsUserGroup != "ADMIN_GROUP")
+                    {
+                        //CMN625 INFO - 파일을 등록하거나 삭제할 권한이 없습니다.
+                        MPCF.ShowMsgBox(MPCF.GetMessage(625));
+                        return;
+                    }
+
                     FileSaveDelDown(1);
                     //파일등록 벨리데이션
                 }
                 else if (e.Column == (int)FILEUPLOAD.DELETE)
                 {
+                    if (MPGV.gsUserGroup != "QLT_GRP" && MPGV.gsUserGroup != "ADMIN_GROUP")
+                    {
+                        //CMN625 INFO - 파일을 등록하거나 삭제할 권한이 없습니다.
+                        MPCF.ShowMsgBox(MPCF.GetMessage(625));
+                        return;
+                    }
+
                     FileSaveDelDown(2);
 
                 }
@@ -6465,42 +6479,47 @@ namespace CUS_QCM
         {
             SheetView sv = spdFileRegistration.ActiveSheet;
 
-            if (e.Button.Equals(MouseButtons.Right))
+            // 품질그룹만 기능 OPEN
+            if (MPGV.gsUserGroup == "QLT_GRP" || MPGV.gsUserGroup == "ADMIN_GROUP")
             {
+                if (e.Button.Equals(MouseButtons.Right))
+                {
+
+                    ContextMenu m = new ContextMenu();
+                    System.Windows.Forms.MenuItem m1 = new System.Windows.Forms.MenuItem();
+                    System.Windows.Forms.MenuItem m2 = new System.Windows.Forms.MenuItem();
+                    System.Windows.Forms.MenuItem m3 = new System.Windows.Forms.MenuItem();
+                    System.Windows.Forms.MenuItem m4 = new System.Windows.Forms.MenuItem();
+                    System.Windows.Forms.MenuItem m5 = new System.Windows.Forms.MenuItem();
+
+                    m1.Text = "Copy(복사)";
+                    m2.Text = "Paste(붙여넣기)";
+                    m3.Text = "Regist(업로드)";
+                    m4.Text = "Delete(파일삭제)";
+                    m5.Text = "Download(다운로드)";
+
+                    m1.Click += (senders, es) => { Img_copy(); };
+                    m2.Click += (senders, es) => { Img_paste(); };
+                    m3.Click += (senders, es) => { FileSaveDelDown(1); };
+                    m4.Click += (senders, es) => { FileSaveDelDown(2); };
+                    m5.Click += (senders, es) => { FileSaveDelDown(3); };
 
 
-                ContextMenu m = new ContextMenu();
-                System.Windows.Forms.MenuItem m1 = new System.Windows.Forms.MenuItem();
-                System.Windows.Forms.MenuItem m2 = new System.Windows.Forms.MenuItem();
-                System.Windows.Forms.MenuItem m3 = new System.Windows.Forms.MenuItem();
-                System.Windows.Forms.MenuItem m4 = new System.Windows.Forms.MenuItem();
-                System.Windows.Forms.MenuItem m5 = new System.Windows.Forms.MenuItem();
 
-                m1.Text = "Copy(복사)";
-                m2.Text = "Paste(붙여넣기)";
-                m3.Text = "Regist(업로드)";
-                m4.Text = "Delete(파일삭제)";
-                m5.Text = "Download(다운로드)";
-
-                m1.Click += (senders, es) => { Img_copy(); };
-                m2.Click += (senders, es) => { Img_paste(); };
-                m3.Click += (senders, es) => { FileSaveDelDown(1); };
-                m4.Click += (senders, es) => { FileSaveDelDown(2); };
-                m5.Click += (senders, es) => { FileSaveDelDown(3); };
+                    m.MenuItems.Add(m1);
+                    m.MenuItems.Add(m2);
+                    m.MenuItems.Add(m3);
+                    m.MenuItems.Add(m4);
+                    m.MenuItems.Add(m5);
 
 
-
-                m.MenuItems.Add(m1);
-                m.MenuItems.Add(m2);
-                m.MenuItems.Add(m3);
-                m.MenuItems.Add(m4);
-                m.MenuItems.Add(m5);
+                    m.Show(pictureBox1, e.Location);
 
 
-                m.Show(pictureBox1, e.Location);
-
-
+                }  
             }
+
+            
         }
         private void FileSaveDelDown(int icase)
         {
