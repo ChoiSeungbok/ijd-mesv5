@@ -95,7 +95,7 @@ namespace CUS_QCM
             FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer2 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
             FarPoint.Win.Spread.StatusBarSkin statusBarSkin1 = new FarPoint.Win.Spread.StatusBarSkin();
             FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer3 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
-            FarPoint.Win.BevelBorder bevelBorder2 = new FarPoint.Win.BevelBorder(FarPoint.Win.BevelBorderType.Lowered);
+            FarPoint.Win.BevelBorder bevelBorder5 = new FarPoint.Win.BevelBorder(FarPoint.Win.BevelBorderType.Lowered);
             Infragistics.Win.Appearance appearance = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
@@ -138,6 +138,8 @@ namespace CUS_QCM
             this.cdvLanguage = new Miracom.UI.Controls.MCCodeView.MCCodeView();
             this.label4 = new System.Windows.Forms.Label();
             this.txtExcludeWord = new System.Windows.Forms.TextBox();
+            this.txtMatDesc2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.pnlStsCond.SuspendLayout();
             this.pnlMID.SuspendLayout();
             this.pnlBottom.SuspendLayout();
@@ -155,11 +157,13 @@ namespace CUS_QCM
             // 
             // pnlStsCond
             // 
+            this.pnlStsCond.Controls.Add(this.label5);
             this.pnlStsCond.Controls.Add(this.label4);
             this.pnlStsCond.Controls.Add(this.lblLanguage);
             this.pnlStsCond.Controls.Add(this.cdvLanguage);
             this.pnlStsCond.Controls.Add(this.label3);
             this.pnlStsCond.Controls.Add(this.lblRemark);
+            this.pnlStsCond.Controls.Add(this.txtMatDesc2);
             this.pnlStsCond.Controls.Add(this.txtMatDesc);
             this.pnlStsCond.Controls.Add(this.label1);
             this.pnlStsCond.Controls.Add(this.panel4);
@@ -205,11 +209,13 @@ namespace CUS_QCM
             this.pnlStsCond.Controls.SetChildIndex(this.panel4, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.label1, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.txtMatDesc, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.txtMatDesc2, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.lblRemark, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.label3, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.cdvLanguage, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.lblLanguage, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.label4, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.label5, 0);
             // 
             // pnlMID
             // 
@@ -605,7 +611,7 @@ namespace CUS_QCM
             // txtLotID
             // 
             this.txtLotID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtLotID.Location = new System.Drawing.Point(935, 49);
+            this.txtLotID.Location = new System.Drawing.Point(1175, 49);
             this.txtLotID.Name = "txtLotID";
             this.txtLotID.Size = new System.Drawing.Size(150, 26);
             this.txtLotID.TabIndex = 305;
@@ -617,7 +623,7 @@ namespace CUS_QCM
             this.lblComment.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComment.ForeColor = System.Drawing.Color.Black;
-            this.lblComment.Location = new System.Drawing.Point(809, 54);
+            this.lblComment.Location = new System.Drawing.Point(1114, 54);
             this.lblComment.Name = "lblComment";
             this.lblComment.Size = new System.Drawing.Size(47, 16);
             this.lblComment.TabIndex = 304;
@@ -876,7 +882,7 @@ namespace CUS_QCM
             this.spdInspectionData_Sheet1.ColumnHeader.Cells.Get(0, 41).Value = "Black/White Spot";
             this.spdInspectionData_Sheet1.ColumnHeader.Cells.Get(0, 42).Value = "기타불량";
             this.spdInspectionData_Sheet1.ColumnHeader.Cells.Get(0, 43).Value = "특기사항";
-            this.spdInspectionData_Sheet1.ColumnHeader.DefaultStyle.Border = bevelBorder2;
+            this.spdInspectionData_Sheet1.ColumnHeader.DefaultStyle.Border = bevelBorder5;
             this.spdInspectionData_Sheet1.ColumnHeader.DefaultStyle.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
             this.spdInspectionData_Sheet1.ColumnHeader.DefaultStyle.NoteIndicatorColor = System.Drawing.Color.Red;
             this.spdInspectionData_Sheet1.ColumnHeader.DefaultStyle.Parent = "Style1";
@@ -1289,7 +1295,7 @@ namespace CUS_QCM
             // txtGrade
             // 
             this.txtGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtGrade.Location = new System.Drawing.Point(1159, 49);
+            this.txtGrade.Location = new System.Drawing.Point(1175, 85);
             this.txtGrade.Name = "txtGrade";
             this.txtGrade.Size = new System.Drawing.Size(150, 26);
             this.txtGrade.TabIndex = 325;
@@ -1301,7 +1307,7 @@ namespace CUS_QCM
             this.lblGrade.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGrade.ForeColor = System.Drawing.Color.Black;
-            this.lblGrade.Location = new System.Drawing.Point(1098, 54);
+            this.lblGrade.Location = new System.Drawing.Point(1114, 90);
             this.lblGrade.Name = "lblGrade";
             this.lblGrade.Size = new System.Drawing.Size(50, 16);
             this.lblGrade.TabIndex = 324;
@@ -1416,7 +1422,7 @@ namespace CUS_QCM
             this.txtMatDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtMatDesc.Location = new System.Drawing.Point(286, 49);
             this.txtMatDesc.Name = "txtMatDesc";
-            this.txtMatDesc.Size = new System.Drawing.Size(240, 26);
+            this.txtMatDesc.Size = new System.Drawing.Size(180, 26);
             this.txtMatDesc.TabIndex = 331;
             // 
             // btnCsvDirect
@@ -1539,7 +1545,7 @@ namespace CUS_QCM
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(537, 54);
+            this.label4.Location = new System.Drawing.Point(809, 54);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 16);
             this.label4.TabIndex = 337;
@@ -1549,10 +1555,32 @@ namespace CUS_QCM
             // txtExcludeWord
             // 
             this.txtExcludeWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtExcludeWord.Location = new System.Drawing.Point(640, 49);
+            this.txtExcludeWord.Location = new System.Drawing.Point(935, 49);
             this.txtExcludeWord.Name = "txtExcludeWord";
-            this.txtExcludeWord.Size = new System.Drawing.Size(146, 26);
+            this.txtExcludeWord.Size = new System.Drawing.Size(150, 26);
             this.txtExcludeWord.TabIndex = 305;
+            // 
+            // txtMatDesc2
+            // 
+            this.txtMatDesc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtMatDesc2.Location = new System.Drawing.Point(606, 49);
+            this.txtMatDesc2.Name = "txtMatDesc2";
+            this.txtMatDesc2.Size = new System.Drawing.Size(180, 26);
+            this.txtMatDesc2.TabIndex = 331;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(480, 54);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(128, 16);
+            this.label5.TabIndex = 338;
+            this.label5.Text = "Search Add  Char";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmViewInspectionDataLP
             // 
@@ -1623,5 +1651,7 @@ namespace CUS_QCM
         public MCCodeView cdvLanguage;
         public System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtExcludeWord;
+        private System.Windows.Forms.TextBox txtMatDesc2;
+        public System.Windows.Forms.Label label5;
     }
 }

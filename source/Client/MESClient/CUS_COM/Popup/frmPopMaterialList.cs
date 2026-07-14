@@ -85,11 +85,13 @@ namespace CUS_COM
             {
                 TPDR.DirectViewCond[] dvcArgu = new TPDR.DirectViewCond[4];
                 DataTable dt = null;
-                string sSql = "";                
+                string sSql = "";
                 string sMatDesc = "";
+                string sMatDesc2 = "";
                 string sSqlText = "";
                 string sExcludeWord = "";
                 StringBuilder sb = new StringBuilder();
+
                 int i = 0;                 
 
                 dvcArgu[0].sCondition_ID = "FACTORY";
@@ -106,30 +108,37 @@ namespace CUS_COM
 
 
                 //제품명 & 제품코드
-                sMatDesc = MPCF.Trim(txtMatDesc.Text);
-                string[] split_data = sMatDesc.Split(new string[] { string.Format("{0}", "%") }, StringSplitOptions.RemoveEmptyEntries);
-                  
-                if (split_data.Length > 0)
+                sMatDesc = txtMatDesc.Text;
+                sMatDesc2 = txtMatDesc2.Text;
+
+                if (sMatDesc != "" || sMatDesc2 != "")
                 {
                     sb.Append(" AND (");
-                    for (int j = 0; j < split_data.Length; j++)
+
+                    if (!string.IsNullOrEmpty(sMatDesc))
                     {
-                        if (j > 0)
+                        sb.Append($"(MAT_DESC LIKE '%' || '{sMatDesc}' || '%' OR MAT_ID LIKE '%' || '{sMatDesc}' || '%')");
+                    }
+
+                    if (!string.IsNullOrEmpty(sMatDesc2))
+                    {
+                        if (sb.Length > 6) // 첫 번째 조건이 추가된 경우
                         {
                             sb.Append(" OR ");
                         }
-                        sb.Append($"(MAT_DESC LIKE '%' || '{split_data[j]}' || '%' OR MAT_ID LIKE '%' || '{split_data[j]}' || '%')");
+                        sb.Append($"(MAT_DESC LIKE '%' || '{sMatDesc2}' || '%' OR MAT_ID LIKE '%' ||  '{sMatDesc2}'  || '%')");
                     }
                     sb.Append(")");
+
+                    sSqlText = sSqlText + sb.ToString();       // 결과 문자열 
                 }
-                sSqlText = sSqlText + sb.ToString();       // 결과 문자열 
 
                 // 제외문자
                 sExcludeWord = MPCF.Trim(txtExcludeWord.Text);
-                string[] split_data2 = sExcludeWord.Split(new string[] { string.Format("{0}", "-") }, StringSplitOptions.RemoveEmptyEntries);
-                for (int k = 0; k < split_data2.Count(); k++)
+                string[] split_data = sExcludeWord.Split(new string[] { string.Format("{0}", "%") }, StringSplitOptions.RemoveEmptyEntries);
+                for (int k = 0; k < split_data.Count(); k++)
                 {                    
-                    sSqlText = sSqlText + " AND MAT_DESC NOT LIKE '%' || '" + split_data2[k] + "' || '%'";
+                    sSqlText = sSqlText + " AND MAT_DESC NOT LIKE '%' || '" + split_data[k] + "' || '%'";
                 }
                 
                 dvcArgu[3].sCondition_ID = "SQL_TEXT";
@@ -143,6 +152,7 @@ namespace CUS_COM
                 {
                     dvcArgu[3].sCondition_Value = sSqlText;
                 }
+                 
 
                 if (TPDR.GetDataOne("", ref dt, "CCOM3001-001", dvcArgu, false, false, ref sSql) == false)
                 {

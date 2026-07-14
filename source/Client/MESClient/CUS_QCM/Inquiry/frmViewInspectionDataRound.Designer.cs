@@ -151,6 +151,7 @@ namespace CUS_QCM
             this.cdvLanguage = new Miracom.UI.Controls.MCCodeView.MCCodeView();
             this.label4 = new System.Windows.Forms.Label();
             this.txtExcludeWord = new System.Windows.Forms.TextBox();
+            this.txtMatDesc2 = new System.Windows.Forms.TextBox();
             this.pnlStsCond.SuspendLayout();
             this.pnlMID.SuspendLayout();
             this.pnlBottom.SuspendLayout();
@@ -169,6 +170,7 @@ namespace CUS_QCM
             // 
             // pnlStsCond
             // 
+            this.pnlStsCond.Controls.Add(this.label4);
             this.pnlStsCond.Controls.Add(this.lblLanguage);
             this.pnlStsCond.Controls.Add(this.cdvLanguage);
             this.pnlStsCond.Controls.Add(this.label3);
@@ -185,6 +187,7 @@ namespace CUS_QCM
             this.pnlStsCond.Controls.Add(this.lblStatus);
             this.pnlStsCond.Controls.Add(this.cdvStatus);
             this.pnlStsCond.Controls.Add(this.txtExcludeWord);
+            this.pnlStsCond.Controls.Add(this.txtMatDesc2);
             this.pnlStsCond.Controls.Add(this.txtMatDesc);
             this.pnlStsCond.Controls.Add(this.panel2);
             this.pnlStsCond.Controls.Add(this.label2);
@@ -192,13 +195,11 @@ namespace CUS_QCM
             this.pnlStsCond.Controls.Add(this.lblDate);
             this.pnlStsCond.Controls.Add(this.dtpFromJudgeDate);
             this.pnlStsCond.Controls.Add(this.txtLotID);
-            this.pnlStsCond.Controls.Add(this.label4);
             this.pnlStsCond.Controls.Add(this.lblComment);
             this.pnlStsCond.Controls.Add(this.lblMat);
             this.pnlStsCond.Size = new System.Drawing.Size(1264, 135);
             this.pnlStsCond.Controls.SetChildIndex(this.lblMat, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.lblComment, 0);
-            this.pnlStsCond.Controls.SetChildIndex(this.label4, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.txtLotID, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.dtpFromJudgeDate, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.lblDate, 0);
@@ -206,6 +207,7 @@ namespace CUS_QCM
             this.pnlStsCond.Controls.SetChildIndex(this.label2, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.panel2, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.txtMatDesc, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.txtMatDesc2, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.txtExcludeWord, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.cdvStatus, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.lblStatus, 0);
@@ -224,6 +226,7 @@ namespace CUS_QCM
             this.pnlStsCond.Controls.SetChildIndex(this.pnlStsCond2, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.cdvLanguage, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.lblLanguage, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.label4, 0);
             // 
             // pnlMID
             // 
@@ -247,17 +250,17 @@ namespace CUS_QCM
             // 
             // lblDirectQuery
             // 
-            this.lblDirectQuery.Location = new System.Drawing.Point(1866, 30);
+            this.lblDirectQuery.Location = new System.Drawing.Point(1911, 30);
             // 
             // btnView
             // 
             this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnView.Location = new System.Drawing.Point(1068, 10);
+            this.btnView.Location = new System.Drawing.Point(1113, 10);
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(1174, 10);
+            this.btnClose.Location = new System.Drawing.Point(1219, 10);
             // 
             // pnlStsCond2
             // 
@@ -660,7 +663,7 @@ namespace CUS_QCM
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(1112, 23);
+            this.label2.Location = new System.Drawing.Point(1146, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(11, 12);
             this.label2.TabIndex = 309;
@@ -672,7 +675,7 @@ namespace CUS_QCM
             this.dtpToJudgeDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.dtpToJudgeDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.dtpToJudgeDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpToJudgeDate.Location = new System.Drawing.Point(1124, 19);
+            this.dtpToJudgeDate.Location = new System.Drawing.Point(1158, 19);
             this.dtpToJudgeDate.Name = "dtpToJudgeDate";
             this.dtpToJudgeDate.Size = new System.Drawing.Size(91, 20);
             this.dtpToJudgeDate.TabIndex = 1;
@@ -684,7 +687,7 @@ namespace CUS_QCM
             this.lblDate.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblDate.ForeColor = System.Drawing.Color.Black;
-            this.lblDate.Location = new System.Drawing.Point(960, 20);
+            this.lblDate.Location = new System.Drawing.Point(994, 20);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(53, 16);
             this.lblDate.TabIndex = 308;
@@ -696,7 +699,7 @@ namespace CUS_QCM
             this.dtpFromJudgeDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.dtpFromJudgeDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.dtpFromJudgeDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFromJudgeDate.Location = new System.Drawing.Point(1017, 19);
+            this.dtpFromJudgeDate.Location = new System.Drawing.Point(1051, 19);
             this.dtpFromJudgeDate.Name = "dtpFromJudgeDate";
             this.dtpFromJudgeDate.Size = new System.Drawing.Size(92, 20);
             this.dtpFromJudgeDate.TabIndex = 0;
@@ -1542,7 +1545,7 @@ namespace CUS_QCM
             this.txtMatDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtMatDesc.Location = new System.Drawing.Point(681, 49);
             this.txtMatDesc.Name = "txtMatDesc";
-            this.txtMatDesc.Size = new System.Drawing.Size(267, 20);
+            this.txtMatDesc.Size = new System.Drawing.Size(150, 20);
             this.txtMatDesc.TabIndex = 4;
             // 
             // lblStatus
@@ -1551,7 +1554,7 @@ namespace CUS_QCM
             this.lblStatus.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.lblStatus.ForeColor = System.Drawing.Color.Black;
-            this.lblStatus.Location = new System.Drawing.Point(960, 80);
+            this.lblStatus.Location = new System.Drawing.Point(994, 83);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(83, 16);
             this.lblStatus.TabIndex = 314;
@@ -1572,7 +1575,7 @@ namespace CUS_QCM
             this.cdvStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.cdvStatus.Index = 0;
             this.cdvStatus.IsViewBtnImage = false;
-            this.cdvStatus.Location = new System.Drawing.Point(1060, 78);
+            this.cdvStatus.Location = new System.Drawing.Point(1099, 79);
             this.cdvStatus.MaxLength = 100;
             this.cdvStatus.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
             this.cdvStatus.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
@@ -1586,12 +1589,12 @@ namespace CUS_QCM
             this.cdvStatus.SelectedSubItemIndex = 0;
             this.cdvStatus.SelectedValueToQueryText = "";
             this.cdvStatus.SelectionStart = 0;
-            this.cdvStatus.Size = new System.Drawing.Size(155, 20);
+            this.cdvStatus.Size = new System.Drawing.Size(150, 20);
             this.cdvStatus.SmallImageList = null;
             this.cdvStatus.StyleBorder = System.Windows.Forms.BorderStyle.Fixed3D;
             this.cdvStatus.TabIndex = 6;
             this.cdvStatus.TextBoxToolTipText = "";
-            this.cdvStatus.TextBoxWidth = 155;
+            this.cdvStatus.TextBoxWidth = 150;
             this.cdvStatus.VisibleButton = true;
             this.cdvStatus.VisibleColumnHeader = false;
             this.cdvStatus.VisibleDescription = false;
@@ -1626,7 +1629,7 @@ namespace CUS_QCM
             this.panel1.Controls.Add(this.rdoSubLossNull);
             this.panel1.Controls.Add(this.rdoSubLossNum);
             this.panel1.Controls.Add(this.rdoSubLossC);
-            this.panel1.Location = new System.Drawing.Point(90, 79);
+            this.panel1.Location = new System.Drawing.Point(90, 81);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(459, 20);
             this.panel1.TabIndex = 316;
@@ -1910,7 +1913,7 @@ namespace CUS_QCM
             this.cdvLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.cdvLanguage.Index = 0;
             this.cdvLanguage.IsViewBtnImage = false;
-            this.cdvLanguage.Location = new System.Drawing.Point(681, 79);
+            this.cdvLanguage.Location = new System.Drawing.Point(681, 81);
             this.cdvLanguage.MaxLength = 100;
             this.cdvLanguage.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
             this.cdvLanguage.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
@@ -1924,12 +1927,12 @@ namespace CUS_QCM
             this.cdvLanguage.SelectedSubItemIndex = 0;
             this.cdvLanguage.SelectedValueToQueryText = "";
             this.cdvLanguage.SelectionStart = 0;
-            this.cdvLanguage.Size = new System.Drawing.Size(267, 20);
+            this.cdvLanguage.Size = new System.Drawing.Size(150, 20);
             this.cdvLanguage.SmallImageList = null;
             this.cdvLanguage.StyleBorder = System.Windows.Forms.BorderStyle.Fixed3D;
             this.cdvLanguage.TabIndex = 326;
             this.cdvLanguage.TextBoxToolTipText = "";
-            this.cdvLanguage.TextBoxWidth = 267;
+            this.cdvLanguage.TextBoxWidth = 150;
             this.cdvLanguage.VisibleButton = true;
             this.cdvLanguage.VisibleColumnHeader = false;
             this.cdvLanguage.VisibleDescription = false;
@@ -1941,7 +1944,7 @@ namespace CUS_QCM
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(960, 50);
+            this.label4.Location = new System.Drawing.Point(994, 50);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 16);
             this.label4.TabIndex = 303;
@@ -1951,10 +1954,18 @@ namespace CUS_QCM
             // txtExcludeWord
             // 
             this.txtExcludeWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtExcludeWord.Location = new System.Drawing.Point(1060, 48);
+            this.txtExcludeWord.Location = new System.Drawing.Point(1094, 48);
             this.txtExcludeWord.Name = "txtExcludeWord";
-            this.txtExcludeWord.Size = new System.Drawing.Size(300, 20);
+            this.txtExcludeWord.Size = new System.Drawing.Size(155, 20);
             this.txtExcludeWord.TabIndex = 4;
+            // 
+            // txtMatDesc2
+            // 
+            this.txtMatDesc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtMatDesc2.Location = new System.Drawing.Point(837, 49);
+            this.txtMatDesc2.Name = "txtMatDesc2";
+            this.txtMatDesc2.Size = new System.Drawing.Size(150, 20);
+            this.txtMatDesc2.TabIndex = 4;
             // 
             // frmViewInspectionDataRound
             // 
@@ -2032,5 +2043,6 @@ namespace CUS_QCM
         public MCCodeView cdvLanguage;
         private System.Windows.Forms.TextBox txtExcludeWord;
         public System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtMatDesc2;
     }
 }

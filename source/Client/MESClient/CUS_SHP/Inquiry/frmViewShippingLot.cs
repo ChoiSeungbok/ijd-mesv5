@@ -320,6 +320,7 @@ namespace CUS_SHP
                 DataTable dt = null;
                 string sSql = "";
                 string sMatDesc = "";
+                string sMatDesc2 = "";
                 string sSqlText = "";
                 string sExcludeWord = "";
                 StringBuilder sb = new StringBuilder();
@@ -357,43 +358,41 @@ namespace CUS_SHP
                 //dvcArgu[9].sCondition_ID = "MAT_DESC";
                 //dvcArgu[9].sCondition_Value = txtMatDesc.Text.Trim();
 
-                //제품명 & 제품코드
-                sMatDesc = MPCF.Trim(txtMatDesc.Text);
-                string[] split_data = sMatDesc.Split(new string[] { string.Format("{0}", "%") }, StringSplitOptions.RemoveEmptyEntries);
 
-                if (split_data.Length > 0)
+                
+                //제품명 & 제품코드
+                sMatDesc = txtMatDesc.Text;
+                sMatDesc2 = txtMatDesc2.Text;
+
+                if (sMatDesc != "" || sMatDesc2 != "")
                 {
                     sb.Append(" AND (");
-                    for (int j = 0; j < split_data.Length; j++)
+
+                    if (!string.IsNullOrEmpty(sMatDesc))
                     {
-                        if (j == 0)
+                        sb.Append($"('{sMatDesc}' IS NULL OR MAT.MAT_DESC LIKE '%' || '{sMatDesc}' || '%')");
+                    }
+
+                    if (!string.IsNullOrEmpty(sMatDesc2))
+                    {
+                        if (sb.Length > 6) // 첫 번째 조건이 추가된 경우
                         {
-                            sb.Append($"('{split_data[j]}' IS NULL OR MAT.MAT_DESC LIKE '%' || '{split_data[j]}' || '%')");
+                            sb.Append(" OR ");
                         }
-                        else
-                        {
-                            sb.Append($" OR (MAT.MAT_DESC LIKE '%' || '{split_data[j]}' || '%')");
-                        }  
+                        sb.Append($"('{sMatDesc2}' IS NULL OR MAT.MAT_DESC LIKE '%' || '{sMatDesc2}' || '%')");
                     }
                     sb.Append(")");
-                }
-                sSqlText = sSqlText + sb.ToString();       // 결과 문자열 
 
-                //for (int j = 0; j < split_data.Count(); j++)
-                //{
-                //    if (j == 0)
-                //        sSqlText = sSqlText + " AND (( '" + split_data[j] + "' IS NULL) OR (MAT.MAT_DESC LIKE '%' || '" + split_data[j] + "' || '%')";
-                //    else
-                //        sSqlText = sSqlText + "  OR (MAT.MAT_DESC LIKE '%' || '" + split_data[j] + "' || '%')";
-                //}
-                //sSqlText = sSqlText + ")";
+                    sSqlText = sSqlText + sb.ToString();       // 결과 문자열 
+                }
+
 
                 // 제외문자
                 sExcludeWord = MPCF.Trim(txtExcludeWord.Text);
-                string[] split_data2 = sExcludeWord.Split(new string[] { string.Format("{0}", "-") }, StringSplitOptions.RemoveEmptyEntries);
-                for (int k = 0; k < split_data2.Count(); k++)
+                string[] split_data = sExcludeWord.Split(new string[] { string.Format("{0}", "-") }, StringSplitOptions.RemoveEmptyEntries);
+                for (int k = 0; k < split_data.Count(); k++)
                 {
-                    sSqlText = sSqlText + " AND (( '" + split_data2[k] + "' IS NULL) OR (MAT.MAT_DESC NOT LIKE '%' || '" + split_data2[k] + "' || '%'))";
+                    sSqlText = sSqlText + " AND (( '" + split_data[k] + "' IS NULL) OR (MAT.MAT_DESC NOT LIKE '%' || '" + split_data[k] + "' || '%'))";
                 }
                 dvcArgu[9].sCondition_ID = "SQL_TEXT";
                 dvcArgu[9].sCondition_Type = "TEXT";
@@ -407,6 +406,7 @@ namespace CUS_SHP
                     dvcArgu[9].sCondition_Value = sSqlText;
                 }
 
+
                 dvcArgu[10].sCondition_ID = "ORG_LOT_ID";
                 dvcArgu[10].sCondition_Value = txtOrgLotId.Text;
 
@@ -419,7 +419,6 @@ namespace CUS_SHP
 
                 dvcArgu[13].sCondition_ID = "SHIP_ORDER_LINE";
                 dvcArgu[13].sCondition_Value = txtShippingOrderLine.Text;
-
 
 
 
@@ -573,6 +572,7 @@ namespace CUS_SHP
                 DataTable dt = null;
                 string sSql = "";
                 string sMatDesc = "";
+                string sMatDesc2 = "";
                 string sSqlText = "";
                 string sExcludeWord = "";
                 StringBuilder sb = new StringBuilder();
@@ -615,45 +615,40 @@ namespace CUS_SHP
                 //dvcArgu[9].sCondition_ID = "MAT_DESC";
                 //dvcArgu[9].sCondition_Value = txtMatDesc.Text.Trim();
 
-                
-                //제품명 & 제품코드
-                sMatDesc = MPCF.Trim(txtMatDesc.Text);
-                string[] split_data = sMatDesc.Split(new string[] { string.Format("{0}", "%") }, StringSplitOptions.RemoveEmptyEntries);
 
-                if (split_data.Length > 0)
+                //제품명 & 제품코드
+                sMatDesc = txtMatDesc.Text;
+                sMatDesc2 = txtMatDesc2.Text;
+
+                if (sMatDesc != "" || sMatDesc2 != "")
                 {
                     sb.Append(" AND (");
-                    for (int j = 0; j < split_data.Length; j++)
+
+                    if (!string.IsNullOrEmpty(sMatDesc))
                     {
-                        if (j == 0)
+                        sb.Append($"('{sMatDesc}' IS NULL OR MAT.MAT_DESC LIKE '%' || '{sMatDesc}' || '%')");
+                    }
+
+                    if (!string.IsNullOrEmpty(sMatDesc2))
+                    {
+                        if (sb.Length > 6) // 첫 번째 조건이 추가된 경우
                         {
-                            sb.Append($"('{split_data[j]}' IS NULL OR MAT.MAT_DESC LIKE '%' || '{split_data[j]}' || '%')");
+                            sb.Append(" OR ");
                         }
-                        else
-                        {
-                            sb.Append($" OR (MAT.MAT_DESC LIKE '%' || '{split_data[j]}' || '%')");
-                        }
+                        sb.Append($"('{sMatDesc2}' IS NULL OR MAT.MAT_DESC LIKE '%' || '{sMatDesc2}' || '%')");
                     }
                     sb.Append(")");
-                }
-                sSqlText = sSqlText + sb.ToString();       // 결과 문자열 
 
-                //for (int j = 0; j < split_data.Count(); j++)
-                //{
-                //    if (j == 0)
-                //        sSqlText = sSqlText + " AND (( '" + split_data[j] + "' IS NULL) OR (MAT.MAT_DESC LIKE '%' || '" + split_data[j] + "' || '%')";
-                //    else
-                //        sSqlText = sSqlText + "  OR (MAT.MAT_DESC LIKE '%' || '" + split_data[j] + "' || '%')";
-                //}
-                //sSqlText = sSqlText + ")";
+                    sSqlText = sSqlText + sb.ToString();       // 결과 문자열 
+                }
 
 
                 // 제외문자
                 sExcludeWord = MPCF.Trim(txtExcludeWord.Text);
-                string[] split_data2 = sExcludeWord.Split(new string[] { string.Format("{0}", "-") }, StringSplitOptions.RemoveEmptyEntries);
-                for (int k = 0; k < split_data2.Count(); k++)
+                string[] split_data = sExcludeWord.Split(new string[] { string.Format("{0}", "-") }, StringSplitOptions.RemoveEmptyEntries);
+                for (int k = 0; k < split_data.Count(); k++)
                 {
-                    sSqlText = sSqlText + " AND (( '" + split_data2[k] + "' IS NULL) OR (MAT.MAT_DESC NOT LIKE '%' || '" + split_data2[k] + "' || '%'))";
+                    sSqlText = sSqlText + " AND (( '" + split_data[k] + "' IS NULL) OR (MAT.MAT_DESC NOT LIKE '%' || '" + split_data[k] + "' || '%'))";
                 }
                 dvcArgu[9].sCondition_ID = "SQL_TEXT";
                 dvcArgu[9].sCondition_Type = "TEXT";
@@ -667,7 +662,6 @@ namespace CUS_SHP
                     dvcArgu[9].sCondition_Value = sSqlText;
                 }
 
-
                 dvcArgu[10].sCondition_ID = "ORG_LOT_ID";
                 dvcArgu[10].sCondition_Value = txtOrgLotId.Text;
 
@@ -680,8 +674,6 @@ namespace CUS_SHP
 
                 dvcArgu[13].sCondition_ID = "SHIP_ORDER_LINE";
                 dvcArgu[13].sCondition_Value = txtShippingOrderLine.Text;
-
-
 
 
                 if (cdvLotType.Text =="OPER")

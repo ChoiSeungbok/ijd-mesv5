@@ -7165,6 +7165,11 @@
       <L>행추가</L>
       <L>Add Row</L>
     </Text>
+    <Text Key="Add Serch Word">
+      <L>Add Serch Word</L>
+      <L>추가 검색 단어</L>
+      <L>Add Serch Word</L>
+    </Text>
     <Text Key="Add in the tool bar">
       <L>Add in the tool bar</L>
       <L>툴바에 추가</L>
@@ -26978,6 +26983,11 @@
       <L>Search</L>
       <L>조회 조건</L>
       <L>Search</L>
+    </Text>
+    <Text Key="Search Add  Char">
+      <L>Search Add  Char</L>
+      <L>검색 추가 문자</L>
+      <L>Search Add  Char</L>
     </Text>
     <Text Key="Search Merge History">
       <L>Search Merge History</L>
