@@ -40,7 +40,7 @@ namespace MESClient
             MPGV.gsDefaultHelpURL = "Manual_1";
             MPGV.gsDownloadFileList = "DownloadFile.xml";
             MPGV.gsUpgradeFile = "MESplusUpgradeFtp.exe";
-            MPGV.gsClientVersion = "MES_V5.3.260714_01";
+            MPGV.gsClientVersion = "MES_V5.3.260715_01";
 
             SetFactory();
             txtUserID.Text = MPGV.gsUserID;

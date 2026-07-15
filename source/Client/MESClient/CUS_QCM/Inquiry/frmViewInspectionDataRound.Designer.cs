@@ -250,17 +250,17 @@ namespace CUS_QCM
             // 
             // lblDirectQuery
             // 
-            this.lblDirectQuery.Location = new System.Drawing.Point(1911, 30);
+            this.lblDirectQuery.Location = new System.Drawing.Point(1956, 30);
             // 
             // btnView
             // 
             this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnView.Location = new System.Drawing.Point(1113, 10);
+            this.btnView.Location = new System.Drawing.Point(1158, 10);
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(1219, 10);
+            this.btnClose.Location = new System.Drawing.Point(1264, 10);
             // 
             // pnlStsCond2
             // 
@@ -1946,9 +1946,9 @@ namespace CUS_QCM
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(994, 50);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 16);
+            this.label4.Size = new System.Drawing.Size(103, 16);
             this.label4.TabIndex = 303;
-            this.label4.Text = "Exclude word";
+            this.label4.Text = "Exclude Word";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtExcludeWord

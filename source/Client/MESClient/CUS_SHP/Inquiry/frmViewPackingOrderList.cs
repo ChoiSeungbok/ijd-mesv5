@@ -192,7 +192,12 @@ namespace CUS_SHP
                 List<string> ItemList1 = new List<string>();
                 List<string> ItemList2 = new List<string>();
 
+                string sMatDesc = "";
+                string sMatDesc2 = "";
                 string sSqlText = "";
+                string sExcludeWord = "";
+                StringBuilder sb = new StringBuilder();
+
                 string sGradeList_1 = "";
                 string sGradeList_2 = "";
                 string sGradeList_3 = "";
@@ -283,15 +288,58 @@ namespace CUS_SHP
                 dvcArgu[10].sCondition_ID = "MAT_DESC";
                 dvcArgu[10].sCondition_Value = txtMatDesc.Text;
 
+                //제품명 & 제품코드
+                sMatDesc = txtMatDesc.Text;
+                sMatDesc2 = txtMatDesc2.Text;   
+
+
+                if (sMatDesc != "" || sMatDesc2 != "")
+                {
+                    sb.Append(" AND (");
+
+                    if (!string.IsNullOrEmpty(sMatDesc))
+                    {
+                        sb.Append($"(MAT.MAT_DESC LIKE '%' || '{sMatDesc}' || '%')");
+                    }
+
+                    if (!string.IsNullOrEmpty(sMatDesc2))
+                    {
+                        if (sb.Length > 6) // 첫 번째 조건이 추가된 경우
+                        {
+                            sb.Append(" OR ");
+                        }
+                        sb.Append($"(MAT.MAT_DESC LIKE '%' || '{sMatDesc2}' || '%')");
+                    }
+                    sb.Append(")");
+
+                    sSqlText = sSqlText + sb.ToString();       // 결과 문자열 
+                }
+
+                // 제외문자
+                sExcludeWord = MPCF.Trim(txtExcludeWord.Text);
+                string[] split_data = sExcludeWord.Split(new string[] { string.Format("{0}", "%") }, StringSplitOptions.RemoveEmptyEntries);
+                for (int k = 0; k < split_data.Count(); k++)
+                {
+                    sSqlText = sSqlText + " AND MAT.MAT_DESC NOT LIKE '%' || '" + split_data[k] + "' || '%'";
+                }
+
+                dvcArgu[10].sCondition_ID = "SQL_TEXT2";
+                dvcArgu[10].sCondition_Type = "TEXT";
+                if (sSqlText == "")
+                {
+                    dvcArgu[10].sCondition_Value = "AND 1=1";
+                }
+                else
+                {
+                    dvcArgu[10].sCondition_Value = sSqlText;
+                }　
+
+
                 dvcArgu[11].sCondition_ID = "ERP_PACK_ORDER_ID";
                 dvcArgu[11].sCondition_Value = txtERPPackingOrderNo.Text;
 
                 dvcArgu[12].sCondition_ID = "NEGATIVE_FLAG";
-                dvcArgu[12].sCondition_Value = chkNegativeQty.Checked == true ? 'Y' : 'N';
-
-
-
-
+                dvcArgu[12].sCondition_Value = chkNegativeQty.Checked == true ? 'Y' : 'N';　
 
 
                 //211123 품목조회 클라이언트에서 쿼리 만들어서 보내는걸로 변경.(UNION aLL 더 추가할수 없어서쿼리가 길어져서)
@@ -458,7 +506,6 @@ namespace CUS_SHP
 
                 dvcArgu[16].sCondition_ID = "EOH_DATE";
                 dvcArgu[16].sCondition_Value = dtpDate.Text.Replace("-", "");
-
 
 
 

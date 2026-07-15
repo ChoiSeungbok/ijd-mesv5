@@ -216,7 +216,7 @@
             // 
             // lblDirectQuery
             // 
-            this.lblDirectQuery.Location = new System.Drawing.Point(-9255, 30);
+            this.lblDirectQuery.Location = new System.Drawing.Point(-9480, 30);
             // 
             // btnView
             // 
@@ -1244,9 +1244,9 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(675, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 16);
+            this.label1.Size = new System.Drawing.Size(103, 16);
             this.label1.TabIndex = 252;
-            this.label1.Text = "Exclude word";
+            this.label1.Text = "Exclude Word";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtExcludeWord

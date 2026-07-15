@@ -269,8 +269,59 @@ namespace CUS_WIP
                 array[7].sCondition_Value = txtLotID.Text + "%";
                 array[8].sCondition_ID = "INV_FLAG";
                 array[8].sCondition_Value = cdvInvYN.Text + "%";
-                array[9].sCondition_ID = "MAT_DESC";
-                array[9].sCondition_Value = "%" + txtMatDesc.Text + "%";
+
+                //array[9].sCondition_ID = "MAT_DESC";
+                //array[9].sCondition_Value = "%" + txtMatDesc.Text + "%";
+
+                string sMatDesc = txtMatDesc.Text;
+                string sMatDesc2 = txtMatDesc2.Text;
+                string sSqlText = "";
+                string sExcludeWord = "";
+                StringBuilder sb = new StringBuilder();
+
+                //제품명 & 제품코드
+                if (sMatDesc != "" || sMatDesc2 != "")
+                {
+                    sb.Append(" AND (");
+
+                    if (!string.IsNullOrEmpty(sMatDesc))
+                    {
+                        sb.Append($"(B.MAT_DESC LIKE '%' || '{sMatDesc}' || '%')");
+                    }
+
+                    if (!string.IsNullOrEmpty(sMatDesc2))
+                    {
+                        if (sb.Length > 6) // 첫 번째 조건이 추가된 경우
+                        {
+                            sb.Append(" OR ");
+                        }
+                        sb.Append($"(B.MAT_DESC LIKE '%' || '{sMatDesc2}' || '%')");
+                    }
+                    sb.Append(")");
+
+                    sSqlText = sSqlText + sb.ToString();       // 결과 문자열 
+                }
+
+                // 제외문자
+                sExcludeWord = MPCF.Trim(txtExcludeWord.Text);
+                string[] split_data = sExcludeWord.Split(new string[] { string.Format("{0}", "%") }, StringSplitOptions.RemoveEmptyEntries);
+                for (int k = 0; k < split_data.Count(); k++)
+                {
+                    sSqlText = sSqlText + " AND B.MAT_DESC NOT LIKE '%' || '" + split_data[k] + "' || '%'";
+                }
+
+                array[9].sCondition_ID = "SQL_TEXT";
+                array[9].sCondition_Type = "TEXT";
+                if (sSqlText == "")
+                {
+                    array[9].sCondition_Value = "AND 1=1";
+                }
+                else
+                {
+                    array[9].sCondition_Value = sSqlText;
+                }
+                 
+
                 array[10].sCondition_ID = "CREATE_CODE";
                 array[10].sCondition_Value = cdvOrderType.Text + "%";
                 array[11].sCondition_ID = "EOH_DATE";
@@ -387,8 +438,58 @@ namespace CUS_WIP
                 array[5].sCondition_Value = cdvMat.Text + "%";
                 array[6].sCondition_ID = "LOT_ID";
                 array[6].sCondition_Value = txtLotID.Text + "%";
-                array[7].sCondition_ID = "MAT_DESC";
-                array[7].sCondition_Value = "%" + txtMatDesc.Text + "%";
+                //array[7].sCondition_ID = "MAT_DESC";
+                //array[7].sCondition_Value = "%" + txtMatDesc.Text + "%";
+
+                string sMatDesc = txtMatDesc.Text;
+                string sMatDesc2 = txtMatDesc2.Text;
+                string sSqlText = "";
+                string sExcludeWord = "";
+                StringBuilder sb = new StringBuilder();
+
+                //제품명 & 제품코드
+                if (sMatDesc != "" || sMatDesc2 != "")
+                {
+                    sb.Append(" AND (");
+
+                    if (!string.IsNullOrEmpty(sMatDesc))
+                    {
+                        sb.Append($"(B.MAT_DESC LIKE '%' || '{sMatDesc}' || '%')");
+                    }
+
+                    if (!string.IsNullOrEmpty(sMatDesc2))
+                    {
+                        if (sb.Length > 6) // 첫 번째 조건이 추가된 경우
+                        {
+                            sb.Append(" OR ");
+                        }
+                        sb.Append($"(B.MAT_DESC LIKE '%' || '{sMatDesc2}' || '%')");
+                    }
+                    sb.Append(")");
+
+                    sSqlText = sSqlText + sb.ToString();       // 결과 문자열 
+                }
+
+                // 제외문자
+                sExcludeWord = MPCF.Trim(txtExcludeWord.Text);
+                string[] split_data = sExcludeWord.Split(new string[] { string.Format("{0}", "%") }, StringSplitOptions.RemoveEmptyEntries);
+                for (int k = 0; k < split_data.Count(); k++)
+                {
+                    sSqlText = sSqlText + " AND B.MAT_DESC NOT LIKE '%' || '" + split_data[k] + "' || '%'";
+                }
+
+                array[7].sCondition_ID = "SQL_TEXT";
+                array[7].sCondition_Type = "TEXT";
+                if (sSqlText == "")
+                {
+                    array[7].sCondition_Value = "AND 1=1";
+                }
+                else
+                {
+                    array[7].sCondition_Value = sSqlText;
+                }
+
+
                 array[8].sCondition_ID = "CREATE_CODE";
                 array[8].sCondition_Value = cdvOrderType.Text + "%";
                 array[9].sCondition_ID = "EOH_DATE";
@@ -510,8 +611,58 @@ namespace CUS_WIP
                 array[7].sCondition_Value = txtLotID.Text + "%";
                 array[8].sCondition_ID = "INV_FLAG";
                 array[8].sCondition_Value = cdvInvYN.Text + "%";
-                array[9].sCondition_ID = "MAT_DESC";
-                array[9].sCondition_Value = "%" + txtMatDesc.Text + "%";
+                //array[9].sCondition_ID = "MAT_DESC";
+                //array[9].sCondition_Value = "%" + txtMatDesc.Text + "%";
+
+                string sMatDesc = txtMatDesc.Text;
+                string sMatDesc2 = txtMatDesc2.Text;
+                string sSqlText = "";
+                string sExcludeWord = "";
+                StringBuilder sb = new StringBuilder();
+
+                //제품명 & 제품코드
+                if (sMatDesc != "" || sMatDesc2 != "")
+                {
+                    sb.Append(" AND (");
+
+                    if (!string.IsNullOrEmpty(sMatDesc))
+                    {
+                        sb.Append($"(B.MAT_DESC LIKE '%' || '{sMatDesc}' || '%')");
+                    }
+
+                    if (!string.IsNullOrEmpty(sMatDesc2))
+                    {
+                        if (sb.Length > 6) // 첫 번째 조건이 추가된 경우
+                        {
+                            sb.Append(" OR ");
+                        }
+                        sb.Append($"(B.MAT_DESC LIKE '%' || '{sMatDesc2}' || '%')");
+                    }
+                    sb.Append(")");
+
+                    sSqlText = sSqlText + sb.ToString();       // 결과 문자열 
+                }
+
+                // 제외문자
+                sExcludeWord = MPCF.Trim(txtExcludeWord.Text);
+                string[] split_data = sExcludeWord.Split(new string[] { string.Format("{0}", "%") }, StringSplitOptions.RemoveEmptyEntries);
+                for (int k = 0; k < split_data.Count(); k++)
+                {
+                    sSqlText = sSqlText + " AND B.MAT_DESC NOT LIKE '%' || '" + split_data[k] + "' || '%'";
+                }
+
+                array[9].sCondition_ID = "SQL_TEXT";
+                array[9].sCondition_Type = "TEXT";
+                if (sSqlText == "")
+                {
+                    array[9].sCondition_Value = "AND 1=1";
+                }
+                else
+                {
+                    array[9].sCondition_Value = sSqlText;
+                }
+
+
                 array[10].sCondition_ID = "CREATE_CODE";
                 array[10].sCondition_Value = cdvOrderType.Text + "%";
                 array[11].sCondition_ID = "EOH_DATE";
