@@ -269,6 +269,10 @@
             this.spdWoLotList_Sheet1 = new FarPoint.Win.Spread.SheetView();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtMatDesc2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtExcludeWord = new System.Windows.Forms.TextBox();
             this.pnlStsCond.SuspendLayout();
             this.pnlMID.SuspendLayout();
             this.pnlBottom.SuspendLayout();
@@ -307,7 +311,11 @@
             // 
             this.pnlStsCond.Controls.Add(this.lblOrderType);
             this.pnlStsCond.Controls.Add(this.cdvOrderType);
+            this.pnlStsCond.Controls.Add(this.txtExcludeWord);
+            this.pnlStsCond.Controls.Add(this.txtMatDesc2);
             this.pnlStsCond.Controls.Add(this.txtMatDesc);
+            this.pnlStsCond.Controls.Add(this.label2);
+            this.pnlStsCond.Controls.Add(this.label1);
             this.pnlStsCond.Controls.Add(this.lblMatDesc);
             this.pnlStsCond.Controls.Add(this.panel1);
             this.pnlStsCond.Controls.Add(this.lblDate);
@@ -318,7 +326,7 @@
             this.pnlStsCond.Controls.Add(this.cdvMatId);
             this.pnlStsCond.Controls.Add(this.lblDept);
             this.pnlStsCond.Controls.Add(this.cdvDept);
-            this.pnlStsCond.Size = new System.Drawing.Size(1219, 109);
+            this.pnlStsCond.Size = new System.Drawing.Size(1219, 135);
             this.pnlStsCond.Controls.SetChildIndex(this.cdvDept, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.lblDept, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.cdvMatId, 0);
@@ -329,7 +337,11 @@
             this.pnlStsCond.Controls.SetChildIndex(this.lblDate, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.panel1, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.lblMatDesc, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.label1, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.label2, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.txtMatDesc, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.txtMatDesc2, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.txtExcludeWord, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.cdvOrderType, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.lblOrderType, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.pnlStsCond3, 0);
@@ -346,7 +358,7 @@
             // 
             // pnlStsCond3
             // 
-            this.pnlStsCond3.Location = new System.Drawing.Point(0, 99);
+            this.pnlStsCond3.Location = new System.Drawing.Point(0, 125);
             // 
             // lblFormName
             // 
@@ -1225,7 +1237,7 @@
             this.cdvDept.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cdvDept.Index = 0;
             this.cdvDept.IsViewBtnImage = false;
-            this.cdvDept.Location = new System.Drawing.Point(109, 19);
+            this.cdvDept.Location = new System.Drawing.Point(123, 19);
             this.cdvDept.MaxLength = 100;
             this.cdvDept.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
             this.cdvDept.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
@@ -1348,7 +1360,7 @@
             this.cdvMatType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cdvMatType.Index = 0;
             this.cdvMatType.IsViewBtnImage = false;
-            this.cdvMatType.Location = new System.Drawing.Point(109, 56);
+            this.cdvMatType.Location = new System.Drawing.Point(123, 56);
             this.cdvMatType.MaxLength = 100;
             this.cdvMatType.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
             this.cdvMatType.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
@@ -1378,7 +1390,7 @@
             this.dtpWorkDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.dtpWorkDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dtpWorkDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpWorkDate.Location = new System.Drawing.Point(1038, 19);
+            this.dtpWorkDate.Location = new System.Drawing.Point(1043, 19);
             this.dtpWorkDate.Name = "dtpWorkDate";
             this.dtpWorkDate.Size = new System.Drawing.Size(111, 26);
             this.dtpWorkDate.TabIndex = 8;
@@ -1449,9 +1461,9 @@
             // txtMatDesc
             // 
             this.txtMatDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtMatDesc.Location = new System.Drawing.Point(676, 56);
+            this.txtMatDesc.Location = new System.Drawing.Point(694, 56);
             this.txtMatDesc.Name = "txtMatDesc";
-            this.txtMatDesc.Size = new System.Drawing.Size(470, 26);
+            this.txtMatDesc.Size = new System.Drawing.Size(278, 26);
             this.txtMatDesc.TabIndex = 5;
             // 
             // lblMatDesc
@@ -1538,7 +1550,7 @@
             this.grpItemList.Location = new System.Drawing.Point(0, 0);
             this.grpItemList.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.grpItemList.Name = "grpItemList";
-            this.grpItemList.Size = new System.Drawing.Size(256, 631);
+            this.grpItemList.Size = new System.Drawing.Size(256, 605);
             this.grpItemList.TabIndex = 251;
             this.grpItemList.Text = " ";
             // 
@@ -1705,7 +1717,7 @@
             namedStyle9});
             this.spdItemList.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.spdItemList_Sheet1});
-            this.spdItemList.Size = new System.Drawing.Size(254, 611);
+            this.spdItemList.Size = new System.Drawing.Size(254, 585);
             spreadSkin1.ColumnFooterDefaultStyle = namedStyle6;
             spreadSkin1.ColumnHeaderDefaultStyle = namedStyle4;
             spreadSkin1.CornerDefaultStyle = namedStyle8;
@@ -2014,7 +2026,7 @@
             namedStyle18});
             this.spdWipOperationList.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.spdWipOperationList_Sheet1});
-            this.spdWipOperationList.Size = new System.Drawing.Size(706, 611);
+            this.spdWipOperationList.Size = new System.Drawing.Size(706, 585);
             spreadSkin2.ColumnFooterDefaultStyle = namedStyle15;
             spreadSkin2.ColumnHeaderDefaultStyle = namedStyle13;
             spreadSkin2.CornerDefaultStyle = namedStyle17;
@@ -2061,7 +2073,7 @@
             this.grpOrderList.Location = new System.Drawing.Point(0, 0);
             this.grpOrderList.Margin = new System.Windows.Forms.Padding(0);
             this.grpOrderList.Name = "grpOrderList";
-            this.grpOrderList.Size = new System.Drawing.Size(708, 631);
+            this.grpOrderList.Size = new System.Drawing.Size(708, 605);
             this.grpOrderList.TabIndex = 250;
             this.grpOrderList.Text = "Operation Data";
             // 
@@ -2082,7 +2094,7 @@
             this.grpWoLotList.Location = new System.Drawing.Point(0, 0);
             this.grpWoLotList.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.grpWoLotList.Name = "grpWoLotList";
-            this.grpWoLotList.Size = new System.Drawing.Size(247, 631);
+            this.grpWoLotList.Size = new System.Drawing.Size(247, 605);
             this.grpWoLotList.TabIndex = 301;
             this.grpWoLotList.Text = "Detail";
             // 
@@ -2246,7 +2258,7 @@
             namedStyle27});
             this.spdWoLotList.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.spdWoLotList_Sheet1});
-            this.spdWoLotList.Size = new System.Drawing.Size(245, 611);
+            this.spdWoLotList.Size = new System.Drawing.Size(245, 585);
             spreadSkin3.ColumnFooterDefaultStyle = namedStyle24;
             spreadSkin3.ColumnHeaderDefaultStyle = namedStyle22;
             spreadSkin3.CornerDefaultStyle = namedStyle26;
@@ -2347,7 +2359,7 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(10, 159);
+            this.splitContainer1.Location = new System.Drawing.Point(10, 185);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -2357,7 +2369,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(1219, 631);
+            this.splitContainer1.Size = new System.Drawing.Size(1219, 605);
             this.splitContainer1.SplitterDistance = 256;
             this.splitContainer1.TabIndex = 301;
             // 
@@ -2374,9 +2386,51 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.grpWoLotList);
-            this.splitContainer2.Size = new System.Drawing.Size(959, 631);
+            this.splitContainer2.Size = new System.Drawing.Size(959, 605);
             this.splitContainer2.SplitterDistance = 708;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(10, 98);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 16);
+            this.label1.TabIndex = 297;
+            this.label1.Text = "Search Add Char";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtMatDesc2
+            // 
+            this.txtMatDesc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtMatDesc2.Location = new System.Drawing.Point(123, 92);
+            this.txtMatDesc2.Name = "txtMatDesc2";
+            this.txtMatDesc2.Size = new System.Drawing.Size(430, 26);
+            this.txtMatDesc2.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(583, 98);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 16);
+            this.label2.TabIndex = 297;
+            this.label2.Text = "Exclude Word";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtExcludeWord
+            // 
+            this.txtExcludeWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtExcludeWord.Location = new System.Drawing.Point(694, 92);
+            this.txtExcludeWord.Name = "txtExcludeWord";
+            this.txtExcludeWord.Size = new System.Drawing.Size(278, 26);
+            this.txtExcludeWord.TabIndex = 5;
             // 
             // frmWIPViewFlowOperStatus
             // 
@@ -2467,5 +2521,9 @@
         private System.Windows.Forms.RadioButton rdoFlowGen;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtMatDesc2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtExcludeWord;
     }
 }

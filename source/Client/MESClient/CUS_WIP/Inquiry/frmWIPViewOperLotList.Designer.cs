@@ -591,18 +591,18 @@
             // 
             // lblDirectQuery
             // 
-            this.lblDirectQuery.Location = new System.Drawing.Point(-125, 38);
+            this.lblDirectQuery.Location = new System.Drawing.Point(-124, 38);
             // 
             // btnView
             // 
             this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnView.Location = new System.Drawing.Point(1038, 5);
+            this.btnView.Location = new System.Drawing.Point(1039, 5);
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Location = new System.Drawing.Point(1139, 5);
+            this.btnClose.Location = new System.Drawing.Point(1140, 5);
             // 
             // pnlStsCond2
             // 
@@ -3268,7 +3268,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1211, 540);
+            this.tabPage2.Size = new System.Drawing.Size(1211, 508);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Warehouse";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -3356,7 +3356,7 @@
             namedStyle15});
             this.spdwLotList.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.spdwLotList_Sheet1});
-            this.spdwLotList.Size = new System.Drawing.Size(1205, 534);
+            this.spdwLotList.Size = new System.Drawing.Size(1205, 502);
             spreadSkin2.ColumnFooterDefaultStyle = namedStyle6;
             spreadSkin2.ColumnHeaderDefaultStyle = namedStyle13;
             spreadSkin2.CornerDefaultStyle = namedStyle8;
@@ -3647,7 +3647,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1211, 540);
+            this.tabPage3.Size = new System.Drawing.Size(1211, 508);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "ALL";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -3665,7 +3665,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1205, 534);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1205, 502);
             this.tableLayoutPanel1.TabIndex = 255;
             // 
             // spdAllLotList
@@ -3774,7 +3774,7 @@
             namedStyle24});
             this.spdAllLotList.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.spdAllLotList_Sheet1});
-            this.spdAllLotList.Size = new System.Drawing.Size(1205, 482);
+            this.spdAllLotList.Size = new System.Drawing.Size(1205, 450);
             spreadSkin3.ColumnFooterDefaultStyle = namedStyle21;
             spreadSkin3.ColumnHeaderDefaultStyle = namedStyle19;
             spreadSkin3.CornerDefaultStyle = namedStyle23;
@@ -5160,9 +5160,9 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(11, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 17);
+            this.label1.Size = new System.Drawing.Size(116, 17);
             this.label1.TabIndex = 171;
-            this.label1.Text = "Search Add  Char";
+            this.label1.Text = "Search Add Char";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtMatDesc2

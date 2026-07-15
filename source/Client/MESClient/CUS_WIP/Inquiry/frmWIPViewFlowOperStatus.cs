@@ -204,9 +204,13 @@ namespace CUS_WIP
                 string sSql = "";
                 string sViewID = "";
                 string[] arrTag = new string[20];
-
-
-
+                string sSqlText = "";
+                string sMatDesc = "";
+                string sMatDesc2 = "";
+                string sSqlText2 = "";
+                string sExcludeWord = "";
+                StringBuilder sb = new StringBuilder();
+                bool hasPreviousCondition = false;
 
                 int i = 0;
 
@@ -225,9 +229,57 @@ namespace CUS_WIP
                 dvcArgu[4].sCondition_ID = "MAT_ID";
                 dvcArgu[4].sCondition_Value = cdvMatId.Text;
 
-                dvcArgu[5].sCondition_ID = "MAT_DESC";
-                dvcArgu[5].sCondition_Value = txtMatDesc.Text;
+                //dvcArgu[5].sCondition_ID = "MAT_DESC";
+                //dvcArgu[5].sCondition_Value = txtMatDesc.Text;
 
+
+                //제품명 & 제품코드 AND UPPER(D.MAT_DESC) LIKE UPPER(:MAT_DESC || '%')
+
+                sMatDesc = txtMatDesc.Text.ToUpper();
+                sMatDesc2 = txtMatDesc2.Text.ToUpper();
+
+                if (sMatDesc != "" || sMatDesc2 != "")
+                {
+                    sb.Append(" AND (");
+
+                    if (!string.IsNullOrEmpty(sMatDesc))
+                    {
+                        sb.Append($"UPPER(D.MAT_DESC) LIKE '%' || '{sMatDesc}' || '%'");
+                        hasPreviousCondition = true; // 첫 번째 조건이 추가됨
+                    }
+
+                    if (!string.IsNullOrEmpty(sMatDesc2))
+                    {
+                        if (hasPreviousCondition) // 첫 번째 조건이 추가된 경우
+                        {
+                            sb.Append(" OR ");
+                        }
+                        sb.Append($"UPPER(D.MAT_DESC) LIKE '%' || '{sMatDesc2}' || '%'");
+                    }
+                    sb.Append(")");
+
+                    sSqlText2 = sSqlText2 + sb.ToString();       // 결과 문자열 
+                }
+
+                // 제외문자
+                sExcludeWord = MPCF.Trim(txtExcludeWord.Text.ToUpper());
+                string[] split_data = sExcludeWord.Split(new string[] { string.Format("{0}", "%") }, StringSplitOptions.RemoveEmptyEntries);
+                for (int k = 0; k < split_data.Count(); k++)
+                {
+                    sSqlText2 = sSqlText2 + " AND UPPER(D.MAT_DESC) NOT LIKE '%' || '" + split_data[k] + "' || '%'";
+                }
+
+                dvcArgu[5].sCondition_ID = "SQL_TEXT2";
+                dvcArgu[5].sCondition_Type = "TEXT";
+                if (sSqlText2 == "")
+                {
+                    dvcArgu[5].sCondition_Value = "AND 1=1";
+                }
+                else
+                {
+                    dvcArgu[5].sCondition_Value = sSqlText2;
+                }
+                 
 
                 dvcArgu[6].sCondition_ID = "EOH_DATE";
                 dvcArgu[6].sCondition_Value = dtpWorkDate.Text.Replace("-", "");
@@ -249,9 +301,7 @@ namespace CUS_WIP
                 }
 
 
-                string sGradeList_1 = "";
-                string sSqlText = "";
-
+                string sGradeList_1 = ""; 
                 SheetView sv = spdItemList_Sheet1;
 
 

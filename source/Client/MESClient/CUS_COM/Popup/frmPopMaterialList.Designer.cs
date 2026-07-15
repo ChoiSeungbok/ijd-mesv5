@@ -216,7 +216,7 @@
             // 
             // lblDirectQuery
             // 
-            this.lblDirectQuery.Location = new System.Drawing.Point(-9480, 30);
+            this.lblDirectQuery.Location = new System.Drawing.Point(-9705, 30);
             // 
             // btnView
             // 
@@ -1267,9 +1267,9 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(338, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 16);
+            this.label2.Size = new System.Drawing.Size(124, 16);
             this.label2.TabIndex = 252;
-            this.label2.Text = "Search Add  Char";
+            this.label2.Text = "Search Add Char";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtMatDesc2
