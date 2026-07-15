@@ -216,18 +216,19 @@
             // 
             // lblDirectQuery
             // 
-            this.lblDirectQuery.Location = new System.Drawing.Point(-9705, 30);
+            this.lblDirectQuery.Location = new System.Drawing.Point(-9930, 30);
             // 
             // btnView
             // 
-            this.btnView.Location = new System.Drawing.Point(581, 10);
+            this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnView.Location = new System.Drawing.Point(692, 10);
             this.btnView.TabIndex = 0;
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnClose
             // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnClose.Location = new System.Drawing.Point(793, 10);
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Location = new System.Drawing.Point(904, 10);
             this.btnClose.TabIndex = 2;
             // 
             // pnlStsCond2
@@ -1203,13 +1204,14 @@
             // 
             // btnSelect
             // 
+            this.btnSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             appearance4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
             appearance4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
             appearance4.FontData.BoldAsString = "True";
             appearance4.ForeColor = System.Drawing.Color.White;
             this.btnSelect.Appearance = appearance4;
             this.btnSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelect.Location = new System.Drawing.Point(687, 10);
+            this.btnSelect.Location = new System.Drawing.Point(798, 10);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(100, 30);
             this.btnSelect.TabIndex = 1;

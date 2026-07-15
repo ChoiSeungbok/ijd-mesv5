@@ -456,7 +456,7 @@
             this.pnlStsCond.Controls.Add(this.lblPackOrder);
             this.pnlStsCond.Controls.Add(this.lblDept);
             this.pnlStsCond.Controls.Add(this.cdvDept);
-            this.pnlStsCond.Size = new System.Drawing.Size(1744, 113);
+            this.pnlStsCond.Size = new System.Drawing.Size(1714, 113);
             this.pnlStsCond.Controls.SetChildIndex(this.pnlStsCond3, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.pnlStsCond2, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.cdvDept, 0);
@@ -494,7 +494,7 @@
             // pnlMID
             // 
             this.pnlMID.Controls.Add(this.tableLayoutPanel1);
-            this.pnlMID.Size = new System.Drawing.Size(1764, 790);
+            this.pnlMID.Size = new System.Drawing.Size(1734, 790);
             this.pnlMID.Controls.SetChildIndex(this.chkFavorite, 0);
             this.pnlMID.Controls.SetChildIndex(this.lblFormName, 0);
             this.pnlMID.Controls.SetChildIndex(this.pnlStsCond, 0);
@@ -504,7 +504,7 @@
             // pnlStsCond3
             // 
             this.pnlStsCond3.Location = new System.Drawing.Point(0, 103);
-            this.pnlStsCond3.Size = new System.Drawing.Size(1744, 10);
+            this.pnlStsCond3.Size = new System.Drawing.Size(1714, 10);
             // 
             // lblFormName
             // 
@@ -513,21 +513,21 @@
             // 
             // lblDirectQuery
             // 
-            this.lblDirectQuery.Location = new System.Drawing.Point(2234, 30);
+            this.lblDirectQuery.Location = new System.Drawing.Point(2729, 30);
             // 
             // btnView
             // 
             this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnView.Location = new System.Drawing.Point(1965, 10);
+            this.btnView.Location = new System.Drawing.Point(1410, 10);
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(2177, 10);
+            this.btnClose.Location = new System.Drawing.Point(1622, 10);
             // 
             // pnlStsCond2
             // 
-            this.pnlStsCond2.Size = new System.Drawing.Size(1744, 10);
+            this.pnlStsCond2.Size = new System.Drawing.Size(1714, 10);
             // 
             // pnlBottom
             // 
@@ -536,7 +536,7 @@
             this.pnlBottom.Controls.Add(this.btnClear);
             this.pnlBottom.Controls.Add(this.btnSave);
             this.pnlBottom.Controls.Add(this.btnPrint);
-            this.pnlBottom.Size = new System.Drawing.Size(1764, 50);
+            this.pnlBottom.Size = new System.Drawing.Size(1734, 50);
             this.pnlBottom.Controls.SetChildIndex(this.btnClose, 0);
             this.pnlBottom.Controls.SetChildIndex(this.btnView, 0);
             this.pnlBottom.Controls.SetChildIndex(this.btnPrint, 0);
@@ -547,7 +547,7 @@
             // 
             // pnlCenter
             // 
-            this.pnlCenter.Size = new System.Drawing.Size(1764, 790);
+            this.pnlCenter.Size = new System.Drawing.Size(1734, 790);
             // 
             // pnlTop
             // 
@@ -2448,7 +2448,7 @@
             appearance9.ForeColor = System.Drawing.Color.White;
             this.btnPrint.Appearance = appearance9;
             this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.Location = new System.Drawing.Point(1228, 10);
+            this.btnPrint.Location = new System.Drawing.Point(1198, 10);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(100, 30);
             this.btnPrint.TabIndex = 269;
@@ -2479,7 +2479,7 @@
             this.grpOrderList.Location = new System.Drawing.Point(300, 0);
             this.grpOrderList.Margin = new System.Windows.Forms.Padding(0);
             this.grpOrderList.Name = "grpOrderList";
-            this.grpOrderList.Size = new System.Drawing.Size(1444, 627);
+            this.grpOrderList.Size = new System.Drawing.Size(1414, 627);
             this.grpOrderList.TabIndex = 250;
             this.grpOrderList.Text = "Packing Order List";
             // 
@@ -2633,7 +2633,7 @@
             namedStyle18});
             this.spdOrderList.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.spdOrderList_Sheet1});
-            this.spdOrderList.Size = new System.Drawing.Size(1442, 607);
+            this.spdOrderList.Size = new System.Drawing.Size(1412, 607);
             spreadSkin2.ColumnFooterDefaultStyle = namedStyle15;
             spreadSkin2.ColumnHeaderDefaultStyle = namedStyle13;
             spreadSkin2.CornerDefaultStyle = namedStyle17;
@@ -3246,7 +3246,7 @@
             appearance7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
             this.btnClear.Appearance = appearance7;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(1334, 10);
+            this.btnClear.Location = new System.Drawing.Point(1304, 10);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(100, 30);
             this.btnClear.TabIndex = 272;
@@ -3268,7 +3268,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1744, 627);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1714, 627);
             this.tableLayoutPanel1.TabIndex = 251;
             // 
             // grpItemList
@@ -3524,14 +3524,14 @@
             // 
             // btnSave
             // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             appearance8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
             appearance8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
             appearance8.FontData.BoldAsString = "True";
             appearance8.ForeColor = System.Drawing.Color.White;
             this.btnSave.Appearance = appearance8;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(1546, 10);
+            this.btnSave.Location = new System.Drawing.Point(1516, 10);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 30);
             this.btnSave.TabIndex = 269;
@@ -3749,7 +3749,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1764, 840);
+            this.ClientSize = new System.Drawing.Size(1734, 840);
             this.Name = "frmViewPackingOrderList";
             this.Text = "View Packing Order List";
             this.Load += new System.EventHandler(this.frmViewPackingOrderList_Load);

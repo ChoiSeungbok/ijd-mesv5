@@ -591,18 +591,18 @@
             // 
             // lblDirectQuery
             // 
-            this.lblDirectQuery.Location = new System.Drawing.Point(-124, 38);
+            this.lblDirectQuery.Location = new System.Drawing.Point(-123, 38);
             // 
             // btnView
             // 
             this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnView.Location = new System.Drawing.Point(1039, 5);
+            this.btnView.Location = new System.Drawing.Point(1020, 5);
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Location = new System.Drawing.Point(1140, 5);
+            this.btnClose.Location = new System.Drawing.Point(1123, 5);
             // 
             // pnlStsCond2
             // 
@@ -3228,7 +3228,7 @@
             appearance2.ForeColor = System.Drawing.Color.White;
             this.btnPrint.Appearance = appearance2;
             this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.Location = new System.Drawing.Point(851, 5);
+            this.btnPrint.Location = new System.Drawing.Point(845, 5);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(83, 30);
             this.btnPrint.TabIndex = 269;
@@ -4768,7 +4768,7 @@
             appearance3.ForeColor = System.Drawing.Color.White;
             this.btnSave.Appearance = appearance3;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(939, 5);
+            this.btnSave.Location = new System.Drawing.Point(933, 5);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(83, 30);
             this.btnSave.TabIndex = 272;
@@ -5143,7 +5143,7 @@
             appearance5.ForeColor = System.Drawing.Color.White;
             this.btnOutsourceing.Appearance = appearance5;
             this.btnOutsourceing.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.btnOutsourceing.Location = new System.Drawing.Point(851, 38);
+            this.btnOutsourceing.Location = new System.Drawing.Point(845, 38);
             this.btnOutsourceing.Name = "btnOutsourceing";
             this.btnOutsourceing.Size = new System.Drawing.Size(83, 30);
             this.btnOutsourceing.TabIndex = 277;

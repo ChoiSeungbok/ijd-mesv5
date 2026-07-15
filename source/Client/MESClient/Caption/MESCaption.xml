@@ -21929,13 +21929,13 @@
       <L>공정 매치</L>
       <L>Operation Match</L>
     </Text>
-    <Text Key="Operation Materil Desc">
-      <L>Operation Materil Desc</L>
+    <Text Key="Operation Material Desc">
+      <L>Operation Material Desc</L>
       <L>생산 품목명</L>
       <L>Operation Material Desc</L>
     </Text>
-    <Text Key="Operation Materil ID">
-      <L>Operation Materil ID</L>
+    <Text Key="Operation Material ID">
+      <L>Operation Material ID</L>
       <L>생산 품목코드</L>
       <L>ID vật liệu hoạt động</L>
     </Text>
@@ -26984,7 +26984,7 @@
       <L>조회 조건</L>
       <L>Search</L>
     </Text>
-    <Text Key="Search Add  Char">
+    <Text Key="Search Add Char">
       <L>Search Add  Char</L>
       <L>검색 추가 문자</L>
       <L>Search Add  Char</L>

@@ -250,17 +250,17 @@ namespace CUS_QCM
             // 
             // lblDirectQuery
             // 
-            this.lblDirectQuery.Location = new System.Drawing.Point(1956, 30);
+            this.lblDirectQuery.Location = new System.Drawing.Point(2001, 30);
             // 
             // btnView
             // 
             this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnView.Location = new System.Drawing.Point(1158, 10);
+            this.btnView.Location = new System.Drawing.Point(1067, 10);
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(1264, 10);
+            this.btnClose.Location = new System.Drawing.Point(1174, 10);
             // 
             // pnlStsCond2
             // 
