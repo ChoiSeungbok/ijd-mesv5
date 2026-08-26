@@ -141,7 +141,7 @@ namespace CUS_SHP
         {
             try
             {
-                TPDR.DirectViewCond[] dvcArgu = new TPDR.DirectViewCond[11];
+                TPDR.DirectViewCond[] dvcArgu = new TPDR.DirectViewCond[12];
                 DataTable dt = null;
                 string sSql = "";
                 string sMatDesc = "";
@@ -182,12 +182,13 @@ namespace CUS_SHP
                 dvcArgu[9].sCondition_Value = txtERPPackingOrderNo.Text.Trim();
 
                 //CSHP2001-005, LOT.SHIP_FLAG
-                //dvcArgu[10].sCondition_ID = "SHIP_FLAG";
-                //dvcArgu[10].sCondition_Value = cboxShipFlag.Text.Trim();
-                if (cboxShipFlag.Text.Trim() != "")
-                {
-                    sSqlText = sSqlText + "AND LOT.SHIP_FLAG = '" + cboxShipFlag.Text.Trim() + "'";
-                }
+                dvcArgu[10].sCondition_ID = "SHIP_FLAG";
+                dvcArgu[10].sCondition_Value = cboxShipFlag.Text.Trim();
+
+                //if (cboxShipFlag.Text.Trim() != "")
+                //{
+                //    sSqlText = sSqlText + "AND LOT.SHIP_FLAG = '" + cboxShipFlag.Text.Trim() + "'";
+                //}
 
                 //제품명 & 제품코드
                 sMatDesc = txtMatDesc.Text;
@@ -223,16 +224,16 @@ namespace CUS_SHP
                 {
                     sSqlText = sSqlText + " AND MAT.MAT_DESC NOT LIKE '%' || '" + split_data[k] + "' || '%'";
                 }
-                dvcArgu[10].sCondition_ID = "SQL_TEXT";
-                dvcArgu[10].sCondition_Type = "TEXT";
+                dvcArgu[11].sCondition_ID = "SQL_TEXT";
+                dvcArgu[11].sCondition_Type = "TEXT";
 
                 if (sSqlText == "")
                 {
-                    dvcArgu[10].sCondition_Value = "AND 1=1";
+                    dvcArgu[11].sCondition_Value = "AND 1=1";
                 }
                 else
                 {
-                    dvcArgu[10].sCondition_Value = sSqlText;
+                    dvcArgu[11].sCondition_Value = sSqlText;
                 }
 
                 
