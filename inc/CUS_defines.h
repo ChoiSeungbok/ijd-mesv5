@@ -101,9 +101,10 @@ struct execute_seq_tag
 #define MP_GCM_MAT_CLASS_1_MAP          ("C_MAT_CLASS_1_MAP")		//  Summary 용 제품분류
 #define MP_GCM_DELIVERY			        ("C_DELIVERY")				//  DELIVERY
 #define MP_GCM_LOAD_LEVEL		        ("C_LOAD_LEVEL")			//  LOAD LEVEL
-#define MP_GCM_C_INSP_IQC_MES_FLAG		("C_INSP_IQC_MES_FLAG")			//  수입검사유무
-#define MP_GCM_C_SHP_ALL_SHIP_CUS		("C_SHP_ALL_SHIP_CUS")			//  판정제약없이 나갈수있는 고객사명.
-#define MP_GCM_C_SHIP_STATUS            ("C_SHIP_STATUS")			// 출하 상태
+#define MP_GCM_C_INSP_IQC_MES_FLAG		("C_INSP_IQC_MES_FLAG")		//  수입검사유무
+#define MP_GCM_C_SHP_ALL_SHIP_CUS		("C_SHP_ALL_SHIP_CUS")		//  판정제약없이 나갈수있는 고객사명.
+#define MP_GCM_C_SHIP_STATUS            ("C_SHIP_STATUS")			//  출하 상태
+#define MP_GCM_C_CTM_PRESS_GEN_MAT      ("C_CTM_PRESS_GEN_MAT")		//  CTM 프레스 채번 품목정보
 
 //CUSTOM SYSTEM OPTION 
 #define MP_SYS_ORDER_OVER_QTY           ("ORDER_OVER_QTY")          // system option 작업지시 생성 수량 벨리데이션
@@ -209,6 +210,7 @@ struct execute_seq_tag
 #define MP_ID_ROLE_CTM_ACUP_LOT		    ("WIP_CTM_AUTO_CUP_LOT_ID")     //CTM 자동 컵LOT ID 
 #define MP_ID_ROLE_WIP_MOVE_ORDER		("WIP_MOVE_ORDER")              //이동지시번호
 #define MP_ID_ROLE_WIP_PRESS_LOT_ID		("WIP_PRESS_LOT_ID")            //CTM PRESS ID 발번
+#define MP_ID_ROLE_WIP_PRESS_LOT_ID_2	("WIP_PRESS_LOT_ID_2")          //CTM PRESS ID 발번 2
 #define MP_ID_ROLE_WIP_GROUP_ID		    ("WIP_GROUP_ID")                //그룹번호(D12,CELL)
 #define MP_ID_ROLE_WIP_ISP_GROUP_ID		("WIP_ISP_GROUP_ID")            //황삭 준비 공정 그룹 ID
 #define MP_ID_ROLE_WIP_CUP_GROUP_ID		("WIP_CUP_GROUP_ID")            //컵계량 SPLIT후 그룹ID

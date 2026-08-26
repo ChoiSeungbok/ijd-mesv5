@@ -470,6 +470,10 @@
             this.txtMatDesc2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtExcludeWord = new System.Windows.Forms.TextBox();
+            this.lblCount = new System.Windows.Forms.Label();
+            this.lblSum = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.pnlStsCond.SuspendLayout();
             this.pnlMID.SuspendLayout();
             this.pnlBottom.SuspendLayout();
@@ -591,18 +595,18 @@
             // 
             // lblDirectQuery
             // 
-            this.lblDirectQuery.Location = new System.Drawing.Point(-123, 38);
+            this.lblDirectQuery.Location = new System.Drawing.Point(-120, 38);
             // 
             // btnView
             // 
             this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnView.Location = new System.Drawing.Point(1020, 5);
+            this.btnView.Location = new System.Drawing.Point(1023, 5);
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Location = new System.Drawing.Point(1123, 5);
+            this.btnClose.Location = new System.Drawing.Point(1126, 5);
             // 
             // pnlStsCond2
             // 
@@ -616,6 +620,10 @@
             this.pnlBottom.Controls.Add(this.txtPath);
             this.pnlBottom.Controls.Add(this.btntxt);
             this.pnlBottom.Controls.Add(this.btnSave);
+            this.pnlBottom.Controls.Add(this.lblSum);
+            this.pnlBottom.Controls.Add(this.label4);
+            this.pnlBottom.Controls.Add(this.label3);
+            this.pnlBottom.Controls.Add(this.lblCount);
             this.pnlBottom.Controls.Add(this.lblLabel);
             this.pnlBottom.Controls.Add(this.cdvLabel);
             this.pnlBottom.Controls.Add(this.btnPrint);
@@ -626,6 +634,10 @@
             this.pnlBottom.Controls.SetChildIndex(this.btnPrint, 0);
             this.pnlBottom.Controls.SetChildIndex(this.cdvLabel, 0);
             this.pnlBottom.Controls.SetChildIndex(this.lblLabel, 0);
+            this.pnlBottom.Controls.SetChildIndex(this.lblCount, 0);
+            this.pnlBottom.Controls.SetChildIndex(this.label3, 0);
+            this.pnlBottom.Controls.SetChildIndex(this.label4, 0);
+            this.pnlBottom.Controls.SetChildIndex(this.lblSum, 0);
             this.pnlBottom.Controls.SetChildIndex(this.btnSave, 0);
             this.pnlBottom.Controls.SetChildIndex(this.btntxt, 0);
             this.pnlBottom.Controls.SetChildIndex(this.txtPath, 0);
@@ -2911,6 +2923,7 @@
             this.spdLotList.VerticalScrollBar.Renderer = defaultScrollBarRenderer3;
             this.spdLotList.VerticalScrollBarPolicy = FarPoint.Win.Spread.ScrollBarPolicy.AsNeeded;
             this.spdLotList.EditModeStarting += new FarPoint.Win.Spread.EditModeStartingEventHandler(this.spdLotList_EditModeStarting);
+            this.spdLotList.SelectionChanged += new FarPoint.Win.Spread.SelectionChangedEventHandler(this.spdLotList_SelectionChanged);
             this.spdLotList.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.spdLotList_CellClick);
             this.spdLotList.SetViewportLeftColumn(0, 0, 3);
             this.spdLotList.SetActiveViewport(0, -1, -1);
@@ -3155,7 +3168,7 @@
             appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
             this.btnExcel.Appearance = appearance;
             this.btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcel.Location = new System.Drawing.Point(17, 4);
+            this.btnExcel.Location = new System.Drawing.Point(17, 39);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(100, 30);
             this.btnExcel.TabIndex = 249;
@@ -3385,6 +3398,7 @@
             this.spdwLotList.VerticalScrollBar.Renderer = defaultScrollBarRenderer6;
             this.spdwLotList.VerticalScrollBarPolicy = FarPoint.Win.Spread.ScrollBarPolicy.AsNeeded;
             this.spdwLotList.EditModeStarting += new FarPoint.Win.Spread.EditModeStartingEventHandler(this.spdwLotList_EditModeStarting);
+            this.spdwLotList.SelectionChanged += new FarPoint.Win.Spread.SelectionChangedEventHandler(this.spdwLotList_SelectionChanged);
             this.spdwLotList.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.spdwLotList_CellClick);
             this.spdwLotList.ButtonClicked += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.spdwLotList_ButtonClicked);
             this.spdwLotList.SetViewportLeftColumn(0, 0, 3);
@@ -3647,7 +3661,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1211, 508);
+            this.tabPage3.Size = new System.Drawing.Size(1212, 508);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "ALL";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -3665,7 +3679,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1205, 502);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1206, 502);
             this.tableLayoutPanel1.TabIndex = 255;
             // 
             // spdAllLotList
@@ -3774,7 +3788,7 @@
             namedStyle24});
             this.spdAllLotList.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.spdAllLotList_Sheet1});
-            this.spdAllLotList.Size = new System.Drawing.Size(1205, 450);
+            this.spdAllLotList.Size = new System.Drawing.Size(1206, 450);
             spreadSkin3.ColumnFooterDefaultStyle = namedStyle21;
             spreadSkin3.ColumnHeaderDefaultStyle = namedStyle19;
             spreadSkin3.CornerDefaultStyle = namedStyle23;
@@ -3803,6 +3817,7 @@
             this.spdAllLotList.VerticalScrollBar.Name = "";
             this.spdAllLotList.VerticalScrollBar.Renderer = defaultScrollBarRenderer9;
             this.spdAllLotList.VerticalScrollBarPolicy = FarPoint.Win.Spread.ScrollBarPolicy.AsNeeded;
+            this.spdAllLotList.SelectionChanged += new FarPoint.Win.Spread.SelectionChangedEventHandler(this.spdAllLotList_SelectionChanged);
             this.spdAllLotList.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.spdAllLotList_CellClick);
             this.spdAllLotList.ButtonClicked += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.spdAllLotList_ButtonClicked);
             this.spdAllLotList.SetViewportLeftColumn(0, 0, 2);
@@ -4918,7 +4933,7 @@
             appearance4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
             this.btntxt.Appearance = appearance4;
             this.btntxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btntxt.Location = new System.Drawing.Point(125, 5);
+            this.btntxt.Location = new System.Drawing.Point(125, 39);
             this.btntxt.Name = "btntxt";
             this.btntxt.Size = new System.Drawing.Size(100, 30);
             this.btntxt.TabIndex = 273;
@@ -4930,7 +4945,7 @@
             // txtPath
             // 
             this.txtPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtPath.Location = new System.Drawing.Point(232, 8);
+            this.txtPath.Location = new System.Drawing.Point(232, 41);
             this.txtPath.Name = "txtPath";
             this.txtPath.Size = new System.Drawing.Size(263, 26);
             this.txtPath.TabIndex = 274;
@@ -5196,6 +5211,66 @@
             this.txtExcludeWord.TabIndex = 6;
             this.txtExcludeWord.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMatDesc_KeyPress);
             // 
+            // lblCount
+            // 
+            this.lblCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCount.AutoSize = true;
+            this.lblCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(232)))), ((int)(((byte)(244)))));
+            this.lblCount.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCount.ForeColor = System.Drawing.Color.Black;
+            this.lblCount.Location = new System.Drawing.Point(64, 11);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(15, 16);
+            this.lblCount.TabIndex = 271;
+            this.lblCount.Text = "0";
+            this.lblCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblSum
+            // 
+            this.lblSum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSum.AutoSize = true;
+            this.lblSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(232)))), ((int)(((byte)(244)))));
+            this.lblSum.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSum.ForeColor = System.Drawing.Color.Black;
+            this.lblSum.Location = new System.Drawing.Point(188, 11);
+            this.lblSum.Name = "lblSum";
+            this.lblSum.Size = new System.Drawing.Size(15, 16);
+            this.lblSum.TabIndex = 271;
+            this.lblSum.Text = "0";
+            this.lblSum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(232)))), ((int)(((byte)(244)))));
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(21, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 16);
+            this.label3.TabIndex = 271;
+            this.label3.Text = "개수 :";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(232)))), ((int)(((byte)(244)))));
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(131, 11);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 16);
+            this.label4.TabIndex = 271;
+            this.label4.Text = "합계 :";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // frmWIPViewOperLotList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5303,5 +5378,9 @@
         private System.Windows.Forms.TextBox txtMatDesc2;
         private System.Windows.Forms.TextBox txtExcludeWord;
         public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label lblCount;
+        public System.Windows.Forms.Label lblSum;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label label3;
     }
 }

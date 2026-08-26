@@ -208,6 +208,68 @@ void DBU_select_mgcmtbldat(int sel_type, struct MGCMTBLDAT_TAG *MGCMTBLDAT)
                     AND KEY_1 = :MGCMTBLDAT_N.KEY_1;
             break;
 
+        case 5:
+            EXEC SQL SELECT 
+                    FACTORY,
+                    TABLE_NAME,
+                    KEY_1,
+                    KEY_2,
+                    KEY_3,
+                    KEY_4,
+                    KEY_5,
+                    KEY_6,
+                    KEY_7,
+                    KEY_8,
+                    KEY_9,
+                    KEY_10,
+                    DATA_1,
+                    DATA_2,
+                    DATA_3,
+                    DATA_4,
+                    DATA_5,
+                    DATA_6,
+                    DATA_7,
+                    DATA_8,
+                    DATA_9,
+                    DATA_10,
+                    CREATE_USER_ID,
+                    CREATE_TIME,
+                    UPDATE_USER_ID,
+                    UPDATE_TIME
+                INTO 
+                    :MGCMTBLDAT_N.FACTORY,
+                    :MGCMTBLDAT_N.TABLE_NAME,
+                    :MGCMTBLDAT_N.KEY_1,
+                    :MGCMTBLDAT_N.KEY_2,
+                    :MGCMTBLDAT_N.KEY_3,
+                    :MGCMTBLDAT_N.KEY_4,
+                    :MGCMTBLDAT_N.KEY_5,
+                    :MGCMTBLDAT_N.KEY_6,
+                    :MGCMTBLDAT_N.KEY_7,
+                    :MGCMTBLDAT_N.KEY_8,
+                    :MGCMTBLDAT_N.KEY_9,
+                    :MGCMTBLDAT_N.KEY_10,
+                    :MGCMTBLDAT_N.DATA_1,
+                    :MGCMTBLDAT_N.DATA_2,
+                    :MGCMTBLDAT_N.DATA_3,
+                    :MGCMTBLDAT_N.DATA_4,
+                    :MGCMTBLDAT_N.DATA_5,
+                    :MGCMTBLDAT_N.DATA_6,
+                    :MGCMTBLDAT_N.DATA_7,
+                    :MGCMTBLDAT_N.DATA_8,
+                    :MGCMTBLDAT_N.DATA_9,
+                    :MGCMTBLDAT_N.DATA_10,
+                    :MGCMTBLDAT_N.CREATE_USER_ID,
+                    :MGCMTBLDAT_N.CREATE_TIME,
+                    :MGCMTBLDAT_N.UPDATE_USER_ID,
+                    :MGCMTBLDAT_N.UPDATE_TIME
+                FROM MGCMTBLDAT
+                WHERE FACTORY = :MGCMTBLDAT_N.FACTORY
+                    AND TABLE_NAME = :MGCMTBLDAT_N.TABLE_NAME
+                    AND KEY_1 = :MGCMTBLDAT_N.KEY_1
+                    AND (KEY_2 = :MGCMTBLDAT_N.KEY_2 OR KEY_3 = :MGCMTBLDAT_N.KEY_3);
+            break;
+ 
         default:
             DB_error_code = 9999;
             memset(DB_error_msg, ' ', sizeof(DB_error_msg));

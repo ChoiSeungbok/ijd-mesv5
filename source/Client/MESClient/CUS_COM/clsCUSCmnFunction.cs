@@ -895,6 +895,8 @@ namespace CUS_COM
 
                     // BlENDING T-CARD
                     case "t_card_b":
+
+
                         dt.Columns.Add(new DataColumn("GROUP_ID", typeof(string)));
                         dt.Columns.Add(new DataColumn("ORG_CODE", typeof(string)));
                         dt.Columns.Add(new DataColumn("WC_NAME", typeof(string)));
@@ -917,6 +919,26 @@ namespace CUS_COM
                         dt.Columns.Add(new DataColumn("ITEM_UOM", typeof(string)));
                         dt.Columns.Add(new DataColumn("ITEM_QTY", typeof(double)));
                         dt.Columns.Add(new DataColumn("NAME110", typeof(string)));
+
+                        //2026-07-16 블렌딩 T-Card 검사데이터 추가
+                        dt.Columns.Add(new DataColumn("SIZE_NAME", typeof(string)));  //SIZE
+                        dt.Columns.Add(new DataColumn("ROWNUM", typeof(int)));        //NO.
+                        dt.Columns.Add(new DataColumn("ITEM_NAME2", typeof(string)));  //CLP NO.
+                        //dt.Columns.Add(new DataColumn("LOT_ID", typeof(string)));   //LOT NO.
+                        //dt.Columns.Add(new DataColumn("LOT_QTY", typeof(double)));  //중량
+                        dt.Columns.Add(new DataColumn("PSD_UP", typeof(double)));
+                        dt.Columns.Add(new DataColumn("SS", typeof(double)));
+                        dt.Columns.Add(new DataColumn("OS", typeof(double)));
+                        dt.Columns.Add(new DataColumn("PSD_LO", typeof(double)));
+
+                        dt.Columns.Add(new DataColumn("TI", typeof(double)));
+                        dt.Columns.Add(new DataColumn("BI", typeof(double)));
+                        dt.Columns.Add(new DataColumn("TTI", typeof(double)));
+                        dt.Columns.Add(new DataColumn("MA", typeof(double)));
+                        dt.Columns.Add(new DataColumn("HLT", typeof(double)));
+                        dt.Columns.Add(new DataColumn("EILLPT", typeof(double))); 
+                        //dt.Columns.Add(new DataColumn("REMARKS", typeof(string)));
+
 
                         c_step = 'F';
                         break;
@@ -1453,9 +1475,7 @@ namespace CUS_COM
 
                     }
                 }
-
-
-
+                 
                 if (dt == null)
                     return false;
 
@@ -1580,6 +1600,45 @@ namespace CUS_COM
             }
         }
 
+        public static void ViewSelectionListSum(FarPoint.Win.Spread.FpSpread spd, int iCol, ref string sCnt, ref string sSum)
+        {
+            // 현재 활성화된 시트 가져오기
+            FarPoint.Win.Spread.SheetView sheet = spd.ActiveSheet;
+
+            // 선택된 영역(Range) 정보 가져오기
+            FarPoint.Win.Spread.Model.CellRange range = sheet.GetSelection(0);
+
+            if (range == null) return;
+
+            int count = 0;
+            double sum = 0;
+
+            // 선택된 행과 열의 범위를 순회
+            for (int r = range.Row; r < range.Row + range.RowCount; r++)
+            {
+
+                for (int c = range.Column; c < range.Column + range.ColumnCount; c++)
+                {
+                    var cellValue = sheet.GetValue(r, c);
+
+                    if (range.Column == iCol)
+                    {
+                        if (cellValue != null && double.TryParse(cellValue.ToString(), out double num))
+                        {
+                            sum += num; // 숫자 변환이 가능한 경우 합계에 누적
+                        }
+                    }
+
+                    count++; // 선택된 총 셀 개수 카운트
+                }
+            }
+
+            // 결과 출력 또는 레이블에 표시
+            //lblCount.Text = $"개수: {count}";
+            //lblSum.Text = $"합계: {sum}";
+            sCnt = $"{count}";
+            sSum = $"{sum}";
+        }
     }
 
     public static class EXTFUC

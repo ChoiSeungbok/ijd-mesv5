@@ -188,6 +188,8 @@ namespace CUS_WIP
 
         #region " Variable Definition "
         int iTabIndex = 0;
+        string sCnt = null;
+        string sSum = null;
         #endregion
 
         #region " Function Definition "
@@ -2351,6 +2353,29 @@ namespace CUS_WIP
         }
 
         #endregion
+
+        private void spdLotList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            CSCF.ViewSelectionListSum(spdLotList, (int)LOT_INFO.PROD_QTY, ref sCnt, ref sSum);
+            lblCount.Text = sCnt;
+            lblSum.Text = sSum;
+        }
+
+        private void spdwLotList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            CSCF.ViewSelectionListSum(spdwLotList, (int)WLOT_INFO.PROD_QTY, ref sCnt, ref sSum);
+            lblCount.Text = sCnt;
+            lblSum.Text = sSum;
+        }
+
+        private void spdAllLotList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {            
+            CSCF.ViewSelectionListSum(spdAllLotList,  (int)ALL_LOT_INFO.PROD_QTY, ref sCnt, ref sSum);
+            lblCount.Text = sCnt;
+            lblSum.Text = sSum;
+             
+        } 
+
 
     }
 }

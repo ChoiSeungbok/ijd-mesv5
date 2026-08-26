@@ -1,6 +1,6 @@
 /// <XRTypeInfo>
 ///   <AssemblyFullName>DevExpress.XtraReports.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</AssemblyFullName>
-///   <AssemblyLocation>D:\일진다이아\99_MES설치파일\ReportDesinger v11.2(devReport_라벨 및 출력물 생성용)\DevExpress.XtraReports.v11.2.dll</AssemblyLocation>
+///   <AssemblyLocation>D:\document\다이아MES\설치프로그램\Desktop\11.2버전 레포트 디자이너\DevExpress.XtraReports.v11.2.dll</AssemblyLocation>
 ///   <TypeName>DevExpress.XtraReports.UI.XtraReport</TypeName>
 ///   <Localization>ko-KR</Localization>
 /// </XRTypeInfo>
@@ -11,31 +11,10 @@ namespace XtraReportSerialization {
         private DevExpress.XtraReports.UI.DetailBand Detail;
         private DevExpress.XtraReports.UI.XRLabel label33;
         private DevExpress.XtraReports.UI.XRLabel label43;
-        private DevExpress.XtraReports.UI.XRLabel label37;
-        private DevExpress.XtraReports.UI.XRLabel label60;
-        private DevExpress.XtraReports.UI.XRLabel label59;
-        private DevExpress.XtraReports.UI.XRLabel label62;
-        private DevExpress.XtraReports.UI.XRLabel label58;
-        private DevExpress.XtraReports.UI.XRLine line29;
-        private DevExpress.XtraReports.UI.XRLine line30;
-        private DevExpress.XtraReports.UI.XRLine line28;
-        private DevExpress.XtraReports.UI.XRLine line26;
-        private DevExpress.XtraReports.UI.XRLine line27;
-        private DevExpress.XtraReports.UI.XRLine line34;
-        private DevExpress.XtraReports.UI.XRLine line35;
-        private DevExpress.XtraReports.UI.XRLine line33;
-        private DevExpress.XtraReports.UI.XRLine line32;
-        private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
         private DevExpress.XtraReports.UI.XRLabel label40;
         private DevExpress.XtraReports.UI.XRLabel label39;
-        private DevExpress.XtraReports.UI.XRLabel label57;
-        private DevExpress.XtraReports.UI.XRLabel label49;
-        private DevExpress.XtraReports.UI.XRLabel label64;
-        private DevExpress.XtraReports.UI.XRLabel label61;
-        private DevExpress.XtraReports.UI.XRLabel label65;
-        private DevExpress.XtraReports.UI.XRLabel label71;
-        private DevExpress.XtraReports.UI.XRLabel label67;
-        private DevExpress.XtraReports.UI.XRLabel label66;
+        private DevExpress.XtraReports.UI.XRLabel label37;
+        private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
         private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
         private DevExpress.XtraReports.UI.XRLabel label1;
         private DevExpress.XtraReports.UI.PageFooterBand PageFooter;
@@ -43,8 +22,6 @@ namespace XtraReportSerialization {
         private DevExpress.XtraReports.UI.XRPageInfo pageInfo2;
         private DevExpress.XtraReports.UI.XRPageInfo pageInfo1;
         private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader1;
-        private DevExpress.XtraReports.UI.XRLabel label12;
-        private DevExpress.XtraReports.UI.XRLabel label74;
         private DevExpress.XtraReports.UI.XRLabel label10;
         private DevExpress.XtraReports.UI.XRLabel label9;
         private DevExpress.XtraReports.UI.XRLabel label8;
@@ -62,27 +39,23 @@ namespace XtraReportSerialization {
         private DevExpress.XtraReports.UI.XRLabel label2;
         private DevExpress.XtraReports.UI.XRLabel label3;
         private DevExpress.XtraReports.UI.XRLabel label7;
-        private DevExpress.XtraReports.UI.XRLabel label41;
         private DevExpress.XtraReports.UI.GroupFooterBand GroupFooter1;
         private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader2;
-        private DevExpress.XtraReports.UI.XRLine line25;
-        private DevExpress.XtraReports.UI.XRLine line24;
-        private DevExpress.XtraReports.UI.XRLine line23;
-        private DevExpress.XtraReports.UI.XRLine line22;
-        private DevExpress.XtraReports.UI.XRLine line8;
-        private DevExpress.XtraReports.UI.XRLine line7;
-        private DevExpress.XtraReports.UI.XRLine line6;
-        private DevExpress.XtraReports.UI.XRLine line5;
-        private DevExpress.XtraReports.UI.XRLine line48;
-        private DevExpress.XtraReports.UI.XRLabel label47;
         private DevExpress.XtraReports.UI.XRLabel label38;
         private DevExpress.XtraReports.UI.XRLabel label46;
         private DevExpress.XtraReports.UI.XRLabel label45;
         private DevExpress.XtraReports.UI.XRLabel label44;
         private DevExpress.XtraReports.UI.XRLabel label11;
+        private DevExpress.XtraReports.UI.XRLabel label22;
+        private DevExpress.XtraReports.UI.XRLine line25;
+        private DevExpress.XtraReports.UI.XRLabel label21;
+        private DevExpress.XtraReports.UI.XRLabel label36;
         private DevExpress.XtraReports.UI.XRLabel label35;
+        private DevExpress.XtraReports.UI.XRLabel label34;
+        private DevExpress.XtraReports.UI.XRLine line23;
         private DevExpress.XtraReports.UI.XRLine line14;
         private DevExpress.XtraReports.UI.XRLine line12;
+        private DevExpress.XtraReports.UI.XRLabel label12;
         private DevExpress.XtraReports.UI.XRLabel label16;
         private DevExpress.XtraReports.UI.XRLine line21;
         private DevExpress.XtraReports.UI.XRLine line11;
@@ -99,20 +72,16 @@ namespace XtraReportSerialization {
         private DevExpress.XtraReports.UI.XRLabel label20;
         private DevExpress.XtraReports.UI.XRLine line18;
         private DevExpress.XtraReports.UI.XRLine line17;
+        private DevExpress.XtraReports.UI.XRLabel label41;
         private DevExpress.XtraReports.UI.XRLine line19;
+        private DevExpress.XtraReports.UI.XRLine line24;
         private DevExpress.XtraReports.UI.XRLabel label17;
+        private DevExpress.XtraReports.UI.XRLine line22;
         private DevExpress.XtraReports.UI.XRLabel label14;
         private DevExpress.XtraReports.UI.XRLabel label13;
         private DevExpress.XtraReports.UI.XRLabel label24;
         private DevExpress.XtraReports.UI.XRLabel label15;
-        private DevExpress.XtraReports.UI.XRLabel label22;
-        private DevExpress.XtraReports.UI.XRLabel label51;
-        private DevExpress.XtraReports.UI.XRLabel label50;
-        private DevExpress.XtraReports.UI.XRLabel label55;
-        private DevExpress.XtraReports.UI.XRLabel label52;
-        private DevExpress.XtraReports.UI.XRLine line2;
         private DevExpress.XtraReports.UI.GroupFooterBand GroupFooter2;
-        private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter;
         private System.Resources.ResourceManager _resources;
         public Report2() {
             this.InitializeComponent();
@@ -124,7 +93,7 @@ namespace XtraReportSerialization {
                         "W9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4O" +
                         "SNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAACAAAAAAAAAFBBRFBBRFBIXnLBN" +
                         "eNbHjEAAAAAAAAAIAEAACwkAHQAaABpAHMALgBEAGEAdABhAFMAbwB1AHIAYwBlAFMAYwBoAGUAbQBhA" +
-                        "AAAAAAmJAB0AGgAaQBzAC4AUwBjAHIAaQBwAHQAcwBTAG8AdQByAGMAZQBmDQAAAeMaPD94bWwgdmVyc" +
+                        "AAAAAAmJAB0AGgAaQBzAC4AUwBjAHIAaQBwAHQAcwBTAG8AdQByAGMAZQCfCQAAAZwTPD94bWwgdmVyc" +
                         "2lvbj0iMS4wIj8+DQo8eHM6c2NoZW1hIGlkPSJwcmQxMDBwYkRhdGFTb3VyY2UiIHhtbG5zPSIiIHhtb" +
                         "G5zOnhzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeG1sbnM6bXNkYXRhPSJ1cm46c" +
                         "2NoZW1hcy1taWNyb3NvZnQtY29tOnhtbC1tc2RhdGEiPg0KICA8eHM6ZWxlbWVudCBuYW1lPSJwcmQxM" +
@@ -163,38 +132,13 @@ namespace XtraReportSerialization {
                         "W1lPSJOQU1FMTEwIiB0eXBlPSJ4czpzdHJpbmciIG1pbk9jY3Vycz0iMCIgLz4NCiAgICAgICAgICAgI" +
                         "CAgPHhzOmVsZW1lbnQgbmFtZT0iTUNfTkFNRSIgdHlwZT0ieHM6c3RyaW5nIiBtaW5PY2N1cnM9IjAiI" +
                         "C8+DQogICAgICAgICAgICAgIDx4czplbGVtZW50IG5hbWU9IkdSQURFIiB0eXBlPSJ4czpzdHJpbmciI" +
-                        "G1pbk9jY3Vycz0iMCIgLz4NCiAgICAgICAgICAgICAgPHhzOmVsZW1lbnQgbmFtZT0iU0laRV9OQU1FI" +
-                        "iB0eXBlPSJ4czpzdHJpbmciIG1pbk9jY3Vycz0iMCIgLz4NCiAgICAgICAgICAgICAgPHhzOmVsZW1lb" +
-                        "nQgbmFtZT0iUk9XTlVNIiB0eXBlPSJ4czpkZWNpbWFsIiBtaW5PY2N1cnM9IjAiIC8+DQogICAgICAgI" +
-                        "CAgICAgIDx4czplbGVtZW50IG5hbWU9IklURU1fTkFNRTIiIHR5cGU9InhzOnN0cmluZyIgbWluT2Njd" +
-                        "XJzPSIwIiAvPg0KICAgICAgICAgICAgICA8eHM6ZWxlbWVudCBuYW1lPSJQU0RfVVAiIHR5cGU9InhzO" +
-                        "mRlY2ltYWwiIG1pbk9jY3Vycz0iMCIgLz4NCiAgICAgICAgICAgICAgPHhzOmVsZW1lbnQgbmFtZT0iU" +
-                        "1MiIHR5cGU9InhzOmRlY2ltYWwiIG1pbk9jY3Vycz0iMCIgLz4NCiAgICAgICAgICAgICAgPHhzOmVsZ" +
-                        "W1lbnQgbmFtZT0iT1MiIHR5cGU9InhzOmRlY2ltYWwiIG1pbk9jY3Vycz0iMCIgLz4NCiAgICAgICAgI" +
-                        "CAgICAgPHhzOmVsZW1lbnQgbmFtZT0iUFNEX0xPIiB0eXBlPSJ4czpkZWNpbWFsIiBtaW5PY2N1cnM9I" +
-                        "jAiIC8+DQogICAgICAgICAgICAgIDx4czplbGVtZW50IG5hbWU9IlRJIiB0eXBlPSJ4czpkZWNpbWFsI" +
-                        "iBtaW5PY2N1cnM9IjAiIC8+DQogICAgICAgICAgICAgIDx4czplbGVtZW50IG5hbWU9IkJJIiB0eXBlP" +
-                        "SJ4czpkZWNpbWFsIiBtaW5PY2N1cnM9IjAiIC8+DQogICAgICAgICAgICAgIDx4czplbGVtZW50IG5hb" +
-                        "WU9IlRUSSIgdHlwZT0ieHM6ZGVjaW1hbCIgbWluT2NjdXJzPSIwIiAvPg0KICAgICAgICAgICAgICA8e" +
-                        "HM6ZWxlbWVudCBuYW1lPSJNQSIgdHlwZT0ieHM6ZGVjaW1hbCIgbWluT2NjdXJzPSIwIiAvPg0KICAgI" +
-                        "CAgICAgICAgICA8eHM6ZWxlbWVudCBuYW1lPSJITFQiIHR5cGU9InhzOmRlY2ltYWwiIG1pbk9jY3Vyc" +
-                        "z0iMCIgLz4NCiAgICAgICAgICAgICAgPHhzOmVsZW1lbnQgbmFtZT0iRUlMTFBUIiB0eXBlPSJ4czpkZ" +
-                        "WNpbWFsIiBtaW5PY2N1cnM9IjAiIC8+DQogICAgICAgICAgICA8L3hzOnNlcXVlbmNlPg0KICAgICAgI" +
-                        "CAgIDwveHM6Y29tcGxleFR5cGU+DQogICAgICAgIDwveHM6ZWxlbWVudD4NCiAgICAgIDwveHM6Y2hva" +
-                        "WNlPg0KICAgIDwveHM6Y29tcGxleFR5cGU+DQogIDwveHM6ZWxlbWVudD4NCjwveHM6c2NoZW1hPgH0B" +
-                        "Q0KcHJpdmF0ZSB2b2lkIEdyb3VwSGVhZGVyMV9CZWZvcmVQcmludChvYmplY3Qgc2VuZGVyLCBTeXN0Z" +
-                        "W0uRHJhd2luZy5QcmludGluZy5QcmludEV2ZW50QXJncyBlKSB7DQogICAgICAgIA0KCWlmKChpbnQpR" +
-                        "2V0Q3VycmVudENvbHVtblZhbHVlKCJTRVFfTlVNIik9PTEpDQoJew0KCQlsYWJlbDQ1LlZpc2libGUgP" +
-                        "SB0cnVlOw0KCX0NCgllbHNlDQoJew0KCQlsYWJlbDQ1LlZpc2libGUgPSBmYWxzZTsNCgl9DQoJaWYgK" +
-                        "ENvbnZlcnQuVG9Eb3VibGUoR2V0Q3VycmVudENvbHVtblZhbHVlKCJJVEVNX1FUWSIpKSA9PSAwKSANC" +
-                        "gl7DQogICAgICAJbGFiZWw0My5WaXNpYmxlID0gZmFsc2U7DQoJfQ0KCWlmIChDb252ZXJ0LlRvRG91Y" +
-                        "mxlKEdldEN1cnJlbnRDb2x1bW5WYWx1ZSgiUFNEX1VQIikpID09IDApIA0KCXsNCiAgICAgIAlsYWJlb" +
-                        "DU4LlZpc2libGUgPSBmYWxzZTsNCgl9DQoJaWYgKENvbnZlcnQuVG9Eb3VibGUoR2V0Q3VycmVudENvb" +
-                        "HVtblZhbHVlKCJTUyIpKSA9PSAwKSANCgl7DQogICAgICAJbGFiZWw1OS5WaXNpYmxlID0gZmFsc2U7D" +
-                        "QoJfQ0KCWlmIChDb252ZXJ0LlRvRG91YmxlKEdldEN1cnJlbnRDb2x1bW5WYWx1ZSgiT1MiKSkgPT0gM" +
-                        "CkgDQoJew0KICAgICAgCWxhYmVsNjAuVmlzaWJsZSA9IGZhbHNlOw0KCX0gIA0KCWlmIChDb252ZXJ0L" +
-                        "lRvRG91YmxlKEdldEN1cnJlbnRDb2x1bW5WYWx1ZSgiUFNEX0xPIikpID09IDApIA0KCXsNCiAgICAgI" +
-                        "AlsYWJlbDYyLlZpc2libGUgPSBmYWxzZTsNCgl9DQp9DQoNCg==";
+                        "G1pbk9jY3Vycz0iMCIgLz4NCiAgICAgICAgICAgIDwveHM6c2VxdWVuY2U+DQogICAgICAgICAgPC94c" +
+                        "zpjb21wbGV4VHlwZT4NCiAgICAgICAgPC94czplbGVtZW50Pg0KICAgICAgPC94czpjaG9pY2U+DQogI" +
+                        "CAgPC94czpjb21wbGV4VHlwZT4NCiAgPC94czplbGVtZW50Pg0KPC94czpzY2hlbWE+AegBDQpwcml2Y" +
+                        "XRlIHZvaWQgR3JvdXBIZWFkZXIxX0JlZm9yZVByaW50KG9iamVjdCBzZW5kZXIsIFN5c3RlbS5EcmF3a" +
+                        "W5nLlByaW50aW5nLlByaW50RXZlbnRBcmdzIGUpIHsNCg0KCWlmKChpbnQpR2V0Q3VycmVudENvbHVtb" +
+                        "lZhbHVlKCJTRVFfTlVNIik9PTEpDQoJew0KCQlsYWJlbDQ1LlZpc2libGUgPSB0cnVlOw0KCX0NCgllb" +
+                        "HNlDQoJew0KCQlsYWJlbDQ1LlZpc2libGUgPSBmYWxzZTsNCgl9DQoNCn0NCg==";
                     this._resources = new DevExpress.XtraReports.Serialization.XRResourceManager(resourceString);
                 }
                 return this._resources;
@@ -211,39 +155,15 @@ namespace XtraReportSerialization {
             this.GroupFooter1 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.GroupHeader2 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.GroupFooter2 = new DevExpress.XtraReports.UI.GroupFooterBand();
-            this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.label33 = new DevExpress.XtraReports.UI.XRLabel();
             this.label43 = new DevExpress.XtraReports.UI.XRLabel();
-            this.label37 = new DevExpress.XtraReports.UI.XRLabel();
-            this.label60 = new DevExpress.XtraReports.UI.XRLabel();
-            this.label59 = new DevExpress.XtraReports.UI.XRLabel();
-            this.label62 = new DevExpress.XtraReports.UI.XRLabel();
-            this.label58 = new DevExpress.XtraReports.UI.XRLabel();
-            this.line29 = new DevExpress.XtraReports.UI.XRLine();
-            this.line30 = new DevExpress.XtraReports.UI.XRLine();
-            this.line28 = new DevExpress.XtraReports.UI.XRLine();
-            this.line26 = new DevExpress.XtraReports.UI.XRLine();
-            this.line27 = new DevExpress.XtraReports.UI.XRLine();
-            this.line34 = new DevExpress.XtraReports.UI.XRLine();
-            this.line35 = new DevExpress.XtraReports.UI.XRLine();
-            this.line33 = new DevExpress.XtraReports.UI.XRLine();
-            this.line32 = new DevExpress.XtraReports.UI.XRLine();
             this.label40 = new DevExpress.XtraReports.UI.XRLabel();
             this.label39 = new DevExpress.XtraReports.UI.XRLabel();
-            this.label57 = new DevExpress.XtraReports.UI.XRLabel();
-            this.label49 = new DevExpress.XtraReports.UI.XRLabel();
-            this.label64 = new DevExpress.XtraReports.UI.XRLabel();
-            this.label61 = new DevExpress.XtraReports.UI.XRLabel();
-            this.label65 = new DevExpress.XtraReports.UI.XRLabel();
-            this.label71 = new DevExpress.XtraReports.UI.XRLabel();
-            this.label67 = new DevExpress.XtraReports.UI.XRLabel();
-            this.label66 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label37 = new DevExpress.XtraReports.UI.XRLabel();
             this.label1 = new DevExpress.XtraReports.UI.XRLabel();
             this.label42 = new DevExpress.XtraReports.UI.XRLabel();
             this.pageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.pageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
-            this.label12 = new DevExpress.XtraReports.UI.XRLabel();
-            this.label74 = new DevExpress.XtraReports.UI.XRLabel();
             this.label10 = new DevExpress.XtraReports.UI.XRLabel();
             this.label9 = new DevExpress.XtraReports.UI.XRLabel();
             this.label8 = new DevExpress.XtraReports.UI.XRLabel();
@@ -261,25 +181,21 @@ namespace XtraReportSerialization {
             this.label2 = new DevExpress.XtraReports.UI.XRLabel();
             this.label3 = new DevExpress.XtraReports.UI.XRLabel();
             this.label7 = new DevExpress.XtraReports.UI.XRLabel();
-            this.label41 = new DevExpress.XtraReports.UI.XRLabel();
-            this.line25 = new DevExpress.XtraReports.UI.XRLine();
-            this.line24 = new DevExpress.XtraReports.UI.XRLine();
-            this.line23 = new DevExpress.XtraReports.UI.XRLine();
-            this.line22 = new DevExpress.XtraReports.UI.XRLine();
-            this.line8 = new DevExpress.XtraReports.UI.XRLine();
-            this.line7 = new DevExpress.XtraReports.UI.XRLine();
-            this.line6 = new DevExpress.XtraReports.UI.XRLine();
-            this.line5 = new DevExpress.XtraReports.UI.XRLine();
-            this.line48 = new DevExpress.XtraReports.UI.XRLine();
-            this.label47 = new DevExpress.XtraReports.UI.XRLabel();
             this.label38 = new DevExpress.XtraReports.UI.XRLabel();
             this.label46 = new DevExpress.XtraReports.UI.XRLabel();
             this.label45 = new DevExpress.XtraReports.UI.XRLabel();
             this.label44 = new DevExpress.XtraReports.UI.XRLabel();
             this.label11 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label22 = new DevExpress.XtraReports.UI.XRLabel();
+            this.line25 = new DevExpress.XtraReports.UI.XRLine();
+            this.label21 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label36 = new DevExpress.XtraReports.UI.XRLabel();
             this.label35 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label34 = new DevExpress.XtraReports.UI.XRLabel();
+            this.line23 = new DevExpress.XtraReports.UI.XRLine();
             this.line14 = new DevExpress.XtraReports.UI.XRLine();
             this.line12 = new DevExpress.XtraReports.UI.XRLine();
+            this.label12 = new DevExpress.XtraReports.UI.XRLabel();
             this.label16 = new DevExpress.XtraReports.UI.XRLabel();
             this.line21 = new DevExpress.XtraReports.UI.XRLine();
             this.line11 = new DevExpress.XtraReports.UI.XRLine();
@@ -296,18 +212,15 @@ namespace XtraReportSerialization {
             this.label20 = new DevExpress.XtraReports.UI.XRLabel();
             this.line18 = new DevExpress.XtraReports.UI.XRLine();
             this.line17 = new DevExpress.XtraReports.UI.XRLine();
+            this.label41 = new DevExpress.XtraReports.UI.XRLabel();
             this.line19 = new DevExpress.XtraReports.UI.XRLine();
+            this.line24 = new DevExpress.XtraReports.UI.XRLine();
             this.label17 = new DevExpress.XtraReports.UI.XRLabel();
+            this.line22 = new DevExpress.XtraReports.UI.XRLine();
             this.label14 = new DevExpress.XtraReports.UI.XRLabel();
             this.label13 = new DevExpress.XtraReports.UI.XRLabel();
             this.label24 = new DevExpress.XtraReports.UI.XRLabel();
             this.label15 = new DevExpress.XtraReports.UI.XRLabel();
-            this.label22 = new DevExpress.XtraReports.UI.XRLabel();
-            this.label51 = new DevExpress.XtraReports.UI.XRLabel();
-            this.label50 = new DevExpress.XtraReports.UI.XRLabel();
-            this.label55 = new DevExpress.XtraReports.UI.XRLabel();
-            this.label52 = new DevExpress.XtraReports.UI.XRLabel();
-            this.line2 = new DevExpress.XtraReports.UI.XRLine();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // TopMargin
@@ -321,38 +234,15 @@ namespace XtraReportSerialization {
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
                         this.label33,
                         this.label43,
-                        this.label37,
-                        this.label60,
-                        this.label59,
-                        this.label62,
-                        this.label58,
-                        this.line29,
-                        this.line30,
-                        this.line28,
-                        this.line26,
-                        this.line27,
-                        this.line34,
-                        this.line35,
-                        this.line33,
-                        this.line32});
+                        this.label40,
+                        this.label39,
+                        this.label37});
             this.Detail.Dpi = 254F;
-            this.Detail.HeightF = 59.5F;
-            this.Detail.MultiColumn.Mode = DevExpress.XtraReports.UI.MultiColumnMode.UseColumnCount;
+            this.Detail.HeightF = 45.58377F;
             this.Detail.Name = "Detail";
             // 
             // BottomMargin
             // 
-            this.BottomMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-                        this.label40,
-                        this.label39,
-                        this.label57,
-                        this.label49,
-                        this.label64,
-                        this.label61,
-                        this.label65,
-                        this.label71,
-                        this.label67,
-                        this.label66});
             this.BottomMargin.Dpi = 254F;
             this.BottomMargin.HeightF = 51F;
             this.BottomMargin.Name = "BottomMargin";
@@ -362,7 +252,7 @@ namespace XtraReportSerialization {
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
                         this.label1});
             this.PageHeader.Dpi = 254F;
-            this.PageHeader.HeightF = 125.8124F;
+            this.PageHeader.HeightF = 157.5624F;
             this.PageHeader.Name = "PageHeader";
             // 
             // PageFooter
@@ -372,15 +262,11 @@ namespace XtraReportSerialization {
                         this.pageInfo2,
                         this.pageInfo1});
             this.PageFooter.Dpi = 254F;
-            this.PageFooter.Expanded = false;
-            this.PageFooter.HeightF = 74.08334F;
             this.PageFooter.Name = "PageFooter";
             // 
             // GroupHeader1
             // 
             this.GroupHeader1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-                        this.label12,
-                        this.label74,
                         this.label10,
                         this.label9,
                         this.label8,
@@ -397,12 +283,11 @@ namespace XtraReportSerialization {
                         this.line1,
                         this.label2,
                         this.label3,
-                        this.label7,
-                        this.label41});
+                        this.label7});
             this.GroupHeader1.Dpi = 254F;
             this.GroupHeader1.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
                         new DevExpress.XtraReports.UI.GroupField("GROUP_ID", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
-            this.GroupHeader1.HeightF = 431.5907F;
+            this.GroupHeader1.HeightF = 494.7692F;
             this.GroupHeader1.Level = 1;
             this.GroupHeader1.Name = "GroupHeader1";
             this.GroupHeader1.PageBreak = DevExpress.XtraReports.UI.PageBreak.BeforeBand;
@@ -411,7 +296,6 @@ namespace XtraReportSerialization {
             // GroupFooter1
             // 
             this.GroupFooter1.Dpi = 254F;
-            this.GroupFooter1.Expanded = false;
             this.GroupFooter1.HeightF = 0F;
             this.GroupFooter1.Level = 1;
             this.GroupFooter1.Name = "GroupFooter1";
@@ -421,24 +305,21 @@ namespace XtraReportSerialization {
             // GroupHeader2
             // 
             this.GroupHeader2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-                        this.line25,
-                        this.line24,
-                        this.line23,
-                        this.line22,
-                        this.line8,
-                        this.line7,
-                        this.line6,
-                        this.line5,
-                        this.line48,
-                        this.label47,
                         this.label38,
                         this.label46,
                         this.label45,
                         this.label44,
                         this.label11,
+                        this.label22,
+                        this.line25,
+                        this.label21,
+                        this.label36,
                         this.label35,
+                        this.label34,
+                        this.line23,
                         this.line14,
                         this.line12,
+                        this.label12,
                         this.label16,
                         this.line21,
                         this.line11,
@@ -455,48 +336,38 @@ namespace XtraReportSerialization {
                         this.label20,
                         this.line18,
                         this.line17,
+                        this.label41,
                         this.line19,
+                        this.line24,
                         this.label17,
+                        this.line22,
                         this.label14,
                         this.label13,
                         this.label24,
-                        this.label15,
-                        this.label22,
-                        this.label51,
-                        this.label50,
-                        this.label55,
-                        this.label52,
-                        this.line2});
+                        this.label15});
             this.GroupHeader2.Dpi = 254F;
             this.GroupHeader2.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
                         new DevExpress.XtraReports.UI.GroupField("SEQ_NUM", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
-            this.GroupHeader2.HeightF = 202.5314F;
+            this.GroupHeader2.HeightF = 264.5833F;
             this.GroupHeader2.Name = "GroupHeader2";
             this.GroupHeader2.Scripts.OnBeforePrint = "GroupHeader1_BeforePrint";
             // 
             // GroupFooter2
             // 
             this.GroupFooter2.Dpi = 254F;
-            this.GroupFooter2.HeightF = 0F;
+            this.GroupFooter2.HeightF = 2.645833F;
             this.GroupFooter2.Name = "GroupFooter2";
-            // 
-            // ReportFooter
-            // 
-            this.ReportFooter.Dpi = 254F;
-            this.ReportFooter.Expanded = false;
-            this.ReportFooter.HeightF = 0F;
-            this.ReportFooter.Name = "ReportFooter";
             // 
             // label33
             // 
             this.label33.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.LOT_ID")});
             this.label33.Dpi = 254F;
-            this.label33.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label33.LocationFloat = new DevExpress.Utils.PointFloat(100.6072F, 5.999998F);
+            this.label33.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.LocationFloat = new DevExpress.Utils.PointFloat(340F, 0F);
             this.label33.Name = "label33";
             this.label33.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label33.SizeF = new System.Drawing.SizeF(349.6869F, 47.29169F);
+            this.label33.SizeF = new System.Drawing.SizeF(339.3641F, 42.00002F);
             this.label33.StylePriority.UseFont = false;
             this.label33.StylePriority.UseTextAlignment = false;
             this.label33.Text = "label33";
@@ -505,323 +376,66 @@ namespace XtraReportSerialization {
             // label43
             // 
             this.label43.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.ITEM_QTY", "{0:#,#0}")});
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.ITEM_QTY", "{0:#,#0.0000}")});
             this.label43.Dpi = 254F;
-            this.label43.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label43.LocationFloat = new DevExpress.Utils.PointFloat(1170.026F, 6.000038F);
+            this.label43.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.LocationFloat = new DevExpress.Utils.PointFloat(1344.78F, 0F);
             this.label43.Name = "label43";
             this.label43.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label43.SizeF = new System.Drawing.SizeF(206.9095F, 47.29169F);
+            this.label43.SizeF = new System.Drawing.SizeF(213.6158F, 43.7919F);
             this.label43.StylePriority.UseFont = false;
             this.label43.StylePriority.UseTextAlignment = false;
             this.label43.Text = "label43";
-            this.label43.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
-            // label37
-            // 
-            this.label37.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.ITEM_NAME110")});
-            this.label37.Dpi = 254F;
-            this.label37.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label37.LocationFloat = new DevExpress.Utils.PointFloat(466.632F, 6.000038F);
-            this.label37.Name = "label37";
-            this.label37.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label37.SizeF = new System.Drawing.SizeF(676.3678F, 47.29169F);
-            this.label37.StylePriority.UseFont = false;
-            this.label37.StylePriority.UseTextAlignment = false;
-            this.label37.Text = "label37";
-            this.label37.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // label60
-            // 
-            this.label60.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.OS")});
-            this.label60.Dpi = 254F;
-            this.label60.Font = new System.Drawing.Font("맑은 고딕", 8.25F);
-            this.label60.LocationFloat = new DevExpress.Utils.PointFloat(1696.453F, 5.999957F);
-            this.label60.Name = "label60";
-            this.label60.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label60.SizeF = new System.Drawing.SizeF(135.108F, 47.29169F);
-            this.label60.StylePriority.UseFont = false;
-            this.label60.StylePriority.UseTextAlignment = false;
-            this.label60.Text = "label60";
-            this.label60.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
-            // label59
-            // 
-            this.label59.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.SS")});
-            this.label59.Dpi = 254F;
-            this.label59.Font = new System.Drawing.Font("맑은 고딕", 8.25F);
-            this.label59.LocationFloat = new DevExpress.Utils.PointFloat(1543.955F, 6.000038F);
-            this.label59.Name = "label59";
-            this.label59.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label59.SizeF = new System.Drawing.SizeF(143.0001F, 47.29169F);
-            this.label59.StylePriority.UseFont = false;
-            this.label59.StylePriority.UseTextAlignment = false;
-            this.label59.Text = "label59";
-            this.label59.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
-            // label62
-            // 
-            this.label62.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.PSD_LO")});
-            this.label62.Dpi = 254F;
-            this.label62.Font = new System.Drawing.Font("맑은 고딕", 8.25F);
-            this.label62.LocationFloat = new DevExpress.Utils.PointFloat(1852.302F, 5.999957F);
-            this.label62.Name = "label62";
-            this.label62.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label62.SizeF = new System.Drawing.SizeF(143F, 47.29169F);
-            this.label62.StylePriority.UseFont = false;
-            this.label62.StylePriority.UseTextAlignment = false;
-            this.label62.Text = "[prd100pb.TI]";
-            this.label62.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
-            // label58
-            // 
-            this.label58.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.PSD_UP")});
-            this.label58.Dpi = 254F;
-            this.label58.Font = new System.Drawing.Font("맑은 고딕", 8.25F);
-            this.label58.LocationFloat = new DevExpress.Utils.PointFloat(1393.17F, 5.999957F);
-            this.label58.Name = "label58";
-            this.label58.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label58.SizeF = new System.Drawing.SizeF(142.9323F, 47.29169F);
-            this.label58.StylePriority.UseFont = false;
-            this.label58.StylePriority.UseTextAlignment = false;
-            this.label58.Text = "0";
-            this.label58.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
-            // line29
-            // 
-            this.line29.Dpi = 254F;
-            this.line29.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.line29.LineWidth = 3;
-            this.line29.LocationFloat = new DevExpress.Utils.PointFloat(1153.15F, 0F);
-            this.line29.Name = "line29";
-            this.line29.SizeF = new System.Drawing.SizeF(5.290039F, 56.45848F);
-            // 
-            // line30
-            // 
-            this.line30.Dpi = 254F;
-            this.line30.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.line30.LineWidth = 3;
-            this.line30.LocationFloat = new DevExpress.Utils.PointFloat(1387.88F, 0F);
-            this.line30.Name = "line30";
-            this.line30.SizeF = new System.Drawing.SizeF(5.290039F, 56.45848F);
-            // 
-            // line28
-            // 
-            this.line28.Dpi = 254F;
-            this.line28.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.line28.LineWidth = 3;
-            this.line28.LocationFloat = new DevExpress.Utils.PointFloat(450.2941F, 0F);
-            this.line28.Name = "line28";
-            this.line28.SizeF = new System.Drawing.SizeF(5.290039F, 56.45848F);
-            // 
-            // line26
-            // 
-            this.line26.Dpi = 254F;
-            this.line26.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.line26.LineWidth = 3;
-            this.line26.LocationFloat = new DevExpress.Utils.PointFloat(90.02713F, 0F);
-            this.line26.Name = "line26";
-            this.line26.SizeF = new System.Drawing.SizeF(5.290039F, 59.45847F);
-            // 
-            // line27
-            // 
-            this.line27.Dpi = 254F;
-            this.line27.LineWidth = 3;
-            this.line27.LocationFloat = new DevExpress.Utils.PointFloat(92.9064F, 54.45847F);
-            this.line27.Name = "line27";
-            this.line27.SizeF = new System.Drawing.SizeF(1907F, 5F);
-            // 
-            // line34
-            // 
-            this.line34.Dpi = 254F;
-            this.line34.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.line34.LineWidth = 3;
-            this.line34.LocationFloat = new DevExpress.Utils.PointFloat(1839.386F, 0F);
-            this.line34.Name = "line34";
-            this.line34.SizeF = new System.Drawing.SizeF(5.290039F, 56.45848F);
-            // 
-            // line35
-            // 
-            this.line35.Dpi = 254F;
-            this.line35.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.line35.LineWidth = 3;
-            this.line35.LocationFloat = new DevExpress.Utils.PointFloat(1995.302F, 0F);
-            this.line35.Name = "line35";
-            this.line35.SizeF = new System.Drawing.SizeF(5.290039F, 59.5F);
-            // 
-            // line33
-            // 
-            this.line33.Dpi = 254F;
-            this.line33.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.line33.LineWidth = 3;
-            this.line33.LocationFloat = new DevExpress.Utils.PointFloat(1691.095F, 0F);
-            this.line33.Name = "line33";
-            this.line33.SizeF = new System.Drawing.SizeF(5.290039F, 56.45848F);
-            // 
-            // line32
-            // 
-            this.line32.Dpi = 254F;
-            this.line32.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.line32.LineWidth = 3;
-            this.line32.LocationFloat = new DevExpress.Utils.PointFloat(1536.555F, 0F);
-            this.line32.Name = "line32";
-            this.line32.SizeF = new System.Drawing.SizeF(5.290039F, 56.45848F);
+            this.label43.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // label40
             // 
             this.label40.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.NAME110")});
             this.label40.Dpi = 254F;
-            this.label40.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label40.LocationFloat = new DevExpress.Utils.PointFloat(1964.508F, 0F);
+            this.label40.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.LocationFloat = new DevExpress.Utils.PointFloat(1562.438F, 0F);
             this.label40.Name = "label40";
             this.label40.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label40.SizeF = new System.Drawing.SizeF(40.80835F, 42.00002F);
+            this.label40.SizeF = new System.Drawing.SizeF(438.2216F, 43.7919F);
             this.label40.StylePriority.UseFont = false;
             this.label40.StylePriority.UseTextAlignment = false;
-            this.label40.Tag = "출고창고";
             this.label40.Text = "label40";
             this.label40.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.label40.Visible = false;
             // 
             // label39
             // 
             this.label39.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.ITEM_UOM")});
             this.label39.Dpi = 254F;
-            this.label39.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label39.LocationFloat = new DevExpress.Utils.PointFloat(1899.324F, 0F);
+            this.label39.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.LocationFloat = new DevExpress.Utils.PointFloat(1238.25F, 1.79188F);
             this.label39.Name = "label39";
             this.label39.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label39.SizeF = new System.Drawing.SizeF(40.80835F, 42.00002F);
+            this.label39.SizeF = new System.Drawing.SizeF(100.5415F, 43.79189F);
             this.label39.StylePriority.UseFont = false;
             this.label39.Text = "label39";
-            this.label39.Visible = false;
             // 
-            // label57
+            // label37
             // 
-            this.label57.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.ROWNUM")});
-            this.label57.Dpi = 254F;
-            this.label57.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label57.LocationFloat = new DevExpress.Utils.PointFloat(1834.14F, 0F);
-            this.label57.Name = "label57";
-            this.label57.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label57.SizeF = new System.Drawing.SizeF(40.80835F, 42.00002F);
-            this.label57.StylePriority.UseFont = false;
-            this.label57.Text = "label57";
-            this.label57.Visible = false;
-            // 
-            // label49
-            // 
-            this.label49.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.SIZE_NAME")});
-            this.label49.Dpi = 254F;
-            this.label49.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label49.LocationFloat = new DevExpress.Utils.PointFloat(1768.956F, 0F);
-            this.label49.Name = "label49";
-            this.label49.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label49.SizeF = new System.Drawing.SizeF(40.80835F, 42.00002F);
-            this.label49.StylePriority.UseFont = false;
-            this.label49.Text = "label49";
-            this.label49.Visible = false;
-            // 
-            // label64
-            // 
-            this.label64.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.PSD_LO")});
-            this.label64.Dpi = 254F;
-            this.label64.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label64.LocationFloat = new DevExpress.Utils.PointFloat(1703.772F, 0F);
-            this.label64.Name = "label64";
-            this.label64.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label64.SizeF = new System.Drawing.SizeF(40.80835F, 42.00002F);
-            this.label64.StylePriority.UseFont = false;
-            this.label64.Text = "label64";
-            this.label64.Visible = false;
-            // 
-            // label61
-            // 
-            this.label61.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.BI")});
-            this.label61.Dpi = 254F;
-            this.label61.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label61.LocationFloat = new DevExpress.Utils.PointFloat(1443.037F, 0F);
-            this.label61.Name = "label61";
-            this.label61.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label61.SizeF = new System.Drawing.SizeF(40.80835F, 42.00002F);
-            this.label61.StylePriority.UseFont = false;
-            this.label61.Text = "label61";
-            this.label61.Visible = false;
-            // 
-            // label65
-            // 
-            this.label65.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.TTI")});
-            this.label65.Dpi = 254F;
-            this.label65.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label65.LocationFloat = new DevExpress.Utils.PointFloat(1508.221F, 0F);
-            this.label65.Name = "label65";
-            this.label65.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label65.SizeF = new System.Drawing.SizeF(40.80835F, 42.00002F);
-            this.label65.StylePriority.UseFont = false;
-            this.label65.Text = "label65";
-            this.label65.Visible = false;
-            // 
-            // label71
-            // 
-            this.label71.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.EILLPT")});
-            this.label71.Dpi = 254F;
-            this.label71.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label71.LocationFloat = new DevExpress.Utils.PointFloat(1638.588F, 0F);
-            this.label71.Name = "label71";
-            this.label71.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label71.SizeF = new System.Drawing.SizeF(40.80835F, 42.00002F);
-            this.label71.StylePriority.UseFont = false;
-            this.label71.Text = "label71";
-            this.label71.Visible = false;
-            // 
-            // label67
-            // 
-            this.label67.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.HLT")});
-            this.label67.Dpi = 254F;
-            this.label67.Font = new System.Drawing.Font("굴림", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label67.LocationFloat = new DevExpress.Utils.PointFloat(1573.405F, 0F);
-            this.label67.Name = "label67";
-            this.label67.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label67.SizeF = new System.Drawing.SizeF(40.80835F, 42.00002F);
-            this.label67.StylePriority.UseFont = false;
-            this.label67.Text = "label67";
-            this.label67.Visible = false;
-            // 
-            // label66
-            // 
-            this.label66.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.MA")});
-            this.label66.Dpi = 254F;
-            this.label66.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label66.LocationFloat = new DevExpress.Utils.PointFloat(1377.296F, 0F);
-            this.label66.Name = "label66";
-            this.label66.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label66.SizeF = new System.Drawing.SizeF(45.43311F, 42.00002F);
-            this.label66.StylePriority.UseFont = false;
-            this.label66.StylePriority.UseTextAlignment = false;
-            this.label66.Text = "label66";
-            this.label66.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.label66.Visible = false;
+            this.label37.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.ITEM_NAME110")});
+            this.label37.Dpi = 254F;
+            this.label37.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.LocationFloat = new DevExpress.Utils.PointFloat(679.3641F, 1.79188F);
+            this.label37.Name = "label37";
+            this.label37.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.label37.SizeF = new System.Drawing.SizeF(555.62F, 42F);
+            this.label37.StylePriority.UseFont = false;
+            this.label37.StylePriority.UseTextAlignment = false;
+            this.label37.Text = "label37";
+            this.label37.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // label1
             // 
             this.label1.Dpi = 254F;
             this.label1.Font = new System.Drawing.Font("굴림체", 26F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.label1.LocationFloat = new DevExpress.Utils.PointFloat(616.4792F, 0F);
+            this.label1.LocationFloat = new DevExpress.Utils.PointFloat(635F, 12.04161F);
             this.label1.Name = "label1";
             this.label1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.label1.SizeF = new System.Drawing.SizeF(795.2606F, 120.5208F);
@@ -833,7 +447,7 @@ namespace XtraReportSerialization {
             // 
             this.label42.Dpi = 254F;
             this.label42.Font = new System.Drawing.Font("맑은 고딕", 9.75F);
-            this.label42.LocationFloat = new DevExpress.Utils.PointFloat(1277.711F, 15.66321F);
+            this.label42.LocationFloat = new DevExpress.Utils.PointFloat(1174.75F, 15.66329F);
             this.label42.Name = "label42";
             this.label42.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.label42.SizeF = new System.Drawing.SizeF(164.041F, 58.42004F);
@@ -845,7 +459,7 @@ namespace XtraReportSerialization {
             this.pageInfo2.Dpi = 254F;
             this.pageInfo2.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pageInfo2.Format = "{0:yyyy\'년\' MM\'월\' dd\'일\' tt hh:mm:ss}";
-            this.pageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(1441.753F, 15.66329F);
+            this.pageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(1338.792F, 15.66337F);
             this.pageInfo2.Name = "pageInfo2";
             this.pageInfo2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.pageInfo2.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
@@ -855,44 +469,20 @@ namespace XtraReportSerialization {
             // pageInfo1
             // 
             this.pageInfo1.Dpi = 254F;
-            this.pageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(857.25F, 15.66329F);
+            this.pageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(616.4792F, 15.66337F);
             this.pageInfo1.Name = "pageInfo1";
             this.pageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.pageInfo1.SizeF = new System.Drawing.SizeF(285.7499F, 58.41999F);
-            // 
-            // label12
-            // 
-            this.label12.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.PSD_LO")});
-            this.label12.Dpi = 254F;
-            this.label12.LocationFloat = new DevExpress.Utils.PointFloat(1628.444F, 25.00001F);
-            this.label12.Name = "label12";
-            this.label12.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label12.SizeF = new System.Drawing.SizeF(254F, 58.42F);
-            this.label12.Text = "label12";
-            // 
-            // label74
-            // 
-            this.label74.Dpi = 254F;
-            this.label74.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label74.LocationFloat = new DevExpress.Utils.PointFloat(95.24963F, 365.4475F);
-            this.label74.Name = "label74";
-            this.label74.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label74.SizeF = new System.Drawing.SizeF(185.21F, 55.56F);
-            this.label74.StylePriority.UseFont = false;
-            this.label74.StylePriority.UseTextAlignment = false;
-            this.label74.Text = "비 고 : ";
-            this.label74.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.pageInfo1.SizeF = new System.Drawing.SizeF(510.6458F, 58.42F);
             // 
             // label10
             // 
             this.label10.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.UOM")});
             this.label10.Dpi = 254F;
-            this.label10.LocationFloat = new DevExpress.Utils.PointFloat(1608.223F, 236.7657F);
+            this.label10.LocationFloat = new DevExpress.Utils.PointFloat(1540.68F, 267.14F);
             this.label10.Name = "label10";
             this.label10.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label10.SizeF = new System.Drawing.SizeF(170.1873F, 58.41992F);
+            this.label10.SizeF = new System.Drawing.SizeF(100.56F, 58.42F);
             this.label10.StylePriority.UseFont = false;
             this.label10.StylePriority.UseTextAlignment = false;
             this.label10.Text = "label10";
@@ -903,10 +493,10 @@ namespace XtraReportSerialization {
             this.label9.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.LOT_QTY", "{0:#,#.#####}")});
             this.label9.Dpi = 254F;
-            this.label9.LocationFloat = new DevExpress.Utils.PointFloat(1320.68F, 236.7657F);
+            this.label9.LocationFloat = new DevExpress.Utils.PointFloat(1320.68F, 266.01F);
             this.label9.Name = "label9";
             this.label9.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label9.SizeF = new System.Drawing.SizeF(258.2235F, 58.41986F);
+            this.label9.SizeF = new System.Drawing.SizeF(220F, 58.42F);
             this.label9.StylePriority.UseFont = false;
             this.label9.StylePriority.UseTextAlignment = false;
             this.label9.Text = "label9";
@@ -916,7 +506,7 @@ namespace XtraReportSerialization {
             // 
             this.label8.Dpi = 254F;
             this.label8.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.LocationFloat = new DevExpress.Utils.PointFloat(1111.25F, 237.7198F);
+            this.label8.LocationFloat = new DevExpress.Utils.PointFloat(1111.25F, 267.2301F);
             this.label8.Name = "label8";
             this.label8.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.label8.SizeF = new System.Drawing.SizeF(185.21F, 55.56F);
@@ -948,10 +538,10 @@ namespace XtraReportSerialization {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.GROUP_ID")});
             this.label30.Dpi = 254F;
             this.label30.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.LocationFloat = new DevExpress.Utils.PointFloat(775.1537F, 115.4334F);
+            this.label30.LocationFloat = new DevExpress.Utils.PointFloat(780.2606F, 108.4792F);
             this.label30.Name = "label30";
             this.label30.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label30.SizeF = new System.Drawing.SizeF(695.8541F, 55.56248F);
+            this.label30.SizeF = new System.Drawing.SizeF(695.8541F, 58.41995F);
             this.label30.StylePriority.UseFont = false;
             this.label30.StylePriority.UseTextAlignment = false;
             this.label30.Text = "label30";
@@ -962,8 +552,8 @@ namespace XtraReportSerialization {
             this.label31.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.NAME")});
             this.label31.Dpi = 254F;
-            this.label31.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label31.LocationFloat = new DevExpress.Utils.PointFloat(304.6782F, 301.1065F);
+            this.label31.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.LocationFloat = new DevExpress.Utils.PointFloat(304.6776F, 343.9577F);
             this.label31.Name = "label31";
             this.label31.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.label31.SizeF = new System.Drawing.SizeF(679.9792F, 58.42007F);
@@ -978,7 +568,7 @@ namespace XtraReportSerialization {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.ITEM_NAME")});
             this.label32.Dpi = 254F;
             this.label32.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.LocationFloat = new DevExpress.Utils.PointFloat(1320.68F, 301.1065F);
+            this.label32.LocationFloat = new DevExpress.Utils.PointFloat(1320.68F, 343.9577F);
             this.label32.Name = "label32";
             this.label32.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.label32.SizeF = new System.Drawing.SizeF(679.98F, 58.42F);
@@ -992,7 +582,7 @@ namespace XtraReportSerialization {
             this.label27.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.ORG_CODE")});
             this.label27.Dpi = 254F;
-            this.label27.LocationFloat = new DevExpress.Utils.PointFloat(304.6782F, 172.4247F);
+            this.label27.LocationFloat = new DevExpress.Utils.PointFloat(304.6776F, 188.0649F);
             this.label27.Name = "label27";
             this.label27.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.label27.SizeF = new System.Drawing.SizeF(679.9792F, 58.42F);
@@ -1005,7 +595,7 @@ namespace XtraReportSerialization {
             this.label28.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.WC_NAME")});
             this.label28.Dpi = 254F;
-            this.label28.LocationFloat = new DevExpress.Utils.PointFloat(304.6782F, 236.7656F);
+            this.label28.LocationFloat = new DevExpress.Utils.PointFloat(304.6776F, 266.0113F);
             this.label28.Name = "label28";
             this.label28.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.label28.SizeF = new System.Drawing.SizeF(679.9792F, 58.41998F);
@@ -1019,7 +609,7 @@ namespace XtraReportSerialization {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.WIP_ENTITY_NAME")});
             this.label29.Dpi = 254F;
             this.label29.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.LocationFloat = new DevExpress.Utils.PointFloat(1320.68F, 172.4247F);
+            this.label29.LocationFloat = new DevExpress.Utils.PointFloat(1320.68F, 188.06F);
             this.label29.Name = "label29";
             this.label29.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.label29.SizeF = new System.Drawing.SizeF(679.9792F, 58.41995F);
@@ -1032,7 +622,7 @@ namespace XtraReportSerialization {
             // 
             this.label4.Dpi = 254F;
             this.label4.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.LocationFloat = new DevExpress.Utils.PointFloat(1111.25F, 173.8534F);
+            this.label4.LocationFloat = new DevExpress.Utils.PointFloat(1111.25F, 190.5F);
             this.label4.Name = "label4";
             this.label4.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.label4.SizeF = new System.Drawing.SizeF(185.2084F, 55.5625F);
@@ -1045,7 +635,7 @@ namespace XtraReportSerialization {
             // 
             this.label5.Dpi = 254F;
             this.label5.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.LocationFloat = new DevExpress.Utils.PointFloat(568.7784F, 115.4334F);
+            this.label5.LocationFloat = new DevExpress.Utils.PointFloat(573.8853F, 108.4792F);
             this.label5.Name = "label5";
             this.label5.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.label5.SizeF = new System.Drawing.SizeF(201.0833F, 55.5625F);
@@ -1058,7 +648,7 @@ namespace XtraReportSerialization {
             // 
             this.label6.Dpi = 254F;
             this.label6.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.LocationFloat = new DevExpress.Utils.PointFloat(95.24963F, 301.5845F);
+            this.label6.LocationFloat = new DevExpress.Utils.PointFloat(95.25F, 343.9577F);
             this.label6.Name = "label6";
             this.label6.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.label6.SizeF = new System.Drawing.SizeF(185.21F, 55.56F);
@@ -1071,15 +661,15 @@ namespace XtraReportSerialization {
             // 
             this.line1.Dpi = 254F;
             this.line1.LineWidth = 5;
-            this.line1.LocationFloat = new DevExpress.Utils.PointFloat(95.25042F, 421.0075F);
+            this.line1.LocationFloat = new DevExpress.Utils.PointFloat(74.78145F, 421.4016F);
             this.line1.Name = "line1";
-            this.line1.SizeF = new System.Drawing.SizeF(1905.41F, 10.58322F);
+            this.line1.SizeF = new System.Drawing.SizeF(1833.562F, 10.58325F);
             // 
             // label2
             // 
             this.label2.Dpi = 254F;
             this.label2.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.LocationFloat = new DevExpress.Utils.PointFloat(95.25043F, 173.8534F);
+            this.label2.LocationFloat = new DevExpress.Utils.PointFloat(95.25F, 190.5F);
             this.label2.Name = "label2";
             this.label2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.label2.SizeF = new System.Drawing.SizeF(185.2084F, 55.5625F);
@@ -1092,7 +682,7 @@ namespace XtraReportSerialization {
             // 
             this.label3.Dpi = 254F;
             this.label3.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.LocationFloat = new DevExpress.Utils.PointFloat(95.25043F, 237.7189F);
+            this.label3.LocationFloat = new DevExpress.Utils.PointFloat(95.25F, 267.2289F);
             this.label3.Name = "label3";
             this.label3.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.label3.SizeF = new System.Drawing.SizeF(185.2084F, 55.5625F);
@@ -1105,7 +695,7 @@ namespace XtraReportSerialization {
             // 
             this.label7.Dpi = 254F;
             this.label7.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.LocationFloat = new DevExpress.Utils.PointFloat(1111.25F, 301.5836F);
+            this.label7.LocationFloat = new DevExpress.Utils.PointFloat(1111.25F, 343.9577F);
             this.label7.Name = "label7";
             this.label7.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.label7.SizeF = new System.Drawing.SizeF(185.21F, 55.56F);
@@ -1114,140 +704,31 @@ namespace XtraReportSerialization {
             this.label7.Text = "품 목 명 : ";
             this.label7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
-            // label41
-            // 
-            this.label41.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.REMARKS")});
-            this.label41.Dpi = 254F;
-            this.label41.Font = new System.Drawing.Font("맑은 고딕", 10F);
-            this.label41.LocationFloat = new DevExpress.Utils.PointFloat(304.6765F, 365.4475F);
-            this.label41.Name = "label41";
-            this.label41.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label41.SizeF = new System.Drawing.SizeF(1695.982F, 55.56F);
-            this.label41.StylePriority.UseFont = false;
-            this.label41.StylePriority.UseTextAlignment = false;
-            this.label41.Text = "label41";
-            this.label41.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // line25
-            // 
-            this.line25.Dpi = 254F;
-            this.line25.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.line25.LineWidth = 3;
-            this.line25.LocationFloat = new DevExpress.Utils.PointFloat(1995.37F, 140.0729F);
-            this.line25.Name = "line25";
-            this.line25.SizeF = new System.Drawing.SizeF(5.290039F, 62.45845F);
-            // 
-            // line24
-            // 
-            this.line24.Dpi = 254F;
-            this.line24.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.line24.LineWidth = 3;
-            this.line24.LocationFloat = new DevExpress.Utils.PointFloat(1839.453F, 143.0729F);
-            this.line24.Name = "line24";
-            this.line24.SizeF = new System.Drawing.SizeF(5.290039F, 55.45845F);
-            // 
-            // line23
-            // 
-            this.line23.Dpi = 254F;
-            this.line23.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.line23.LineWidth = 3;
-            this.line23.LocationFloat = new DevExpress.Utils.PointFloat(1691.163F, 143.0729F);
-            this.line23.Name = "line23";
-            this.line23.SizeF = new System.Drawing.SizeF(5.290039F, 55.45845F);
-            // 
-            // line22
-            // 
-            this.line22.Dpi = 254F;
-            this.line22.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.line22.LineWidth = 3;
-            this.line22.LocationFloat = new DevExpress.Utils.PointFloat(1536.622F, 143.0729F);
-            this.line22.Name = "line22";
-            this.line22.SizeF = new System.Drawing.SizeF(5.290039F, 55.45845F);
-            // 
-            // line8
-            // 
-            this.line8.Dpi = 254F;
-            this.line8.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.line8.LineWidth = 3;
-            this.line8.LocationFloat = new DevExpress.Utils.PointFloat(1387.88F, 143.0729F);
-            this.line8.Name = "line8";
-            this.line8.SizeF = new System.Drawing.SizeF(5.290039F, 55.45845F);
-            // 
-            // line7
-            // 
-            this.line7.Dpi = 254F;
-            this.line7.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.line7.LineWidth = 3;
-            this.line7.LocationFloat = new DevExpress.Utils.PointFloat(1153.15F, 143.0729F);
-            this.line7.Name = "line7";
-            this.line7.SizeF = new System.Drawing.SizeF(5.290039F, 55.45845F);
-            // 
-            // line6
-            // 
-            this.line6.Dpi = 254F;
-            this.line6.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.line6.LineWidth = 3;
-            this.line6.LocationFloat = new DevExpress.Utils.PointFloat(450.2941F, 143.0729F);
-            this.line6.Name = "line6";
-            this.line6.SizeF = new System.Drawing.SizeF(5.290039F, 55.45845F);
-            // 
-            // line5
-            // 
-            this.line5.Dpi = 254F;
-            this.line5.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.line5.LineWidth = 3;
-            this.line5.LocationFloat = new DevExpress.Utils.PointFloat(90.02713F, 143.0729F);
-            this.line5.Name = "line5";
-            this.line5.SizeF = new System.Drawing.SizeF(5.290039F, 59.45845F);
-            // 
-            // line48
-            // 
-            this.line48.Dpi = 254F;
-            this.line48.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.line48.LineWidth = 3;
-            this.line48.LocationFloat = new DevExpress.Utils.PointFloat(563.8483F, 29.4896F);
-            this.line48.Name = "line48";
-            this.line48.SizeF = new System.Drawing.SizeF(5.290039F, 118.5833F);
-            // 
-            // label47
-            // 
-            this.label47.Dpi = 254F;
-            this.label47.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.LocationFloat = new DevExpress.Utils.PointFloat(95.31718F, 32.4896F);
-            this.label47.Name = "label47";
-            this.label47.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label47.SizeF = new System.Drawing.SizeF(468.5311F, 38.85416F);
-            this.label47.StylePriority.UseFont = false;
-            this.label47.StylePriority.UseTextAlignment = false;
-            this.label47.Text = "공정명";
-            this.label47.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
             // label38
             // 
             this.label38.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.START_TIME")});
             this.label38.Dpi = 254F;
             this.label38.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.LocationFloat = new DevExpress.Utils.PointFloat(1551.847F, 82.34376F);
+            this.label38.LocationFloat = new DevExpress.Utils.PointFloat(1290.724F, 114.6737F);
             this.label38.Name = "label38";
             this.label38.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label38.SizeF = new System.Drawing.SizeF(190.1224F, 55.72916F);
+            this.label38.SizeF = new System.Drawing.SizeF(334F, 57.99992F);
             this.label38.StylePriority.UseFont = false;
             this.label38.Text = "label38";
             // 
             // label46
             // 
             this.label46.Dpi = 254F;
-            this.label46.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold);
-            this.label46.LocationFloat = new DevExpress.Utils.PointFloat(100.6072F, 148.0729F);
+            this.label46.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.LocationFloat = new DevExpress.Utils.PointFloat(360F, 197.5626F);
             this.label46.Name = "label46";
             this.label46.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label46.SizeF = new System.Drawing.SizeF(349.6869F, 49.45847F);
+            this.label46.SizeF = new System.Drawing.SizeF(314.1562F, 36.88524F);
             this.label46.StylePriority.UseFont = false;
             this.label46.StylePriority.UseTextAlignment = false;
             this.label46.Text = "LOT NO";
-            this.label46.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.label46.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // label45
             // 
@@ -1255,10 +736,10 @@ namespace XtraReportSerialization {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.LOSS_QTY", "{0:#,##0.#####}")});
             this.label45.Dpi = 254F;
             this.label45.Font = new System.Drawing.Font("맑은 고딕", 9.75F);
-            this.label45.LocationFloat = new DevExpress.Utils.PointFloat(1166.332F, 82.34376F);
+            this.label45.LocationFloat = new DevExpress.Utils.PointFloat(704.5711F, 114.6739F);
             this.label45.Name = "label45";
             this.label45.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label45.SizeF = new System.Drawing.SizeF(179.8365F, 55.72916F);
+            this.label45.SizeF = new System.Drawing.SizeF(180F, 58.41996F);
             this.label45.StylePriority.UseFont = false;
             this.label45.StylePriority.UseTextAlignment = false;
             this.label45.Text = "label45";
@@ -1270,11 +751,10 @@ namespace XtraReportSerialization {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.GOOD_QTY", "{0:#,#.#####}")});
             this.label44.Dpi = 254F;
             this.label44.Font = new System.Drawing.Font("맑은 고딕", 9.75F);
-            this.label44.LocationFloat = new DevExpress.Utils.PointFloat(978.4412F, 82.34376F);
+            this.label44.LocationFloat = new DevExpress.Utils.PointFloat(519.2811F, 114.6739F);
             this.label44.Name = "label44";
             this.label44.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label44.Scripts.OnBeforePrint = "GroupHeader1_BeforePrint";
-            this.label44.SizeF = new System.Drawing.SizeF(179.9991F, 55.72916F);
+            this.label44.SizeF = new System.Drawing.SizeF(180F, 58.41996F);
             this.label44.StylePriority.UseFont = false;
             this.label44.StylePriority.UseTextAlignment = false;
             this.label44.Text = "label44";
@@ -1286,51 +766,132 @@ namespace XtraReportSerialization {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.SEQ_NUM", "{0:#}")});
             this.label11.Dpi = 254F;
             this.label11.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.LocationFloat = new DevExpress.Utils.PointFloat(24.99993F, 27.4896F);
+            this.label11.LocationFloat = new DevExpress.Utils.PointFloat(519.2812F, 12.11796F);
             this.label11.Name = "label11";
             this.label11.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label11.SizeF = new System.Drawing.SizeF(46.43663F, 35.85416F);
+            this.label11.SizeF = new System.Drawing.SizeF(89.95844F, 35.85416F);
             this.label11.StylePriority.UseFont = false;
             this.label11.Text = "label11";
             this.label11.Visible = false;
             // 
+            // label22
+            // 
+            this.label22.Dpi = 254F;
+            this.label22.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.LocationFloat = new DevExpress.Utils.PointFloat(692.5104F, 195.9205F);
+            this.label22.Name = "label22";
+            this.label22.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.label22.SizeF = new System.Drawing.SizeF(542.4738F, 39.6875F);
+            this.label22.StylePriority.UseFont = false;
+            this.label22.StylePriority.UseTextAlignment = false;
+            this.label22.Text = "품명";
+            this.label22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // line25
+            // 
+            this.line25.Dpi = 254F;
+            this.line25.LineWidth = 3;
+            this.line25.LocationFloat = new DevExpress.Utils.PointFloat(355.6465F, 234.4479F);
+            this.line25.Name = "line25";
+            this.line25.SizeF = new System.Drawing.SizeF(1552.697F, 19.55209F);
+            // 
+            // label21
+            // 
+            this.label21.Dpi = 254F;
+            this.label21.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.LocationFloat = new DevExpress.Utils.PointFloat(95.25F, 192.1147F);
+            this.label21.Name = "label21";
+            this.label21.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.label21.SizeF = new System.Drawing.SizeF(283.1042F, 42.33333F);
+            this.label21.StylePriority.UseFont = false;
+            this.label21.StylePriority.UseTextAlignment = false;
+            this.label21.Text = "*투입 LOT 정보*";
+            this.label21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // label36
+            // 
+            this.label36.Dpi = 254F;
+            this.label36.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.LocationFloat = new DevExpress.Utils.PointFloat(1562.438F, 195.9205F);
+            this.label36.Name = "label36";
+            this.label36.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.label36.SizeF = new System.Drawing.SizeF(383.6465F, 39.6875F);
+            this.label36.StylePriority.UseFont = false;
+            this.label36.StylePriority.UseTextAlignment = false;
+            this.label36.Text = "출고창고명";
+            this.label36.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
             // label35
             // 
             this.label35.Dpi = 254F;
-            this.label35.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold);
-            this.label35.LocationFloat = new DevExpress.Utils.PointFloat(1170.026F, 148.0729F);
+            this.label35.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.LocationFloat = new DevExpress.Utils.PointFloat(1340.294F, 195.9205F);
             this.label35.Name = "label35";
             this.label35.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label35.SizeF = new System.Drawing.SizeF(206.9095F, 49.45847F);
+            this.label35.SizeF = new System.Drawing.SizeF(200.3862F, 39.6875F);
             this.label35.StylePriority.UseFont = false;
             this.label35.StylePriority.UseTextAlignment = false;
-            this.label35.Text = "투입수량";
-            this.label35.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.label35.Text = "실투입량";
+            this.label35.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // label34
+            // 
+            this.label34.Dpi = 254F;
+            this.label34.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.LocationFloat = new DevExpress.Utils.PointFloat(1234.984F, 195.9205F);
+            this.label34.Name = "label34";
+            this.label34.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.label34.SizeF = new System.Drawing.SizeF(100.5416F, 39.6875F);
+            this.label34.StylePriority.UseFont = false;
+            this.label34.StylePriority.UseTextAlignment = false;
+            this.label34.Text = "단위";
+            this.label34.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // line23
+            // 
+            this.line23.Dpi = 254F;
+            this.line23.LineWidth = 3;
+            this.line23.LocationFloat = new DevExpress.Utils.PointFloat(894.9893F, 14.55208F);
+            this.line23.Name = "line23";
+            this.line23.SizeF = new System.Drawing.SizeF(1084.273F, 8.439569F);
             // 
             // line14
             // 
             this.line14.Dpi = 254F;
             this.line14.LineWidth = 3;
-            this.line14.LocationFloat = new DevExpress.Utils.PointFloat(93.24963F, 71.34376F);
+            this.line14.LocationFloat = new DevExpress.Utils.PointFloat(69.4893F, 101.8646F);
             this.line14.Name = "line14";
-            this.line14.SizeF = new System.Drawing.SizeF(1907.12F, 5F);
+            this.line14.SizeF = new System.Drawing.SizeF(1915.357F, 5F);
             // 
             // line12
             // 
             this.line12.Dpi = 254F;
             this.line12.LineWidth = 3;
-            this.line12.LocationFloat = new DevExpress.Utils.PointFloat(93.24963F, 142.0729F);
+            this.line12.LocationFloat = new DevExpress.Utils.PointFloat(66.84599F, 176.9689F);
             this.line12.Name = "line12";
-            this.line12.SizeF = new System.Drawing.SizeF(1907F, 5F);
+            this.line12.SizeF = new System.Drawing.SizeF(1918F, 5F);
+            // 
+            // label12
+            // 
+            this.label12.Dpi = 254F;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.label12.LocationFloat = new DevExpress.Utils.PointFloat(899.9875F, 22.7F);
+            this.label12.Name = "label12";
+            this.label12.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.label12.SizeF = new System.Drawing.SizeF(95.54333F, 34.97913F);
+            this.label12.StylePriority.UseFont = false;
+            this.label12.StylePriority.UseTextAlignment = false;
+            this.label12.Text = "비고  :";
+            this.label12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // label16
             // 
             this.label16.Dpi = 254F;
             this.label16.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.LocationFloat = new DevExpress.Utils.PointFloat(1166.332F, 32.4896F);
+            this.label16.LocationFloat = new DevExpress.Utils.PointFloat(704.5711F, 67.76042F);
             this.label16.Name = "label16";
             this.label16.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label16.SizeF = new System.Drawing.SizeF(179.8365F, 38.85416F);
+            this.label16.SizeF = new System.Drawing.SizeF(180F, 31.75F);
             this.label16.StylePriority.UseFont = false;
             this.label16.StylePriority.UseTextAlignment = false;
             this.label16.Text = "불량수(중)량";
@@ -1341,27 +902,27 @@ namespace XtraReportSerialization {
             this.line21.Dpi = 254F;
             this.line21.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
             this.line21.LineWidth = 3;
-            this.line21.LocationFloat = new DevExpress.Utils.PointFloat(1877.154F, 29.4896F);
+            this.line21.LocationFloat = new DevExpress.Utils.PointFloat(1820.514F, 54.82292F);
             this.line21.Name = "line21";
-            this.line21.SizeF = new System.Drawing.SizeF(5.290039F, 118.5833F);
+            this.line21.SizeF = new System.Drawing.SizeF(5.29F, 131F);
             // 
             // line11
             // 
             this.line11.Dpi = 254F;
             this.line11.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
             this.line11.LineWidth = 3;
-            this.line11.LocationFloat = new DevExpress.Utils.PointFloat(90.02714F, 29.4896F);
+            this.line11.LocationFloat = new DevExpress.Utils.PointFloat(64.19757F, 57.17715F);
             this.line11.Name = "line11";
-            this.line11.SizeF = new System.Drawing.SizeF(5.290039F, 118.5833F);
+            this.line11.SizeF = new System.Drawing.SizeF(5.29F, 131F);
             // 
             // label19
             // 
             this.label19.Dpi = 254F;
             this.label19.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.LocationFloat = new DevExpress.Utils.PointFloat(1749.862F, 32.4896F);
+            this.label19.LocationFloat = new DevExpress.Utils.PointFloat(1630.014F, 61.6739F);
             this.label19.Name = "label19";
             this.label19.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label19.SizeF = new System.Drawing.SizeF(127.2924F, 38.85416F);
+            this.label19.SizeF = new System.Drawing.SizeF(190.5F, 40.19078F);
             this.label19.StylePriority.UseFont = false;
             this.label19.StylePriority.UseTextAlignment = false;
             this.label19.Text = "작업자";
@@ -1371,10 +932,10 @@ namespace XtraReportSerialization {
             // 
             this.label18.Dpi = 254F;
             this.label18.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.LocationFloat = new DevExpress.Utils.PointFloat(1551.847F, 32.4896F);
+            this.label18.LocationFloat = new DevExpress.Utils.PointFloat(1290.724F, 65.11456F);
             this.label18.Name = "label18";
             this.label18.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label18.SizeF = new System.Drawing.SizeF(190.1224F, 38.85416F);
+            this.label18.SizeF = new System.Drawing.SizeF(334F, 34.39583F);
             this.label18.StylePriority.UseFont = false;
             this.label18.StylePriority.UseTextAlignment = false;
             this.label18.Text = "작업시간";
@@ -1385,9 +946,9 @@ namespace XtraReportSerialization {
             this.line16.Dpi = 254F;
             this.line16.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
             this.line16.LineWidth = 3;
-            this.line16.LocationFloat = new DevExpress.Utils.PointFloat(970.5493F, 29.4896F);
+            this.line16.LocationFloat = new DevExpress.Utils.PointFloat(513.9892F, 57.46883F);
             this.line16.Name = "line16";
-            this.line16.SizeF = new System.Drawing.SizeF(5.290039F, 118.5833F);
+            this.line16.SizeF = new System.Drawing.SizeF(5.29F, 131F);
             // 
             // label26
             // 
@@ -1395,10 +956,10 @@ namespace XtraReportSerialization {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.MC_NAME")});
             this.label26.Dpi = 254F;
             this.label26.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.LocationFloat = new DevExpress.Utils.PointFloat(1354.061F, 82.34376F);
+            this.label26.LocationFloat = new DevExpress.Utils.PointFloat(889.6983F, 114.6737F);
             this.label26.Name = "label26";
             this.label26.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label26.SizeF = new System.Drawing.SizeF(189.8944F, 55.72916F);
+            this.label26.SizeF = new System.Drawing.SizeF(406.76F, 57.99993F);
             this.label26.StylePriority.UseFont = false;
             this.label26.Text = "label26";
             // 
@@ -1408,10 +969,10 @@ namespace XtraReportSerialization {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.PLAN_QTY", "{0:#,#.#####}")});
             this.label25.Dpi = 254F;
             this.label25.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.LocationFloat = new DevExpress.Utils.PointFloat(775.1536F, 82.34376F);
+            this.label25.LocationFloat = new DevExpress.Utils.PointFloat(273.2184F, 115.0938F);
             this.label25.Name = "label25";
             this.label25.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label25.SizeF = new System.Drawing.SizeF(195.3956F, 55.72916F);
+            this.label25.SizeF = new System.Drawing.SizeF(240.7707F, 58.00002F);
             this.label25.StylePriority.UseFont = false;
             this.label25.Text = "label25";
             // 
@@ -1421,10 +982,10 @@ namespace XtraReportSerialization {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.OP_DESC")});
             this.label23.Dpi = 254F;
             this.label23.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label23.LocationFloat = new DevExpress.Utils.PointFloat(100.6072F, 82.34376F);
+            this.label23.LocationFloat = new DevExpress.Utils.PointFloat(80.07263F, 0F);
             this.label23.Name = "label23";
             this.label23.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label23.SizeF = new System.Drawing.SizeF(463.2411F, 55.72916F);
+            this.label23.SizeF = new System.Drawing.SizeF(439.2086F, 47.97204F);
             this.label23.StylePriority.UseFont = false;
             this.label23.StylePriority.UseTextAlignment = false;
             this.label23.Text = "label23";
@@ -1435,44 +996,44 @@ namespace XtraReportSerialization {
             this.line15.Dpi = 254F;
             this.line15.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
             this.line15.LineWidth = 3;
-            this.line15.LocationFloat = new DevExpress.Utils.PointFloat(767.2415F, 29.4896F);
+            this.line15.LocationFloat = new DevExpress.Utils.PointFloat(265.2809F, 59.82292F);
             this.line15.Name = "line15";
-            this.line15.SizeF = new System.Drawing.SizeF(5.290039F, 118.5833F);
+            this.line15.SizeF = new System.Drawing.SizeF(5.29F, 131F);
             // 
             // line13
             // 
             this.line13.Dpi = 254F;
             this.line13.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
             this.line13.LineWidth = 3;
-            this.line13.LocationFloat = new DevExpress.Utils.PointFloat(1995.37F, 29.4896F);
+            this.line13.LocationFloat = new DevExpress.Utils.PointFloat(1979.556F, 57.17723F);
             this.line13.Name = "line13";
-            this.line13.SizeF = new System.Drawing.SizeF(5.290039F, 118.5833F);
+            this.line13.SizeF = new System.Drawing.SizeF(5.29F, 131F);
             // 
             // line20
             // 
             this.line20.Dpi = 254F;
             this.line20.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
             this.line20.LineWidth = 3;
-            this.line20.LocationFloat = new DevExpress.Utils.PointFloat(1741.97F, 29.4896F);
+            this.line20.LocationFloat = new DevExpress.Utils.PointFloat(1624.724F, 54.82292F);
             this.line20.Name = "line20";
-            this.line20.SizeF = new System.Drawing.SizeF(5.290039F, 118.5833F);
+            this.line20.SizeF = new System.Drawing.SizeF(5.29F, 131F);
             // 
             // line10
             // 
             this.line10.Dpi = 254F;
             this.line10.LineWidth = 3;
-            this.line10.LocationFloat = new DevExpress.Utils.PointFloat(93.24963F, 27.4896F);
+            this.line10.LocationFloat = new DevExpress.Utils.PointFloat(64.19755F, 54.53123F);
             this.line10.Name = "line10";
-            this.line10.SizeF = new System.Drawing.SizeF(1907F, 5F);
+            this.line10.SizeF = new System.Drawing.SizeF(1915.065F, 5.291588F);
             // 
             // label20
             // 
             this.label20.Dpi = 254F;
             this.label20.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.LocationFloat = new DevExpress.Utils.PointFloat(1885.046F, 32.4896F);
+            this.label20.LocationFloat = new DevExpress.Utils.PointFloat(1825.804F, 65.11461F);
             this.label20.Name = "label20";
             this.label20.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label20.SizeF = new System.Drawing.SizeF(110.3241F, 38.85416F);
+            this.label20.SizeF = new System.Drawing.SizeF(153.4584F, 34.39583F);
             this.label20.StylePriority.UseFont = false;
             this.label20.StylePriority.UseTextAlignment = false;
             this.label20.Text = "근무조";
@@ -1483,49 +1044,82 @@ namespace XtraReportSerialization {
             this.line18.Dpi = 254F;
             this.line18.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
             this.line18.LineWidth = 3;
-            this.line18.LocationFloat = new DevExpress.Utils.PointFloat(1346.51F, 29.4896F);
+            this.line18.LocationFloat = new DevExpress.Utils.PointFloat(884.5712F, 57.46888F);
             this.line18.Name = "line18";
-            this.line18.SizeF = new System.Drawing.SizeF(5.290039F, 118.5833F);
+            this.line18.SizeF = new System.Drawing.SizeF(5.29F, 131F);
             // 
             // line17
             // 
             this.line17.Dpi = 254F;
             this.line17.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
             this.line17.LineWidth = 3;
-            this.line17.LocationFloat = new DevExpress.Utils.PointFloat(1158.44F, 29.4896F);
+            this.line17.LocationFloat = new DevExpress.Utils.PointFloat(699.2811F, 57.46883F);
             this.line17.Name = "line17";
-            this.line17.SizeF = new System.Drawing.SizeF(5.290039F, 118.5833F);
+            this.line17.SizeF = new System.Drawing.SizeF(5.29F, 131F);
+            // 
+            // label41
+            // 
+            this.label41.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.REMARKS")});
+            this.label41.Dpi = 254F;
+            this.label41.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.label41.LocationFloat = new DevExpress.Utils.PointFloat(1006.114F, 23.96882F);
+            this.label41.Name = "label41";
+            this.label41.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.label41.SizeF = new System.Drawing.SizeF(973.1481F, 30.85398F);
+            this.label41.StylePriority.UseFont = false;
+            this.label41.StylePriority.UseTextAlignment = false;
+            this.label41.Text = "label41";
+            this.label41.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // line19
             // 
             this.line19.Dpi = 254F;
             this.line19.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
             this.line19.LineWidth = 3;
-            this.line19.LocationFloat = new DevExpress.Utils.PointFloat(1543.955F, 29.4896F);
+            this.line19.LocationFloat = new DevExpress.Utils.PointFloat(1285.434F, 57.46883F);
             this.line19.Name = "line19";
-            this.line19.SizeF = new System.Drawing.SizeF(5.290039F, 118.5833F);
+            this.line19.SizeF = new System.Drawing.SizeF(5.29F, 131F);
+            // 
+            // line24
+            // 
+            this.line24.Dpi = 254F;
+            this.line24.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
+            this.line24.LineWidth = 3;
+            this.line24.LocationFloat = new DevExpress.Utils.PointFloat(1979.263F, 12.11796F);
+            this.line24.Name = "line24";
+            this.line24.SizeF = new System.Drawing.SizeF(5.583496F, 70.24999F);
             // 
             // label17
             // 
             this.label17.Dpi = 254F;
             this.label17.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.LocationFloat = new DevExpress.Utils.PointFloat(1354.061F, 32.48962F);
+            this.label17.LocationFloat = new DevExpress.Utils.PointFloat(894.9893F, 65.11456F);
             this.label17.Name = "label17";
             this.label17.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label17.SizeF = new System.Drawing.SizeF(187.7842F, 38.85414F);
+            this.label17.SizeF = new System.Drawing.SizeF(390.4442F, 34.39584F);
             this.label17.StylePriority.UseFont = false;
             this.label17.StylePriority.UseTextAlignment = false;
             this.label17.Text = "투입설비";
             this.label17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
+            // line22
+            // 
+            this.line22.Dpi = 254F;
+            this.line22.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
+            this.line22.LineWidth = 3;
+            this.line22.LocationFloat = new DevExpress.Utils.PointFloat(894.9875F, 16.0314F);
+            this.line22.Name = "line22";
+            this.line22.SizeF = new System.Drawing.SizeF(5F, 38.49991F);
+            // 
             // label14
             // 
             this.label14.Dpi = 254F;
             this.label14.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.LocationFloat = new DevExpress.Utils.PointFloat(775.1335F, 32.4896F);
+            this.label14.LocationFloat = new DevExpress.Utils.PointFloat(273.2184F, 65.11461F);
             this.label14.Name = "label14";
             this.label14.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label14.SizeF = new System.Drawing.SizeF(195.4158F, 38.85416F);
+            this.label14.SizeF = new System.Drawing.SizeF(240.7707F, 34.39584F);
             this.label14.StylePriority.UseFont = false;
             this.label14.StylePriority.UseTextAlignment = false;
             this.label14.Text = "작업지시량";
@@ -1535,10 +1129,10 @@ namespace XtraReportSerialization {
             // 
             this.label13.Dpi = 254F;
             this.label13.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.LocationFloat = new DevExpress.Utils.PointFloat(571.7402F, 32.4896F);
+            this.label13.LocationFloat = new DevExpress.Utils.PointFloat(69.48926F, 65.11461F);
             this.label13.Name = "label13";
             this.label13.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label13.SizeF = new System.Drawing.SizeF(195.5013F, 38.85416F);
+            this.label13.SizeF = new System.Drawing.SizeF(195.7917F, 36.75002F);
             this.label13.StylePriority.UseFont = false;
             this.label13.StylePriority.UseTextAlignment = false;
             this.label13.Text = "작업지시일";
@@ -1550,10 +1144,10 @@ namespace XtraReportSerialization {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.JOB_DATE")});
             this.label24.Dpi = 254F;
             this.label24.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.LocationFloat = new DevExpress.Utils.PointFloat(571.7403F, 82.34376F);
+            this.label24.LocationFloat = new DevExpress.Utils.PointFloat(69.48926F, 114.6738F);
             this.label24.Name = "label24";
             this.label24.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label24.SizeF = new System.Drawing.SizeF(195.5012F, 55.72916F);
+            this.label24.SizeF = new System.Drawing.SizeF(195.7917F, 58.42004F);
             this.label24.StylePriority.UseFont = false;
             this.label24.Text = "label24";
             // 
@@ -1561,87 +1155,14 @@ namespace XtraReportSerialization {
             // 
             this.label15.Dpi = 254F;
             this.label15.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.LocationFloat = new DevExpress.Utils.PointFloat(978.4412F, 32.4896F);
+            this.label15.LocationFloat = new DevExpress.Utils.PointFloat(519.2809F, 67.76042F);
             this.label15.Name = "label15";
             this.label15.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label15.SizeF = new System.Drawing.SizeF(179.9989F, 38.85416F);
+            this.label15.SizeF = new System.Drawing.SizeF(180F, 31.75F);
             this.label15.StylePriority.UseFont = false;
             this.label15.StylePriority.UseTextAlignment = false;
             this.label15.Text = "양품수(중)량";
             this.label15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // label22
-            // 
-            this.label22.Dpi = 254F;
-            this.label22.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold);
-            this.label22.LocationFloat = new DevExpress.Utils.PointFloat(466.632F, 148.0729F);
-            this.label22.Name = "label22";
-            this.label22.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label22.SizeF = new System.Drawing.SizeF(676.3679F, 49.45847F);
-            this.label22.StylePriority.UseFont = false;
-            this.label22.StylePriority.UseTextAlignment = false;
-            this.label22.Text = "투입 제품";
-            this.label22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // label51
-            // 
-            this.label51.Dpi = 254F;
-            this.label51.Font = new System.Drawing.Font("맑은 고딕", 8F);
-            this.label51.LocationFloat = new DevExpress.Utils.PointFloat(1543.955F, 148.0729F);
-            this.label51.Name = "label51";
-            this.label51.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label51.SizeF = new System.Drawing.SizeF(143F, 49.45847F);
-            this.label51.StylePriority.UseFont = false;
-            this.label51.StylePriority.UseTextAlignment = false;
-            this.label51.Text = "SS";
-            this.label51.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // label50
-            // 
-            this.label50.Dpi = 254F;
-            this.label50.Font = new System.Drawing.Font("맑은 고딕", 8F);
-            this.label50.LocationFloat = new DevExpress.Utils.PointFloat(1393.17F, 153.0729F);
-            this.label50.Name = "label50";
-            this.label50.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label50.SizeF = new System.Drawing.SizeF(143F, 44.45845F);
-            this.label50.StylePriority.UseFont = false;
-            this.label50.StylePriority.UseTextAlignment = false;
-            this.label50.Text = "+";
-            this.label50.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // label55
-            // 
-            this.label55.Dpi = 254F;
-            this.label55.Font = new System.Drawing.Font("맑은 고딕", 8F);
-            this.label55.LocationFloat = new DevExpress.Utils.PointFloat(1696.453F, 148.0729F);
-            this.label55.Name = "label55";
-            this.label55.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label55.SizeF = new System.Drawing.SizeF(143F, 49.45847F);
-            this.label55.StylePriority.UseFont = false;
-            this.label55.StylePriority.UseTextAlignment = false;
-            this.label55.Text = "OS";
-            this.label55.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // label52
-            // 
-            this.label52.Dpi = 254F;
-            this.label52.Font = new System.Drawing.Font("맑은 고딕", 8F);
-            this.label52.LocationFloat = new DevExpress.Utils.PointFloat(1844.743F, 148.0729F);
-            this.label52.Name = "label52";
-            this.label52.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label52.SizeF = new System.Drawing.SizeF(143F, 49.45847F);
-            this.label52.StylePriority.UseFont = false;
-            this.label52.StylePriority.UseTextAlignment = false;
-            this.label52.Text = "-";
-            this.label52.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // line2
-            // 
-            this.line2.Dpi = 254F;
-            this.line2.LineWidth = 3;
-            this.line2.LocationFloat = new DevExpress.Utils.PointFloat(92.9064F, 197.5314F);
-            this.line2.Name = "line2";
-            this.line2.SizeF = new System.Drawing.SizeF(1907F, 5F);
             // 
             // Report2
             // 
@@ -1654,8 +1175,7 @@ namespace XtraReportSerialization {
                         this.GroupHeader1,
                         this.GroupFooter1,
                         this.GroupHeader2,
-                        this.GroupFooter2,
-                        this.ReportFooter});
+                        this.GroupFooter2});
             this.DataSourceSchema = resources.GetString("$this.DataSourceSchema");
             this.Dpi = 254F;
             this.Margins = new System.Drawing.Printing.Margins(0, 51, 51, 51);
