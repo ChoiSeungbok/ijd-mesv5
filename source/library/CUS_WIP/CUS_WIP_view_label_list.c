@@ -134,7 +134,7 @@ int CUS_WIP_VIEW_LABEL_LIST(char* s_msg_code, TRSNode* in_node, TRSNode* out_nod
 	int l_step = 0;
 	int i_lot_count = 0;
 	int i_data_count = 0;
-	int row_num = 0;
+	int row_num = 0;	
 	int mat_ver = 0;
 	int i_page_no = 0;
 	char qr_data[200];
@@ -156,7 +156,7 @@ int CUS_WIP_VIEW_LABEL_LIST(char* s_msg_code, TRSNode* in_node, TRSNode* out_nod
 	double d_n_count = 0;
 	double count = 0;
 	double d_stock_qty = 0;
-
+	double row_num2 = 0;
 
 	LOG_head("CUS_WIP_View_Label_List");
 	TRS.log_add_all_members(in_node);
@@ -3145,6 +3145,8 @@ int CUS_WIP_VIEW_LABEL_LIST(char* s_msg_code, TRSNode* in_node, TRSNode* out_nod
 
 					while (1)
 					{
+						row_num2++;
+
 						DBU_fetch_cwipgrtbld(i_step, &CWIPGRTBLD);
 						if (DB_error_code == DB_NOT_FOUND)
 						{
@@ -3358,6 +3360,21 @@ int CUS_WIP_VIEW_LABEL_LIST(char* s_msg_code, TRSNode* in_node, TRSNode* out_nod
 						TRS.add_string(list_item, "NAME110", MWIPOPRDEF_OUT.OPER_DESC, sizeof(MWIPOPRDEF_OUT.OPER_DESC));
 						TRS.add_double(list_item, "GOOD_QTY", MWIPLOTSTSX.QTY_1);
 						TRS.add_double(list_item, "LOSS_QTY", MWIPLOTLOS.LOSS_QTY_1);
+
+						//2026-07-16 검사데이터 추가
+						TRS.add_string(list_item, "SIZE_NAME", MWIPMATDEF.MAT_CMF_2, sizeof(MWIPMATDEF.MAT_CMF_2));           //SIZE 
+						TRS.add_string(list_item, "ITEM_NAME2", MWIPMATDEF_BOM.MAT_DESC, sizeof(MWIPMATDEF_BOM.MAT_DESC));    //CLP NO.
+						TRS.add_int(list_item, "ROWNUM", row_num2);                                                           //ROWNUM
+						TRS.add_double(list_item, "PSD_UP", CWIPGRTBLD.PSD_UP);                                               //PSD_UP
+						TRS.add_double(list_item, "SS", CWIPGRTBLD.SS);                                                       //SS
+						TRS.add_double(list_item, "OS", CWIPGRTBLD.OS);                                                       //OS
+						TRS.add_double(list_item, "PSD_LO", CWIPGRTBLD.PSD_LO);                                               //PSD_LO
+						TRS.add_double(list_item, "BI", CWIPGRTBLD.BI);                                                       //BI
+						TRS.add_double(list_item, "TTI", CWIPGRTBLD.TTI);                                                     //TTI
+						TRS.add_double(list_item, "MA", CWIPGRTBLD.MA);                                                       //MA
+						TRS.add_double(list_item, "HLT", CWIPGRTBLD.HLT);                                                     //HLT
+						TRS.add_double(list_item, "EILLPT", CWIPGRTBLD.EILLPT);                                               //EILLPT
+						 
 					}
 				}
 				else
@@ -3378,6 +3395,7 @@ int CUS_WIP_VIEW_LABEL_LIST(char* s_msg_code, TRSNode* in_node, TRSNode* out_nod
 					TRS.add_string(list_item, "UOM", MWIPMATDEF.UNIT_1, sizeof(MWIPMATDEF.UNIT_1));
 					TRS.add_string(list_item, "REMARKS", MWIPORDSTS.ORDER_DESC, sizeof(MWIPORDSTS.ORDER_DESC));
 					TRS.add_string(list_item, "MC_NAME", MRASRESDEF.RES_DESC, sizeof(MRASRESDEF.RES_DESC));
+
 				}
 			}
 		}

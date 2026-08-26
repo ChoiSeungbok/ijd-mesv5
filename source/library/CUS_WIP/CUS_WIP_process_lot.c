@@ -101,6 +101,7 @@ int CUS_WIP_PROCESS_LOT(char* s_msg_code, TRSNode* in_node, TRSNode* out_node)
 	struct MGCMTBLDAT_TAG MGCMTBLDAT_FROM;                 //
 	struct MGCMTBLDAT_TAG MGCMTBLDAT_SRC;
 	struct MGCMTBLDAT_TAG MGCMTBLDAT_DEL;
+	struct MGCMTBLDAT_TAG MGCMTBLDAT_GEN;               //채번품목정보 테이블
 	struct CWIPGRPSTS_TAG CWIPGRPSTS;                   //그룹 마스터 테이블
 	struct CWIPGRPLOT_TAG CWIPGRPLOT;                   //그룹 LOT 테이블
 	struct CWIPPRSRUN_TAG CWIPPRSRUN;                   //그룹 LOT 테이블
@@ -167,6 +168,7 @@ int CUS_WIP_PROCESS_LOT(char* s_msg_code, TRSNode* in_node, TRSNode* out_node)
 	double d_beofore_qty = 0;
 	double d_ifseq = 0;
 	char c_if_seq[30];
+	int iPosNum = 0;
 	//int iUseCount = 0;
 
 	// LOG
@@ -2138,6 +2140,48 @@ int CUS_WIP_PROCESS_LOT(char* s_msg_code, TRSNode* in_node, TRSNode* out_node)
 				{
 					memcpy(s_cell_id, MWIPLOTSTSX.LOT_CMF_1, sizeof(s_cell_id));
 					iRunCount = 0;
+
+					//-----------------------------------------------------------------------------------------------
+					// ★ 수정중(2026-07-23 ~ )
+					// cell_id 가 바뀌는 시점에 GCM 등록 품번이 아닌경우만  iRunCount = 0 초기화
+					/*
+					DBU_init_mgcmtbldat(&MGCMTBLDAT_GEN);
+					TRS.copy(MGCMTBLDAT_GEN.FACTORY, sizeof(MGCMTBLDAT.FACTORY), in_node, IN_FACTORY);
+					memcpy(MGCMTBLDAT_GEN.TABLE_NAME, MP_GCM_C_CTM_PRESS_GEN_MAT, strlen(MP_GCM_C_CTM_PRESS_GEN_MAT));
+					memcpy(MGCMTBLDAT_GEN.KEY_1, MRASRESDEF.RES_ID, sizeof(MRASRESDEF.RES_ID));
+					memcpy(MGCMTBLDAT_GEN.KEY_2, MWIPLOTSTSX.MAT_ID, sizeof(MWIPLOTSTSX.MAT_ID));
+					memcpy(MGCMTBLDAT_GEN.KEY_3, MWIPLOTSTSX.MAT_ID, sizeof(MWIPLOTSTSX.MAT_ID));
+					DBU_select_mgcmtbldat(5, &MGCMTBLDAT_GEN);
+					if (DB_error_code == DB_SUCCESS)
+					{
+						// GCM 에 등록된 품목이고 2품목 모두 완료면
+						if (MGCMTBLDAT_GEN.DATA_2[0] == 'Y' && MGCMTBLDAT_GEN.DATA_3[0] == 'Y')
+						{
+							iRunCount = 0;
+							memcpy(MGCMTBLDAT_GEN.DATA_2, "N", strlen("N"));
+							memcpy(MGCMTBLDAT_GEN.DATA_3, "N", strlen("N"));
+							memcpy(MGCMTBLDAT_GEN.DATA_4, "0", strlen("0"));
+							memcpy(MGCMTBLDAT_GEN.DATA_5, "0", strlen("0"));
+							DBU_update_mgcmtbldat(1, &MGCMTBLDAT_GEN);
+						}
+						else
+						{							 
+							iRunCount  = COM_atoi(MGCMTBLDAT_GEN.DATA_4, sizeof(MGCMTBLDAT_GEN.DATA_4));
+							iPosNum = COM_atoi(MGCMTBLDAT_GEN.DATA_5, sizeof(MGCMTBLDAT_GEN.DATA_5));
+
+							COM_itoa_left(MGCMTBLDAT_GEN.DATA_4, iRunCount + 1, sizeof(MGCMTBLDAT_GEN.DATA_4));
+							COM_itoa_left(MGCMTBLDAT_GEN.DATA_5, iPosNum + 1, sizeof(MGCMTBLDAT_GEN.DATA_5));
+							COM_itoa_left(MGCMTBLDAT_GEN.DATA_5, iPosNum, sizeof(MGCMTBLDAT_GEN.DATA_5));
+							DBU_update_mgcmtbldat(1, &MGCMTBLDAT_GEN);
+						} 
+					}
+					else
+					{
+						// GCM등록품번이 아니면 초기화
+						iRunCount = 0;
+					}
+					*/
+					//-----------------------------------------------------------------------------------------------
 				}
 			}
 
@@ -2935,8 +2979,65 @@ int CUS_WIP_PROCESS_LOT(char* s_msg_code, TRSNode* in_node, TRSNode* out_node)
 
 								memcpy(s_lot_id, CWIPPRSRUN.LOT_ID, sizeof(CWIPPRSRUN.LOT_ID));
 								ptr1 = strchr(s_lot_id, '_');
-								ptr1[1] = MWIPLOTSTSX.LOT_CMF_2[0];
+								ptr1[1] = MWIPLOTSTSX.LOT_CMF_2[0];								
 							}
+							
+							// ★ 수정중(2026-07-23 ~ ) -------------------------------------------------------------------------------------------------------
+							/*
+							else
+							{				
+								// CELL 번호가 없는 케이스 1,5 (GCM 품목이고 한 품목 완료구분이 'Y' 인 경우 )
+								DBU_init_mgcmtbldat(&MGCMTBLDAT_GEN);
+								TRS.copy(MGCMTBLDAT_GEN.FACTORY, sizeof(MGCMTBLDAT.FACTORY), in_node, IN_FACTORY);
+								memcpy(MGCMTBLDAT_GEN.TABLE_NAME, MP_GCM_C_CTM_PRESS_GEN_MAT, strlen(MP_GCM_C_CTM_PRESS_GEN_MAT));
+								memcpy(MGCMTBLDAT_GEN.KEY_1, MRASRESDEF.RES_ID, sizeof(MRASRESDEF.RES_ID));
+								memcpy(MGCMTBLDAT_GEN.KEY_2, MWIPLOTSTSX.MAT_ID, sizeof(MWIPLOTSTSX.MAT_ID));
+								memcpy(MGCMTBLDAT_GEN.KEY_3, MWIPLOTSTSX.MAT_ID, sizeof(MWIPLOTSTSX.MAT_ID));
+								DBU_select_mgcmtbldat(5, &MGCMTBLDAT_GEN);
+								if (DB_error_code == DB_SUCCESS)
+								{	
+									 
+									if (MGCMTBLDAT.DATA_2[0] == 'N' && MGCMTBLDAT.DATA_3[0] == 'N')
+									{
+										c_skip_yn = 'N';
+									}
+									else if (MGCMTBLDAT.DATA_2[0] == 'Y' || MGCMTBLDAT.DATA_3[0] == 'Y')
+									{
+										c_skip_yn = 'Y';
+										
+										gen_in_node = TRS.add_node(in_node, "gen_in_node");
+										TRS.add_char(gen_in_node, "PROCSTEP", '2');
+										CopyDefaultMembers(gen_in_node, in_node);
+
+										//TRS.add_string(gen_in_node, "RULE_ID", MGCMTBLDAT.DATA_6, sizeof(MGCMTBLDAT.DATA_6));
+										TRS.add_string(gen_in_node, "RULE_ID", MP_ID_ROLE_WIP_PRESS_LOT_ID_2, sizeof(MP_ID_ROLE_WIP_PRESS_LOT_ID_2));
+
+										TRS.add_string(gen_in_node, "LOT_ID", MWIPLOTSTSX.LOT_ID, sizeof(MWIPLOTSTSX.LOT_ID));
+										TRS.add_nstring(gen_in_node, "OPER", TRS.get_string(in_node, "OPER"));
+										TRS.add_string(gen_in_node, "FLOW", MWIPOPRDEF.AREA_ID, sizeof(MWIPOPRDEF.AREA_ID));
+										TRS.add_string(gen_in_node, "MAT_ID", MWIPLOTSTSX.MAT_ID, sizeof(MWIPLOTSTSX.MAT_ID));
+										TRS.add_nstring(gen_in_node, "RES_ID", TRS.get_string(in_node, "RES_ID"));
+										TRS.add_string(gen_in_node, "SEQ_KEY_10", work_date.s_work_date, 8);
+										TRS.add_string(gen_in_node, "DATETIME", gs_sys_time, 8);
+										TRS.add_string(gen_in_node, "OVR_TIME", gs_sys_time, 8);
+
+										argu_list_node = TRS.add_node(gen_in_node, "ARGU_LIST");
+										TRS.add_string(argu_list_node, "ARGUMENT", MWIPLOTSTSX.LOT_ID, sizeof(MWIPLOTSTSX.LOT_ID));
+
+										cmn_out = TRS.create_node("Cmn_Out");
+										if (CUS_WIP_GENERATE_ID(s_msg_code, gen_in_node, cmn_out) == MP_FALSE)
+										{
+											TRS.clone(out_node, cmn_out);
+											TRS.free_node(cmn_out);
+											return MP_FALSE;
+										}
+										memcpy(s_lot_id, TRS.get_string(cmn_out, "GEN_ID"), strlen(TRS.get_string(cmn_out, "GEN_ID")));
+										TRS.free_node(cmn_out);									
+									}
+								} 
+							} 
+							*/
+							// ★ 수정중(2026-07-23 ~ ) -------------------------------------------------------------------------------------------------------
 						}
 
 						if (c_skip_yn == 'N')
@@ -3313,9 +3414,63 @@ int CUS_WIP_PROCESS_LOT(char* s_msg_code, TRSNode* in_node, TRSNode* out_node)
 					}
 					else
 					{
+						// AS-IS : 원래소스
 						memcpy(CWIPPRSRUN.CELL_ID, MWIPLOTSTSX_SPLIT.LOT_CMF_1, sizeof(CWIPPRSRUN.CELL_ID));
 						memcpy(CWIPPRSRUN.LOT_ID, MWIPLOTSTSX_SPLIT.LOT_ID, sizeof(CWIPPRSRUN.LOT_ID));
 						CWIPPRSRUN.MAPPING_SEQ = atoi(MWIPLOTSTSX_SPLIT.LOT_CMF_2);
+						
+						
+						// TO-Be : 2026-08-14 수정 --------------------------------------------------------
+						// GCM 품목인경우 업데이트
+						/*
+						DBU_init_mgcmtbldat(&MGCMTBLDAT_GEN);
+						TRS.copy(MGCMTBLDAT_GEN.FACTORY, sizeof(MGCMTBLDAT.FACTORY), in_node, IN_FACTORY);
+						memcpy(MGCMTBLDAT_GEN.TABLE_NAME, MP_GCM_C_CTM_PRESS_GEN_MAT, strlen(MP_GCM_C_CTM_PRESS_GEN_MAT));
+						memcpy(MGCMTBLDAT_GEN.KEY_1, MRASRESDEF.RES_ID, sizeof(MRASRESDEF.RES_ID));
+						memcpy(MGCMTBLDAT_GEN.KEY_2, MWIPLOTSTSX.MAT_ID, sizeof(MWIPLOTSTSX.MAT_ID));
+						memcpy(MGCMTBLDAT_GEN.KEY_3, MWIPLOTSTSX.MAT_ID, sizeof(MWIPLOTSTSX.MAT_ID));
+						DBU_select_mgcmtbldat(5, &MGCMTBLDAT_GEN);
+						if (DB_error_code == DB_SUCCESS)
+						{							
+							// GCM 등록 품번이면 POS_NUM 만 업데이트 							
+							iPosNum = COM_atoi(MGCMTBLDAT_GEN.DATA_5, sizeof(MGCMTBLDAT_GEN.DATA_5));	
+							
+							if (i == i_lot_count - 1)
+							{
+								if (memcmp(MGCMTBLDAT_GEN.KEY_2, MWIPLOTSTSX.MAT_ID, strlen(MWIPLOTSTSX.MAT_ID)) == 0)
+								{
+									memcpy(MGCMTBLDAT_GEN.DATA_2, "Y", strlen("Y"));
+								}
+								else
+								{
+									memcpy(MGCMTBLDAT_GEN.DATA_3, "Y", strlen("Y"));
+								}
+								
+								//COM_itoa_left(MGCMTBLDAT_GEN.DATA_5, iPosNum, sizeof(MGCMTBLDAT_GEN.DATA_5));
+								DBU_update_mgcmtbldat(1, &MGCMTBLDAT_GEN);
+							}
+							else
+							{								
+								COM_itoa_left(MGCMTBLDAT_GEN.DATA_5, iPosNum, sizeof(MGCMTBLDAT_GEN.DATA_5));
+								DBU_update_mgcmtbldat(1, &MGCMTBLDAT_GEN);
+							}
+							
+							
+							//------------------------------------------------------------------------------------
+							memcpy(CWIPPRSRUN.CELL_ID, MWIPLOTSTSX_SPLIT.LOT_CMF_1, sizeof(CWIPPRSRUN.CELL_ID));
+							memcpy(CWIPPRSRUN.LOT_ID, MWIPLOTSTSX_SPLIT.LOT_ID, sizeof(CWIPPRSRUN.LOT_ID));
+							CWIPPRSRUN.MAPPING_SEQ = iPosNum;
+							
+						}
+						else
+						{							
+							memcpy(CWIPPRSRUN.CELL_ID, MWIPLOTSTSX_SPLIT.LOT_CMF_1, sizeof(CWIPPRSRUN.CELL_ID));
+							memcpy(CWIPPRSRUN.LOT_ID, MWIPLOTSTSX_SPLIT.LOT_ID, sizeof(CWIPPRSRUN.LOT_ID));
+							CWIPPRSRUN.MAPPING_SEQ = atoi(MWIPLOTSTSX_SPLIT.LOT_CMF_2);							
+						}
+						*/
+						// 2026-08-14 수정 ----------------------------------------------------------------
+
 					}
 				}
 				else
