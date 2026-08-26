@@ -192,6 +192,15 @@
             this.txtPackLotId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtERPPackingOrderNo = new System.Windows.Forms.TextBox();
+            this.txtMatDesc2 = new System.Windows.Forms.TextBox();
+            this.txtMatDesc = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblMatDesc = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtExcludeWord = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cboxShipFlag = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.pnlStsCond.SuspendLayout();
             this.pnlMID.SuspendLayout();
             this.pnlBottom.SuspendLayout();
@@ -209,6 +218,15 @@
             // 
             // pnlStsCond
             // 
+            this.pnlStsCond.Controls.Add(this.cboxShipFlag);
+            this.pnlStsCond.Controls.Add(this.textBox1);
+            this.pnlStsCond.Controls.Add(this.label7);
+            this.pnlStsCond.Controls.Add(this.label6);
+            this.pnlStsCond.Controls.Add(this.txtExcludeWord);
+            this.pnlStsCond.Controls.Add(this.txtMatDesc2);
+            this.pnlStsCond.Controls.Add(this.txtMatDesc);
+            this.pnlStsCond.Controls.Add(this.label5);
+            this.pnlStsCond.Controls.Add(this.lblMatDesc);
             this.pnlStsCond.Controls.Add(this.txtERPPackingOrderNo);
             this.pnlStsCond.Controls.Add(this.label4);
             this.pnlStsCond.Controls.Add(this.txtPackLotId);
@@ -227,7 +245,7 @@
             this.pnlStsCond.Controls.Add(this.lblPackOrder);
             this.pnlStsCond.Controls.Add(this.lblDept);
             this.pnlStsCond.Controls.Add(this.cdvDept);
-            this.pnlStsCond.Size = new System.Drawing.Size(1219, 116);
+            this.pnlStsCond.Size = new System.Drawing.Size(1619, 135);
             this.pnlStsCond.Controls.SetChildIndex(this.pnlStsCond3, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.pnlStsCond2, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.cdvDept, 0);
@@ -248,10 +266,21 @@
             this.pnlStsCond.Controls.SetChildIndex(this.txtPackLotId, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.label4, 0);
             this.pnlStsCond.Controls.SetChildIndex(this.txtERPPackingOrderNo, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.lblMatDesc, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.label5, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.txtMatDesc, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.txtMatDesc2, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.txtExcludeWord, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.label6, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.label7, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.textBox1, 0);
+            this.pnlStsCond.Controls.SetChildIndex(this.cboxShipFlag, 0);
             // 
             // pnlMID
             // 
             this.pnlMID.Controls.Add(this.grpPackLotList);
+            this.pnlMID.Size = new System.Drawing.Size(1639, 790);
+            this.pnlMID.Controls.SetChildIndex(this.chkFavorite, 0);
             this.pnlMID.Controls.SetChildIndex(this.lblFormName, 0);
             this.pnlMID.Controls.SetChildIndex(this.pnlStsCond, 0);
             this.pnlMID.Controls.SetChildIndex(this.lblDirectQuery, 0);
@@ -259,21 +288,32 @@
             // 
             // pnlStsCond3
             // 
-            this.pnlStsCond3.Location = new System.Drawing.Point(0, 106);
+            this.pnlStsCond3.Location = new System.Drawing.Point(0, 125);
+            this.pnlStsCond3.Size = new System.Drawing.Size(1619, 10);
             // 
             // lblFormName
             // 
             this.lblFormName.Size = new System.Drawing.Size(186, 30);
             this.lblFormName.Text = "View Packing Lot";
             // 
+            // lblDirectQuery
+            // 
+            this.lblDirectQuery.Location = new System.Drawing.Point(2384, 30);
+            // 
             // btnView
             // 
             this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnView.Location = new System.Drawing.Point(1421, 10);
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Location = new System.Drawing.Point(1527, 10);
+            // 
+            // pnlStsCond2
+            // 
+            this.pnlStsCond2.Size = new System.Drawing.Size(1619, 10);
             // 
             // pnlBottom
             // 
@@ -282,6 +322,7 @@
             this.pnlBottom.Controls.Add(this.lblLableSize);
             this.pnlBottom.Controls.Add(this.cdvLabelSize);
             this.pnlBottom.Controls.Add(this.btnPrint);
+            this.pnlBottom.Size = new System.Drawing.Size(1639, 50);
             this.pnlBottom.Controls.SetChildIndex(this.btnClose, 0);
             this.pnlBottom.Controls.SetChildIndex(this.btnView, 0);
             this.pnlBottom.Controls.SetChildIndex(this.btnPrint, 0);
@@ -289,6 +330,10 @@
             this.pnlBottom.Controls.SetChildIndex(this.lblLableSize, 0);
             this.pnlBottom.Controls.SetChildIndex(this.chkMeshDeleteFlag, 0);
             this.pnlBottom.Controls.SetChildIndex(this.btnExcel, 0);
+            // 
+            // pnlCenter
+            // 
+            this.pnlCenter.Size = new System.Drawing.Size(1639, 790);
             // 
             // pnlTop
             // 
@@ -942,9 +987,9 @@
             // txtPackingOrderNo
             // 
             this.txtPackingOrderNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtPackingOrderNo.Location = new System.Drawing.Point(123, 56);
+            this.txtPackingOrderNo.Location = new System.Drawing.Point(122, 56);
             this.txtPackingOrderNo.Name = "txtPackingOrderNo";
-            this.txtPackingOrderNo.Size = new System.Drawing.Size(139, 26);
+            this.txtPackingOrderNo.Size = new System.Drawing.Size(140, 26);
             this.txtPackingOrderNo.TabIndex = 6;
             this.txtPackingOrderNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPackingOrderNo_KeyPress);
             // 
@@ -1073,7 +1118,7 @@
             this.lblCustomerId.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblCustomerId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomerId.ForeColor = System.Drawing.Color.Black;
-            this.lblCustomerId.Location = new System.Drawing.Point(583, 25);
+            this.lblCustomerId.Location = new System.Drawing.Point(583, 97);
             this.lblCustomerId.Name = "lblCustomerId";
             this.lblCustomerId.Size = new System.Drawing.Size(91, 16);
             this.lblCustomerId.TabIndex = 272;
@@ -1094,7 +1139,7 @@
             this.cdvCustomerId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cdvCustomerId.Index = 0;
             this.cdvCustomerId.IsViewBtnImage = false;
-            this.cdvCustomerId.Location = new System.Drawing.Point(695, 20);
+            this.cdvCustomerId.Location = new System.Drawing.Point(692, 91);
             this.cdvCustomerId.MaxLength = 100;
             this.cdvCustomerId.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
             this.cdvCustomerId.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
@@ -1108,12 +1153,12 @@
             this.cdvCustomerId.SelectedSubItemIndex = 0;
             this.cdvCustomerId.SelectedValueToQueryText = "";
             this.cdvCustomerId.SelectionStart = 0;
-            this.cdvCustomerId.Size = new System.Drawing.Size(140, 26);
+            this.cdvCustomerId.Size = new System.Drawing.Size(247, 26);
             this.cdvCustomerId.SmallImageList = null;
             this.cdvCustomerId.StyleBorder = System.Windows.Forms.BorderStyle.Fixed3D;
             this.cdvCustomerId.TabIndex = 3;
             this.cdvCustomerId.TextBoxToolTipText = "";
-            this.cdvCustomerId.TextBoxWidth = 140;
+            this.cdvCustomerId.TextBoxWidth = 247;
             this.cdvCustomerId.VisibleButton = true;
             this.cdvCustomerId.VisibleColumnHeader = false;
             this.cdvCustomerId.VisibleDescription = false;
@@ -1133,10 +1178,10 @@
             appearance2.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(59)))), ((int)(((byte)(98)))));
             appearance2.ForeColor = System.Drawing.Color.White;
             this.grpPackLotList.HeaderAppearance = appearance2;
-            this.grpPackLotList.Location = new System.Drawing.Point(10, 166);
+            this.grpPackLotList.Location = new System.Drawing.Point(10, 185);
             this.grpPackLotList.Margin = new System.Windows.Forms.Padding(5);
             this.grpPackLotList.Name = "grpPackLotList";
-            this.grpPackLotList.Size = new System.Drawing.Size(1219, 624);
+            this.grpPackLotList.Size = new System.Drawing.Size(1619, 605);
             this.grpPackLotList.TabIndex = 246;
             this.grpPackLotList.Text = "Packing Lot List";
             // 
@@ -1246,7 +1291,7 @@
             namedStyle9});
             this.spdLotList.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.spdLotList_Sheet1});
-            this.spdLotList.Size = new System.Drawing.Size(1217, 604);
+            this.spdLotList.Size = new System.Drawing.Size(1617, 585);
             spreadSkin1.ColumnFooterDefaultStyle = namedStyle6;
             spreadSkin1.ColumnHeaderDefaultStyle = namedStyle4;
             spreadSkin1.CornerDefaultStyle = namedStyle8;
@@ -1582,7 +1627,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(1075, 28);
+            this.label2.Location = new System.Drawing.Point(809, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(17, 16);
             this.label2.TabIndex = 280;
@@ -1594,7 +1639,7 @@
             this.dtpToWorkDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.dtpToWorkDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dtpToWorkDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpToWorkDate.Location = new System.Drawing.Point(1094, 20);
+            this.dtpToWorkDate.Location = new System.Drawing.Point(828, 54);
             this.dtpToWorkDate.Name = "dtpToWorkDate";
             this.dtpToWorkDate.Size = new System.Drawing.Size(111, 26);
             this.dtpToWorkDate.TabIndex = 5;
@@ -1606,7 +1651,7 @@
             this.lblDate.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.Black;
-            this.lblDate.Location = new System.Drawing.Point(872, 25);
+            this.lblDate.Location = new System.Drawing.Point(583, 60);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(79, 16);
             this.lblDate.TabIndex = 279;
@@ -1619,7 +1664,7 @@
             this.dtpFromWorkDate.CustomFormat = "";
             this.dtpFromWorkDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dtpFromWorkDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFromWorkDate.Location = new System.Drawing.Point(958, 20);
+            this.dtpFromWorkDate.Location = new System.Drawing.Point(692, 54);
             this.dtpFromWorkDate.Name = "dtpFromWorkDate";
             this.dtpFromWorkDate.Size = new System.Drawing.Size(111, 26);
             this.dtpFromWorkDate.TabIndex = 4;
@@ -1636,7 +1681,7 @@
             this.lblLableSize.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblLableSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLableSize.ForeColor = System.Drawing.Color.Black;
-            this.lblLableSize.Location = new System.Drawing.Point(681, 16);
+            this.lblLableSize.Location = new System.Drawing.Point(1081, 16);
             this.lblLableSize.Name = "lblLableSize";
             this.lblLableSize.Size = new System.Drawing.Size(46, 16);
             this.lblLableSize.TabIndex = 271;
@@ -1658,7 +1703,7 @@
             this.cdvLabelSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cdvLabelSize.Index = 0;
             this.cdvLabelSize.IsViewBtnImage = false;
-            this.cdvLabelSize.Location = new System.Drawing.Point(736, 12);
+            this.cdvLabelSize.Location = new System.Drawing.Point(1136, 12);
             this.cdvLabelSize.MaxLength = 100;
             this.cdvLabelSize.MCViewStyle.BorderColor = System.Drawing.SystemColors.Control;
             this.cdvLabelSize.MCViewStyle.BorderHotColor = System.Drawing.SystemColors.Control;
@@ -1692,7 +1737,7 @@
             appearance4.ForeColor = System.Drawing.Color.White;
             this.btnPrint.Appearance = appearance4;
             this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.Location = new System.Drawing.Point(915, 11);
+            this.btnPrint.Location = new System.Drawing.Point(1315, 11);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(100, 30);
             this.btnPrint.TabIndex = 269;
@@ -1706,7 +1751,7 @@
             this.chkMeshDeleteFlag.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkMeshDeleteFlag.AutoSize = true;
             this.chkMeshDeleteFlag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.chkMeshDeleteFlag.Location = new System.Drawing.Point(535, 15);
+            this.chkMeshDeleteFlag.Location = new System.Drawing.Point(935, 15);
             this.chkMeshDeleteFlag.Name = "chkMeshDeleteFlag";
             this.chkMeshDeleteFlag.Size = new System.Drawing.Size(132, 20);
             this.chkMeshDeleteFlag.TabIndex = 272;
@@ -1733,7 +1778,7 @@
             // txtOrgLotId
             // 
             this.txtOrgLotId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtOrgLotId.Location = new System.Drawing.Point(695, 56);
+            this.txtOrgLotId.Location = new System.Drawing.Point(122, 91);
             this.txtOrgLotId.Name = "txtOrgLotId";
             this.txtOrgLotId.Size = new System.Drawing.Size(140, 26);
             this.txtOrgLotId.TabIndex = 7;
@@ -1745,7 +1790,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(583, 62);
+            this.label1.Location = new System.Drawing.Point(12, 97);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 16);
             this.label1.TabIndex = 281;
@@ -1758,7 +1803,7 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(872, 62);
+            this.label3.Location = new System.Drawing.Point(276, 97);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 16);
             this.label3.TabIndex = 281;
@@ -1768,7 +1813,7 @@
             // txtPackLotId
             // 
             this.txtPackLotId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtPackLotId.Location = new System.Drawing.Point(958, 56);
+            this.txtPackLotId.Location = new System.Drawing.Point(416, 91);
             this.txtPackLotId.Name = "txtPackLotId";
             this.txtPackLotId.Size = new System.Drawing.Size(140, 26);
             this.txtPackLotId.TabIndex = 8;
@@ -1796,11 +1841,114 @@
             this.txtERPPackingOrderNo.TabIndex = 8;
             this.txtERPPackingOrderNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtERPPackingOrderNo_KeyPress);
             // 
+            // txtMatDesc2
+            // 
+            this.txtMatDesc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtMatDesc2.Location = new System.Drawing.Point(1088, 20);
+            this.txtMatDesc2.Name = "txtMatDesc2";
+            this.txtMatDesc2.Size = new System.Drawing.Size(200, 26);
+            this.txtMatDesc2.TabIndex = 294;
+            // 
+            // txtMatDesc
+            // 
+            this.txtMatDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtMatDesc.Location = new System.Drawing.Point(692, 20);
+            this.txtMatDesc.Name = "txtMatDesc";
+            this.txtMatDesc.Size = new System.Drawing.Size(247, 26);
+            this.txtMatDesc.TabIndex = 295;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(957, 25);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(124, 16);
+            this.label5.TabIndex = 292;
+            this.label5.Text = "Search Add Char";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblMatDesc
+            // 
+            this.lblMatDesc.AutoSize = true;
+            this.lblMatDesc.BackColor = System.Drawing.Color.White;
+            this.lblMatDesc.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblMatDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblMatDesc.ForeColor = System.Drawing.Color.Black;
+            this.lblMatDesc.Location = new System.Drawing.Point(583, 25);
+            this.lblMatDesc.Name = "lblMatDesc";
+            this.lblMatDesc.Size = new System.Drawing.Size(103, 16);
+            this.lblMatDesc.TabIndex = 293;
+            this.lblMatDesc.Text = "Material Desc";
+            this.lblMatDesc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(957, 60);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(103, 16);
+            this.label6.TabIndex = 341;
+            this.label6.Text = "Exclude Word";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtExcludeWord
+            // 
+            this.txtExcludeWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtExcludeWord.Location = new System.Drawing.Point(1088, 56);
+            this.txtExcludeWord.Name = "txtExcludeWord";
+            this.txtExcludeWord.Size = new System.Drawing.Size(200, 26);
+            this.txtExcludeWord.TabIndex = 340;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(1305, 20);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(298, 62);
+            this.textBox1.TabIndex = 342;
+            this.textBox1.Text = "[제품 설명 입력 연산자 예시]　\r\n제품 설명 : %단어1%단어1에포함된문자\r\n검색추가문자 : %단어2%단어2에포함된문자\r\n검색제외문자 : -단어" +
+    "3-단어4\r\n";
+            // 
+            // cboxShipFlag
+            // 
+            this.cboxShipFlag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxShipFlag.Items.AddRange(new object[] {
+            "",
+            "Y",
+            "N"});
+            this.cboxShipFlag.Location = new System.Drawing.Point(1088, 94);
+            this.cboxShipFlag.Name = "cboxShipFlag";
+            this.cboxShipFlag.Size = new System.Drawing.Size(200, 24);
+            this.cboxShipFlag.TabIndex = 343;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(957, 97);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(73, 16);
+            this.label7.TabIndex = 341;
+            this.label7.Text = "Ship Flag";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // frmViewPackingLot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1239, 840);
+            this.ClientSize = new System.Drawing.Size(1639, 840);
             this.Name = "frmViewPackingLot";
             this.Text = "View Packing Lot";
             this.Load += new System.EventHandler(this.frmViewPackingLot_Load);
@@ -1852,5 +2000,14 @@
         public System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtERPPackingOrderNo;
         public System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtMatDesc2;
+        private System.Windows.Forms.TextBox txtMatDesc;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label lblMatDesc;
+        public System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtExcludeWord;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cboxShipFlag;
+        public System.Windows.Forms.Label label7;
     }
 }

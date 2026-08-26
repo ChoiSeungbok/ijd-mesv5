@@ -141,9 +141,14 @@ namespace CUS_SHP
         {
             try
             {
-                TPDR.DirectViewCond[] dvcArgu = new TPDR.DirectViewCond[10];
+                TPDR.DirectViewCond[] dvcArgu = new TPDR.DirectViewCond[11];
                 DataTable dt = null;
                 string sSql = "";
+                string sMatDesc = "";
+                string sMatDesc2 = "";
+                string sSqlText = "";
+                string sExcludeWord = "";
+                StringBuilder sb = new StringBuilder();
                 int i = 0;
 
                 dvcArgu[0].sCondition_ID = "FACTORY";
@@ -175,6 +180,62 @@ namespace CUS_SHP
 
                 dvcArgu[9].sCondition_ID = "ERP_PACK_LOT_ID";
                 dvcArgu[9].sCondition_Value = txtERPPackingOrderNo.Text.Trim();
+
+                //CSHP2001-005, LOT.SHIP_FLAG
+                //dvcArgu[10].sCondition_ID = "SHIP_FLAG";
+                //dvcArgu[10].sCondition_Value = cboxShipFlag.Text.Trim();
+                if (cboxShipFlag.Text.Trim() != "")
+                {
+                    sSqlText = sSqlText + "AND LOT.SHIP_FLAG = '" + cboxShipFlag.Text.Trim() + "'";
+                }
+
+                //제품명 & 제품코드
+                sMatDesc = txtMatDesc.Text;
+                sMatDesc2 = txtMatDesc2.Text;
+
+                if (sMatDesc != "" || sMatDesc2 != "")
+                {
+                    sb.Append("AND (");
+
+                    if (!string.IsNullOrEmpty(sMatDesc))
+                    {
+                        sb.Append($"MAT.MAT_DESC LIKE '%' || '{sMatDesc}' || '%'");
+                    }
+
+                    if (!string.IsNullOrEmpty(sMatDesc2))
+                    {
+                        if (sb.Length > 6) // 첫 번째 조건이 추가된 경우
+                        {
+                            sb.Append(" OR ");
+                        }
+                        sb.Append($"MAT.MAT_DESC LIKE '%' || '{sMatDesc2}' || '%'");
+                    }
+                    sb.Append(")");
+
+                    sSqlText = sSqlText + sb.ToString();       // 결과 문자열 
+                }
+
+
+                // 제외문자
+                sExcludeWord = MPCF.Trim(txtExcludeWord.Text);
+                string[] split_data = sExcludeWord.Split(new string[] { string.Format("{0}", "-") }, StringSplitOptions.RemoveEmptyEntries);
+                for (int k = 0; k < split_data.Count(); k++)
+                {
+                    sSqlText = sSqlText + " AND MAT.MAT_DESC NOT LIKE '%' || '" + split_data[k] + "' || '%'";
+                }
+                dvcArgu[10].sCondition_ID = "SQL_TEXT";
+                dvcArgu[10].sCondition_Type = "TEXT";
+
+                if (sSqlText == "")
+                {
+                    dvcArgu[10].sCondition_Value = "AND 1=1";
+                }
+                else
+                {
+                    dvcArgu[10].sCondition_Value = sSqlText;
+                }
+
+                
 
                 if (TPDR.GetDataOne("", ref dt, "CSHP2001-005", dvcArgu, false, false, ref sSql) == false)
                 {

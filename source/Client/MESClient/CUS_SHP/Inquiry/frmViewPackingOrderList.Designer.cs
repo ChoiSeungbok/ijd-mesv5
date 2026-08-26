@@ -283,6 +283,49 @@
             Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
+            FarPoint.Win.Spread.DefaultFocusIndicatorRenderer defaultFocusIndicatorRenderer3 = new FarPoint.Win.Spread.DefaultFocusIndicatorRenderer();
+            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer7 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
+            FarPoint.Win.Spread.NamedStyle namedStyle19 = new FarPoint.Win.Spread.NamedStyle("Style4");
+            FarPoint.Win.Spread.CellType.FilterBarCellType filterBarCellType5 = new FarPoint.Win.Spread.CellType.FilterBarCellType();
+            FarPoint.Win.Spread.NamedStyle namedStyle20 = new FarPoint.Win.Spread.NamedStyle("Style5");
+            FarPoint.Win.Spread.NamedStyle namedStyle21 = new FarPoint.Win.Spread.NamedStyle("DataAreaDefault");
+            FarPoint.Win.Spread.CellType.GeneralCellType generalCellType8 = new FarPoint.Win.Spread.CellType.GeneralCellType();
+            FarPoint.Win.Spread.NamedStyle namedStyle22 = new FarPoint.Win.Spread.NamedStyle("Style1");
+            FarPoint.Win.BevelBorder bevelBorder4 = new FarPoint.Win.BevelBorder(FarPoint.Win.BevelBorderType.Lowered);
+            FarPoint.Win.Spread.CellType.GeneralCellType generalCellType9 = new FarPoint.Win.Spread.CellType.GeneralCellType();
+            FarPoint.Win.Spread.NamedStyle namedStyle23 = new FarPoint.Win.Spread.NamedStyle("FilterBarDefault");
+            FarPoint.Win.Spread.CellType.FilterBarCellType filterBarCellType6 = new FarPoint.Win.Spread.CellType.FilterBarCellType();
+            FarPoint.Win.Spread.NamedStyle namedStyle24 = new FarPoint.Win.Spread.NamedStyle("HeaderDefault");
+            FarPoint.Win.Spread.NamedStyle namedStyle25 = new FarPoint.Win.Spread.NamedStyle("Style3");
+            FarPoint.Win.Spread.NamedStyle namedStyle26 = new FarPoint.Win.Spread.NamedStyle("RowHeaderDefault");
+            FarPoint.Win.Spread.NamedStyle namedStyle27 = new FarPoint.Win.Spread.NamedStyle("Style2");
+            FarPoint.Win.Spread.CellType.GeneralCellType generalCellType10 = new FarPoint.Win.Spread.CellType.GeneralCellType();
+            FarPoint.Win.Spread.SpreadSkin spreadSkin3 = new FarPoint.Win.Spread.SpreadSkin();
+            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer8 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
+            FarPoint.Win.Spread.StatusBarSkin statusBarSkin3 = new FarPoint.Win.Spread.StatusBarSkin();
+            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer9 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
+            FarPoint.Win.Spread.CellType.NumberCellType numberCellType13 = new FarPoint.Win.Spread.CellType.NumberCellType();
+            FarPoint.Win.Spread.CellType.NumberCellType numberCellType14 = new FarPoint.Win.Spread.CellType.NumberCellType();
+            FarPoint.Win.Spread.CellType.NumberCellType numberCellType15 = new FarPoint.Win.Spread.CellType.NumberCellType();
+            FarPoint.Win.Spread.CellType.NumberCellType numberCellType16 = new FarPoint.Win.Spread.CellType.NumberCellType();
+            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType5 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
+            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType6 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
+            FarPoint.Win.Spread.CellType.GeneralCellType generalCellType11 = new FarPoint.Win.Spread.CellType.GeneralCellType();
+            FarPoint.Win.Spread.CellType.NumberCellType numberCellType17 = new FarPoint.Win.Spread.CellType.NumberCellType();
+            FarPoint.Win.Spread.CellType.NumberCellType numberCellType18 = new FarPoint.Win.Spread.CellType.NumberCellType();
+            FarPoint.Win.Spread.CellType.NumberCellType numberCellType19 = new FarPoint.Win.Spread.CellType.NumberCellType();
+            FarPoint.Win.Spread.CellType.NumberCellType numberCellType20 = new FarPoint.Win.Spread.CellType.NumberCellType();
+            FarPoint.Win.Spread.CellType.NumberCellType numberCellType21 = new FarPoint.Win.Spread.CellType.NumberCellType();
+            FarPoint.Win.Spread.CellType.NumberCellType numberCellType22 = new FarPoint.Win.Spread.CellType.NumberCellType();
+            FarPoint.Win.Spread.CellType.NumberCellType numberCellType23 = new FarPoint.Win.Spread.CellType.NumberCellType();
+            FarPoint.Win.Spread.CellType.NumberCellType numberCellType24 = new FarPoint.Win.Spread.CellType.NumberCellType();
+            FarPoint.Win.Spread.CellType.DateTimeCellType dateTimeCellType3 = new FarPoint.Win.Spread.CellType.DateTimeCellType();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmViewPackingOrderList));
+            FarPoint.Win.Spread.CellType.DateTimeCellType dateTimeCellType4 = new FarPoint.Win.Spread.CellType.DateTimeCellType();
+            FarPoint.Win.Spread.CellType.ButtonCellType buttonCellType2 = new FarPoint.Win.Spread.CellType.ButtonCellType();
+            Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             FarPoint.Win.Spread.DefaultFocusIndicatorRenderer defaultFocusIndicatorRenderer2 = new FarPoint.Win.Spread.DefaultFocusIndicatorRenderer();
             FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer4 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
             FarPoint.Win.Spread.NamedStyle namedStyle10 = new FarPoint.Win.Spread.NamedStyle("Style4");
@@ -304,52 +347,9 @@
             FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer5 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
             FarPoint.Win.Spread.StatusBarSkin statusBarSkin2 = new FarPoint.Win.Spread.StatusBarSkin();
             FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer6 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
-            FarPoint.Win.Spread.CellType.NumberCellType numberCellType1 = new FarPoint.Win.Spread.CellType.NumberCellType();
-            FarPoint.Win.Spread.CellType.NumberCellType numberCellType2 = new FarPoint.Win.Spread.CellType.NumberCellType();
-            FarPoint.Win.Spread.CellType.NumberCellType numberCellType3 = new FarPoint.Win.Spread.CellType.NumberCellType();
-            FarPoint.Win.Spread.CellType.NumberCellType numberCellType4 = new FarPoint.Win.Spread.CellType.NumberCellType();
-            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType3 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
-            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType4 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
-            FarPoint.Win.Spread.CellType.GeneralCellType generalCellType7 = new FarPoint.Win.Spread.CellType.GeneralCellType();
-            FarPoint.Win.Spread.CellType.NumberCellType numberCellType5 = new FarPoint.Win.Spread.CellType.NumberCellType();
-            FarPoint.Win.Spread.CellType.NumberCellType numberCellType6 = new FarPoint.Win.Spread.CellType.NumberCellType();
-            FarPoint.Win.Spread.CellType.NumberCellType numberCellType7 = new FarPoint.Win.Spread.CellType.NumberCellType();
-            FarPoint.Win.Spread.CellType.NumberCellType numberCellType8 = new FarPoint.Win.Spread.CellType.NumberCellType();
-            FarPoint.Win.Spread.CellType.NumberCellType numberCellType9 = new FarPoint.Win.Spread.CellType.NumberCellType();
-            FarPoint.Win.Spread.CellType.NumberCellType numberCellType10 = new FarPoint.Win.Spread.CellType.NumberCellType();
-            FarPoint.Win.Spread.CellType.NumberCellType numberCellType11 = new FarPoint.Win.Spread.CellType.NumberCellType();
-            FarPoint.Win.Spread.CellType.NumberCellType numberCellType12 = new FarPoint.Win.Spread.CellType.NumberCellType();
-            FarPoint.Win.Spread.CellType.DateTimeCellType dateTimeCellType1 = new FarPoint.Win.Spread.CellType.DateTimeCellType();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmViewPackingOrderList));
-            FarPoint.Win.Spread.CellType.DateTimeCellType dateTimeCellType2 = new FarPoint.Win.Spread.CellType.DateTimeCellType();
-            FarPoint.Win.Spread.CellType.ButtonCellType buttonCellType1 = new FarPoint.Win.Spread.CellType.ButtonCellType();
-            Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
-            FarPoint.Win.Spread.DefaultFocusIndicatorRenderer defaultFocusIndicatorRenderer1 = new FarPoint.Win.Spread.DefaultFocusIndicatorRenderer();
-            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer1 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
-            FarPoint.Win.Spread.NamedStyle namedStyle1 = new FarPoint.Win.Spread.NamedStyle("Style4");
-            FarPoint.Win.Spread.CellType.FilterBarCellType filterBarCellType1 = new FarPoint.Win.Spread.CellType.FilterBarCellType();
-            FarPoint.Win.Spread.NamedStyle namedStyle2 = new FarPoint.Win.Spread.NamedStyle("Style5");
-            FarPoint.Win.Spread.NamedStyle namedStyle3 = new FarPoint.Win.Spread.NamedStyle("DataAreaDefault");
-            FarPoint.Win.Spread.CellType.GeneralCellType generalCellType1 = new FarPoint.Win.Spread.CellType.GeneralCellType();
-            FarPoint.Win.Spread.NamedStyle namedStyle4 = new FarPoint.Win.Spread.NamedStyle("Style1");
-            FarPoint.Win.BevelBorder bevelBorder1 = new FarPoint.Win.BevelBorder(FarPoint.Win.BevelBorderType.Lowered);
-            FarPoint.Win.Spread.CellType.GeneralCellType generalCellType2 = new FarPoint.Win.Spread.CellType.GeneralCellType();
-            FarPoint.Win.Spread.NamedStyle namedStyle5 = new FarPoint.Win.Spread.NamedStyle("FilterBarDefault");
-            FarPoint.Win.Spread.CellType.FilterBarCellType filterBarCellType2 = new FarPoint.Win.Spread.CellType.FilterBarCellType();
-            FarPoint.Win.Spread.NamedStyle namedStyle6 = new FarPoint.Win.Spread.NamedStyle("HeaderDefault");
-            FarPoint.Win.Spread.NamedStyle namedStyle7 = new FarPoint.Win.Spread.NamedStyle("Style3");
-            FarPoint.Win.Spread.NamedStyle namedStyle8 = new FarPoint.Win.Spread.NamedStyle("RowHeaderDefault");
-            FarPoint.Win.Spread.NamedStyle namedStyle9 = new FarPoint.Win.Spread.NamedStyle("Style2");
-            FarPoint.Win.Spread.CellType.GeneralCellType generalCellType3 = new FarPoint.Win.Spread.CellType.GeneralCellType();
-            FarPoint.Win.Spread.SpreadSkin spreadSkin1 = new FarPoint.Win.Spread.SpreadSkin();
-            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer2 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
-            FarPoint.Win.Spread.StatusBarSkin statusBarSkin1 = new FarPoint.Win.Spread.StatusBarSkin();
-            FarPoint.Win.Spread.DefaultScrollBarRenderer defaultScrollBarRenderer3 = new FarPoint.Win.Spread.DefaultScrollBarRenderer();
-            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType1 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
-            FarPoint.Win.BevelBorder bevelBorder2 = new FarPoint.Win.BevelBorder(FarPoint.Win.BevelBorderType.Lowered);
-            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType2 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
+            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType7 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
+            FarPoint.Win.BevelBorder bevelBorder5 = new FarPoint.Win.BevelBorder(FarPoint.Win.BevelBorderType.Lowered);
+            FarPoint.Win.Spread.CellType.CheckBoxCellType checkBoxCellType8 = new FarPoint.Win.Spread.CellType.CheckBoxCellType();
             Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
@@ -403,6 +403,10 @@
             this.txtExcludeWord = new System.Windows.Forms.TextBox();
             this.txtMatDesc2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.lblSum = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblCount = new System.Windows.Forms.Label();
             this.pnlStsCond.SuspendLayout();
             this.pnlMID.SuspendLayout();
             this.pnlBottom.SuspendLayout();
@@ -513,17 +517,17 @@
             // 
             // lblDirectQuery
             // 
-            this.lblDirectQuery.Location = new System.Drawing.Point(2729, 30);
+            this.lblDirectQuery.Location = new System.Drawing.Point(3719, 30);
             // 
             // btnView
             // 
             this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnView.Location = new System.Drawing.Point(1410, 10);
+            this.btnView.Location = new System.Drawing.Point(1405, 10);
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(1622, 10);
+            this.btnClose.Location = new System.Drawing.Point(1619, 10);
             // 
             // pnlStsCond2
             // 
@@ -531,6 +535,10 @@
             // 
             // pnlBottom
             // 
+            this.pnlBottom.Controls.Add(this.lblSum);
+            this.pnlBottom.Controls.Add(this.label7);
+            this.pnlBottom.Controls.Add(this.label8);
+            this.pnlBottom.Controls.Add(this.lblCount);
             this.pnlBottom.Controls.Add(this.btnExclUnShip);
             this.pnlBottom.Controls.Add(this.btnExcel);
             this.pnlBottom.Controls.Add(this.btnClear);
@@ -544,6 +552,10 @@
             this.pnlBottom.Controls.SetChildIndex(this.btnClear, 0);
             this.pnlBottom.Controls.SetChildIndex(this.btnExcel, 0);
             this.pnlBottom.Controls.SetChildIndex(this.btnExclUnShip, 0);
+            this.pnlBottom.Controls.SetChildIndex(this.lblCount, 0);
+            this.pnlBottom.Controls.SetChildIndex(this.label8, 0);
+            this.pnlBottom.Controls.SetChildIndex(this.label7, 0);
+            this.pnlBottom.Controls.SetChildIndex(this.lblSum, 0);
             // 
             // pnlCenter
             // 
@@ -2531,137 +2543,138 @@
             this.spdOrderList.BackColor = System.Drawing.Color.Transparent;
             this.spdOrderList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.spdOrderList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.spdOrderList.FocusRenderer = defaultFocusIndicatorRenderer2;
+            this.spdOrderList.FocusRenderer = defaultFocusIndicatorRenderer3;
             this.spdOrderList.HorizontalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
             this.spdOrderList.HorizontalScrollBar.Name = "";
-            this.spdOrderList.HorizontalScrollBar.Renderer = defaultScrollBarRenderer4;
+            this.spdOrderList.HorizontalScrollBar.Renderer = defaultScrollBarRenderer7;
             this.spdOrderList.HorizontalScrollBarPolicy = FarPoint.Win.Spread.ScrollBarPolicy.AsNeeded;
             this.spdOrderList.Location = new System.Drawing.Point(1, 19);
             this.spdOrderList.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.spdOrderList.Name = "spdOrderList";
-            namedStyle10.BackColor = System.Drawing.SystemColors.Control;
-            filterBarCellType3.FormatString = "";
-            namedStyle10.CellType = filterBarCellType3;
-            namedStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            namedStyle10.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
-            namedStyle10.Locked = false;
-            namedStyle10.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle10.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
-            namedStyle10.Renderer = filterBarCellType3;
-            namedStyle10.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
-            namedStyle10.VisualStyles = FarPoint.Win.VisualStyles.Auto;
-            namedStyle11.BackColor = System.Drawing.Color.Aqua;
-            namedStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            namedStyle11.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
-            namedStyle11.Locked = false;
-            namedStyle11.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle11.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
-            namedStyle11.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
-            namedStyle11.VisualStyles = FarPoint.Win.VisualStyles.Auto;
-            namedStyle12.BackColor = System.Drawing.SystemColors.Window;
-            namedStyle12.CellType = generalCellType4;
-            namedStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            namedStyle12.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.General;
-            namedStyle12.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle12.Renderer = generalCellType4;
-            namedStyle12.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.General;
-            namedStyle12.VisualStyles = FarPoint.Win.VisualStyles.Auto;
-            namedStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
-            namedStyle13.Border = bevelBorder3;
-            namedStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            namedStyle13.ForeColor = System.Drawing.Color.White;
-            namedStyle13.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
-            namedStyle13.Locked = false;
-            namedStyle13.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle13.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
-            namedStyle13.Renderer = generalCellType5;
-            namedStyle13.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
-            namedStyle13.VisualStyles = FarPoint.Win.VisualStyles.Auto;
-            namedStyle14.BackColor = System.Drawing.SystemColors.Control;
-            filterBarCellType4.FormatString = "";
-            namedStyle14.CellType = filterBarCellType4;
-            namedStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            namedStyle14.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
-            namedStyle14.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle14.Renderer = filterBarCellType4;
-            namedStyle14.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
-            namedStyle14.VisualStyles = FarPoint.Win.VisualStyles.Auto;
-            namedStyle15.BackColor = System.Drawing.SystemColors.Control;
-            namedStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
-            namedStyle15.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
-            namedStyle15.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle15.Renderer = columnHeaderRenderer88;
-            namedStyle15.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
-            namedStyle15.VisualStyles = FarPoint.Win.VisualStyles.Auto;
-            namedStyle16.BackColor = System.Drawing.SystemColors.Control;
-            namedStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            namedStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
-            namedStyle16.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
-            namedStyle16.Locked = false;
-            namedStyle16.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle16.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
-            namedStyle16.Renderer = rowHeaderRenderer158;
-            namedStyle16.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
-            namedStyle16.VisualStyles = FarPoint.Win.VisualStyles.Auto;
-            namedStyle17.BackColor = System.Drawing.SystemColors.Control;
-            namedStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            namedStyle17.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
-            namedStyle17.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle17.Renderer = rowHeaderRenderer157;
-            namedStyle17.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
-            namedStyle17.VisualStyles = FarPoint.Win.VisualStyles.Auto;
-            namedStyle18.BackColor = System.Drawing.Color.White;
-            namedStyle18.CellType = generalCellType6;
-            namedStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            namedStyle18.ForeColor = System.Drawing.Color.Black;
-            namedStyle18.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.General;
-            namedStyle18.Locked = false;
-            namedStyle18.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle18.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
-            namedStyle18.Renderer = generalCellType6;
-            namedStyle18.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.General;
-            namedStyle18.VisualStyles = FarPoint.Win.VisualStyles.Auto;
+            namedStyle19.BackColor = System.Drawing.SystemColors.Control;
+            filterBarCellType5.FormatString = "";
+            namedStyle19.CellType = filterBarCellType5;
+            namedStyle19.ForeColor = System.Drawing.SystemColors.ControlText;
+            namedStyle19.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            namedStyle19.Locked = false;
+            namedStyle19.NoteIndicatorColor = System.Drawing.Color.Red;
+            namedStyle19.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
+            namedStyle19.Renderer = filterBarCellType5;
+            namedStyle19.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            namedStyle19.VisualStyles = FarPoint.Win.VisualStyles.Auto;
+            namedStyle20.BackColor = System.Drawing.Color.Aqua;
+            namedStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
+            namedStyle20.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            namedStyle20.Locked = false;
+            namedStyle20.NoteIndicatorColor = System.Drawing.Color.Red;
+            namedStyle20.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
+            namedStyle20.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            namedStyle20.VisualStyles = FarPoint.Win.VisualStyles.Auto;
+            namedStyle21.BackColor = System.Drawing.SystemColors.Window;
+            namedStyle21.CellType = generalCellType8;
+            namedStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            namedStyle21.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.General;
+            namedStyle21.NoteIndicatorColor = System.Drawing.Color.Red;
+            namedStyle21.Renderer = generalCellType8;
+            namedStyle21.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.General;
+            namedStyle21.VisualStyles = FarPoint.Win.VisualStyles.Auto;
+            namedStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
+            namedStyle22.Border = bevelBorder4;
+            namedStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            namedStyle22.ForeColor = System.Drawing.Color.White;
+            namedStyle22.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            namedStyle22.Locked = false;
+            namedStyle22.NoteIndicatorColor = System.Drawing.Color.Red;
+            namedStyle22.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
+            namedStyle22.Renderer = generalCellType9;
+            namedStyle22.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            namedStyle22.VisualStyles = FarPoint.Win.VisualStyles.Auto;
+            namedStyle23.BackColor = System.Drawing.SystemColors.Control;
+            filterBarCellType6.FormatString = "";
+            namedStyle23.CellType = filterBarCellType6;
+            namedStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
+            namedStyle23.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            namedStyle23.NoteIndicatorColor = System.Drawing.Color.Red;
+            namedStyle23.Renderer = filterBarCellType6;
+            namedStyle23.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            namedStyle23.VisualStyles = FarPoint.Win.VisualStyles.Auto;
+            namedStyle24.BackColor = System.Drawing.SystemColors.Control;
+            namedStyle24.ForeColor = System.Drawing.SystemColors.ControlText;
+            namedStyle24.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            namedStyle24.NoteIndicatorColor = System.Drawing.Color.Red;
+            namedStyle24.Renderer = columnHeaderRenderer88;
+            namedStyle24.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            namedStyle24.VisualStyles = FarPoint.Win.VisualStyles.Auto;
+            namedStyle25.BackColor = System.Drawing.SystemColors.Control;
+            namedStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            namedStyle25.ForeColor = System.Drawing.SystemColors.ControlText;
+            namedStyle25.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            namedStyle25.Locked = false;
+            namedStyle25.NoteIndicatorColor = System.Drawing.Color.Red;
+            namedStyle25.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
+            namedStyle25.Renderer = rowHeaderRenderer158;
+            namedStyle25.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            namedStyle25.VisualStyles = FarPoint.Win.VisualStyles.Auto;
+            namedStyle26.BackColor = System.Drawing.SystemColors.Control;
+            namedStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
+            namedStyle26.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            namedStyle26.NoteIndicatorColor = System.Drawing.Color.Red;
+            namedStyle26.Renderer = rowHeaderRenderer157;
+            namedStyle26.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            namedStyle26.VisualStyles = FarPoint.Win.VisualStyles.Auto;
+            namedStyle27.BackColor = System.Drawing.Color.White;
+            namedStyle27.CellType = generalCellType10;
+            namedStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            namedStyle27.ForeColor = System.Drawing.Color.Black;
+            namedStyle27.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.General;
+            namedStyle27.Locked = false;
+            namedStyle27.NoteIndicatorColor = System.Drawing.Color.Red;
+            namedStyle27.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
+            namedStyle27.Renderer = generalCellType10;
+            namedStyle27.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.General;
+            namedStyle27.VisualStyles = FarPoint.Win.VisualStyles.Auto;
             this.spdOrderList.NamedStyles.AddRange(new FarPoint.Win.Spread.NamedStyle[] {
-            namedStyle10,
-            namedStyle11,
-            namedStyle12,
-            namedStyle13,
-            namedStyle14,
-            namedStyle15,
-            namedStyle16,
-            namedStyle17,
-            namedStyle18});
+            namedStyle19,
+            namedStyle20,
+            namedStyle21,
+            namedStyle22,
+            namedStyle23,
+            namedStyle24,
+            namedStyle25,
+            namedStyle26,
+            namedStyle27});
             this.spdOrderList.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.spdOrderList_Sheet1});
             this.spdOrderList.Size = new System.Drawing.Size(1412, 607);
-            spreadSkin2.ColumnFooterDefaultStyle = namedStyle15;
-            spreadSkin2.ColumnHeaderDefaultStyle = namedStyle13;
-            spreadSkin2.CornerDefaultStyle = namedStyle17;
-            spreadSkin2.DefaultStyle = namedStyle18;
-            spreadSkin2.FilterBarDefaultStyle = namedStyle14;
-            spreadSkin2.FilterBarHeaderDefaultStyle = namedStyle17;
-            spreadSkin2.FocusRenderer = defaultFocusIndicatorRenderer2;
-            spreadSkin2.Name = "AA";
-            spreadSkin2.RowHeaderDefaultStyle = namedStyle16;
-            spreadSkin2.ScrollBarRenderer = defaultScrollBarRenderer5;
-            spreadSkin2.SelectionRenderer = new FarPoint.Win.Spread.DefaultSelectionRenderer();
-            statusBarSkin2.BackColor = System.Drawing.SystemColors.Control;
-            statusBarSkin2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            statusBarSkin2.ForeColor = System.Drawing.SystemColors.ControlText;
-            statusBarSkin2.Name = "Classic";
-            statusBarSkin2.ZoomButtonHoverColor = System.Drawing.SystemColors.ButtonHighlight;
-            statusBarSkin2.ZoomSliderColor = System.Drawing.SystemColors.ControlDarkDark;
-            statusBarSkin2.ZoomSliderHoverColor = System.Drawing.SystemColors.ControlDark;
-            statusBarSkin2.ZoomSliderTrackColor = System.Drawing.SystemColors.ControlDarkDark;
-            spreadSkin2.StatusBarSkin = statusBarSkin2;
-            this.spdOrderList.Skin = spreadSkin2;
+            spreadSkin3.ColumnFooterDefaultStyle = namedStyle24;
+            spreadSkin3.ColumnHeaderDefaultStyle = namedStyle22;
+            spreadSkin3.CornerDefaultStyle = namedStyle26;
+            spreadSkin3.DefaultStyle = namedStyle27;
+            spreadSkin3.FilterBarDefaultStyle = namedStyle23;
+            spreadSkin3.FilterBarHeaderDefaultStyle = namedStyle26;
+            spreadSkin3.FocusRenderer = defaultFocusIndicatorRenderer3;
+            spreadSkin3.Name = "AA";
+            spreadSkin3.RowHeaderDefaultStyle = namedStyle25;
+            spreadSkin3.ScrollBarRenderer = defaultScrollBarRenderer8;
+            spreadSkin3.SelectionRenderer = new FarPoint.Win.Spread.DefaultSelectionRenderer();
+            statusBarSkin3.BackColor = System.Drawing.SystemColors.Control;
+            statusBarSkin3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            statusBarSkin3.ForeColor = System.Drawing.SystemColors.ControlText;
+            statusBarSkin3.Name = "Classic";
+            statusBarSkin3.ZoomButtonHoverColor = System.Drawing.SystemColors.ButtonHighlight;
+            statusBarSkin3.ZoomSliderColor = System.Drawing.SystemColors.ControlDarkDark;
+            statusBarSkin3.ZoomSliderHoverColor = System.Drawing.SystemColors.ControlDark;
+            statusBarSkin3.ZoomSliderTrackColor = System.Drawing.SystemColors.ControlDarkDark;
+            spreadSkin3.StatusBarSkin = statusBarSkin3;
+            this.spdOrderList.Skin = spreadSkin3;
             this.spdOrderList.TabIndex = 250;
             this.spdOrderList.TabStop = false;
             this.spdOrderList.VerticalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
             this.spdOrderList.VerticalScrollBar.Name = "";
-            this.spdOrderList.VerticalScrollBar.Renderer = defaultScrollBarRenderer6;
+            this.spdOrderList.VerticalScrollBar.Renderer = defaultScrollBarRenderer9;
             this.spdOrderList.VerticalScrollBarPolicy = FarPoint.Win.Spread.ScrollBarPolicy.AsNeeded;
             this.spdOrderList.EditModeStarting += new FarPoint.Win.Spread.EditModeStartingEventHandler(this.spdOrderList_EditModeStarting);
+            this.spdOrderList.SelectionChanged += new FarPoint.Win.Spread.SelectionChangedEventHandler(this.spdOrderList_SelectionChanged);
             this.spdOrderList.ColumnDragMove += new FarPoint.Win.Spread.DragMoveEventHandler(this.spdOrderList_ColumnDragMove);
             this.spdOrderList.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.spdOrderList_CellClick);
             this.spdOrderList.CellDoubleClick += new FarPoint.Win.Spread.CellClickEventHandler(this.spdOrderList_CellDoubleClick);
@@ -2678,29 +2691,29 @@
             this.spdOrderList_Sheet1.RowCount = 1;
             this.spdOrderList_Sheet1.ActiveSkin = new FarPoint.Win.Spread.SheetSkin("CustomSkin1", System.Drawing.SystemColors.Control, System.Drawing.Color.Empty, System.Drawing.Color.Empty, System.Drawing.Color.LightGray, FarPoint.Win.Spread.GridLines.Both, System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155))))), System.Drawing.Color.Empty, System.Drawing.Color.White, System.Drawing.Color.Empty, System.Drawing.Color.Empty, System.Drawing.Color.Empty, System.Drawing.Color.Empty, System.Drawing.Color.Empty, false, false, false, false, false, true, false, true, "ColumnHeaderDefaultEnhanced", "ColumnHeaderDefaultEnhanced", "RowHeaderDefaultEnhanced", "DataAreaDefault", "CornerDefaultEnhanced");
             ((FarPoint.Win.Spread.CellFooter)(this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 8))).AggregationType = FarPoint.Win.Spread.Model.AggregationType.Sum;
-            numberCellType1.DecimalPlaces = 5;
-            this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 8).CellType = numberCellType1;
+            numberCellType13.DecimalPlaces = 5;
+            this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 8).CellType = numberCellType13;
             this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 8).Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 8).Formula = "SUBTOTAL(9,Sheet1!C:C)";
             this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 8).Value = 0D;
             ((FarPoint.Win.Spread.CellFooter)(this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 9))).AggregationType = FarPoint.Win.Spread.Model.AggregationType.Sum;
-            numberCellType2.DecimalPlaces = 5;
-            numberCellType2.ShowSeparator = true;
-            this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 9).CellType = numberCellType2;
+            numberCellType14.DecimalPlaces = 5;
+            numberCellType14.ShowSeparator = true;
+            this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 9).CellType = numberCellType14;
             this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 9).Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 9).Formula = "SUBTOTAL(9,Sheet1!C:C)";
             this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 9).Value = 0D;
             ((FarPoint.Win.Spread.CellFooter)(this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 10))).AggregationType = FarPoint.Win.Spread.Model.AggregationType.Sum;
-            numberCellType3.DecimalPlaces = 5;
-            numberCellType3.ShowSeparator = true;
-            this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 10).CellType = numberCellType3;
+            numberCellType15.DecimalPlaces = 5;
+            numberCellType15.ShowSeparator = true;
+            this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 10).CellType = numberCellType15;
             this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 10).Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 10).Formula = "SUBTOTAL(9,Sheet1!C:C)";
             this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 10).Value = 0D;
             ((FarPoint.Win.Spread.CellFooter)(this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 11))).AggregationType = FarPoint.Win.Spread.Model.AggregationType.Sum;
-            numberCellType4.DecimalPlaces = 5;
-            numberCellType4.ShowSeparator = true;
-            this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 11).CellType = numberCellType4;
+            numberCellType16.DecimalPlaces = 5;
+            numberCellType16.ShowSeparator = true;
+            this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 11).CellType = numberCellType16;
             this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 11).Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 11).Formula = "SUBTOTAL(9,Sheet1!C:C)";
             this.spdOrderList_Sheet1.ColumnFooter.Cells.Get(0, 11).Value = 0D;
@@ -2717,7 +2730,7 @@
             this.spdOrderList_Sheet1.ColumnFooterSheetCornerStyle.Parent = "CornerDefaultEnhanced";
             this.spdOrderList_Sheet1.ColumnFooterSheetCornerStyle.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.General;
             this.spdOrderList_Sheet1.ColumnFooterSheetCornerStyle.VisualStyles = FarPoint.Win.VisualStyles.Auto;
-            this.spdOrderList_Sheet1.ColumnHeader.Cells.Get(0, 0).CellType = checkBoxCellType3;
+            this.spdOrderList_Sheet1.ColumnHeader.Cells.Get(0, 0).CellType = checkBoxCellType5;
             this.spdOrderList_Sheet1.ColumnHeader.Cells.Get(0, 1).Value = "Pack Order ID";
             this.spdOrderList_Sheet1.ColumnHeader.Cells.Get(0, 2).Value = "Line No";
             this.spdOrderList_Sheet1.ColumnHeader.Cells.Get(0, 3).Value = "ERP Pack Order ID";
@@ -2776,7 +2789,7 @@
             this.spdOrderList_Sheet1.ColumnHeader.DefaultStyle.VisualStyles = FarPoint.Win.VisualStyles.Off;
             this.spdOrderList_Sheet1.ColumnHeader.Rows.Default.VisualStyles = FarPoint.Win.VisualStyles.Off;
             this.spdOrderList_Sheet1.ColumnHeader.Rows.Get(0).Height = 25F;
-            this.spdOrderList_Sheet1.Columns.Get(0).CellType = checkBoxCellType4;
+            this.spdOrderList_Sheet1.Columns.Get(0).CellType = checkBoxCellType6;
             this.spdOrderList_Sheet1.Columns.Get(0).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
             this.spdOrderList_Sheet1.Columns.Get(0).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
             this.spdOrderList_Sheet1.Columns.Get(0).Width = 30F;
@@ -2803,8 +2816,8 @@
             this.spdOrderList_Sheet1.Columns.Get(3).Width = 203F;
             this.spdOrderList_Sheet1.Columns.Get(4).AllowAutoFilter = true;
             this.spdOrderList_Sheet1.Columns.Get(4).AllowAutoSort = true;
-            generalCellType7.ReadOnly = true;
-            this.spdOrderList_Sheet1.Columns.Get(4).CellType = generalCellType7;
+            generalCellType11.ReadOnly = true;
+            this.spdOrderList_Sheet1.Columns.Get(4).CellType = generalCellType11;
             this.spdOrderList_Sheet1.Columns.Get(4).Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spdOrderList_Sheet1.Columns.Get(4).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Left;
             this.spdOrderList_Sheet1.Columns.Get(4).Label = "Material ID";
@@ -2834,9 +2847,9 @@
             this.spdOrderList_Sheet1.Columns.Get(7).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
             this.spdOrderList_Sheet1.Columns.Get(7).Width = 141F;
             this.spdOrderList_Sheet1.Columns.Get(8).AllowAutoSort = true;
-            numberCellType5.DecimalPlaces = 5;
-            numberCellType5.ShowSeparator = true;
-            this.spdOrderList_Sheet1.Columns.Get(8).CellType = numberCellType5;
+            numberCellType17.DecimalPlaces = 5;
+            numberCellType17.ShowSeparator = true;
+            this.spdOrderList_Sheet1.Columns.Get(8).CellType = numberCellType17;
             this.spdOrderList_Sheet1.Columns.Get(8).Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spdOrderList_Sheet1.Columns.Get(8).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Right;
             this.spdOrderList_Sheet1.Columns.Get(8).Label = "Qty";
@@ -2844,9 +2857,9 @@
             this.spdOrderList_Sheet1.Columns.Get(8).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
             this.spdOrderList_Sheet1.Columns.Get(8).Width = 141F;
             this.spdOrderList_Sheet1.Columns.Get(9).AllowAutoSort = true;
-            numberCellType6.DecimalPlaces = 5;
-            numberCellType6.ShowSeparator = true;
-            this.spdOrderList_Sheet1.Columns.Get(9).CellType = numberCellType6;
+            numberCellType18.DecimalPlaces = 5;
+            numberCellType18.ShowSeparator = true;
+            this.spdOrderList_Sheet1.Columns.Get(9).CellType = numberCellType18;
             this.spdOrderList_Sheet1.Columns.Get(9).Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spdOrderList_Sheet1.Columns.Get(9).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Right;
             this.spdOrderList_Sheet1.Columns.Get(9).Label = "Reg Qty";
@@ -2854,9 +2867,9 @@
             this.spdOrderList_Sheet1.Columns.Get(9).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
             this.spdOrderList_Sheet1.Columns.Get(9).Width = 141F;
             this.spdOrderList_Sheet1.Columns.Get(10).AllowAutoSort = true;
-            numberCellType7.DecimalPlaces = 5;
-            numberCellType7.ShowSeparator = true;
-            this.spdOrderList_Sheet1.Columns.Get(10).CellType = numberCellType7;
+            numberCellType19.DecimalPlaces = 5;
+            numberCellType19.ShowSeparator = true;
+            this.spdOrderList_Sheet1.Columns.Get(10).CellType = numberCellType19;
             this.spdOrderList_Sheet1.Columns.Get(10).Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spdOrderList_Sheet1.Columns.Get(10).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Right;
             this.spdOrderList_Sheet1.Columns.Get(10).Label = "Packed Qty";
@@ -2864,9 +2877,9 @@
             this.spdOrderList_Sheet1.Columns.Get(10).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
             this.spdOrderList_Sheet1.Columns.Get(10).Width = 141F;
             this.spdOrderList_Sheet1.Columns.Get(11).AllowAutoSort = true;
-            numberCellType8.DecimalPlaces = 5;
-            numberCellType8.ShowSeparator = true;
-            this.spdOrderList_Sheet1.Columns.Get(11).CellType = numberCellType8;
+            numberCellType20.DecimalPlaces = 5;
+            numberCellType20.ShowSeparator = true;
+            this.spdOrderList_Sheet1.Columns.Get(11).CellType = numberCellType20;
             this.spdOrderList_Sheet1.Columns.Get(11).Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spdOrderList_Sheet1.Columns.Get(11).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Right;
             this.spdOrderList_Sheet1.Columns.Get(11).Label = "Remain Qty";
@@ -2874,9 +2887,9 @@
             this.spdOrderList_Sheet1.Columns.Get(11).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
             this.spdOrderList_Sheet1.Columns.Get(11).Width = 141F;
             this.spdOrderList_Sheet1.Columns.Get(12).AllowAutoSort = true;
-            numberCellType9.DecimalPlaces = 5;
-            numberCellType9.ShowSeparator = true;
-            this.spdOrderList_Sheet1.Columns.Get(12).CellType = numberCellType9;
+            numberCellType21.DecimalPlaces = 5;
+            numberCellType21.ShowSeparator = true;
+            this.spdOrderList_Sheet1.Columns.Get(12).CellType = numberCellType21;
             this.spdOrderList_Sheet1.Columns.Get(12).Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spdOrderList_Sheet1.Columns.Get(12).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Right;
             this.spdOrderList_Sheet1.Columns.Get(12).Label = "Stock Qty";
@@ -2891,8 +2904,8 @@
             this.spdOrderList_Sheet1.Columns.Get(13).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
             this.spdOrderList_Sheet1.Columns.Get(13).Width = 141F;
             this.spdOrderList_Sheet1.Columns.Get(14).AllowAutoSort = true;
-            numberCellType10.DecimalPlaces = 5;
-            this.spdOrderList_Sheet1.Columns.Get(14).CellType = numberCellType10;
+            numberCellType22.DecimalPlaces = 5;
+            this.spdOrderList_Sheet1.Columns.Get(14).CellType = numberCellType22;
             this.spdOrderList_Sheet1.Columns.Get(14).Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.spdOrderList_Sheet1.Columns.Get(14).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Right;
             this.spdOrderList_Sheet1.Columns.Get(14).Label = "Conv Unit Qty";
@@ -2900,8 +2913,8 @@
             this.spdOrderList_Sheet1.Columns.Get(14).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
             this.spdOrderList_Sheet1.Columns.Get(14).Width = 141F;
             this.spdOrderList_Sheet1.Columns.Get(15).AllowAutoSort = true;
-            numberCellType11.DecimalPlaces = 5;
-            this.spdOrderList_Sheet1.Columns.Get(15).CellType = numberCellType11;
+            numberCellType23.DecimalPlaces = 5;
+            this.spdOrderList_Sheet1.Columns.Get(15).CellType = numberCellType23;
             this.spdOrderList_Sheet1.Columns.Get(15).Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.spdOrderList_Sheet1.Columns.Get(15).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Right;
             this.spdOrderList_Sheet1.Columns.Get(15).Label = "Conv Stock Qty";
@@ -2970,8 +2983,8 @@
             this.spdOrderList_Sheet1.Columns.Get(23).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
             this.spdOrderList_Sheet1.Columns.Get(23).Width = 170F;
             this.spdOrderList_Sheet1.Columns.Get(24).AllowAutoSort = true;
-            numberCellType12.DecimalPlaces = 5;
-            this.spdOrderList_Sheet1.Columns.Get(24).CellType = numberCellType12;
+            numberCellType24.DecimalPlaces = 5;
+            this.spdOrderList_Sheet1.Columns.Get(24).CellType = numberCellType24;
             this.spdOrderList_Sheet1.Columns.Get(24).Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.spdOrderList_Sheet1.Columns.Get(24).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Right;
             this.spdOrderList_Sheet1.Columns.Get(24).Label = "CTM Stock Qty";
@@ -3021,23 +3034,23 @@
             this.spdOrderList_Sheet1.Columns.Get(30).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
             this.spdOrderList_Sheet1.Columns.Get(30).Width = 192F;
             this.spdOrderList_Sheet1.Columns.Get(31).AllowAutoSort = true;
-            dateTimeCellType1.Calendar = new System.Globalization.GregorianCalendar(System.Globalization.GregorianCalendarTypes.Localized);
-            dateTimeCellType1.CalendarSurroundingDaysColor = System.Drawing.SystemColors.GrayText;
-            dateTimeCellType1.DropDownButton = true;
-            dateTimeCellType1.MaximumTime = System.TimeSpan.Parse("23:59:59.9999999");
-            dateTimeCellType1.TimeDefault = new System.DateTime(2026, 7, 15, 9, 45, 40, 0);
-            this.spdOrderList_Sheet1.Columns.Get(31).CellType = dateTimeCellType1;
+            dateTimeCellType3.Calendar = new System.Globalization.GregorianCalendar(System.Globalization.GregorianCalendarTypes.Localized);
+            dateTimeCellType3.CalendarSurroundingDaysColor = System.Drawing.SystemColors.GrayText;
+            dateTimeCellType3.DropDownButton = true;
+            dateTimeCellType3.MaximumTime = System.TimeSpan.Parse("23:59:59.9999999");
+            dateTimeCellType3.TimeDefault = new System.DateTime(2026, 8, 25, 9, 45, 40, 0);
+            this.spdOrderList_Sheet1.Columns.Get(31).CellType = dateTimeCellType3;
             this.spdOrderList_Sheet1.Columns.Get(31).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
             this.spdOrderList_Sheet1.Columns.Get(31).Label = "Bare Input Date";
             this.spdOrderList_Sheet1.Columns.Get(31).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
             this.spdOrderList_Sheet1.Columns.Get(31).Width = 145F;
             this.spdOrderList_Sheet1.Columns.Get(32).AllowAutoSort = true;
-            dateTimeCellType2.Calendar = new System.Globalization.GregorianCalendar(System.Globalization.GregorianCalendarTypes.Localized);
-            dateTimeCellType2.CalendarSurroundingDaysColor = System.Drawing.SystemColors.GrayText;
-            dateTimeCellType2.DropDownButton = true;
-            dateTimeCellType2.MaximumTime = System.TimeSpan.Parse("23:59:59.9999999");
-            dateTimeCellType2.TimeDefault = new System.DateTime(2026, 7, 15, 14, 40, 37, 0);
-            this.spdOrderList_Sheet1.Columns.Get(32).CellType = dateTimeCellType2;
+            dateTimeCellType4.Calendar = new System.Globalization.GregorianCalendar(System.Globalization.GregorianCalendarTypes.Localized);
+            dateTimeCellType4.CalendarSurroundingDaysColor = System.Drawing.SystemColors.GrayText;
+            dateTimeCellType4.DropDownButton = true;
+            dateTimeCellType4.MaximumTime = System.TimeSpan.Parse("23:59:59.9999999");
+            dateTimeCellType4.TimeDefault = new System.DateTime(2026, 8, 25, 14, 40, 37, 0);
+            this.spdOrderList_Sheet1.Columns.Get(32).CellType = dateTimeCellType4;
             this.spdOrderList_Sheet1.Columns.Get(32).Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.spdOrderList_Sheet1.Columns.Get(32).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
             this.spdOrderList_Sheet1.Columns.Get(32).Label = "Expect Ship Date";
@@ -3100,9 +3113,9 @@
             this.spdOrderList_Sheet1.Columns.Get(45).Label = "Shipped History";
             this.spdOrderList_Sheet1.Columns.Get(45).Locked = true;
             this.spdOrderList_Sheet1.Columns.Get(45).Width = 600F;
-            buttonCellType1.ButtonColor2 = System.Drawing.SystemColors.ButtonFace;
-            buttonCellType1.Text = "...";
-            this.spdOrderList_Sheet1.Columns.Get(46).CellType = buttonCellType1;
+            buttonCellType2.ButtonColor2 = System.Drawing.SystemColors.ButtonFace;
+            buttonCellType2.Text = "...";
+            this.spdOrderList_Sheet1.Columns.Get(46).CellType = buttonCellType2;
             this.spdOrderList_Sheet1.Columns.Get(46).Font = new System.Drawing.Font("굴림", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.spdOrderList_Sheet1.Columns.Get(46).Label = "History View";
             this.spdOrderList_Sheet1.Columns.Get(46).Width = 39F;
@@ -3297,135 +3310,135 @@
             this.spdItemList.BackColor = System.Drawing.Color.Transparent;
             this.spdItemList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.spdItemList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.spdItemList.FocusRenderer = defaultFocusIndicatorRenderer1;
+            this.spdItemList.FocusRenderer = defaultFocusIndicatorRenderer2;
             this.spdItemList.HorizontalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
             this.spdItemList.HorizontalScrollBar.Name = "";
-            this.spdItemList.HorizontalScrollBar.Renderer = defaultScrollBarRenderer1;
+            this.spdItemList.HorizontalScrollBar.Renderer = defaultScrollBarRenderer4;
             this.spdItemList.HorizontalScrollBarPolicy = FarPoint.Win.Spread.ScrollBarPolicy.AsNeeded;
             this.spdItemList.Location = new System.Drawing.Point(1, 19);
             this.spdItemList.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.spdItemList.Name = "spdItemList";
-            namedStyle1.BackColor = System.Drawing.SystemColors.Control;
-            filterBarCellType1.FormatString = "";
-            namedStyle1.CellType = filterBarCellType1;
-            namedStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            namedStyle1.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
-            namedStyle1.Locked = false;
-            namedStyle1.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle1.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
-            namedStyle1.Renderer = filterBarCellType1;
-            namedStyle1.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
-            namedStyle1.VisualStyles = FarPoint.Win.VisualStyles.Auto;
-            namedStyle2.BackColor = System.Drawing.Color.Aqua;
-            namedStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            namedStyle2.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
-            namedStyle2.Locked = false;
-            namedStyle2.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle2.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
-            namedStyle2.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
-            namedStyle2.VisualStyles = FarPoint.Win.VisualStyles.Auto;
-            namedStyle3.BackColor = System.Drawing.SystemColors.Window;
-            namedStyle3.CellType = generalCellType1;
-            namedStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            namedStyle3.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.General;
-            namedStyle3.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle3.Renderer = generalCellType1;
-            namedStyle3.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.General;
-            namedStyle3.VisualStyles = FarPoint.Win.VisualStyles.Auto;
-            namedStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
-            namedStyle4.Border = bevelBorder1;
-            namedStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            namedStyle4.ForeColor = System.Drawing.Color.White;
-            namedStyle4.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
-            namedStyle4.Locked = false;
-            namedStyle4.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle4.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
-            namedStyle4.Renderer = generalCellType2;
-            namedStyle4.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
-            namedStyle4.VisualStyles = FarPoint.Win.VisualStyles.Auto;
-            namedStyle5.BackColor = System.Drawing.SystemColors.Control;
-            filterBarCellType2.FormatString = "";
-            namedStyle5.CellType = filterBarCellType2;
-            namedStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            namedStyle5.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
-            namedStyle5.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle5.Renderer = filterBarCellType2;
-            namedStyle5.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
-            namedStyle5.VisualStyles = FarPoint.Win.VisualStyles.Auto;
-            namedStyle6.BackColor = System.Drawing.SystemColors.Control;
-            namedStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            namedStyle6.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
-            namedStyle6.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle6.Renderer = columnHeaderRenderer30;
-            namedStyle6.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
-            namedStyle6.VisualStyles = FarPoint.Win.VisualStyles.Auto;
-            namedStyle7.BackColor = System.Drawing.SystemColors.Control;
-            namedStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            namedStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            namedStyle7.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
-            namedStyle7.Locked = false;
-            namedStyle7.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle7.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
-            namedStyle7.Renderer = rowHeaderRenderer42;
-            namedStyle7.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
-            namedStyle7.VisualStyles = FarPoint.Win.VisualStyles.Auto;
-            namedStyle8.BackColor = System.Drawing.SystemColors.Control;
-            namedStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            namedStyle8.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
-            namedStyle8.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle8.Renderer = rowHeaderRenderer41;
-            namedStyle8.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
-            namedStyle8.VisualStyles = FarPoint.Win.VisualStyles.Auto;
-            namedStyle9.BackColor = System.Drawing.Color.White;
-            namedStyle9.CellType = generalCellType3;
-            namedStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            namedStyle9.ForeColor = System.Drawing.Color.Black;
-            namedStyle9.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.General;
-            namedStyle9.Locked = false;
-            namedStyle9.NoteIndicatorColor = System.Drawing.Color.Red;
-            namedStyle9.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
-            namedStyle9.Renderer = generalCellType3;
-            namedStyle9.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.General;
-            namedStyle9.VisualStyles = FarPoint.Win.VisualStyles.Auto;
+            namedStyle10.BackColor = System.Drawing.SystemColors.Control;
+            filterBarCellType3.FormatString = "";
+            namedStyle10.CellType = filterBarCellType3;
+            namedStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            namedStyle10.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            namedStyle10.Locked = false;
+            namedStyle10.NoteIndicatorColor = System.Drawing.Color.Red;
+            namedStyle10.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
+            namedStyle10.Renderer = filterBarCellType3;
+            namedStyle10.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            namedStyle10.VisualStyles = FarPoint.Win.VisualStyles.Auto;
+            namedStyle11.BackColor = System.Drawing.Color.Aqua;
+            namedStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            namedStyle11.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            namedStyle11.Locked = false;
+            namedStyle11.NoteIndicatorColor = System.Drawing.Color.Red;
+            namedStyle11.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
+            namedStyle11.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            namedStyle11.VisualStyles = FarPoint.Win.VisualStyles.Auto;
+            namedStyle12.BackColor = System.Drawing.SystemColors.Window;
+            namedStyle12.CellType = generalCellType4;
+            namedStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            namedStyle12.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.General;
+            namedStyle12.NoteIndicatorColor = System.Drawing.Color.Red;
+            namedStyle12.Renderer = generalCellType4;
+            namedStyle12.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.General;
+            namedStyle12.VisualStyles = FarPoint.Win.VisualStyles.Auto;
+            namedStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
+            namedStyle13.Border = bevelBorder3;
+            namedStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            namedStyle13.ForeColor = System.Drawing.Color.White;
+            namedStyle13.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            namedStyle13.Locked = false;
+            namedStyle13.NoteIndicatorColor = System.Drawing.Color.Red;
+            namedStyle13.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
+            namedStyle13.Renderer = generalCellType5;
+            namedStyle13.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            namedStyle13.VisualStyles = FarPoint.Win.VisualStyles.Auto;
+            namedStyle14.BackColor = System.Drawing.SystemColors.Control;
+            filterBarCellType4.FormatString = "";
+            namedStyle14.CellType = filterBarCellType4;
+            namedStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            namedStyle14.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            namedStyle14.NoteIndicatorColor = System.Drawing.Color.Red;
+            namedStyle14.Renderer = filterBarCellType4;
+            namedStyle14.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            namedStyle14.VisualStyles = FarPoint.Win.VisualStyles.Auto;
+            namedStyle15.BackColor = System.Drawing.SystemColors.Control;
+            namedStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
+            namedStyle15.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            namedStyle15.NoteIndicatorColor = System.Drawing.Color.Red;
+            namedStyle15.Renderer = columnHeaderRenderer30;
+            namedStyle15.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            namedStyle15.VisualStyles = FarPoint.Win.VisualStyles.Auto;
+            namedStyle16.BackColor = System.Drawing.SystemColors.Control;
+            namedStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            namedStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
+            namedStyle16.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            namedStyle16.Locked = false;
+            namedStyle16.NoteIndicatorColor = System.Drawing.Color.Red;
+            namedStyle16.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
+            namedStyle16.Renderer = rowHeaderRenderer42;
+            namedStyle16.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            namedStyle16.VisualStyles = FarPoint.Win.VisualStyles.Auto;
+            namedStyle17.BackColor = System.Drawing.SystemColors.Control;
+            namedStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
+            namedStyle17.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
+            namedStyle17.NoteIndicatorColor = System.Drawing.Color.Red;
+            namedStyle17.Renderer = rowHeaderRenderer41;
+            namedStyle17.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
+            namedStyle17.VisualStyles = FarPoint.Win.VisualStyles.Auto;
+            namedStyle18.BackColor = System.Drawing.Color.White;
+            namedStyle18.CellType = generalCellType6;
+            namedStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            namedStyle18.ForeColor = System.Drawing.Color.Black;
+            namedStyle18.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.General;
+            namedStyle18.Locked = false;
+            namedStyle18.NoteIndicatorColor = System.Drawing.Color.Red;
+            namedStyle18.NoteStyle = FarPoint.Win.Spread.NoteStyle.PopupNote;
+            namedStyle18.Renderer = generalCellType6;
+            namedStyle18.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.General;
+            namedStyle18.VisualStyles = FarPoint.Win.VisualStyles.Auto;
             this.spdItemList.NamedStyles.AddRange(new FarPoint.Win.Spread.NamedStyle[] {
-            namedStyle1,
-            namedStyle2,
-            namedStyle3,
-            namedStyle4,
-            namedStyle5,
-            namedStyle6,
-            namedStyle7,
-            namedStyle8,
-            namedStyle9});
+            namedStyle10,
+            namedStyle11,
+            namedStyle12,
+            namedStyle13,
+            namedStyle14,
+            namedStyle15,
+            namedStyle16,
+            namedStyle17,
+            namedStyle18});
             this.spdItemList.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.spdItemList_Sheet1});
             this.spdItemList.Size = new System.Drawing.Size(293, 607);
-            spreadSkin1.ColumnFooterDefaultStyle = namedStyle6;
-            spreadSkin1.ColumnHeaderDefaultStyle = namedStyle4;
-            spreadSkin1.CornerDefaultStyle = namedStyle8;
-            spreadSkin1.DefaultStyle = namedStyle9;
-            spreadSkin1.FilterBarDefaultStyle = namedStyle5;
-            spreadSkin1.FilterBarHeaderDefaultStyle = namedStyle8;
-            spreadSkin1.FocusRenderer = defaultFocusIndicatorRenderer1;
-            spreadSkin1.Name = "사용1";
-            spreadSkin1.RowHeaderDefaultStyle = namedStyle7;
-            spreadSkin1.ScrollBarRenderer = defaultScrollBarRenderer2;
-            spreadSkin1.SelectionRenderer = new FarPoint.Win.Spread.DefaultSelectionRenderer();
-            statusBarSkin1.BackColor = System.Drawing.SystemColors.Control;
-            statusBarSkin1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            statusBarSkin1.ForeColor = System.Drawing.SystemColors.ControlText;
-            statusBarSkin1.Name = "Classic";
-            statusBarSkin1.ZoomButtonHoverColor = System.Drawing.SystemColors.ButtonHighlight;
-            statusBarSkin1.ZoomSliderColor = System.Drawing.SystemColors.ControlDarkDark;
-            statusBarSkin1.ZoomSliderHoverColor = System.Drawing.SystemColors.ControlDark;
-            statusBarSkin1.ZoomSliderTrackColor = System.Drawing.SystemColors.ControlDarkDark;
-            spreadSkin1.StatusBarSkin = statusBarSkin1;
-            this.spdItemList.Skin = spreadSkin1;
+            spreadSkin2.ColumnFooterDefaultStyle = namedStyle15;
+            spreadSkin2.ColumnHeaderDefaultStyle = namedStyle13;
+            spreadSkin2.CornerDefaultStyle = namedStyle17;
+            spreadSkin2.DefaultStyle = namedStyle18;
+            spreadSkin2.FilterBarDefaultStyle = namedStyle14;
+            spreadSkin2.FilterBarHeaderDefaultStyle = namedStyle17;
+            spreadSkin2.FocusRenderer = defaultFocusIndicatorRenderer2;
+            spreadSkin2.Name = "사용1";
+            spreadSkin2.RowHeaderDefaultStyle = namedStyle16;
+            spreadSkin2.ScrollBarRenderer = defaultScrollBarRenderer5;
+            spreadSkin2.SelectionRenderer = new FarPoint.Win.Spread.DefaultSelectionRenderer();
+            statusBarSkin2.BackColor = System.Drawing.SystemColors.Control;
+            statusBarSkin2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            statusBarSkin2.ForeColor = System.Drawing.SystemColors.ControlText;
+            statusBarSkin2.Name = "Classic";
+            statusBarSkin2.ZoomButtonHoverColor = System.Drawing.SystemColors.ButtonHighlight;
+            statusBarSkin2.ZoomSliderColor = System.Drawing.SystemColors.ControlDarkDark;
+            statusBarSkin2.ZoomSliderHoverColor = System.Drawing.SystemColors.ControlDark;
+            statusBarSkin2.ZoomSliderTrackColor = System.Drawing.SystemColors.ControlDarkDark;
+            spreadSkin2.StatusBarSkin = statusBarSkin2;
+            this.spdItemList.Skin = spreadSkin2;
             this.spdItemList.TabIndex = 251;
             this.spdItemList.TabStop = false;
             this.spdItemList.VerticalScrollBar.Buttons = new FarPoint.Win.Spread.FpScrollBarButtonCollection("BackwardLineButton,ThumbTrack,ForwardLineButton");
             this.spdItemList.VerticalScrollBar.Name = "";
-            this.spdItemList.VerticalScrollBar.Renderer = defaultScrollBarRenderer3;
+            this.spdItemList.VerticalScrollBar.Renderer = defaultScrollBarRenderer6;
             this.spdItemList.VerticalScrollBarPolicy = FarPoint.Win.Spread.ScrollBarPolicy.AsNeeded;
             this.spdItemList.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.spdItemList_CellClick);
             // 
@@ -3443,16 +3456,16 @@
             this.spdItemList_Sheet1.ColumnFooter.DefaultStyle.NoteIndicatorColor = System.Drawing.Color.Red;
             this.spdItemList_Sheet1.ColumnFooter.DefaultStyle.Parent = "HeaderDefault";
             this.spdItemList_Sheet1.ColumnFooter.DefaultStyle.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.General;
-            this.spdItemList_Sheet1.ColumnHeader.Cells.Get(0, 0).CellType = checkBoxCellType1;
+            this.spdItemList_Sheet1.ColumnHeader.Cells.Get(0, 0).CellType = checkBoxCellType7;
             this.spdItemList_Sheet1.ColumnHeader.Cells.Get(0, 1).Value = "Mat Id";
             this.spdItemList_Sheet1.ColumnHeader.Cells.Get(0, 2).Value = "Mat Name";
-            this.spdItemList_Sheet1.ColumnHeader.DefaultStyle.Border = bevelBorder2;
+            this.spdItemList_Sheet1.ColumnHeader.DefaultStyle.Border = bevelBorder5;
             this.spdItemList_Sheet1.ColumnHeader.DefaultStyle.HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
             this.spdItemList_Sheet1.ColumnHeader.DefaultStyle.NoteIndicatorColor = System.Drawing.Color.Red;
             this.spdItemList_Sheet1.ColumnHeader.DefaultStyle.Parent = "Style1";
             this.spdItemList_Sheet1.ColumnHeader.DefaultStyle.VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
             this.spdItemList_Sheet1.ColumnHeader.Rows.Get(0).Height = 25F;
-            this.spdItemList_Sheet1.Columns.Get(0).CellType = checkBoxCellType2;
+            this.spdItemList_Sheet1.Columns.Get(0).CellType = checkBoxCellType8;
             this.spdItemList_Sheet1.Columns.Get(0).HorizontalAlignment = FarPoint.Win.Spread.CellHorizontalAlignment.Center;
             this.spdItemList_Sheet1.Columns.Get(0).VerticalAlignment = FarPoint.Win.Spread.CellVerticalAlignment.Center;
             this.spdItemList_Sheet1.Columns.Get(0).Width = 54F;
@@ -3745,6 +3758,66 @@
             this.label6.Text = "Search Add Char";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // lblSum
+            // 
+            this.lblSum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSum.AutoSize = true;
+            this.lblSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(232)))), ((int)(((byte)(244)))));
+            this.lblSum.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSum.ForeColor = System.Drawing.Color.Black;
+            this.lblSum.Location = new System.Drawing.Point(943, 17);
+            this.lblSum.Name = "lblSum";
+            this.lblSum.Size = new System.Drawing.Size(15, 16);
+            this.lblSum.TabIndex = 275;
+            this.lblSum.Text = "0";
+            this.lblSum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(232)))), ((int)(((byte)(244)))));
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(886, 17);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 16);
+            this.label7.TabIndex = 276;
+            this.label7.Text = "합계 :";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(232)))), ((int)(((byte)(244)))));
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(776, 17);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 16);
+            this.label8.TabIndex = 277;
+            this.label8.Text = "개수 :";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblCount
+            // 
+            this.lblCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCount.AutoSize = true;
+            this.lblCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(232)))), ((int)(((byte)(244)))));
+            this.lblCount.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCount.ForeColor = System.Drawing.Color.Black;
+            this.lblCount.Location = new System.Drawing.Point(819, 17);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(15, 16);
+            this.lblCount.TabIndex = 278;
+            this.lblCount.Text = "0";
+            this.lblCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // frmViewPackingOrderList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3758,6 +3831,7 @@
             this.pnlMID.ResumeLayout(false);
             this.pnlMID.PerformLayout();
             this.pnlBottom.ResumeLayout(false);
+            this.pnlBottom.PerformLayout();
             this.pnlCenter.ResumeLayout(false);
             this.pnlTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cdvDept)).EndInit();
@@ -3828,5 +3902,9 @@
         private System.Windows.Forms.TextBox txtExcludeWord;
         private System.Windows.Forms.TextBox txtMatDesc2;
         public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label lblSum;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.Label lblCount;
     }
 }

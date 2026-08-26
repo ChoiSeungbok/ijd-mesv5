@@ -4621,6 +4621,53 @@ namespace CUS_SHP
                 dtpDate.Enabled = true;
             }
         }
+
+        private void spdOrderList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // 현재 활성화된 시트 가져오기
+            FarPoint.Win.Spread.SheetView sheet = spdOrderList.ActiveSheet;
+
+            // 선택된 영역(Range) 정보 가져오기
+            FarPoint.Win.Spread.Model.CellRange range = sheet.GetSelection(0);
+
+            if (range == null) return;
+
+            int count = 0;
+            double sum = 0;
+
+            // 선택된 행과 열의 범위를 순회
+            for (int r = range.Row; r < range.Row + range.RowCount; r++)
+            {
+
+                for (int c = range.Column; c < range.Column + range.ColumnCount; c++)
+                {
+                    var cellValue = sheet.GetValue(r, c);
+
+                    if (range.Column == (int)PACK_ORDER.QTY || 
+                        range.Column == (int)PACK_ORDER.REG_QTY || 
+                        range.Column == (int)PACK_ORDER.PACKED_QTY ||
+                        range.Column == (int)PACK_ORDER.REMAIN_QTY ||
+                        range.Column == (int)PACK_ORDER.STOCK_QTY ||
+                        range.Column == (int)PACK_ORDER.CONV_UNIT_QTY ||
+                        range.Column == (int)PACK_ORDER.CONV_STOCK_QTY ||
+                        range.Column == (int)PACK_ORDER.CTM_STOCK_QTY )
+                    {
+                        if (cellValue != null && double.TryParse(cellValue.ToString(), out double num))
+                        {
+                            sum += num; // 숫자 변환이 가능한 경우 합계에 누적
+                        }
+                    }
+
+                    count++; // 선택된 총 셀 개수 카운트
+                }
+            }
+
+            // 결과 출력 또는 레이블에 표시
+            //lblCount.Text = $"개수: {count}";
+            //lblSum.Text = $"합계: {sum}";
+            lblCount.Text = $"{count}";
+            lblSum.Text = $"{sum}";
+        }
     }
     #endregion
 
