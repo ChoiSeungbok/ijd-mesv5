@@ -356,11 +356,11 @@ namespace CUS_QCM
                 MPCF.ShowMsgBox(ex.Message);
             }
         }
-        private void ViewPivotList(string ReportNo)
+        private void ViewPivotList(string ReportNo, string sMatID)
         {
             try
             {
-                TPDR.DirectViewCond[] dvcArgu = new TPDR.DirectViewCond[2];
+                TPDR.DirectViewCond[] dvcArgu = new TPDR.DirectViewCond[3];
                 DataTable dt = null;
                 string sSql = "";
                 int i = 0;
@@ -370,6 +370,9 @@ namespace CUS_QCM
 
                 dvcArgu[1].sCondition_ID = "REPORT_NO";
                 dvcArgu[1].sCondition_Value = ReportNo;
+
+                dvcArgu[2].sCondition_ID = "MAT_ID";
+                dvcArgu[2].sCondition_Value = sMatID;
 
 
                 if (TPDR.GetDataOne("", ref dt, "CQCM2102-002", dvcArgu, false, false, ref sSql) == false)
@@ -2156,7 +2159,7 @@ namespace CUS_QCM
                             ViewPackingLotList(cdvPackOrderNo.Text, txtLineNo.Text);
 
                             //피벗 틀 정보
-                            ViewPivotList(cdvReportNo.Text);
+                            ViewPivotList(cdvReportNo.Text, popup.s_mat_id);
 
                             //Aspect 정보
                             ViewAspectList(cdvReportNo.Text);
