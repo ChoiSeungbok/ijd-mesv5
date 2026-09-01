@@ -129,7 +129,7 @@ static const int IAPFAIL = 1403;
 static const int IAPFTL  = 535;
 extern void sqliem(unsigned char *, signed int *);
 
- static const char *sq0013 = 
+ static const char *sq0014 = 
 "select FACTORY ,TABLE_NAME ,KEY_1 ,KEY_2 ,KEY_3 ,KEY_4 ,KEY_5 ,KEY_6 ,KEY_7\
  ,KEY_8 ,KEY_9 ,KEY_10 ,DATA_1 ,DATA_2 ,DATA_3 ,DATA_4 ,DATA_5 ,DATA_6 ,DATA_\
 7 ,DATA_8 ,DATA_9 ,DATA_10 ,CREATE_USER_ID ,CREATE_TIME ,UPDATE_USER_ID ,UPDA\
@@ -137,21 +137,21 @@ TE_TIME  from MGCMTBLDAT  order by FACTORY asc ,TABLE_NAME asc ,KEY_1 asc ,KE\
 Y_2 asc ,KEY_3 asc ,KEY_4 asc ,KEY_5 asc ,KEY_6 asc ,KEY_7 asc ,KEY_8 asc ,KE\
 Y_9 asc ,KEY_10 asc             ";
 
- static const char *sq0014 = 
+ static const char *sq0015 = 
 "select FACTORY ,TABLE_NAME ,KEY_1 ,KEY_2 ,KEY_3 ,KEY_4 ,KEY_5 ,KEY_6 ,KEY_7\
  ,KEY_8 ,KEY_9 ,KEY_10 ,DATA_1 ,DATA_2 ,DATA_3 ,DATA_4 ,DATA_5 ,DATA_6 ,DATA_\
 7 ,DATA_8 ,DATA_9 ,DATA_10 ,CREATE_USER_ID ,CREATE_TIME ,UPDATE_USER_ID ,UPDA\
 TE_TIME  from MGCMTBLDAT where ((FACTORY=:b0 and TABLE_NAME=:b1) and KEY_1=:b\
 2) order by KEY_2 asc             ";
 
- static const char *sq0015 = 
+ static const char *sq0016 = 
 "select FACTORY ,TABLE_NAME ,KEY_1 ,KEY_2 ,KEY_3 ,KEY_4 ,KEY_5 ,KEY_6 ,KEY_7\
  ,KEY_8 ,KEY_9 ,KEY_10 ,DATA_1 ,DATA_2 ,DATA_3 ,DATA_4 ,DATA_5 ,DATA_6 ,DATA_\
 7 ,DATA_8 ,DATA_9 ,DATA_10 ,CREATE_USER_ID ,CREATE_TIME ,UPDATE_USER_ID ,UPDA\
 TE_TIME  from MGCMTBLDAT where (((FACTORY=:b0 and TABLE_NAME=:b1) and KEY_1=:\
 b2) and DATA_2<>'Y') order by DATA_1            ";
 
- static const char *sq0016 = 
+ static const char *sq0017 = 
 "select FACTORY ,TABLE_NAME ,KEY_1 ,KEY_2 ,KEY_3 ,KEY_4 ,KEY_5 ,KEY_6 ,KEY_7\
  ,KEY_8 ,KEY_9 ,KEY_10 ,DATA_1 ,DATA_2 ,DATA_3 ,DATA_4 ,DATA_5 ,DATA_6 ,DATA_\
 7 ,DATA_8 ,DATA_9 ,DATA_10 ,CREATE_USER_ID ,CREATE_TIME ,UPDATE_USER_ID ,UPDA\
@@ -159,7 +159,7 @@ TE_TIME  from MGCMTBLDAT where (((((FACTORY=:b0 and TABLE_NAME=:b1) and KEY_1\
 =:b2) and KEY_2=:b3) and KEY_3=:b4) and KEY_4=:b5) order by TO_NUMBER(trim(DA\
 TA_1))            ";
 
- static const char *sq0017 = 
+ static const char *sq0018 = 
 "select FACTORY ,TABLE_NAME ,KEY_1 ,KEY_2 ,KEY_3 ,KEY_4 ,KEY_5 ,KEY_6 ,KEY_7\
  ,KEY_8 ,KEY_9 ,KEY_10 ,DATA_1 ,DATA_2 ,DATA_3 ,DATA_4 ,DATA_5 ,DATA_6 ,DATA_\
 7 ,DATA_8 ,DATA_9 ,DATA_10 ,CREATE_USER_ID ,CREATE_TIME ,UPDATE_USER_ID ,UPDA\
@@ -167,7 +167,7 @@ TE_TIME  from MGCMTBLDAT where (((((FACTORY=:b0 and TABLE_NAME=:b1) and KEY_1\
 =:b2) and KEY_2=:b3) and KEY_3=:b4) and KEY_4=:b5) order by KEY_1,KEY_2,KEY_3\
 ,KEY_4,KEY_5            ";
 
- static const char *sq0018 = 
+ static const char *sq0019 = 
 "select FACTORY ,TABLE_NAME ,KEY_1 ,KEY_2 ,KEY_3 ,KEY_4 ,KEY_5 ,KEY_6 ,KEY_7\
  ,KEY_8 ,KEY_9 ,KEY_10 ,DATA_1 ,DATA_2 ,DATA_3 ,DATA_4 ,DATA_5 ,DATA_6 ,DATA_\
 7 ,DATA_8 ,DATA_9 ,DATA_10 ,CREATE_USER_ID ,CREATE_TIME ,UPDATE_USER_ID ,UPDA\
@@ -191,64 +191,69 @@ static const short sqlcud0[] =
 0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,
 97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
 2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
-361,0,0,5,592,0,4,244,0,0,38,12,0,1,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,
+361,0,0,5,464,0,4,212,0,0,31,5,0,1,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,
+0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,
+97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
+2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,
+0,
+500,0,0,6,592,0,4,306,0,0,38,12,0,1,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,
 0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,
 97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
 2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,
 0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
-528,0,0,6,245,0,4,350,0,0,13,12,0,1,0,2,4,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,
+667,0,0,7,245,0,4,412,0,0,13,12,0,1,0,2,4,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,
 0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
-595,0,0,7,97,0,4,368,0,0,4,3,0,1,0,2,4,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
-626,0,0,8,127,0,4,377,0,0,5,4,0,1,0,2,4,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,0,0,0,
-661,0,0,9,114,0,4,386,0,0,4,3,0,1,0,2,4,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
-692,0,0,10,226,0,2,424,0,0,12,12,0,1,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,
+734,0,0,8,97,0,4,430,0,0,4,3,0,1,0,2,4,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
+765,0,0,9,127,0,4,439,0,0,5,4,0,1,0,2,4,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,0,0,0,
+800,0,0,10,114,0,4,448,0,0,4,3,0,1,0,2,4,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
+831,0,0,11,226,0,2,486,0,0,12,12,0,1,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,
 97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
-755,0,0,11,358,0,3,464,0,0,26,26,0,1,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,
+894,0,0,12,358,0,3,526,0,0,26,26,0,1,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,
 97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
 1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,
 0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
-874,0,0,12,419,0,5,541,0,0,26,26,0,1,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,
+1013,0,0,13,419,0,5,603,0,0,26,26,0,1,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,
 97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
 1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,
 0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,
-993,0,0,13,415,0,9,639,0,0,0,0,0,1,0,
-1008,0,0,14,340,0,9,676,0,0,3,3,0,1,0,1,97,0,0,1,97,0,0,1,97,0,0,
-1035,0,0,15,354,0,9,715,0,0,3,3,0,1,0,1,97,0,0,1,97,0,0,1,97,0,0,
-1062,0,0,16,401,0,9,755,0,0,6,6,0,1,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,
+1132,0,0,14,415,0,9,701,0,0,0,0,0,1,0,
+1147,0,0,15,340,0,9,738,0,0,3,3,0,1,0,1,97,0,0,1,97,0,0,1,97,0,0,
+1174,0,0,16,354,0,9,777,0,0,3,3,0,1,0,1,97,0,0,1,97,0,0,1,97,0,0,
+1201,0,0,17,401,0,9,817,0,0,6,6,0,1,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,
 0,0,1,97,0,0,
-1101,0,0,17,407,0,9,795,0,0,6,6,0,1,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,
+1240,0,0,18,407,0,9,857,0,0,6,6,0,1,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,0,0,1,97,
 0,0,1,97,0,0,
-1140,0,0,18,319,0,9,831,0,0,2,2,0,1,0,1,97,0,0,1,97,0,0,
-1163,0,0,13,0,0,13,859,0,0,26,0,0,1,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,
+1279,0,0,19,319,0,9,893,0,0,2,2,0,1,0,1,97,0,0,1,97,0,0,
+1302,0,0,14,0,0,13,921,0,0,26,0,0,1,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,
 0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,
 97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
 2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
-1282,0,0,14,0,0,13,889,0,0,26,0,0,1,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,
+1421,0,0,15,0,0,13,951,0,0,26,0,0,1,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,
 0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,
 97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
 2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
-1401,0,0,15,0,0,13,919,0,0,26,0,0,1,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,
+1540,0,0,16,0,0,13,981,0,0,26,0,0,1,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,
 0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,
 97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
 2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
-1520,0,0,16,0,0,13,949,0,0,26,0,0,1,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,
-0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,
-97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
-2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
-1639,0,0,17,0,0,13,979,0,0,26,0,0,1,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,
-0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,
-97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
-2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
-1758,0,0,18,0,0,13,1009,0,0,26,0,0,1,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,
+1659,0,0,17,0,0,13,1011,0,0,26,0,0,1,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,
 97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
 2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,
 0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
-1877,0,0,13,0,0,15,1064,0,0,0,0,0,1,0,
-1892,0,0,14,0,0,15,1068,0,0,0,0,0,1,0,
-1907,0,0,15,0,0,15,1072,0,0,0,0,0,1,0,
-1922,0,0,16,0,0,15,1076,0,0,0,0,0,1,0,
-1937,0,0,17,0,0,15,1080,0,0,0,0,0,1,0,
-1952,0,0,18,0,0,15,1084,0,0,0,0,0,1,0,
+1778,0,0,18,0,0,13,1041,0,0,26,0,0,1,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,
+97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
+2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,
+0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
+1897,0,0,19,0,0,13,1071,0,0,26,0,0,1,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,
+97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
+2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,
+0,2,97,0,0,2,97,0,0,2,97,0,0,2,97,0,0,
+2016,0,0,14,0,0,15,1126,0,0,0,0,0,1,0,
+2031,0,0,15,0,0,15,1130,0,0,0,0,0,1,0,
+2046,0,0,16,0,0,15,1134,0,0,0,0,0,1,0,
+2061,0,0,17,0,0,15,1138,0,0,0,0,0,1,0,
+2076,0,0,18,0,0,15,1142,0,0,0,0,0,1,0,
+2091,0,0,19,0,0,15,1146,0,0,0,0,0,1,0,
 };
 
 
@@ -1434,6 +1439,353 @@ b9,:b10,:b11,:b12,:b13,:b14,:b15,:b16,:b17,:b18,:b19,:b20,:b21,:b22,:b23,:b24\
 
             break;
 
+        case 5:
+            /* EXEC SQL SELECT 
+                    FACTORY,
+                    TABLE_NAME,
+                    KEY_1,
+                    KEY_2,
+                    KEY_3,
+                    KEY_4,
+                    KEY_5,
+                    KEY_6,
+                    KEY_7,
+                    KEY_8,
+                    KEY_9,
+                    KEY_10,
+                    DATA_1,
+                    DATA_2,
+                    DATA_3,
+                    DATA_4,
+                    DATA_5,
+                    DATA_6,
+                    DATA_7,
+                    DATA_8,
+                    DATA_9,
+                    DATA_10,
+                    CREATE_USER_ID,
+                    CREATE_TIME,
+                    UPDATE_USER_ID,
+                    UPDATE_TIME
+                INTO 
+                    :MGCMTBLDAT_N.FACTORY,
+                    :MGCMTBLDAT_N.TABLE_NAME,
+                    :MGCMTBLDAT_N.KEY_1,
+                    :MGCMTBLDAT_N.KEY_2,
+                    :MGCMTBLDAT_N.KEY_3,
+                    :MGCMTBLDAT_N.KEY_4,
+                    :MGCMTBLDAT_N.KEY_5,
+                    :MGCMTBLDAT_N.KEY_6,
+                    :MGCMTBLDAT_N.KEY_7,
+                    :MGCMTBLDAT_N.KEY_8,
+                    :MGCMTBLDAT_N.KEY_9,
+                    :MGCMTBLDAT_N.KEY_10,
+                    :MGCMTBLDAT_N.DATA_1,
+                    :MGCMTBLDAT_N.DATA_2,
+                    :MGCMTBLDAT_N.DATA_3,
+                    :MGCMTBLDAT_N.DATA_4,
+                    :MGCMTBLDAT_N.DATA_5,
+                    :MGCMTBLDAT_N.DATA_6,
+                    :MGCMTBLDAT_N.DATA_7,
+                    :MGCMTBLDAT_N.DATA_8,
+                    :MGCMTBLDAT_N.DATA_9,
+                    :MGCMTBLDAT_N.DATA_10,
+                    :MGCMTBLDAT_N.CREATE_USER_ID,
+                    :MGCMTBLDAT_N.CREATE_TIME,
+                    :MGCMTBLDAT_N.UPDATE_USER_ID,
+                    :MGCMTBLDAT_N.UPDATE_TIME
+                FROM MGCMTBLDAT
+                WHERE FACTORY = :MGCMTBLDAT_N.FACTORY
+                    AND TABLE_NAME = :MGCMTBLDAT_N.TABLE_NAME
+                    AND KEY_1 = :MGCMTBLDAT_N.KEY_1
+                    AND (KEY_2 = :MGCMTBLDAT_N.KEY_2 OR KEY_3 = :MGCMTBLDAT_N.KEY_3); */ 
+
+{
+            struct sqlexd sqlstm;
+            sqlstm.sqlvsn = 13;
+            sqlstm.arrsiz = 38;
+            sqlstm.sqladtp = &sqladt;
+            sqlstm.sqltdsp = &sqltds;
+            sqlstm.stmt = "select FACTORY ,TABLE_NAME ,KEY_1 ,KEY_2 ,KEY_3 \
+,KEY_4 ,KEY_5 ,KEY_6 ,KEY_7 ,KEY_8 ,KEY_9 ,KEY_10 ,DATA_1 ,DATA_2 ,DATA_3 ,DA\
+TA_4 ,DATA_5 ,DATA_6 ,DATA_7 ,DATA_8 ,DATA_9 ,DATA_10 ,CREATE_USER_ID ,CREATE\
+_TIME ,UPDATE_USER_ID ,UPDATE_TIME into :b0,:b1,:b2,:b3,:b4,:b5,:b6,:b7,:b8,:\
+b9,:b10,:b11,:b12,:b13,:b14,:b15,:b16,:b17,:b18,:b19,:b20,:b21,:b22,:b23,:b24\
+,:b25  from MGCMTBLDAT where (((FACTORY=:b0 and TABLE_NAME=:b1) and KEY_1=:b2\
+) and (KEY_2=:b3 or KEY_3=:b4))";
+            sqlstm.iters = (unsigned int  )1;
+            sqlstm.offset = (unsigned int  )361;
+            sqlstm.selerr = (unsigned short)1;
+            sqlstm.sqlpfmem = (unsigned int  )0;
+            sqlstm.cud = sqlcud0;
+            sqlstm.sqlest = (unsigned char  *)&sqlca;
+            sqlstm.sqlety = (unsigned short)4352;
+            sqlstm.occurs = (unsigned int  )0;
+            sqlstm.sqhstv[0] = (         void  *)(MGCMTBLDAT_N.FACTORY);
+            sqlstm.sqhstl[0] = (unsigned int  )11;
+            sqlstm.sqhsts[0] = (         int  )0;
+            sqlstm.sqindv[0] = (         void  *)0;
+            sqlstm.sqinds[0] = (         int  )0;
+            sqlstm.sqharm[0] = (unsigned int  )0;
+            sqlstm.sqadto[0] = (unsigned short )0;
+            sqlstm.sqtdso[0] = (unsigned short )0;
+            sqlstm.sqhstv[1] = (         void  *)(MGCMTBLDAT_N.TABLE_NAME);
+            sqlstm.sqhstl[1] = (unsigned int  )21;
+            sqlstm.sqhsts[1] = (         int  )0;
+            sqlstm.sqindv[1] = (         void  *)0;
+            sqlstm.sqinds[1] = (         int  )0;
+            sqlstm.sqharm[1] = (unsigned int  )0;
+            sqlstm.sqadto[1] = (unsigned short )0;
+            sqlstm.sqtdso[1] = (unsigned short )0;
+            sqlstm.sqhstv[2] = (         void  *)(MGCMTBLDAT_N.KEY_1);
+            sqlstm.sqhstl[2] = (unsigned int  )31;
+            sqlstm.sqhsts[2] = (         int  )0;
+            sqlstm.sqindv[2] = (         void  *)0;
+            sqlstm.sqinds[2] = (         int  )0;
+            sqlstm.sqharm[2] = (unsigned int  )0;
+            sqlstm.sqadto[2] = (unsigned short )0;
+            sqlstm.sqtdso[2] = (unsigned short )0;
+            sqlstm.sqhstv[3] = (         void  *)(MGCMTBLDAT_N.KEY_2);
+            sqlstm.sqhstl[3] = (unsigned int  )31;
+            sqlstm.sqhsts[3] = (         int  )0;
+            sqlstm.sqindv[3] = (         void  *)0;
+            sqlstm.sqinds[3] = (         int  )0;
+            sqlstm.sqharm[3] = (unsigned int  )0;
+            sqlstm.sqadto[3] = (unsigned short )0;
+            sqlstm.sqtdso[3] = (unsigned short )0;
+            sqlstm.sqhstv[4] = (         void  *)(MGCMTBLDAT_N.KEY_3);
+            sqlstm.sqhstl[4] = (unsigned int  )31;
+            sqlstm.sqhsts[4] = (         int  )0;
+            sqlstm.sqindv[4] = (         void  *)0;
+            sqlstm.sqinds[4] = (         int  )0;
+            sqlstm.sqharm[4] = (unsigned int  )0;
+            sqlstm.sqadto[4] = (unsigned short )0;
+            sqlstm.sqtdso[4] = (unsigned short )0;
+            sqlstm.sqhstv[5] = (         void  *)(MGCMTBLDAT_N.KEY_4);
+            sqlstm.sqhstl[5] = (unsigned int  )31;
+            sqlstm.sqhsts[5] = (         int  )0;
+            sqlstm.sqindv[5] = (         void  *)0;
+            sqlstm.sqinds[5] = (         int  )0;
+            sqlstm.sqharm[5] = (unsigned int  )0;
+            sqlstm.sqadto[5] = (unsigned short )0;
+            sqlstm.sqtdso[5] = (unsigned short )0;
+            sqlstm.sqhstv[6] = (         void  *)(MGCMTBLDAT_N.KEY_5);
+            sqlstm.sqhstl[6] = (unsigned int  )31;
+            sqlstm.sqhsts[6] = (         int  )0;
+            sqlstm.sqindv[6] = (         void  *)0;
+            sqlstm.sqinds[6] = (         int  )0;
+            sqlstm.sqharm[6] = (unsigned int  )0;
+            sqlstm.sqadto[6] = (unsigned short )0;
+            sqlstm.sqtdso[6] = (unsigned short )0;
+            sqlstm.sqhstv[7] = (         void  *)(MGCMTBLDAT_N.KEY_6);
+            sqlstm.sqhstl[7] = (unsigned int  )31;
+            sqlstm.sqhsts[7] = (         int  )0;
+            sqlstm.sqindv[7] = (         void  *)0;
+            sqlstm.sqinds[7] = (         int  )0;
+            sqlstm.sqharm[7] = (unsigned int  )0;
+            sqlstm.sqadto[7] = (unsigned short )0;
+            sqlstm.sqtdso[7] = (unsigned short )0;
+            sqlstm.sqhstv[8] = (         void  *)(MGCMTBLDAT_N.KEY_7);
+            sqlstm.sqhstl[8] = (unsigned int  )31;
+            sqlstm.sqhsts[8] = (         int  )0;
+            sqlstm.sqindv[8] = (         void  *)0;
+            sqlstm.sqinds[8] = (         int  )0;
+            sqlstm.sqharm[8] = (unsigned int  )0;
+            sqlstm.sqadto[8] = (unsigned short )0;
+            sqlstm.sqtdso[8] = (unsigned short )0;
+            sqlstm.sqhstv[9] = (         void  *)(MGCMTBLDAT_N.KEY_8);
+            sqlstm.sqhstl[9] = (unsigned int  )31;
+            sqlstm.sqhsts[9] = (         int  )0;
+            sqlstm.sqindv[9] = (         void  *)0;
+            sqlstm.sqinds[9] = (         int  )0;
+            sqlstm.sqharm[9] = (unsigned int  )0;
+            sqlstm.sqadto[9] = (unsigned short )0;
+            sqlstm.sqtdso[9] = (unsigned short )0;
+            sqlstm.sqhstv[10] = (         void  *)(MGCMTBLDAT_N.KEY_9);
+            sqlstm.sqhstl[10] = (unsigned int  )31;
+            sqlstm.sqhsts[10] = (         int  )0;
+            sqlstm.sqindv[10] = (         void  *)0;
+            sqlstm.sqinds[10] = (         int  )0;
+            sqlstm.sqharm[10] = (unsigned int  )0;
+            sqlstm.sqadto[10] = (unsigned short )0;
+            sqlstm.sqtdso[10] = (unsigned short )0;
+            sqlstm.sqhstv[11] = (         void  *)(MGCMTBLDAT_N.KEY_10);
+            sqlstm.sqhstl[11] = (unsigned int  )31;
+            sqlstm.sqhsts[11] = (         int  )0;
+            sqlstm.sqindv[11] = (         void  *)0;
+            sqlstm.sqinds[11] = (         int  )0;
+            sqlstm.sqharm[11] = (unsigned int  )0;
+            sqlstm.sqadto[11] = (unsigned short )0;
+            sqlstm.sqtdso[11] = (unsigned short )0;
+            sqlstm.sqhstv[12] = (         void  *)(MGCMTBLDAT_N.DATA_1);
+            sqlstm.sqhstl[12] = (unsigned int  )51;
+            sqlstm.sqhsts[12] = (         int  )0;
+            sqlstm.sqindv[12] = (         void  *)0;
+            sqlstm.sqinds[12] = (         int  )0;
+            sqlstm.sqharm[12] = (unsigned int  )0;
+            sqlstm.sqadto[12] = (unsigned short )0;
+            sqlstm.sqtdso[12] = (unsigned short )0;
+            sqlstm.sqhstv[13] = (         void  *)(MGCMTBLDAT_N.DATA_2);
+            sqlstm.sqhstl[13] = (unsigned int  )51;
+            sqlstm.sqhsts[13] = (         int  )0;
+            sqlstm.sqindv[13] = (         void  *)0;
+            sqlstm.sqinds[13] = (         int  )0;
+            sqlstm.sqharm[13] = (unsigned int  )0;
+            sqlstm.sqadto[13] = (unsigned short )0;
+            sqlstm.sqtdso[13] = (unsigned short )0;
+            sqlstm.sqhstv[14] = (         void  *)(MGCMTBLDAT_N.DATA_3);
+            sqlstm.sqhstl[14] = (unsigned int  )51;
+            sqlstm.sqhsts[14] = (         int  )0;
+            sqlstm.sqindv[14] = (         void  *)0;
+            sqlstm.sqinds[14] = (         int  )0;
+            sqlstm.sqharm[14] = (unsigned int  )0;
+            sqlstm.sqadto[14] = (unsigned short )0;
+            sqlstm.sqtdso[14] = (unsigned short )0;
+            sqlstm.sqhstv[15] = (         void  *)(MGCMTBLDAT_N.DATA_4);
+            sqlstm.sqhstl[15] = (unsigned int  )51;
+            sqlstm.sqhsts[15] = (         int  )0;
+            sqlstm.sqindv[15] = (         void  *)0;
+            sqlstm.sqinds[15] = (         int  )0;
+            sqlstm.sqharm[15] = (unsigned int  )0;
+            sqlstm.sqadto[15] = (unsigned short )0;
+            sqlstm.sqtdso[15] = (unsigned short )0;
+            sqlstm.sqhstv[16] = (         void  *)(MGCMTBLDAT_N.DATA_5);
+            sqlstm.sqhstl[16] = (unsigned int  )51;
+            sqlstm.sqhsts[16] = (         int  )0;
+            sqlstm.sqindv[16] = (         void  *)0;
+            sqlstm.sqinds[16] = (         int  )0;
+            sqlstm.sqharm[16] = (unsigned int  )0;
+            sqlstm.sqadto[16] = (unsigned short )0;
+            sqlstm.sqtdso[16] = (unsigned short )0;
+            sqlstm.sqhstv[17] = (         void  *)(MGCMTBLDAT_N.DATA_6);
+            sqlstm.sqhstl[17] = (unsigned int  )51;
+            sqlstm.sqhsts[17] = (         int  )0;
+            sqlstm.sqindv[17] = (         void  *)0;
+            sqlstm.sqinds[17] = (         int  )0;
+            sqlstm.sqharm[17] = (unsigned int  )0;
+            sqlstm.sqadto[17] = (unsigned short )0;
+            sqlstm.sqtdso[17] = (unsigned short )0;
+            sqlstm.sqhstv[18] = (         void  *)(MGCMTBLDAT_N.DATA_7);
+            sqlstm.sqhstl[18] = (unsigned int  )51;
+            sqlstm.sqhsts[18] = (         int  )0;
+            sqlstm.sqindv[18] = (         void  *)0;
+            sqlstm.sqinds[18] = (         int  )0;
+            sqlstm.sqharm[18] = (unsigned int  )0;
+            sqlstm.sqadto[18] = (unsigned short )0;
+            sqlstm.sqtdso[18] = (unsigned short )0;
+            sqlstm.sqhstv[19] = (         void  *)(MGCMTBLDAT_N.DATA_8);
+            sqlstm.sqhstl[19] = (unsigned int  )51;
+            sqlstm.sqhsts[19] = (         int  )0;
+            sqlstm.sqindv[19] = (         void  *)0;
+            sqlstm.sqinds[19] = (         int  )0;
+            sqlstm.sqharm[19] = (unsigned int  )0;
+            sqlstm.sqadto[19] = (unsigned short )0;
+            sqlstm.sqtdso[19] = (unsigned short )0;
+            sqlstm.sqhstv[20] = (         void  *)(MGCMTBLDAT_N.DATA_9);
+            sqlstm.sqhstl[20] = (unsigned int  )51;
+            sqlstm.sqhsts[20] = (         int  )0;
+            sqlstm.sqindv[20] = (         void  *)0;
+            sqlstm.sqinds[20] = (         int  )0;
+            sqlstm.sqharm[20] = (unsigned int  )0;
+            sqlstm.sqadto[20] = (unsigned short )0;
+            sqlstm.sqtdso[20] = (unsigned short )0;
+            sqlstm.sqhstv[21] = (         void  *)(MGCMTBLDAT_N.DATA_10);
+            sqlstm.sqhstl[21] = (unsigned int  )51;
+            sqlstm.sqhsts[21] = (         int  )0;
+            sqlstm.sqindv[21] = (         void  *)0;
+            sqlstm.sqinds[21] = (         int  )0;
+            sqlstm.sqharm[21] = (unsigned int  )0;
+            sqlstm.sqadto[21] = (unsigned short )0;
+            sqlstm.sqtdso[21] = (unsigned short )0;
+            sqlstm.sqhstv[22] = (         void  *)(MGCMTBLDAT_N.CREATE_USER_ID);
+            sqlstm.sqhstl[22] = (unsigned int  )21;
+            sqlstm.sqhsts[22] = (         int  )0;
+            sqlstm.sqindv[22] = (         void  *)0;
+            sqlstm.sqinds[22] = (         int  )0;
+            sqlstm.sqharm[22] = (unsigned int  )0;
+            sqlstm.sqadto[22] = (unsigned short )0;
+            sqlstm.sqtdso[22] = (unsigned short )0;
+            sqlstm.sqhstv[23] = (         void  *)(MGCMTBLDAT_N.CREATE_TIME);
+            sqlstm.sqhstl[23] = (unsigned int  )15;
+            sqlstm.sqhsts[23] = (         int  )0;
+            sqlstm.sqindv[23] = (         void  *)0;
+            sqlstm.sqinds[23] = (         int  )0;
+            sqlstm.sqharm[23] = (unsigned int  )0;
+            sqlstm.sqadto[23] = (unsigned short )0;
+            sqlstm.sqtdso[23] = (unsigned short )0;
+            sqlstm.sqhstv[24] = (         void  *)(MGCMTBLDAT_N.UPDATE_USER_ID);
+            sqlstm.sqhstl[24] = (unsigned int  )21;
+            sqlstm.sqhsts[24] = (         int  )0;
+            sqlstm.sqindv[24] = (         void  *)0;
+            sqlstm.sqinds[24] = (         int  )0;
+            sqlstm.sqharm[24] = (unsigned int  )0;
+            sqlstm.sqadto[24] = (unsigned short )0;
+            sqlstm.sqtdso[24] = (unsigned short )0;
+            sqlstm.sqhstv[25] = (         void  *)(MGCMTBLDAT_N.UPDATE_TIME);
+            sqlstm.sqhstl[25] = (unsigned int  )15;
+            sqlstm.sqhsts[25] = (         int  )0;
+            sqlstm.sqindv[25] = (         void  *)0;
+            sqlstm.sqinds[25] = (         int  )0;
+            sqlstm.sqharm[25] = (unsigned int  )0;
+            sqlstm.sqadto[25] = (unsigned short )0;
+            sqlstm.sqtdso[25] = (unsigned short )0;
+            sqlstm.sqhstv[26] = (         void  *)(MGCMTBLDAT_N.FACTORY);
+            sqlstm.sqhstl[26] = (unsigned int  )11;
+            sqlstm.sqhsts[26] = (         int  )0;
+            sqlstm.sqindv[26] = (         void  *)0;
+            sqlstm.sqinds[26] = (         int  )0;
+            sqlstm.sqharm[26] = (unsigned int  )0;
+            sqlstm.sqadto[26] = (unsigned short )0;
+            sqlstm.sqtdso[26] = (unsigned short )0;
+            sqlstm.sqhstv[27] = (         void  *)(MGCMTBLDAT_N.TABLE_NAME);
+            sqlstm.sqhstl[27] = (unsigned int  )21;
+            sqlstm.sqhsts[27] = (         int  )0;
+            sqlstm.sqindv[27] = (         void  *)0;
+            sqlstm.sqinds[27] = (         int  )0;
+            sqlstm.sqharm[27] = (unsigned int  )0;
+            sqlstm.sqadto[27] = (unsigned short )0;
+            sqlstm.sqtdso[27] = (unsigned short )0;
+            sqlstm.sqhstv[28] = (         void  *)(MGCMTBLDAT_N.KEY_1);
+            sqlstm.sqhstl[28] = (unsigned int  )31;
+            sqlstm.sqhsts[28] = (         int  )0;
+            sqlstm.sqindv[28] = (         void  *)0;
+            sqlstm.sqinds[28] = (         int  )0;
+            sqlstm.sqharm[28] = (unsigned int  )0;
+            sqlstm.sqadto[28] = (unsigned short )0;
+            sqlstm.sqtdso[28] = (unsigned short )0;
+            sqlstm.sqhstv[29] = (         void  *)(MGCMTBLDAT_N.KEY_2);
+            sqlstm.sqhstl[29] = (unsigned int  )31;
+            sqlstm.sqhsts[29] = (         int  )0;
+            sqlstm.sqindv[29] = (         void  *)0;
+            sqlstm.sqinds[29] = (         int  )0;
+            sqlstm.sqharm[29] = (unsigned int  )0;
+            sqlstm.sqadto[29] = (unsigned short )0;
+            sqlstm.sqtdso[29] = (unsigned short )0;
+            sqlstm.sqhstv[30] = (         void  *)(MGCMTBLDAT_N.KEY_3);
+            sqlstm.sqhstl[30] = (unsigned int  )31;
+            sqlstm.sqhsts[30] = (         int  )0;
+            sqlstm.sqindv[30] = (         void  *)0;
+            sqlstm.sqinds[30] = (         int  )0;
+            sqlstm.sqharm[30] = (unsigned int  )0;
+            sqlstm.sqadto[30] = (unsigned short )0;
+            sqlstm.sqtdso[30] = (unsigned short )0;
+            sqlstm.sqphsv = sqlstm.sqhstv;
+            sqlstm.sqphsl = sqlstm.sqhstl;
+            sqlstm.sqphss = sqlstm.sqhsts;
+            sqlstm.sqpind = sqlstm.sqindv;
+            sqlstm.sqpins = sqlstm.sqinds;
+            sqlstm.sqparm = sqlstm.sqharm;
+            sqlstm.sqparc = sqlstm.sqharc;
+            sqlstm.sqpadto = sqlstm.sqadto;
+            sqlstm.sqptdso = sqlstm.sqtdso;
+            sqlcxt((void **)0, &sqlctx, &sqlstm, &sqlfpn);
+            if (sqlca.sqlcode == 1403) DB_usr_error();
+            if (sqlca.sqlcode < 0) DB_usr_error();
+}
+
+
+            break;
+ 
         default:
             DB_error_code = 9999;
             memset(DB_error_msg, ' ', sizeof(DB_error_msg));
@@ -1554,7 +1906,7 @@ EY_1=:b2) and KEY_2=:b3) and KEY_3=:b4) and KEY_4=:b5) and KEY_5=:b6) and KEY\
 _6=:b7) and KEY_7=:b8) and KEY_8=:b9) and KEY_9=:b10) and KEY_10=:b11) for up\
 date ";
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )361;
+            sqlstm.offset = (unsigned int  )500;
             sqlstm.selerr = (unsigned short)1;
             sqlstm.sqlpfmem = (unsigned int  )0;
             sqlstm.cud = sqlcud0;
@@ -1947,7 +2299,7 @@ double DBU_select_mgcmtbldat_scalar(int sel_type, struct MGCMTBLDAT_TAG *MGCMTBL
  KEY_3=:b5) and KEY_4=:b6) and KEY_5=:b7) and KEY_6=:b8) and KEY_7=:b9) and K\
 EY_8=:b10) and KEY_9=:b11) and KEY_10=:b12)";
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )528;
+            sqlstm.offset = (unsigned int  )667;
             sqlstm.selerr = (unsigned short)1;
             sqlstm.sqlpfmem = (unsigned int  )0;
             sqlstm.cud = sqlcud0;
@@ -2092,7 +2444,7 @@ EY_8=:b10) and KEY_9=:b11) and KEY_10=:b12)";
             sqlstm.stmt = "select count(*)  into :b0  from MGCMTBLDAT where\
  ((FACTORY=:b1 and TABLE_NAME=:b2) and KEY_1=:b3)";
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )595;
+            sqlstm.offset = (unsigned int  )734;
             sqlstm.selerr = (unsigned short)1;
             sqlstm.sqlpfmem = (unsigned int  )0;
             sqlstm.cud = sqlcud0;
@@ -2166,7 +2518,7 @@ EY_8=:b10) and KEY_9=:b11) and KEY_10=:b12)";
  ((FACTORY=:b1 and TABLE_NAME=:b2) and (:b3=' ' or (KEY_1=:b3 and DATA_7='Y')\
 ))";
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )626;
+            sqlstm.offset = (unsigned int  )765;
             sqlstm.selerr = (unsigned short)1;
             sqlstm.sqlpfmem = (unsigned int  )0;
             sqlstm.cud = sqlcud0;
@@ -2247,7 +2599,7 @@ EY_8=:b10) and KEY_9=:b11) and KEY_10=:b12)";
             sqlstm.stmt = "select count(*)  into :b0  from MGCMTBLDAT where\
  ((FACTORY=:b1 and TABLE_NAME=:b2) and (KEY_1=:b3 and DATA_7='Y'))";
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )661;
+            sqlstm.offset = (unsigned int  )800;
             sqlstm.selerr = (unsigned short)1;
             sqlstm.sqlpfmem = (unsigned int  )0;
             sqlstm.cud = sqlcud0;
@@ -2360,7 +2712,7 @@ Y=:b0 and TABLE_NAME=:b1) and KEY_1=:b2) and KEY_2=:b3) and KEY_3=:b4) and KE\
 Y_4=:b5) and KEY_5=:b6) and KEY_6=:b7) and KEY_7=:b8) and KEY_8=:b9) and KEY_\
 9=:b10) and KEY_10=:b11)";
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )692;
+            sqlstm.offset = (unsigned int  )831;
             sqlstm.cud = sqlcud0;
             sqlstm.sqlest = (unsigned char  *)&sqlca;
             sqlstm.sqlety = (unsigned short)4352;
@@ -2574,7 +2926,7 @@ ATA_5,DATA_6,DATA_7,DATA_8,DATA_9,DATA_10,CREATE_USER_ID,CREATE_TIME,UPDATE_U\
 SER_ID,UPDATE_TIME) values (:b0,:b1,:b2,:b3,:b4,:b5,:b6,:b7,:b8,:b9,:b10,:b11\
 ,:b12,:b13,:b14,:b15,:b16,:b17,:b18,:b19,:b20,:b21,:b22,:b23,:b24,:b25)";
     sqlstm.iters = (unsigned int  )1;
-    sqlstm.offset = (unsigned int  )755;
+    sqlstm.offset = (unsigned int  )894;
     sqlstm.cud = sqlcud0;
     sqlstm.sqlest = (unsigned char  *)&sqlca;
     sqlstm.sqlety = (unsigned short)4352;
@@ -2866,7 +3218,7 @@ A_10=:b9,CREATE_USER_ID=:b10,CREATE_TIME=:b11,UPDATE_USER_ID=:b12,UPDATE_TIME\
 KEY_2=:b17) and KEY_3=:b18) and KEY_4=:b19) and KEY_5=:b20) and KEY_6=:b21) a\
 nd KEY_7=:b22) and KEY_8=:b23) and KEY_9=:b24) and KEY_10=:b25)";
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )874;
+            sqlstm.offset = (unsigned int  )1013;
             sqlstm.cud = sqlcud0;
             sqlstm.sqlest = (unsigned char  *)&sqlca;
             sqlstm.sqlety = (unsigned short)4352;
@@ -3176,9 +3528,9 @@ void DBU_open_mgcmtbldat(int sel_type, struct MGCMTBLDAT_TAG *MGCMTBLDAT)
             sqlstm.arrsiz = 38;
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
-            sqlstm.stmt = sq0013;
+            sqlstm.stmt = sq0014;
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )993;
+            sqlstm.offset = (unsigned int  )1132;
             sqlstm.selerr = (unsigned short)1;
             sqlstm.sqlpfmem = (unsigned int  )0;
             sqlstm.cud = sqlcud0;
@@ -3236,9 +3588,9 @@ void DBU_open_mgcmtbldat(int sel_type, struct MGCMTBLDAT_TAG *MGCMTBLDAT)
             sqlstm.arrsiz = 38;
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
-            sqlstm.stmt = sq0014;
+            sqlstm.stmt = sq0015;
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )1008;
+            sqlstm.offset = (unsigned int  )1147;
             sqlstm.selerr = (unsigned short)1;
             sqlstm.sqlpfmem = (unsigned int  )0;
             sqlstm.cud = sqlcud0;
@@ -3331,9 +3683,9 @@ void DBU_open_mgcmtbldat(int sel_type, struct MGCMTBLDAT_TAG *MGCMTBLDAT)
             sqlstm.arrsiz = 38;
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
-            sqlstm.stmt = sq0015;
+            sqlstm.stmt = sq0016;
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )1035;
+            sqlstm.offset = (unsigned int  )1174;
             sqlstm.selerr = (unsigned short)1;
             sqlstm.sqlpfmem = (unsigned int  )0;
             sqlstm.cud = sqlcud0;
@@ -3427,9 +3779,9 @@ void DBU_open_mgcmtbldat(int sel_type, struct MGCMTBLDAT_TAG *MGCMTBLDAT)
             sqlstm.arrsiz = 38;
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
-            sqlstm.stmt = sq0016;
+            sqlstm.stmt = sq0017;
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )1062;
+            sqlstm.offset = (unsigned int  )1201;
             sqlstm.selerr = (unsigned short)1;
             sqlstm.sqlpfmem = (unsigned int  )0;
             sqlstm.cud = sqlcud0;
@@ -3547,9 +3899,9 @@ void DBU_open_mgcmtbldat(int sel_type, struct MGCMTBLDAT_TAG *MGCMTBLDAT)
             sqlstm.arrsiz = 38;
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
-            sqlstm.stmt = sq0017;
+            sqlstm.stmt = sq0018;
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )1101;
+            sqlstm.offset = (unsigned int  )1240;
             sqlstm.selerr = (unsigned short)1;
             sqlstm.sqlpfmem = (unsigned int  )0;
             sqlstm.cud = sqlcud0;
@@ -3663,9 +4015,9 @@ void DBU_open_mgcmtbldat(int sel_type, struct MGCMTBLDAT_TAG *MGCMTBLDAT)
             sqlstm.arrsiz = 38;
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
-            sqlstm.stmt = sq0018;
+            sqlstm.stmt = sq0019;
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )1140;
+            sqlstm.offset = (unsigned int  )1279;
             sqlstm.selerr = (unsigned short)1;
             sqlstm.sqlpfmem = (unsigned int  )0;
             sqlstm.cud = sqlcud0;
@@ -3767,7 +4119,7 @@ void DBU_fetch_mgcmtbldat(int sel_type, struct MGCMTBLDAT_TAG *MGCMTBLDAT)
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )1163;
+            sqlstm.offset = (unsigned int  )1302;
             sqlstm.selerr = (unsigned short)1;
             sqlstm.sqlpfmem = (unsigned int  )0;
             sqlstm.cud = sqlcud0;
@@ -4037,7 +4389,7 @@ void DBU_fetch_mgcmtbldat(int sel_type, struct MGCMTBLDAT_TAG *MGCMTBLDAT)
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )1282;
+            sqlstm.offset = (unsigned int  )1421;
             sqlstm.selerr = (unsigned short)1;
             sqlstm.sqlpfmem = (unsigned int  )0;
             sqlstm.cud = sqlcud0;
@@ -4307,7 +4659,7 @@ void DBU_fetch_mgcmtbldat(int sel_type, struct MGCMTBLDAT_TAG *MGCMTBLDAT)
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )1401;
+            sqlstm.offset = (unsigned int  )1540;
             sqlstm.selerr = (unsigned short)1;
             sqlstm.sqlpfmem = (unsigned int  )0;
             sqlstm.cud = sqlcud0;
@@ -4577,7 +4929,7 @@ void DBU_fetch_mgcmtbldat(int sel_type, struct MGCMTBLDAT_TAG *MGCMTBLDAT)
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )1520;
+            sqlstm.offset = (unsigned int  )1659;
             sqlstm.selerr = (unsigned short)1;
             sqlstm.sqlpfmem = (unsigned int  )0;
             sqlstm.cud = sqlcud0;
@@ -4847,7 +5199,7 @@ void DBU_fetch_mgcmtbldat(int sel_type, struct MGCMTBLDAT_TAG *MGCMTBLDAT)
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )1639;
+            sqlstm.offset = (unsigned int  )1778;
             sqlstm.selerr = (unsigned short)1;
             sqlstm.sqlpfmem = (unsigned int  )0;
             sqlstm.cud = sqlcud0;
@@ -5117,7 +5469,7 @@ void DBU_fetch_mgcmtbldat(int sel_type, struct MGCMTBLDAT_TAG *MGCMTBLDAT)
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )1758;
+            sqlstm.offset = (unsigned int  )1897;
             sqlstm.selerr = (unsigned short)1;
             sqlstm.sqlpfmem = (unsigned int  )0;
             sqlstm.cud = sqlcud0;
@@ -5386,7 +5738,7 @@ void DBU_close_mgcmtbldat(int sel_type)
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )1877;
+            sqlstm.offset = (unsigned int  )2016;
             sqlstm.cud = sqlcud0;
             sqlstm.sqlest = (unsigned char  *)&sqlca;
             sqlstm.sqlety = (unsigned short)4352;
@@ -5408,7 +5760,7 @@ void DBU_close_mgcmtbldat(int sel_type)
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )1892;
+            sqlstm.offset = (unsigned int  )2031;
             sqlstm.cud = sqlcud0;
             sqlstm.sqlest = (unsigned char  *)&sqlca;
             sqlstm.sqlety = (unsigned short)4352;
@@ -5430,7 +5782,7 @@ void DBU_close_mgcmtbldat(int sel_type)
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )1907;
+            sqlstm.offset = (unsigned int  )2046;
             sqlstm.cud = sqlcud0;
             sqlstm.sqlest = (unsigned char  *)&sqlca;
             sqlstm.sqlety = (unsigned short)4352;
@@ -5452,7 +5804,7 @@ void DBU_close_mgcmtbldat(int sel_type)
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )1922;
+            sqlstm.offset = (unsigned int  )2061;
             sqlstm.cud = sqlcud0;
             sqlstm.sqlest = (unsigned char  *)&sqlca;
             sqlstm.sqlety = (unsigned short)4352;
@@ -5474,7 +5826,7 @@ void DBU_close_mgcmtbldat(int sel_type)
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )1937;
+            sqlstm.offset = (unsigned int  )2076;
             sqlstm.cud = sqlcud0;
             sqlstm.sqlest = (unsigned char  *)&sqlca;
             sqlstm.sqlety = (unsigned short)4352;
@@ -5496,7 +5848,7 @@ void DBU_close_mgcmtbldat(int sel_type)
             sqlstm.sqladtp = &sqladt;
             sqlstm.sqltdsp = &sqltds;
             sqlstm.iters = (unsigned int  )1;
-            sqlstm.offset = (unsigned int  )1952;
+            sqlstm.offset = (unsigned int  )2091;
             sqlstm.cud = sqlcud0;
             sqlstm.sqlest = (unsigned char  *)&sqlca;
             sqlstm.sqlety = (unsigned short)4352;
