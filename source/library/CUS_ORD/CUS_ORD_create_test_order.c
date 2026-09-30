@@ -362,10 +362,7 @@ int CUS_ORD_CREATE_TEST_ORDER(char* s_msg_code, TRSNode* in_node, TRSNode* out_n
 				TRS.add_string(gen_in_node, "OVR_TIME", gs_sys_time, 8);
 				TRS.add_string(gen_in_node, "SEQ_KEY_10", work_date.s_work_date, 8);
 
-
-
-
-
+				 
 
 				cmn_out = TRS.create_node("Cmn_Out");
 				if (CUS_WIP_GENERATE_ID(s_msg_code, gen_in_node, cmn_out) == MP_FALSE)
@@ -385,9 +382,7 @@ int CUS_ORD_CREATE_TEST_ORDER(char* s_msg_code, TRSNode* in_node, TRSNode* out_n
 				}
 
 				TRS.free_node(cmn_out);
-			}
-
-
+			} 
 
 
 
@@ -625,10 +620,7 @@ int CUS_ORD_CREATE_TEST_ORDER(char* s_msg_code, TRSNode* in_node, TRSNode* out_n
 
 			TRS.add_string(out_node, "LOT_ID", MWIPLOTSTSX.LOT_ID, sizeof(MWIPLOTSTSX.LOT_ID));
 		}
-
-
-
-
+		 
 
 		//BOM정보를 삭제하고 모든 리스트를 INSERT 한다.
 		DBU_init_cwipordbom(&CWIPORDBOM);
@@ -715,6 +707,7 @@ int CUS_ORD_CREATE_TEST_ORDER(char* s_msg_code, TRSNode* in_node, TRSNode* out_n
 		}
 	}
 
+	//작업지시 삭제(대기상태인 작업지시)
 	else if (TRS.get_procstep(in_node) == '2')
 	{
 		DBU_init_mwipordsts(&MWIPORDSTS);
@@ -760,6 +753,65 @@ int CUS_ORD_CREATE_TEST_ORDER(char* s_msg_code, TRSNode* in_node, TRSNode* out_n
 		}
 	}
 
+	//작업지시 CLOSE(대기, OPEN 상태인 작업지시)
+	else if (TRS.get_procstep(in_node) == '3')
+	{
+		list_item = TRS.get_list(in_node, "ORDER_LIST");
+		iItemCount = TRS.get_item_count(in_node, "ORDER_LIST");
+
+		for (i = 0; i < iItemCount; i++)
+		{
+			DBU_init_mwipordsts(&MWIPORDSTS);
+			TRS.copy(MWIPORDSTS.FACTORY, sizeof(MWIPORDSTS.FACTORY), in_node, IN_FACTORY);
+			TRS.copy(MWIPORDSTS.ORDER_ID, sizeof(MWIPORDSTS.ORDER_ID), list_item[i], "ORDER_ID");
+			DBU_select_mwipordsts(1, &MWIPORDSTS);
+			if (DB_error_code != DB_SUCCESS)
+			{
+				//ORD-0002 : 이 ORDER는 존재하지 않습니다.
+				strcpy(s_msg_code, "ORD-0002");
+				TRS.add_fieldmsg(out_node, "MWIPORDSTS SELECT(1) ", DT_NOVALUESTRING);
+				TRS.add_fieldmsg(out_node, "FACTORY", MP_STR, sizeof(MWIPORDSTS.FACTORY), MWIPORDSTS.FACTORY);
+				TRS.add_fieldmsg(out_node, "ORDER_ID", MP_STR, sizeof(MWIPORDSTS.ORDER_ID), MWIPORDSTS.ORDER_ID);
+				TRS.add_dberrmsg(out_node, DB_error_msg);
+
+				return MP_FALSE;
+			}
+
+			/*
+			if (MWIPORDSTS.ORD_STATUS_FLAG != MP_CWIP_ORDER_WAIT && MWIPORDSTS.ORD_STATUS_FLAG != MP_CWIP_ORDER_START)
+			{
+				//ORD-0031 : 대기 또는 OPEN 상태인 테스트 작업지시만 수정이 가능합니다.
+				strcpy(s_msg_code, "ORD-0031");
+				TRS.add_fieldmsg(out_node, "ORDER_ID", MP_STR, sizeof(MWIPORDSTS.ORDER_ID), MWIPORDSTS.ORDER_ID);
+				TRS.add_dberrmsg(out_node, DB_error_msg);
+
+				return MP_FALSE;
+			}
+			*/
+
+
+			MWIPORDSTS.ORD_STATUS_FLAG = MP_CWIP_ORDER_CLOSE;
+			TRS.copy(MWIPORDSTS.UPDATE_USER_ID, sizeof(MWIPORDSTS.UPDATE_USER_ID), in_node, IN_USERID);
+			memcpy(MWIPORDSTS.UPDATE_TIME, gs_sys_time, sizeof(gs_sys_time));
+
+			//작업지시 설명 업데이트
+			DBU_update_mwipordsts(1, &MWIPORDSTS);
+			if (DB_error_code != DB_SUCCESS)
+			{
+				//ADM-0004 : Database 작업중 오류가 발생 하였습니다. 관리자에게 문의 바랍니다.
+				strcpy(s_msg_code, "ADM-0004");
+				TRS.add_fieldmsg(out_node, "MWIPORDSTS UPDATE(1) ", DT_NOVALUESTRING);
+				TRS.add_fieldmsg(out_node, "FACTORY", MP_STR, sizeof(MWIPORDSTS.FACTORY), MWIPORDSTS.FACTORY);
+				TRS.add_fieldmsg(out_node, "ORDER_ID", MP_STR, sizeof(MWIPORDSTS.ORDER_ID), MWIPORDSTS.ORDER_ID);
+				TRS.add_dberrmsg(out_node, DB_error_msg);
+
+				return MP_FALSE;
+			}		
+		
+		} 
+
+	}
+
 	return MP_TRUE;
 }
 
@@ -784,7 +836,7 @@ int CUS_ORD_Create_Test_Order_Validation(char* s_msg_code, TRSNode* in_node, TRS
 		in_node,
 		out_node,
 		TRS.get_procstep(in_node),
-		"12") == MP_FALSE)
+		"123") == MP_FALSE)
 	{
 		return MP_FALSE;
 	}
@@ -837,6 +889,18 @@ int CUS_ORD_Create_Test_Order_Validation(char* s_msg_code, TRSNode* in_node, TRS
 			return MP_FALSE;
 		}
 	}
+	else if (TRS.get_procstep(in_node) == '3')
+	{
+		if (COM_isnullspace(TRS.get_string(in_node, "FACTORY")) == MP_TRUE)
+		{
+			strcpy(s_msg_code, "WIP-0001");
+			TRS.add_fieldmsg(out_node, "FACTORY", MP_NVST);
 
+			gs_log_type.type = MP_LOG_ERROR;
+			gs_log_type.e_type = MP_LOG_E_VALIDATION;
+			gs_log_type.category = MP_LOG_CATE_TRANS;
+			return MP_FALSE;
+		}
+	}
 	return MP_TRUE;
 }

@@ -200,7 +200,10 @@ int CUS_SHP_CREATE_PACK_LOT_MAIN(char* s_msg_code,
 					else
 					{
 						TRS.add_string(gen_in_node, "RULE_ID", MP_ID_ROLE_SPLIT_SHP_LOT, strlen(MP_ID_ROLE_SPLIT_SHP_LOT));
-						TRS.add_string(gen_in_node, "LOT_ID", MWIPLOTSTS.RESV_FIELD_3, strlen(MWIPLOTSTS.RESV_FIELD_3));
+
+						//2026-09-14 SPLIT 시 모 LOT 정보는 RESV_FIELD_3 > LOTID 로 변경
+						//TRS.add_string(gen_in_node, "LOT_ID", MWIPLOTSTS.RESV_FIELD_3, strlen(MWIPLOTSTS.RESV_FIELD_3));
+						TRS.add_string(gen_in_node, "LOT_ID", MWIPLOTSTS.LOT_ID, strlen(MWIPLOTSTS.LOT_ID));
 					}
 				}
 				else
