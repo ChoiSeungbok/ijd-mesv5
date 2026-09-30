@@ -76,6 +76,11 @@
       <L>승인</L>
       <L>Approval</L>
     </Text>
+    <Text Key="Arrival Label Print">
+      <L>Arrival Label Print</L>
+      <L>입하 라벨 발행</L>
+      <L>Arrival Label Print</L>
+    </Text>
     <Text Key="Arrive">
       <L>Arrive</L>
       <L>입하</L>
@@ -2292,6 +2297,11 @@
       <L>End Sublot</L>
       <L>Sublot 종료</L>
       <L>End Sublot</L>
+    </Text>
+    <Text Key="End Test Order">
+      <L>End Test Order</L>
+      <L>테스트 작업지시 마감</L>
+      <L>End Test Order</L>
     </Text>
     <Text Key="Equip Maint">
       <L>Equip Maint</L>
@@ -14554,6 +14564,11 @@
       <L>최종납품처</L>
       <L>Kết thúc tên giao hàng</L>
     </Text>
+    <Text Key="End Test Order">
+      <L>End Test Order</L>
+      <L>테스트 작업지시 마감</L>
+      <L>End Test Order</L>
+    </Text>
     <Text Key="End Time">
       <L>End Time</L>
       <L>작업 종료 시간</L>
@@ -18253,6 +18268,11 @@
       <L>Key9</L>
       <L>키 9</L>
       <L>Phím9</L>
+    </Text>
+    <Text Key="Kind of Inspection">
+      <L>Kind of Inspection</L>
+      <L>검사종류</L>
+      <L>Kind of Inspection</L>
     </Text>
     <Text Key="Kitting ID">
       <L>Kitting ID</L>

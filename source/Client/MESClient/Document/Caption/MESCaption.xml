@@ -2293,6 +2293,11 @@
       <L>Sublot 종료</L>
       <L>End Sublot</L>
     </Text>
+    <Text Key="End Test Order">
+      <L>End Test Order</L>
+      <L>테스트 작업지시 마감</L>
+      <L>End Test Order</L>
+    </Text>
     <Text Key="Equip Maint">
       <L>Equip Maint</L>
       <L>설비보전</L>
@@ -7164,6 +7169,11 @@
       <L>Add Row</L>
       <L>행추가</L>
       <L>Add Row</L>
+    </Text>
+    <Text Key="Add Serch Word">
+      <L>Add Serch Word</L>
+      <L>추가 검색 단어</L>
+      <L>Add Serch Word</L>
     </Text>
     <Text Key="Add in the tool bar">
       <L>Add in the tool bar</L>
@@ -14549,6 +14559,11 @@
       <L>최종납품처</L>
       <L>Kết thúc tên giao hàng</L>
     </Text>
+    <Text Key="End Test Order">
+      <L>End Test Order</L>
+      <L>테스트 작업지시 마감</L>
+      <L>End Test Order</L>
+    </Text>
     <Text Key="End Time">
       <L>End Time</L>
       <L>작업 종료 시간</L>
@@ -18249,6 +18264,11 @@
       <L>키 9</L>
       <L>Phím9</L>
     </Text>
+    <Text Key="Kind of Inspection">
+      <L>Kind of Inspection</L>
+      <L>검사종류</L>
+      <L>Kind of Inspection</L>
+    </Text>
     <Text Key="Kitting ID">
       <L>Kitting ID</L>
       <L>Kitting번호</L>
@@ -21924,13 +21944,13 @@
       <L>공정 매치</L>
       <L>Operation Match</L>
     </Text>
-    <Text Key="Operation Materil Desc">
-      <L>Operation Materil Desc</L>
+    <Text Key="Operation Material Desc">
+      <L>Operation Material Desc</L>
       <L>생산 품목명</L>
       <L>Operation Material Desc</L>
     </Text>
-    <Text Key="Operation Materil ID">
-      <L>Operation Materil ID</L>
+    <Text Key="Operation Material ID">
+      <L>Operation Material ID</L>
       <L>생산 품목코드</L>
       <L>ID vật liệu hoạt động</L>
     </Text>
@@ -26978,6 +26998,11 @@
       <L>Search</L>
       <L>조회 조건</L>
       <L>Search</L>
+    </Text>
+    <Text Key="Search Add Char">
+      <L>Search Add  Char</L>
+      <L>검색 추가 문자</L>
+      <L>Search Add  Char</L>
     </Text>
     <Text Key="Search Merge History">
       <L>Search Merge History</L>

@@ -389,7 +389,7 @@ namespace CUS_SHP
 
                 // 제외문자
                 sExcludeWord = MPCF.Trim(txtExcludeWord.Text);
-                string[] split_data = sExcludeWord.Split(new string[] { string.Format("{0}", "-") }, StringSplitOptions.RemoveEmptyEntries);
+                string[] split_data = sExcludeWord.Split(new string[] { string.Format("{0}", "%") }, StringSplitOptions.RemoveEmptyEntries);
                 for (int k = 0; k < split_data.Count(); k++)
                 {
                     sSqlText = sSqlText + " AND (( '" + split_data[k] + "' IS NULL) OR (MAT.MAT_DESC NOT LIKE '%' || '" + split_data[k] + "' || '%'))";
@@ -645,7 +645,7 @@ namespace CUS_SHP
 
                 // 제외문자
                 sExcludeWord = MPCF.Trim(txtExcludeWord.Text);
-                string[] split_data = sExcludeWord.Split(new string[] { string.Format("{0}", "-") }, StringSplitOptions.RemoveEmptyEntries);
+                string[] split_data = sExcludeWord.Split(new string[] { string.Format("{0}", "%") }, StringSplitOptions.RemoveEmptyEntries);
                 for (int k = 0; k < split_data.Count(); k++)
                 {
                     sSqlText = sSqlText + " AND (( '" + split_data[k] + "' IS NULL) OR (MAT.MAT_DESC NOT LIKE '%' || '" + split_data[k] + "' || '%'))";

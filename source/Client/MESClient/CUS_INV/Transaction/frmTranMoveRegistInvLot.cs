@@ -80,12 +80,14 @@ namespace CUS_INV
         {
             try
             {
+                btnPrintDlv.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 btnPrint.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 btnView.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 btnCancel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 btnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 btnProcess.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 btnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+
             }
             catch (Exception ex)
             {
@@ -454,6 +456,8 @@ namespace CUS_INV
                             return false;
                         }
                         break;
+                         
+
                 }
                 return true;
             }
@@ -503,6 +507,39 @@ namespace CUS_INV
             catch (Exception ex)
             {
                 MPCF.ShowMsgBox(ex.Message);
+            }
+        }
+
+        public bool ViewPrintDlvLabel()
+        {
+            bool flag = false;
+            try
+            {
+                TRSNode tRSNode = new TRSNode("print_label_In");
+                string sFileName = "mtl100pa";
+                 
+                for (int i = 0; i < spdLotList_Sheet1.RowCount; i++)
+                {
+                    if (spdLotList_Sheet1.Cells[i, 0].Text.ToString().ToUpper() == "TRUE")
+                    {
+                        flag = true;
+                        TRSNode tRSNode2 = tRSNode.AddNode("INV_LOT_LIST");
+                        tRSNode2.AddString("DLV_LOT_ID", spdLotList_Sheet1.Cells[i, 1].Text);
+                    }
+                }
+
+                if (flag == false)
+                {
+                    MPCF.ShowMsgBox(MPCF.GetMessage(109));
+                    return false;
+                }
+                CSCF.ViewLabelList(sFileName, tRSNode);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+                return false;
             }
         }
 
@@ -597,6 +634,32 @@ namespace CUS_INV
             {
                 MPCF.ShowMsgBox(ex.Message);
             }
+        }
+
+        private void btnPrintDlv_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (spdLotList.ActiveSheet.RowCount == 0)
+                {
+                    MPCF.ShowMsgBox(MPCF.GetMessage(109));
+                    return;
+                }
+                else if (spdLotList.ActiveSheet.RowCount == 0)
+                {
+                    MPCF.ShowMsgBox(MPCF.GetMessage(109));
+                    return;
+                }
+                else
+                {
+                    ViewPrintDlvLabel();
+                }
+                 
+            }
+            catch (Exception ex)
+            {
+                MPCF.ShowMsgBox(ex.Message);
+            }  
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -929,5 +992,6 @@ namespace CUS_INV
             }
         }
 
+        
     }
 }

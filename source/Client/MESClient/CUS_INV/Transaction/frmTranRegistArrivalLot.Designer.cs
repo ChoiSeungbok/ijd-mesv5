@@ -413,7 +413,6 @@
             Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
             this.panAddBottom = new System.Windows.Forms.Panel();
             this.btnTranRes = new Infragistics.Win.Misc.UltraButton();
@@ -463,7 +462,6 @@
             this.btnClear = new Infragistics.Win.Misc.UltraButton();
             this.btnCancelArrival = new Infragistics.Win.Misc.UltraButton();
             this.btnCancelConfirm = new Infragistics.Win.Misc.UltraButton();
-            this.btnConfirm = new Infragistics.Win.Misc.UltraButton();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpToWorkDate = new System.Windows.Forms.DateTimePicker();
             this.lblDate = new System.Windows.Forms.Label();
@@ -612,19 +610,18 @@
             // btnView
             // 
             this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnView.Location = new System.Drawing.Point(482, 10);
+            this.btnView.Location = new System.Drawing.Point(588, 10);
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnProcess
             // 
             this.btnProcess.Enabled = false;
-            this.btnProcess.Location = new System.Drawing.Point(694, 10);
+            this.btnProcess.Location = new System.Drawing.Point(800, 10);
             this.btnProcess.Text = "Save";
             this.btnProcess.Click += new System.EventHandler(this.btnProcess_Click);
             // 
             // pnlBottom
             // 
-            this.pnlBottom.Controls.Add(this.btnConfirm);
             this.pnlBottom.Controls.Add(this.btnCancelConfirm);
             this.pnlBottom.Controls.Add(this.btnCancelArrival);
             this.pnlBottom.Controls.Add(this.btnClear);
@@ -642,7 +639,6 @@
             this.pnlBottom.Controls.SetChildIndex(this.btnClear, 0);
             this.pnlBottom.Controls.SetChildIndex(this.btnCancelArrival, 0);
             this.pnlBottom.Controls.SetChildIndex(this.btnCancelConfirm, 0);
-            this.pnlBottom.Controls.SetChildIndex(this.btnConfirm, 0);
             // 
             // pnlTop
             // 
@@ -4149,7 +4145,7 @@
             appearance20.ForeColor = System.Drawing.Color.White;
             this.btnArrive.Appearance = appearance20;
             this.btnArrive.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnArrive.Location = new System.Drawing.Point(800, 10);
+            this.btnArrive.Location = new System.Drawing.Point(906, 10);
             this.btnArrive.Name = "btnArrive";
             this.btnArrive.Size = new System.Drawing.Size(100, 30);
             this.btnArrive.TabIndex = 257;
@@ -4166,7 +4162,7 @@
             appearance18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
             this.btnClear.Appearance = appearance18;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(376, 10);
+            this.btnClear.Location = new System.Drawing.Point(482, 10);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(100, 30);
             this.btnClear.TabIndex = 258;
@@ -4183,7 +4179,7 @@
             appearance11.ForeColor = System.Drawing.Color.White;
             this.btnCancelArrival.Appearance = appearance11;
             this.btnCancelArrival.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelArrival.Location = new System.Drawing.Point(588, 10);
+            this.btnCancelArrival.Location = new System.Drawing.Point(694, 10);
             this.btnCancelArrival.Name = "btnCancelArrival";
             this.btnCancelArrival.Size = new System.Drawing.Size(100, 30);
             this.btnCancelArrival.TabIndex = 259;
@@ -4204,28 +4200,10 @@
             this.btnCancelConfirm.Name = "btnCancelConfirm";
             this.btnCancelConfirm.Size = new System.Drawing.Size(109, 30);
             this.btnCancelConfirm.TabIndex = 260;
-            this.btnCancelConfirm.Text = "Cancel Confirm";
+            this.btnCancelConfirm.Text = "Cancel Arrival";
             this.btnCancelConfirm.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
             this.btnCancelConfirm.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             this.btnCancelConfirm.Click += new System.EventHandler(this.btnCancelConfirm_Click);
-            // 
-            // btnConfirm
-            // 
-            appearance4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
-            appearance4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
-            appearance4.FontData.BoldAsString = "True";
-            appearance4.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Appearance = appearance4;
-            this.btnConfirm.Enabled = false;
-            this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.Location = new System.Drawing.Point(906, 10);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(100, 30);
-            this.btnConfirm.TabIndex = 261;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
-            this.btnConfirm.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // label2
             // 
@@ -4472,7 +4450,6 @@
         protected Infragistics.Win.Misc.UltraButton btnClear;
         protected Infragistics.Win.Misc.UltraButton btnCancelArrival;
         protected Infragistics.Win.Misc.UltraButton btnCancelConfirm;
-        protected Infragistics.Win.Misc.UltraButton btnConfirm;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.DateTimePicker dtpToWorkDate;
         public System.Windows.Forms.Label lblDate;

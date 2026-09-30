@@ -1,24 +1,23 @@
-﻿using System;
+﻿using CUS_COM;
+using Miracom.CliFrx;
+using Miracom.DNMCore;
+using Miracom.MESCore;
+using Miracom.TRSCore;
+using Miracom.WIPCore;
+using RawInput_dll;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
+using System.IO.Ports;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using CUS_COM;
-using Miracom.MESCore;
-using Miracom.WIPCore;
-using Miracom.TRSCore;
-using Miracom.CliFrx;
-using Miracom.DNMCore;
-using System.IO;
-using System.IO.Ports;
-using RawInput_dll;
-using System.Runtime.InteropServices.WindowsRuntime;
-
+ 
 namespace CUS_WIP
 {
     public partial class frmTranProcessLot : CUS_COM.frmTranForm03
@@ -2516,7 +2515,8 @@ namespace CUS_WIP
         private void btnClear_Click(object sender, EventArgs e)
         {
             try
-            {
+            {                
+                MPCF.ClearList(spdLotList);
                 ClearList("ALL");
             }
             catch (Exception ex)
@@ -3016,6 +3016,7 @@ namespace CUS_WIP
                                     ViewLotInfo(sLotId);
                                 }
                             }
+                            Clipboard.Clear();
 
                         }
                     }

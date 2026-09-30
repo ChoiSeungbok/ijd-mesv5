@@ -43,7 +43,6 @@ namespace XtraReportSerialization {
         private DevExpress.XtraReports.UI.XRPageInfo pageInfo2;
         private DevExpress.XtraReports.UI.XRPageInfo pageInfo1;
         private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader1;
-        private DevExpress.XtraReports.UI.XRLabel label12;
         private DevExpress.XtraReports.UI.XRLabel label74;
         private DevExpress.XtraReports.UI.XRLabel label10;
         private DevExpress.XtraReports.UI.XRLabel label9;
@@ -242,7 +241,6 @@ namespace XtraReportSerialization {
             this.label42 = new DevExpress.XtraReports.UI.XRLabel();
             this.pageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.pageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
-            this.label12 = new DevExpress.XtraReports.UI.XRLabel();
             this.label74 = new DevExpress.XtraReports.UI.XRLabel();
             this.label10 = new DevExpress.XtraReports.UI.XRLabel();
             this.label9 = new DevExpress.XtraReports.UI.XRLabel();
@@ -379,7 +377,6 @@ namespace XtraReportSerialization {
             // GroupHeader1
             // 
             this.GroupHeader1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-                        this.label12,
                         this.label74,
                         this.label10,
                         this.label9,
@@ -492,7 +489,7 @@ namespace XtraReportSerialization {
             this.label33.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.LOT_ID")});
             this.label33.Dpi = 254F;
-            this.label33.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label33.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label33.LocationFloat = new DevExpress.Utils.PointFloat(100.6072F, 5.999998F);
             this.label33.Name = "label33";
             this.label33.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
@@ -507,11 +504,11 @@ namespace XtraReportSerialization {
             this.label43.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.ITEM_QTY", "{0:#,#0}")});
             this.label43.Dpi = 254F;
-            this.label43.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label43.LocationFloat = new DevExpress.Utils.PointFloat(1170.026F, 6.000038F);
+            this.label43.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label43.LocationFloat = new DevExpress.Utils.PointFloat(1158.44F, 6.000038F);
             this.label43.Name = "label43";
             this.label43.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label43.SizeF = new System.Drawing.SizeF(206.9095F, 47.29169F);
+            this.label43.SizeF = new System.Drawing.SizeF(229.4396F, 47.29169F);
             this.label43.StylePriority.UseFont = false;
             this.label43.StylePriority.UseTextAlignment = false;
             this.label43.Text = "label43";
@@ -522,7 +519,7 @@ namespace XtraReportSerialization {
             this.label37.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.ITEM_NAME110")});
             this.label37.Dpi = 254F;
-            this.label37.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label37.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label37.LocationFloat = new DevExpress.Utils.PointFloat(466.632F, 6.000038F);
             this.label37.Name = "label37";
             this.label37.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
@@ -537,7 +534,7 @@ namespace XtraReportSerialization {
             this.label60.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.OS")});
             this.label60.Dpi = 254F;
-            this.label60.Font = new System.Drawing.Font("맑은 고딕", 8.25F);
+            this.label60.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label60.LocationFloat = new DevExpress.Utils.PointFloat(1696.453F, 5.999957F);
             this.label60.Name = "label60";
             this.label60.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
@@ -552,7 +549,7 @@ namespace XtraReportSerialization {
             this.label59.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.SS")});
             this.label59.Dpi = 254F;
-            this.label59.Font = new System.Drawing.Font("맑은 고딕", 8.25F);
+            this.label59.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label59.LocationFloat = new DevExpress.Utils.PointFloat(1543.955F, 6.000038F);
             this.label59.Name = "label59";
             this.label59.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
@@ -567,7 +564,7 @@ namespace XtraReportSerialization {
             this.label62.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.PSD_LO")});
             this.label62.Dpi = 254F;
-            this.label62.Font = new System.Drawing.Font("맑은 고딕", 8.25F);
+            this.label62.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label62.LocationFloat = new DevExpress.Utils.PointFloat(1852.302F, 5.999957F);
             this.label62.Name = "label62";
             this.label62.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
@@ -582,7 +579,7 @@ namespace XtraReportSerialization {
             this.label58.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.PSD_UP")});
             this.label58.Dpi = 254F;
-            this.label58.Font = new System.Drawing.Font("맑은 고딕", 8.25F);
+            this.label58.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label58.LocationFloat = new DevExpress.Utils.PointFloat(1393.17F, 5.999957F);
             this.label58.Name = "label58";
             this.label58.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
@@ -859,17 +856,6 @@ namespace XtraReportSerialization {
             this.pageInfo1.Name = "pageInfo1";
             this.pageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.pageInfo1.SizeF = new System.Drawing.SizeF(285.7499F, 58.41999F);
-            // 
-            // label12
-            // 
-            this.label12.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.PSD_LO")});
-            this.label12.Dpi = 254F;
-            this.label12.LocationFloat = new DevExpress.Utils.PointFloat(1628.444F, 25.00001F);
-            this.label12.Name = "label12";
-            this.label12.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label12.SizeF = new System.Drawing.SizeF(254F, 58.42F);
-            this.label12.Text = "label12";
             // 
             // label74
             // 
@@ -1239,7 +1225,7 @@ namespace XtraReportSerialization {
             // label46
             // 
             this.label46.Dpi = 254F;
-            this.label46.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold);
+            this.label46.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label46.LocationFloat = new DevExpress.Utils.PointFloat(100.6072F, 148.0729F);
             this.label46.Name = "label46";
             this.label46.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
@@ -1254,7 +1240,7 @@ namespace XtraReportSerialization {
             this.label45.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.LOSS_QTY", "{0:#,##0.#####}")});
             this.label45.Dpi = 254F;
-            this.label45.Font = new System.Drawing.Font("맑은 고딕", 9.75F);
+            this.label45.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label45.LocationFloat = new DevExpress.Utils.PointFloat(1166.332F, 82.34376F);
             this.label45.Name = "label45";
             this.label45.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
@@ -1269,7 +1255,7 @@ namespace XtraReportSerialization {
             this.label44.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.GOOD_QTY", "{0:#,#.#####}")});
             this.label44.Dpi = 254F;
-            this.label44.Font = new System.Drawing.Font("맑은 고딕", 9.75F);
+            this.label44.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label44.LocationFloat = new DevExpress.Utils.PointFloat(978.4412F, 82.34376F);
             this.label44.Name = "label44";
             this.label44.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
@@ -1297,11 +1283,11 @@ namespace XtraReportSerialization {
             // label35
             // 
             this.label35.Dpi = 254F;
-            this.label35.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold);
-            this.label35.LocationFloat = new DevExpress.Utils.PointFloat(1170.026F, 148.0729F);
+            this.label35.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label35.LocationFloat = new DevExpress.Utils.PointFloat(1158.441F, 148.0729F);
             this.label35.Name = "label35";
             this.label35.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label35.SizeF = new System.Drawing.SizeF(206.9095F, 49.45847F);
+            this.label35.SizeF = new System.Drawing.SizeF(229.4393F, 49.45847F);
             this.label35.StylePriority.UseFont = false;
             this.label35.StylePriority.UseTextAlignment = false;
             this.label35.Text = "투입수량";
@@ -1407,7 +1393,7 @@ namespace XtraReportSerialization {
             this.label25.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.PLAN_QTY", "{0:#,#.#####}")});
             this.label25.Dpi = 254F;
-            this.label25.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label25.LocationFloat = new DevExpress.Utils.PointFloat(775.1536F, 82.34376F);
             this.label25.Name = "label25";
             this.label25.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
@@ -1420,7 +1406,7 @@ namespace XtraReportSerialization {
             this.label23.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "prd100pb.OP_DESC")});
             this.label23.Dpi = 254F;
-            this.label23.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label23.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label23.LocationFloat = new DevExpress.Utils.PointFloat(100.6072F, 82.34376F);
             this.label23.Name = "label23";
             this.label23.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
@@ -1573,7 +1559,7 @@ namespace XtraReportSerialization {
             // label22
             // 
             this.label22.Dpi = 254F;
-            this.label22.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold);
+            this.label22.Font = new System.Drawing.Font("맑은 고딕", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label22.LocationFloat = new DevExpress.Utils.PointFloat(466.632F, 148.0729F);
             this.label22.Name = "label22";
             this.label22.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);

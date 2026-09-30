@@ -1,6 +1,6 @@
 /// <XRTypeInfo>
 ///   <AssemblyFullName>DevExpress.XtraReports.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</AssemblyFullName>
-///   <AssemblyLocation>C:\01_DIASYSTEM\ReportDesinger v11.2\DevExpress.XtraReports.v11.2.dll</AssemblyLocation>
+///   <AssemblyLocation>D:\일진다이아\99_MES설치파일\ReportDesinger v11.2(devReport_라벨 및 출력물 생성용)\DevExpress.XtraReports.v11.2.dll</AssemblyLocation>
 ///   <TypeName>DevExpress.XtraReports.UI.XtraReport</TypeName>
 ///   <Localization>ko-KR</Localization>
 /// </XRTypeInfo>
@@ -9,6 +9,7 @@ namespace XtraReportSerialization {
     public class Report1 : DevExpress.XtraReports.UI.XtraReport {
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.DetailBand Detail;
+        private DevExpress.XtraReports.UI.XRBarCode barCode2;
         private DevExpress.XtraReports.UI.XRLabel label11;
         private DevExpress.XtraReports.UI.XRLabel label10;
         private DevExpress.XtraReports.UI.XRLabel label9;
@@ -67,10 +68,12 @@ namespace XtraReportSerialization {
             }
         }
         private void InitializeComponent() {
+            DevExpress.XtraPrinting.BarCode.QRCodeGenerator qRCodeGenerator1 = new DevExpress.XtraPrinting.BarCode.QRCodeGenerator();
             DevExpress.XtraPrinting.BarCode.Code128Generator code128Generator1 = new DevExpress.XtraPrinting.BarCode.Code128Generator();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.barCode2 = new DevExpress.XtraReports.UI.XRBarCode();
             this.label11 = new DevExpress.XtraReports.UI.XRLabel();
             this.label10 = new DevExpress.XtraReports.UI.XRLabel();
             this.label9 = new DevExpress.XtraReports.UI.XRLabel();
@@ -93,6 +96,7 @@ namespace XtraReportSerialization {
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.barCode2,
                         this.label11,
                         this.label10,
                         this.label9,
@@ -114,13 +118,31 @@ namespace XtraReportSerialization {
             this.BottomMargin.HeightF = 0F;
             this.BottomMargin.Name = "BottomMargin";
             // 
+            // barCode2
+            // 
+            this.barCode2.AutoModule = true;
+            this.barCode2.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "mtl900hm3p.LOT_ID")});
+            this.barCode2.Dpi = 254F;
+            this.barCode2.LocationFloat = new DevExpress.Utils.PointFloat(67.94999F, 25.00001F);
+            this.barCode2.Module = 5.08F;
+            this.barCode2.Name = "barCode2";
+            this.barCode2.Padding = new DevExpress.XtraPrinting.PaddingInfo(25, 25, 0, 0, 254F);
+            this.barCode2.ShowText = false;
+            this.barCode2.SizeF = new System.Drawing.SizeF(173.5008F, 139.9585F);
+            this.barCode2.StylePriority.UseTextAlignment = false;
+            qRCodeGenerator1.Version = DevExpress.XtraPrinting.BarCode.QRCodeVersion.Version1;
+            this.barCode2.Symbology = qRCodeGenerator1;
+            this.barCode2.Text = "KAU013-0053";
+            this.barCode2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
+            // 
             // label11
             // 
             this.label11.Dpi = 254F;
             this.label11.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
             this.label11.LocationFloat = new DevExpress.Utils.PointFloat(194.6675F, 550.3689F);
             this.label11.Name = "label11";
-            this.label11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.label11.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.label11.SizeF = new System.Drawing.SizeF(46.78326F, 29.6311F);
             this.label11.StylePriority.UseFont = false;
             this.label11.Text = "EA";
@@ -173,10 +195,10 @@ namespace XtraReportSerialization {
                         new DevExpress.XtraReports.UI.XRBinding("Text", null, "mtl900hm3p.LOT_QTY")});
             this.label7.Dpi = 254F;
             this.label7.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
-            this.label7.LocationFloat = new DevExpress.Utils.PointFloat(142.9728F, 550F);
+            this.label7.LocationFloat = new DevExpress.Utils.PointFloat(74.99995F, 550F);
             this.label7.Name = "label7";
             this.label7.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label7.SizeF = new System.Drawing.SizeF(51.69472F, 30F);
+            this.label7.SizeF = new System.Drawing.SizeF(119.6675F, 30F);
             this.label7.StylePriority.UseFont = false;
             this.label7.StylePriority.UseTextAlignment = false;
             this.label7.Text = "label7";
@@ -230,7 +252,7 @@ namespace XtraReportSerialization {
             // label3
             // 
             this.label3.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "mtl520ctmp.LOT_QTY")});
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "mtl900hm3p.LOT_QTY")});
             this.label3.Dpi = 254F;
             this.label3.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
             this.label3.LocationFloat = new DevExpress.Utils.PointFloat(505.0002F, 315F);

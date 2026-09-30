@@ -113,7 +113,7 @@ namespace CUS_INV
                 btnArrive.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 btnCancelArrival.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 btnProcess.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-                btnConfirm.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+                //btnConfirm.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 btnCancelConfirm.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 btnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             }
@@ -788,7 +788,7 @@ namespace CUS_INV
                 btnAdd.Enabled = true;
                 btnDel.Enabled = true;
                 btnProcess.Enabled = true;
-                btnConfirm.Enabled = true;
+                //btnConfirm.Enabled = true;
                 btnCancelConfirm.Enabled = true;
                 txtQty.ReadOnly = false;
             }
@@ -920,14 +920,14 @@ namespace CUS_INV
                 btnAdd.Enabled = false;
                 btnDel.Enabled = false;
                 btnProcess.Enabled = false;
-                btnConfirm.Enabled = false;
+                //btnConfirm.Enabled = false;
             }
             else
             {
                 btnAdd.Enabled = true;
                 btnDel.Enabled = true;
                 btnProcess.Enabled = true;
-                btnConfirm.Enabled = true;
+                //btnConfirm.Enabled = true;
             }
         }
 
@@ -1022,6 +1022,7 @@ namespace CUS_INV
                 {
                     ViewPrintDlvLabel(sDlvLotID);
                     ViewArrivalLotList(dlvNo, dlvSeq, matId, matVer);
+                    ViewPOList(); //PO재조회
                 }
             }
             catch (Exception ex)
@@ -1152,21 +1153,22 @@ namespace CUS_INV
             }
         }
 
-        private void btnConfirm_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (CheckCondition("CONFIRM") && ConfirmDlvLot())
-                {
-                    ViewPOList();
-                    ViewArrivalLotList(dlvNo, dlvSeq, matId, matVer);
-                }
-            }
-            catch (Exception ex)
-            {
-                MPCF.ShowMsgBox(ex.Message);
-            }
-        }
+        // 2026-09-22 : 입하버튼과 기능이 동일할여 확정버튼은 삭제처리
+        //private void btnConfirm_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        if (CheckCondition("CONFIRM") && ConfirmDlvLot())
+        //        {
+        //            ViewPOList();
+        //            ViewArrivalLotList(dlvNo, dlvSeq, matId, matVer);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MPCF.ShowMsgBox(ex.Message);
+        //    }
+        //}
 
         private void btnCancelConfirm_Click(object sender, EventArgs e)
         {

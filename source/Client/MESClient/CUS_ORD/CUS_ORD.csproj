@@ -136,6 +136,12 @@
       <DependentUpon>frmViewWorkOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transaction\frmTranEndTestOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmTranEndTestOrder.Designer.cs">
+      <DependentUpon>frmTranEndTestOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transaction\frmTranLotMapping.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
       <DependentUpon>frmViewWorkOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Transaction\frmTranEndTestOrder.resx">
+      <DependentUpon>frmTranEndTestOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmTranLotMapping.resx">
       <DependentUpon>frmTranLotMapping.cs</DependentUpon>
     </EmbeddedResource>

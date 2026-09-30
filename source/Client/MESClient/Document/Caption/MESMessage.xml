@@ -2632,4 +2632,9 @@ Do you want to continue?
     <L>CMN625 INFO - 파일을 등록하거나 삭제할 권한이 없습니다.</L>
     <L>CMN625 INFO - You do not have permission to register or delete files.</L>
   </Text>
+  <Text Key="626">
+    <L>CMN626 INFO - Would you like to proceed with the closing process?</L>
+    <L>CMN626 INFO - 마감 처리 하시겠습니까?</L>
+    <L>CMN626 INFO - Would you like to proceed with the closing process?</L>
+  </Text>
 </Message>

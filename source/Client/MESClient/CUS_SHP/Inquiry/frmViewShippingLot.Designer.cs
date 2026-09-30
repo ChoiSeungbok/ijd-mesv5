@@ -153,10 +153,10 @@
             FarPoint.Win.Spread.CellType.NumberCellType numberCellType3 = new FarPoint.Win.Spread.CellType.NumberCellType();
             FarPoint.Win.Spread.CellType.NumberCellType numberCellType4 = new FarPoint.Win.Spread.CellType.NumberCellType();
             FarPoint.Win.Spread.CellType.NumberCellType numberCellType5 = new FarPoint.Win.Spread.CellType.NumberCellType();
+            Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance19 = new Infragistics.Win.Appearance();
             this.txtShippingOrderNo = new System.Windows.Forms.TextBox();
             this.lblShippingOrder = new System.Windows.Forms.Label();
             this.lblDept = new System.Windows.Forms.Label();
@@ -1656,11 +1656,11 @@
             // 
             // btnExcel
             // 
-            appearance4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
-            appearance4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
-            appearance4.FontData.BoldAsString = "True";
-            appearance4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
-            this.btnExcel.Appearance = appearance4;
+            appearance6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            appearance6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
+            appearance6.FontData.BoldAsString = "True";
+            appearance6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
+            this.btnExcel.Appearance = appearance6;
             this.btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcel.Location = new System.Drawing.Point(133, 9);
             this.btnExcel.Name = "btnExcel";
@@ -1737,11 +1737,11 @@
             // 
             // btnPrint
             // 
-            appearance10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
-            appearance10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
-            appearance10.FontData.BoldAsString = "True";
-            appearance10.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Appearance = appearance10;
+            appearance5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
+            appearance5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
+            appearance5.FontData.BoldAsString = "True";
+            appearance5.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.Appearance = appearance5;
             this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.Location = new System.Drawing.Point(935, 10);
             this.btnPrint.Name = "btnPrint";
@@ -1945,11 +1945,11 @@
             // 
             // btnHmReport
             // 
-            appearance3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
-            appearance3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
-            appearance3.FontData.BoldAsString = "True";
-            appearance3.ForeColor = System.Drawing.Color.White;
-            this.btnHmReport.Appearance = appearance3;
+            appearance4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
+            appearance4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
+            appearance4.FontData.BoldAsString = "True";
+            appearance4.ForeColor = System.Drawing.Color.White;
+            this.btnHmReport.Appearance = appearance4;
             this.btnHmReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHmReport.Location = new System.Drawing.Point(16, 9);
             this.btnHmReport.Name = "btnHmReport";
@@ -1978,11 +1978,11 @@
             // 
             // btnCsvDirect
             // 
-            appearance19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
-            appearance19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
-            appearance19.FontData.BoldAsString = "True";
-            appearance19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
-            this.btnCsvDirect.Appearance = appearance19;
+            appearance3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            appearance3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
+            appearance3.FontData.BoldAsString = "True";
+            appearance3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(86)))), ((int)(((byte)(155)))));
+            this.btnCsvDirect.Appearance = appearance3;
             this.btnCsvDirect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCsvDirect.Location = new System.Drawing.Point(244, 10);
             this.btnCsvDirect.Name = "btnCsvDirect";
