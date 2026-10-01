@@ -60,23 +60,22 @@ namespace CUS_QCM
             try
             {
 
-
                 //레지스트리로 사업부 고정한거 변경(베트남 음성 같이쓰는사람 문제됨) 21/07/06 
                 if (MPGV.gsFactory == "IJDK1")
                 {
                     cdvDept.Text = "CTM";
-                    cdvDept.DisplayText = "CTM";
+                    cdvDept.DisplayText = "CTM"; 
                 }
                 else
                 {
                     cdvDept.Text = "CTV";
-                    cdvDept.DisplayText = "CTM";
+                    cdvDept.DisplayText = "CTM"; 
                 }
 
                 //이거 필요없음.
                 //cdvDept.Text = CSGV.gs_area_ctm;
 
-                fngetReportType(cdvShipReportType.GetListView);
+                fngetReportType(cdvShipReportType.GetListView);    
 
                 btnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 btnProcess.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -424,8 +423,11 @@ namespace CUS_QCM
                                                 + "  FROM MGCMTBLDAT  "
                                                 + "  WHERE FACTORY = '" + MPGV.gsFactory + "' "
                                                 + "   AND TABLE_NAME = 'C_INSP_SHIP_REPORT' "
-                                                + "   AND DATA_2 = '" + CSGV.gs_area_ctm + "' ");
-            
+                                                + "   AND DATA_2 = '" + cdvDept.Text + "' ");
+
+            // + "   AND DATA_2 = '" + CSGV.gs_area_ctm + "' "); 
+            // 20261001 수정 - 프로그램 시작시 즐겨찾기된 폼은 CSGV.gs_area_ctm 가 초기화 상태여서 성적서 타입(fngetReportType) 값을 채워주지 못해 사업부 콤보값으로 수정
+ 
 
             do
             {
@@ -992,7 +994,7 @@ namespace CUS_QCM
         }
         private void frmTranShipReportRegistration_CTM_Load(object sender, EventArgs e)
         {
-            fnGetUserDesc();
+            fnGetUserDesc();            
         }
         private void spdPackingLotList_CellClick(object sender, CellClickEventArgs e)
         {
