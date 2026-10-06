@@ -2150,7 +2150,7 @@ int CUS_WIP_PROCESS_LOT(char* s_msg_code, TRSNode* in_node, TRSNode* out_node)
 					memcpy(s_mat_id, MWIPLOTSTSX.MAT_ID, sizeof(s_mat_id));
 										
 					//-----------------------------------------------------------------------------------------------
-					// ★ 수정중 (2026-07-23 ~ ) 
+					// ★ TO-BE (2026-07-23 ~ ) 
 					// cell_id 가 바뀌는 시점에 GCM 등록 품번이 아닌경우만  iRunCount = 0 초기화
 					DBU_init_mgcmtbldat(&MGCMTBLDAT_GEN);
 					TRS.copy(MGCMTBLDAT_GEN.FACTORY, sizeof(MGCMTBLDAT_GEN.FACTORY), in_node, IN_FACTORY);
@@ -2196,7 +2196,7 @@ int CUS_WIP_PROCESS_LOT(char* s_msg_code, TRSNode* in_node, TRSNode* out_node)
 						// GCM등록품번이 아니면 초기화
 						iRunCount = 0;
 					}
-					// ★ 수정중 (2026-07-23 ~ ) 
+					// ★ TO-BE (2026-07-23 ~ ) 
 					//-----------------------------------------------------------------------------------------------
 				}
 				else
@@ -2486,7 +2486,7 @@ int CUS_WIP_PROCESS_LOT(char* s_msg_code, TRSNode* in_node, TRSNode* out_node)
 							*/ 
 
 							//-----------------------------------------------------------------------------------------------
-							// ★ 수정중 (2026-09-09) 
+							// TO-BE (2026-09-09) 
 							//-----------------------------------------------------------------------------------------------				
 							DBU_init_cwipprsrun(&CWIPPRSRUN);
 							TRS.copy(CWIPPRSRUN.FACTORY, sizeof(CWIPPRSRUN.FACTORY), in_node, IN_FACTORY);
@@ -2712,7 +2712,7 @@ int CUS_WIP_PROCESS_LOT(char* s_msg_code, TRSNode* in_node, TRSNode* out_node)
 							//}
 
 
-							// 수정(2026-09-09)-----------------------------------------------------------------------------------------
+							// TO-BE (2026-09-09)-----------------------------------------------------------------------------------------
 							if (MWIPLOTSTSX.LOT_CMF_2[0] == ' ')
 							{
 								memcpy(CWIPPRSRUN.CELL_ID, MWIPLOTSTSX.LOT_ID, sizeof(CWIPPRSRUN.CELL_ID));
@@ -2739,7 +2739,7 @@ int CUS_WIP_PROCESS_LOT(char* s_msg_code, TRSNode* in_node, TRSNode* out_node)
 									CWIPPRSRUN.MAPPING_SEQ = atoi(MWIPLOTSTSX.LOT_CMF_2);
 								}								
 							}
-							// 수정(2026-09-09)-----------------------------------------------------------------------------------------
+							// TO-BE(2026-09-09)-----------------------------------------------------------------------------------------
 						}
 						else
 						{
@@ -3199,7 +3199,7 @@ int CUS_WIP_PROCESS_LOT(char* s_msg_code, TRSNode* in_node, TRSNode* out_node)
 								c_skip_yn = 'Y';
 
 								//-----------------------------------------------------------------------------------------------
-								// ★ 수정중 (2026-09-03 ~ ) 
+								// ★ TO-BE (2026-09-03 ~ ) 
 								//-----------------------------------------------------------------------------------------------
 								DBU_init_mgcmtbldat(&MGCMTBLDAT_GEN);
 								TRS.copy(MGCMTBLDAT_GEN.FACTORY, sizeof(MGCMTBLDAT_GEN.FACTORY), in_node, IN_FACTORY);
@@ -3316,7 +3316,7 @@ int CUS_WIP_PROCESS_LOT(char* s_msg_code, TRSNode* in_node, TRSNode* out_node)
 								} 
 							} 
 							//-----------------------------------------------------------------------------------------------
-							// ★ 수정중(2026-07-23 ~ ) 
+							// ★ TO-BE(2026-07-23 ~ ) 
 							//-----------------------------------------------------------------------------------------------
 						}
 
@@ -3711,7 +3711,7 @@ int CUS_WIP_PROCESS_LOT(char* s_msg_code, TRSNode* in_node, TRSNode* out_node)
 				// AS-IS----------------------------------------------------------------------------------
 
 				//-----------------------------------------------------------------------------------------------
-				// ★ 수정(2026-09-09)
+				// ★ TO-BE(2026-09-09)
 				//-----------------------------------------------------------------------------------------------
 				DBU_init_cwipprsrun(&CWIPPRSRUN);
 				TRS.copy(CWIPPRSRUN.FACTORY, sizeof(CWIPPRSRUN.FACTORY), in_node, IN_FACTORY);
@@ -3742,7 +3742,7 @@ int CUS_WIP_PROCESS_LOT(char* s_msg_code, TRSNode* in_node, TRSNode* out_node)
 				}
 				
 				//-----------------------------------------------------------------------------------------------
-				// ★ 수정(2026-09-09)
+				// ★ TO-BE(2026-09-09)
 				//-----------------------------------------------------------------------------------------------
 
 				if (iRunCount == 0)
@@ -3858,7 +3858,7 @@ int CUS_WIP_PROCESS_LOT(char* s_msg_code, TRSNode* in_node, TRSNode* out_node)
 				}
 
 				//-----------------------------------------------------------------------------------------------
-				// ★ 수정중 (2026-07-23 ~ ) GCM 저장
+				// ★ TO-BE (2026-07-23 ~ ) GCM 저장
 				//-----------------------------------------------------------------------------------------------
 				// 프레스 공정, 프레스 채번룰, GCM 등록 품번, Lot Count 이면 2개 품번 모두 "Y 이면 초기화	
 				if (memcmp(MGCMTBLDAT.DATA_3, MP_ID_ROLE_WIP_PRESS_LOT_ID, strlen(MP_ID_ROLE_WIP_PRESS_LOT_ID)) == MP_FALSE)
