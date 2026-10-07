@@ -4200,7 +4200,7 @@
             this.btnCancelConfirm.Name = "btnCancelConfirm";
             this.btnCancelConfirm.Size = new System.Drawing.Size(109, 30);
             this.btnCancelConfirm.TabIndex = 260;
-            this.btnCancelConfirm.Text = "Cancel Arrival";
+            this.btnCancelConfirm.Text = "Cancel Confirm";
             this.btnCancelConfirm.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
             this.btnCancelConfirm.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             this.btnCancelConfirm.Click += new System.EventHandler(this.btnCancelConfirm_Click);
